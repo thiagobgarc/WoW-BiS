@@ -1,0 +1,57 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  accentColor?: string;
+  ogImage?: string;
+}
+
+const {
+  title = 'Mythos — WoW Best-in-Slot Gear Planner',
+  description = 'Look up your character and see exactly what to upgrade, where it drops, and how close you are to Best-in-Slot.',
+  accentColor,
+  ogImage,
+} = Astro.props;
+---
+
+<html lang="en" style={accentColor ? `--accent: ${accentColor};` : undefined}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="min-h-screen bg-bg text-text font-sans flex flex-col" style="font-family: 'Inter', system-ui, sans-serif;">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-4 focus:left-4 focus:px-4 focus:py-2 focus:rounded-md focus:bg-accent focus:text-white focus:outline-none"
+    >
+      Skip to content
+    </a>
+    <main id="main-content" class="flex-1">
+      <slot />
+    </main>
+    <!-- text-dim, not text-faint: text-faint is ~3.2:1 against this dark background, below WCAG AA's 4.5:1 for body text -->
+    <footer class="border-t border-white/8 mt-16 py-6 px-6 text-center text-xs text-text-dim">
+      Not affiliated with or endorsed by Blizzard Entertainment. World of Warcraft and all related assets are the
+      property of Blizzard Entertainment, Inc. No game assets are rehosted — icons and media are loaded directly
+      from Blizzard's API.
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+---
+interface Props {
+  icon: string;
+  title: string;
+  message: string;
+  actionLabel?: string;
+  actionHref?: string;
+  cachedBanner?: string;
+}
+
+const { icon, title, message, actionLabel = '← Back to Search', actionHref = '/', cachedBanner } = Astro.props;
+---
+
+<div class="max-w-md mx-auto mt-24 px-6">
+  <div class="rounded-lg border border-severity-gap/30 bg-severity-gap/10 p-6 text-center">
+    <div class="text-4xl mb-3" aria-hidden="true">{icon}</div>
+    <div class="text-lg font-bold mb-2">{title}</div>
+    <p class="text-sm text-text-muted mb-4">{message}</p>
+    {
+      cachedBanner && (
+        <div class="rounded-md border border-link/30 bg-link/10 text-link text-xs p-3 mb-4">💾 {cachedBanner}</div>
+      )
+    }
+    <a
+      href={actionHref}
+      class="inline-block px-5 py-2.5 rounded-md bg-accent text-white text-sm font-semibold hover:bg-accent-hover transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
+    >
+      {actionLabel}
+    </a>
+  </div>
+</div>

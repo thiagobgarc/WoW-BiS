@@ -1,0 +1,80 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import ErrorState from '@/components/error/ErrorState.astro';
+import { CharacterPage } from '@/components/character/CharacterPage';
+import { getFullCharacter, toCharacterKey } from '@/lib/blizzard/getFullCharacter';
+import { getBisList } from '@/lib/bis/getBisList';
+import { CURRENT_SEASON_ID } from '@/lib/season/seasonConfig';
+import { toApiError } from '@/lib/http/errorResponse';
+import { classColor } from '@/lib/utils/classColors';
+import type { BisEntry, BisList } from '@/lib/bis/types';
+
+export const prerender = false;
+
+const { region, realm, name } = Astro.params as { region: string; realm: string; name: string };
+const key = toCharacterKey(region, realm, name);
+
+let full: Awaited<ReturnType<typeof getFullCharacter>> | null = null;
+let bisEntries: BisEntry[] = [];
+let bisSeeded = false;
+let statPriority: BisList['statPriority'] | undefined;
+let error: { status: number; title: string; icon: string; message: string } | null = null;
+
+try {
+  full = await getFullCharacter(key);
+  if (full.character.specName) {
+    const bis = await getBisList(CURRENT_SEASON_ID, full.character.className, full.character.specName);
+    bisEntries = bis.entries;
+    bisSeeded = bis.seeded;
+    statPriority = bis.seeded ? bis.statPriority : undefined;
+  }
+} catch (err) {
+  const { status, body } = toApiError(err);
+  const presentation: Record<string, { title: string; icon: string }> = {
+    character_not_found: { title: 'Character Not Found', icon: '❌' },
+    character_private: { title: 'Profile Is Private', icon: '🔒' },
+    realm_not_resolved: { title: 'Realm Not Found', icon: '❓' },
+    blizzard_unavailable: { title: 'Blizzard API Temporarily Unavailable', icon: '⚠️' },
+    blizzard_error: { title: 'Something Went Wrong', icon: '⚠️' },
+    unknown: { title: 'Something Went Wrong', icon: '⚠️' },
+  };
+  const p = presentation[body.error] ?? presentation.unknown;
+  error = { status, title: p.title, icon: p.icon, message: body.message };
+  Astro.response.status = status;
+}
+
+const accent = full ? classColor(full.character.className) : undefined;
+const title = full ? `${full.character.name} — ${full.character.className} — Mythos` : 'Character — Mythos';
+const description = full
+  ? `${full.character.name} is ${full.character.equippedItemLevel} ilvl on ${full.character.realmName} (${full.character.region.toUpperCase()}). See exactly what to upgrade next.`
+  : undefined;
+const ogImage = full ? new URL(`/og/${key.region}/${key.realmSlug}/${key.name}.png`, Astro.url.origin).toString() : undefined;
+---
+
+<Layout title={title} description={description} accentColor={accent} ogImage={ogImage}>
+  <header class="flex justify-between items-center px-6 py-6 border-b border-white/8 mb-8">
+    <a href="/" class="text-lg font-bold tracking-tight">Mythos<span class="text-accent">.</span></a>
+  </header>
+
+  {
+    error ? (
+      <ErrorState icon={error.icon} title={error.title} message={error.message} />
+    ) : (
+      full && (
+        <CharacterPage
+          client:load
+          character={full.character}
+          equipment={full.equipment}
+          stats={full.stats}
+          avatarUrl={full.avatarUrl}
+          mock={full.mock}
+          fetchedAt={full.fetchedAt}
+          stale={full.stale}
+          bisEntries={bisEntries}
+          bisSeeded={bisSeeded}
+          statPriority={statPriority}
+        />
+      )
+    )
+  }
+</Layout>
