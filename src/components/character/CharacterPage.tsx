@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import { TooltipProvider } from '@/components/ui/Tooltip';
 import type { DomainCharacter, EquipmentBySlot, SecondaryStats } from '@/lib/blizzard/domain';
+import type { CharacterTalents } from '@/lib/blizzard/getCharacterTalents';
 import type { BisEntry } from '@/lib/bis/types';
+import type { RecommendedTalentBuild } from '@/lib/talents/types';
 import { CharacterHeader } from './CharacterHeader';
 import { PaperDoll, PaperDollSkeleton } from './PaperDoll';
 import { StatsPanel } from './StatsPanel';
 import { RefreshButton } from './RefreshButton';
 import { UpgradeBoard } from '@/components/upgrade-board/UpgradeBoard';
+import { TalentTreeSection } from '@/components/talents/TalentTreeSection';
 import { timeAgo } from '@/lib/utils/format';
 
 interface Props {
@@ -20,6 +23,8 @@ interface Props {
   bisEntries: BisEntry[];
   bisSeeded: boolean;
   statPriority?: (keyof SecondaryStats)[];
+  talents: CharacterTalents | null;
+  recommendedTalents: RecommendedTalentBuild | null;
 }
 
 interface RefreshableData {
@@ -43,6 +48,8 @@ export function CharacterPage({
   bisEntries,
   bisSeeded,
   statPriority,
+  talents,
+  recommendedTalents,
 }: Props) {
   const [data, setData] = useState<RefreshableData>({
     character: initialCharacter,
@@ -106,6 +113,18 @@ export function CharacterPage({
         <section aria-label="Upgrade board">
           <UpgradeBoard equipment={equipment} bisEntries={bisEntries} seeded={bisSeeded} />
         </section>
+
+        {talents && (
+          <section aria-label="Talents">
+            <TalentTreeSection
+              tree={talents.tree}
+              current={talents.current}
+              heroTree={talents.heroTree}
+              heroSelections={talents.heroSelections}
+              recommended={recommendedTalents}
+            />
+          </section>
+        )}
       </div>
     </TooltipProvider>
   );

@@ -1,0 +1,161 @@
+{
+  "season": "midnight-s1-placeholder",
+  "class": "Priest",
+  "spec": "Discipline",
+  "contentType": "mythic-plus",
+  "classSelections": [
+    {
+      "nodeId": 82703,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82713,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82701,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82715,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82556,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109890,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109917,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82690,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82684,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109015,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82686,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82675,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "specSelections": [
+    {
+      "nodeId": 82593,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82594,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82587,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82577,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82564,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 82589,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82572,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82600,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82602,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82566,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82575,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 94703,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109780,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82571,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82567,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82573,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82586,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82585,
+      "rank": 2,
+      "optionIndex": 0
+    }
+  ],
+  "notes": "Placeholder example Mythic+ build hand-picked for realistic single-target/AoE utility balance — not a guaranteed current-meta recommendation. Swap in real guide picks when available, same as the BiS seed data (see seasonConfig.ts's placeholder-season note)."
+}

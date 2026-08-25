@@ -3,11 +3,15 @@ import Layout from '@/layouts/Layout.astro';
 import ErrorState from '@/components/error/ErrorState.astro';
 import { CharacterPage } from '@/components/character/CharacterPage';
 import { getFullCharacter, toCharacterKey } from '@/lib/blizzard/getFullCharacter';
+import { getCharacterTalents } from '@/lib/blizzard/getCharacterTalents';
 import { getBisList } from '@/lib/bis/getBisList';
+import { getRecommendedBuild } from '@/lib/talents/getRecommendedBuild';
 import { CURRENT_SEASON_ID } from '@/lib/season/seasonConfig';
 import { toApiError } from '@/lib/http/errorResponse';
 import { classColor } from '@/lib/utils/classColors';
 import type { BisEntry, BisList } from '@/lib/bis/types';
+import type { CharacterTalents } from '@/lib/blizzard/getCharacterTalents';
+import type { RecommendedTalentBuild } from '@/lib/talents/types';
 
 export const prerender = false;
 
@@ -18,6 +22,8 @@ let full: Awaited<ReturnType<typeof getFullCharacter>> | null = null;
 let bisEntries: BisEntry[] = [];
 let bisSeeded = false;
 let statPriority: BisList['statPriority'] | undefined;
+let talents: CharacterTalents | null = null;
+let recommendedTalents: RecommendedTalentBuild | null = null;
 let error: { status: number; title: string; icon: string; message: string } | null = null;
 
 try {
@@ -27,6 +33,19 @@ try {
     bisEntries = bis.entries;
     bisSeeded = bis.seeded;
     statPriority = bis.seeded ? bis.statPriority : undefined;
+
+    const recommended = await getRecommendedBuild(CURRENT_SEASON_ID, full.character.className, full.character.specName);
+    recommendedTalents = recommended.build;
+  }
+  if (full.character.specId) {
+    // Talents are a supplementary section, not core to the page — a failure
+    // here (e.g. an obscure spec with no published talent tree yet)
+    // shouldn't take down the whole character page.
+    try {
+      talents = await getCharacterTalents(key, full.character.specId);
+    } catch {
+      talents = null;
+    }
   }
 } catch (err) {
   const { status, body } = toApiError(err);
@@ -73,6 +92,8 @@ const ogImage = full ? new URL(`/og/${key.region}/${key.realmSlug}/${key.name}.p
           bisEntries={bisEntries}
           bisSeeded={bisSeeded}
           statPriority={statPriority}
+          talents={talents}
+          recommendedTalents={recommendedTalents}
         />
       )
     )

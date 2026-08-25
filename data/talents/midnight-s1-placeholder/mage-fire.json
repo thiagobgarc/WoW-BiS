@@ -1,0 +1,146 @@
+{
+  "season": "midnight-s1-placeholder",
+  "class": "Mage",
+  "spec": "Fire",
+  "contentType": "mythic-plus",
+  "classSelections": [
+    {
+      "nodeId": 62119,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62122,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62115,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62105,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110079,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93524,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62088,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 62102,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108656,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "specSelections": [
+    {
+      "nodeId": 110321,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101009,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101024,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101029,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 100999,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109401,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109393,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109396,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109395,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101015,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109394,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109397,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101019,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101004,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109404,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 94650,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 101021,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 100995,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "notes": "Placeholder example Mythic+ build hand-picked for realistic single-target/AoE utility balance — not a guaranteed current-meta recommendation. Swap in real guide picks when available, same as the BiS seed data (see seasonConfig.ts's placeholder-season note)."
+}

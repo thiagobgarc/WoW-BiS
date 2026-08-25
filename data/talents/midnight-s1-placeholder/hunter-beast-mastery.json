@@ -1,0 +1,151 @@
+{
+  "season": "midnight-s1-placeholder",
+  "class": "Hunter",
+  "spec": "Beast Mastery",
+  "contentType": "mythic-plus",
+  "classSelections": [
+    {
+      "nodeId": 102411,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102407,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102292,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102419,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110156,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102418,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109488,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110155,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110164,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "specSelections": [
+    {
+      "nodeId": 102346,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102377,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102376,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102340,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102354,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102341,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102370,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102364,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102336,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102342,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102347,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102343,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102367,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102355,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102371,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 107285,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 107286,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102353,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102374,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "notes": "Placeholder example Mythic+ build hand-picked for realistic single-target/AoE utility balance — not a guaranteed current-meta recommendation. Swap in real guide picks when available, same as the BiS seed data (see seasonConfig.ts's placeholder-season note)."
+}

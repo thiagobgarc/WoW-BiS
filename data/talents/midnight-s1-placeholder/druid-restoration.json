@@ -1,0 +1,136 @@
+{
+  "season": "midnight-s1-placeholder",
+  "class": "Druid",
+  "spec": "Restoration",
+  "contentType": "mythic-plus",
+  "classSelections": [
+    {
+      "nodeId": 82217,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82205,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82227,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82209,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82207,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82234,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82230,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82244,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82231,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "specSelections": [
+    {
+      "nodeId": 82049,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82047,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82057,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82053,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82045,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110694,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82073,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103876,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82059,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82051,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82064,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 94592,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 82074,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 82072,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82046,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82066,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "notes": "Placeholder example Mythic+ build hand-picked for realistic single-target/AoE utility balance — not a guaranteed current-meta recommendation. Swap in real guide picks when available, same as the BiS seed data (see seasonConfig.ts's placeholder-season note)."
+}

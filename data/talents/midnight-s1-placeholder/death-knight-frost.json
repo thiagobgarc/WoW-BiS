@@ -1,0 +1,201 @@
+{
+  "season": "midnight-s1-placeholder",
+  "class": "Death Knight",
+  "spec": "Frost",
+  "contentType": "mythic-plus",
+  "classSelections": [
+    {
+      "nodeId": 76081,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76071,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76067,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76084,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76066,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76068,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76065,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76085,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76060,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76064,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 76057,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76076,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76054,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76079,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76080,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76088,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102007,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "specSelections": [
+    {
+      "nodeId": 76105,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76100,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76099,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76122,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101930,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101933,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76106,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76091,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101929,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76098,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76110,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76117,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76102,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76118,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76092,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76121,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101931,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76101,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76033,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76095,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76094,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "notes": "Placeholder example Mythic+ build hand-picked for realistic single-target/AoE utility balance — not a guaranteed current-meta recommendation. Swap in real guide picks when available, same as the BiS seed data (see seasonConfig.ts's placeholder-season note)."
+}

@@ -8,7 +8,10 @@ import type {
   BlizzardEquippedItem,
   CharacterEquipment,
   CharacterProfile,
+  CharacterSpecializations,
   CharacterStatistics,
+  TalentNode,
+  TalentTree,
 } from './schemas';
 
 export const EQUIPMENT_SLOTS = [
@@ -61,6 +64,7 @@ export interface DomainCharacter {
   className: string;
   classSlug: string;
   specName: string | null;
+  specId: number | null;
   faction: string;
   guildName: string | null;
   level: number;
@@ -104,6 +108,7 @@ export function mapProfile(raw: CharacterProfile, region: string): DomainCharact
     className: raw.character_class.name,
     classSlug: raw.character_class.name.toLowerCase().replace(/\s+/g, '-'),
     specName: raw.active_spec?.name ?? null,
+    specId: raw.active_spec?.id ?? null,
     faction: raw.faction.name,
     guildName: raw.guild?.name ?? null,
     level: raw.level,
@@ -153,20 +158,144 @@ export function mapEquipment(raw: CharacterEquipment, iconUrls: Map<number, stri
 
 function ratingToPercent(rating: number): number {
   // Retail-era approximation: ~2200 rating per 32% at level 80 content.
-  // Good enough for the "distribution vs ideal" bar chart; not combat log accurate.
+  // Only used for versatility, which the API doesn't return a `value` for.
   return Math.round((rating / 2200) * 32 * 10) / 10;
 }
 
 export function mapStatistics(raw: CharacterStatistics): SecondaryStats {
-  const haste = raw.melee_haste ?? raw.spell_haste ?? raw.ranged_haste ?? { rating: 0, value: 0 };
-  const crit = raw.melee_crit ?? raw.spell_crit ?? raw.ranged_crit ?? { rating: 0, value: 0 };
-  const mastery = raw.mastery ?? { rating: 0, value: 0 };
+  const zero = { rating_normalized: 0, value: 0 };
+  const haste = raw.melee_haste ?? raw.spell_haste ?? raw.ranged_haste ?? zero;
+  const crit = raw.melee_crit ?? raw.spell_crit ?? raw.ranged_crit ?? zero;
+  const mastery = raw.mastery ?? zero;
   const versatility = raw.versatility ?? 0;
+  const versatilityPercent = raw.versatility_damage_done_bonus ?? ratingToPercent(versatility);
 
   return {
-    haste: { rating: haste.rating, percent: ratingToPercent(haste.rating) },
-    crit: { rating: crit.rating, percent: ratingToPercent(crit.rating) },
-    mastery: { rating: mastery.rating, percent: ratingToPercent(mastery.rating) },
-    versatility: { rating: versatility, percent: ratingToPercent(versatility) },
+    haste: { rating: haste.rating_normalized, percent: Math.round(haste.value * 10) / 10 },
+    crit: { rating: crit.rating_normalized, percent: Math.round(crit.value * 10) / 10 },
+    mastery: { rating: mastery.rating_normalized, percent: Math.round(mastery.value * 10) / 10 },
+    versatility: { rating: versatility, percent: Math.round(versatilityPercent * 10) / 10 },
   };
+}
+
+// --- Talent trees -------------------------------------------------------
+
+export interface TalentOption {
+  talentId: number;
+  name: string;
+  spellId: number | null;
+  description?: string;
+  iconUrl: string | null;
+}
+
+export interface DomainTalentNode {
+  id: number;
+  type: 'active' | 'passive' | 'choice';
+  row: number;
+  col: number;
+  maxRank: number;
+  prerequisiteIds: number[];
+  /** One entry for ACTIVE/PASSIVE nodes, 2+ for CHOICE nodes, empty for
+   * structural nodes (e.g. the top-of-tree spec selector) with no tooltip. */
+  options: TalentOption[];
+}
+
+export interface DomainHeroTree {
+  id: number;
+  name: string;
+  nodes: DomainTalentNode[];
+}
+
+export interface DomainTalentTree {
+  classNodes: DomainTalentNode[];
+  specNodes: DomainTalentNode[];
+  /** All hero options available for this spec (usually 2-3) — the character
+   * has picked at most one, see `mapTalentSelections`'s `heroTreeId`. */
+  heroTrees: DomainHeroTree[];
+}
+
+export interface TalentSelection {
+  nodeId: number;
+  rank: number;
+  /** Which entry in the node's `options` is selected; 0 for non-choice nodes. */
+  optionIndex: number;
+}
+
+function mapTalentNode(raw: TalentNode, iconUrls: Map<number, string>): DomainTalentNode {
+  const lastRank = raw.ranks[raw.ranks.length - 1];
+  const rawOptions = lastRank?.choice_of_tooltips ?? (lastRank?.tooltip ? [lastRank.tooltip] : []);
+
+  return {
+    id: raw.id,
+    type: raw.node_type.type.toLowerCase() as DomainTalentNode['type'],
+    row: raw.display_row,
+    col: raw.display_col,
+    maxRank: lastRank?.rank ?? 1,
+    prerequisiteIds: raw.locked_by ?? [],
+    options: rawOptions.map((opt) => {
+      const spellId = opt.spell_tooltip?.spell.id ?? null;
+      return {
+        talentId: opt.talent.id,
+        name: opt.talent.name,
+        spellId,
+        description: opt.spell_tooltip?.description ?? undefined,
+        iconUrl: spellId !== null ? (iconUrls.get(spellId) ?? null) : null,
+      };
+    }),
+  };
+}
+
+/** `iconUrls` is keyed by spellId, pre-fetched in a batch (see getCharacterTalents.ts). */
+export function mapTalentTree(raw: TalentTree, iconUrls: Map<number, string>): DomainTalentTree {
+  return {
+    classNodes: raw.class_talent_nodes.map((n) => mapTalentNode(n, iconUrls)),
+    specNodes: raw.spec_talent_nodes.map((n) => mapTalentNode(n, iconUrls)),
+    heroTrees: (raw.hero_talent_trees ?? []).map((h) => ({
+      id: h.id,
+      name: h.name,
+      nodes: h.hero_talent_nodes.map((n) => mapTalentNode(n, iconUrls)),
+    })),
+  };
+}
+
+export interface CurrentTalentBuild {
+  /** Class + spec selections combined, as before. */
+  selections: TalentSelection[];
+  /** Which of `tree.heroTrees` this character picked, or null if none
+   * selected yet (e.g. too low level for hero talents). */
+  heroTree: DomainHeroTree | null;
+  heroSelections: TalentSelection[];
+}
+
+/**
+ * Reads the character's current talent build for the given spec. Returns
+ * null when the character has no active loadout for that spec at all (e.g.
+ * very low level, never opened the talent UI) — a real case, not an error.
+ * `tree` is used to resolve which side of a CHOICE node was picked: the
+ * Specializations API tells us the specific talent id chosen (via
+ * `tooltip.talent.id`) but not its index into the node's option list, so we
+ * look it up against the tree's node data.
+ */
+export function mapTalentSelections(raw: CharacterSpecializations, specId: number, tree: DomainTalentTree): CurrentTalentBuild | null {
+  const spec = raw.specializations.find((s) => s.specialization.id === specId);
+  const loadout = spec?.loadouts?.find((l) => l.is_active);
+  if (!loadout) return null;
+
+  const allNodes = [...tree.classNodes, ...tree.specNodes, ...tree.heroTrees.flatMap((h) => h.nodes)];
+  const nodesById = new Map(allNodes.map((n) => [n.id, n]));
+
+  const fromList = (list: { id: number; rank?: number; tooltip?: { talent: { id: number } } }[] | undefined) =>
+    (list ?? []).map((t) => {
+      const node = nodesById.get(t.id);
+      const optionIndex = t.tooltip ? (node?.options.findIndex((o) => o.talentId === t.tooltip!.talent.id) ?? 0) : 0;
+      return { nodeId: t.id, rank: t.rank ?? 1, optionIndex: Math.max(0, optionIndex) };
+    });
+
+  const selections = [...fromList(loadout.selected_class_talents), ...fromList(loadout.selected_spec_talents)];
+  const heroSelections = fromList(loadout.selected_hero_talents);
+  const heroTreeId = loadout.selected_hero_talent_tree?.id;
+  const heroTree = heroTreeId !== undefined ? (tree.heroTrees.find((h) => h.id === heroTreeId) ?? null) : null;
+
+  if (selections.length === 0 && heroSelections.length === 0) return null;
+  return { selections, heroTree, heroSelections };
 }

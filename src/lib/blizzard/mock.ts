@@ -9,8 +9,15 @@ import type {
   CharacterEquipment,
   CharacterMedia,
   CharacterProfile,
+  CharacterSpecializations,
   CharacterStatistics,
+  TalentTree,
 } from './schemas';
+// Real GET .../talent-tree/{id}/playable-specialization/251 response for
+// Frost Death Knight (matches MOCK_PROFILE's spec), trimmed of fields we
+// don't read. Legitimate static game data, not fabricated — using it here
+// keeps mock mode visually identical to the real feature.
+import mockTalentTreeRaw from './mockTalentTree.json';
 
 export const MOCK_CHARACTER_KEY = { region: 'us', realmSlug: 'illidan', name: 'arthas' };
 
@@ -158,10 +165,57 @@ export const MOCK_MEDIA: CharacterMedia = {
 
 export const MOCK_STATISTICS: CharacterStatistics = {
   health: 1_200_000,
-  melee_haste: { rating: 1247, value: 18.2 },
-  melee_crit: { rating: 892, value: 12.1 },
-  mastery: { rating: 634, value: 8.4 },
+  melee_haste: { rating_normalized: 1247, value: 18.2 },
+  melee_crit: { rating_normalized: 892, value: 12.1 },
+  mastery: { rating_normalized: 634, value: 8.4 },
   versatility: 756,
+  versatility_damage_done_bonus: 11.0,
+};
+
+export const MOCK_TALENT_TREE = mockTalentTreeRaw as unknown as TalentTree;
+
+// A plausible Mythic+-oriented Frost DK build (node ids + ranks resolved
+// against the real tree above by talent name) so mock mode demonstrates a
+// fully populated current-build tree, not an empty one.
+const MOCK_CLASS_TALENTS: { id: number; rank: number }[] = [
+  { id: 76081, rank: 1 }, { id: 76071, rank: 1 }, { id: 76067, rank: 1 }, { id: 76084, rank: 1 },
+  { id: 76066, rank: 1 }, { id: 76068, rank: 1 }, { id: 76065, rank: 1 }, { id: 76085, rank: 1 },
+  { id: 76060, rank: 1 }, { id: 76064, rank: 1 }, { id: 76057, rank: 1 }, { id: 76076, rank: 1 },
+  { id: 76054, rank: 2 }, { id: 76079, rank: 2 }, { id: 76080, rank: 1 }, { id: 76088, rank: 1 },
+  { id: 102007, rank: 1 },
+];
+const MOCK_SPEC_TALENTS: { id: number; rank: number }[] = [
+  { id: 76105, rank: 1 }, { id: 76100, rank: 1 }, { id: 76099, rank: 1 }, { id: 76122, rank: 2 },
+  { id: 101930, rank: 1 }, { id: 101933, rank: 1 }, { id: 76106, rank: 1 }, { id: 76091, rank: 1 },
+  { id: 101929, rank: 1 }, { id: 76098, rank: 1 }, { id: 76110, rank: 1 }, { id: 76117, rank: 1 },
+  { id: 76102, rank: 2 }, { id: 76118, rank: 1 }, { id: 76092, rank: 1 }, { id: 76121, rank: 1 },
+  { id: 101931, rank: 1 }, { id: 76101, rank: 1 }, { id: 76033, rank: 2 }, { id: 76095, rank: 1 },
+  { id: 76094, rank: 1 },
+];
+
+// San'layn hero nodes, same trimmed-real-data provenance as the trees above.
+const MOCK_HERO_TALENTS: { id: number; rank: number }[] = [
+  { id: 95033, rank: 1 }, { id: 95040, rank: 1 }, { id: 95045, rank: 1 }, { id: 95046, rank: 1 },
+  { id: 95048, rank: 1 }, { id: 95051, rank: 1 }, { id: 95053, rank: 1 }, { id: 95055, rank: 1 },
+  { id: 95056, rank: 1 }, { id: 95064, rank: 1 }, { id: 95065, rank: 1 }, { id: 109736, rank: 1 },
+  { id: 109737, rank: 1 }, { id: 109738, rank: 1 },
+];
+
+export const MOCK_SPECIALIZATIONS: CharacterSpecializations = {
+  specializations: [
+    {
+      specialization: { id: 251, name: 'Frost' },
+      loadouts: [
+        {
+          is_active: true,
+          selected_class_talents: MOCK_CLASS_TALENTS,
+          selected_spec_talents: MOCK_SPEC_TALENTS,
+          selected_hero_talents: MOCK_HERO_TALENTS,
+          selected_hero_talent_tree: { id: 31, name: "San'layn" },
+        },
+      ],
+    },
+  ],
 };
 
 export function hasBlizzardCredentials(): boolean {

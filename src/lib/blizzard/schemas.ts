@@ -94,7 +94,10 @@ export const CharacterMediaSchema = z
   .loose();
 export type CharacterMedia = z.infer<typeof CharacterMediaSchema>;
 
-const RatingStat = z.object({ rating: z.number(), value: z.number() }).loose();
+// Real API shape (not `{ rating, value }` as the name might suggest):
+// rating_normalized is the raw secondary-stat rating from gear, value is
+// the actual in-game percent (already includes base/innate contributions).
+const RatingStat = z.object({ rating_normalized: z.number(), value: z.number() }).loose();
 
 export const CharacterStatisticsSchema = z
   .object({
@@ -139,3 +142,117 @@ export const RealmIndexSchema = z
   })
   .loose();
 export type RealmIndex = z.infer<typeof RealmIndexSchema>;
+
+// --- Talent trees -----------------------------------------------------
+// Verified against a real GET .../talent-tree/{treeId}/playable-specialization/{specId}
+// response — field names below (raw_position_x/y, locked_by, choice_of_tooltips,
+// etc.) are exactly what Blizzard returns, not guessed from docs.
+
+const TalentTreeIndexEntry = z.object({ key: z.object({ href: z.string() }).loose(), name: z.string() }).loose();
+
+export const TalentTreeIndexSchema = z
+  .object({
+    class_talent_trees: z.array(TalentTreeIndexEntry),
+    spec_talent_trees: z.array(TalentTreeIndexEntry),
+  })
+  .loose();
+export type TalentTreeIndex = z.infer<typeof TalentTreeIndexSchema>;
+
+const TalentTooltipSchema = z
+  .object({
+    talent: z.object({ id: z.number(), name: z.string() }).loose(),
+    spell_tooltip: z
+      .object({
+        spell: z.object({ id: z.number(), name: z.string() }).loose(),
+        // Verified live: some real talents (esp. hero talents) return
+        // description: null rather than omitting the field — nullable, not
+        // just optional.
+        description: z.string().nullable().optional(),
+        cast_time: z.string().nullable().optional(),
+        cooldown: z.string().nullable().optional(),
+      })
+      .loose()
+      .optional(),
+  })
+  .loose();
+
+const TalentRankSchema = z
+  .object({
+    rank: z.number(),
+    default_points: z.number().optional(),
+    tooltip: TalentTooltipSchema.optional(),
+    // Present on CHOICE nodes instead of `tooltip` — one entry per option,
+    // array index is what we treat as `optionIndex` throughout the app.
+    choice_of_tooltips: z.array(TalentTooltipSchema).optional(),
+  })
+  .loose();
+
+export const TalentNodeSchema = z
+  .object({
+    id: z.number(),
+    node_type: z.object({ id: z.number(), type: z.enum(['ACTIVE', 'PASSIVE', 'CHOICE']) }).loose(),
+    ranks: z.array(TalentRankSchema),
+    display_row: z.number(),
+    display_col: z.number(),
+    raw_position_x: z.number().optional(),
+    raw_position_y: z.number().optional(),
+    locked_by: z.array(z.number()).optional(),
+    unlocks: z.array(z.number()).optional(),
+  })
+  .loose();
+export type TalentNode = z.infer<typeof TalentNodeSchema>;
+
+// Hero talent node graphs come bundled in the same response as the class/spec
+// trees (verified live) — no separate endpoint needed. A character picks
+// exactly one of these per spec; which one (and its selections) is reported
+// separately in CharacterSpecializationsSchema below.
+const HeroTalentTreeSchema = z
+  .object({
+    id: z.number(),
+    name: z.string(),
+    hero_talent_nodes: z.array(TalentNodeSchema),
+  })
+  .loose();
+
+export const TalentTreeSchema = z
+  .object({
+    id: z.number(),
+    name: z.string(),
+    class_talent_nodes: z.array(TalentNodeSchema),
+    spec_talent_nodes: z.array(TalentNodeSchema),
+    hero_talent_trees: z.array(HeroTalentTreeSchema).optional(),
+  })
+  .loose();
+export type TalentTree = z.infer<typeof TalentTreeSchema>;
+
+// --- Character specializations (the character's own current build) ----
+
+const SelectedTalentSchema = z
+  .object({ id: z.number(), rank: z.number().optional(), tooltip: TalentTooltipSchema.optional() })
+  .loose();
+
+const TalentLoadoutSchema = z
+  .object({
+    is_active: z.boolean(),
+    selected_class_talents: z.array(SelectedTalentSchema).optional(),
+    selected_spec_talents: z.array(SelectedTalentSchema).optional(),
+    selected_hero_talents: z.array(SelectedTalentSchema).optional(),
+    // id matches a TalentTree.hero_talent_trees[].id — which of the (usually
+    // 2-3) hero options this character picked. Absent at low level.
+    selected_hero_talent_tree: z.object({ id: z.number(), name: z.string() }).loose().optional(),
+  })
+  .loose();
+
+export const CharacterSpecializationsSchema = z
+  .object({
+    specializations: z.array(
+      z
+        .object({
+          specialization: z.object({ id: z.number(), name: z.string() }).loose(),
+          loadouts: z.array(TalentLoadoutSchema).optional(),
+        })
+        .loose(),
+    ),
+  })
+  .loose();
+export type CharacterSpecializations = z.infer<typeof CharacterSpecializationsSchema>;
