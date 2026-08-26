@@ -5,6 +5,11 @@
   "contentType": "mythic-plus",
   "classSelections": [
     {
+      "nodeId": 82717,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
       "nodeId": 82703,
       "rank": 1,
       "optionIndex": 0
@@ -15,7 +20,17 @@
       "optionIndex": 0
     },
     {
-      "nodeId": 82701,
+      "nodeId": 82718,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82672,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82719,
       "rank": 1,
       "optionIndex": 0
     },
@@ -30,17 +45,72 @@
       "optionIndex": 0
     },
     {
+      "nodeId": 109006,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82716,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
       "nodeId": 109890,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 109917,
+      "nodeId": 108731,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82687,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82702,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109019,
       "rank": 1,
       "optionIndex": 0
     },
     {
       "nodeId": 82690,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109020,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82696,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82678,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82712,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109021,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109012,
       "rank": 1,
       "optionIndex": 0
     },
@@ -55,24 +125,54 @@
       "optionIndex": 0
     },
     {
+      "nodeId": 82677,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109011,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
       "nodeId": 82686,
       "rank": 2,
       "optionIndex": 0
     },
     {
-      "nodeId": 82675,
+      "nodeId": 82697,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109010,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82676,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82673,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82685,
       "rank": 1,
       "optionIndex": 0
     }
   ],
   "specSelections": [
     {
-      "nodeId": 82593,
+      "nodeId": 82594,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82594,
+      "nodeId": 82593,
       "rank": 1,
       "optionIndex": 0
     },
@@ -82,12 +182,27 @@
       "optionIndex": 0
     },
     {
-      "nodeId": 82577,
+      "nodeId": 82595,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82564,
+      "nodeId": 82592,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82588,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 82596,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82591,
       "rank": 1,
       "optionIndex": 1
     },
@@ -97,17 +212,27 @@
       "optionIndex": 0
     },
     {
-      "nodeId": 82572,
-      "rank": 2,
+      "nodeId": 82564,
+      "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82600,
-      "rank": 2,
+      "nodeId": 82597,
+      "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82602,
+      "nodeId": 82590,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82598,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82581,
       "rank": 1,
       "optionIndex": 0
     },
@@ -122,12 +247,32 @@
       "optionIndex": 0
     },
     {
-      "nodeId": 94703,
+      "nodeId": 82576,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 109780,
+      "nodeId": 82582,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82600,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82577,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82599,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82601,
       "rank": 1,
       "optionIndex": 0
     },
@@ -137,25 +282,30 @@
       "optionIndex": 0
     },
     {
-      "nodeId": 82567,
+      "nodeId": 82569,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82573,
+      "nodeId": 86730,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82586,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82585,
+      "nodeId": 82572,
       "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82568,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110410,
+      "rank": 4,
       "optionIndex": 0
     }
   ],
-  "notes": "Placeholder example Mythic+ build hand-picked for realistic single-target/AoE utility balance — not a guaranteed current-meta recommendation. Swap in real guide picks when available, same as the BiS seed data (see seasonConfig.ts's placeholder-season note)."
+  "notes": "Sourced from SeeMeta's most-popular Mythic+ talent build (community usage data), checked 2026-08-24 against WoW patch 12.1.0 — replaces the earlier hand-picked placeholder build. Note: the app's season config (seasonConfig.ts) still models this as \"midnight-s1-placeholder\" reusing The War Within Season 1 raid/dungeon data, but the live game is actually on Midnight Season 2 (patch 12.1) as of this check — the season config itself needs a real update, out of scope for this data file."
 }
