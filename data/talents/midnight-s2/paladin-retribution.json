@@ -1,0 +1,311 @@
+{
+  "season": "midnight-s2",
+  "class": "Paladin",
+  "spec": "Retribution",
+  "contentType": "mythic-plus",
+  "classSelections": [
+    {
+      "nodeId": 81597,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81600,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81510,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81507,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109999,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81598,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93189,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 110012,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81632,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81603,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109867,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81605,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81631,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 110093,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81630,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109368,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93174,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93009,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110091,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81614,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93181,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 81616,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81543,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81609,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81618,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 81615,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103867,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103864,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81608,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81621,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103861,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103863,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "specSelections": [
+    {
+      "nodeId": 81526,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81527,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 92689,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81521,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 81544,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81532,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 92838,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 81523,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 81542,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109372,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81512,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109371,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81533,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 92952,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81545,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81534,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109374,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 81541,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 92839,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93164,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81525,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93160,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109373,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 92854,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93173,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 92686,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109369,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110419,
+      "rank": 4,
+      "optionIndex": 0
+    }
+  ],
+  "notes": "Sourced from SeeMeta's most-popular Mythic+ talent build (community usage data), checked 2026-08-24 against WoW patch 12.1.0 — replaces the earlier hand-picked placeholder build. Season config (seasonConfig.ts) has since been updated to real Midnight Season 2 (patch 12.1.0) data as of 2026-08-25."
+}

@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+/*
+ * Class color drives the whole page accent. `--accent` is set at the layout
+ * level (server-rendered inline style) from the looked-up character's class,
+ * falling back to the default WoW-agnostic brand red when no character is
+ * loaded (search page, error pages).
+ */
+:root {
+  --color-bg: #0a0e27;
+  --color-panel: #1a1f3a;
+  --color-panel-hover: #212740;
+  --color-border: rgb(255 255 255 / 0.08);
+  --color-text: #e8eaed;
+  --color-text-muted: #adb5bd;
+  --color-text-dim: #8d92a4;
+  --color-text-faint: #5f6470;
+  --color-link: #5eb3f6;
+
+  --accent: #c41e3a;
+  --accent-hover: #a01830;
+  --accent-soft: rgb(196 30 58 / 0.15);
+  --accent-softer: rgb(196 30 58 / 0.08);
+
+  /* Canonical WoW item quality colors — non-negotiable, do not theme these. */
+  --quality-poor: #9d9d9d;
+  --quality-common: #ffffff;
+  --quality-uncommon: #1eff00;
+  --quality-rare: #0070dd;
+  --quality-epic: #a335ee;
+  --quality-legendary: #ff8000;
+  --quality-artifact: #e6cc80;
+  --quality-heirloom: #00ccff;
+
+  /* Colorblind-safe severity scale — always paired with icon + text label. */
+  --severity-bis: #1eff00;
+  --severity-close: #ffc107;
+  --severity-upgrade: #ff9800;
+  --severity-gap: #ff6b6b;
+}
+
+@theme inline {
+  --color-bg: var(--color-bg);
+  --color-panel: var(--color-panel);
+  --color-panel-hover: var(--color-panel-hover);
+  --color-border: var(--color-border);
+  --color-text: var(--color-text);
+  --color-text-muted: var(--color-text-muted);
+  --color-text-dim: var(--color-text-dim);
+  --color-text-faint: var(--color-text-faint);
+  --color-link: var(--color-link);
+
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-softer: var(--accent-softer);
+
+  --color-quality-poor: var(--quality-poor);
+  --color-quality-common: var(--quality-common);
+  --color-quality-uncommon: var(--quality-uncommon);
+  --color-quality-rare: var(--quality-rare);
+  --color-quality-epic: var(--quality-epic);
+  --color-quality-legendary: var(--quality-legendary);
+  --color-quality-artifact: var(--quality-artifact);
+  --color-quality-heirloom: var(--quality-heirloom);
+
+  --color-severity-bis: var(--severity-bis);
+  --color-severity-close: var(--severity-close);
+  --color-severity-upgrade: var(--severity-upgrade);
+  --color-severity-gap: var(--severity-gap);
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
