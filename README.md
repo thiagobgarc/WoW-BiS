@@ -155,7 +155,7 @@ when seeded. **Currently seeded (6 specs, one per armor type):**
 
 ```jsonc
 {
-  "season": "midnight-s1-placeholder",
+  "season": "midnight-s2",
   "class": "Warrior",
   "spec": "Fury",
   "armorType": "plate",
@@ -195,12 +195,24 @@ one file (and drop new seed JSON under the new `data/bis/{newSeasonId}/`
 directory) when a season rolls over; nothing else in the app hardcodes
 season-specific values.
 
-**Placeholder data notice**: Midnight (12.x) season 1's actual raid/dungeon names
-weren't public when this was built. `seasonConfig.ts` and every seed file reuse
-The War Within Season 1's structure (Nerub-ar Palace, its 8 bosses, that
-season's M+ pool) purely so the whole pipeline — data → comparison → UI — is
-provable end to end with realistic-shaped data. Swap the config and seed files
-once real Midnight data is known.
+**Known limitations (as of 2026-08-25)**: `seasonConfig.ts` and the
+`data/bis/`/`data/talents/` directory names now reflect the real current
+season — Midnight Season 2, patch 12.1.0 "The Curse of Ula'tek" (raid: The
+Venomous Abyss; M+ pool: Altar of Fangs, Murder Row, Den of Nalorakk, The
+Blinding Vale, Voidscar Arena, King's Rest, Ruby Life Pools, Temple of
+Sethraliss; real tier set names/bonuses per class). A few numeric fields
+(raid/M+ ilvl-by-key tables, crafted ilvl caps) are still marked
+`PROVISIONAL` in `seasonConfig.ts` — Blizzard hadn't published final numbers
+for those as of this update, so the old Season 1 shape was carried forward
+as a placeholder rather than fabricating precise figures.
+
+**The BiS gear seed *content* is still stale.** Only the season config and
+folder names were updated in this pass — the actual item names, drop
+sources, and stat rolls in `data/bis/midnight-s2/*.json` are unchanged from
+the original The War Within Season 1 placeholder build and have not been
+re-authored against real Midnight Season 2 loot. Re-authoring that content
+(one JSON file per seeded spec) is a larger content-authoring task that
+hasn't been done yet.
 
 ---
 

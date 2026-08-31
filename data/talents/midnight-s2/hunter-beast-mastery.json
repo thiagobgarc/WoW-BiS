@@ -1,5 +1,5 @@
 {
-  "season": "midnight-s1-placeholder",
+  "season": "midnight-s2",
   "class": "Hunter",
   "spec": "Beast Mastery",
   "contentType": "mythic-plus",
@@ -287,5 +287,5 @@
       "optionIndex": 0
     }
   ],
-  "notes": "Sourced from SeeMeta's most-popular Mythic+ talent build (community usage data), checked 2026-08-24 against WoW patch 12.1.0 — replaces the earlier hand-picked placeholder build. Note: the app's season config (seasonConfig.ts) still models this as \"midnight-s1-placeholder\" reusing The War Within Season 1 raid/dungeon data, but the live game is actually on Midnight Season 2 (patch 12.1) as of this check — the season config itself needs a real update, out of scope for this data file."
+  "notes": "Sourced from SeeMeta's most-popular Mythic+ talent build (community usage data), checked 2026-08-24 against WoW patch 12.1.0 — replaces the earlier hand-picked placeholder build. Season config (seasonConfig.ts) has since been updated to real Midnight Season 2 (patch 12.1.0) data as of 2026-08-25."
 }
