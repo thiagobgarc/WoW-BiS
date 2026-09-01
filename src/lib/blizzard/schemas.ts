@@ -256,3 +256,106 @@ export const CharacterSpecializationsSchema = z
   })
   .loose();
 export type CharacterSpecializations = z.infer<typeof CharacterSpecializationsSchema>;
+
+// --- Raid encounters -----------------------------------------------------
+// Verified against a real GET .../character/{realm}/{name}/encounters/raids
+// response (namespace=profile-{region}). `difficulty.type` is z.string(),
+// not an enum, because real characters carry legacy values we don't need
+// to model (LEGACY_25_MAN_HEROIC, LEGACY_10_MAN, etc.) alongside the
+// modern LFR/NORMAL/HEROIC/MYTHIC ones — domain.ts filters to the ones it
+// cares about and ignores anything else.
+
+const EncounterProgressSchema = z
+  .object({
+    completed_count: z.number(),
+    total_count: z.number(),
+    encounters: z.array(
+      z
+        .object({
+          encounter: z.object({ id: z.number(), name: z.string() }).loose(),
+          completed_count: z.number(),
+          last_kill_timestamp: z.number().optional(),
+        })
+        .loose(),
+    ),
+  })
+  .loose();
+
+const RaidModeSchema = z
+  .object({
+    difficulty: z.object({ type: z.string(), name: z.string() }).loose(),
+    status: z.object({ type: z.string(), name: z.string() }).loose(),
+    progress: EncounterProgressSchema,
+  })
+  .loose();
+
+export const CharacterRaidsSchema = z
+  .object({
+    expansions: z.array(
+      z
+        .object({
+          expansion: z.object({ id: z.number(), name: z.string() }).loose(),
+          instances: z.array(
+            z
+              .object({
+                instance: z.object({ id: z.number(), name: z.string() }).loose(),
+                modes: z.array(RaidModeSchema),
+              })
+              .loose(),
+          ),
+        })
+        .loose(),
+    ),
+  })
+  .loose();
+export type CharacterRaids = z.infer<typeof CharacterRaidsSchema>;
+
+// --- Mythic Keystone profile ----------------------------------------------
+// Verified against real GET .../mythic-keystone-profile and
+// .../mythic-keystone-profile/season/{id} responses.
+//
+// `current_mythic_rating` on the index endpoint is documented by Blizzard
+// but was NOT observed live — the test character used to verify this file
+// (Illidan-US "Arthas") has no current-season Mythic+ activity, so Blizzard
+// omits the field entirely for them. Kept optional/loose rather than
+// removed; re-verify against an active pushing character if this ever
+// looks wrong. Per-season `mythic_rating` (on the season-detail endpoint,
+// both overall and per-run) WAS observed live and is modeled exactly.
+
+const MythicRatingSchema = z
+  .object({
+    rating: z.number(),
+    color: z.object({ r: z.number(), g: z.number(), b: z.number(), a: z.number() }).loose().optional(),
+  })
+  .loose();
+
+export const MythicKeystoneProfileIndexSchema = z
+  .object({
+    current_period: z.object({ period: z.object({ id: z.number() }).loose() }).loose().optional(),
+    // Not confirmed live — see comment above.
+    current_mythic_rating: MythicRatingSchema.optional(),
+    seasons: z.array(z.object({ id: z.number() }).loose()),
+  })
+  .loose();
+export type MythicKeystoneProfileIndex = z.infer<typeof MythicKeystoneProfileIndexSchema>;
+
+const MythicKeystoneRunSchema = z
+  .object({
+    completed_timestamp: z.number(),
+    duration: z.number(),
+    keystone_level: z.number(),
+    is_completed_within_time: z.boolean(),
+    dungeon: z.object({ id: z.number(), name: z.string() }).loose(),
+    mythic_rating: MythicRatingSchema.optional(),
+    keystone_affixes: z.array(z.object({ id: z.number(), name: z.string() }).loose()).optional(),
+  })
+  .loose();
+
+export const MythicKeystoneSeasonSchema = z
+  .object({
+    season: z.object({ id: z.number() }).loose(),
+    mythic_rating: MythicRatingSchema.optional(),
+    best_runs: z.array(MythicKeystoneRunSchema),
+  })
+  .loose();
+export type MythicKeystoneSeason = z.infer<typeof MythicKeystoneSeasonSchema>;

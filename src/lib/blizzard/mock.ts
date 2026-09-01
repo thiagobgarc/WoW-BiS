@@ -9,8 +9,11 @@ import type {
   CharacterEquipment,
   CharacterMedia,
   CharacterProfile,
+  CharacterRaids,
   CharacterSpecializations,
   CharacterStatistics,
+  MythicKeystoneProfileIndex,
+  MythicKeystoneSeason,
   TalentTree,
 } from './schemas';
 // Real GET .../talent-tree/{id}/playable-specialization/251 response for
@@ -215,6 +218,111 @@ export const MOCK_SPECIALIZATIONS: CharacterSpecializations = {
         },
       ],
     },
+  ],
+};
+
+// Themed to match this season's real config (src/lib/season/seasonConfig.ts):
+// "The Venomous Abyss" raid (8 bosses) and the real 8-dungeon Season 2 M+
+// pool, so mock mode's new Raid Progression / Mythic+ tabs demo realistically
+// without Blizzard credentials. Shape verified live against a real character
+// (see schemas.ts's raid/mythic-keystone doc comments) — this is invented
+// per-character progress laid over that real shape, not fabricated schema.
+function raidEncounter(id: number, name: string, killedTimesAgoMs: number, count = 1) {
+  return {
+    encounter: { id, name },
+    completed_count: count,
+    last_kill_timestamp: Date.now() - killedTimesAgoMs,
+  };
+}
+
+const VENOMOUS_ABYSS_BOSSES = [
+  { id: 401001, name: "Nek'zali the Soulcoiler" },
+  { id: 401002, name: 'Entombed Sentinels' },
+  { id: 401003, name: 'The Lost Explorers' },
+  { id: 401004, name: 'Vashnik the Malignant' },
+  { id: 401005, name: 'Sszorak' },
+  { id: 401006, name: 'The Twin Fangs' },
+  { id: 401007, name: 'The Coiled Altar' },
+  { id: 401008, name: "Ula'tek" },
+];
+
+const DAY_MS = 24 * 60 * 60 * 1000;
+
+function raidMode(difficultyType: string, difficultyName: string, killedCount: number) {
+  return {
+    difficulty: { type: difficultyType, name: difficultyName },
+    status: { type: killedCount >= VENOMOUS_ABYSS_BOSSES.length ? 'COMPLETE' : 'IN_PROGRESS', name: killedCount >= VENOMOUS_ABYSS_BOSSES.length ? 'Complete' : 'In Progress' },
+    progress: {
+      completed_count: killedCount,
+      total_count: VENOMOUS_ABYSS_BOSSES.length,
+      encounters: VENOMOUS_ABYSS_BOSSES.slice(0, killedCount).map((b, i) => raidEncounter(b.id, b.name, (killedCount - i) * DAY_MS)),
+    },
+  };
+}
+
+export const MOCK_RAIDS: CharacterRaids = {
+  expansions: [
+    {
+      expansion: { id: 501, name: 'Midnight' },
+      instances: [
+        {
+          instance: { id: 40100, name: 'The Venomous Abyss' },
+          modes: [
+            raidMode('LFR', 'Raid Finder', 8),
+            raidMode('NORMAL', 'Normal', 8),
+            raidMode('HEROIC', 'Heroic', 8),
+            raidMode('MYTHIC', 'Mythic', 5),
+          ],
+        },
+      ],
+    },
+  ],
+};
+
+export const MOCK_MYTHIC_KEYSTONE_PROFILE_INDEX: MythicKeystoneProfileIndex = {
+  current_period: { period: { id: 1078 } },
+  current_mythic_rating: { rating: 2487.3, color: { r: 255, g: 128, b: 0, a: 1 } },
+  seasons: [{ id: 18 }],
+};
+
+const S2_DUNGEONS = [
+  { id: 402001, name: 'Altar of Fangs' },
+  { id: 402002, name: 'Murder Row' },
+  { id: 402003, name: 'Den of Nalorakk' },
+  { id: 402004, name: 'The Blinding Vale' },
+  { id: 402005, name: 'Voidscar Arena' },
+  { id: 402006, name: "King's Rest" },
+  { id: 402007, name: 'Ruby Life Pools' },
+  // Temple of Sethraliss intentionally omitted — this mock character hasn't
+  // run it yet this season, exercising the "not run" empty state.
+];
+
+function keystoneRun(dungeon: { id: number; name: string }, level: number, timed: boolean, rating: number, daysAgo: number) {
+  return {
+    completed_timestamp: Date.now() - daysAgo * DAY_MS,
+    duration: 1_680_000 + level * 12_000,
+    keystone_level: level,
+    is_completed_within_time: timed,
+    dungeon,
+    mythic_rating: { rating, color: { r: 255, g: 128, b: 0, a: 1 } },
+    keystone_affixes: [
+      { id: 9, name: 'Tyrannical' },
+      { id: 10, name: 'Fortified' },
+    ],
+  };
+}
+
+export const MOCK_MYTHIC_KEYSTONE_SEASON: MythicKeystoneSeason = {
+  season: { id: 18 },
+  mythic_rating: { rating: 2487.3, color: { r: 255, g: 128, b: 0, a: 1 } },
+  best_runs: [
+    keystoneRun(S2_DUNGEONS[0], 11, true, 331.2, 1),
+    keystoneRun(S2_DUNGEONS[1], 10, true, 318.6, 2),
+    keystoneRun(S2_DUNGEONS[2], 10, true, 315.9, 3),
+    keystoneRun(S2_DUNGEONS[3], 9, true, 302.4, 4),
+    keystoneRun(S2_DUNGEONS[4], 9, false, 288.1, 5),
+    keystoneRun(S2_DUNGEONS[5], 8, true, 296.7, 6),
+    keystoneRun(S2_DUNGEONS[6], 7, true, 279.5, 7),
   ],
 };
 

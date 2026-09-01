@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { TooltipProvider } from '@/components/ui/Tooltip';
-import type { DomainCharacter, EquipmentBySlot, SecondaryStats } from '@/lib/blizzard/domain';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/Tabs';
+import type { DomainCharacter, DomainMythicPlusProfile, DomainRaidProgress, EquipmentBySlot, SecondaryStats } from '@/lib/blizzard/domain';
 import type { CharacterTalents } from '@/lib/blizzard/getCharacterTalents';
 import type { BisEntry } from '@/lib/bis/types';
 import type { RecommendedTalentBuild } from '@/lib/talents/types';
@@ -10,6 +11,8 @@ import { StatsPanel } from './StatsPanel';
 import { RefreshButton } from './RefreshButton';
 import { UpgradeBoard } from '@/components/upgrade-board/UpgradeBoard';
 import { TalentTreeSection } from '@/components/talents/TalentTreeSection';
+import { RaidProgressionPanel } from '@/components/progression/RaidProgressionPanel';
+import { MythicPlusPanel } from '@/components/progression/MythicPlusPanel';
 import { timeAgo } from '@/lib/utils/format';
 
 interface Props {
@@ -25,6 +28,8 @@ interface Props {
   statPriority?: (keyof SecondaryStats)[];
   talents: CharacterTalents | null;
   recommendedTalents: RecommendedTalentBuild | null;
+  raidProgress: DomainRaidProgress | null;
+  mythicPlus: DomainMythicPlusProfile | null;
 }
 
 interface RefreshableData {
@@ -50,6 +55,8 @@ export function CharacterPage({
   statPriority,
   talents,
   recommendedTalents,
+  raidProgress,
+  mythicPlus,
 }: Props) {
   const [data, setData] = useState<RefreshableData>({
     character: initialCharacter,
@@ -101,30 +108,60 @@ export function CharacterPage({
           <CharacterHeader character={character} equipment={equipment} avatarUrl={avatarUrl} />
         </div>
 
-        <div className="flex items-center justify-between text-xs text-text-dim">
-          <span>Last updated {timeAgo(fetchedAt)}</span>
-          <RefreshButton region={character.region} realm={character.realmSlug} name={character.name} onRefreshed={refetch} />
-        </div>
+        <Tabs defaultValue="gear">
+          <TabsList className="mb-0">
+            <TabsTrigger value="gear">Gear</TabsTrigger>
+            <TabsTrigger value="raid">Raid Progression</TabsTrigger>
+            <TabsTrigger value="mythic-plus">Mythic+</TabsTrigger>
+          </TabsList>
 
-        <section aria-label="Equipped gear">{refreshing ? <PaperDollSkeleton /> : <PaperDoll equipment={equipment} />}</section>
+          <div className="flex items-center justify-between text-xs text-text-dim my-4">
+            <span>Last updated {timeAgo(fetchedAt)}</span>
+            <RefreshButton region={character.region} realm={character.realmSlug} name={character.name} onRefreshed={refetch} />
+          </div>
 
-        <StatsPanel stats={stats} priorityOrder={statPriority} />
+          <TabsContent value="gear" className="space-y-8">
+            <section aria-label="Equipped gear">{refreshing ? <PaperDollSkeleton /> : <PaperDoll equipment={equipment} />}</section>
 
-        <section aria-label="Upgrade board">
-          <UpgradeBoard equipment={equipment} bisEntries={bisEntries} seeded={bisSeeded} />
-        </section>
+            <StatsPanel stats={stats} priorityOrder={statPriority} />
 
-        {talents && (
-          <section aria-label="Talents">
-            <TalentTreeSection
-              tree={talents.tree}
-              current={talents.current}
-              heroTree={talents.heroTree}
-              heroSelections={talents.heroSelections}
-              recommended={recommendedTalents}
-            />
-          </section>
-        )}
+            <section aria-label="Upgrade board">
+              <UpgradeBoard equipment={equipment} bisEntries={bisEntries} seeded={bisSeeded} />
+            </section>
+
+            {talents && (
+              <section aria-label="Talents">
+                <TalentTreeSection
+                  tree={talents.tree}
+                  current={talents.current}
+                  heroTree={talents.heroTree}
+                  heroSelections={talents.heroSelections}
+                  recommended={recommendedTalents}
+                />
+              </section>
+            )}
+          </TabsContent>
+
+          <TabsContent value="raid">
+            {raidProgress ? (
+              <RaidProgressionPanel progress={raidProgress} />
+            ) : (
+              <div className="rounded-xl border border-white/8 bg-panel p-5 text-sm text-text-dim">
+                Raid progression isn't available for this character right now.
+              </div>
+            )}
+          </TabsContent>
+
+          <TabsContent value="mythic-plus">
+            {mythicPlus ? (
+              <MythicPlusPanel profile={mythicPlus} />
+            ) : (
+              <div className="rounded-xl border border-white/8 bg-panel p-5 text-sm text-text-dim">
+                Mythic+ progress isn't available for this character right now.
+              </div>
+            )}
+          </TabsContent>
+        </Tabs>
       </div>
     </TooltipProvider>
   );

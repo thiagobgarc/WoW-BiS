@@ -4,6 +4,7 @@ import ErrorState from '@/components/error/ErrorState.astro';
 import { CharacterPage } from '@/components/character/CharacterPage';
 import { getFullCharacter, toCharacterKey } from '@/lib/blizzard/getFullCharacter';
 import { getCharacterTalents } from '@/lib/blizzard/getCharacterTalents';
+import { getCharacterProgression } from '@/lib/blizzard/getCharacterProgression';
 import { getBisList } from '@/lib/bis/getBisList';
 import { getRecommendedBuild } from '@/lib/talents/getRecommendedBuild';
 import { CURRENT_SEASON_ID } from '@/lib/season/seasonConfig';
@@ -11,6 +12,7 @@ import { toApiError } from '@/lib/http/errorResponse';
 import { classColor } from '@/lib/utils/classColors';
 import type { BisEntry, BisList } from '@/lib/bis/types';
 import type { CharacterTalents } from '@/lib/blizzard/getCharacterTalents';
+import type { DomainMythicPlusProfile, DomainRaidProgress } from '@/lib/blizzard/domain';
 import type { RecommendedTalentBuild } from '@/lib/talents/types';
 
 export const prerender = false;
@@ -24,6 +26,8 @@ let bisSeeded = false;
 let statPriority: BisList['statPriority'] | undefined;
 let talents: CharacterTalents | null = null;
 let recommendedTalents: RecommendedTalentBuild | null = null;
+let raidProgress: DomainRaidProgress | null = null;
+let mythicPlus: DomainMythicPlusProfile | null = null;
 let error: { status: number; title: string; icon: string; message: string } | null = null;
 
 try {
@@ -46,6 +50,17 @@ try {
     } catch {
       talents = null;
     }
+  }
+  // Raid Progression / Mythic+ are supplementary tabs, not core to the
+  // page — same reasoning as talents above: a failure here (e.g. Blizzard
+  // rate-limiting the extra calls) shouldn't take down the whole page.
+  try {
+    const progression = await getCharacterProgression(key);
+    raidProgress = progression.raid;
+    mythicPlus = progression.mythicPlus;
+  } catch {
+    raidProgress = null;
+    mythicPlus = null;
   }
 } catch (err) {
   const { status, body } = toApiError(err);
@@ -94,6 +109,8 @@ const ogImage = full ? new URL(`/og/${key.region}/${key.realmSlug}/${key.name}.p
           statPriority={statPriority}
           talents={talents}
           recommendedTalents={recommendedTalents}
+          raidProgress={raidProgress}
+          mythicPlus={mythicPlus}
         />
       )
     )

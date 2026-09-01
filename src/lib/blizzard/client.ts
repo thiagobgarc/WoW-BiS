@@ -11,12 +11,16 @@
  * to once per 60s per character (see `refreshCharacter`).
  */
 import { getCache } from '@/lib/cache/cache';
+import { seasonConfig } from '@/lib/season/seasonConfig';
 import { getBlizzardAccessToken } from './auth';
 import {
   hasBlizzardCredentials,
   MOCK_EQUIPMENT,
   MOCK_MEDIA,
+  MOCK_MYTHIC_KEYSTONE_PROFILE_INDEX,
+  MOCK_MYTHIC_KEYSTONE_SEASON,
   MOCK_PROFILE,
+  MOCK_RAIDS,
   MOCK_SPECIALIZATIONS,
   MOCK_STATISTICS,
   MOCK_TALENT_TREE,
@@ -25,19 +29,25 @@ import {
   CharacterEquipmentSchema,
   CharacterMediaSchema,
   CharacterProfileSchema,
+  CharacterRaidsSchema,
   CharacterSpecializationsSchema,
   CharacterStatisticsSchema,
   ItemMediaSchema,
   ItemSchema,
+  MythicKeystoneProfileIndexSchema,
+  MythicKeystoneSeasonSchema,
   RealmIndexSchema,
   TalentTreeIndexSchema,
   TalentTreeSchema,
   type CharacterEquipment,
   type CharacterMedia,
   type CharacterProfile,
+  type CharacterRaids,
   type CharacterSpecializations,
   type CharacterStatistics,
   type BlizzardItem,
+  type MythicKeystoneProfileIndex,
+  type MythicKeystoneSeason,
   type RealmIndex,
   type TalentTree,
 } from './schemas';
@@ -195,6 +205,66 @@ export async function getCharacterStatistics(key: CharacterKey): Promise<{ data:
   return { data, mock: false };
 }
 
+export async function getCharacterRaids(key: CharacterKey): Promise<{ data: CharacterRaids; mock: boolean }> {
+  if (!hasBlizzardCredentials()) {
+    return { data: MOCK_RAIDS, mock: true };
+  }
+  const data = await cached(charCacheKey('raids', key), TTL_CHARACTER_SECONDS, async () => {
+    const raw = await blizzardGet<unknown>(charPath('/encounters/raids', key), {
+      namespace: 'profile',
+      region: key.region,
+    });
+    return CharacterRaidsSchema.parse(raw);
+  });
+  return { data, mock: false };
+}
+
+export async function getCharacterMythicKeystoneProfileIndex(
+  key: CharacterKey,
+): Promise<{ data: MythicKeystoneProfileIndex; mock: boolean }> {
+  if (!hasBlizzardCredentials()) {
+    return { data: MOCK_MYTHIC_KEYSTONE_PROFILE_INDEX, mock: true };
+  }
+  const data = await cached(charCacheKey('mythic-keystone-index', key), TTL_CHARACTER_SECONDS, async () => {
+    const raw = await blizzardGet<unknown>(charPath('/mythic-keystone-profile', key), {
+      namespace: 'profile',
+      region: key.region,
+    });
+    return MythicKeystoneProfileIndexSchema.parse(raw);
+  });
+  return { data, mock: false };
+}
+
+/**
+ * A character with no runs in the given season 404s (verified live) rather
+ * than returning an empty best_runs array — that's a real, common case
+ * (never touched Mythic+ this season), not an error, so it's mapped to
+ * `null` here instead of throwing.
+ */
+export async function getCharacterMythicKeystoneSeason(
+  key: CharacterKey,
+  seasonId: number,
+): Promise<{ data: MythicKeystoneSeason | null; mock: boolean }> {
+  if (!hasBlizzardCredentials()) {
+    return { data: MOCK_MYTHIC_KEYSTONE_SEASON, mock: true };
+  }
+  const data = await cached(charCacheKey(`mythic-keystone-season-${seasonId}`, key), TTL_CHARACTER_SECONDS, async () => {
+    try {
+      const raw = await blizzardGet<unknown>(charPath(`/mythic-keystone-profile/season/${seasonId}`, key), {
+        namespace: 'profile',
+        region: key.region,
+      });
+      return MythicKeystoneSeasonSchema.parse(raw);
+    } catch (err) {
+      if (err instanceof BlizzardApiError && err.status === 404) {
+        return null;
+      }
+      throw err;
+    }
+  });
+  return { data, mock: false };
+}
+
 export async function getItem(region: string, itemId: number): Promise<BlizzardItem | null> {
   if (!hasBlizzardCredentials()) return null;
   return cached(`item:${region}:${itemId}`, TTL_ITEM_SECONDS, async () => {
@@ -306,6 +376,9 @@ export async function refreshCharacter(key: CharacterKey): Promise<{ ok: true } 
     cache.del(charCacheKey('media', key)),
     cache.del(charCacheKey('statistics', key)),
     cache.del(charCacheKey('specializations', key)),
+    cache.del(charCacheKey('raids', key)),
+    cache.del(charCacheKey('mythic-keystone-index', key)),
+    cache.del(charCacheKey(`mythic-keystone-season-${seasonConfig.mythicPlus.blizzardSeasonId}`, key)),
   ]);
   await cache.set(cooldownKey, Date.now(), REFRESH_COOLDOWN_SECONDS);
   return { ok: true };

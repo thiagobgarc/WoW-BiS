@@ -8,8 +8,11 @@ import type {
   BlizzardEquippedItem,
   CharacterEquipment,
   CharacterProfile,
+  CharacterRaids,
   CharacterSpecializations,
   CharacterStatistics,
+  MythicKeystoneProfileIndex,
+  MythicKeystoneSeason,
   TalentNode,
   TalentTree,
 } from './schemas';
@@ -298,4 +301,124 @@ export function mapTalentSelections(raw: CharacterSpecializations, specId: numbe
 
   if (selections.length === 0 && heroSelections.length === 0) return null;
   return { selections, heroTree, heroSelections };
+}
+
+// --- Raid progression -----------------------------------------------------
+
+const RAID_DIFFICULTIES = [
+  { type: 'LFR', label: 'Raid Finder' },
+  { type: 'NORMAL', label: 'Normal' },
+  { type: 'HEROIC', label: 'Heroic' },
+  { type: 'MYTHIC', label: 'Mythic' },
+] as const;
+
+export interface DomainBossKill {
+  name: string;
+  killed: boolean;
+  killCount: number;
+  lastKillTimestamp: number | null;
+}
+
+export interface DomainRaidDifficultyProgress {
+  difficulty: (typeof RAID_DIFFICULTIES)[number]['type'];
+  label: string;
+  killed: number;
+  total: number;
+  bosses: DomainBossKill[];
+}
+
+export interface DomainRaidProgress {
+  instanceName: string;
+  difficulties: DomainRaidDifficultyProgress[];
+}
+
+/**
+ * Builds this season's raid progress from the raw encounters/raids payload,
+ * scoped to `raidName` (this app only shows the current season's raid, not
+ * the character's whole raiding history) and ordered by `bossOrder` (kill
+ * order, from seasonConfig) rather than whatever order Blizzard returns.
+ * Always returns all four modern difficulties and the full boss list, even
+ * for difficulties/bosses the character has no kills on yet — an empty
+ * progress state is a real, common thing to render, not an absence of data.
+ */
+export function mapRaidProgress(raw: CharacterRaids, raidName: string, bossOrder: string[]): DomainRaidProgress {
+  const instance = raw.expansions.flatMap((e) => e.instances).find((i) => i.instance.name === raidName);
+  const modesByType = new Map((instance?.modes ?? []).map((m) => [m.difficulty.type, m]));
+
+  const difficulties = RAID_DIFFICULTIES.map(({ type, label }) => {
+    const mode = modesByType.get(type);
+    const encountersByName = new Map((mode?.progress.encounters ?? []).map((e) => [e.encounter.name, e]));
+
+    const bosses: DomainBossKill[] = bossOrder.map((name) => {
+      const encounter = encountersByName.get(name);
+      const killCount = encounter?.completed_count ?? 0;
+      return {
+        name,
+        killed: killCount > 0,
+        killCount,
+        lastKillTimestamp: encounter?.last_kill_timestamp ?? null,
+      };
+    });
+
+    return {
+      difficulty: type,
+      label,
+      killed: bosses.filter((b) => b.killed).length,
+      total: bossOrder.length,
+      bosses,
+    };
+  });
+
+  return { instanceName: raidName, difficulties };
+}
+
+// --- Mythic+ progression ----------------------------------------------
+
+export interface DomainMythicPlusRun {
+  level: number;
+  timed: boolean;
+  score: number | null;
+  durationMs: number;
+  completedAt: number;
+}
+
+export interface DomainDungeonProgress {
+  dungeon: string;
+  run: DomainMythicPlusRun | null;
+}
+
+export interface DomainMythicPlusProfile {
+  rating: number | null;
+  dungeons: DomainDungeonProgress[];
+}
+
+/**
+ * `season` is null when the character has no Mythic+ runs at all this
+ * season (Blizzard 404s that endpoint rather than returning an empty
+ * array — see client.ts) — a real, common case, not an error.
+ */
+export function mapMythicPlusProfile(
+  index: MythicKeystoneProfileIndex,
+  season: MythicKeystoneSeason | null,
+  dungeonOrder: string[],
+): DomainMythicPlusProfile {
+  const rating = season?.mythic_rating?.rating ?? index.current_mythic_rating?.rating ?? null;
+  const bestRunByDungeon = new Map((season?.best_runs ?? []).map((r) => [r.dungeon.name, r]));
+
+  const dungeons: DomainDungeonProgress[] = dungeonOrder.map((name) => {
+    const run = bestRunByDungeon.get(name);
+    if (!run) return { dungeon: name, run: null };
+    return {
+      dungeon: name,
+      run: {
+        level: run.keystone_level,
+        timed: run.is_completed_within_time,
+        score: run.mythic_rating?.rating ?? null,
+        durationMs: run.duration,
+        completedAt: run.completed_timestamp,
+      },
+    };
+  });
+
+  return { rating, dungeons };
 }

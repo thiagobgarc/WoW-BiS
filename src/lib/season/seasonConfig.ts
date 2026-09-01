@@ -57,6 +57,16 @@ export const seasonConfig = {
     },
   },
   mythicPlus: {
+    // Blizzard's internal numeric Mythic+ season id, needed to call
+    // GET .../mythic-keystone-profile/season/{id}. Determined empirically
+    // (2026-09-01), not guessed: GET /data/wow/mythic-keystone/season/index
+    // lists ids 1-15,17,18 (16 is absent/skipped by Blizzard); season 18's
+    // start_timestamp is 2026-08-11, closest to and just before this
+    // season's real 2026-08-18 launch, and GET
+    // /data/wow/mythic-keystone/period/index's current_period (1078) falls
+    // inside season 18's period list (1076-1078) — both confirm 18 is the
+    // live current season as of this writing.
+    blizzardSeasonId: 18,
     // Confirmed via Wowhead/Method/timesaver.gg: Season 2's 8-dungeon pool
     // combines 5 Midnight dungeons not featured in Season 1 with 3 returning
     // instances (BfA x2, Dragonflight x1).
