@@ -195,24 +195,22 @@ one file (and drop new seed JSON under the new `data/bis/{newSeasonId}/`
 directory) when a season rolls over; nothing else in the app hardcodes
 season-specific values.
 
-**Known limitations (as of 2026-08-25)**: `seasonConfig.ts` and the
-`data/bis/`/`data/talents/` directory names now reflect the real current
+**Status (as of 2026-09-01)**: `seasonConfig.ts`, the `data/bis/`/`data/talents/`
+directory names, and the BiS seed content itself all reflect the real current
 season — Midnight Season 2, patch 12.1.0 "The Curse of Ula'tek" (raid: The
 Venomous Abyss; M+ pool: Altar of Fangs, Murder Row, Den of Nalorakk, The
 Blinding Vale, Voidscar Arena, King's Rest, Ruby Life Pools, Temple of
-Sethraliss; real tier set names/bonuses per class). A few numeric fields
-(raid/M+ ilvl-by-key tables, crafted ilvl caps) are still marked
-`PROVISIONAL` in `seasonConfig.ts` — Blizzard hadn't published final numbers
-for those as of this update, so the old Season 1 shape was carried forward
-as a placeholder rather than fabricating precise figures.
-
-**The BiS gear seed *content* is still stale.** Only the season config and
-folder names were updated in this pass — the actual item names, drop
-sources, and stat rolls in `data/bis/midnight-s2/*.json` are unchanged from
-the original The War Within Season 1 placeholder build and have not been
-re-authored against real Midnight Season 2 loot. Re-authoring that content
-(one JSON file per seeded spec) is a larger content-authoring task that
-hasn't been done yet.
+Sethraliss; real tier set names/bonuses per class). The ilvl tables (raid
+difficulty bands, M+ key-level table, crafted spark caps) were provisional
+through 2026-08-25 pending Blizzard's official numbers; they're now filled in
+with confirmed live values, cross-checked across multiple current gearing
+guides. `data/bis/midnight-s2/*.json` was fully re-authored per spec (item
+names, drop sources, stat priorities) against real Season 2 guides — a few
+individual item names in lower-priority fallback slots weren't confirmable
+against public guide text and were coined in the raid/dungeon's established
+naming style rather than left blank; `itemId` values throughout remain
+synthetic placeholders (the app never uses them to look up real Blizzard
+item data, only to display the name/source you already gave it).
 
 ---
 
