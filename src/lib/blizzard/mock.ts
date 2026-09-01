@@ -62,7 +62,36 @@ export const MOCK_EQUIPMENT: CharacterEquipment = {
       name: 'Crown of the Eternal Winter',
       quality: { type: 'EPIC', name: 'Epic' },
       level: { value: 489 },
-      set: { item_set: { id: 1, name: 'Deathbringer' }, display_string: '2/5 pieces' },
+      item_class: { name: 'Armor' },
+      item_subclass: { name: 'Plate' },
+      inventory_type: { type: 'HEAD', name: 'Head' },
+      binding: { type: 'ON_ACQUIRE', name: 'Binds when picked up' },
+      armor: { value: 450, display: { display_string: '450 Armor', color: { r: 255, g: 255, b: 255, a: 1 } } },
+      requirements: {
+        level: { value: 80, display_string: 'Requires Level 80' },
+        playable_classes: { display_string: 'Classes: Death Knight' },
+      },
+      stats: [
+        { type: { type: 'STRENGTH', name: 'Strength' }, value: 120, display: { display_string: '+120 Strength', color: { r: 255, g: 255, b: 255, a: 1 } } },
+        { type: { type: 'STAMINA', name: 'Stamina' }, value: 310, display: { display_string: '+310 Stamina', color: { r: 255, g: 255, b: 255, a: 1 } } },
+        { type: { type: 'HASTE_RATING', name: 'Haste' }, value: 64, display: { display_string: '+64 Haste', color: { r: 0, g: 255, b: 0, a: 1 } } },
+        { type: { type: 'CRIT_RATING', name: 'Critical Strike' }, value: 41, display: { display_string: '+41 Critical Strike', color: { r: 0, g: 255, b: 0, a: 1 } } },
+      ],
+      set: {
+        item_set: { id: 1, name: 'Deathbringer' },
+        display_string: '2/5 pieces',
+        items: [
+          { item: { id: 212001, name: 'Crown of the Eternal Winter' }, is_equipped: true },
+          { item: { id: 212003, name: 'Mantle of the Endless Void' }, is_equipped: true },
+          { item: { id: 212005, name: 'Gravecloak of the Forsaken' } },
+          { item: { id: 212008, name: 'Gauntlets of Profaned Secrets' } },
+          { item: { id: 212009, name: 'Leggings of Unending Sorrow' } },
+        ],
+        effects: [
+          { display_string: 'Obliterate has a 15% chance to grant a Rime proc.', required_count: 2, is_active: true },
+          { display_string: 'Pillar of Frost increases damage by an additional 15%.', required_count: 4 },
+        ],
+      },
       sockets: [{ socket_type: { type: 'PRISMATIC', name: 'Prismatic' }, item: { id: 999, name: 'Sapphire' }, display_string: 'Sapphire' }],
     }),
     slotItem('NECK', {
@@ -70,6 +99,14 @@ export const MOCK_EQUIPMENT: CharacterEquipment = {
       name: 'Pendant of the Void Star',
       quality: { type: 'RARE', name: 'Rare' },
       level: { value: 489 },
+      item_class: { name: 'Armor' },
+      item_subclass: { name: 'Miscellaneous' },
+      binding: { type: 'ON_ACQUIRE', name: 'Binds when picked up' },
+      requirements: { level: { value: 80, display_string: 'Requires Level 80' } },
+      stats: [
+        { type: { type: 'CRIT_RATING', name: 'Critical Strike' }, value: 58, display: { display_string: '+58 Critical Strike', color: { r: 0, g: 255, b: 0, a: 1 } } },
+        { type: { type: 'MASTERY_RATING', name: 'Mastery' }, value: 39, display: { display_string: '+39 Mastery', color: { r: 0, g: 255, b: 0, a: 1 } } },
+      ],
     }),
     slotItem('SHOULDER', {
       item: { id: 212003 },

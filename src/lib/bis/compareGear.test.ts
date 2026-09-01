@@ -13,6 +13,15 @@ function item(overrides: Partial<DomainItem> & { slot: EquipmentSlot; itemId: nu
     sockets: [],
     enchantText: null,
     wowheadUrl: `https://www.wowhead.com/item=${overrides.itemId}`,
+    bindingText: null,
+    armorTypeLabel: null,
+    armorLine: null,
+    weaponLines: [],
+    stats: [],
+    procs: [],
+    requiredLevelText: null,
+    classesText: null,
+    setInfo: null,
     ...overrides,
   };
 }

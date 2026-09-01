@@ -34,11 +34,21 @@ export const CharacterProfileSchema = z
   .loose();
 export type CharacterProfile = z.infer<typeof CharacterProfileSchema>;
 
+// Blizzard returns a pre-rendered display string *and* the exact in-game
+// text color as {r,g,b,a} for stats/armor — use their color, don't recompute
+// it (e.g. secondary stats are green, a negated/downgraded stat is grey).
+const ColoredDisplaySchema = z
+  .object({
+    display_string: z.string(),
+    color: z.object({ r: z.number(), g: z.number(), b: z.number(), a: z.number() }).loose().optional(),
+  })
+  .loose();
+
 const ItemStatSchema = z
   .object({
     type: z.object({ type: z.string(), name: z.string() }).loose(),
     value: z.number(),
-    display: z.object({ display_string: z.string() }).loose().optional(),
+    display: ColoredDisplaySchema.optional(),
   })
   .loose();
 
@@ -65,10 +75,37 @@ const EquippedItemSchema = z
     name: z.string(),
     level: z.object({ value: z.number() }).loose(),
     media: z.object({ id: z.number() }).loose().optional(),
+    item_class: z.object({ name: z.string() }).loose().optional(),
+    item_subclass: z.object({ name: z.string() }).loose().optional(),
+    inventory_type: z.object({ type: z.string(), name: z.string() }).loose().optional(),
+    binding: z.object({ type: z.string(), name: z.string() }).loose().optional(),
+    armor: z.object({ value: z.number(), display: ColoredDisplaySchema.optional() }).loose().optional(),
+    requirements: z
+      .object({
+        level: z.object({ value: z.number(), display_string: z.string() }).loose().optional(),
+        playable_classes: z.object({ display_string: z.string() }).loose().optional(),
+      })
+      .loose()
+      .optional(),
+    weapon: z
+      .object({
+        damage: z.object({ display_string: z.string() }).loose().optional(),
+        attack_speed: z.object({ display_string: z.string() }).loose().optional(),
+        dps: z.object({ display_string: z.string() }).loose().optional(),
+      })
+      .loose()
+      .optional(),
+    spells: z.array(z.object({ description: z.string().optional() }).loose()).optional(),
     set: z
       .object({
         item_set: z.object({ id: z.number(), name: z.string() }).loose(),
         display_string: z.string().optional(),
+        items: z
+          .array(z.object({ item: z.object({ id: z.number(), name: z.string() }).loose(), is_equipped: z.boolean().optional() }).loose())
+          .optional(),
+        effects: z
+          .array(z.object({ display_string: z.string(), required_count: z.number(), is_active: z.boolean().optional() }).loose())
+          .optional(),
       })
       .loose()
       .optional(),

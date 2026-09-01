@@ -12,12 +12,15 @@ export function Tooltip({ trigger, children, className }: { trigger: ReactNode; 
         <TooltipPrimitive.Content
           sideOffset={8}
           className={cn(
-            'z-50 max-w-xs rounded-lg border border-white/10 bg-panel p-3 text-sm text-text shadow-xl transition-opacity duration-150',
+            // Semi-transparent + blurred so it reads as a floating overlay
+            // stacked on top of the page, like the in-game item tooltip,
+            // rather than another opaque card sitting in the layout.
+            'z-50 max-w-sm rounded-lg border border-white/10 bg-panel/90 backdrop-blur-sm p-3 text-sm text-text shadow-2xl transition-opacity duration-150',
             className,
           )}
         >
           {children}
-          <TooltipPrimitive.Arrow className="fill-panel" />
+          <TooltipPrimitive.Arrow className="fill-panel/90" />
         </TooltipPrimitive.Content>
       </TooltipPrimitive.Portal>
     </TooltipPrimitive.Root>

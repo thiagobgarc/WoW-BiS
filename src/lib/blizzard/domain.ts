@@ -38,6 +38,18 @@ export const EQUIPMENT_SLOTS = [
 
 export type EquipmentSlot = (typeof EQUIPMENT_SLOTS)[number];
 
+export interface DomainItemStat {
+  text: string;
+  color: string; // css rgba(), straight from Blizzard's own in-game tooltip color
+}
+
+export interface DomainItemSet {
+  name: string;
+  ownedCount: number;
+  totalCount: number;
+  effects: { text: string; requiredCount: number; active: boolean }[];
+}
+
 export interface DomainItem {
   slot: EquipmentSlot;
   itemId: number;
@@ -50,6 +62,17 @@ export interface DomainItem {
   sockets: { filled: boolean; gemName?: string }[];
   enchantText: string | null;
   wowheadUrl: string;
+  // Full-tooltip fields — mirror the in-game tooltip layout, not just the compact card.
+  bindingText: string | null;
+  /** Right-hand column next to the slot name (e.g. "Cloth"), armor pieces only. */
+  armorTypeLabel: string | null;
+  armorLine: DomainItemStat | null;
+  weaponLines: string[];
+  stats: DomainItemStat[];
+  procs: string[]; // "Equip:"/"Use:" effect descriptions, already prefixed by Blizzard
+  requiredLevelText: string | null;
+  classesText: string | null;
+  setInfo: DomainItemSet | null;
 }
 
 export interface EquippedSlotEmpty {
@@ -121,9 +144,23 @@ export function mapProfile(raw: CharacterProfile, region: string): DomainCharact
   };
 }
 
+/** Blizzard's {r,g,b,a} tooltip color, verbatim — matches in-game exactly. */
+function cssColor(color: { r: number; g: number; b: number; a: number } | undefined): string {
+  if (!color) return 'inherit';
+  return `rgba(${color.r}, ${color.g}, ${color.b}, ${color.a})`;
+}
+
 function mapOneItem(raw: BlizzardEquippedItem, iconUrl: string | null): DomainItem | null {
   const slot = SLOT_TYPE_MAP[raw.slot.type];
   if (!slot) return null; // shirt/tabard/ranged — not part of the BiS comparison
+
+  // "Miscellaneous" is Blizzard's subclass for rings/necks/trinkets/etc. — in
+  // game those don't get an armor-type label next to the slot name, only
+  // actual armor pieces (cloth/leather/mail/plate) do.
+  const armorTypeLabel =
+    raw.armor && raw.item_subclass && raw.item_subclass.name !== 'Miscellaneous' ? raw.item_subclass.name : null;
+
+  const setItems = raw.set?.items ?? [];
 
   return {
     slot,
@@ -140,6 +177,34 @@ function mapOneItem(raw: BlizzardEquippedItem, iconUrl: string | null): DomainIt
     })),
     enchantText: raw.enchantments?.[0]?.display_string ?? null,
     wowheadUrl: `https://www.wowhead.com/item=${raw.item.id}`,
+    bindingText: raw.binding?.name ?? null,
+    armorTypeLabel,
+    armorLine: raw.armor
+      ? { text: raw.armor.display?.display_string ?? `${raw.armor.value} Armor`, color: cssColor(raw.armor.display?.color) }
+      : null,
+    weaponLines: raw.weapon
+      ? [raw.weapon.damage?.display_string, raw.weapon.attack_speed?.display_string, raw.weapon.dps?.display_string].filter(
+          (s): s is string => Boolean(s),
+        )
+      : [],
+    stats: (raw.stats ?? [])
+      .filter((s) => s.display)
+      .map((s) => ({ text: s.display!.display_string, color: cssColor(s.display!.color) })),
+    procs: (raw.spells ?? []).map((s) => s.description?.trim()).filter((s): s is string => Boolean(s)),
+    requiredLevelText: raw.requirements?.level?.display_string ?? null,
+    classesText: raw.requirements?.playable_classes?.display_string ?? null,
+    setInfo: raw.set
+      ? {
+          name: raw.set.item_set.name,
+          ownedCount: setItems.filter((i) => i.is_equipped).length,
+          totalCount: setItems.length,
+          effects: (raw.set.effects ?? []).map((e) => ({
+            text: e.display_string.replace(/\r\n/g, ' ').trim(),
+            requiredCount: e.required_count,
+            active: Boolean(e.is_active),
+          })),
+        }
+      : null,
   };
 }
 

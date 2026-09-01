@@ -86,6 +86,15 @@ function itemFixture(overrides: Partial<DomainItem> & { slot: DomainItem['slot']
     sockets: [],
     enchantText: null,
     wowheadUrl: '',
+    bindingText: null,
+    armorTypeLabel: null,
+    armorLine: null,
+    weaponLines: [],
+    stats: [],
+    procs: [],
+    requiredLevelText: null,
+    classesText: null,
+    setInfo: null,
     ...overrides,
   };
 }
