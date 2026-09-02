@@ -14,12 +14,12 @@ interface Props {
   badge?: React.ReactNode;
 }
 
-// Sized to let all three trees (class/hero/spec) sit side by side without
-// scrolling on a typical desktop viewport — Blizzard's own reference tools
-// use similarly dense, small nodes for the same reason.
-const CELL = 24;
-const NODE = 17;
-const PAD = 6;
+// Sized to read comfortably at a glance (icons this small strained the eye)
+// while still fitting all three trees side by side on a typical desktop
+// viewport, scrolling horizontally past that — see TalentTreeSection.tsx.
+const CELL = 52;
+const NODE = 40;
+const PAD = 12;
 
 // Blizzard's row/col values are positions in the *shared* combined-tree grid
 // (e.g. a spec tree's columns commonly start around 9, not 1, and a hero

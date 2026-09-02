@@ -31,7 +31,7 @@ function HeroBadge({ name }: { name: string }) {
     .toUpperCase();
   return (
     <div
-      className="w-8 h-8 rounded-full border-2 border-accent bg-panel flex items-center justify-center text-[10px] font-bold text-accent shrink-0"
+      className="w-14 h-14 rounded-full border-2 border-accent bg-panel flex items-center justify-center text-base font-bold text-accent shrink-0"
       aria-hidden="true"
     >
       {initials}
