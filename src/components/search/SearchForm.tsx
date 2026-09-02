@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { Input } from '@/components/ui/Input';
 import { Button } from '@/components/ui/Button';
+import { NameCombobox } from './NameCombobox';
 import { RealmCombobox } from './RealmCombobox';
-import { useRecentCharacters } from '@/lib/hooks/useRecentCharacters';
+import { useRecentCharacters, type RecentCharacter } from '@/lib/hooks/useRecentCharacters';
 import { realmSlug } from '@/lib/realmSlug';
 
 const REGIONS = ['US', 'EU', 'KR', 'TW'] as const;
@@ -28,12 +28,12 @@ export function SearchForm() {
           navigateToCharacter(name, realm, region);
         }}
       >
-        <Input
-          aria-label="Character name"
-          placeholder="Character name"
+        <NameCombobox
+          id="character-name-search"
           value={name}
-          onChange={(e) => setName(e.target.value)}
-          className="flex-1"
+          onChange={setName}
+          onSelect={(c: RecentCharacter) => navigateToCharacter(c.name, c.realmName, c.region)}
+          recent={recent}
         />
         <select
           aria-label="Region"
