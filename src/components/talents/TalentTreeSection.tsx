@@ -69,11 +69,14 @@ export function TalentTreeSection({ tree, current, heroTree, heroSelections, rec
           )}
           {/* One shared panel/scroll area for all three trees together, not
               three independent boxes — they're small enough now (see the
-              sizing constants in TalentTree.tsx) to fit without scrolling on
-              a typical desktop viewport; overflow-x-auto here is just a
-              narrow-viewport safety net, and it scrolls as one unit. */}
+              sizing constants in TalentTree.tsx) to fit side by side without
+              scrolling on a typical desktop viewport. Below the sm breakpoint
+              they stack vertically instead, so mobile trades a wide
+              three-across horizontal scroll for a tall single-column one;
+              overflow-x-auto remains a per-tree safety net for trees still
+              wider than the viewport. */}
           <div className="overflow-x-auto rounded-lg border border-white/8 bg-bg/60 p-4">
-            <div className="flex justify-center items-center gap-2 w-fit mx-auto">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-2 w-fit mx-auto">
               <TalentTree nodes={tree.classNodes} selections={currentMap} title="Class Talents" />
               {heroTree && (
                 <TalentTree
@@ -102,7 +105,7 @@ export function TalentTreeSection({ tree, current, heroTree, heroSelections, rec
               )}
               {recommended.notes && <div className="text-xs text-text-dim mb-4 italic">{recommended.notes}</div>}
               <div className="overflow-x-auto rounded-lg border border-white/8 bg-bg/60 p-4">
-                <div className="flex justify-center items-start gap-2 w-fit mx-auto">
+                <div className="flex flex-col sm:flex-row justify-center items-center sm:items-start gap-6 sm:gap-2 w-fit mx-auto">
                   <TalentTree nodes={tree.classNodes} selections={recommendedMap} title="Class Talents" />
                   <TalentTree nodes={tree.specNodes} selections={recommendedMap} title="Spec Talents" />
                 </div>
