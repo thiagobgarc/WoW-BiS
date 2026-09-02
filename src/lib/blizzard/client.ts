@@ -361,6 +361,21 @@ export async function getSpellIconUrl(region: string, spellId: number): Promise<
   }
 }
 
+// Class icons never change and aren't tied to any one character, so this
+// shares the long-lived item cache TTL rather than the character TTL.
+export async function getClassIconUrl(region: string, classId: number): Promise<string | null> {
+  if (!hasBlizzardCredentials()) return null;
+  try {
+    return await cached(`class-media:${region}:${classId}`, TTL_ITEM_SECONDS, async () => {
+      const raw = await blizzardGet<unknown>(`/data/wow/media/playable-class/${classId}`, { namespace: 'static', region });
+      const parsed = ItemMediaSchema.parse(raw); // same { assets: [{ key, value }] } shape as item media
+      return parsed.assets.find((a) => a.key === 'icon')?.value ?? null;
+    });
+  } catch {
+    return null; // never block rendering on a single missing icon
+  }
+}
+
 /** Bypasses the character cache, subject to a 60s per-character cooldown. */
 export async function refreshCharacter(key: CharacterKey): Promise<{ ok: true } | { ok: false; retryAfterSeconds: number }> {
   const cache = getCache();
