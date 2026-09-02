@@ -1,0 +1,25 @@
+---
+interface Props {
+  currentPath: string;
+}
+const { currentPath } = Astro.props;
+
+const NAV = [{ href: '/meta', label: 'Meta' }];
+---
+
+<header class="flex justify-between items-center px-6 py-6 border-b border-white/8 mb-8">
+  <a href="/" class="text-lg font-bold tracking-tight">Mythos<span class="text-accent">.</span></a>
+  <nav class="flex gap-6 text-sm font-medium">
+    {
+      NAV.map((item) => (
+        <a
+          href={item.href}
+          class={`transition-colors duration-150 ${currentPath.startsWith(item.href) ? 'text-text' : 'text-text-dim hover:text-text-muted'}`}
+          aria-current={currentPath.startsWith(item.href) ? 'page' : undefined}
+        >
+          {item.label}
+        </a>
+      ))
+    }
+  </nav>
+</header>

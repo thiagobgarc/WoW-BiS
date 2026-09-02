@@ -1,5 +1,6 @@
 ---
 import Layout from '@/layouts/Layout.astro';
+import SiteHeader from '@/components/layout/SiteHeader.astro';
 import ErrorState from '@/components/error/ErrorState.astro';
 import { CharacterPage } from '@/components/character/CharacterPage';
 import { getFullCharacter, toCharacterKey } from '@/lib/blizzard/getFullCharacter';
@@ -7,6 +8,7 @@ import { getCharacterTalents } from '@/lib/blizzard/getCharacterTalents';
 import { getCharacterProgression } from '@/lib/blizzard/getCharacterProgression';
 import { getBisList } from '@/lib/bis/getBisList';
 import { getRecommendedBuild } from '@/lib/talents/getRecommendedBuild';
+import { getMythicPlusTierList, findTierForSpec } from '@/lib/meta/getTierList';
 import { CURRENT_SEASON_ID } from '@/lib/season/seasonConfig';
 import { toApiError } from '@/lib/http/errorResponse';
 import { classColor } from '@/lib/utils/classColors';
@@ -14,6 +16,7 @@ import type { BisEntry, BisList } from '@/lib/bis/types';
 import type { CharacterTalents } from '@/lib/blizzard/getCharacterTalents';
 import type { DomainMythicPlusProfile, DomainRaidProgress } from '@/lib/blizzard/domain';
 import type { RecommendedTalentBuild } from '@/lib/talents/types';
+import type { MetaTier } from '@/lib/meta/types';
 
 export const prerender = false;
 
@@ -28,6 +31,7 @@ let talents: CharacterTalents | null = null;
 let recommendedTalents: RecommendedTalentBuild | null = null;
 let raidProgress: DomainRaidProgress | null = null;
 let mythicPlus: DomainMythicPlusProfile | null = null;
+let metaTier: MetaTier | null = null;
 let error: { status: number; title: string; icon: string; message: string } | null = null;
 
 try {
@@ -40,6 +44,18 @@ try {
 
     const recommended = await getRecommendedBuild(CURRENT_SEASON_ID, full.character.className, full.character.specName);
     recommendedTalents = recommended.build;
+
+    // Meta tier is a supplementary badge, not core to the page — same
+    // reasoning as talents/progression below: an unseeded or bad tier list
+    // shouldn't take down the whole page.
+    try {
+      const tierList = await getMythicPlusTierList(CURRENT_SEASON_ID);
+      if (tierList.list) {
+        metaTier = findTierForSpec(tierList.list.entries, full.character.className, full.character.specName);
+      }
+    } catch {
+      metaTier = null;
+    }
   }
   if (full.character.specId) {
     // Talents are a supplementary section, not core to the page — a failure
@@ -86,9 +102,7 @@ const ogImage = full ? new URL(`/og/${key.region}/${key.realmSlug}/${key.name}.p
 ---
 
 <Layout title={title} description={description} accentColor={accent} ogImage={ogImage}>
-  <header class="flex justify-between items-center px-6 py-6 border-b border-white/8 mb-8">
-    <a href="/" class="text-lg font-bold tracking-tight">Mythos<span class="text-accent">.</span></a>
-  </header>
+  <SiteHeader currentPath={Astro.url.pathname} />
 
   {
     error ? (
@@ -111,6 +125,7 @@ const ogImage = full ? new URL(`/og/${key.region}/${key.realmSlug}/${key.name}.p
           recommendedTalents={recommendedTalents}
           raidProgress={raidProgress}
           mythicPlus={mythicPlus}
+          metaTier={metaTier}
         />
       )
     )

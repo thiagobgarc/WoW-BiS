@@ -1,12 +1,11 @@
 ---
 import Layout from '@/layouts/Layout.astro';
+import SiteHeader from '@/components/layout/SiteHeader.astro';
 import { SearchForm } from '@/components/search/SearchForm';
 ---
 
 <Layout>
-  <header class="flex justify-between items-center px-6 py-6 border-b border-white/8 mb-8">
-    <div class="text-lg font-bold tracking-tight">Mythos<span class="text-accent">.</span></div>
-  </header>
+  <SiteHeader currentPath={Astro.url.pathname} />
 
   <main class="max-w-2xl mx-auto mt-16 px-6">
     <h1 class="text-3xl font-bold text-center mb-2">Find Your Upgrades</h1>

@@ -1,5 +1,7 @@
 import type { DomainCharacter, EquipmentBySlot, EquipmentSlot } from '@/lib/blizzard/domain';
+import type { MetaTier } from '@/lib/meta/types';
 import { classColor } from '@/lib/utils/classColors';
+import { TierBadge } from '@/components/meta/TierBadge';
 
 const TIER_SLOTS: EquipmentSlot[] = ['head', 'shoulder', 'chest', 'hands', 'legs'];
 
@@ -7,6 +9,7 @@ interface Props {
   character: DomainCharacter;
   equipment: EquipmentBySlot;
   avatarUrl: string | null;
+  metaTier: MetaTier | null;
 }
 
 function tierBonusLabel(count: number): string {
@@ -15,7 +18,7 @@ function tierBonusLabel(count: number): string {
   return 'no bonus active';
 }
 
-export function CharacterHeader({ character, equipment, avatarUrl }: Props) {
+export function CharacterHeader({ character, equipment, avatarUrl, metaTier }: Props) {
   const tierCount = TIER_SLOTS.filter((slot) => equipment[slot]?.isTierPiece).length;
   const accent = classColor(character.className);
 
@@ -39,9 +42,16 @@ export function CharacterHeader({ character, equipment, avatarUrl }: Props) {
         <h1 className="text-2xl font-bold mb-1" style={{ color: accent }}>
           {character.name}
         </h1>
-        <div className="text-sm text-text-muted">
-          {character.specName ? `${character.specName} ` : ''}
-          {character.className} • {character.realmName} ({character.region.toUpperCase()})
+        <div className="flex items-center gap-2 text-sm text-text-muted">
+          <span>
+            {character.specName ? `${character.specName} ` : ''}
+            {character.className} • {character.realmName} ({character.region.toUpperCase()})
+          </span>
+          {metaTier && (
+            <a href="/meta" className="inline-flex" title={`${metaTier}-tier for Mythic+ — see the full meta list`}>
+              <TierBadge tier={metaTier} />
+            </a>
+          )}
         </div>
         {character.guildName && <div className="text-sm text-text-muted mt-1">Guild: {character.guildName}</div>}
 

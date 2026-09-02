@@ -1,0 +1,28 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import SiteHeader from '@/components/layout/SiteHeader.astro';
+import { MetaTierList } from '@/components/meta/MetaTierList';
+import { getMythicPlusTierList } from '@/lib/meta/getTierList';
+import { CURRENT_SEASON_ID } from '@/lib/season/seasonConfig';
+
+const { list } = await getMythicPlusTierList(CURRENT_SEASON_ID);
+---
+
+<Layout title="Meta — Mythos" description="Current Mythic+ spec tier list — see which specs are S-tier this season.">
+  <SiteHeader currentPath={Astro.url.pathname} />
+
+  <main class="max-w-4xl mx-auto px-6 pb-16">
+    <h1 class="text-3xl font-bold mb-2">Mythic+ Meta</h1>
+    <p class="text-sm text-text-dim mb-8">Which specs are strongest for Mythic+ right now.</p>
+
+    {
+      list ? (
+        <MetaTierList client:load entries={list.entries} lastUpdated={list.lastUpdated} source={list.source} />
+      ) : (
+        <div class="rounded-xl border border-severity-upgrade/20 bg-severity-upgrade/5 p-6 text-center text-sm text-text-dim">
+          No tier list has been seeded for this season yet.
+        </div>
+      )
+    }
+  </main>
+</Layout>

@@ -5,6 +5,7 @@ import type { DomainCharacter, DomainMythicPlusProfile, DomainRaidProgress, Equi
 import type { CharacterTalents } from '@/lib/blizzard/getCharacterTalents';
 import type { BisEntry } from '@/lib/bis/types';
 import type { RecommendedTalentBuild } from '@/lib/talents/types';
+import type { MetaTier } from '@/lib/meta/types';
 import { CharacterHeader } from './CharacterHeader';
 import { PaperDoll, PaperDollSkeleton } from './PaperDoll';
 import { StatsPanel } from './StatsPanel';
@@ -30,6 +31,7 @@ interface Props {
   recommendedTalents: RecommendedTalentBuild | null;
   raidProgress: DomainRaidProgress | null;
   mythicPlus: DomainMythicPlusProfile | null;
+  metaTier: MetaTier | null;
 }
 
 interface RefreshableData {
@@ -57,6 +59,7 @@ export function CharacterPage({
   recommendedTalents,
   raidProgress,
   mythicPlus,
+  metaTier,
 }: Props) {
   const [data, setData] = useState<RefreshableData>({
     character: initialCharacter,
@@ -105,7 +108,7 @@ export function CharacterPage({
         )}
 
         <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
-          <CharacterHeader character={character} equipment={equipment} avatarUrl={avatarUrl} />
+          <CharacterHeader character={character} equipment={equipment} avatarUrl={avatarUrl} metaTier={metaTier} />
         </div>
 
         <Tabs defaultValue="gear">
