@@ -43,7 +43,7 @@ export async function getCharacterTalents(key: CharacterKey, specId: number): Pr
   const iconEntries = await Promise.all(spellIds.map(async (id) => [id, await getSpellIconUrl(key.region, id)] as const));
   const iconUrls = new Map(iconEntries.filter((e): e is [number, string] => e[1] !== null));
 
-  const tree = mapTalentTree(treeResult.data, iconUrls);
+  const tree = mapTalentTree(treeResult.data, iconUrls, specId);
   const built = mapTalentSelections(specializationsResult.data, specId, tree);
 
   return {

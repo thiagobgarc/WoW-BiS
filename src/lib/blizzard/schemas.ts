@@ -248,6 +248,11 @@ const HeroTalentTreeSchema = z
     id: z.number(),
     name: z.string(),
     hero_talent_nodes: z.array(TalentNodeSchema),
+    // Each hero subtree is shared by 2 of the class's specs (e.g. Mage's
+    // Spellslinger is Frost+Arcane) — Blizzard's response bundles all of the
+    // class's hero trees regardless of which spec was requested, so this is
+    // what tells us which ones are actually pickable for the current spec.
+    playable_specializations: z.array(z.object({ id: z.number(), name: z.string() }).loose()).optional(),
   })
   .loose();
 
