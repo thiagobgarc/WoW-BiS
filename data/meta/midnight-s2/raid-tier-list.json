@@ -8,6 +8,7 @@
     "https://www.icy-veins.com/wow/tank-rankings-tier-list",
     "https://www.icy-veins.com/wow/healer-rankings-tier-list"
   ],
+  "notes": "Stays on Icy Veins' editorial tiers (unlike the Mythic+ list, which uses Murlok's real player-performance data) because Murlok has no raid category at all — its rankings are leaderboard-based (M+ score, PvP rating), which has no raid equivalent. Archon.gg and Raider.io were also considered but aren't scrapeable (Archon sits behind an active bot-check; Raider.io's tier-list page is client-rendered with no data in the raw HTML).",
   "entries": [
     { "class": "Mage", "spec": "Arcane", "role": "dps", "tier": "S" },
     { "class": "Warlock", "spec": "Demonology", "role": "dps", "tier": "S" },

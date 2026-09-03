@@ -126,6 +126,7 @@ function ContentPanel({ list, specIcons }: { list: MetaTierListData; specIcons: 
         Last updated {list.lastUpdated} — sourced from {list.source}. Rankings shift with tuning and gear access;
         treat this as a snapshot, not gospel.
       </p>
+      {list.notes && <p className="text-xs text-text-dim mt-2 italic">{list.notes}</p>}
     </div>
   );
 }

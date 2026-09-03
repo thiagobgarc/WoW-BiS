@@ -20,6 +20,10 @@ export const MetaTierEntrySchema = z.object({
   spec: z.string(),
   role: MetaRoleSchema,
   tier: MetaTierSchema,
+  // Raw source score, when the source is numeric (e.g. Murlok's top-50-
+  // player rating average) rather than an editorial tier call — kept for
+  // provenance/re-derivation, not currently read by the UI.
+  score: z.number().optional(),
 });
 export type MetaTierEntry = z.infer<typeof MetaTierEntrySchema>;
 
@@ -29,6 +33,10 @@ export const MetaTierListSchema = z.object({
   lastUpdated: z.string(),
   source: z.string(),
   sourceUrls: z.array(z.string()),
+  // How raw source data was turned into S/A/B/C, when that isn't just
+  // "the source already used these exact tier labels" (e.g. Murlok gives a
+  // continuous score, not letter tiers).
+  notes: z.string().optional(),
   entries: z.array(MetaTierEntrySchema),
 });
 export type MetaTierList = z.infer<typeof MetaTierListSchema>;
