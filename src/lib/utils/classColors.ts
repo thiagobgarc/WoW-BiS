@@ -21,24 +21,6 @@ export const CLASS_COLORS = {
 
 export type WowClass = keyof typeof CLASS_COLORS;
 
-// Blizzard's playable-class ids — stable game-data constants, verified
-// live against /data/wow/playable-class/index (2026-09-02).
-export const CLASS_IDS: Record<WowClass, number> = {
-  warrior: 1,
-  paladin: 2,
-  hunter: 3,
-  rogue: 4,
-  priest: 5,
-  'death-knight': 6,
-  shaman: 7,
-  mage: 8,
-  warlock: 9,
-  monk: 10,
-  druid: 11,
-  'demon-hunter': 12,
-  evoker: 13,
-};
-
 const DEFAULT_ACCENT = '#c41e3a';
 
 export function classSlug(wowClass: string): WowClass {

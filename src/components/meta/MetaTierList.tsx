@@ -1,14 +1,15 @@
 import { useMemo, useState } from 'react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/Tabs';
 import { Tooltip, TooltipProvider } from '@/components/ui/Tooltip';
-import { classColor, classSlug, type WowClass } from '@/lib/utils/classColors';
+import { classColor } from '@/lib/utils/classColors';
+import { specKey } from '@/lib/meta/specIds';
 import type { MetaRole, MetaTier, MetaTierEntry } from '@/lib/meta/types';
 
 interface Props {
   entries: MetaTierEntry[];
   lastUpdated: string;
   source: string;
-  classIcons: Record<WowClass, string | null>;
+  specIcons: Record<string, string | null>;
 }
 
 const ROLES: { value: MetaRole; label: string }[] = [
@@ -59,7 +60,7 @@ function SpecIcon({ entry, iconUrl }: { entry: MetaTierEntry; iconUrl: string | 
   );
 }
 
-export function MetaTierList({ entries, lastUpdated, source, classIcons }: Props) {
+export function MetaTierList({ entries, lastUpdated, source, specIcons }: Props) {
   const [role, setRole] = useState<MetaRole>('dps');
 
   const byTier = useMemo(() => {
@@ -104,7 +105,7 @@ export function MetaTierList({ entries, lastUpdated, source, classIcons }: Props
                     </div>
                     <div className="flex flex-wrap gap-2 items-center">
                       {specs.map((s) => (
-                        <SpecIcon key={`${s.class}-${s.spec}`} entry={s} iconUrl={classIcons[classSlug(s.class)] ?? null} />
+                        <SpecIcon key={`${s.class}-${s.spec}`} entry={s} iconUrl={specIcons[specKey(s.class, s.spec)] ?? null} />
                       ))}
                     </div>
                   </div>

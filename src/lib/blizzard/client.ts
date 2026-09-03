@@ -361,13 +361,13 @@ export async function getSpellIconUrl(region: string, spellId: number): Promise<
   }
 }
 
-// Class icons never change and aren't tied to any one character, so this
+// Spec icons never change and aren't tied to any one character, so this
 // shares the long-lived item cache TTL rather than the character TTL.
-export async function getClassIconUrl(region: string, classId: number): Promise<string | null> {
+export async function getSpecIconUrl(region: string, specId: number): Promise<string | null> {
   if (!hasBlizzardCredentials()) return null;
   try {
-    return await cached(`class-media:${region}:${classId}`, TTL_ITEM_SECONDS, async () => {
-      const raw = await blizzardGet<unknown>(`/data/wow/media/playable-class/${classId}`, { namespace: 'static', region });
+    return await cached(`spec-media:${region}:${specId}`, TTL_ITEM_SECONDS, async () => {
+      const raw = await blizzardGet<unknown>(`/data/wow/media/playable-specialization/${specId}`, { namespace: 'static', region });
       const parsed = ItemMediaSchema.parse(raw); // same { assets: [{ key, value }] } shape as item media
       return parsed.assets.find((a) => a.key === 'icon')?.value ?? null;
     });
