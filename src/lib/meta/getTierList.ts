@@ -15,6 +15,11 @@ export async function getMythicPlusTierList(season: string): Promise<TierListRes
   return { list, seeded: list !== null };
 }
 
+export async function getRaidTierList(season: string): Promise<TierListResult> {
+  const list = await loadTierListFile(season, 'raid');
+  return { list, seeded: list !== null };
+}
+
 /** Case-insensitive lookup of a specific class/spec's current tier, for the character-page badge. */
 export function findTierForSpec(entries: MetaTierEntry[], className: string, specName: string): MetaTier | null {
   const match = entries.find(

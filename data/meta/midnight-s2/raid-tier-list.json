@@ -1,0 +1,62 @@
+{
+  "season": "midnight-s2",
+  "contentType": "raid",
+  "lastUpdated": "2026-09-02",
+  "source": "Icy Veins Raid DPS/Tank/Healer Tier Lists (Patch 12.1 / Midnight Season 2, The Venomous Abyss)",
+  "sourceUrls": [
+    "https://www.icy-veins.com/wow/dps-rankings-tier-list",
+    "https://www.icy-veins.com/wow/tank-rankings-tier-list",
+    "https://www.icy-veins.com/wow/healer-rankings-tier-list"
+  ],
+  "entries": [
+    { "class": "Mage", "spec": "Arcane", "role": "dps", "tier": "S" },
+    { "class": "Warlock", "spec": "Demonology", "role": "dps", "tier": "S" },
+    { "class": "Warrior", "spec": "Arms", "role": "dps", "tier": "S" },
+    { "class": "Rogue", "spec": "Subtlety", "role": "dps", "tier": "S" },
+
+    { "class": "Evoker", "spec": "Devastation", "role": "dps", "tier": "A" },
+    { "class": "Druid", "spec": "Balance", "role": "dps", "tier": "A" },
+    { "class": "Priest", "spec": "Shadow", "role": "dps", "tier": "A" },
+    { "class": "Rogue", "spec": "Outlaw", "role": "dps", "tier": "A" },
+    { "class": "Shaman", "spec": "Elemental", "role": "dps", "tier": "A" },
+    { "class": "Rogue", "spec": "Assassination", "role": "dps", "tier": "A" },
+    { "class": "Paladin", "spec": "Retribution", "role": "dps", "tier": "A" },
+    { "class": "Hunter", "spec": "Marksmanship", "role": "dps", "tier": "A" },
+    { "class": "Warlock", "spec": "Destruction", "role": "dps", "tier": "A" },
+    { "class": "Mage", "spec": "Fire", "role": "dps", "tier": "A" },
+    { "class": "Hunter", "spec": "Beast Mastery", "role": "dps", "tier": "A" },
+    { "class": "Warlock", "spec": "Affliction", "role": "dps", "tier": "A" },
+    { "class": "Demon Hunter", "spec": "Devourer", "role": "dps", "tier": "A" },
+    { "class": "Warrior", "spec": "Fury", "role": "dps", "tier": "A" },
+    { "class": "Mage", "spec": "Frost", "role": "dps", "tier": "A" },
+    { "class": "Death Knight", "spec": "Frost", "role": "dps", "tier": "A" },
+    { "class": "Shaman", "spec": "Enhancement", "role": "dps", "tier": "A" },
+    { "class": "Monk", "spec": "Windwalker", "role": "dps", "tier": "A" },
+    { "class": "Hunter", "spec": "Survival", "role": "dps", "tier": "A" },
+
+    { "class": "Demon Hunter", "spec": "Havoc", "role": "dps", "tier": "B" },
+    { "class": "Death Knight", "spec": "Unholy", "role": "dps", "tier": "B" },
+    { "class": "Druid", "spec": "Feral", "role": "dps", "tier": "B" },
+
+    { "class": "Evoker", "spec": "Augmentation", "role": "dps", "tier": "C" },
+
+    { "class": "Death Knight", "spec": "Blood", "role": "tank", "tier": "S" },
+
+    { "class": "Druid", "spec": "Guardian", "role": "tank", "tier": "A" },
+    { "class": "Monk", "spec": "Brewmaster", "role": "tank", "tier": "A" },
+    { "class": "Warrior", "spec": "Protection", "role": "tank", "tier": "A" },
+    { "class": "Paladin", "spec": "Protection", "role": "tank", "tier": "A" },
+
+    { "class": "Demon Hunter", "spec": "Vengeance", "role": "tank", "tier": "B" },
+
+    { "class": "Evoker", "spec": "Preservation", "role": "healer", "tier": "S" },
+    { "class": "Priest", "spec": "Discipline", "role": "healer", "tier": "S" },
+    { "class": "Priest", "spec": "Holy", "role": "healer", "tier": "S" },
+
+    { "class": "Shaman", "spec": "Restoration", "role": "healer", "tier": "A" },
+    { "class": "Paladin", "spec": "Holy", "role": "healer", "tier": "A" },
+    { "class": "Druid", "spec": "Restoration", "role": "healer", "tier": "A" },
+
+    { "class": "Monk", "spec": "Mistweaver", "role": "healer", "tier": "B" }
+  ]
+}

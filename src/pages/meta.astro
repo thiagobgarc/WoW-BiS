@@ -2,26 +2,29 @@
 import Layout from '@/layouts/Layout.astro';
 import SiteHeader from '@/components/layout/SiteHeader.astro';
 import { MetaTierList } from '@/components/meta/MetaTierList';
-import { getMythicPlusTierList } from '@/lib/meta/getTierList';
+import { getMythicPlusTierList, getRaidTierList } from '@/lib/meta/getTierList';
 import { getAllSpecIcons } from '@/lib/meta/getSpecIcons';
 import { CURRENT_SEASON_ID } from '@/lib/season/seasonConfig';
 
-const { list } = await getMythicPlusTierList(CURRENT_SEASON_ID);
+const [{ list: mythicPlus }, { list: raid }] = await Promise.all([
+  getMythicPlusTierList(CURRENT_SEASON_ID),
+  getRaidTierList(CURRENT_SEASON_ID),
+]);
 // Not character-specific, so there's no "viewer's region" to key off —
 // us is fine since spec icons are identical across every region.
 const specIcons = await getAllSpecIcons('us');
 ---
 
-<Layout title="Meta — Mythos" description="Current Mythic+ spec tier list — see which specs are S-tier this season.">
+<Layout title="Meta — Mythos" description="Current Mythic+ and Raid spec tier lists — see which specs are S-tier this season.">
   <SiteHeader currentPath={Astro.url.pathname} />
 
   <main class="max-w-4xl mx-auto px-6 pb-16">
-    <h1 class="text-3xl font-bold mb-2">Mythic+ Meta</h1>
-    <p class="text-sm text-text-dim mb-8">Which specs are strongest for Mythic+ right now.</p>
+    <h1 class="text-3xl font-bold mb-2">Meta</h1>
+    <p class="text-sm text-text-dim mb-8">Which specs are strongest right now.</p>
 
     {
-      list ? (
-        <MetaTierList client:load entries={list.entries} lastUpdated={list.lastUpdated} source={list.source} specIcons={specIcons} />
+      mythicPlus || raid ? (
+        <MetaTierList client:load mythicPlus={mythicPlus} raid={raid} specIcons={specIcons} />
       ) : (
         <div class="rounded-xl border border-severity-upgrade/20 bg-severity-upgrade/5 p-6 text-center text-sm text-text-dim">
           No tier list has been seeded for this season yet.

@@ -3,14 +3,18 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/Tabs';
 import { Tooltip, TooltipProvider } from '@/components/ui/Tooltip';
 import { classColor } from '@/lib/utils/classColors';
 import { specKey } from '@/lib/meta/specIds';
-import type { MetaRole, MetaTier, MetaTierEntry } from '@/lib/meta/types';
+import type { MetaContentType, MetaRole, MetaTier, MetaTierEntry, MetaTierList as MetaTierListData } from '@/lib/meta/types';
 
 interface Props {
-  entries: MetaTierEntry[];
-  lastUpdated: string;
-  source: string;
+  mythicPlus: MetaTierListData | null;
+  raid: MetaTierListData | null;
   specIcons: Record<string, string | null>;
 }
+
+const CONTENT_TYPES: { value: MetaContentType; label: string }[] = [
+  { value: 'mythic-plus', label: 'Mythic+' },
+  { value: 'raid', label: 'Raid' },
+];
 
 const ROLES: { value: MetaRole; label: string }[] = [
   { value: 'dps', label: 'DPS' },
@@ -60,9 +64,7 @@ function SpecIcon({ entry, iconUrl }: { entry: MetaTierEntry; iconUrl: string | 
   );
 }
 
-export function MetaTierList({ entries, lastUpdated, source, specIcons }: Props) {
-  const [role, setRole] = useState<MetaRole>('dps');
-
+function RoleTierRows({ entries, role, specIcons }: { entries: MetaTierEntry[]; role: MetaRole; specIcons: Record<string, string | null> }) {
   const byTier = useMemo(() => {
     const grouped = new Map<MetaTier, MetaTierEntry[]>();
     for (const tier of TIERS) grouped.set(tier, []);
@@ -77,49 +79,83 @@ export function MetaTierList({ entries, lastUpdated, source, specIcons }: Props)
   }, [entries, role]);
 
   return (
-    <TooltipProvider>
-      <div>
-        <Tabs value={role} onValueChange={(v) => setRole(v as MetaRole)}>
-          <TabsList>
-            {ROLES.map((r) => (
-              <TabsTrigger key={r.value} value={r.value}>
-                {r.label}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-
-          {/* One panel whose value always equals the current role — Radix
-              needs a TabsContent for a11y wiring, but the tier grouping is
-              already driven by the `role` state above, so a single panel
-              covers all three tabs rather than duplicating markup per role. */}
-          <TabsContent value={role} className="focus-visible:outline-none">
-            <div className="space-y-3 mt-4">
-              {TIERS.map((tier) => {
-                const specs = byTier.get(tier) ?? [];
-                if (specs.length === 0) return null;
-                const style = TIER_ROW_STYLES[tier];
-                return (
-                  <div key={tier} className={`flex items-stretch gap-3 rounded-lg border ${style.bg} p-3`}>
-                    <div className={`flex items-center justify-center w-10 shrink-0 text-xl font-extrabold ${style.text}`}>
-                      {style.label}
-                    </div>
-                    <div className="flex flex-wrap gap-2 items-center">
-                      {specs.map((s) => (
-                        <SpecIcon key={`${s.class}-${s.spec}`} entry={s} iconUrl={specIcons[specKey(s.class, s.spec)] ?? null} />
-                      ))}
-                    </div>
-                  </div>
-                );
-              })}
+    <div className="space-y-3 mt-4">
+      {TIERS.map((tier) => {
+        const specs = byTier.get(tier) ?? [];
+        if (specs.length === 0) return null;
+        const style = TIER_ROW_STYLES[tier];
+        return (
+          <div key={tier} className={`flex items-stretch gap-3 rounded-lg border ${style.bg} p-3`}>
+            <div className={`flex items-center justify-center w-10 shrink-0 text-xl font-extrabold ${style.text}`}>{style.label}</div>
+            <div className="flex flex-wrap gap-2 items-center">
+              {specs.map((s) => (
+                <SpecIcon key={`${s.class}-${s.spec}`} entry={s} iconUrl={specIcons[specKey(s.class, s.spec)] ?? null} />
+              ))}
             </div>
-          </TabsContent>
-        </Tabs>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
 
-        <p className="text-xs text-text-dim mt-4">
-          Mythic+ rankings, last updated {lastUpdated} — sourced from {source}. Rankings shift with tuning and gear
-          access; treat this as a snapshot, not gospel.
-        </p>
-      </div>
+function ContentPanel({ list, specIcons }: { list: MetaTierListData; specIcons: Record<string, string | null> }) {
+  const [role, setRole] = useState<MetaRole>('dps');
+
+  return (
+    <div>
+      <Tabs value={role} onValueChange={(v) => setRole(v as MetaRole)}>
+        <TabsList>
+          {ROLES.map((r) => (
+            <TabsTrigger key={r.value} value={r.value}>
+              {r.label}
+            </TabsTrigger>
+          ))}
+        </TabsList>
+
+        {/* One panel whose value always equals the current role — Radix
+            needs a TabsContent for a11y wiring, but RoleTierRows already
+            filters by the `role` state above, so a single panel covers all
+            three tabs rather than duplicating markup per role. */}
+        <TabsContent value={role} className="focus-visible:outline-none">
+          <RoleTierRows entries={list.entries} role={role} specIcons={specIcons} />
+        </TabsContent>
+      </Tabs>
+
+      <p className="text-xs text-text-dim mt-4">
+        Last updated {list.lastUpdated} — sourced from {list.source}. Rankings shift with tuning and gear access;
+        treat this as a snapshot, not gospel.
+      </p>
+    </div>
+  );
+}
+
+export function MetaTierList({ mythicPlus, raid, specIcons }: Props) {
+  const [content, setContent] = useState<MetaContentType>(mythicPlus ? 'mythic-plus' : 'raid');
+  const lists: Record<MetaContentType, MetaTierListData | null> = { 'mythic-plus': mythicPlus, raid };
+  const activeList = lists[content];
+
+  return (
+    <TooltipProvider>
+      <Tabs value={content} onValueChange={(v) => setContent(v as MetaContentType)}>
+        <TabsList>
+          {CONTENT_TYPES.map((c) => (
+            <TabsTrigger key={c.value} value={c.value} disabled={!lists[c.value]}>
+              {c.label}
+            </TabsTrigger>
+          ))}
+        </TabsList>
+
+        <TabsContent value={content} className="focus-visible:outline-none">
+          {activeList ? (
+            <ContentPanel list={activeList} specIcons={specIcons} />
+          ) : (
+            <div className="rounded-xl border border-severity-upgrade/20 bg-severity-upgrade/5 p-6 text-center text-sm text-text-dim mt-4">
+              No {content === 'raid' ? 'raid' : 'Mythic+'} tier list has been seeded for this season yet.
+            </div>
+          )}
+        </TabsContent>
+      </Tabs>
     </TooltipProvider>
   );
 }
