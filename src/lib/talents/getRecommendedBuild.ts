@@ -15,3 +15,8 @@ export async function getRecommendedBuild(season: string, className: string, spe
   const build = await loadRecommendedBuildFile(season, className, specName);
   return { build, seeded: build !== null };
 }
+
+export async function getRaidRecommendedBuild(season: string, className: string, specName: string): Promise<RecommendedBuildResult> {
+  const build = await loadRecommendedBuildFile(season, className, specName, 'raid');
+  return { build, seeded: build !== null };
+}

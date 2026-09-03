@@ -1,0 +1,296 @@
+{
+  "season": "midnight-s2",
+  "class": "Paladin",
+  "spec": "Retribution",
+  "contentType": "raid",
+  "classSelections": [
+    {
+      "nodeId": 81543,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81597,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81598,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81605,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81608,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81609,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81614,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81615,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81616,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81618,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 81621,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81630,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81631,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 81632,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93009,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93174,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93181,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93189,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 103851,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103861,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103863,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103864,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103867,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103868,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109368,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109867,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109999,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110012,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110091,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110093,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "specSelections": [
+    {
+      "nodeId": 81512,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81521,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 81523,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 81525,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81526,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81527,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81532,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81533,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81534,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81542,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81544,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 92686,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 92689,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 92838,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 92839,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 92854,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 92952,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93160,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93164,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93173,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93190,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109369,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109371,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109372,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109373,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109374,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 110419,
+      "rank": 4,
+      "optionIndex": 0
+    }
+  ],
+  "notes": "Sourced from Icy Veins' \"Retribution Single Target - Herald of the Sun\" raid build (checked 2026-09-03 against WoW patch 12.1, Midnight Season 2), from https://www.icy-veins.com/wow/retribution-paladin-pve-dps-spec-builds-talents. Icy Veins/Wowhead/Maxroll all render the raid build as an interactive talent-tree widget with no plain-text talent list, so instead of transcribing prose this was decoded directly from Icy Veins' own Blizzard-format talent export string: I reverse-engineered the encoding from Icy Veins' public talent-calculator JS bundle (which documents the exact bit layout it uses to read/write real Blizzard C_Traits export strings) and its Paladin talent-tree JSON data, wrote a decoder, and validated every resulting nodeId/optionIndex against the simplified tree file used for this task. Decode integrity checks: the string's header decoded to specId 70 (Retribution), and after walking every node in the tree's canonical id-sorted order there were zero leftover bits and zero unrecognized node ids — every nodeId/optionIndex pair matched an entry in the simplified file. Only class and spec tree talents are included, matching the scope of the existing Mythic+ seed file; hero-tree (Herald of the Sun) and PvP talents were excluded by design. One assumption carried over from the Mythic+ file: node 110419 (Light Within, the Apex capstone) is recorded at rank 4 even though the simplified tree file's maxRank field says 1 — Icy Veins' own tree data confirms Light Within is a special 4-point Apex node (3 sub-spells with combined maxRanks 1+2+1=4), so the simplified file's maxRank for this node does not reflect the Apex mechanic. Two things worth a spot-check against the live guide: (1) this build takes both the Zealot's Fervor/Tempest of the Lightbringer branch AND the Heart of the Crusader branch simultaneously — node 93190 (Heart of the Crusader)'s prerequisite list is satisfied via Rush of Light rather than Sanctify, since prerequisite lists are OR, not AND, so this is not a decode bug, just a less obvious path; (2) versus the existing Mythic+ file, this raid build skips the entire Hammer of Wrath sub-chain (nodeIds 81510 Hammer of Wrath, 81600 Auras of the Resolute, 81507 Cleanse Toxins, 81603 Greater Judgment — 4 points) in favor of Vengeful Wrath (103851, 2/2) and Blessed Calling (103868), and swaps Quickened Invocation for Divine Resonance (node 93181); on the spec side it drops Blade of Vengeance (81545) and Blessed Champion (81541) in favor of Heart of the Crusader (93190, 2/2). Dropping Hammer of Wrath — normally a core execute ability — is unusual enough that it's worth confirming against the live Icy Veins page before treating this as gospel, though the decode itself checks out mathematically (spec ID matched, zero leftover bits, all node/option lookups resolved)."
+}

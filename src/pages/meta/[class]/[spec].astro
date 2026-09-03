@@ -5,7 +5,7 @@ import ErrorState from '@/components/error/ErrorState.astro';
 import { SpecBuildPage } from '@/components/meta/SpecBuildPage';
 import { findSpecBySlug } from '@/lib/meta/specBySlug';
 import { getSpecTalentTree } from '@/lib/blizzard/getSpecTalentTree';
-import { getRecommendedBuild } from '@/lib/talents/getRecommendedBuild';
+import { getRecommendedBuild, getRaidRecommendedBuild } from '@/lib/talents/getRecommendedBuild';
 import { getMythicPlusTierList, getRaidTierList, findTierForSpec } from '@/lib/meta/getTierList';
 import { CURRENT_SEASON_ID } from '@/lib/season/seasonConfig';
 import { classColor } from '@/lib/utils/classColors';
@@ -19,7 +19,8 @@ const { class: classSlug, spec: specSlug } = Astro.params as { class: string; sp
 const ref = findSpecBySlug(classSlug, specSlug);
 
 let tree: DomainTalentTree | null = null;
-let recommended: RecommendedTalentBuild | null = null;
+let mythicPlusBuild: RecommendedTalentBuild | null = null;
+let raidBuild: RecommendedTalentBuild | null = null;
 let mythicPlusTier: MetaTier | null = null;
 let raidTier: MetaTier | null = null;
 let error: { title: string; icon: string; message: string } | null = null;
@@ -29,14 +30,16 @@ if (!ref) {
   error = { title: 'Spec Not Found', icon: '❓', message: `"${specSlug}" isn't a recognized spec for "${classSlug}".` };
 } else {
   try {
-    const [treeResult, recommendedResult, mPlusList, raidList] = await Promise.all([
+    const [treeResult, mPlusBuildResult, raidBuildResult, mPlusList, raidList] = await Promise.all([
       getSpecTalentTree('us', ref.specId),
       getRecommendedBuild(CURRENT_SEASON_ID, ref.className, ref.specName),
+      getRaidRecommendedBuild(CURRENT_SEASON_ID, ref.className, ref.specName),
       getMythicPlusTierList(CURRENT_SEASON_ID),
       getRaidTierList(CURRENT_SEASON_ID),
     ]);
     tree = treeResult.tree;
-    recommended = recommendedResult.build;
+    mythicPlusBuild = mPlusBuildResult.build;
+    raidBuild = raidBuildResult.build;
     mythicPlusTier = mPlusList.list ? findTierForSpec(mPlusList.list.entries, ref.className, ref.specName) : null;
     raidTier = raidList.list ? findTierForSpec(raidList.list.entries, ref.className, ref.specName) : null;
   } catch {
@@ -69,7 +72,8 @@ if (!ref) {
         className={ref.className}
         specName={ref.specName}
         tree={tree}
-        recommended={recommended}
+        mythicPlusBuild={mythicPlusBuild}
+        raidBuild={raidBuild}
         mythicPlusTier={mythicPlusTier}
         raidTier={raidTier}
       />
