@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/Tabs';
 import { Tooltip, TooltipProvider } from '@/components/ui/Tooltip';
 import { classColor } from '@/lib/utils/classColors';
-import { specKey } from '@/lib/meta/specIds';
+import { specKey, urlSlug } from '@/lib/meta/specIds';
 import type { MetaContentType, MetaRole, MetaTier, MetaTierEntry, MetaTierList as MetaTierListData } from '@/lib/meta/types';
 
 interface Props {
@@ -36,10 +36,10 @@ const TIER_ROW_STYLES: Record<MetaTier, { label: string; bg: string; text: strin
 function SpecIcon({ entry, iconUrl }: { entry: MetaTierEntry; iconUrl: string | null }) {
   const color = classColor(entry.class);
   const trigger = (
-    <button
-      type="button"
+    <a
+      href={`/meta/${urlSlug(entry.class)}/${urlSlug(entry.spec)}`}
       aria-label={`${entry.spec} ${entry.class}`}
-      className="w-11 h-11 rounded-md border overflow-hidden bg-panel shrink-0 transition-transform duration-150 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+      className="block w-11 h-11 rounded-md border overflow-hidden bg-panel shrink-0 transition-transform duration-150 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
       style={{ borderColor: `${color}66`, boxShadow: `0 0 8px ${color}59` }}
     >
       {iconUrl ? (
@@ -49,7 +49,7 @@ function SpecIcon({ entry, iconUrl }: { entry: MetaTierEntry; iconUrl: string | 
           {entry.class.slice(0, 2).toUpperCase()}
         </span>
       )}
-    </button>
+    </a>
   );
 
   return (

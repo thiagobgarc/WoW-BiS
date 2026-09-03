@@ -12,6 +12,11 @@ export function specKey(className: string, specName: string): string {
   return `${className}::${specName}`;
 }
 
+/** URL-safe slug for a class or spec name, e.g. "Death Knight" -> "death-knight". */
+export function urlSlug(name: string): string {
+  return name.toLowerCase().replace(/\s+/g, '-');
+}
+
 export const SPEC_IDS: Record<string, number> = {
   [specKey('Death Knight', 'Blood')]: 250,
   [specKey('Death Knight', 'Frost')]: 251,

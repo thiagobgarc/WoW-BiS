@@ -9,7 +9,7 @@
 import type { CharacterKey } from './client';
 import { getCharacterSpecializations, getSpellIconUrl, getTalentTree } from './client';
 import { mapTalentSelections, mapTalentTree, type DomainHeroTree, type DomainTalentTree, type TalentSelection } from './domain';
-import type { TalentNode } from './schemas';
+import { spellIdsOf } from './talentSpellIds';
 
 export interface CharacterTalents {
   tree: DomainTalentTree;
@@ -17,14 +17,6 @@ export interface CharacterTalents {
   heroTree: DomainHeroTree | null;
   heroSelections: TalentSelection[] | null;
   mock: boolean;
-}
-
-function spellIdsOf(nodes: TalentNode[]): number[] {
-  return nodes.flatMap((n) => {
-    const lastRank = n.ranks[n.ranks.length - 1];
-    const tooltips = lastRank?.choice_of_tooltips ?? (lastRank?.tooltip ? [lastRank.tooltip] : []);
-    return tooltips.map((t) => t.spell_tooltip?.spell.id).filter((id): id is number => id !== undefined);
-  });
 }
 
 export async function getCharacterTalents(key: CharacterKey, specId: number): Promise<CharacterTalents> {

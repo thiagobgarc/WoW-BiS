@@ -1,0 +1,78 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import SiteHeader from '@/components/layout/SiteHeader.astro';
+import ErrorState from '@/components/error/ErrorState.astro';
+import { SpecBuildPage } from '@/components/meta/SpecBuildPage';
+import { findSpecBySlug } from '@/lib/meta/specBySlug';
+import { getSpecTalentTree } from '@/lib/blizzard/getSpecTalentTree';
+import { getRecommendedBuild } from '@/lib/talents/getRecommendedBuild';
+import { getMythicPlusTierList, getRaidTierList, findTierForSpec } from '@/lib/meta/getTierList';
+import { CURRENT_SEASON_ID } from '@/lib/season/seasonConfig';
+import { classColor } from '@/lib/utils/classColors';
+import type { DomainTalentTree } from '@/lib/blizzard/domain';
+import type { RecommendedTalentBuild } from '@/lib/talents/types';
+import type { MetaTier } from '@/lib/meta/types';
+
+export const prerender = false;
+
+const { class: classSlug, spec: specSlug } = Astro.params as { class: string; spec: string };
+const ref = findSpecBySlug(classSlug, specSlug);
+
+let tree: DomainTalentTree | null = null;
+let recommended: RecommendedTalentBuild | null = null;
+let mythicPlusTier: MetaTier | null = null;
+let raidTier: MetaTier | null = null;
+let error: { title: string; icon: string; message: string } | null = null;
+
+if (!ref) {
+  Astro.response.status = 404;
+  error = { title: 'Spec Not Found', icon: '❓', message: `"${specSlug}" isn't a recognized spec for "${classSlug}".` };
+} else {
+  try {
+    const [treeResult, recommendedResult, mPlusList, raidList] = await Promise.all([
+      getSpecTalentTree('us', ref.specId),
+      getRecommendedBuild(CURRENT_SEASON_ID, ref.className, ref.specName),
+      getMythicPlusTierList(CURRENT_SEASON_ID),
+      getRaidTierList(CURRENT_SEASON_ID),
+    ]);
+    tree = treeResult.tree;
+    recommended = recommendedResult.build;
+    mythicPlusTier = mPlusList.list ? findTierForSpec(mPlusList.list.entries, ref.className, ref.specName) : null;
+    raidTier = raidList.list ? findTierForSpec(raidList.list.entries, ref.className, ref.specName) : null;
+  } catch {
+    // Talent-tree fetch is the only thing here that can fail (Blizzard
+    // rate-limited/unavailable) — same "never leak a raw error" contract
+    // as the character page.
+    Astro.response.status = 503;
+    error = {
+      title: 'Blizzard API Temporarily Unavailable',
+      icon: '⚠️',
+      message: 'The Blizzard API is experiencing heavy load — please retry in a moment.',
+    };
+  }
+}
+---
+
+<Layout
+  title={ref ? `${ref.specName} ${ref.className} — Meta — Mythos` : 'Spec Not Found — Mythos'}
+  description={ref ? `The current meta talent build for ${ref.specName} ${ref.className}.` : undefined}
+  accentColor={ref ? classColor(ref.className) : undefined}
+>
+  <SiteHeader currentPath={Astro.url.pathname} />
+
+  {
+    error || !ref || !tree ? (
+      <ErrorState icon={error?.icon ?? '❓'} title={error?.title ?? 'Spec Not Found'} message={error?.message ?? ''} />
+    ) : (
+      <SpecBuildPage
+        client:load
+        className={ref.className}
+        specName={ref.specName}
+        tree={tree}
+        recommended={recommended}
+        mythicPlusTier={mythicPlusTier}
+        raidTier={raidTier}
+      />
+    )
+  }
+</Layout>
