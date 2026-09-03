@@ -114,8 +114,17 @@ function charCacheKey(kind: string, { region, realmSlug, name }: CharacterKey): 
   return `character:${kind}:${region}:${realmSlug}:${name.toLowerCase()}`;
 }
 
+// realmSlug is already restricted to [a-z0-9-] (see realmSlug.ts), but name
+// only comes from characterSlug's lowercase+trim — an attacker-supplied
+// name containing "/", "?", "#", or ".." would otherwise be interpolated
+// straight into the outbound Blizzard request path. WHATWG URL parsing
+// collapses ".." path segments, so an unencoded name could redirect this
+// request to a different Blizzard endpoint entirely (e.g. escaping
+// /profile/wow/character/{realm}/ to reach /data/wow/...), turning this
+// app into a confused-deputy proxy for Blizzard's API using our own
+// credentials. encodeURIComponent neutralizes all of that.
 function charPath(kind: string, { realmSlug, name }: CharacterKey): string {
-  return `/profile/wow/character/${realmSlug}/${name.toLowerCase()}${kind}`;
+  return `/profile/wow/character/${encodeURIComponent(realmSlug)}/${encodeURIComponent(name.toLowerCase())}${kind}`;
 }
 
 // --- Mock-mode helpers -----------------------------------------------------

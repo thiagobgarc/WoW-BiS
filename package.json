@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^6.0.4",
-    "@astrojs/vercel": "^11.0.7",
+    "@astrojs/vercel": "^11.0.9",
     "@radix-ui/react-popover": "^1.1.23",
     "@radix-ui/react-tabs": "^1.1.21",
     "@radix-ui/react-tooltip": "^1.2.16",
@@ -49,5 +49,8 @@
     "drizzle-kit": "^0.31.10",
     "tsx": "^4.23.12",
     "vitest": "^4.1.11"
+  },
+  "overrides": {
+    "path-to-regexp": "^6.3.0"
   }
 }

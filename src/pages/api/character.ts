@@ -10,13 +10,31 @@ import type { APIRoute } from 'astro';
 import { getFullCharacter, toCharacterKey } from '@/lib/blizzard/getFullCharacter';
 import { toApiError } from '@/lib/http/errorResponse';
 import { MOCK_CHARACTER_KEY } from '@/lib/blizzard/mock';
+import { isValidRegion } from '@/lib/http/validateRegion';
+import { rateLimit, clientIp } from '@/lib/http/rateLimit';
 
 export const prerender = false;
 
-export const GET: APIRoute = async ({ url }) => {
+export const GET: APIRoute = async ({ url, clientAddress }) => {
   const region = url.searchParams.get('region') ?? MOCK_CHARACTER_KEY.region;
   const realm = url.searchParams.get('realm') ?? MOCK_CHARACTER_KEY.realmSlug;
   const name = url.searchParams.get('name') ?? MOCK_CHARACTER_KEY.name;
+
+  if (!isValidRegion(region)) {
+    return new Response(JSON.stringify({ error: 'invalid_region', message: `Unknown region "${region}".` }), {
+      status: 400,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  }
+
+  const ip = clientIp(() => clientAddress);
+  const limit = await rateLimit(`character:${ip}`, 20, 60);
+  if (!limit.allowed) {
+    return new Response(JSON.stringify({ error: 'rate_limited', message: 'Too many requests — please slow down.' }), {
+      status: 429,
+      headers: { 'Content-Type': 'application/json', 'Retry-After': String(limit.retryAfterSeconds) },
+    });
+  }
 
   const key = toCharacterKey(region, realm, name);
 
