@@ -34,13 +34,18 @@ test('search for a character and see the full upgrade board', async ({ page }) =
   await expect(page.getByText('Showing sample data')).toBeVisible();
 
   // The upgrade board rendered below it, with the BiS-seeded Frost DK data.
+  // Scoped to the "Upgrade board" region: the character page also has a
+  // Progression tab strip (Raid/Mythic+) and a Talents tab strip
+  // (Recommended (Mythic+)/(Raid)) whose tab names otherwise collide with
+  // these on a plain page-wide role query.
   await expect(page.getByRole('heading', { name: 'Upgrade Board' })).toBeVisible();
   await expect(page.getByText(/of 16 slots/)).toBeVisible();
-  await expect(page.getByRole('tab', { name: 'Raid' })).toBeVisible();
+  const upgradeBoard = page.getByRole('region', { name: 'Upgrade board' });
+  await expect(upgradeBoard.getByRole('tab', { name: 'Raid', exact: true })).toBeVisible();
 
   // Switching content-type tabs re-renders the comparison rows for that tab.
-  await page.getByRole('tab', { name: 'Mythic+' }).click();
-  await expect(page.getByRole('tab', { name: 'Mythic+' })).toHaveAttribute('data-state', 'active');
+  await upgradeBoard.getByRole('tab', { name: 'Mythic+' }).click();
+  await expect(upgradeBoard.getByRole('tab', { name: 'Mythic+' })).toHaveAttribute('data-state', 'active');
 
   // Recently-viewed chip appears back on the search page after a visit.
   await page.getByRole('link', { name: /Mythos/ }).click();
