@@ -1,0 +1,331 @@
+{
+  "season": "midnight-s2",
+  "class": "Priest",
+  "spec": "Discipline",
+  "contentType": "raid",
+  "classSelections": [
+    {
+      "nodeId": 82717,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82703,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82713,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82718,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109009,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82672,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82719,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82715,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109917,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82556,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109006,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82716,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109890,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108731,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82687,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82702,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109019,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82690,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109020,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82696,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82678,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82712,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109021,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109012,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82684,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109015,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82677,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109011,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82686,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82674,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82697,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109010,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82676,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82673,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82685,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "specSelections": [
+    {
+      "nodeId": 82594,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82593,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82587,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82595,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82592,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82588,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 82596,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82591,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 82589,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82564,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82597,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82590,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82598,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82581,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82566,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82575,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82576,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82582,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82600,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82577,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82583,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82599,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82571,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82567,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82570,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82569,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110277,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110278,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110410,
+      "rank": 4,
+      "optionIndex": 0
+    }
+  ],
+  "notes": "Sourced primarily from Method.gg's Discipline Priest Raid 'Voidweaver' talent guide (method.gg/guides/discipline-priest/talents, fetched 2026-09-03), which explicitly named these raid-specific picks — Class tree: Body and Soul, Binding Heals, Protective Light, Translucent Image, Phantasm, Dispel Magic (pathing). Spec tree: Enduring Luminescence (over Bright Pupil), Purge the Wicked, Greater Smite, Protector of the Frail (over Pain Transformation), Pain Suppression, Ultimate Penitence (over Power Word: Barrier), Evangelism with Archangel (over Mindbender), Divine Procession, Occultist, Abyssal Reverie, Shadowfiend with Death's Torment and Inescapable Torment, Shadow Mend, and Master the Darkness at 4/4 (Apex). Cross-checked against Icy Veins' Discipline Priest PvE Healing guide (icy-veins.com, updated Aug 18 2026) and Wowhead's Midnight Season 2 raid tips / talent-builds pages, which independently confirm Voidweaver as the raid hero tree and Master the Darkness as the raid Apex talent. None of these sites exposed a full node-by-node text listing — their talent trees render via JS calculators / import-code widgets that a text-only fetch cannot parse, and the Chrome browser extension needed to inspect the live rendered calculator was unavailable this session, so a full in-game-verified export string could not be decoded.\n\nBecause no source gave a complete node-by-node raid loadout, the remaining (unconfirmed) nodes were filled by taking this app's existing Mythic+ build (data/talents/midnight-s2/priest-discipline.json) as the shared baseline and changing only what raid sources explicitly contradicted: (1) Class tree — added the 3 confirmed raid-only picks (Body and Soul/109917, Dispel Magic/109009, Phantasm/82674) on top of the M+ class tree without removing anything to compensate, since no source specified an M+-only pick to drop; this likely overspends the true class-tree point budget by roughly 3 points versus a single legally-payable loadout — flag for spot-check. (2) Spec tree — replaced the M+ build's row 9-11 defensive branch (Inner Focus/82601, Eternal Barrier/86730, Borrowed Time/82572, Blaze of Light/82568) with the confirmed raid branch (Divine Procession, Archangel, Shadow Mend, Shadowfiend, Greater Smite, Death's Torment, Inescapable Torment) plus the prerequisite chain required to structurally reach the confirmed Occultist/Abyssal Reverie picks (Power of the Dark Side -> Dark Indulgence -> Painful Punishment -> Shadow Tap -> Occultist). This spec tree totals exactly 34 points, matching the M+ build's total, so it should be a legally payable loadout, but the exact chain nodes (Power of the Dark Side, Dark Indulgence, Painful Punishment, Shadow Tap, Shield Discipline, Castigation, Indemnity) were not individually named by any source and are included only because they are structurally required single/OR-prerequisites or unmodified carryovers from the verified M+ baseline — flag these for spot-check.\n\nMaster the Darkness (nodeId 110410) is recorded at rank 4 even though the fetched Blizzard simplified-tree data reports maxRank:1 for that node — the existing M+ file also uses rank 4 for this node, and guide summaries independently describe it as a '4-point Apex talent', so rank 4 was kept for consistency with the app's existing convention; this maxRank mismatch (1 in the raw node data vs 4 actually used) should be verified against live game data. Hero-tree (Voidweaver) talents were intentionally excluded per task scope. Researched 2026-09-03."
+}
