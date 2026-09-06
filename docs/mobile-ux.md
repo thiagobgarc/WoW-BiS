@@ -1,0 +1,102 @@
+# Mythos Mobile — Web → Mobile UX Mapping
+
+Companion to `architecture.md` and `api-contract.md`. This is a redesign for
+touch, not a port — a 1440px paper doll does not become a 390pt paper doll by
+shrinking. Two web surfaces (`meta.astro`, the progression panels on the
+character page) are added to the original brief's mapping table below, since
+the code has them and the original brief didn't.
+
+## Navigation shape
+
+Per `architecture.md` Section 8.10, **v1 ships Gear + Progression only** —
+`meta` and the Talents tab are deferred to 1.1. Two navigation shapes below:
+what actually ships in v1, and the 1.1 shape it grows into. Building the tab
+bar with a Meta slot from day one (even disabled/hidden) avoids a nav
+restructure at 1.1 — worth deciding at Phase 4 scaffolding time, not
+required by this doc.
+
+**v1 — bottom tabs, two primary destinations plus settings:**
+
+- **Search** (`index.tsx`) — the app's home. Full-screen search + recent
+  characters. This is where a cold launch lands.
+- **Character** (`character/[region]/[realm]/[name].tsx`) — not a persistent
+  tab; pushed from Search or from a deep link. Top tab/segmented navigator
+  for **Gear / Progression** only (see "Character screen structure" below —
+  no Talents tab in v1).
+- **Settings** — About/disclaimer, clear recent characters. No light/dark
+  toggle in v1 (dark-only, `architecture.md` Section 8.9).
+
+**1.1 — adds:**
+
+- **Meta** (`meta/index.tsx`, `meta/[class]/[spec].tsx`) — the tier list,
+  browsable with zero prior character lookup. Justified because `/meta` is a
+  real, independent context (see `architecture.md` Section 3); backed by the
+  two `meta/*` endpoints in `api-contract.md`, both already specced.
+- A **Talents** tab on the character screen (diff-first list; the pannable
+  tree stays out of scope even at 1.1 per the original brief's
+  recommendation).
+
+## Mapping table
+
+| Web surface | Mobile treatment |
+|---|---|
+| `SearchForm` + `RealmCombobox` (popover autocomplete) | Full-screen search, native keyboard-aware list; region as a segmented control; recent characters as a persisted list (`useRecentCharacters`'s localStorage → MMKV, same shape: `{name, realmName, realmSlug, region}`, max 8, same dedup rule). |
+| `PaperDoll` (two flanking columns + center render) | Responsive grid of slot tiles (2 cols portrait, 3–4 landscape/tablet). Tapping a slot opens a **bottom sheet**: equipped vs. target, gems, enchant, source, Wowhead link — replaces the hover `Tooltip`, which has no touch equivalent. `DomainItem`'s full-tooltip fields (armor line, weapon lines, stat lines, procs, set info) render in the sheet exactly as composed server-side — no re-derivation needed, it's already display-ready text. |
+| `StatsPanel` bar chart | Compact horizontal bars, stat-priority order preserved (from `bis.statPriority` when seeded), values as text — never color alone. |
+| `UpgradeBoard` `Tabs` (Raid / M+ / PvP) | Segmented control; content per tab computed on-device via `compareGear`/`deriveActionGroups` from `packages/core`, so switching tabs is instant and works offline — the whole reason those functions are pure and shared. |
+| `CompletionMeter` (`role="progressbar"`) | Native progress view + `accessibilityValue`; keep the text percentage. |
+| `ComparisonRow` + `SeverityChip` | FlashList rows. **Keep the colorblind-safe construction** (color + distinct icon + text label, never color alone) — an already-stated property of the web app, don't lose it in translation. |
+| `ActionPanels` / `QuickWinsPanel` | Collapsible sections; quick wins (missing enchants/gems/embellishments) surface first — highest value, lowest effort, deserves the first screen on a phone. |
+| **`RaidProgressionPanel`** *(not in original brief)* | A "Progression" tab alongside Gear: per-difficulty boss checklist (LFR/Normal/Heroic/Mythic), boss name + killed/total + last-kill relative time. Renders even when all-empty ("no kills yet this tier" is a real, common state per `mapRaidProgress`'s doc comment — not an error). |
+| **`MythicPlusPanel`** *(not in original brief)* | Same "Progression" tab: current M+ rating + per-dungeon best-run cards (level, timed y/n, score, duration). A dungeon with `run: null` renders as an empty card, not omitted — matches the web's "always show the full dungeon list" behavior. |
+| `TalentTree` (large pannable 2D grid) | **Deferred to 1.1** (`architecture.md` Section 8.10). When built: the hardest port — pinch-zoom + pan (`react-native-gesture-handler` + `reanimated`), with a **diff-first fallback list** ("3 talents differ from the recommended build") as the default view. Most phone users want the diff, not the tree — ship the list, degrade gracefully into the tree, per the original brief's recommendation; the pannable tree stays out of scope even at 1.1. |
+| `RefreshButton` | Pull-to-refresh + an explicit header button for discoverability; on `429` show the cooldown countdown from `retryAfterSeconds`, never a bare error. |
+| `ErrorState` | Per-error-code screens driven by the `code` field in the error envelope (`api-contract.md`): not found, private profile, Blizzard unavailable (render the stale snapshot if one exists instead of an error page), offline, update required. |
+| OG image route | Native share sheet sharing the **web character URL** — the existing OG route renders the preview wherever it lands. Free parity, zero new mobile work. |
+| Layout disclaimer footer | Blizzard IP disclaimer in Settings/About — required, not optional (App Store Guideline 5.2 risk, per the original brief's Section 10). |
+| **`meta.astro`** (tier list) *(not in original brief; deferred to 1.1)* | Meta tab, top level: segmented Raid/M+ tier list, S/A/B/C grouped sections, each row a class/spec with role icon. Tapping a row pushes the spec-build screen. |
+| **`meta/[class]/[spec].astro`** (spec build) *(not in original brief; deferred to 1.1)* | Spec-build detail screen: recommended talent build (diff-first list, same component as the character talents tab, seeded from `/v1/meta/spec-build`'s `mythicPlusBuild`/`raidBuild` instead of a diff against a live character), plus both tier badges. Reachable from Meta tab or, on the character screen's Talents tab, via a "see the meta build" link. |
+
+## Character screen structure
+
+**v1:** top-level segmented/tab navigator inside the character route:
+**Gear** (paper doll + stats + upgrade board — default tab) · **Progression**
+(raid + M+ panels). Both render from the single `/v1/character/...` payload —
+no per-tab network call, matching the "one round trip" rule in
+`api-contract.md`. Switching tabs never shows a spinner; it's all already on
+the device.
+
+**1.1:** adds a third **Talents** tab (diff-first list, tree as fallback),
+reading `talents`/`recommendedTalents` off the same already-fetched
+`/v1/character/...` payload — those fields ship in v1's response shape
+specifically so this is a client-only addition at 1.1, not a schema change
+(`api-contract.md`'s note on the character endpoint).
+
+## Accessibility parity (requirement, not a phase-10 nicety)
+
+The web app ships keyboard nav, visible focus, `aria-label`s, a skip link,
+colorblind-safe severity, and `prefers-reduced-motion` respect. Mobile
+equivalents:
+
+- `accessibilityLabel`/`accessibilityRole` on every interactive element,
+  including the new Progression screen's cards/rows (and, at 1.1, Meta's).
+- VoiceOver/TalkBack passes on the character screen (both v1 tabs; add the
+  Talents tab and the Meta tier-list screen to the pass at 1.1).
+- Dynamic Type support — no fixed font sizes that clip, especially in the
+  paper-doll slot tiles and tier-list rows, which are the most space-
+  constrained layouts.
+- ≥44×44pt touch targets throughout, including slot tiles and severity chips.
+- `AccessibilityInfo.isReduceMotionEnabled` gating any tab-switch or
+  bottom-sheet animation.
+- Item-quality colors remain **borders only**; item-name text stays in the
+  default high-contrast color, matching the web app's WCAG AA rationale
+  (epic purple fails 4.5:1 on the dark panel) — do not "fix" this back to
+  quality-colored text on mobile.
+
+## Decisions applied from `architecture.md` Section 8
+
+- **v1 scope (8.10):** Gear + Progression. Meta and Talents rows above are
+  marked deferred to 1.1 throughout this document.
+- **Theme (8.9):** dark-only for v1 — no light/dark toggle in Settings until
+  a later release; applies uniformly across every screen in the mapping
+  table above, not decided per-screen.

@@ -1,0 +1,288 @@
+# Mythos Mobile — Architecture
+
+Status: Phase 2 complete (2026-09-06) — the monorepo move and `packages/core`
+extraction described below are implemented, not just planned; see the git
+history for the exact commits. Verified against the `worldofwarcraft` repo
+as of 2026-09-03 (Astro 7.2, React 19.2, Zod 4.4, `astro check`/`tsc` clean
+on that date) and re-verified against the actual Phase 2 implementation on
+2026-09-06.
+
+**Phase 2 scope note:** Section 1's table below describes the full target
+end state. What actually moved into `packages/core` in Phase 2: `bis/`
+(types, `compareGear`, `deriveActionGroups`), `talents/` (types,
+`diffTalents`), `realm/` (`realmSlug`), `utils/` (`classColors`,
+`itemQuality`, `format`, `sourceLabel`), and the minimal `character`/
+`talents` types those pure functions needed (`EquipmentBySlot`,
+`EquipmentSlot`, `DomainItem`, `TalentSelection`, `DomainCharacter`,
+`SecondaryStats`) — extracted out of `domain.ts` type-only, mappers left in
+place. **Deferred to Phase 3**, when `packages/api-contract` needs them
+anyway to define `/v1` response schemas: `meta/types.ts`, the season config
+*type* (Section 5), and the talent-tree/progression structural types
+(`DomainTalentTree`, `DomainRaidProgress`, `DomainMythicPlusProfile`, etc.).
+`packages/data` (the seed JSON) also stays inside `apps/web/data` until
+Phase 3 needs to serve it over `/v1/bis` — it isn't needed by anything
+mobile-facing before then.
+
+## 0. Corrections to the brief
+
+The build prompt this document is based on was accurate about the repo's shape
+in most respects, but out of date in three ways worth stating up front, because
+they change the API surface and the bounded-context list below:
+
+1. **`meta` is a real, independent feature**, not covered anywhere in the
+   original prompt. `src/pages/meta.astro` and
+   `src/pages/meta/[class]/[spec].astro` serve a tier list (`data/meta/{season}/{mythic-plus,raid}-tier-list.json`, schema in `src/lib/meta/types.ts`) and a per-spec
+   "recommended build" page that composes `getSpecTalentTree` (Blizzard's spec
+   talent tree, keyed by spec id — no character required) with
+   `getRecommendedBuild`/`getRaidRecommendedBuild` and the tier badge. This is
+   browsable with **no character lookup at all** — it's the "what's good right
+   now" surface, structurally independent of the `character` context.
+2. **`progression` (raid + Mythic+ tabs) is a real, separate composition**,
+   not part of `getFullCharacter`. `getCharacterProgression.ts` calls three
+   more Blizzard endpoints (raid encounters, M+ profile index, M+ season
+   detail) and is composed into the character page alongside gear/BiS/talents.
+   It has its own domain types (`DomainRaidProgress`,
+   `DomainMythicPlusProfile`) and its own components
+   (`RaidProgressionPanel`, `MythicPlusPanel`). The mobile character screen
+   and the `/v1/character/...` payload both need to account for it.
+3. **A rate limiter and an error envelope already exist** —
+   `src/lib/http/rateLimit.ts` (cache-backed fixed window, already used on
+   `/api/character`, `/api/character/refresh`, `/api/realms`, and the
+   character page itself) and `src/lib/http/errorResponse.ts`
+   (`toApiError()`, mapping the five typed Blizzard/domain errors to
+   `{ error, message }`). The mobile API reuses both rather than adding
+   `@upstash/ratelimit` as a new dependency or hand-rolling a new envelope —
+   `toApiError` is extended (Section titled "Error envelope" in
+   `api-contract.md`), not replaced.
+
+Everything else in the original brief — the layering stance, the DDD
+rejection of event sourcing/CQRS, the pure-domain module list, the "one round
+trip" API instinct — held up against the code and is carried forward below.
+
+## 1. What's actually shared vs. server-only (verified)
+
+| Module | Shared verbatim into `packages/core`? | Notes |
+|---|---|---|
+| `src/lib/bis/compareGear.ts`, `deriveActionGroups.ts`, `types.ts` | Yes | Zero I/O, confirmed no imports outside `@/lib/blizzard/domain` (types only) and `./types`. |
+| `src/lib/talents/diffTalents.ts`, `types.ts` | Yes | Pure. `getRecommendedBuild.ts`/`loadRecommended.ts` are **not** pure (`fs` reads via `loadSeedFile`-style loaders) — those stay server-side; only the Zod schemas in `types.ts` move. |
+| `src/lib/blizzard/domain.ts` | **Types only** — mappers stay server-side | Corrected from an earlier draft of this document, which said the mapper functions (`mapProfile`, `mapEquipment`, `mapStatistics`, `mapTalentTree`, `mapTalentSelections`, `mapRaidProgress`, `mapMythicPlusProfile`) would move too. They can't: every one of them takes an already-parsed Blizzard shape (`schemas.ts` types) as input, and `schemas.ts` is large, Blizzard-specific, and explicitly server-only per this same table. Only the *output* types (`EquipmentSlot`, `DomainItem`, `EquipmentBySlot`, `TalentSelection`, `DomainCharacter`, `SecondaryStats`) moved into `packages/core` (Phase 2) — `domain.ts` re-exports them so its existing consumers are unaffected, and keeps the mappers. Mobile never sees a raw Blizzard shape; it only ever sees these already-mapped types, which is what the `/v1` API returns. This is what the original build prompt said before Phase 1 introduced the error. `DomainTalentTree`/`DomainRaidProgress`/`DomainMythicPlusProfile` and friends (the `progression` and talent-tree-structure types) are deferred to Phase 3, same reasoning as `meta/types.ts` below. |
+| `src/lib/season/seasonConfig.ts` | Yes, as data + type, **not** as a hardcoded mobile-bundled constant | See Section 5's "no hardcoded season" rule — the file's *shape* is shared (so `packages/core` can type against it), but the mobile app fetches season data from `/v1/meta` / `/v1/bis/:season`, not from a compiled-in copy. |
+| `src/lib/realmSlug.ts` | Yes | 19 unit tests move with it. |
+| `src/lib/meta/types.ts` (`MetaTierListSchema` etc.) | Yes | Pure Zod schema, same pattern as `bis/types.ts`. |
+| `src/lib/utils/classColors.ts`, `itemQuality.ts`, `format.ts` (`timeAgo`), `sourceLabel.ts` | Yes | Pure formatters/lookup tables the original brief already called out. |
+| `src/lib/blizzard/client.ts`, `auth.ts`, `schemas.ts`, `getFullCharacter.ts`, `getCharacterTalents.ts`, `getCharacterProgression.ts`, `getSpecTalentTree.ts`, `mock.ts`, `mockRealms.ts` | **No — server only** | OAuth, raw Blizzard schemas, and every "compose Blizzard calls" function stay in `apps/web`. These become the implementation behind `/v1` routes, not code mobile imports. |
+| `src/lib/cache/cache.ts`, `src/lib/db/*`, `src/lib/http/rateLimit.ts`, `errorResponse.ts` | **No — server only** | Mobile gets its own device-side persistence (Section 6.3); the rate limiter and error mapper are server infrastructure the `/v1` routes call into, same as today's `/api/*` routes do. |
+| `src/lib/bis/getBisList.ts`, `src/lib/talents/getRecommendedBuild.ts`, `src/lib/meta/getTierList.ts`, `loadTierList.ts`, `specBySlug.ts` | **No — server only** | Each does `fs`/DB reads. They become the implementation behind `/v1/bis`, `/v1/talents`, `/v1/meta/*`. |
+
+## 2. Layering
+
+```
+Presentation   (apps/mobile: screens, RN components — no business logic)
+      ↓ depends on
+Application    (apps/mobile: src/features/<context>/model — view-model
+                derivation, composes packages/core functions into screen data;
+                src/features/<context>/api — TanStack Query hooks over
+                @mythos/api-client)
+      ↓ depends on
+Domain         (packages/core: compareGear, deriveActionGroups, diffTalents,
+                domain types, seasonConfig shape, realmSlug, formatters —
+                zero I/O, zero React, zero fetch)
+      ↑ implemented by
+Infrastructure (apps/mobile/src/lib: MMKV persistence, TanStack Query
+                persister, deep-link handling, Sentry init, the concrete
+                fetch used by @mythos/api-client; apps/web/src/lib: the
+                existing Blizzard client/cache/db, now also backing /v1)
+```
+
+Dependency direction is inward: Presentation → Application → Domain never
+reverses, and Infrastructure depends on Domain-defined interfaces (e.g.
+`api-client` is typed against `api-contract` schemas, not the other way
+round). This isn't a new pattern for this codebase — `compareGear`/
+`deriveActionGroups`/`diffTalents` already are the domain layer, they're
+just not packaged as one yet. Phase 2 packages what already exists; it does
+not invent a new architecture for the domain logic.
+
+## 3. Bounded contexts (DDD, lightly)
+
+Eight contexts, expanded from the brief's six to reflect what the code
+actually does (additions bolded):
+
+| Context | Owns | Write model? |
+|---|---|---|
+| `character` | Identity + equipped-gear snapshot (`DomainCharacter`, `EquipmentBySlot`, `SecondaryStats`) | No — read-only projection of Blizzard state |
+| `bis` | BiS targets, `compareGear` output, severity | No |
+| `talents` | Talent tree structure, a character's current build, the diff against a recommended build | No |
+| **`progression`** | Raid difficulty/boss-kill state and Mythic+ best-run state for the current season | No |
+| **`meta`** | The hand-authored tier list and per-spec recommended builds, independent of any character | No |
+| `season` | `seasonConfig` — the single source of season-scoped reference data | No (config, not user data) |
+| `roster` | The user's own recent/saved characters | **Yes — the only context with a real write model**, and it's entirely device-local (Section 4's "no user accounts" call) |
+| `catalog` | Realm index, item media/icon URLs | No |
+
+`progression` and `meta` are split out from `character` because they compose
+from genuinely different Blizzard endpoints, have their own domain types, and
+— for `meta` specifically — don't require a character at all. Keeping them
+distinct keeps the `/v1` endpoint table honest about what each request
+actually needs to fetch.
+
+## 4. Rejected alternatives (explicit, not omissions)
+
+- **Event sourcing — rejected.** Equipped gear, raid progress, and M+ rating
+  are Blizzard's state, not ours; every screen is a pure derivation from a
+  timestamped snapshot (`FullCharacter.fetchedAt`/`.stale`,
+  `CharacterProgression`). There is no user-authored history to source events
+  from. An event store here has no consumer — it would be ceremony.
+- **CQRS as a formal pattern — rejected, keep the instinct.** One real write
+  model (`roster`, device-local) and everything else is a read projection.
+  Splitting reads/writes into separate models for a single local writer is a
+  diagram, not an architecture.
+- **User accounts / server-side auth — rejected.** Nothing in the product
+  needs cross-device identity. Recent/favorite characters are device-local
+  (Zustand + MMKV, not a server write). This keeps the App Store privacy
+  declaration close to "no data collected" and removes an entire class of
+  work (auth flows, token storage, account recovery, GDPR data-export
+  requests). Revisit only if cross-device roster sync becomes an explicit,
+  requested feature — and if it does, it's additive (a sync endpoint under
+  `roster`), not a rearchitecture.
+- **Certificate pinning — rejected.** No user credentials and no auth token
+  ever touch the device; the only thing pinning would protect is a
+  read-only public API response. Not worth the operational cost of managing
+  pin rotation for this threat model. Stated explicitly so it isn't mistaken
+  for an oversight.
+
+## 5. What replaces them: snapshot + cache-invalidation
+
+`FullCharacter` (and, by the same pattern, `CharacterProgression` and the
+tier-list/recommended-build responses) is an immutable, timestamped snapshot.
+The server already keeps a 7-day stale copy and returns `stale: true` when
+Blizzard is down (`getFullCharacter.ts`). On device this extends by one hop:
+
+- Every `/v1` response is persisted (TanStack Query + MMKV persister), keyed
+  by request (character key, season, class/spec).
+- The UI always renders the last snapshot instantly, revalidating behind it —
+  never a blocking spinner over data already on disk.
+- An explicit "last updated X ago" / "offline" banner is a first-class UI
+  state, not an edge case, mirroring the server's own `stale` flag.
+
+This is the defensible "what did we know, and when" answer the reference
+document gets from event sourcing — achieved here with a cache-invalidation
+model appropriate to a domain with no real event history.
+
+**No hardcoded season data in the mobile binary.** `seasonConfig`'s *shape*
+is shared as a type (so `packages/core`'s consumers can be typed against it),
+but its *values* are never compiled into the app. The mobile app always reads
+season data from `/v1/meta` and `/v1/bis/:season` at runtime, with the last
+successfully fetched copy persisted as the offline fallback — never the copy
+from whatever `seasonConfig.ts` looked like when the binary was built. A
+season roll must not require an app-store release; see Section 11.5 of the
+original brief, which this document affirms without change.
+
+## 6. Target repository shape
+
+As of Phase 2, the repo root is still named `worldofwarcraft` on disk (not
+renamed to `mythos/`) — the rename is a cosmetic, fully-reversible local
+folder rename with no functional dependency, deliberately deferred so it
+doesn't get tangled with the Vercel root-directory setting change the move
+already requires. `apps/mobile` doesn't exist yet (Phase 4); `data/` lives
+at `apps/web/data` (Phase 2 pure-move destination), not yet promoted to
+`packages/data` (Phase 3, see the scope note in Section 0).
+
+```
+mythos/
+├── apps/
+│   ├── web/                       # existing Astro app, moved wholesale
+│   └── mobile/                    # NEW — Expo app
+│       ├── app/                   # expo-router routes, no logic
+│       └── src/
+│           ├── features/          # one folder per bounded context (8, see Section 3)
+│           ├── components/        # RN design-system primitives
+│           ├── lib/                # MMKV, Query persister, deep links, Sentry
+│           └── theme/
+├── packages/
+│   ├── core/                      # pure domain — see Section 1's table for exactly what moves
+│   ├── api-contract/              # Zod schemas for every /v1 request+response
+│   ├── api-client/                # typed fetch client over api-contract; DI'd fetch + baseUrl
+│   └── data/                      # data/bis/**, data/talents/**, data/meta/** seed JSON
+└── docs/
+    ├── architecture.md            # this file
+    ├── api-contract.md
+    ├── mobile-ux.md
+    └── release.md                 # produced in Phase 10
+```
+
+**Dependency rules, enforced not merely stated:**
+
+- `packages/core` imports nothing but `zod`.
+- `packages/api-client` imports `core` + `api-contract` only; takes `fetch`
+  and `baseUrl` by injection.
+- `apps/*` may import `packages/*`; `packages/*` never imports `apps/*`.
+- Everything in Section 1's "server only" row stays in `apps/web` — none of
+  it is a candidate for `packages/core`, because anything there is a
+  candidate for bundling into a device binary, and `client.ts`/`auth.ts`
+  process Blizzard credentials.
+
+Enforce with `eslint-plugin-import`'s `import/no-restricted-paths`, per-package
+`tsconfig` project references, and a CI check that fails if `packages/core`'s
+resolved module graph contains `node:*`, `react-native`, `expo-*`, or
+anything under `apps/web/src/lib/blizzard/{client,auth,schemas}.ts`.
+
+## 7. Mobile stack
+
+| Concern | Choice | Why |
+|---|---|---|
+| Runtime | Expo (managed) | EAS Build/Submit + `expo-updates` OTA is the shortest credible path to both stores solo. Resolve the current stable SDK/RN/React versions at install time (`npx create-expo-app@latest`, then `npx expo install` per package) — do not pin from memory; record the resolved versions in `apps/mobile/README.md`. |
+| Routing | Expo Router | File-based, deep links + universal links for the web app's shareable character URLs and OG images for free. |
+| Server state | TanStack Query + MMKV persister | Matches the stale-while-revalidate/offline semantics `getFullCharacter`'s `stale` flag already models server-side. |
+| Local state | `useState`, plus a small Zustand store for `roster` only | No global store before there's global state — `roster` is the one context with real client state. |
+| Styling | NativeWind (confirmed, Section 8.7) | Ports the web's Tailwind tokens (class colors, severity colors, spacing) as values instead of re-eyeballing. |
+| Lists | FlashList | Long comparison/action-panel/tier-list rows. |
+| Images | expo-image | Blizzard media URLs (item icons, avatars, talent/spell icons) — cache aggressively; icons are immutable per id. |
+| Validation | Zod (same major version as `api-contract`, currently v4) | Same boundary discipline the web app already applies to Blizzard's responses, applied to the mobile API. |
+| Storage | MMKV | Synchronous, fast, the standard Query-persister pairing. |
+| Rate limiting / error mapping (server side) | **Reuse `src/lib/http/rateLimit.ts` and `errorResponse.ts`** | Already exist, already used on every current `/api/*` route. No new dependency. |
+| Errors (client) | Sentry (`@sentry/react-native`) | A device console isn't readable after ship; without it a store release is unobservable. Declare it in the iOS privacy manifest. |
+| Tests | Vitest (`packages/*`, unchanged runner), jest-expo + RNTL (`apps/mobile` units), Maestro (`apps/mobile` E2E) | Vitest can't run Metro/Hermes; jest-expo is the supported RN path. Maestro over Detox for setup cost. |
+
+## 8. Decisions (recorded 2026-09-03)
+
+All ten open questions from the original brief's Section 12 have been put to
+the repo owner and answered. These are now settled inputs to Phase 2 onward,
+not open questions:
+
+1. **Developer accounts — neither exists yet.** Start Apple Developer
+   Program and Google Play Console enrollment now, in parallel with Phase
+   2/3 engineering — Apple's identity verification and Google's new-account
+   closed-testing requirement are the long poles in the schedule and must
+   not be discovered at Phase 10. **Action item, not blocking Phase 2.**
+2. **Bundle ID / app name — `com.thiagobuenogarcia.mythos`, "Mythos."**
+   Accepted as recommended, pending a store-availability check for the name
+   "Mythos" (do this before Phase 4 scaffolding locks it into `app.config.ts`
+   and before it appears in any store listing).
+3. **Monorepo move — yes, full move.** `worldofwarcraft` becomes
+   `mythos/apps/web`; done as Phase 2's own unit of work with the existing
+   web Vitest + Playwright suite as the exit proof, plus a Vercel
+   root-directory setting fix for the existing deployment.
+4. **API hosting — same Vercel project as web, `/v1` namespace.** No
+   separate deployment; `/v1` routes live alongside the existing `/api/*`
+   routes in `apps/web`.
+5. **Postgres — stays optional, zero-infra by default.** `/v1/bis` and
+   `/v1/meta/tier-list` (see item 10 on `meta`'s v1 status) serve from disk
+   via the existing `getBisList`/`loadTierList` fallback, exactly as today.
+   No production Postgres dependency introduced for mobile.
+6. **Branch workflow — shared, no mobile-specific branch.** `apps/mobile`
+   follows the existing `development` → `main` flow once the monorepo move
+   lands; one branch, one PR flow for both apps.
+7. **Styling — NativeWind.** Confirmed as the mobile styling approach.
+8. **Crash reporting — Sentry only, no product analytics.** Confirmed;
+   declare it in the iOS privacy manifest as crash-diagnostics collection,
+   nothing else.
+9. **Theme — dark-only for v1.** No light-mode work in v1; the theme token
+   structure should still be shaped so light mode is additive later, not a
+   rearchitecture, but no light palette is authored or QA'd for v1.
+10. **v1 scope — Gear + Progression.** Search, paper doll, upgrade board,
+    **and** the raid/Mythic+ progression tabs ship in the first release.
+    **`meta` (tier list + spec build) and `talents` (diff-first list, let
+    alone the pannable tree) are both deferred to 1.1+** — this changes the
+    Section 3 bounded-context list's *shipping* status (the contexts still
+    exist in the domain model; `meta` and `talents` just have no mobile UI
+    or `/v1` traffic until 1.1) and is reflected in `mobile-ux.md`'s
+    navigation shape and `api-contract.md`'s v1/1.1 labeling per endpoint.
