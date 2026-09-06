@@ -1,9 +1,9 @@
 import { useMemo } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/Tabs';
-import { diffTalents } from '@/lib/talents/diffTalents';
+import { diffTalents } from '@mythos/core/talents';
 import { TalentTree } from './TalentTree';
 import type { DomainHeroTree, DomainTalentTree, TalentSelection } from '@/lib/blizzard/domain';
-import type { RecommendedTalentBuild } from '@/lib/talents/types';
+import type { RecommendedTalentBuild } from '@mythos/core/talents';
 
 interface Props {
   tree: DomainTalentTree;

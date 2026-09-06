@@ -4,7 +4,7 @@
  * "not yet seeded" contract as getBisList.ts.
  */
 import { loadRecommendedBuildFile } from './loadRecommended';
-import type { RecommendedTalentBuild } from './types';
+import type { RecommendedTalentBuild } from '@mythos/core/talents';
 
 export interface RecommendedBuildResult {
   build: RecommendedTalentBuild | null;

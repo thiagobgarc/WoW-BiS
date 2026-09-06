@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { compareGear } from './compareGear';
 import type { BisEntry } from './types';
-import type { DomainItem, EquipmentBySlot, EquipmentSlot } from '@/lib/blizzard/domain';
+import type { DomainItem, EquipmentBySlot, EquipmentSlot } from '../character/types';
 
 function item(overrides: Partial<DomainItem> & { slot: EquipmentSlot; itemId: number; itemLevel: number }): DomainItem {
   return {

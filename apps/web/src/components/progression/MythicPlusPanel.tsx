@@ -1,5 +1,5 @@
 import type { DomainMythicPlusProfile } from '@/lib/blizzard/domain';
-import { timeAgo } from '@/lib/utils/format';
+import { timeAgo } from '@mythos/core/utils';
 
 interface Props {
   profile: DomainMythicPlusProfile;

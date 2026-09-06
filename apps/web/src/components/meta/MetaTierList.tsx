@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/Tabs';
 import { Tooltip, TooltipProvider } from '@/components/ui/Tooltip';
-import { classColor } from '@/lib/utils/classColors';
+import { classColor } from '@mythos/core/utils';
 import { specKey, urlSlug } from '@/lib/meta/specIds';
 import type { MetaContentType, MetaRole, MetaTier, MetaTierEntry, MetaTierList as MetaTierListData } from '@/lib/meta/types';
 

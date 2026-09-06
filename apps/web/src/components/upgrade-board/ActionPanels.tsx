@@ -1,4 +1,4 @@
-import type { ActionGroups } from '@/lib/bis/deriveActionGroups';
+import type { ActionGroups } from '@mythos/core/bis';
 
 function Panel({ title, icon, children }: { title: string; icon: string; children: React.ReactNode }) {
   return (

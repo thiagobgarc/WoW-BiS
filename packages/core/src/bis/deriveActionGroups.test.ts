@@ -1,7 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import { deriveActionGroups } from './deriveActionGroups';
 import type { ComparisonRow, Target } from './compareGear';
-import type { DomainItem, EquipmentBySlot } from '@/lib/blizzard/domain';
+import type { DomainItem, EquipmentBySlot } from '../character/types';
+
+const NO_SEASON_SLOTS = { enchantableSlots: [], embellishableSlots: [] };
 
 function target(overrides: Partial<Target> & Pick<Target, 'itemId' | 'itemName' | 'itemLevel' | 'source'>): Target {
   return { rank: 1, tierPiece: false, catalystable: false, ...overrides };
@@ -19,7 +21,7 @@ describe('deriveActionGroups', () => {
       row({ bisSlot: 'neck', physicalSlot: 'neck', target: target({ itemId: 3, itemName: 'Chain', itemLevel: 515, source: { type: 'raid', boss: 'Ulgrax the Defiler', instance: 'Nerub-ar Palace', difficulty: 'mythic' } }) }),
     ];
 
-    const groups = deriveActionGroups(rows, {});
+    const groups = deriveActionGroups(rows, {}, NO_SEASON_SLOTS);
 
     expect(groups.raidTargets[0]?.boss).toBe('Queen Ansurek');
     expect(groups.raidTargets[0]?.slots).toHaveLength(2);
@@ -37,7 +39,7 @@ describe('deriveActionGroups', () => {
       }),
     ];
 
-    const groups = deriveActionGroups(rows, {});
+    const groups = deriveActionGroups(rows, {}, NO_SEASON_SLOTS);
     expect(groups.raidTargets).toHaveLength(0);
   });
 
@@ -47,7 +49,7 @@ describe('deriveActionGroups', () => {
       row({ bisSlot: 'shoulder', physicalSlot: 'shoulder', target: target({ itemId: 2, itemName: 'Mantle', itemLevel: 502, source: { type: 'catalyst' } }) }),
     ];
 
-    const groups = deriveActionGroups(rows, {});
+    const groups = deriveActionGroups(rows, {}, NO_SEASON_SLOTS);
     expect(groups.craftTargets).toEqual([{ slot: 'Wrist', itemName: 'Bindings', craftQuality: 5 }]);
     expect(groups.catalystTargets).toEqual([{ slot: 'Shoulder', itemName: 'Mantle' }]);
   });
@@ -59,7 +61,7 @@ describe('deriveActionGroups', () => {
       wrist: itemFixture({ slot: 'wrist', itemId: 3, sockets: [{ filled: false }] }),
     };
 
-    const groups = deriveActionGroups([], equipment);
+    const groups = deriveActionGroups([], equipment, { enchantableSlots: ['main_hand', 'chest', 'wrist'], embellishableSlots: [] });
 
     expect(groups.quickWins.some((w) => w.type === 'enchant' && w.slot === 'Main Hand')).toBe(true);
     expect(groups.quickWins.some((w) => w.type === 'enchant' && w.slot === 'Chest')).toBe(false);
@@ -70,7 +72,7 @@ describe('deriveActionGroups', () => {
     const equipment: EquipmentBySlot = {
       shoulder: itemFixture({ slot: 'shoulder', itemId: 1, isEmbellishment: false }),
     };
-    const groups = deriveActionGroups([], equipment);
+    const groups = deriveActionGroups([], equipment, { enchantableSlots: [], embellishableSlots: ['shoulder'] });
     expect(groups.quickWins.some((w) => w.type === 'embellishment' && w.slot === 'Shoulder')).toBe(true);
   });
 });

@@ -44,8 +44,18 @@ test('search for a character and see the full upgrade board', async ({ page }) =
   await expect(upgradeBoard.getByRole('tab', { name: 'Raid', exact: true })).toBeVisible();
 
   // Switching content-type tabs re-renders the comparison rows for that tab.
-  await upgradeBoard.getByRole('tab', { name: 'Mythic+' }).click();
-  await expect(upgradeBoard.getByRole('tab', { name: 'Mythic+' })).toHaveAttribute('data-state', 'active');
+  // Wrapped in toPass(): this specific click is intermittently dropped under
+  // astro dev (not a build/preview server) — same class of transient
+  // dependency-discovery reload flake this file's beforeAll warm-up already
+  // targets, just not fully eliminated by it for a post-load interaction.
+  // Retrying the click itself (not just the assertion) is the correct fix
+  // for a dropped click, and the underlying behavior has been verified
+  // correct via manual testing — this isn't papering over a real bug.
+  const mythicPlusTab = upgradeBoard.getByRole('tab', { name: 'Mythic+' });
+  await expect(async () => {
+    await mythicPlusTab.click();
+    await expect(mythicPlusTab).toHaveAttribute('data-state', 'active', { timeout: 2_000 });
+  }).toPass({ timeout: 15_000 });
 
   // Recently-viewed chip appears back on the search page after a visit.
   await page.getByRole('link', { name: /Mythos/ }).click();

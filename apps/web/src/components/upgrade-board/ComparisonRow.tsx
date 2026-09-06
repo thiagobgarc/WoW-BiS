@@ -1,9 +1,8 @@
 import { useState } from 'react';
-import type { ComparisonRow as ComparisonRowData } from '@/lib/bis/compareGear';
+import type { ComparisonRow as ComparisonRowData } from '@mythos/core/bis';
 import { ItemIcon } from '@/components/character/ItemIcon';
 import { SeverityChip } from './SeverityChip';
-import { slotLabel } from '@/lib/utils/format';
-import { sourceLabel } from '@/lib/utils/sourceLabel';
+import { slotLabel, sourceLabel } from '@mythos/core/utils';
 
 function deltaLabel(row: ComparisonRowData): string {
   if (row.severity === 'bis') return 'Match';

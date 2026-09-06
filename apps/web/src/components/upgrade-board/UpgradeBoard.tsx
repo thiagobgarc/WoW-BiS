@@ -1,8 +1,7 @@
 import { useMemo, useState } from 'react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/Tabs';
-import { compareGear } from '@/lib/bis/compareGear';
-import { deriveActionGroups } from '@/lib/bis/deriveActionGroups';
-import { CONTENT_TYPES, type BisEntry, type ContentType } from '@/lib/bis/types';
+import { compareGear, deriveActionGroups, CONTENT_TYPES, type BisEntry, type ContentType } from '@mythos/core/bis';
+import { seasonConfig } from '@/lib/season/seasonConfig';
 import type { EquipmentBySlot } from '@/lib/blizzard/domain';
 import { CompletionMeter } from './CompletionMeter';
 import { ComparisonRow } from './ComparisonRow';
@@ -21,7 +20,10 @@ export function UpgradeBoard({ equipment, bisEntries, seeded }: Props) {
   const [contentType, setContentType] = useState<ContentType>('raid');
 
   const result = useMemo(() => compareGear(equipment, bisEntries, contentType), [equipment, bisEntries, contentType]);
-  const groups = useMemo(() => deriveActionGroups(result.rows, equipment), [result.rows, equipment]);
+  const groups = useMemo(
+    () => deriveActionGroups(result.rows, equipment, seasonConfig),
+    [result.rows, equipment],
+  );
 
   if (!seeded) {
     return (

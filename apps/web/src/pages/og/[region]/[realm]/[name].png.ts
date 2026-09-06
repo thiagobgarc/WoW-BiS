@@ -14,7 +14,7 @@ import { createElement as h } from 'react';
 import { getCharacterProfile } from '@/lib/blizzard/client';
 import { mapProfile } from '@/lib/blizzard/domain';
 import { toCharacterKey } from '@/lib/blizzard/getFullCharacter';
-import { classColor } from '@/lib/utils/classColors';
+import { classColor } from '@mythos/core/utils';
 
 export const prerender = false;
 

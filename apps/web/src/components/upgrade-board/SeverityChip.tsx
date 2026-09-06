@@ -1,4 +1,4 @@
-import type { Severity } from '@/lib/bis/compareGear';
+import type { Severity } from '@mythos/core/bis';
 
 /**
  * Colorblind-safe by design: every severity pairs a color with a distinct

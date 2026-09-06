@@ -6,7 +6,7 @@
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { specSlug } from '@/lib/bis/loadSeeds';
-import { RecommendedTalentBuildSchema, type RecommendedContentType, type RecommendedTalentBuild } from './types';
+import { RecommendedTalentBuildSchema, type RecommendedContentType, type RecommendedTalentBuild } from '@mythos/core/talents';
 
 const DATA_ROOT = path.join(process.cwd(), 'data', 'talents');
 

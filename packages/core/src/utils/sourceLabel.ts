@@ -1,4 +1,4 @@
-import type { Source } from '@/lib/bis/types';
+import type { Source } from '../bis/types';
 
 const DIFFICULTY_LABEL: Record<string, string> = {
   lfr: 'LFR',

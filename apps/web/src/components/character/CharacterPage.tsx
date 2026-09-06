@@ -3,8 +3,8 @@ import { TooltipProvider } from '@/components/ui/Tooltip';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/Tabs';
 import type { DomainCharacter, DomainMythicPlusProfile, DomainRaidProgress, EquipmentBySlot, SecondaryStats } from '@/lib/blizzard/domain';
 import type { CharacterTalents } from '@/lib/blizzard/getCharacterTalents';
-import type { BisEntry } from '@/lib/bis/types';
-import type { RecommendedTalentBuild } from '@/lib/talents/types';
+import type { BisEntry } from '@mythos/core/bis';
+import type { RecommendedTalentBuild } from '@mythos/core/talents';
 import type { MetaTier } from '@/lib/meta/types';
 import { CharacterHeader } from './CharacterHeader';
 import { PaperDoll, PaperDollSkeleton } from './PaperDoll';
@@ -14,7 +14,7 @@ import { UpgradeBoard } from '@/components/upgrade-board/UpgradeBoard';
 import { TalentTreeSection } from '@/components/talents/TalentTreeSection';
 import { RaidProgressionPanel } from '@/components/progression/RaidProgressionPanel';
 import { MythicPlusPanel } from '@/components/progression/MythicPlusPanel';
-import { timeAgo } from '@/lib/utils/format';
+import { timeAgo } from '@mythos/core/utils';
 
 interface Props {
   character: DomainCharacter;

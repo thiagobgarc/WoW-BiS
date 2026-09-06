@@ -3,6 +3,16 @@
  * Blizzard's raw response shape. `mapEquipment` etc. below are the only
  * places that translate between the two, so a Blizzard schema drift only
  * ever requires editing this file.
+ *
+ * The output *types* (EquipmentSlot, DomainItem, EquipmentBySlot,
+ * DomainCharacter, SecondaryStats, TalentSelection) live in
+ * packages/core now — see docs/architecture.md Section 1 — and are
+ * re-exported here so every existing `@/lib/blizzard/domain` import in
+ * this app keeps working unchanged. The mapper functions below that
+ * *produce* these shapes from Blizzard's raw response stay here: they
+ * consume `./schemas` types, which are Blizzard-specific and must not
+ * end up in packages/core (a candidate for bundling into the mobile
+ * binary — packages/core never depends on anything Blizzard-shaped).
  */
 import type {
   BlizzardEquippedItem,
@@ -16,95 +26,33 @@ import type {
   TalentNode,
   TalentTree,
 } from './schemas';
+import {
+  EQUIPMENT_SLOTS,
+  type EquipmentSlot,
+  type DomainItemStat,
+  type DomainItemSet,
+  type DomainItem,
+  type EquippedSlotEmpty,
+  type EquippedSlot,
+  type EquipmentBySlot,
+  type DomainCharacter,
+  type SecondaryStats,
+} from '@mythos/core/character';
+import type { TalentSelection } from '@mythos/core/talents';
 
-export const EQUIPMENT_SLOTS = [
-  'head',
-  'neck',
-  'shoulder',
-  'back',
-  'chest',
-  'wrist',
-  'hands',
-  'waist',
-  'legs',
-  'feet',
-  'finger_1',
-  'finger_2',
-  'trinket_1',
-  'trinket_2',
-  'main_hand',
-  'off_hand',
-] as const;
-
-export type EquipmentSlot = (typeof EQUIPMENT_SLOTS)[number];
-
-export interface DomainItemStat {
-  text: string;
-  color: string; // css rgba(), straight from Blizzard's own in-game tooltip color
-}
-
-export interface DomainItemSet {
-  name: string;
-  ownedCount: number;
-  totalCount: number;
-  effects: { text: string; requiredCount: number; active: boolean }[];
-}
-
-export interface DomainItem {
-  slot: EquipmentSlot;
-  itemId: number;
-  name: string;
-  quality: string; // lowercase: 'epic', 'rare', etc.
-  itemLevel: number;
-  iconUrl: string | null;
-  isTierPiece: boolean;
-  isEmbellishment: boolean;
-  sockets: { filled: boolean; gemName?: string }[];
-  enchantText: string | null;
-  wowheadUrl: string;
-  // Full-tooltip fields — mirror the in-game tooltip layout, not just the compact card.
-  bindingText: string | null;
-  /** Right-hand column next to the slot name (e.g. "Cloth"), armor pieces only. */
-  armorTypeLabel: string | null;
-  armorLine: DomainItemStat | null;
-  weaponLines: string[];
-  stats: DomainItemStat[];
-  procs: string[]; // "Equip:"/"Use:" effect descriptions, already prefixed by Blizzard
-  requiredLevelText: string | null;
-  classesText: string | null;
-  setInfo: DomainItemSet | null;
-}
-
-export interface EquippedSlotEmpty {
-  slot: EquipmentSlot;
-  empty: true;
-}
-
-export type EquippedSlot = (DomainItem & { empty?: false }) | EquippedSlotEmpty;
-
-export interface DomainCharacter {
-  name: string;
-  realmSlug: string;
-  realmName: string;
-  region: string;
-  className: string;
-  classSlug: string;
-  specName: string | null;
-  specId: number | null;
-  faction: string;
-  guildName: string | null;
-  level: number;
-  averageItemLevel: number;
-  equippedItemLevel: number;
-  lastLoginTimestamp: number | null;
-}
-
-export interface SecondaryStats {
-  haste: { rating: number; percent: number };
-  crit: { rating: number; percent: number };
-  mastery: { rating: number; percent: number };
-  versatility: { rating: number; percent: number };
-}
+export {
+  EQUIPMENT_SLOTS,
+  type EquipmentSlot,
+  type DomainItemStat,
+  type DomainItemSet,
+  type DomainItem,
+  type EquippedSlotEmpty,
+  type EquippedSlot,
+  type EquipmentBySlot,
+  type DomainCharacter,
+  type SecondaryStats,
+  type TalentSelection,
+};
 
 const SLOT_TYPE_MAP: Record<string, EquipmentSlot> = {
   HEAD: 'head',
@@ -211,10 +159,9 @@ function mapOneItem(raw: BlizzardEquippedItem, iconUrl: string | null): DomainIt
 /**
  * Maps raw equipment to a slot -> item lookup. `iconUrls` is a pre-fetched
  * map of itemId -> media URL, since icons come from a separate endpoint
- * per item (see client.ts's batched media fetch).
+ * per item (see client.ts's batched media fetch). (EquipmentBySlot itself
+ * is imported/re-exported at the top of this file — see this file's header.)
  */
-export type EquipmentBySlot = Partial<Record<EquipmentSlot, DomainItem>>;
-
 export function mapEquipment(raw: CharacterEquipment, iconUrls: Map<number, string>): EquipmentBySlot {
   const result: EquipmentBySlot = {};
   for (const item of raw.equipped_items) {
@@ -282,12 +229,7 @@ export interface DomainTalentTree {
   heroTrees: DomainHeroTree[];
 }
 
-export interface TalentSelection {
-  nodeId: number;
-  rank: number;
-  /** Which entry in the node's `options` is selected; 0 for non-choice nodes. */
-  optionIndex: number;
-}
+// TalentSelection itself is imported/re-exported at the top of this file.
 
 function mapTalentNode(raw: TalentNode, iconUrls: Map<number, string>): DomainTalentNode {
   const lastRank = raw.ranks[raw.ranks.length - 1];

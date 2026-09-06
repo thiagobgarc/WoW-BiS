@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/Button';
 import { NameCombobox } from './NameCombobox';
 import { RealmCombobox } from './RealmCombobox';
 import { useRecentCharacters, type RecentCharacter } from '@/lib/hooks/useRecentCharacters';
-import { realmSlug } from '@/lib/realmSlug';
+import { realmSlug } from '@mythos/core/realm';
 
 const REGIONS = ['US', 'EU', 'KR', 'TW'] as const;
 

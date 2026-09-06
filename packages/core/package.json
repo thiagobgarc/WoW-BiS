@@ -1,0 +1,26 @@
+{
+  "name": "@mythos/core",
+  "private": true,
+  "type": "module",
+  "version": "0.0.1",
+  "exports": {
+    "./bis": "./src/bis/index.ts",
+    "./talents": "./src/talents/index.ts",
+    "./character": "./src/character/index.ts",
+    "./realm": "./src/realm/index.ts",
+    "./utils": "./src/utils/index.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.11"
+  }
+}

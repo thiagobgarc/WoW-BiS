@@ -2,11 +2,22 @@
  * Pure derivation of the upgrade board's "actionable groupings" from a
  * compareGear() result plus the equipped gear. No I/O — testable the same
  * way as compareGear itself.
+ *
+ * `seasonSlots` is injected rather than imported from a concrete season
+ * config module: this file lives in packages/core, which must not depend
+ * on apps/web's seasonConfig.ts (or, eventually, a mobile equivalent) —
+ * see docs/architecture.md Section 5's "no hardcoded season data" rule.
+ * The caller (apps/web today; the mobile app once it fetches /v1/meta)
+ * owns getting the current season's slot lists to this function.
  */
-import type { EquipmentBySlot, EquipmentSlot } from '@/lib/blizzard/domain';
+import type { EquipmentBySlot, EquipmentSlot } from '../character/types';
 import type { ComparisonRow } from './compareGear';
-import { seasonConfig } from '@/lib/season/seasonConfig';
-import { slotLabel } from '@/lib/utils/format';
+import { slotLabel } from '../utils/format';
+
+export interface SeasonSlots {
+  enchantableSlots: readonly string[];
+  embellishableSlots: readonly string[];
+}
 
 export interface BossTarget {
   boss: string;
@@ -45,7 +56,7 @@ export interface ActionGroups {
   quickWins: QuickWin[];
 }
 
-export function deriveActionGroups(rows: ComparisonRow[], equipment: EquipmentBySlot): ActionGroups {
+export function deriveActionGroups(rows: ComparisonRow[], equipment: EquipmentBySlot, seasonSlots: SeasonSlots): ActionGroups {
   const actionable = rows.filter((r) => r.severity !== 'bis' && r.target);
 
   const bossMap = new Map<string, BossTarget>();
@@ -74,7 +85,7 @@ export function deriveActionGroups(rows: ComparisonRow[], equipment: EquipmentBy
   }
 
   const quickWins: QuickWin[] = [];
-  for (const slot of seasonConfig.enchantableSlots) {
+  for (const slot of seasonSlots.enchantableSlots) {
     const item = equipment[slot as EquipmentSlot];
     if (item && !item.enchantText) {
       quickWins.push({ type: 'enchant', slot: slotLabel(slot), label: `Add an enchant to ${slotLabel(slot)} (free ilvl-equivalent power)` });
@@ -86,7 +97,7 @@ export function deriveActionGroups(rows: ComparisonRow[], equipment: EquipmentBy
       quickWins.push({ type: 'socket', slot: slotLabel(slot), label: `Socket ${slotLabel(slot)} (${emptySockets} empty socket${emptySockets > 1 ? 's' : ''})` });
     }
   }
-  for (const slot of seasonConfig.embellishableSlots) {
+  for (const slot of seasonSlots.embellishableSlots) {
     const item = equipment[slot as EquipmentSlot];
     if (item && !item.isEmbellishment) {
       quickWins.push({ type: 'embellishment', slot: slotLabel(slot), label: `Add an Embellishment to ${slotLabel(slot)}` });

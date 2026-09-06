@@ -1,6 +1,6 @@
 import type { DomainCharacter, EquipmentBySlot, EquipmentSlot } from '@/lib/blizzard/domain';
 import type { MetaTier } from '@/lib/meta/types';
-import { classColor } from '@/lib/utils/classColors';
+import { classColor } from '@mythos/core/utils';
 import { TierBadge } from '@/components/meta/TierBadge';
 
 const TIER_SLOTS: EquipmentSlot[] = ['head', 'shoulder', 'chest', 'hands', 'legs'];

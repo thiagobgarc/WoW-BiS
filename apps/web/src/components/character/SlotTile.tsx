@@ -1,8 +1,7 @@
 import type { DomainItem, EquipmentSlot } from '@/lib/blizzard/domain';
 import { ItemIcon } from './ItemIcon';
 import { Tooltip } from '@/components/ui/Tooltip';
-import { slotLabel } from '@/lib/utils/format';
-import { qualityColor } from '@/lib/utils/itemQuality';
+import { slotLabel, qualityColor } from '@mythos/core/utils';
 
 interface Props {
   slot: EquipmentSlot;

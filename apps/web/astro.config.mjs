@@ -28,7 +28,15 @@ export default defineConfig({
   devToolbar: { enabled: false },
 
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    // @mythos/core (packages/core) is a workspace package consumed as
+    // TypeScript source, not a prebuilt npm package — it has no compiled
+    // JS for Vite's SSR step to require. noExternal tells Vite to run it
+    // through the same transform pipeline as this app's own source instead
+    // of trying to load it directly from node_modules.
+    ssr: {
+      noExternal: ['@mythos/core']
+    }
   },
 
   adapter: vercel()

@@ -4,8 +4,7 @@
  * unit-testable (see diffTalents.test.ts). Mirrors compareGear.ts's
  * architecture for the gear side.
  */
-import type { TalentSelection } from '@/lib/blizzard/domain';
-import type { RecommendedSelection } from './types';
+import type { TalentSelection, RecommendedSelection } from './types';
 
 export interface TalentMatchResult {
   matched: number;

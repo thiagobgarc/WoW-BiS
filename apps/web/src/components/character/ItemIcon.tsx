@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { qualityColor } from '@/lib/utils/itemQuality';
+import { qualityColor } from '@mythos/core/utils';
 import { cn } from '@/lib/utils/cn';
 
 interface Props {

@@ -1,4 +1,4 @@
-import type { QuickWin } from '@/lib/bis/deriveActionGroups';
+import type { QuickWin } from '@mythos/core/bis';
 
 const ICON: Record<QuickWin['type'], string> = {
   enchant: '✨',

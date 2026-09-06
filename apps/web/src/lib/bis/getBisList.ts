@@ -9,7 +9,7 @@ import { eq, and } from 'drizzle-orm';
 import { getDb } from '@/lib/db/client';
 import { bisEntries, bisLists } from '@/lib/db/schema';
 import { loadSeedFile } from './loadSeeds';
-import type { BisEntry, BisList } from './types';
+import type { BisEntry, BisList } from '@mythos/core/bis';
 
 export interface BisResult {
   entries: BisEntry[];

@@ -8,9 +8,9 @@ import { getSpecTalentTree } from '@/lib/blizzard/getSpecTalentTree';
 import { getRecommendedBuild, getRaidRecommendedBuild } from '@/lib/talents/getRecommendedBuild';
 import { getMythicPlusTierList, getRaidTierList, findTierForSpec } from '@/lib/meta/getTierList';
 import { CURRENT_SEASON_ID } from '@/lib/season/seasonConfig';
-import { classColor } from '@/lib/utils/classColors';
+import { classColor } from '@mythos/core/utils';
 import type { DomainTalentTree } from '@/lib/blizzard/domain';
-import type { RecommendedTalentBuild } from '@/lib/talents/types';
+import type { RecommendedTalentBuild } from '@mythos/core/talents';
 import type { MetaTier } from '@/lib/meta/types';
 
 export const prerender = false;

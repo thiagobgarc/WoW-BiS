@@ -6,7 +6,7 @@
  */
 import { readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
-import { BisListSchema, type BisList } from './types';
+import { BisListSchema, type BisList } from '@mythos/core/bis';
 
 const DATA_ROOT = path.join(process.cwd(), 'data', 'bis');
 

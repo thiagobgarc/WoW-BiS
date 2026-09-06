@@ -9,7 +9,7 @@
  * a player holding BiS rank 2 in finger_1 is credited there, instead of
  * both ring slots naively being told they're missing rank 1.
  */
-import type { EquipmentBySlot, EquipmentSlot, DomainItem } from '@/lib/blizzard/domain';
+import type { EquipmentBySlot, EquipmentSlot, DomainItem } from '../character/types';
 import { DUAL_SLOT_CATEGORIES, type BisEntry, type BisSlot, type ContentType, type Source } from './types';
 
 export type Severity = 'bis' | 'close' | 'upgrade' | 'major-gap';

@@ -1,6 +1,6 @@
 import { boolean, integer, jsonb, pgTable, real, serial, text, unique } from 'drizzle-orm/pg-core';
 import { relations } from 'drizzle-orm';
-import type { Source } from '@/lib/bis/types';
+import type { Source } from '@mythos/core/bis';
 
 export const bisLists = pgTable(
   'bis_lists',

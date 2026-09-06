@@ -3,9 +3,9 @@ import { TooltipProvider } from '@/components/ui/Tooltip';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/Tabs';
 import { TalentTree } from '@/components/talents/TalentTree';
 import { TierBadge } from '@/components/meta/TierBadge';
-import { classColor } from '@/lib/utils/classColors';
+import { classColor } from '@mythos/core/utils';
 import type { DomainTalentTree } from '@/lib/blizzard/domain';
-import type { RecommendedContentType, RecommendedTalentBuild } from '@/lib/talents/types';
+import type { RecommendedContentType, RecommendedTalentBuild } from '@mythos/core/talents';
 import type { MetaTier } from '@/lib/meta/types';
 
 interface Props {

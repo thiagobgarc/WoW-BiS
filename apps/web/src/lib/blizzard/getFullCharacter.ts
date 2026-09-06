@@ -10,7 +10,7 @@
  * flag instead of showing an error, per the product spec's
  * "last updated X ago" banner requirement.
  */
-import { realmSlug as normalizeRealmSlug, characterSlug } from '@/lib/realmSlug';
+import { realmSlug as normalizeRealmSlug, characterSlug } from '@mythos/core/realm';
 import { getCache } from '@/lib/cache/cache';
 import { BlizzardUnavailableError } from './errors';
 import {

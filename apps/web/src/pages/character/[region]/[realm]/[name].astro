@@ -13,11 +13,11 @@ import { CURRENT_SEASON_ID } from '@/lib/season/seasonConfig';
 import { toApiError } from '@/lib/http/errorResponse';
 import { isValidRegion } from '@/lib/http/validateRegion';
 import { rateLimit, clientIp } from '@/lib/http/rateLimit';
-import { classColor } from '@/lib/utils/classColors';
-import type { BisEntry, BisList } from '@/lib/bis/types';
+import { classColor } from '@mythos/core/utils';
+import type { BisEntry, BisList } from '@mythos/core/bis';
 import type { CharacterTalents } from '@/lib/blizzard/getCharacterTalents';
 import type { DomainMythicPlusProfile, DomainRaidProgress } from '@/lib/blizzard/domain';
-import type { RecommendedTalentBuild } from '@/lib/talents/types';
+import type { RecommendedTalentBuild } from '@mythos/core/talents';
 import type { MetaTier } from '@/lib/meta/types';
 
 export const prerender = false;
