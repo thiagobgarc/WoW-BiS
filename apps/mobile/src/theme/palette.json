@@ -1,0 +1,29 @@
+{
+  "dark": {
+    "bg": "#0a0e27",
+    "panel": "#1a1f3a",
+    "panel-hover": "#212740",
+    "border": "rgba(255, 255, 255, 0.08)",
+    "text": "#e8eaed",
+    "text-muted": "#adb5bd",
+    "text-dim": "#8d92a4",
+    "text-faint": "#5f6470",
+    "link": "#5eb3f6"
+  },
+  "quality": {
+    "poor": "#9d9d9d",
+    "common": "#ffffff",
+    "uncommon": "#1eff00",
+    "rare": "#0070dd",
+    "epic": "#a335ee",
+    "legendary": "#ff8000",
+    "artifact": "#e6cc80",
+    "heirloom": "#00ccff"
+  },
+  "severity": {
+    "bis": "#1eff00",
+    "close": "#ffc107",
+    "upgrade": "#ff9800",
+    "gap": "#ff6b6b"
+  }
+}

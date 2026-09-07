@@ -10,8 +10,12 @@
     "dev": "bun run --cwd apps/web dev",
     "build": "bun run --cwd apps/web build",
     "preview": "bun run --cwd apps/web preview",
-    "test": "bun run --cwd packages/core test && bun run --cwd packages/api-contract test && bun run --cwd packages/api-client test && bun run --cwd apps/web test",
+    "test": "bun run --cwd packages/core test && bun run --cwd packages/api-contract test && bun run --cwd packages/api-client test && bun run --cwd apps/web test && bun run --cwd apps/mobile test",
     "test:e2e": "bun run --cwd apps/web test:e2e",
-    "typecheck": "bun run --cwd packages/core typecheck && bun run --cwd packages/api-contract typecheck && bun run --cwd packages/api-client typecheck && bun run --cwd apps/web typecheck"
+    "typecheck": "bun run --cwd packages/core typecheck && bun run --cwd packages/api-contract typecheck && bun run --cwd packages/api-client typecheck && bun run --cwd apps/web typecheck && bun run --cwd apps/mobile typecheck",
+    "mobile": "bun run --cwd apps/mobile start",
+    "mobile:android": "bun run --cwd apps/mobile android",
+    "mobile:test": "bun run --cwd apps/mobile test",
+    "dev:host": "bun run --cwd apps/web dev:host"
   }
 }

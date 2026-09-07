@@ -1,0 +1,11 @@
+# React Native's toolchain resolves Babel presets and plugins by name from
+# the directory of the babel config, not through the requiring package. Bun's
+# default isolated linker puts every package under node_modules/.bun/<hash>/,
+# so `babel-preset-expo` asking for `@babel/plugin-transform-react-jsx` finds
+# nothing and both Metro and jest-expo fail with "Cannot find module" for a
+# package that is very much installed.
+#
+# Hoisting is what the React Native ecosystem assumes. apps/web is indifferent
+# to the layout; apps/mobile cannot build without it.
+[install]
+linker = "hoisted"
