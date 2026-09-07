@@ -45,6 +45,20 @@
         "vitest": "^4.1.11",
       },
     },
+    "packages/api-client": {
+      "name": "@mythos/api-client",
+      "version": "0.0.1",
+      "dependencies": {
+        "@mythos/api-contract": "workspace:*",
+        "@mythos/core": "workspace:*",
+        "zod": "^4.4.3",
+      },
+      "devDependencies": {
+        "@types/node": "^26.4.1",
+        "typescript": "^5.9.3",
+        "vitest": "^4.1.11",
+      },
+    },
     "packages/api-contract": {
       "name": "@mythos/api-contract",
       "version": "0.0.1",
@@ -329,6 +343,8 @@
     "@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@0.3.31", "", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }, "sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw=="],
 
     "@mapbox/node-pre-gyp": ["@mapbox/node-pre-gyp@2.0.3", "", { "dependencies": { "consola": "^3.2.3", "detect-libc": "^2.0.0", "https-proxy-agent": "^7.0.5", "node-fetch": "^2.6.7", "nopt": "^8.0.0", "semver": "^7.5.3", "tar": "^7.4.0" }, "bin": { "node-pre-gyp": "bin/node-pre-gyp" } }, "sha512-uwPAhccfFJlsfCxMYTwOdVfOz3xqyj8xYL3zJj8f0pb30tLohnnFPhLuqp4/qoEz8sNxe4SESZedcBojRefIzg=="],
+
+    "@mythos/api-client": ["@mythos/api-client@workspace:packages/api-client"],
 
     "@mythos/api-contract": ["@mythos/api-contract@workspace:packages/api-contract"],
 

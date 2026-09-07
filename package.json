@@ -10,8 +10,8 @@
     "dev": "bun run --cwd apps/web dev",
     "build": "bun run --cwd apps/web build",
     "preview": "bun run --cwd apps/web preview",
-    "test": "bun run --cwd packages/core test && bun run --cwd packages/api-contract test && bun run --cwd apps/web test",
+    "test": "bun run --cwd packages/core test && bun run --cwd packages/api-contract test && bun run --cwd packages/api-client test && bun run --cwd apps/web test",
     "test:e2e": "bun run --cwd apps/web test:e2e",
-    "typecheck": "bun run --cwd packages/core typecheck && bun run --cwd packages/api-contract typecheck && bun run --cwd apps/web typecheck"
+    "typecheck": "bun run --cwd packages/core typecheck && bun run --cwd packages/api-contract typecheck && bun run --cwd packages/api-client typecheck && bun run --cwd apps/web typecheck"
   }
 }
