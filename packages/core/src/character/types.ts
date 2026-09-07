@@ -11,7 +11,15 @@
  * apps/web's domain.ts re-exports these verbatim so its ~20 existing
  * consumers (`import type { EquipmentBySlot } from '@/lib/blizzard/domain'`)
  * are unaffected by this move.
+ *
+ * Phase 3 made these Zod-first (schema + `z.infer`) rather than hand-written
+ * interfaces. These shapes ARE the /v1 payload shapes — the API returns
+ * exactly what the mappers produce — so packages/api-contract composes its
+ * response schemas from the schemas below instead of maintaining a parallel
+ * copy that could drift. Same pattern bis/types.ts and talents/types.ts
+ * already used for the seed-file schemas.
  */
+import { z } from 'zod';
 
 export const EQUIPMENT_SLOTS = [
   'head',
@@ -32,43 +40,52 @@ export const EQUIPMENT_SLOTS = [
   'off_hand',
 ] as const;
 
-export type EquipmentSlot = (typeof EQUIPMENT_SLOTS)[number];
+export const EquipmentSlotSchema = z.enum(EQUIPMENT_SLOTS);
+export type EquipmentSlot = z.infer<typeof EquipmentSlotSchema>;
 
-export interface DomainItemStat {
-  text: string;
-  color: string;
-}
+export const DomainItemStatSchema = z.object({
+  text: z.string(),
+  color: z.string(),
+});
+export type DomainItemStat = z.infer<typeof DomainItemStatSchema>;
 
-export interface DomainItemSet {
-  name: string;
-  ownedCount: number;
-  totalCount: number;
-  effects: { text: string; requiredCount: number; active: boolean }[];
-}
+export const DomainItemSetSchema = z.object({
+  name: z.string(),
+  ownedCount: z.number(),
+  totalCount: z.number(),
+  effects: z.array(z.object({ text: z.string(), requiredCount: z.number(), active: z.boolean() })),
+});
+export type DomainItemSet = z.infer<typeof DomainItemSetSchema>;
 
-export interface DomainItem {
-  slot: EquipmentSlot;
-  itemId: number;
-  name: string;
-  quality: string;
-  itemLevel: number;
-  iconUrl: string | null;
-  isTierPiece: boolean;
-  isEmbellishment: boolean;
-  sockets: { filled: boolean; gemName?: string }[];
-  enchantText: string | null;
-  wowheadUrl: string;
-  bindingText: string | null;
-  armorTypeLabel: string | null;
-  armorLine: DomainItemStat | null;
-  weaponLines: string[];
-  stats: DomainItemStat[];
-  procs: string[];
-  requiredLevelText: string | null;
-  classesText: string | null;
-  setInfo: DomainItemSet | null;
-}
+export const DomainItemSchema = z.object({
+  slot: EquipmentSlotSchema,
+  itemId: z.number(),
+  name: z.string(),
+  quality: z.string(),
+  itemLevel: z.number(),
+  iconUrl: z.string().nullable(),
+  isTierPiece: z.boolean(),
+  isEmbellishment: z.boolean(),
+  sockets: z.array(z.object({ filled: z.boolean(), gemName: z.string().optional() })),
+  enchantText: z.string().nullable(),
+  wowheadUrl: z.string(),
+  bindingText: z.string().nullable(),
+  armorTypeLabel: z.string().nullable(),
+  armorLine: DomainItemStatSchema.nullable(),
+  weaponLines: z.array(z.string()),
+  stats: z.array(DomainItemStatSchema),
+  procs: z.array(z.string()),
+  requiredLevelText: z.string().nullable(),
+  classesText: z.string().nullable(),
+  setInfo: DomainItemSetSchema.nullable(),
+});
+export type DomainItem = z.infer<typeof DomainItemSchema>;
 
+/**
+ * A slot the character has nothing equipped in. Presentation-only (the paper
+ * doll renders an empty tile) — it never appears in an EquipmentBySlot map or
+ * in a /v1 payload, so it stays a plain type with no schema.
+ */
 export interface EquippedSlotEmpty {
   slot: EquipmentSlot;
   empty: true;
@@ -76,28 +93,34 @@ export interface EquippedSlotEmpty {
 
 export type EquippedSlot = (DomainItem & { empty?: false }) | EquippedSlotEmpty;
 
-export type EquipmentBySlot = Partial<Record<EquipmentSlot, DomainItem>>;
+/** Absent slots mean "nothing equipped there" — see EquippedSlotEmpty. */
+export const EquipmentBySlotSchema = z.partialRecord(EquipmentSlotSchema, DomainItemSchema);
+export type EquipmentBySlot = z.infer<typeof EquipmentBySlotSchema>;
 
-export interface DomainCharacter {
-  name: string;
-  realmSlug: string;
-  realmName: string;
-  region: string;
-  className: string;
-  classSlug: string;
-  specName: string | null;
-  specId: number | null;
-  faction: string;
-  guildName: string | null;
-  level: number;
-  averageItemLevel: number;
-  equippedItemLevel: number;
-  lastLoginTimestamp: number | null;
-}
+export const DomainCharacterSchema = z.object({
+  name: z.string(),
+  realmSlug: z.string(),
+  realmName: z.string(),
+  region: z.string(),
+  className: z.string(),
+  classSlug: z.string(),
+  specName: z.string().nullable(),
+  specId: z.number().nullable(),
+  faction: z.string(),
+  guildName: z.string().nullable(),
+  level: z.number(),
+  averageItemLevel: z.number(),
+  equippedItemLevel: z.number(),
+  lastLoginTimestamp: z.number().nullable(),
+});
+export type DomainCharacter = z.infer<typeof DomainCharacterSchema>;
 
-export interface SecondaryStats {
-  haste: { rating: number; percent: number };
-  crit: { rating: number; percent: number };
-  mastery: { rating: number; percent: number };
-  versatility: { rating: number; percent: number };
-}
+const StatRatingSchema = z.object({ rating: z.number(), percent: z.number() });
+
+export const SecondaryStatsSchema = z.object({
+  haste: StatRatingSchema,
+  crit: StatRatingSchema,
+  mastery: StatRatingSchema,
+  versatility: StatRatingSchema,
+});
+export type SecondaryStats = z.infer<typeof SecondaryStatsSchema>;

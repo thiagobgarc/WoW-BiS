@@ -7,6 +7,8 @@
     "./bis": "./src/bis/index.ts",
     "./talents": "./src/talents/index.ts",
     "./character": "./src/character/index.ts",
+    "./progression": "./src/progression/index.ts",
+    "./meta": "./src/meta/index.ts",
     "./realm": "./src/realm/index.ts",
     "./utils": "./src/utils/index.ts"
   },

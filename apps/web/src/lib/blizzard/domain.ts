@@ -4,15 +4,18 @@
  * places that translate between the two, so a Blizzard schema drift only
  * ever requires editing this file.
  *
- * The output *types* (EquipmentSlot, DomainItem, EquipmentBySlot,
- * DomainCharacter, SecondaryStats, TalentSelection) live in
- * packages/core now — see docs/architecture.md Section 1 — and are
- * re-exported here so every existing `@/lib/blizzard/domain` import in
- * this app keeps working unchanged. The mapper functions below that
- * *produce* these shapes from Blizzard's raw response stay here: they
- * consume `./schemas` types, which are Blizzard-specific and must not
- * end up in packages/core (a candidate for bundling into the mobile
- * binary — packages/core never depends on anything Blizzard-shaped).
+ * The output *types* live in packages/core — see docs/architecture.md
+ * Section 1 — and are re-exported here so every existing
+ * `@/lib/blizzard/domain` import in this app keeps working unchanged.
+ * Phase 2 moved the character/equipment types; Phase 3 moved the talent-tree
+ * and progression types too, once `/v1/character/...` needed them in
+ * packages/api-contract.
+ *
+ * The mapper functions below that *produce* these shapes from Blizzard's raw
+ * response stay here: they consume `./schemas` types, which are
+ * Blizzard-specific and must not end up in packages/core (a candidate for
+ * bundling into the mobile binary — packages/core never depends on anything
+ * Blizzard-shaped).
  */
 import type {
   BlizzardEquippedItem,
@@ -38,10 +41,27 @@ import {
   type DomainCharacter,
   type SecondaryStats,
 } from '@mythos/core/character';
-import type { TalentSelection } from '@mythos/core/talents';
+import {
+  type TalentSelection,
+  type TalentOption,
+  type DomainTalentNode,
+  type DomainHeroTree,
+  type DomainTalentTree,
+} from '@mythos/core/talents';
+import {
+  RAID_DIFFICULTIES,
+  type RaidDifficulty,
+  type DomainBossKill,
+  type DomainRaidDifficultyProgress,
+  type DomainRaidProgress,
+  type DomainMythicPlusRun,
+  type DomainDungeonProgress,
+  type DomainMythicPlusProfile,
+} from '@mythos/core/progression';
 
 export {
   EQUIPMENT_SLOTS,
+  RAID_DIFFICULTIES,
   type EquipmentSlot,
   type DomainItemStat,
   type DomainItemSet,
@@ -52,6 +72,17 @@ export {
   type DomainCharacter,
   type SecondaryStats,
   type TalentSelection,
+  type TalentOption,
+  type DomainTalentNode,
+  type DomainHeroTree,
+  type DomainTalentTree,
+  type RaidDifficulty,
+  type DomainBossKill,
+  type DomainRaidDifficultyProgress,
+  type DomainRaidProgress,
+  type DomainMythicPlusRun,
+  type DomainDungeonProgress,
+  type DomainMythicPlusProfile,
 };
 
 const SLOT_TYPE_MAP: Record<string, EquipmentSlot> = {
@@ -195,42 +226,6 @@ export function mapStatistics(raw: CharacterStatistics): SecondaryStats {
 
 // --- Talent trees -------------------------------------------------------
 
-export interface TalentOption {
-  talentId: number;
-  name: string;
-  spellId: number | null;
-  description?: string;
-  iconUrl: string | null;
-}
-
-export interface DomainTalentNode {
-  id: number;
-  type: 'active' | 'passive' | 'choice';
-  row: number;
-  col: number;
-  maxRank: number;
-  prerequisiteIds: number[];
-  /** One entry for ACTIVE/PASSIVE nodes, 2+ for CHOICE nodes, empty for
-   * structural nodes (e.g. the top-of-tree spec selector) with no tooltip. */
-  options: TalentOption[];
-}
-
-export interface DomainHeroTree {
-  id: number;
-  name: string;
-  nodes: DomainTalentNode[];
-}
-
-export interface DomainTalentTree {
-  classNodes: DomainTalentNode[];
-  specNodes: DomainTalentNode[];
-  /** All hero options available for this spec (usually 2-3) — the character
-   * has picked at most one, see `mapTalentSelections`'s `heroTreeId`. */
-  heroTrees: DomainHeroTree[];
-}
-
-// TalentSelection itself is imported/re-exported at the top of this file.
-
 function mapTalentNode(raw: TalentNode, iconUrls: Map<number, string>): DomainTalentNode {
   const lastRank = raw.ranks[raw.ranks.length - 1];
   const rawOptions = lastRank?.choice_of_tooltips ?? (lastRank?.tooltip ? [lastRank.tooltip] : []);
@@ -323,33 +318,6 @@ export function mapTalentSelections(raw: CharacterSpecializations, specId: numbe
 
 // --- Raid progression -----------------------------------------------------
 
-const RAID_DIFFICULTIES = [
-  { type: 'LFR', label: 'Raid Finder' },
-  { type: 'NORMAL', label: 'Normal' },
-  { type: 'HEROIC', label: 'Heroic' },
-  { type: 'MYTHIC', label: 'Mythic' },
-] as const;
-
-export interface DomainBossKill {
-  name: string;
-  killed: boolean;
-  killCount: number;
-  lastKillTimestamp: number | null;
-}
-
-export interface DomainRaidDifficultyProgress {
-  difficulty: (typeof RAID_DIFFICULTIES)[number]['type'];
-  label: string;
-  killed: number;
-  total: number;
-  bosses: DomainBossKill[];
-}
-
-export interface DomainRaidProgress {
-  instanceName: string;
-  difficulties: DomainRaidDifficultyProgress[];
-}
-
 /**
  * Builds this season's raid progress from the raw encounters/raids payload,
  * scoped to `raidName` (this app only shows the current season's raid, not
@@ -391,24 +359,6 @@ export function mapRaidProgress(raw: CharacterRaids, raidName: string, bossOrder
 }
 
 // --- Mythic+ progression ----------------------------------------------
-
-export interface DomainMythicPlusRun {
-  level: number;
-  timed: boolean;
-  score: number | null;
-  durationMs: number;
-  completedAt: number;
-}
-
-export interface DomainDungeonProgress {
-  dungeon: string;
-  run: DomainMythicPlusRun | null;
-}
-
-export interface DomainMythicPlusProfile {
-  rating: number | null;
-  dungeons: DomainDungeonProgress[];
-}
 
 /**
  * `season` is null when the character has no Mythic+ runs at all this
