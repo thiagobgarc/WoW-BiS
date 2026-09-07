@@ -50,3 +50,18 @@ export const BisQuerySchema = z
     message: 'class and spec must be given together',
   });
 export type BisQuery = z.infer<typeof BisQuerySchema>;
+
+/**
+ * Every POST to /v1 must set this content-type, empty body or not.
+ *
+ * Astro's CSRF protection (`security.checkOrigin`, on by default) rejects
+ * on-demand POST/PUT/PATCH/DELETE requests whose content-type is
+ * form-shaped — or missing entirely — unless an `Origin` header matches the
+ * site. A native client sends no Origin, so without this header the refresh
+ * endpoint answers 403 before the route ever runs. Verified against the dev
+ * server, not inferred: a bare `POST /v1/character/.../refresh` is a 403,
+ * the same request with this header is a 200.
+ *
+ * @mythos/api-client sets it. Anything else calling /v1 has to as well.
+ */
+export const JSON_CONTENT_TYPE = 'application/json';

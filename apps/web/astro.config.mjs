@@ -35,7 +35,7 @@ export default defineConfig({
     // through the same transform pipeline as this app's own source instead
     // of trying to load it directly from node_modules.
     ssr: {
-      noExternal: ['@mythos/core']
+      noExternal: ['@mythos/core', '@mythos/api-contract']
     }
   },
 
