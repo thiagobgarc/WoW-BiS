@@ -1,27 +1,44 @@
 # Mythos Mobile — Architecture
 
-Status: Phase 2 complete (2026-09-06) — the monorepo move and `packages/core`
-extraction described below are implemented, not just planned; see the git
-history for the exact commits. Verified against the `worldofwarcraft` repo
-as of 2026-09-03 (Astro 7.2, React 19.2, Zod 4.4, `astro check`/`tsc` clean
-on that date) and re-verified against the actual Phase 2 implementation on
-2026-09-06.
+Status: Phase 3 complete (2026-09-07) — the monorepo move, `packages/core`,
+`packages/api-contract`, `packages/api-client` and the `/api/v1` routes
+described below are implemented, not just planned; see the git history for
+the exact commits. Verified against the `worldofwarcraft` repo as of
+2026-09-03 (Astro 7.2, React 19.2, Zod 4.4, `astro check`/`tsc` clean on
+that date) and re-verified against each phase's actual implementation.
 
-**Phase 2 scope note:** Section 1's table below describes the full target
-end state. What actually moved into `packages/core` in Phase 2: `bis/`
-(types, `compareGear`, `deriveActionGroups`), `talents/` (types,
-`diffTalents`), `realm/` (`realmSlug`), `utils/` (`classColors`,
-`itemQuality`, `format`, `sourceLabel`), and the minimal `character`/
-`talents` types those pure functions needed (`EquipmentBySlot`,
-`EquipmentSlot`, `DomainItem`, `TalentSelection`, `DomainCharacter`,
-`SecondaryStats`) — extracted out of `domain.ts` type-only, mappers left in
-place. **Deferred to Phase 3**, when `packages/api-contract` needs them
-anyway to define `/v1` response schemas: `meta/types.ts`, the season config
-*type* (Section 5), and the talent-tree/progression structural types
-(`DomainTalentTree`, `DomainRaidProgress`, `DomainMythicPlusProfile`, etc.).
-`packages/data` (the seed JSON) also stays inside `apps/web/data` until
-Phase 3 needs to serve it over `/v1/bis` — it isn't needed by anything
-mobile-facing before then.
+**Scope note — what has and hasn't moved.** Section 1's table describes the
+full target end state. Phase 2 moved `bis/` (types, `compareGear`,
+`deriveActionGroups`), `talents/` (types, `diffTalents`), `realm/`
+(`realmSlug`), `utils/` (`classColors`, `itemQuality`, `format`,
+`sourceLabel`), and the minimal `character` types those pure functions
+needed. Phase 3 moved the rest of what crosses the API boundary:
+`meta/types.ts`, the talent-tree structural types (`DomainTalentTree` and
+friends) and a new `progression/` module (`DomainRaidProgress`,
+`DomainMythicPlusProfile`, `RAID_DIFFICULTIES`). All of it is type-only —
+the mappers that produce these shapes from Blizzard's raw responses stay in
+`apps/web`, and `domain.ts` re-exports everything so no call site changed.
+
+Phase 3 also converted these shapes to Zod-first (schema + `z.infer`)
+rather than hand-written interfaces. They *are* the `/v1` payload shapes, so
+`packages/api-contract` composes its response schemas from them instead of
+maintaining a parallel copy that could silently drift.
+
+Two things this note previously listed as Phase 3 work are deliberately
+**not** done, because implementing Phase 3 showed neither has a consumer:
+
+- **The season config type.** `/v1/meta` exposes three scalar season fields
+  (`id`, `displayName`, `raidName`), not the config object, and
+  `deriveActionGroups` already takes the narrow `SeasonSlots` interface
+  `packages/core` defines itself. Moving the full `SeasonConfig` type would
+  put season structure into core with nothing importing it.
+- **`packages/data`.** The seed JSON stays at `apps/web/data`. `/v1/bis` and
+  `/v1/meta` serve it over HTTP from `apps/web`, which reads it in-process;
+  no other package needs the files, and mobile is forbidden from bundling
+  season data at all (Section 5). Promoting it to a package would mean
+  reworking the `process.cwd()`-relative loaders for no consumer.
+
+Revisit either if something actually needs them.
 
 ## 0. Corrections to the brief
 
@@ -65,10 +82,10 @@ trip" API instinct — held up against the code and is carried forward below.
 |---|---|---|
 | `src/lib/bis/compareGear.ts`, `deriveActionGroups.ts`, `types.ts` | Yes | Zero I/O, confirmed no imports outside `@/lib/blizzard/domain` (types only) and `./types`. |
 | `src/lib/talents/diffTalents.ts`, `types.ts` | Yes | Pure. `getRecommendedBuild.ts`/`loadRecommended.ts` are **not** pure (`fs` reads via `loadSeedFile`-style loaders) — those stay server-side; only the Zod schemas in `types.ts` move. |
-| `src/lib/blizzard/domain.ts` | **Types only** — mappers stay server-side | Corrected from an earlier draft of this document, which said the mapper functions (`mapProfile`, `mapEquipment`, `mapStatistics`, `mapTalentTree`, `mapTalentSelections`, `mapRaidProgress`, `mapMythicPlusProfile`) would move too. They can't: every one of them takes an already-parsed Blizzard shape (`schemas.ts` types) as input, and `schemas.ts` is large, Blizzard-specific, and explicitly server-only per this same table. Only the *output* types (`EquipmentSlot`, `DomainItem`, `EquipmentBySlot`, `TalentSelection`, `DomainCharacter`, `SecondaryStats`) moved into `packages/core` (Phase 2) — `domain.ts` re-exports them so its existing consumers are unaffected, and keeps the mappers. Mobile never sees a raw Blizzard shape; it only ever sees these already-mapped types, which is what the `/v1` API returns. This is what the original build prompt said before Phase 1 introduced the error. `DomainTalentTree`/`DomainRaidProgress`/`DomainMythicPlusProfile` and friends (the `progression` and talent-tree-structure types) are deferred to Phase 3, same reasoning as `meta/types.ts` below. |
-| `src/lib/season/seasonConfig.ts` | Yes, as data + type, **not** as a hardcoded mobile-bundled constant | See Section 5's "no hardcoded season" rule — the file's *shape* is shared (so `packages/core` can type against it), but the mobile app fetches season data from `/v1/meta` / `/v1/bis/:season`, not from a compiled-in copy. |
+| `src/lib/blizzard/domain.ts` | **Types only** — mappers stay server-side | Corrected from an earlier draft of this document, which said the mapper functions (`mapProfile`, `mapEquipment`, `mapStatistics`, `mapTalentTree`, `mapTalentSelections`, `mapRaidProgress`, `mapMythicPlusProfile`) would move too. They can't: every one of them takes an already-parsed Blizzard shape (`schemas.ts` types) as input, and `schemas.ts` is large, Blizzard-specific, and explicitly server-only per this same table. Only the *output* types move — `EquipmentSlot`, `DomainItem`, `EquipmentBySlot`, `TalentSelection`, `DomainCharacter`, `SecondaryStats` in Phase 2, then `DomainTalentTree`/`DomainRaidProgress`/`DomainMythicPlusProfile` and friends in Phase 3 (into `core/talents` and the new `core/progression`). `domain.ts` re-exports all of them, so its existing consumers are unaffected, and it keeps the mappers. Mobile never sees a raw Blizzard shape; it only ever sees these already-mapped types, which is what the `/v1` API returns. This is what the original build prompt said before Phase 1 introduced the error. |
+| `src/lib/season/seasonConfig.ts` | **Values via `/v1/meta`; the type stays in `apps/web`** | See Section 5's "no hardcoded season" rule — the mobile app fetches season data from `/v1/meta` / `/v1/bis/:season`, never from a compiled-in copy. An earlier draft also had the *type* moving so `packages/core` could type against it; Phase 3 found nothing that needs it (`deriveActionGroups` defines its own narrow `SeasonSlots`, and `/v1/meta` exposes three scalar fields, not the config object), so it stays put. See Section 0. |
 | `src/lib/realmSlug.ts` | Yes | 19 unit tests move with it. |
-| `src/lib/meta/types.ts` (`MetaTierListSchema` etc.) | Yes | Pure Zod schema, same pattern as `bis/types.ts`. |
+| `src/lib/meta/types.ts` (`MetaTierListSchema` etc.) | Yes (Phase 3) | Pure Zod schema, same pattern as `bis/types.ts`. `MetaTierSchema` is part of the `/v1/character/...` response, which is what finally pulled it across; `apps/web` keeps a re-export shim at `@/lib/meta/types` so its nine consumers were untouched. |
 | `src/lib/utils/classColors.ts`, `itemQuality.ts`, `format.ts` (`timeAgo`), `sourceLabel.ts` | Yes | Pure formatters/lookup tables the original brief already called out. |
 | `src/lib/blizzard/client.ts`, `auth.ts`, `schemas.ts`, `getFullCharacter.ts`, `getCharacterTalents.ts`, `getCharacterProgression.ts`, `getSpecTalentTree.ts`, `mock.ts`, `mockRealms.ts` | **No — server only** | OAuth, raw Blizzard schemas, and every "compose Blizzard calls" function stay in `apps/web`. These become the implementation behind `/v1` routes, not code mobile imports. |
 | `src/lib/cache/cache.ts`, `src/lib/db/*`, `src/lib/http/rateLimit.ts`, `errorResponse.ts` | **No — server only** | Mobile gets its own device-side persistence (Section 6.3); the rate limiter and error mapper are server infrastructure the `/v1` routes call into, same as today's `/api/*` routes do. |
@@ -178,13 +195,14 @@ original brief, which this document affirms without change.
 
 ## 6. Target repository shape
 
-As of Phase 2, the repo root is still named `worldofwarcraft` on disk (not
+As of Phase 3, the repo root is still named `worldofwarcraft` on disk (not
 renamed to `mythos/`) — the rename is a cosmetic, fully-reversible local
 folder rename with no functional dependency, deliberately deferred so it
 doesn't get tangled with the Vercel root-directory setting change the move
-already requires. `apps/mobile` doesn't exist yet (Phase 4); `data/` lives
-at `apps/web/data` (Phase 2 pure-move destination), not yet promoted to
-`packages/data` (Phase 3, see the scope note in Section 0).
+already requires. `apps/mobile` doesn't exist yet (Phase 4). `packages/core`,
+`packages/api-contract` and `packages/api-client` all exist; `packages/data`
+does not, and `data/` stays at `apps/web/data` — see the scope note in
+Section 0 for why.
 
 ```
 mythos/
@@ -212,6 +230,10 @@ mythos/
 **Dependency rules, enforced not merely stated:**
 
 - `packages/core` imports nothing but `zod`.
+- `packages/api-contract` imports `zod` + `core` only. It composes its
+  response schemas from `core`'s schemas rather than restating the shapes,
+  so a domain type change is a compile error in the contract rather than a
+  runtime surprise on a phone.
 - `packages/api-client` imports `core` + `api-contract` only; takes `fetch`
   and `baseUrl` by injection.
 - `apps/*` may import `packages/*`; `packages/*` never imports `apps/*`.
@@ -220,10 +242,19 @@ mythos/
   candidate for bundling into a device binary, and `client.ts`/`auth.ts`
   process Blizzard credentials.
 
-Enforce with `eslint-plugin-import`'s `import/no-restricted-paths`, per-package
-`tsconfig` project references, and a CI check that fails if `packages/core`'s
-resolved module graph contains `node:*`, `react-native`, `expo-*`, or
-anything under `apps/web/src/lib/blizzard/{client,auth,schemas}.ts`.
+Enforced today by a plain Vitest test per package (`src/__tests__/boundaries.test.ts`
+in `core`, `api-contract` and `api-client`) that scans every import/export
+statement and fails on anything outside that package's allowlist. This is
+deliberately not `eslint-plugin-import` + `import/no-restricted-paths` as an
+earlier draft of this document proposed: these three allowlists are the only
+boundaries the repo currently needs enforced, the check is the same `bun run
+test` everything else already runs, and it costs no new dependency or lint
+config. Swap in a fuller import-lint setup if `apps/mobile` turns out to need
+per-feature rules of its own.
+
+The one rule the tests can't see is the last bullet, since it's about what
+*didn't* move; it's enforced by the first three, which fail the moment a
+package reaches for `node:*`, `react`, `expo-*`, or an `@/` path.
 
 ## 7. Mobile stack
 

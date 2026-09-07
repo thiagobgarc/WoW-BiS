@@ -5,6 +5,35 @@ ships to a store, old installs call `/v1` for years, so it's additive-only
 after the first release. Breaking changes get `/v2` alongside it, never a
 mutation of `/v1`.
 
+Status: implemented in Phase 3 (2026-09-07). The five v1 endpoints are live
+in `apps/web/src/pages/api/v1/`, their schemas are in
+`packages/api-contract`, and `packages/api-client` is the typed client over
+them. The two `meta/*` endpoints below are still 1.1 — their schemas exist,
+their routes do not.
+
+**Corrections this document has absorbed from implementing it.** The prose
+below is the design; where the implementation disagreed with it, the
+implementation is right and the sections are updated in place. Three worth
+calling out because they change what a client has to do:
+
+1. **The refresh cooldown returns the standard error envelope**, not the
+   bare `{ error: 'rate_limited', message, retryAfterSeconds }` object the
+   original draft unioned into the success schema. Two incompatible error
+   shapes depending on which route you called would have meant two client
+   parsers. It's now `ApiErrorEnvelopeSchema` plus a `retryAfterSeconds`
+   field (`RateLimitedEnvelopeSchema`), so one parser handles every failure.
+2. **`GET /v1/bis/:season` has one response shape, not two.** With
+   `class`+`spec` it returns the same object with `specs` filtered to that
+   one entry, so a client has one parser and one cache-entry format either
+   way. `version` is a content hash over the whole season in both modes,
+   which keeps a client's ETag valid across them.
+3. **Every POST to `/v1` must send `Content-Type: application/json`**, even
+   with an empty body. Astro's CSRF protection (`security.checkOrigin`, on
+   by default) rejects a form-shaped or content-type-less POST that has no
+   matching `Origin` header, and a native client sends no `Origin`. Without
+   the header, `POST .../refresh` answers 403 before the route runs. Found
+   by smoke-testing the running server; `@mythos/api-client` sets it.
+
 ## Base
 
 - Base URL: `https://<web-app-domain>/api/v1` — same Vercel project as
@@ -27,8 +56,11 @@ mutation of `/v1`.
   no new dependency), keyed `v1:<route>:<ip>`. Suggested limits below per
   route, matching the order of magnitude already used on `/api/character`
   (20/60s) and `/api/character/refresh` (10/60s).
-- CORS: browser origins restricted to the web app's own domain. Native
-  clients aren't subject to CORS, so this costs mobile nothing.
+- CORS: no `Access-Control-Allow-Origin` header is sent, which is the
+  restrictive default — a browser on another origin can issue the request
+  but cannot read the response. Nothing was added to achieve this; it is
+  called out so it is not mistaken for an oversight. Native clients aren't
+  subject to CORS, so this costs mobile nothing.
 
 ## Error envelope
 
@@ -61,8 +93,17 @@ export const ApiErrorEnvelopeSchema = z.object({
 ```
 
 `retryable: true` for `blizzard_unavailable`/`rate_limited`; `false` for
-everything else. `code` is what the client branches on for the per-error-code
-screens in `mobile-ux.md`; `message` is human-facing and may change freely.
+everything else, from a single `RETRYABLE_ERROR_CODES` table the server
+stamps from and the client reads off the wire, so the two can't disagree.
+`code` is what the client branches on for the per-error-code screens in
+`mobile-ux.md`; `message` is human-facing and may change freely, so a client
+must never match on it.
+
+`@mythos/api-client` adds two codes of its own on top of these —
+`'network'` (the request never reached the server) and `'invalid_response'`
+(the body doesn't match this contract). Neither can appear in a server
+payload, so they extend the client's error type rather than this enum; app
+code catching a `MythosApiError` sees all eleven in one union.
 
 ## Endpoints
 
@@ -147,36 +188,58 @@ const CharacterResponseSchema = z.object({
 ### `POST /v1/character/:region/:realm/:name/refresh`
 
 Cache-bypassing refetch, wrapping `refreshCharacter` from `client.ts`. Keeps
-the existing 60s-per-character cooldown (currently enforced by
-`refreshCharacter` itself, not the route's own rate limiter — verify this at
-implementation time and don't stack two independent cooldowns). Returns `429`
-with `retryAfterSeconds` on cooldown, `200` with the same shape as
-`GET /v1/character/...` on success. Rate limit: 10/60s per IP on top of the
-per-character cooldown (matches today's `/api/character/refresh`).
+the existing 60s-per-character cooldown, which `refreshCharacter` enforces
+itself — the route's own 10/60s IP limiter is a separate concern (it stops a
+client hammering the endpoint across many characters) and the two are
+deliberately not stacked into one. On cooldown the route returns `429` with
+`retryAfterSeconds`; on success it returns `200` with the same payload as
+`GET /v1/character/...`, since a client that just invalidated its cache
+needs the new snapshot and shouldn't pay a second round trip for it.
+Rate limit: 10/60s per IP on top of the per-character cooldown.
+
+Every POST here must set `Content-Type: application/json` even though it has
+no body — see the correction note at the top of this document.
 
 ```ts
-const RefreshResponseSchema = z.union([
-  CharacterResponseSchema,
-  z.object({ error: z.literal('rate_limited'), message: z.string(), retryAfterSeconds: z.number() }),
-]);
+// 200
+const RefreshResponseSchema = CharacterResponseSchema;
+
+// 429 — the standard envelope, plus how long to wait
+const RateLimitedEnvelopeSchema = z.object({
+  error: z.object({
+    code: z.literal('rate_limited'),
+    message: z.string(),
+    retryable: z.literal(true),
+  }),
+  retryAfterSeconds: z.number(),
+});
+```
 ```
 
 ### `GET /v1/bis/:season?class=&spec=`
 
-Full BiS seed data, wrapping `getBisList`. Two modes:
-- No `class`/`spec` query params → the full season index (every seeded
-  spec's entries), for offline prefetch — this is what the original brief's
-  "bulk prefetch" endpoint meant. Include an `ETag`/`version` so the client
-  can conditionally skip re-downloading.
-- With `class`+`spec` → a single spec's entries, matching what the character
-  screen actually needs (already included inline in
-  `GET /v1/character/...`, so this shape mainly exists for the prefetch/cache-
-  warm case and for a future "browse all specs" screen). Rate limit: 60/60s.
+Full BiS seed data, wrapping the same Postgres-or-seed-JSON path
+`getBisList` uses (`getBisSeason`), so `/v1` and the web app can't disagree
+about what's seeded. Two modes, **one response shape**:
+- No `class`/`spec` query params → every seeded spec's entries, for offline
+  prefetch — this is what the original brief's "bulk prefetch" endpoint
+  meant.
+- With `class`+`spec` → the same object with `specs` filtered to that one
+  spec (empty if it isn't seeded). Mainly for the prefetch/cache-warm case
+  and a future "browse all specs" screen; the character screen already gets
+  its own entries inline from `GET /v1/character/...`.
+
+`version` is a short content hash over the season's specs, sorted by
+class/spec so readdir and row order can't churn it. It's served as an
+`ETag` in both modes and the route answers `304` to a matching
+`If-None-Match`, so a client prefetching on every launch pays one
+conditional GET rather than re-downloading unchanged seed data.
+Rate limit: 60/60s.
 
 ```ts
 const BisSeasonResponseSchema = z.object({
   season: z.string(),
-  version: z.string(),   // e.g. a content hash or ISO date of last edit — for ETag/cache-bust
+  version: z.string(),   // sha256 of the sorted specs, truncated — served as the ETag
   specs: z.array(z.object({
     class: z.string(),
     spec: z.string(),
@@ -232,15 +295,15 @@ const SpecBuildResponseSchema = z.object({
 
 ## Summary table
 
-| Method | Path | Wraps | Rate limit | Character required? | Ships |
-|---|---|---|---|---|---|
-| GET | `/v1/meta` | new composition | 60/60s | No | v1 |
-| GET | `/v1/realms` | `api/realms.ts` | 60/60s | No | v1 |
-| GET | `/v1/character/:region/:realm/:name` | the character Astro page's composition | 20/60s | Yes | v1 |
-| POST | `/v1/character/:region/:realm/:name/refresh` | `refreshCharacter` | 10/60s + per-char cooldown | Yes | v1 |
-| GET | `/v1/bis/:season` | `getBisList` | 60/60s | No | v1 |
-| GET | `/v1/meta/tier-list/:season` | `getMythicPlusTierList`/`getRaidTierList` | 60/60s | No | **1.1** |
-| GET | `/v1/meta/spec-build/:class/:spec` | the meta spec-build Astro page's composition | 30/60s | No | **1.1** |
+| Method | Path | Wraps | Rate limit | Character required? | Ships | Status |
+|---|---|---|---|---|---|---|
+| GET | `/v1/meta` | new composition | 60/60s | No | v1 | Live |
+| GET | `/v1/realms` | `api/realms.ts` | 60/60s | No | v1 | Live |
+| GET | `/v1/character/:region/:realm/:name` | the character Astro page's composition | 20/60s | Yes | v1 | Live |
+| POST | `/v1/character/:region/:realm/:name/refresh` | `refreshCharacter` | 10/60s + per-char cooldown | Yes | v1 | Live |
+| GET | `/v1/bis/:season` | `getBisSeason` | 60/60s | No | v1 | Live |
+| GET | `/v1/meta/tier-list/:season` | `getMythicPlusTierList`/`getRaidTierList` | 60/60s | No | **1.1** | Schema only |
+| GET | `/v1/meta/spec-build/:class/:spec` | the meta spec-build Astro page's composition | 30/60s | No | **1.1** | Schema only |
 
 Seven endpoints, not five — the two `meta/*` additions exist because the
 `meta` bounded context (Section 3 of `architecture.md`) is a real,
