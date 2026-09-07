@@ -12,8 +12,10 @@ Per `architecture.md` Section 8.10, **v1 ships Gear + Progression only** —
 `meta` and the Talents tab are deferred to 1.1. Two navigation shapes below:
 what actually ships in v1, and the 1.1 shape it grows into. Building the tab
 bar with a Meta slot from day one (even disabled/hidden) avoids a nav
-restructure at 1.1 — worth deciding at Phase 4 scaffolding time, not
-required by this doc.
+restructure at 1.1. **Phase 4 decided this: the slot exists and is hidden** —
+the route file `app/(tabs)/meta.tsx` and its `Tabs.Screen` entry are both
+there, with `href: null` while `FEATURES.meta` is false
+(`architecture.md` Section 9.4).
 
 **v1 — bottom tabs, two primary destinations plus settings:**
 

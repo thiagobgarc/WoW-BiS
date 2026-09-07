@@ -1,9 +1,9 @@
 # Mythos Mobile — Architecture
 
-Status: Phase 3 complete (2026-09-07) — the monorepo move, `packages/core`,
-`packages/api-contract`, `packages/api-client` and the `/api/v1` routes
-described below are implemented, not just planned; see the git history for
-the exact commits. Verified against the `worldofwarcraft` repo as of
+Status: Phase 4 complete (2026-09-07) — the monorepo move, `packages/core`,
+`packages/api-contract`, `packages/api-client`, the `/api/v1` routes and the
+`apps/mobile` Expo scaffold described below are implemented, not just
+planned; see the git history for the exact commits. Verified against the `worldofwarcraft` repo as of
 2026-09-03 (Astro 7.2, React 19.2, Zod 4.4, `astro check`/`tsc` clean on
 that date) and re-verified against each phase's actual implementation.
 
@@ -199,10 +199,17 @@ As of Phase 3, the repo root is still named `worldofwarcraft` on disk (not
 renamed to `mythos/`) — the rename is a cosmetic, fully-reversible local
 folder rename with no functional dependency, deliberately deferred so it
 doesn't get tangled with the Vercel root-directory setting change the move
-already requires. `apps/mobile` doesn't exist yet (Phase 4). `packages/core`,
-`packages/api-contract` and `packages/api-client` all exist; `packages/data`
-does not, and `data/` stays at `apps/web/data` — see the scope note in
-Section 0 for why.
+already requires. `apps/mobile` exists as of Phase 4, with the layout below
+plus two additions the scaffold needed: `src/testing/` (the provider wrapper
+screen tests need) and `src/features.ts` (the 1.1 feature flags).
+`packages/core`, `packages/api-contract` and `packages/api-client` all exist;
+`packages/data` does not, and `data/` stays at `apps/web/data` — see the
+scope note in Section 0 for why.
+
+One rule the scaffold added: **files under `app/` are one-line re-exports of
+a screen in `src/features/`**, never the screen itself. expo-router builds a
+`require.context` over `app/`, so a test file colocated with a route pulls
+the testing library into the shipped bundle — which is how this was found.
 
 ```
 mythos/
@@ -317,3 +324,56 @@ not open questions:
     exist in the domain model; `meta` and `talents` just have no mobile UI
     or `/v1` traffic until 1.1) and is reflected in `mobile-ux.md`'s
     navigation shape and `api-contract.md`'s v1/1.1 labeling per endpoint.
+
+## 9. What Phase 4 settled
+
+Section 7 chose the stack; scaffolding it forced decisions Section 7 could
+not have made in the abstract. Resolved versions live in
+`apps/mobile/README.md`, per Section 7's own instruction. The decisions:
+
+1. **Zustand was not installed.** Section 7 lists it "for `roster` only".
+   There is no roster yet, and the rule in that same row is "no global store
+   before there's global state". It arrives with Phase 5, not before.
+2. **NativeWind 4 + Tailwind v3 on mobile, Tailwind v4 on web.** NativeWind 4
+   peer-depends on Tailwind v3 through `react-native-css-interop`; NativeWind
+   5, which targets v4, was still preview. The apps share no stylesheet —
+   only the token values in `apps/mobile/src/theme/palette.json`, which a
+   test diffs against the web's `global.css` on every run, so "ported as
+   values" (Section 7) stays true rather than becoming "roughly the same".
+3. **The accent is a runtime CSS variable, not a compile-time token.** The
+   web re-themes per character by setting `--accent` inline in
+   `Layout.astro`. NativeWind's `vars()` is the same mechanism, so
+   `accentVars(className)` is spread onto a wrapping View and every
+   `accent-*` class below it resolves. `--accent-hover/-soft/-softer` are
+   derived from the class color rather than listed, since there is one pair
+   of literals on the web but thirteen class colors here.
+4. **The 1.1 Meta slot exists and is hidden.** `mobile-ux.md` left the *how*
+   to this phase. The route file and its tab entry both exist; the tab's
+   `href` is `null` while `FEATURES.meta` is false. 1.1 is a flag flip plus
+   the screen's content, never a navigation restructure — which is the change
+   that would ripple into deep links.
+5. **Bun's linker is `hoisted`** (`bunfig.toml`). Babel resolves presets and
+   plugins by name from the config file's directory; Bun's default isolated
+   layout hides them under `node_modules/.bun/<hash>/`, and both Metro and
+   jest-expo fail with "Cannot find module '@babel/plugin-transform-react-jsx'"
+   for a package that is installed. This is a repo-wide setting that exists
+   for `apps/mobile`; `apps/web` is indifferent to it.
+6. **React is pinned to one exact version repo-wide (19.2.3, Expo's).**
+   `apps/web` floated on `^19.2.8`, which put a second copy of React in the
+   tree that `expo-doctor` correctly flags: two Reacts is the "Invalid hook
+   call" failure mode, and the tree is what EAS builds from. Web now takes
+   React patches on the Expo SDK's cadence.
+7. **`packages/*` typecheck under `noUncheckedIndexedAccess`.** The mobile
+   app turned it on and immediately surfaced three unguarded array accesses
+   in `api-client`'s version comparison — a function whose job is deciding
+   whether to lock a user out of the app. The flag is now on in all three
+   packages so that class of bug fails in the package, not in the consumer.
+8. **Routes under `app/` are one-line re-exports.** See Section 6.
+
+Two exit criteria from the phase plan could not be met on this machine and
+are not blocked on code: an **iOS simulator** needs macOS, and a **dev EAS
+build on a real device** needs an Expo account (`eas init`) plus the
+developer-program enrolments in 8.1. What was verified instead: Metro
+bundles both platforms (`expo export --platform ios --platform android`),
+`expo-doctor` passes 21/21, and the app builds, installs and runs on an
+Android emulator.
