@@ -41,6 +41,17 @@ function stubFetch(handler: (url: string, init?: RequestInit) => Response | Prom
 }
 
 /**
+ * Indexed access under noUncheckedIndexedAccess: a missing call becomes a
+ * test failure that names what was expected, not an `undefined` that fails
+ * three assertions later.
+ */
+function callAt(calls: { url: string; init?: RequestInit }[], index: number) {
+  const call = calls[index];
+  if (!call) throw new Error(`Expected at least ${index + 1} fetch call(s), saw ${calls.length}.`);
+  return call;
+}
+
+/**
  * Asserts the call rejects and hands back the typed error. Catching inline
  * would widen the result to `Response | MythosApiError`, and a case that
  * silently resolved would pass every following expectation vacuously.
@@ -63,17 +74,17 @@ describe('request construction', () => {
     const { fetch, calls } = stubFetch(() => jsonResponse(META_BODY));
     await createMythosClient({ baseUrl: 'https://mythos.test/', fetch }).getMeta();
 
-    expect(calls[0].url).toBe('https://mythos.test/api/v1/meta');
+    expect(callAt(calls, 0).url).toBe('https://mythos.test/api/v1/meta');
   });
 
   it('sends the client header only when a client identity is configured', async () => {
     const anonymous = stubFetch(() => jsonResponse(META_BODY));
     await client(anonymous.fetch).getMeta();
-    expect((anonymous.calls[0].init?.headers as Record<string, string>)[CLIENT_HEADER]).toBeUndefined();
+    expect((callAt(anonymous.calls, 0).init?.headers as Record<string, string>)[CLIENT_HEADER]).toBeUndefined();
 
     const identified = stubFetch(() => jsonResponse(META_BODY));
     await client(identified.fetch, { client: { version: '1.2.0', platform: 'ios' } }).getMeta();
-    expect((identified.calls[0].init?.headers as Record<string, string>)[CLIENT_HEADER]).toBe('mobile/1.2.0 (ios)');
+    expect((callAt(identified.calls, 0).init?.headers as Record<string, string>)[CLIENT_HEADER]).toBe('mobile/1.2.0 (ios)');
   });
 
   it('percent-encodes character path segments', async () => {
@@ -85,15 +96,15 @@ describe('request construction', () => {
       client(fetch).getCharacter({ region: 'us', realm: "Aerie Peak", name: 'Ünicode' }),
     ).rejects.toThrow(MythosApiError);
 
-    expect(calls[0].url).toBe('https://mythos.test/api/v1/character/us/Aerie%20Peak/%C3%9Cnicode');
+    expect(callAt(calls, 0).url).toBe('https://mythos.test/api/v1/character/us/Aerie%20Peak/%C3%9Cnicode');
   });
 
   it('sends a JSON content-type on refresh so Astro CSRF does not reject it', async () => {
     const { fetch, calls } = stubFetch(() => jsonResponse({ ...META_BODY }, { status: 500 }));
     await expect(client(fetch).refreshCharacter({ region: 'us', realm: 'illidan', name: 'arthas' })).rejects.toThrow();
 
-    expect(calls[0].init?.method).toBe('POST');
-    expect((calls[0].init?.headers as Record<string, string>)['Content-Type']).toBe('application/json');
+    expect(callAt(calls, 0).init?.method).toBe('POST');
+    expect((callAt(calls, 0).init?.headers as Record<string, string>)['Content-Type']).toBe('application/json');
   });
 
   it('omits the class/spec filter unless both are given', async () => {
@@ -104,9 +115,9 @@ describe('request construction', () => {
     await api.getBisSeason('midnight-s2', { class: 'Mage' });
     await api.getBisSeason('midnight-s2', { class: 'Mage', spec: 'Fire' });
 
-    expect(calls[0].url).toBe('https://mythos.test/api/v1/bis/midnight-s2');
-    expect(calls[1].url).toBe('https://mythos.test/api/v1/bis/midnight-s2');
-    expect(calls[2].url).toBe('https://mythos.test/api/v1/bis/midnight-s2?class=Mage&spec=Fire');
+    expect(callAt(calls, 0).url).toBe('https://mythos.test/api/v1/bis/midnight-s2');
+    expect(callAt(calls, 1).url).toBe('https://mythos.test/api/v1/bis/midnight-s2');
+    expect(callAt(calls, 2).url).toBe('https://mythos.test/api/v1/bis/midnight-s2?class=Mage&spec=Fire');
   });
 });
 
@@ -115,7 +126,7 @@ describe('conditional GET on /v1/bis/:season', () => {
     const { fetch, calls } = stubFetch(() => jsonResponse(BIS_BODY));
     await client(fetch).getBisSeason('midnight-s2', { ifNoneMatch: 'abc123' });
 
-    expect((calls[0].init?.headers as Record<string, string>)['If-None-Match']).toBe('"abc123"');
+    expect((callAt(calls, 0).init?.headers as Record<string, string>)['If-None-Match']).toBe('"abc123"');
   });
 
   it('returns null on 304 rather than treating an empty body as a failure', async () => {
@@ -204,6 +215,6 @@ describe('response validation', () => {
     const meta = await client(fetch).getMeta();
 
     expect(meta.season.id).toBe('midnight-s2');
-    expect(meta.seededSpecs[0].armorType).toBe('cloth');
+    expect(meta.seededSpecs[0]?.armorType).toBe('cloth');
   });
 });
