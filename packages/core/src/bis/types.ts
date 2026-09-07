@@ -58,12 +58,19 @@ export const BisEntrySchema = z.object({
 });
 export type BisEntry = z.infer<typeof BisEntrySchema>;
 
+export const ArmorTypeSchema = z.enum(['cloth', 'leather', 'mail', 'plate']);
+export type ArmorType = z.infer<typeof ArmorTypeSchema>;
+
+/** Always all four secondaries, most valuable first. */
+export const StatPrioritySchema = z.array(z.enum(['haste', 'crit', 'versatility', 'mastery'])).length(4);
+export type StatPriority = z.infer<typeof StatPrioritySchema>;
+
 export const BisListSchema = z.object({
   season: z.string(),
   class: z.string(),
   spec: z.string(),
-  armorType: z.enum(['cloth', 'leather', 'mail', 'plate']),
-  statPriority: z.array(z.enum(['haste', 'crit', 'versatility', 'mastery'])).length(4),
+  armorType: ArmorTypeSchema,
+  statPriority: StatPrioritySchema,
   entries: z.array(BisEntrySchema),
 });
 export type BisList = z.infer<typeof BisListSchema>;
