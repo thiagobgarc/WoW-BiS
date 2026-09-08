@@ -9,16 +9,24 @@ import { Linking, Pressable, ScrollView, Text, View } from 'react-native';
 import { useQueryClient } from '@tanstack/react-query';
 
 import { Screen } from '@/components/Screen';
+import { useForgetAllCharacters } from '@/features/roster/store';
 import { appVersion } from '@/lib/api';
-import { queryStorage, recentStorage } from '@/lib/storage';
+import { queryStorage } from '@/lib/storage';
 
 export default function SettingsScreen() {
   const queryClient = useQueryClient();
+  const forgetAll = useForgetAllCharacters();
 
+  /**
+   * Clearing recents goes through the roster store, not recentStorage
+   * directly: wiping MMKV underneath a live Zustand store leaves the list
+   * still in memory, and the next visit persists it straight back. The store
+   * owns the key; this screen asks it to empty.
+   */
   function clearCaches() {
     queryClient.clear();
     queryStorage.clearAll();
-    recentStorage.clearAll();
+    forgetAll();
   }
 
   return (

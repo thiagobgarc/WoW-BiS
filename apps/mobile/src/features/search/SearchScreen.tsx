@@ -1,82 +1,129 @@
 /**
- * Search — the app's home, and for now the scaffold's proof of life.
+ * Search — the app's home, and where a cold launch lands.
  *
- * The real search UI is Phase 5. What this screen does today is deliberately
- * the most useful stub available: it runs one real request through the whole
- * shared stack — @mythos/api-client over RN's fetch, against a live /v1/meta,
- * validated by @mythos/api-contract, cached and persisted by TanStack Query,
- * styled by NativeWind. If the app boots and this screen shows a season name,
- * every seam introduced in Phases 2-4 is working on the device.
+ * mobile-ux.md maps the web's `SearchForm` + `RealmCombobox` here: a
+ * full-screen form rather than an inline one, region as a segmented control,
+ * and the recent-character list promoted from a row of chips to the screen's
+ * second half. It is the primary destination, so it gets the whole screen.
+ *
+ * **Everything on this screen works with no server.** That is Phase 5's exit
+ * criterion, and it drove three choices: the recents come from MMKV rather
+ * than the network, the search button is never gated on autocomplete having
+ * loaded, and the season line simply disappears when /v1/meta is unreachable
+ * instead of becoming an error. The only degraded thing offline is realm
+ * autocomplete, which says so in one line of hint text and blocks nothing.
  */
-import { ActivityIndicator, ScrollView, Text, View } from 'react-native';
+import { useState } from 'react';
+import { KeyboardAvoidingView, Platform, ScrollView, Text, View } from 'react-native';
+import { useRouter } from 'expo-router';
 import { useQuery } from '@tanstack/react-query';
-import { MythosApiError } from '@mythos/api-client';
 
 import { Screen } from '@/components/Screen';
-import { api, apiBaseUrl, appVersion } from '@/lib/api';
+import { Button } from '@/components/Button';
+import { TextField } from '@/components/TextField';
+import { api, apiBaseUrl } from '@/lib/api';
+import { matchRecent, type RecentCharacter } from '@/features/roster/model/recentCharacters';
+import { useRecentCharacters, useRegion, useSetRegion } from '@/features/roster/store';
+import { RealmField } from './components/RealmField';
+import { RecentCharacterList } from './components/RecentCharacterList';
+import { RegionPicker } from './components/RegionPicker';
+import { canSearch, characterRoute } from './model/searchForm';
 
 export default function SearchScreen() {
+  const router = useRouter();
+
+  const [name, setName] = useState('');
+  const [realm, setRealm] = useState('');
+
+  // Region and the roster live in the store, not in useState: the picker's
+  // choice has to survive this screen unmounting when a character is pushed.
+  const region = useRegion();
+  const setRegion = useSetRegion();
+  const recent = useRecentCharacters();
+
+  /**
+   * The season the BiS data describes. Purely informational — the screen is
+   * fully usable while this is pending or failed, so it has no loading or
+   * error state of its own, it is simply absent until it resolves.
+   */
   const meta = useQuery({
     queryKey: ['meta'],
     queryFn: ({ signal }) => api.getMeta(signal),
   });
 
+  const matches = matchRecent(recent, name);
+  const submittable = canSearch(name, realm);
+
+  function search() {
+    if (!submittable) return;
+    router.push(characterRoute(region, realm, name));
+  }
+
+  function openRecent(character: RecentCharacter) {
+    router.push(characterRoute(character.region, character.realmSlug, character.name));
+  }
+
   return (
     <Screen edges={{ bottom: false }}>
-      <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <Text className="mt-4 text-3xl font-bold text-text">Mythos</Text>
-        <Text className="mt-1 text-base text-text-muted">
-          Search is Phase 5. This screen currently verifies the API connection.
-        </Text>
-
-        <View className="mt-6 rounded-xl border border-border bg-panel p-4">
-          <Text className="text-xs uppercase tracking-widest text-text-faint">API</Text>
-          <Text className="mt-1 text-sm text-text-dim">{apiBaseUrl}</Text>
-
-          {meta.isPending ? (
-            <View className="mt-4 flex-row items-center gap-2">
-              <ActivityIndicator />
-              <Text className="text-sm text-text-muted">Contacting /v1/meta…</Text>
-            </View>
-          ) : null}
-
-          {meta.isError ? <ApiFailure error={meta.error} /> : null}
-
+      <KeyboardAvoidingView
+        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+        className="flex-1"
+      >
+        <ScrollView
+          contentInsetAdjustmentBehavior="automatic"
+          // Without this, the first tap on a realm suggestion only dismisses
+          // the keyboard and the second one selects — the classic
+          // autocomplete-inside-a-ScrollView bug.
+          keyboardShouldPersistTaps="handled"
+          keyboardDismissMode="on-drag"
+        >
+          <Text className="mt-4 text-3xl font-bold text-text">Mythos</Text>
           {meta.data ? (
-            <View className="mt-4">
-              <Text className="text-lg font-semibold text-text">{meta.data.season.displayName}</Text>
-              <Text className="mt-1 text-sm text-text-muted">{meta.data.season.raidName}</Text>
-              <Text className="mt-3 text-sm text-severity-bis">
-                {meta.data.seededSpecs.length} seeded spec
-                {meta.data.seededSpecs.length === 1 ? '' : 's'}
-              </Text>
-              {meta.data.notice ? (
-                <Text className="mt-3 text-sm text-severity-close">{meta.data.notice}</Text>
-              ) : null}
-            </View>
-          ) : null}
-        </View>
+            <Text className="mt-1 text-sm text-text-muted">
+              {meta.data.season.displayName} · {meta.data.season.raidName}
+            </Text>
+          ) : (
+            <Text className="mt-1 text-sm text-text-muted">
+              Best-in-slot gear planning for World of Warcraft.
+            </Text>
+          )}
 
-        <Text className="mt-6 text-xs text-text-faint">Mythos {appVersion}</Text>
-      </ScrollView>
+          <View className="mt-6 gap-4">
+            <TextField
+              label="Character"
+              placeholder="Character name"
+              value={name}
+              onChangeText={setName}
+              autoCapitalize="words"
+              autoCorrect={false}
+              returnKeyType="next"
+            />
+            <RegionPicker value={region} onChange={setRegion} />
+            <RealmField
+              region={region}
+              value={realm}
+              onChange={setRealm}
+              onSubmitEditing={search}
+            />
+            <Button label="Search" onPress={search} disabled={!submittable} />
+          </View>
+
+          <View className="mt-8 mb-6">
+            <Text className="text-xs font-semibold uppercase tracking-widest text-text-faint">
+              Recently viewed
+            </Text>
+            <RecentCharacterList
+              characters={matches}
+              onSelect={openRecent}
+              filtered={recent.length > 0 && matches.length === 0}
+            />
+          </View>
+
+          {/* Which host a build resolved to is the single most useful thing
+              to see when a dev build can't reach the API. Never shipped. */}
+          {__DEV__ ? <Text className="mb-4 text-xs text-text-faint">{apiBaseUrl}</Text> : null}
+        </ScrollView>
+      </KeyboardAvoidingView>
     </Screen>
-  );
-}
-
-/**
- * Per-code error copy is a v1 requirement (mobile-ux.md's ErrorState row),
- * not a nicety — "something went wrong" is indistinguishable from a private
- * profile, and the two need different actions from the user. This is the
- * minimal version of that; the full screen set lands with the real screens.
- */
-function ApiFailure({ error }: { error: Error }) {
-  const code = error instanceof MythosApiError ? error.code : 'unknown';
-
-  return (
-    <View className="mt-4">
-      <Text className="text-sm font-semibold text-severity-gap">Couldn't reach the API</Text>
-      <Text className="mt-1 text-sm text-text-muted">{error.message}</Text>
-      <Text className="mt-2 text-xs text-text-faint">code: {code}</Text>
-    </View>
   );
 }

@@ -16,6 +16,7 @@ import { MythosApiError } from '@mythos/api-client';
 import { RegionSchema } from '@mythos/api-contract';
 
 import { Screen } from '@/components/Screen';
+import { useRememberVisit } from '@/features/roster/useRememberVisit';
 import { api } from '@/lib/api';
 import { accentVars, colors } from '@/theme';
 
@@ -42,6 +43,10 @@ export default function CharacterScreen() {
   });
 
   const profile = character.data?.character;
+
+  // The roster is written here, not at search time, so deep links count and
+  // so the stored name is Blizzard's spelling — see useRememberVisit.
+  useRememberVisit(profile);
 
   return (
     // Re-themes the whole subtree to the character's class color, exactly as

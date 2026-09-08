@@ -1,9 +1,9 @@
 # Mythos Mobile — Architecture
 
-Status: Phase 4 complete (2026-09-07) — the monorepo move, `packages/core`,
-`packages/api-contract`, `packages/api-client`, the `/api/v1` routes and the
-`apps/mobile` Expo scaffold described below are implemented, not just
-planned; see the git history for the exact commits. Verified against the `worldofwarcraft` repo as of
+Status: Phase 5 complete (2026-09-07) — the monorepo move, `packages/core`,
+`packages/api-contract`, `packages/api-client`, the `/api/v1` routes, the
+`apps/mobile` Expo scaffold and the search + roster screens described below
+are implemented, not just planned; see the git history for the exact commits. Verified against the `worldofwarcraft` repo as of
 2026-09-03 (Astro 7.2, React 19.2, Zod 4.4, `astro check`/`tsc` clean on
 that date) and re-verified against each phase's actual implementation.
 
@@ -334,6 +334,7 @@ not have made in the abstract. Resolved versions live in
 1. **Zustand was not installed.** Section 7 lists it "for `roster` only".
    There is no roster yet, and the rule in that same row is "no global store
    before there's global state". It arrives with Phase 5, not before.
+   *(Superseded by Phase 5, which installed it — see Section 10.1.)*
 2. **NativeWind 4 + Tailwind v3 on mobile, Tailwind v4 on web.** NativeWind 4
    peer-depends on Tailwind v3 through `react-native-css-interop`; NativeWind
    5, which targets v4, was still preview. The apps share no stylesheet —
@@ -377,3 +378,90 @@ developer-program enrolments in 8.1. What was verified instead: Metro
 bundles both platforms (`expo export --platform ios --platform android`),
 `expo-doctor` passes 21/21, and the app builds, installs and runs on an
 Android emulator.
+
+## 10. What Phase 5 settled
+
+Search and the `roster` context. The phase's exit criterion — "searchable and
+navigable in mock mode with no server" — is the reason most of these went the
+way they did: on this screen the offline path is the design, not a fallback.
+
+1. **Zustand is installed, and only the `roster` context uses it.** Section
+   9.1 held it back until there was global state; there is now. The store
+   holds two slices, both genuinely cross-screen: the recent list (written on
+   the character screen, read on search) and the last-used region (has to
+   outlive the search screen's unmount when a character is pushed). Nothing
+   else in the app has a store, and server state stays in TanStack Query.
+2. **The roster persists to MMKV, not to the query cache**, keeping
+   `storage.ts`'s existing split by lifetime: the query cache is disposable
+   and expires after a day, the roster is the only thing in the app a person
+   would miss and never expires. Zustand's `persist` rehydrates
+   *synchronously* because MMKV is synchronous, so the first frame of the
+   search screen already has the recents — an async store would flash empty.
+3. **Anything restored from disk is parsed, not trusted.** A persisted
+   roster is restored before any schema check would otherwise run and can
+   outlive the build that wrote it by years, so it goes through the same Zod
+   parse a network response would. Malformed entries are dropped one at a
+   time rather than failing the list — losing one row is recoverable, losing
+   the roster is not.
+4. **The roster is written when a character *resolves*, not when the form is
+   submitted.** The web adds to its list inside the search form; that would
+   miss every character reached by deep link (which is the whole point of the
+   universal-link work in Section 9.4), and it would store whatever the user
+   typed. Writing on the character screen instead means deep links count and
+   the stored name is Blizzard's own spelling — which also makes dedup
+   reliable, since two spellings converge on one entry. A failed lookup
+   records nothing, so the list cannot fill with typos.
+5. **Two deliberate deviations from the web's `RecentCharacter`**, which
+   `mobile-ux.md` says to keep as-is:
+   - Dedup is **case-insensitive on the name**. WoW names are unique per
+     realm case-insensitively, so `Arthas` and `arthas` are one character;
+     the web's `===` comparison would keep both. That is a latent bug there,
+     not a rule worth porting.
+   - The stored shape gains an optional **`className`**. The web has no use
+     for it; this app re-themes per character from the class color already,
+     so carrying it lets a recent row wear its own class color at no cost.
+     Nullable, because entries written by an older build won't have it.
+6. **The region picker offers four of the contract's five regions.** `cn` is
+   valid in `RegionSchema` because the schema describes what the *API*
+   accepts, but Blizzard serves mainland China from a separate API host with
+   separate credentials that `apps/web` has never been configured for.
+   Offering it would produce a lookup that cannot succeed. The contract stays
+   permissive; the picker stays honest.
+7. **Autocomplete never gates the search button.** Requiring the typed realm
+   to match a suggestion would make the screen unusable exactly when the
+   network is down. A realm that doesn't exist fails at the character screen,
+   where every other lookup failure already surfaces. Both autocomplete
+   failure states — offline, and the server serving sample realms — render as
+   one line of hint text, never as an error screen.
+8. **Offline realm autocomplete is partial, and the endpoint is why.** Any
+   prefix fetched before is answered from the persisted query cache with no
+   network. A prefix never typed on this device is not, because
+   `/v1/realms` caps a response at 20 matches — there is no way to pull a
+   region's whole realm list down in one request, so there is no full offline
+   index to build from. `apps/web/src/pages/api/v1/realms.ts` claims a mobile
+   client can persist the index "for the same 30 days"; that is only true
+   per-prefix. Fixing it properly means an additive endpoint (a full-index
+   mode, or an `If-None-Match`-style conditional like `/v1/bis` already has)
+   and belongs in a later phase, not a retrofit here.
+9. **A `staleTime` over ~24 days silently means "refetch immediately".**
+   The realm query was first written with a 30-day `staleTime` to mirror the
+   server's cache. TanStack schedules the stale transition with `setTimeout`,
+   and Node and Hermes both clamp a delay past 2^31-1 ms to 1ms and fire it
+   at once — so the longest-lived cache in the app was refetching on the next
+   tick. It is `Infinity` now, which query-core's `isValidTimeout` excludes
+   from scheduling altogether. Any *finite* duration handed to Query in this
+   codebase has to stay under ~24 days; `gcTime`'s one day already is.
+10. **Long lists get FlashList; short bounded ones don't.** Realm suggestions
+    cap at 20 and the roster at 8, and both render inside the search screen's
+    ScrollView, where a FlashList would nest two virtualised lists — the
+    arrangement RN warns about — to save nothing. Section 7's FlashList row
+    is about the comparison/action/tier-list rows, which are unbounded.
+11. **Settings clears the roster through the store, not through MMKV.**
+    Wiping the key underneath a live Zustand store leaves the list in memory,
+    and the next visit persists it straight back. The store owns its key.
+
+Verified: `bun run typecheck` and all 72 `apps/mobile` tests pass, the three
+`packages/*` suites still pass (65 tests), and `expo export` bundles both
+platforms. Not verified on device this phase — the Android emulator run from
+Phase 4 was not repeated, so "runs on a phone" rests on the bundle building
+and the unit tests, not on a launch.

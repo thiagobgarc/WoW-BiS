@@ -28,6 +28,7 @@ than pin from memory, and to record what came out. Installed 2026-09-07:
 | expo-image | `~57.0.4` | 57.0.4 |
 | react-native-reanimated | `4.5.1` | 4.5.1 |
 | zod | `^4.5.4` | 4.5.4 |
+| zustand | `^5.0.15` | 5.0.15 |
 | jest-expo | `^57.0.5` | 57.0.5 |
 | typescript | `~6.0.3` | 6.0.3 |
 

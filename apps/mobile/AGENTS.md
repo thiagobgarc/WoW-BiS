@@ -30,3 +30,18 @@ Repo-specific rules:
   palette against `apps/web/src/styles/global.css`.
 - The app talks to `/api/v1` only, through `@mythos/api-client`. It never
   reaches Blizzard, and it never bundles season data.
+- **No timer duration may exceed ~24 days (2^31-1 ms).** Node and Hermes
+  both clamp a longer `setTimeout` delay to 1ms and fire it immediately, so
+  a "30 day" `staleTime` handed to TanStack Query means *refetch on the next
+  tick*. Use `Infinity` when you mean "never goes stale" — query-core
+  excludes it from scheduling. This cost real time to find; see
+  `src/features/search/api/useRealmSuggestions.ts`.
+- Global client state belongs to the `roster` Zustand store and nowhere
+  else. Server state is TanStack Query's. A new store needs a reason that
+  `architecture.md` Section 7's "no global store before there's global
+  state" rule accepts.
+- `SearchScreen.test.tsx` prints "update not wrapped in `act(...)`" warnings
+  from the realm field's debounce timer. They are known harness noise, not a
+  defect, and the two obvious fixes both break the suite outright — the
+  header comment on `typeRealm` records what was tried. Don't "fix" it
+  without running the whole suite.

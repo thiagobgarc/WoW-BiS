@@ -42,7 +42,7 @@ there, with `href: null` while `FEATURES.meta` is false
 
 | Web surface | Mobile treatment |
 |---|---|
-| `SearchForm` + `RealmCombobox` (popover autocomplete) | Full-screen search, native keyboard-aware list; region as a segmented control; recent characters as a persisted list (`useRecentCharacters`'s localStorage → MMKV, same shape: `{name, realmName, realmSlug, region}`, max 8, same dedup rule). |
+| `SearchForm` + `RealmCombobox` (popover autocomplete) | **Built in Phase 5.** Full-screen search, native keyboard-aware list; region as a segmented control (four regions — `cn` is excluded, `architecture.md` Section 10.6); recent characters as a persisted list (`useRecentCharacters`'s localStorage → MMKV, max 8). Suggestions render inline below the field rather than in a popover, which is what removes the web component's click-outside handling. The shape and dedup rule are the web's with two deliberate changes — case-insensitive name dedup and an optional `className` — both recorded in `architecture.md` Section 10.5. The web's `NameCombobox` popover is folded into the always-visible recents list, which narrows as you type: same behaviour, one fewer surface. |
 | `PaperDoll` (two flanking columns + center render) | Responsive grid of slot tiles (2 cols portrait, 3–4 landscape/tablet). Tapping a slot opens a **bottom sheet**: equipped vs. target, gems, enchant, source, Wowhead link — replaces the hover `Tooltip`, which has no touch equivalent. `DomainItem`'s full-tooltip fields (armor line, weapon lines, stat lines, procs, set info) render in the sheet exactly as composed server-side — no re-derivation needed, it's already display-ready text. |
 | `StatsPanel` bar chart | Compact horizontal bars, stat-priority order preserved (from `bis.statPriority` when seeded), values as text — never color alone. |
 | `UpgradeBoard` `Tabs` (Raid / M+ / PvP) | Segmented control; content per tab computed on-device via `compareGear`/`deriveActionGroups` from `packages/core`, so switching tabs is instant and works offline — the whole reason those functions are pure and shared. |
@@ -102,3 +102,25 @@ equivalents:
 - **Theme (8.9):** dark-only for v1 — no light/dark toggle in Settings until
   a later release; applies uniformly across every screen in the mapping
   table above, not decided per-screen.
+
+## What the search screen settled (Section 10)
+
+The first screen actually built, so it set precedents the rest inherit:
+
+- **Offline is the design, not a fallback.** Nothing on the search screen
+  requires the network. The recents come from MMKV, the search button is
+  never gated on autocomplete, and the season line is simply absent when
+  `/v1/meta` is unreachable rather than becoming an error. The two
+  degraded autocomplete states — offline, and the server serving sample
+  realms — are one line of hint text each. Later screens should reach for
+  this shape before reaching for an error state.
+- **Recents are recorded on the character screen, not the search form**, so
+  deep links count and the stored name is Blizzard's spelling
+  (`architecture.md` Section 10.4).
+- **Accessibility is built in, not deferred to Phase 9.** Every field has a
+  real visible label that doubles as its accessibility label — a placeholder
+  is not a substitute for the web's `<label>`; the region control is a
+  `radiogroup` of `radio`s so it announces "2 of 4"; every target is ≥44pt;
+  and the class color on a recent row is decoration, with the class also
+  spelled out in the row's label. Phase 9's pass should be confirming this,
+  not retrofitting it.
