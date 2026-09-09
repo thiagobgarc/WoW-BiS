@@ -7,6 +7,10 @@
  * query cache is restored by PersistQueryClientProvider before its children
  * mount, which is what makes a cold launch show last night's snapshot
  * instead of a spinner.
+ *
+ * There is deliberately no BottomSheetModalProvider here: the character
+ * screen's slot sheet is a non-modal `BottomSheet` rendered in place, for
+ * the painting-order reason recorded in SlotSheet.tsx.
  */
 import '../global.css';
 
@@ -19,11 +23,16 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { PersistQueryClientProvider } from '@tanstack/react-query-persist-client';
 
+import { installOnlineManager } from '@/lib/onlineStatus';
 import { persistOptions, queryClient } from '@/lib/queryClient';
 import { Sentry, initSentry } from '@/lib/sentry';
 import { DEFAULT_ACCENT, accentVars, colors } from '@/theme';
 
 initSentry();
+
+// Must run before any query mounts: until it does, TanStack's onlineManager
+// is on its browser default and believes this device is always online.
+installOnlineManager();
 
 // Held until the tree below has mounted, so the first frame is the app and
 // not a flash of the window background.

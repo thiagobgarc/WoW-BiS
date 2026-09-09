@@ -20,6 +20,22 @@ cost real time to rediscover:
 - Reanimated 4's Babel plugin is still reached at
   `react-native-reanimated/plugin`, which re-exports the worklets plugin.
 - `newArchEnabled` is no longer a valid `app.config.ts` field.
+- **Installing a native module means rebuilding the dev client.** Fast
+  Refresh will happily ship the new JS to the old APK, and you get
+  `Cannot find native module 'ExpoNetwork'` at import time — which reads
+  like a bad import, not a stale binary. `expo run:android` again.
+- **`@gorhom/bottom-sheet`: use `BottomSheet`, not `BottomSheetModal`.**
+  The modal variant portals into a hosting container that
+  `BottomSheetModalProvider` renders as its *first* child, so on Android the
+  app's own opaque screen paints over it: `present()` resolves, nothing is
+  logged, and nothing appears. Cost an hour. Also pass
+  `enableDynamicSizing={false}` whenever you pass `snapPoints` — v5 defaults
+  dynamic sizing on and it overrides them.
+- **TanStack's `onlineManager` is a no-op in React Native until you wire
+  it.** Its default listens for `window` online/offline events, which do not
+  exist here, so it reports "online" forever and `refetchOnReconnect` never
+  fires. `src/lib/onlineStatus.ts` feeds it from `expo-network`; read
+  offline state from there, never from a failed request.
 
 Repo-specific rules:
 

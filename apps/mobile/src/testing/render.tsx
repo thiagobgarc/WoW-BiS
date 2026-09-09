@@ -21,11 +21,26 @@ const METRICS: Metrics = {
   insets: { top: 47, left: 0, right: 0, bottom: 34 },
 };
 
-export async function renderWithProviders(ui: ReactElement) {
-  const queryClient = new QueryClient({
+/** A client with the same "don't retry, don't cache between tests" settings. */
+export function createTestQueryClient(): QueryClient {
+  return new QueryClient({
     // Retries would turn every error assertion into a timeout.
     defaultOptions: { queries: { retry: false, gcTime: 0 } },
   });
+}
+
+interface RenderOptions {
+  /**
+   * Reuse a client seeded with `setQueryData`, for the case a screen is
+   * meant to render from cache — the app restores exactly that from MMKV on
+   * a cold launch, so "offline, with a snapshot" has no other way to be set
+   * up in a test.
+   */
+  queryClient?: QueryClient;
+}
+
+export async function renderWithProviders(ui: ReactElement, options: RenderOptions = {}) {
+  const queryClient = options.queryClient ?? createTestQueryClient();
 
   function Providers({ children }: { children: ReactNode }) {
     return (

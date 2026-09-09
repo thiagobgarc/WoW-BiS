@@ -29,6 +29,8 @@ than pin from memory, and to record what came out. Installed 2026-09-07:
 | react-native-reanimated | `4.5.1` | 4.5.1 |
 | zod | `^4.5.4` | 4.5.4 |
 | zustand | `^5.0.15` | 5.0.15 |
+| @gorhom/bottom-sheet | `^5.2.14` | 5.2.14 |
+| expo-network | `~57.0.1` | 57.0.1 |
 | jest-expo | `^57.0.5` | 57.0.5 |
 | typescript | `~6.0.3` | 6.0.3 |
 
@@ -132,8 +134,7 @@ restructure.
 needs a project ID and a release process, which is Phase 10's job — the
 `channel` fields already in `eas.json` are where it plugs in.
 
-Zustand is not installed either: Section 7 scopes it to the `roster` context,
-which does not exist until Phase 5.
+Zustand arrived in Phase 5 with the `roster` context, as Section 7 scoped it.
 
 ## Outstanding manual steps
 

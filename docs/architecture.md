@@ -465,3 +465,106 @@ Verified: `bun run typecheck` and all 72 `apps/mobile` tests pass, the three
 platforms. Not verified on device this phase — the Android emulator run from
 Phase 4 was not repeated, so "runs on a phone" rests on the bundle building
 and the unit tests, not on a launch.
+
+## 11. What Phase 6 settled
+
+The character screen: header, paper doll, slot sheet, stats, the
+Gear/Progression tabs, snapshot persistence, the stale/offline banner and
+pull-to-refresh with the cooldown surfaced. The phase's exit criterion — "a
+real character renders end-to-end against the live API; airplane mode still
+renders the last snapshot with an accurate banner" — is what most of these
+decisions answer to.
+
+1. **The Progression tab shipped here, and the tab shell with it.** The
+   original phase plan had no home for the raid/M+ panels: they were added to
+   `mobile-ux.md` after that plan was written (Section 0's "not in the
+   original brief" additions), Phase 7 is explicitly the upgrade board, and
+   Phase 8 is talents. Building the Gear/Progression navigator without
+   Progression would have shipped a visible dead tab and forced a second pass
+   over the screen's top-level layout. Both tabs read the one payload, so the
+   marginal cost was two components, not a request.
+2. **A failed request is a banner; only an empty cache is an error screen.**
+   The split is the whole point of Section 5's snapshot model, and it lives in
+   two pure modules — `model/snapshot.ts` decides what the banner says,
+   `model/errorCopy.ts` maps a contract error code to a screen — rather than
+   in conditionals inside the component. The error screen offers "try again"
+   only when the contract's own `retryable` flag says a retry could change the
+   answer, so a lookup for a character that does not exist cannot burn the
+   user's rate-limit budget on their behalf.
+3. **Offline is read from the OS, not inferred from a failed request.**
+   Discovered on a device: a cold launch in airplane mode inside `staleTime`
+   refetches nothing, so there is no error to report and the screen presents
+   an hours-old snapshot as though it were live. Worse, TanStack's
+   `onlineManager` defaults to a *browser* implementation listening for
+   `window` events that do not exist in React Native — so it believed the
+   device was permanently online and `refetchOnReconnect`, set since Phase 4,
+   had never once fired. `src/lib/onlineStatus.ts` feeds the manager from
+   `expo-network` and the banner subscribes to the same manager, so the UI and
+   Query can never disagree about connectivity.
+4. **The refresh cooldown is anchored to our own success, not to the 429.**
+   `refreshCharacter` in `apps/web` returns the constant
+   `REFRESH_COOLDOWN_SECONDS` whenever the cooldown key is present, not the
+   remainder — a client 55 seconds in is still told "60". So a successful
+   refresh starts a local 60s countdown (accurate, because we know when the
+   server reset the timer) and the 429's value is the fallback for a cooldown
+   this install did not start. Pull-to-refresh is disabled outright while it
+   runs: a gesture that can only produce a 429 should not fire the request.
+5. **A refresh failure feeds the same banner as a query failure.** A
+   mutation's error never reaches the query, so the first cut of this screen
+   had a tap on Refresh while offline produce no visible reaction at all. The
+   refresh hook exposes its error and the screen passes whichever failed.
+6. **Quality colors stay on borders, in the sheet as well as the tile.**
+   `mobile-ux.md` states the rule and the web's own tooltip breaks it (it
+   colors the item name by quality). The rule won: epic purple fails 4.5:1 as
+   body text on this panel, and the icon border carries the same information
+   under the 3:1 non-text rule instead.
+7. **The `metaTier` badge is not rendered in v1.** The payload carries it, and
+   the web puts it beside the character's name — but it is a rank *within the
+   tier list*, and the tier list is the `meta` surface deferred to 1.1
+   (Section 8.10). A badge reading "S" with nothing to tap through to is a
+   riddle. It returns with the Meta tab, behind the same flag.
+8. **`@gorhom/bottom-sheet`, and the non-modal `BottomSheet` specifically.**
+   The dependency is justified by mobile-ux.md's mapping of the web's hover
+   `Tooltip` — touch has no hover — and both its peers were already installed.
+   The modal variant does not work here: it portals into a hosting container
+   that `BottomSheetModalProvider` renders *before* the app tree, so on
+   Android the app's opaque screen paints over it and `present()` succeeds
+   silently. The non-modal sheet renders where it is written, last in the
+   screen, which is also what makes its open state a prop rather than an
+   imperative ref.
+9. **Sixteen slot tiles are a wrapping flex grid, not a FlashList.** Same rule
+   Section 10.10 recorded: the list is bounded, always fully scrolled past,
+   and sits inside the screen's ScrollView where a virtualised list would
+   nest inside another one for nothing. Column count comes from the window
+   width in points, not from a device class.
+10. **Tab switching has no animation, so there is nothing to gate.**
+    `mobile-ux.md` asks for reduce-motion gating on tab switches and the
+    bottom sheet. The sheet's animation is gated by collapsing its duration;
+    the tabs simply swap content, which is a decision rather than an
+    omission — a cross-fade between two screens of text buys nothing and is
+    one more thing to have to turn off.
+
+Verified on an Android emulator against the live `/v1` API with real Blizzard
+credentials: a real character renders end-to-end (header, avatar, class
+accent, paper doll with item icons and quality borders, empty-slot tile,
+stats, both tabs), the slot sheet opens with the full server-composed
+tooltip, header-button and pull-to-refresh both work and surface the
+countdown, and toggling airplane mode raises the offline banner immediately
+while the character stays on screen. A cold launch with the API unreachable
+restores the snapshot from MMKV and renders it.
+
+**Not verified, and why:** a cold launch *in* airplane mode. A development
+build fetches its JS bundle from Metro at launch, and airplane mode takes
+`adb reverse`'s loopback with it, so the app cannot start at all — the
+failure is the dev client's, not the app's. Proving that last case needs a
+preview build (`eas.json`'s `preview` profile), which needs the Expo account
+in Section 8.1. The two halves either side of it are verified above.
+
+**Found but not fixed — server-side, pre-existing.** `progression` came back
+`null` from `/v1/character/...` for several live characters before returning
+data for the same character minutes later. `composeCharacter` catches every
+failure from `getCharacterProgression` and nulls the field without logging,
+so which upstream Blizzard call intermittently fails was not isolated. The
+mobile client handles `null` correctly — it is a documented, supplementary
+field — so this is a data-quality issue for a later phase, not a Phase 6
+blocker.

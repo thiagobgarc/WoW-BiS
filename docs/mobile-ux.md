@@ -43,17 +43,17 @@ there, with `href: null` while `FEATURES.meta` is false
 | Web surface | Mobile treatment |
 |---|---|
 | `SearchForm` + `RealmCombobox` (popover autocomplete) | **Built in Phase 5.** Full-screen search, native keyboard-aware list; region as a segmented control (four regions — `cn` is excluded, `architecture.md` Section 10.6); recent characters as a persisted list (`useRecentCharacters`'s localStorage → MMKV, max 8). Suggestions render inline below the field rather than in a popover, which is what removes the web component's click-outside handling. The shape and dedup rule are the web's with two deliberate changes — case-insensitive name dedup and an optional `className` — both recorded in `architecture.md` Section 10.5. The web's `NameCombobox` popover is folded into the always-visible recents list, which narrows as you type: same behaviour, one fewer surface. |
-| `PaperDoll` (two flanking columns + center render) | Responsive grid of slot tiles (2 cols portrait, 3–4 landscape/tablet). Tapping a slot opens a **bottom sheet**: equipped vs. target, gems, enchant, source, Wowhead link — replaces the hover `Tooltip`, which has no touch equivalent. `DomainItem`'s full-tooltip fields (armor line, weapon lines, stat lines, procs, set info) render in the sheet exactly as composed server-side — no re-derivation needed, it's already display-ready text. |
-| `StatsPanel` bar chart | Compact horizontal bars, stat-priority order preserved (from `bis.statPriority` when seeded), values as text — never color alone. |
+| `PaperDoll` (two flanking columns + center render) | **Built in Phase 6.** Responsive grid of slot tiles (2 cols portrait, 3–4 landscape/tablet). Tapping a slot opens a **bottom sheet**: equipped vs. target, gems, enchant, source, Wowhead link — replaces the hover `Tooltip`, which has no touch equivalent. `DomainItem`'s full-tooltip fields (armor line, weapon lines, stat lines, procs, set info) render in the sheet exactly as composed server-side — no re-derivation needed, it's already display-ready text. |
+| `StatsPanel` bar chart | **Built in Phase 6.** Compact horizontal bars, stat-priority order preserved (from `bis.statPriority` when seeded), values as text — never color alone. |
 | `UpgradeBoard` `Tabs` (Raid / M+ / PvP) | Segmented control; content per tab computed on-device via `compareGear`/`deriveActionGroups` from `packages/core`, so switching tabs is instant and works offline — the whole reason those functions are pure and shared. |
 | `CompletionMeter` (`role="progressbar"`) | Native progress view + `accessibilityValue`; keep the text percentage. |
 | `ComparisonRow` + `SeverityChip` | FlashList rows. **Keep the colorblind-safe construction** (color + distinct icon + text label, never color alone) — an already-stated property of the web app, don't lose it in translation. |
 | `ActionPanels` / `QuickWinsPanel` | Collapsible sections; quick wins (missing enchants/gems/embellishments) surface first — highest value, lowest effort, deserves the first screen on a phone. |
-| **`RaidProgressionPanel`** *(not in original brief)* | A "Progression" tab alongside Gear: per-difficulty boss checklist (LFR/Normal/Heroic/Mythic), boss name + killed/total + last-kill relative time. Renders even when all-empty ("no kills yet this tier" is a real, common state per `mapRaidProgress`'s doc comment — not an error). |
-| **`MythicPlusPanel`** *(not in original brief)* | Same "Progression" tab: current M+ rating + per-dungeon best-run cards (level, timed y/n, score, duration). A dungeon with `run: null` renders as an empty card, not omitted — matches the web's "always show the full dungeon list" behavior. |
+| **`RaidProgressionPanel`** *(not in original brief)* | **Built in Phase 6.** A "Progression" tab alongside Gear: per-difficulty boss checklist (LFR/Normal/Heroic/Mythic), boss name + killed/total + last-kill relative time. Renders even when all-empty ("no kills yet this tier" is a real, common state per `mapRaidProgress`'s doc comment — not an error). |
+| **`MythicPlusPanel`** *(not in original brief)* | **Built in Phase 6.** Same "Progression" tab: current M+ rating + per-dungeon best-run cards (level, timed y/n, score, duration). A dungeon with `run: null` renders as an empty card, not omitted — matches the web's "always show the full dungeon list" behavior. |
 | `TalentTree` (large pannable 2D grid) | **Deferred to 1.1** (`architecture.md` Section 8.10). When built: the hardest port — pinch-zoom + pan (`react-native-gesture-handler` + `reanimated`), with a **diff-first fallback list** ("3 talents differ from the recommended build") as the default view. Most phone users want the diff, not the tree — ship the list, degrade gracefully into the tree, per the original brief's recommendation; the pannable tree stays out of scope even at 1.1. |
-| `RefreshButton` | Pull-to-refresh + an explicit header button for discoverability; on `429` show the cooldown countdown from `retryAfterSeconds`, never a bare error. |
-| `ErrorState` | Per-error-code screens driven by the `code` field in the error envelope (`api-contract.md`): not found, private profile, Blizzard unavailable (render the stale snapshot if one exists instead of an error page), offline, update required. |
+| `RefreshButton` | **Built in Phase 6.** Pull-to-refresh + an explicit header button for discoverability; on `429` show the cooldown countdown from `retryAfterSeconds`, never a bare error. |
+| `ErrorState` | **Built in Phase 6.** Per-error-code screens driven by the `code` field in the error envelope (`api-contract.md`): not found, private profile, Blizzard unavailable (render the stale snapshot if one exists instead of an error page), offline, update required. |
 | OG image route | Native share sheet sharing the **web character URL** — the existing OG route renders the preview wherever it lands. Free parity, zero new mobile work. |
 | Layout disclaimer footer | Blizzard IP disclaimer in Settings/About — required, not optional (App Store Guideline 5.2 risk, per the original brief's Section 10). |
 | **`meta.astro`** (tier list) *(not in original brief; deferred to 1.1)* | Meta tab, top level: segmented Raid/M+ tier list, S/A/B/C grouped sections, each row a class/spec with role icon. Tapping a row pushes the spec-build screen. |
@@ -124,3 +124,34 @@ The first screen actually built, so it set precedents the rest inherit:
   and the class color on a recent row is decoration, with the class also
   spelled out in the row's label. Phase 9's pass should be confirming this,
   not retrofitting it.
+
+## What the character screen settled (Section 11)
+
+The second screen built, and the one that turned the snapshot model in
+`architecture.md` Section 5 into pixels:
+
+- **The v1 tab shell is complete.** Gear and Progression both exist and both
+  render, from the one `/v1/character/...` payload — switching tabs makes no
+  request and shows no spinner, which is the property the "Character screen
+  structure" section above asks for by name. Talents slots in at 1.1 as a
+  third entry in the tabs array plus its content, not a restructure.
+- **Offline is a *state*, not a failed request.** The search screen's rule
+  ("offline is the design, not a fallback") is stronger here, because this
+  screen does need the network. The resolution: the platform's own
+  connectivity is read directly, so the banner can be honest before anything
+  has been tried, and a failed request over an existing snapshot is a banner
+  rather than the `ErrorState` row above. The error screen is reserved for a
+  character this device has never successfully loaded.
+- **The refresh cooldown counts down.** The web shows a fixed "On cooldown
+  (60s)"; this shows the remaining seconds, both on the button and in a line
+  beneath it, and pull-to-refresh is disabled while it runs so the gesture
+  cannot produce a failure the user has to read. The countdown is announced
+  once, on entry, rather than as a live region — a live region on a 1Hz
+  counter interrupts a screen reader sixty times in a row.
+- **Colorblind-safe construction held everywhere it was tested.** Every
+  boss check, every timed/depleted glyph and every tier-set bonus carries a
+  word as well as a color, and item quality stays on icon borders in the
+  slot sheet as well as the tiles — including where the web's own tooltip
+  breaks that rule (see `architecture.md` Section 11.6).
+- **The `metaTier` badge is deferred with the rest of Meta.** It is a rank
+  within a list this release does not ship; see Section 11.7.
