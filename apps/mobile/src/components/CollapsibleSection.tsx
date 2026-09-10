@@ -2,12 +2,18 @@
  * A titled panel that can be folded away, with its item count in the
  * header so folding it costs nothing.
  *
+ * Phase 7 built it in `features/bis` for the upgrade board's action panels;
+ * Phase 8's talent diff needs the identical thing for its four difference
+ * groups, so it moved here for the same reason `SegmentedControl` did —
+ * Section 6's rule is that two features share a primitive from
+ * `components/`, never one feature's component from another feature.
+ *
  * `mobile-ux.md` asks for the web's `ActionPanels`/`QuickWinsPanel` as
  * "collapsible sections", and the reason is the axis: the web lays four
  * panels out as a two-column grid that costs one screen, while a phone
- * stacks them below sixteen comparison rows. Collapsed-by-default is what
- * keeps the tail of the board navigable — and the count in the header is
- * what makes a collapsed section informative rather than merely hidden.
+ * stacks them below a long list. Collapsed-by-default is what keeps the
+ * tail of a screen navigable — and the count in the header is what makes a
+ * collapsed section informative rather than merely hidden.
  *
  * No animation on the toggle. Same reasoning as the segmented control:
  * a height animation here would need `LayoutAnimation` or Reanimated, and

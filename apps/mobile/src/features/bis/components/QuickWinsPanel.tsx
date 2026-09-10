@@ -22,9 +22,8 @@ import { Text, View } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import type { QuickWin } from '@mythos/core/bis';
 
+import { CollapsibleSection } from '@/components/CollapsibleSection';
 import { colors } from '@/theme';
-
-import { CollapsibleSection } from './CollapsibleSection';
 
 const ICON: Record<QuickWin['type'], React.ComponentProps<typeof Ionicons>['name']> = {
   enchant: 'sparkles',

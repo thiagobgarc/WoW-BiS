@@ -30,9 +30,11 @@ import type { DomainItem, EquipmentSlot } from '@mythos/core/character';
 import { Banner } from '@/components/Banner';
 import { Screen } from '@/components/Screen';
 import { SegmentedControl, type Segment } from '@/components/SegmentedControl';
+import { FEATURES } from '@/features';
 import { useIsOffline } from '@/lib/onlineStatus';
 import { useReduceMotion } from '@/lib/useReduceMotion';
 import { UpgradeBoard } from '@/features/bis/UpgradeBoard';
+import { TalentsPanel } from '@/features/talents/TalentsPanel';
 import { useRememberVisit } from '@/features/roster/useRememberVisit';
 import { MythicPlusPanel } from '@/features/progression/components/MythicPlusPanel';
 import { RaidProgressionPanel } from '@/features/progression/components/RaidProgressionPanel';
@@ -48,15 +50,21 @@ import { StatsPanel } from './components/StatsPanel';
 import { characterErrorCopy, unsupportedRegionCopy } from './model/errorCopy';
 import { snapshotNotices } from './model/snapshot';
 
-type TabId = 'gear' | 'progression';
+type TabId = 'gear' | 'progression' | 'talents';
 
 /**
- * v1's two tabs. Talents is the 1.1 addition (`FEATURES.talents`), and it
- * arrives as a third entry here plus its content — see SegmentedControl.
+ * v1's two tabs, plus 1.1's third.
+ *
+ * Talents is built (Phase 8) and gated off (`FEATURES.talents`, per Section
+ * 8.10), so the array is filtered rather than conditional in the JSX —
+ * which is exactly the "a third entry here plus its content, not a
+ * restructure" that Section 11.1 promised, now that it has been cashed in.
+ * A flag flip is the only change 1.1 needs.
  */
 const TABS: readonly Segment<TabId>[] = [
   { id: 'gear', label: 'Gear' },
   { id: 'progression', label: 'Progression' },
+  ...(FEATURES.talents ? ([{ id: 'talents', label: 'Talents' }] as const) : []),
 ];
 
 export default function CharacterScreen() {
@@ -170,7 +178,9 @@ export default function CharacterScreen() {
                   <StatsPanel stats={data.stats} priority={data.bis.statPriority} />
                   <UpgradeBoard equipment={data.equipment} bis={data.bis} />
                 </View>
-              ) : (
+              ) : null}
+
+              {tab === 'progression' ? (
                 <View className="gap-4">
                   {data.progression ? (
                     <>
@@ -189,7 +199,14 @@ export default function CharacterScreen() {
                     </View>
                   )}
                 </View>
-              )}
+              ) : null}
+
+              {/* 1.1, behind FEATURES.talents — the tab it belongs to is not
+                  in TABS until that flips, so this branch is unreachable in
+                  v1 rather than merely unrendered. */}
+              {tab === 'talents' ? (
+                <TalentsPanel talents={data.talents} recommended={data.recommendedTalents} />
+              ) : null}
             </View>
           ) : null}
         </ScrollView>

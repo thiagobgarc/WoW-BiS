@@ -51,7 +51,7 @@ there, with `href: null` while `FEATURES.meta` is false
 | `ActionPanels` / `QuickWinsPanel` | **Built in Phase 7.** Collapsible sections with their item count in the header; quick wins (missing enchants/gems/embellishments) surface first — highest value, lowest effort, deserves the first screen on a phone — and are the only section open by default. Their season-scoped half comes from `/v1/meta`'s `seasonSlots`, never from a list compiled into the app. |
 | **`RaidProgressionPanel`** *(not in original brief)* | **Built in Phase 6.** A "Progression" tab alongside Gear: per-difficulty boss checklist (LFR/Normal/Heroic/Mythic), boss name + killed/total + last-kill relative time. Renders even when all-empty ("no kills yet this tier" is a real, common state per `mapRaidProgress`'s doc comment — not an error). |
 | **`MythicPlusPanel`** *(not in original brief)* | **Built in Phase 6.** Same "Progression" tab: current M+ rating + per-dungeon best-run cards (level, timed y/n, score, duration). A dungeon with `run: null` renders as an empty card, not omitted — matches the web's "always show the full dungeon list" behavior. |
-| `TalentTree` (large pannable 2D grid) | **Deferred to 1.1** (`architecture.md` Section 8.10). When built: the hardest port — pinch-zoom + pan (`react-native-gesture-handler` + `reanimated`), with a **diff-first fallback list** ("3 talents differ from the recommended build") as the default view. Most phone users want the diff, not the tree — ship the list, degrade gracefully into the tree, per the original brief's recommendation; the pannable tree stays out of scope even at 1.1. |
+| `TalentTree` (large pannable 2D grid) | **Built in Phase 8, gated off** behind `FEATURES.talents` (`architecture.md` Section 8.10 defers the surface to 1.1). Two segments: **Differences** (default) and **This build**. The differences are grouped into four kinds — not taken, different choice, fewer points, not in the build — because `diffTalents`' single "missing" bucket merges a real gap with a deliberate choice. **The pannable tree was not built, as this row already said it would not be**: a class tree is ~20x10 cells of 40px icons, so on a phone it is either unreadable or a two-axis pan, and the thing a player would pan it for — changing a talent — can only be done in the game. "This build" is a grouped list that replaces it rather than falling back from it; see `architecture.md` Section 13. |
 | `RefreshButton` | **Built in Phase 6.** Pull-to-refresh + an explicit header button for discoverability; on `429` show the cooldown countdown from `retryAfterSeconds`, never a bare error. |
 | `ErrorState` | **Built in Phase 6.** Per-error-code screens driven by the `code` field in the error envelope (`api-contract.md`): not found, private profile, Blizzard unavailable (render the stale snapshot if one exists instead of an error page), offline, update required. |
 | OG image route | Native share sheet sharing the **web character URL** — the existing OG route renders the preview wherever it lands. Free parity, zero new mobile work. |
@@ -68,11 +68,15 @@ no per-tab network call, matching the "one round trip" rule in
 `api-contract.md`. Switching tabs never shows a spinner; it's all already on
 the device.
 
-**1.1:** adds a third **Talents** tab (diff-first list, tree as fallback),
-reading `talents`/`recommendedTalents` off the same already-fetched
-`/v1/character/...` payload — those fields ship in v1's response shape
+**1.1:** adds a third **Talents** tab — a diff against the recommended build
+and the character's own build as a list, no tree. It reads
+`talents`/`recommendedTalents` off the same already-fetched
+`/v1/character/...` payload; those fields ship in v1's response shape
 specifically so this is a client-only addition at 1.1, not a schema change
-(`api-contract.md`'s note on the character endpoint).
+(`api-contract.md`'s note on the character endpoint). **Built in Phase 8 and
+gated off**, so 1.1 is a `FEATURES.talents` flip and nothing else — a test
+file asserts the tab is absent with the flag off, and another asserts it
+appears after Progression with the flag on and the two v1 tabs untouched.
 
 ## Accessibility parity (requirement, not a phase-10 nicety)
 
@@ -188,3 +192,36 @@ The third screen built, and the one the rest of the app exists to reach.
   content type with no entries, and a dual slot with only one seeded target
   each say what is true. None of them is an error, and none of them is a
   blank.
+
+## What the talents tab settled (Section 13)
+
+The fourth surface built, the first built for a release it does not ship in,
+and the one that declined the hardest port in this document on purpose.
+
+- **The pannable tree was not built, and this document is why.** The mapping
+  row above has said "the pannable tree stays out of scope even at 1.1" since
+  Phase 1, and Phase 8 held to it rather than quietly reinstating it. What
+  replaced it is a grouped list of the character's picks — one scroll axis,
+  readable by a screen reader, and an answer to the question the tree was
+  being read to answer. It is a replacement, not a fallback; calling it a
+  fallback would imply something better is still coming.
+- **The diff is grouped by *why* a pick differs, not just *that* it does.**
+  `diffTalents` merges "never took it" with "took the other side of a choice
+  node", and those are different sentences to read on a phone. Four groups,
+  each with its count in a collapsible header, the two actionable ones open.
+- **Nothing on this screen grades the player.** A recommended build is one
+  seeded opinion about one content type. The group titles are descriptive
+  ("Different choice", "Fewer points"), the headline is a count rather than a
+  percentage, and a test asserts the copy contains neither "wrong" nor
+  "should". This is a UX decision with a test, which is the right shape for
+  a rule that is easy to erode a word at a time.
+- **The accessibility rules from the last two screens held without
+  restatement.** A difference row is one composed sentence, not five
+  fragments; every group is colour *and* glyph *and* word; every target is
+  ≥44pt because it is the same `CollapsibleSection` and `SegmentedControl`
+  the other screens use. That the rules cost nothing to apply here is the
+  return on having built them as primitives.
+- **Every empty state has copy.** No loadout on the character, no seeded
+  build for the spec, a `talents` field that came back null, and a build that
+  matches exactly — four states that could each be a blank screen, and none
+  of them is.

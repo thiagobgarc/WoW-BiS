@@ -717,3 +717,121 @@ surface. Removing it is a dev-client rebuild and a change to Phase 4's
 scaffold rather than a line in this phase's diff, so it is left standing and
 flagged here — the natural place to take it out is Phase 9 or 10, alongside
 the other size and release work.
+
+## 13. What Phase 8 settled
+
+The Talents tab: the diff against the recommended build, and the character's
+own build as a list. Built, and **gated off** — Section 8.10 defers this
+surface to 1.1, so `FEATURES.talents` stays `false` and the tab does not
+render. Phase 8 is the content; 1.1 is the flag.
+
+1. **The pannable, pinch-zoom tree is not built, and that is a Phase 1
+   decision rather than a shortcut taken here.** `mobile-ux.md`'s mapping
+   table already said "the pannable tree stays out of scope even at 1.1",
+   and building it now would have contradicted the document rather than
+   fulfilled the phase. The reasoning holds up on inspection: a class tree
+   is roughly twenty columns by ten rows of 40px icons, so on a phone it is
+   either unreadably small or a two-axis pan; and the thing a player would
+   pan it *for* — changing a talent — cannot be done from this app at all,
+   because the game is the only place a build can be edited. The roadmap's
+   exit criterion is "the diff view is complete and usable on its own", and
+   that is what was built.
+2. **The build list is a replacement for the tree, not a fallback to it.**
+   The second segment lists what the character has taken, grouped Class /
+   Hero / Spec exactly as the web draws its three trees, in tree order. It
+   scrolls on one axis, it can be read aloud, and it answers the question
+   the tree was being read to answer. Calling it a fallback would imply
+   something better is coming; nothing is.
+3. **Four kinds of difference, not one bucket.** `diffTalents` returns
+   `missingNodeIds`, which merges two genuinely different situations: a
+   talent not taken at all, and a choice node taken the other way. The
+   second is usually deliberate, and its row has to name *what you took*.
+   Two more kinds sit either side of what `diffTalents` measures — a talent
+   taken at a lower rank than the build puts points into, and a talent taken
+   that the build does not take, which is what pays for everything else.
+4. **`diffTalents` stays the authority on the headline number.** Its comment
+   is explicit that rank is not compared — "a lower rank still counts as
+   picked" — and that stays true, so the phone and the web report the same
+   "x of y" for the same character. The rank shortfall is a *row* without
+   being a demotion. A test asserts the two numbers agree, because a screen
+   saying "5 of 9" over a list of six rows is worse than either number
+   alone.
+5. **Hero talents are excluded from the diff entirely and listed in the
+   build view.** The seed files carry no hero recommendations (the scoping
+   note in `packages/core/src/talents/types.ts`), so every hero pick a
+   character has would land in "not in the build" and bury the real
+   differences under noise. In the build view the same picks are
+   information; in the diff they would be a verdict against nothing. The
+   summary says so in a line rather than leaving the number to be
+   misread.
+6. **A recommended pick whose node the tree no longer has is a visible row.**
+   Seeds are authored against a tree that changes at every patch. Dropping
+   the pick silently would leave the visible list unable to account for the
+   headline total, so it renders as "Unknown talent (node 999)" with a line
+   saying the build was seeded against an older tree — which surfaces a
+   stale seed instead of hiding one.
+7. **Structural nodes are skipped in both derivations.** A node with no
+   options is the top-of-tree class/spec selector, which the web draws as a
+   plain dot. It has no name, so it can never be a useful row, and a
+   character can legitimately have one "selected" — the fixture does, so
+   both code paths are exercised rather than assumed.
+8. **None of the copy says "wrong", and a test asserts it.** A recommended
+   build is one seeded opinion about one content type. A player who took the
+   other side of a choice node usually knows why, and a screen that grades
+   them is both presumptuous and, for anyone playing content the build was
+   not written for, incorrect. The four group titles are "Not taken",
+   "Different choice", "Fewer points" and "Not in the build".
+9. **The headline is a count, not a percentage.** "5 of 9 picks match" is the
+   same information as "56%" without inviting anyone to optimise a number
+   that is one person's seeded opinion — and it is what the web says for the
+   same character.
+10. **The content type comes from the build, not from a constant.** The web
+    hardcodes "Recommended (Mythic+)" in its tab label while
+    `loadRecommendedBuildFile` can equally return a raid build; the mobile
+    header reads `recommended.contentType`. Same class of bug as the upgrade
+    board's "Raid BiS completion" label, fixed the same way.
+11. **The derivation lives in `features/talents/model`, not
+    `packages/core`.** Section 2 defines the Application layer as exactly
+    this — "view-model derivation, composes packages/core functions into
+    screen data" — and nothing but this screen wants it, because the web
+    renders trees rather than a diff. `diffTalents` stays in the domain
+    layer, where both apps use it.
+12. **`CollapsibleSection` followed `SegmentedControl` into `components/`.**
+    Phase 7 built it in `features/bis`; the diff's four groups need the
+    identical thing. Second primitive to make that trip in two phases, which
+    is the rule in Section 6 working rather than a sign of churn.
+13. **The tab is a filtered array entry, and a second test file proves the
+    flag flip.** `FEATURES.talents` is a compile-time constant and
+    `jest.mock` is file-wide, so `CharacterScreen.test.tsx` keeps exercising
+    v1's real configuration — and asserts the tab is absent — while
+    `CharacterScreen.talents.test.tsx` mocks the flag on and asserts the tab
+    appears after Progression with the two v1 tabs untouched. That is
+    Section 11.1's "a third entry plus its content, not a restructure",
+    cashed in and now guarded.
+14. **Nothing here fetches, for the third screen running.** `talents` and
+    `recommendedTalents` ride in with the character; `api-contract.md` says
+    they ship in v1's response shape specifically so this tab is a
+    client-only addition at 1.1. Switching segments is two pure derivations
+    over data already on the device.
+
+**Verified by the suite:** 38 new tests across five files — the derivation's
+arithmetic against `diffTalents`, the copy, every empty state, and both
+sides of the feature flag. The full mobile suite, `packages/*` and
+`apps/web` all typecheck and pass.
+
+**Not verified, and why:** as with Phase 7, nothing here has been on a
+device. The tab is also gated off, so there is nothing to see on one without
+flipping the flag first — which makes a device pass on this surface most
+useful *with* the Phase 7 pass, not before it.
+
+**Found, not fixed — v1 pays for the talent tree in bytes and does not
+render it.** `GET /v1/character/...` carries the full `talents.tree`: every
+class, spec and hero node, each with its options' names, descriptions and
+icon URLs. `api-contract.md` justifies including it on the grounds that it
+costs no extra Blizzard call, which is true and is about *composition* cost,
+not *response* cost — and the response crosses a phone network on every
+character load in a release where `FEATURES.talents` is `false`. The fix, if
+the measurement justifies it, is a query parameter or a separate `/v1`
+endpoint, either of which is a contract change. **Measure it first**: nobody
+has weighed the field, and the number belongs in Phase 9's performance pass
+before anyone changes a contract over it.

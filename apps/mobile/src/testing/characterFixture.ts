@@ -19,6 +19,7 @@ import { CharacterResponseSchema, type CharacterResponse } from '@mythos/api-con
 import type { DomainItem, EquipmentSlot } from '@mythos/core/character';
 
 import { BIS_ENTRIES, fixtureItemId } from './bisFixture';
+import { RECOMMENDED_TALENTS_FIXTURE, TALENTS_FIXTURE } from './talentsFixture';
 
 function item(slot: EquipmentSlot, overrides: Partial<DomainItem> = {}): DomainItem {
   const itemId = fixtureItemId(slot);
@@ -106,8 +107,8 @@ export const CHARACTER_FIXTURE: CharacterResponse = CharacterResponseSchema.pars
     seeded: true,
     statPriority: ['mastery', 'haste', 'crit', 'versatility'],
   },
-  talents: null,
-  recommendedTalents: null,
+  talents: TALENTS_FIXTURE,
+  recommendedTalents: RECOMMENDED_TALENTS_FIXTURE,
   progression: {
     raid: {
       instanceName: 'The Venomous Abyss',

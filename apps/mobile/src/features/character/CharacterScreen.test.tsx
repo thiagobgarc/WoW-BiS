@@ -108,6 +108,15 @@ describe('CharacterScreen', () => {
     expect(mockGetCharacter).toHaveBeenCalledTimes(1);
   });
 
+  it('has no Talents tab in v1, because Section 8.10 defers it to 1.1', async () => {
+    const { findByText, queryByLabelText } = await renderWithProviders(<CharacterScreen />);
+    await findByText('Arthas');
+
+    // Built in Phase 8 and gated off. CharacterScreen.talents.test.tsx
+    // proves the flag flip turns it on without a restructure.
+    expect(queryByLabelText('Talents')).toBeNull();
+  });
+
   it('switches to Progression without making a second request', async () => {
     const { getByText, findByText, getByLabelText } = await renderWithProviders(<CharacterScreen />);
     await findByText('Arthas');

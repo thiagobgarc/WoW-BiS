@@ -17,9 +17,8 @@ import { Text, View } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import type { ActionGroups } from '@mythos/core/bis';
 
+import { CollapsibleSection } from '@/components/CollapsibleSection';
 import { colors } from '@/theme';
-
-import { CollapsibleSection } from './CollapsibleSection';
 
 /** Stable ids so the board can track which sections are open. */
 export type ActionPanelId = 'bosses' | 'dungeons' | 'craft' | 'catalyst';

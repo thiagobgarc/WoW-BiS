@@ -121,12 +121,18 @@ code under `src/`, and expo-router's `require.context` over `app/` would pull
 any colocated `*.test.tsx` — and the testing library with it — into the
 shipped bundle.
 
-## Not yet built
+## Built but not shipping
 
-`FEATURES` in `src/features.ts` gates the 1.1 surfaces (`meta`, character
-`talents`) that `architecture.md` Section 8.10 defers. The Meta route and its
-tab slot exist and are hidden, so 1.1 is a flag flip rather than a navigation
-restructure.
+`FEATURES` in `src/features.ts` gates the 1.1 surfaces that
+`architecture.md` Section 8.10 defers:
+
+- `talents` — the character Talents tab. **Built in Phase 8** (diff against
+  the recommended build, plus the character's own build as a list) and gated
+  off. 1.1 is the flag flip; `CharacterScreen.talents.test.tsx` mocks it on
+  and asserts the tab appears without a navigation change.
+- `meta` — the tier list and spec-build screens. Not built. The route and
+  its tab slot exist and are hidden, so turning it on is a flag flip plus
+  the screen's content rather than a navigation restructure.
 
 ## Not wired up yet
 
