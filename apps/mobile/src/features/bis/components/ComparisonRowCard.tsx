@@ -25,7 +25,7 @@ import { slotLabel, sourceLabel } from '@mythos/core/utils';
 import { ItemIcon } from '@/features/character/components/ItemIcon';
 import { colors } from '@/theme';
 
-import { deltaLabel, rowAccessibilityLabel, SEVERITY_STYLE } from '../model/severity';
+import { chipSeverity, deltaLabel, rowAccessibilityLabel, SEVERITY_STYLE } from '../model/severity';
 import { SeverityChip } from './SeverityChip';
 
 interface ComparisonRowCardProps {
@@ -58,6 +58,8 @@ function TargetLine({ target }: { target: Target }) {
 
 function ComparisonRowCardImpl({ row, expanded, onToggleAlternatives }: ComparisonRowCardProps) {
   const style = SEVERITY_STYLE[row.severity];
+  // null for a slot with no seeded target — see chipSeverity.
+  const chip = chipSeverity(row);
   const alternatives = row.alternatives.length;
 
   return (
@@ -70,7 +72,7 @@ function ComparisonRowCardImpl({ row, expanded, onToggleAlternatives }: Comparis
           <Text className="text-xs font-semibold uppercase tracking-wide text-text-dim">
             {slotLabel(row.physicalSlot)}
           </Text>
-          <SeverityChip severity={row.severity} />
+          {chip ? <SeverityChip severity={chip} /> : null}
         </View>
 
         <View className="mt-3 flex-row items-center gap-3">

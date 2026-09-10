@@ -81,6 +81,24 @@ export function deltaLabel(row: ComparisonRow): string {
 }
 
 /**
+ * Which severity the row's chip should claim — or `null` for no chip.
+ *
+ * `severityFor` returns `bis` for a row with no target at all, the same
+ * value it returns for an exact match (Section 12.10). The body copy
+ * already distinguishes the two, but the *chip* did not: a slot with no
+ * seeded target rendered a green "✓ BiS" badge directly above the sentence
+ * "No BiS target for this slot this season", which is a flat
+ * contradiction. Found by looking at the board on a device — the fixtures
+ * asserted the body text and never the chip.
+ *
+ * A slot with nothing to compare against gets no chip, because there is no
+ * verdict to give.
+ */
+export function chipSeverity(row: ComparisonRow): Severity | null {
+  return row.target ? row.severity : null;
+}
+
+/**
  * The whole row as one sentence.
  *
  * The row renders as a grid of small labels, which is the wrong shape to
@@ -90,7 +108,12 @@ export function deltaLabel(row: ComparisonRow): string {
  * the alternatives disclosure below it is the only separate stop.
  */
 export function rowAccessibilityLabel(row: ComparisonRow): string {
-  const parts = [`${slotLabel(row.physicalSlot)}. ${SEVERITY_STYLE[row.severity].label}.`];
+  // Same trap as the chip: announcing "BiS" before "no BiS target" is
+  // worse than saying nothing, so the verdict clause is dropped with it.
+  const chip = chipSeverity(row);
+  const parts = [
+    chip ? `${slotLabel(row.physicalSlot)}. ${SEVERITY_STYLE[chip].label}.` : `${slotLabel(row.physicalSlot)}.`,
+  ];
 
   parts.push(
     row.equipped
