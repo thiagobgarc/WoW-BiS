@@ -36,6 +36,13 @@ cost real time to rediscover:
   exist here, so it reports "online" forever and `refetchOnReconnect` never
   fires. `src/lib/onlineStatus.ts` feeds it from `expo-network`; read
   offline state from there, never from a failed request.
+- **Two `fireEvent.press` calls in one synchronous block wedge the
+  renderer.** They overlap RNTL's `act()` scopes, React logs "You seem to
+  have overlapping act() calls", and the test where it happens usually
+  still passes — then every *subsequent* test in that file fails with
+  "unable to find an element with text" for markup that plainly renders.
+  It reads exactly like a broken component. Await something between
+  presses; see the comment in `src/features/bis/UpgradeBoard.test.tsx`.
 
 Repo-specific rules:
 

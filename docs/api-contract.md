@@ -122,12 +122,33 @@ const MetaResponseSchema = z.object({
   seededSpecs: z.array(z.object({ class: z.string(), spec: z.string(), armorType: z.enum(['cloth','leather','mail','plate']) })),
   minimumSupportedClientVersion: z.string(),  // semver
   notice: z.string().nullable(),              // e.g. "Blizzard's API is having an outage"
+  seasonSlots: z.object({                     // optional — see below
+    enchantableSlots: z.array(z.string()),
+    embellishableSlots: z.array(z.string()),
+  }).optional(),
 });
 ```
 
 If the running app's version < `minimumSupportedClientVersion`, show the
 blocking update-required screen (Section "Update required" in
 `mobile-ux.md`) before rendering anything else.
+
+`seasonSlots` was added in Phase 7 and is the season's own slot rules:
+which slots take an enchant, and which can carry a crafted embellishment.
+`deriveActionGroups` needs both to produce the upgrade board's quick wins,
+no Blizzard payload carries them, and `architecture.md` Section 5 forbids
+compiling either list into the app, so they arrive here with the rest of
+the season's reference data. It composes from `@mythos/core/bis`'s
+`SeasonSlotsSchema` — the same type `deriveActionGroups` takes — rather
+than restating the shape.
+
+It is **optional**, deliberately. It was added after the client shipped a
+build without it, and a required field would mean a client newer than the
+deployed server fails to parse this whole response — losing the season line
+and, far worse, the `minimumSupportedClientVersion` gate — in exchange for
+a section of hints. Absent means "no enchant or embellishment hints", never
+a hardcoded fallback; the socket hints are derived from the character's own
+equipment and are unaffected.
 
 ### `GET /v1/realms?region=us&q=are`
 

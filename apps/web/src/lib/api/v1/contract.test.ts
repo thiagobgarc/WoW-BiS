@@ -80,6 +80,10 @@ describe('GET /v1/meta', () => {
     // The whole point of the endpoint: a client discovers what's seeded
     // without shipping a copy of the season's spec list.
     expect(body.seededSpecs.length).toBeGreaterThan(0);
+    // Same rule, applied to the season's slot rules: the mobile upgrade
+    // board derives its quick wins from these, and must not ship a copy.
+    expect(body.seasonSlots?.enchantableSlots.length).toBeGreaterThan(0);
+    expect(body.seasonSlots?.embellishableSlots.length).toBeGreaterThan(0);
   });
 });
 

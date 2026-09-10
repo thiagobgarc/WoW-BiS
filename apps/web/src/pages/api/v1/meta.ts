@@ -32,6 +32,14 @@ export const GET: APIRoute = async ({ clientAddress }) => {
       seededSpecs: specs.map(({ class: className, spec, armorType }) => ({ class: className, spec, armorType })),
       minimumSupportedClientVersion: MINIMUM_SUPPORTED_CLIENT_VERSION,
       notice: apiNotice(),
+      // The mobile upgrade board's quick wins run deriveActionGroups on
+      // device, and these two lists are the only inputs it needs that no
+      // character payload carries. Serving them here is what keeps them out
+      // of the app binary (architecture.md Section 5).
+      seasonSlots: {
+        enchantableSlots: seasonConfig.enchantableSlots,
+        embellishableSlots: seasonConfig.embellishableSlots,
+      },
     };
 
     return v1Json(body);

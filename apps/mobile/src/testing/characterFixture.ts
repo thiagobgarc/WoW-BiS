@@ -11,15 +11,21 @@
  * unfilled socket, three of five tier pieces are equipped, and one dungeon
  * has no run. Every one of those is a branch some component renders
  * differently, and a fixture where everything is present exercises none of
- * them.
+ * them. The BiS half is authored to the same brief and lives in
+ * `bisFixture.ts` — it is the longer of the two, and the branches it exists
+ * to cover are the upgrade board's rather than the character screen's.
  */
 import { CharacterResponseSchema, type CharacterResponse } from '@mythos/api-contract';
 import type { DomainItem, EquipmentSlot } from '@mythos/core/character';
 
+import { BIS_ENTRIES, fixtureItemId } from './bisFixture';
+
 function item(slot: EquipmentSlot, overrides: Partial<DomainItem> = {}): DomainItem {
+  const itemId = fixtureItemId(slot);
+
   return {
     slot,
-    itemId: 200000 + slot.length,
+    itemId,
     name: `${slot} of the Abyss`,
     quality: 'epic',
     itemLevel: 636,
@@ -28,7 +34,7 @@ function item(slot: EquipmentSlot, overrides: Partial<DomainItem> = {}): DomainI
     isEmbellishment: false,
     sockets: [],
     enchantText: null,
-    wowheadUrl: `https://www.wowhead.com/item=${200000 + slot.length}`,
+    wowheadUrl: `https://www.wowhead.com/item=${itemId}`,
     bindingText: 'Soulbound',
     armorTypeLabel: 'Plate',
     armorLine: { text: '2,340 Armor', color: '#ffffff' },
@@ -96,7 +102,7 @@ export const CHARACTER_FIXTURE: CharacterResponse = CharacterResponseSchema.pars
   fetchedAt: 1_757_000_000_000,
   stale: false,
   bis: {
-    entries: [],
+    entries: BIS_ENTRIES,
     seeded: true,
     statPriority: ['mastery', 'haste', 'crit', 'versatility'],
   },

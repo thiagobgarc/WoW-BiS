@@ -45,10 +45,10 @@ there, with `href: null` while `FEATURES.meta` is false
 | `SearchForm` + `RealmCombobox` (popover autocomplete) | **Built in Phase 5.** Full-screen search, native keyboard-aware list; region as a segmented control (four regions — `cn` is excluded, `architecture.md` Section 10.6); recent characters as a persisted list (`useRecentCharacters`'s localStorage → MMKV, max 8). Suggestions render inline below the field rather than in a popover, which is what removes the web component's click-outside handling. The shape and dedup rule are the web's with two deliberate changes — case-insensitive name dedup and an optional `className` — both recorded in `architecture.md` Section 10.5. The web's `NameCombobox` popover is folded into the always-visible recents list, which narrows as you type: same behaviour, one fewer surface. |
 | `PaperDoll` (two flanking columns + center render) | **Built in Phase 6.** Responsive grid of slot tiles (2 cols portrait, 3–4 landscape/tablet). Tapping a slot opens a **bottom sheet**: equipped vs. target, gems, enchant, source, Wowhead link — replaces the hover `Tooltip`, which has no touch equivalent. `DomainItem`'s full-tooltip fields (armor line, weapon lines, stat lines, procs, set info) render in the sheet exactly as composed server-side — no re-derivation needed, it's already display-ready text. |
 | `StatsPanel` bar chart | **Built in Phase 6.** Compact horizontal bars, stat-priority order preserved (from `bis.statPriority` when seeded), values as text — never color alone. |
-| `UpgradeBoard` `Tabs` (Raid / M+ / PvP) | Segmented control; content per tab computed on-device via `compareGear`/`deriveActionGroups` from `packages/core`, so switching tabs is instant and works offline — the whole reason those functions are pure and shared. |
-| `CompletionMeter` (`role="progressbar"`) | Native progress view + `accessibilityValue`; keep the text percentage. |
-| `ComparisonRow` + `SeverityChip` | FlashList rows. **Keep the colorblind-safe construction** (color + distinct icon + text label, never color alone) — an already-stated property of the web app, don't lose it in translation. |
-| `ActionPanels` / `QuickWinsPanel` | Collapsible sections; quick wins (missing enchants/gems/embellishments) surface first — highest value, lowest effort, deserves the first screen on a phone. |
+| `UpgradeBoard` `Tabs` (Raid / M+ / PvP) | **Built in Phase 7**, as the third block of the Gear tab. Segmented control (the same `SegmentedControl` primitive as Gear/Progression); content per segment computed on-device via `compareGear`/`deriveActionGroups` from `packages/core`, so switching is instant and works offline — the whole reason those functions are pure and shared. It opens on the first segment that has entries, and a segment with none says so rather than disappearing: two of three content types seeded is what a real seed file looks like. |
+| `CompletionMeter` (`role="progressbar"`) | **Built in Phase 7**, as the shared `Meter` (`accessibilityRole="progressbar"` + `accessibilityValue`, count always rendered as text) inside a panel. One fix in translation: the web's label reads "Raid BiS completion" on all three of its tabs; the mobile label follows the segment. |
+| `ComparisonRow` + `SeverityChip` | **Built in Phase 7 — as plain views, not FlashList.** See `architecture.md` Section 12.2: the list is bounded by a closed 14-entry union at sixteen rows, and nesting a same-axis `FlashList` in the screen's `ScrollView` does not virtualise anyway. The web's three columns become a vertical stack with the delta as a labelled divider — three columns at phone width give each item name about eleven characters. **The colorblind-safe construction is kept** (color + distinct icon + text label, never color alone), and a test asserts the four glyphs are four different shapes rather than one shape in four colors. |
+| `ActionPanels` / `QuickWinsPanel` | **Built in Phase 7.** Collapsible sections with their item count in the header; quick wins (missing enchants/gems/embellishments) surface first — highest value, lowest effort, deserves the first screen on a phone — and are the only section open by default. Their season-scoped half comes from `/v1/meta`'s `seasonSlots`, never from a list compiled into the app. |
 | **`RaidProgressionPanel`** *(not in original brief)* | **Built in Phase 6.** A "Progression" tab alongside Gear: per-difficulty boss checklist (LFR/Normal/Heroic/Mythic), boss name + killed/total + last-kill relative time. Renders even when all-empty ("no kills yet this tier" is a real, common state per `mapRaidProgress`'s doc comment — not an error). |
 | **`MythicPlusPanel`** *(not in original brief)* | **Built in Phase 6.** Same "Progression" tab: current M+ rating + per-dungeon best-run cards (level, timed y/n, score, duration). A dungeon with `run: null` renders as an empty card, not omitted — matches the web's "always show the full dungeon list" behavior. |
 | `TalentTree` (large pannable 2D grid) | **Deferred to 1.1** (`architecture.md` Section 8.10). When built: the hardest port — pinch-zoom + pan (`react-native-gesture-handler` + `reanimated`), with a **diff-first fallback list** ("3 talents differ from the recommended build") as the default view. Most phone users want the diff, not the tree — ship the list, degrade gracefully into the tree, per the original brief's recommendation; the pannable tree stays out of scope even at 1.1. |
@@ -155,3 +155,36 @@ The second screen built, and the one that turned the snapshot model in
   breaks that rule (see `architecture.md` Section 11.6).
 - **The `metaTier` badge is deferred with the rest of Meta.** It is a rank
   within a list this release does not ship; see Section 11.7.
+
+## What the upgrade board settled (Section 12)
+
+The third screen built, and the one the rest of the app exists to reach.
+
+- **The whole board is a pure function of data already on the device.** It
+  makes no request: `data.bis` came with the character in the one round trip,
+  `compareGear`/`deriveActionGroups` run on device, and the season's slot
+  rules come from the `/v1/meta` the launch screen already fetched. That is
+  what makes segment switching instant, and it is why the test for
+  "instant" asserts an absence of requests rather than a duration.
+- **The mapping table's `FlashList` was not used, on purpose.** Sixteen rows
+  is the schema's own ceiling, and a same-axis virtualised list nested in the
+  screen's `ScrollView` does not virtualise anyway. `architecture.md` Section
+  12.3 has the full reasoning; the row above has been amended so the table
+  and the code do not disagree.
+- **Section order is the mobile order, not the web's.** Meter, quick wins,
+  comparison rows, action panels — the quick wins are lifted above the rows
+  because this document asks for them on the first screen, and they are the
+  only section open by default.
+- **Colorblind-safe survived the port, and is now tested.** Every severity is
+  a color *and* a distinct glyph *and* a word, and a unit test asserts the
+  four glyphs are four different shapes rather than one shape in four fills —
+  which is the failure mode a "keep the icons" instruction actually produces.
+- **A row announces as a sentence.** The accessibility parity section above
+  asks for `accessibilityLabel`s on every interactive element; a comparison
+  row is not interactive, and eleven separate labels for its fragments would
+  have satisfied the letter of that and been useless. One composed sentence
+  per row, one separate stop for the alternatives disclosure.
+- **Empty is a state with copy, in three places.** A spec with no BiS list, a
+  content type with no entries, and a dual slot with only one seeded target
+  each say what is true. None of them is an error, and none of them is a
+  blank.

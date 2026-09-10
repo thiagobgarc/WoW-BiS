@@ -568,3 +568,152 @@ so which upstream Blizzard call intermittently fails was not isolated. The
 mobile client handles `null` correctly — it is a documented, supplementary
 field — so this is a data-quality issue for a later phase, not a Phase 6
 blocker.
+
+## 12. What Phase 7 settled
+
+The upgrade board: the content-type segmented control, the comparison rows,
+the completion meter, the quick wins and the action panels, as the third
+block of the character screen's Gear tab. The phase's exit criterion — "tab
+switching is instant and works offline" — is what most of these answer to,
+and the short version of the answer is that **the board issues no request at
+all**.
+
+1. **`/v1/meta` grew `seasonSlots`, and that is the entire server-side
+   change.** `deriveActionGroups` takes its slot rules by injection
+   specifically so `packages/core` need not depend on `apps/web`'s
+   `seasonConfig` — but the phone had nothing to inject. Three options, and
+   only one survives Section 5: compile the two lists into the app (a wrong
+   enchant hint would then need an app-store release to fix, which is the
+   exact failure mode "no hardcoded season data in the mobile binary" exists
+   to prevent); drop the enchant and embellishment quick wins (the
+   highest-value, lowest-effort section on the board, per `mobile-ux.md`); or
+   make them part of the season's own description, next to the season id the
+   app already reads from there. The last one. `SeasonSlotsSchema` moved from
+   a bare interface to a Zod schema in `packages/core` so the contract
+   composes from it rather than restating it — the same rule Phase 3 set for
+   every other domain type.
+2. **The field is optional on the wire.** It was added after the client had
+   shipped a build without it. Required, it would mean a client *newer* than
+   the deployed server fails to parse the whole `/v1/meta` response — losing
+   the season line and, far more seriously, the
+   `minimumSupportedClientVersion` gate that exists to stop exactly that
+   class of mismatch — in exchange for a section of hints. Absent means "no
+   enchant or embellishment hints"; the socket hints come off the character's
+   own equipment and are unaffected. There is no compiled-in fallback,
+   because a hint from whatever the season looked like at build time is a
+   wrong answer that looks exactly like a right one.
+3. **The comparison rows are plain views, not a `FlashList`** — a deliberate
+   departure from both the phase plan and `mobile-ux.md`'s mapping table,
+   which is why that table has been amended. Two facts settle it. The list is
+   bounded by a compile-time constant: `BIS_SLOTS` is a closed 14-entry union
+   of which two expand to a pair of physical slots, so `compareGear` cannot
+   return more than sixteen rows for any character, any spec or any season —
+   virtualisation is for lists whose length is data. And the board renders
+   inside the character screen's own `ScrollView`, where a same-axis
+   `FlashList` does not virtualise anyway: it renders every row and warns
+   while doing it, i.e. a slower `.map()`. The variant that *would*
+   virtualise — hoisting the whole Gear tab into one list with the paper doll
+   as its header — restructures a screen Phase 6 shipped in order to window
+   sixteen items. This is the third time this call has been made for the same
+   reason; see Sections 10.10 and 11.9.
+4. **"Instant" is not a timing target, it is the absence of a request.**
+   `data.bis` arrives with the character in the one round trip, both pure
+   functions run on device, and `/v1/meta` was fetched by the launch screen
+   and persisted by MMKV. Switching a segment recomputes two pure functions
+   over a few dozen entries with the radio off. The test for it asserts that
+   nothing was fetched — the property itself, rather than a duration, which
+   is only a proxy for it on one machine.
+5. **Quick wins sit *above* the comparison rows, inverting the web's order.**
+   `mobile-ux.md` asks for it and the reason holds up: a missing enchant is
+   fixed tonight, a rank-1 raid target is fixed in three weeks, and on a
+   screen where one section is visible at a time the actionable one goes
+   first. It is also the only section open by default — a section that is
+   both first and folded is just a heading — while the four action panels
+   below the rows are collapsed with their counts in the header, because
+   "Bosses to prioritise, 3" is most of the answer.
+6. **`CharacterTabs` became `components/SegmentedControl`.** Phase 6 built it
+   for Gear | Progression; the board needs the identical control for
+   Raid | Mythic+ | PvP. Two features importing one primitive from
+   `components/` is Section 6's rule; one feature importing another feature's
+   component is not.
+7. **The `/v1/meta` query moved out of `SearchScreen` into
+   `features/meta/api/useMeta`.** Phase 5 inlined it because one screen used
+   it. Two screens with the same query key written out twice is how a screen
+   ends up refetching what is already in the cache, and the `meta` bounded
+   context is where it belonged in the first place.
+8. **A comparison row is one accessibility element, not eleven.** The row is
+   a grid of short labels — "Head", "636", "Equipped", "648", "BiS Rank 1" —
+   which is precisely the shape that tells a screen-reader user nothing when
+   swiped one fragment at a time. `rowAccessibilityLabel` composes the whole
+   row into a sentence, and the alternatives disclosure is the only separate
+   stop: sixteen rows cost sixteen to thirty-two stops instead of nearly two
+   hundred.
+9. **Two of `compareGear`'s outputs do not mean what a naive template
+   assumes.** Its delta is *negative* when the equipped item out-levels the
+   target — routine after a Great Vault week — so `+${delta}` renders
+   "+-6 iLvl"; those rows read "At or above" instead. And for an empty slot
+   the delta is the target's entire item level, so the same template offers
+   "+648 iLvl", a number nobody can act on; those read "Fill now". Both live
+   in `model/severity.ts` with tests, not in JSX.
+10. **`severity === 'bis'` is not the same as "already best in slot".**
+    `severityFor` returns `bis` both for an exact match and for a row with no
+    target at all, which is reachable whenever a dual-slot category has a
+    single seeded entry. `isMatch` is the discriminator, and the two states
+    say different things on screen — "This is the BiS item" versus "No BiS
+    target for this slot this season."
+11. **Every content type keeps its segment, seeded or not, and the board
+    opens on the first one that has entries.** A spec seeded for raid and
+    Mythic+ but not PvP is what a real seed file looks like, so an empty
+    segment is a normal state with its own sentence rather than an error or
+    an absence — a control that changes shape as you tap through it is worse
+    than one that sometimes has nothing behind a segment. Opening on an empty
+    Raid board for a Mythic+-only spec, meanwhile, looks like a bug.
+12. **The target item renders with no icon.** A `BisEntry` is authored data —
+    an item id and a name, with nothing having resolved that id against
+    Blizzard's media endpoint — so there is no icon URL, and a placeholder
+    beside a real equipped icon reads as "this item has no icon" rather than
+    "we didn't fetch one". The BiS rank takes that space instead, which is
+    the information the target actually adds. Resolving target icons would
+    cost a Blizzard media call per row, which is not worth a round trip on a
+    phone network for decoration.
+13. **An unseeded spec is a notice, not an error.** Most specs are unseeded
+    at any given time, and the seed files belong to the web repo rather than
+    to the player. The web points at its README here, which is not an
+    instruction a phone can act on, so the mobile copy stops at the fact.
+
+**Verified by the suite:** 184 mobile tests across 19 suites, of which 31 in
+three new ones are the board's — every severity, both dual-slot assignments,
+the empty segment, the unseeded spec, the alternatives disclosure, the quick
+wins with and without `seasonSlots`, and a whole board rendered with the
+`/v1/meta` query rejecting outright, which is the offline half of the exit
+criterion. `packages/core`, `packages/api-contract`, `packages/api-client`
+and `apps/web` all typecheck and pass, including the `/v1/meta` contract test
+that now asserts the new field.
+
+**Not verified, and why:** nothing here has been on a device yet. Phase 6's
+verification pass needs the emulator, Metro and a local API with real
+Blizzard credentials, and this phase added no native module, so the existing
+dev client will take the new JS unchanged — but "tab switching is instant" is
+a claim about a phone, and it has not been made on one.
+
+**One thing the test harness taught, worth keeping:** two `fireEvent.press`
+calls in the same synchronous block overlap RNTL's `act()` scopes, and the
+renderer does not fail at that point — it wedges, and every *subsequent* test
+in the file fails with "unable to find an element" for things that plainly
+render. Await something between presses. This cost a confusing debugging pass
+where six passing tests were followed by seven that looked like a broken
+component; it is recorded in `apps/mobile/AGENTS.md`.
+
+**Found, not fixed — `@shopify/flash-list` is now imported nowhere.** Phase 4
+installed it because the plan called for it in three places. Phase 5 declined
+it for the realm suggestions (Section 10.10), Phase 6 for the paper doll's
+tiles (Section 11.9), and Phase 7 for the comparison rows (12.3 above) — all
+three for the same reason, each list being bounded and nested inside a
+`ScrollView`. Nothing left needs it: the talent tree at 1.1 is a pannable
+canvas, not a list. That leaves a native module in the binary, in the dev
+client and in `jest.config.js`'s `transformIgnorePatterns` for nothing, which
+is bundle size and one more thing in an App Store review's dependency
+surface. Removing it is a dev-client rebuild and a change to Phase 4's
+scaffold rather than a line in this phase's diff, so it is left standing and
+flagged here — the natural place to take it out is Phase 9 or 10, alongside
+the other size and release work.

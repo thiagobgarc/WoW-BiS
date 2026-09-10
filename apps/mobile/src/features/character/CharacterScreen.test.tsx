@@ -23,6 +23,7 @@ import { MythosApiError } from '@mythos/api-client';
 
 import { createTestQueryClient, renderWithProviders } from '@/testing/render';
 import { CHARACTER_FIXTURE, staleFixture } from '@/testing/characterFixture';
+import { META_FIXTURE } from '@/testing/metaFixture';
 import { characterQueryKey } from './api/useCharacter';
 import CharacterScreen from './CharacterScreen';
 
@@ -30,11 +31,18 @@ import CharacterScreen from './CharacterScreen';
 // imports; only `mock*` bindings may be referenced from the factory.
 const mockGetCharacter = jest.fn();
 const mockRefreshCharacter = jest.fn();
+const mockGetMeta = jest.fn();
 let mockParams: Record<string, string> = {};
 
 jest.mock('@/lib/api', () => ({
   get api() {
-    return { getCharacter: mockGetCharacter, refreshCharacter: mockRefreshCharacter };
+    return {
+      getCharacter: mockGetCharacter,
+      refreshCharacter: mockRefreshCharacter,
+      // The upgrade board's quick wins need the season's slot rules, so the
+      // Gear tab now has a second query behind it — see useMeta.
+      getMeta: mockGetMeta,
+    };
   },
   apiBaseUrl: 'https://mythos.test',
   appVersion: '0.1.0',
@@ -56,12 +64,14 @@ beforeEach(() => {
   mockParams = { ...ARTHAS };
   mockGetCharacter.mockReset();
   mockRefreshCharacter.mockReset();
+  mockGetMeta.mockReset();
   mockGetCharacter.mockResolvedValue(CHARACTER_FIXTURE);
+  mockGetMeta.mockResolvedValue(META_FIXTURE);
 });
 
 describe('CharacterScreen', () => {
   it('renders the character, its gear and its stats from one request', async () => {
-    const { getByText, findByText, getAllByLabelText } = await renderWithProviders(<CharacterScreen />);
+    const { getByText, findByText, getByLabelText, getAllByLabelText } = await renderWithProviders(<CharacterScreen />);
 
     await findByText('Arthas');
     expect(getByText(/Unholy Death Knight · Illidan \(US\)/)).toBeTruthy();
@@ -71,8 +81,10 @@ describe('CharacterScreen', () => {
     expect(getByText('3/5')).toBeTruthy();
     expect(getByText('2pc active')).toBeTruthy();
 
-    expect(getByText('Helm of the Damned')).toBeTruthy();
-    expect(getByText('Frostmourne')).toBeTruthy();
+    // Scoped to the paper doll's own tiles: since Phase 7 the upgrade board
+    // below names the equipped item too, so a bare getByText finds two.
+    expect(getByLabelText(/^Head: Helm of the Damned/)).toBeTruthy();
+    expect(getByLabelText(/^Main Hand: Frostmourne/)).toBeTruthy();
 
     // Stat priority comes from the seeded BiS entry, not the default order.
     expect(getByText('Mastery > Haste > Critical Strike > Versatility')).toBeTruthy();
@@ -80,6 +92,19 @@ describe('CharacterScreen', () => {
 
     // An omitted slot is an empty tile, not a missing one.
     expect(getAllByLabelText('Off Hand: empty')).toHaveLength(1);
+    expect(mockGetCharacter).toHaveBeenCalledTimes(1);
+  });
+
+  it('builds the upgrade board out of the same payload, with no second request', async () => {
+    const { findByText, getByLabelText } = await renderWithProviders(<CharacterScreen />);
+    await findByText('Arthas');
+
+    // `data.bis` came with the character; the board computes over it on
+    // device. UpgradeBoard.test.tsx covers what it computes.
+    await findByText('2 of 12 slots');
+    fireEvent.press(getByLabelText('Mythic+'));
+    await findByText('Cowl of the Deep Delve');
+
     expect(mockGetCharacter).toHaveBeenCalledTimes(1);
   });
 
@@ -117,13 +142,13 @@ describe('CharacterScreen', () => {
     queryClient.setQueryData(characterQueryKey('us', 'illidan', 'arthas'), staleFixture(fetchedAt));
     mockGetCharacter.mockRejectedValue(new MythosApiError({ code: 'network', message: 'offline' }));
 
-    const { findByText, getByText, queryByText } = await renderWithProviders(<CharacterScreen />, {
+    const { findByText, getByLabelText, queryByText } = await renderWithProviders(<CharacterScreen />, {
       queryClient,
     });
 
     await findByText(/You're offline — showing the snapshot from 2 hours ago\./);
     // The character is still there. This is the whole point.
-    expect(getByText('Frostmourne')).toBeTruthy();
+    expect(getByLabelText(/^Main Hand: Frostmourne/)).toBeTruthy();
     expect(queryByText('Something went wrong')).toBeNull();
   });
 

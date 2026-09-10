@@ -17,9 +17,10 @@
  * split lives in `snapshot.ts` and `errorCopy.ts` respectively, not in the
  * conditionals here.
  *
- * Phase 7 fills the hole in the Gear tab: the upgrade board reads
- * `data.bis` — already fetched above, already in this component — through
- * `compareGear`/`deriveActionGroups` from `packages/core`, on device.
+ * The Gear tab's third block is the upgrade board, which reads `data.bis` —
+ * already fetched above, already in this component — through
+ * `compareGear`/`deriveActionGroups` from `packages/core`, on device. It
+ * fetches nothing, which is why its segments switch with the radio off.
  */
 import { useCallback, useState } from 'react';
 import { ActivityIndicator, RefreshControl, ScrollView, Text, View } from 'react-native';
@@ -28,8 +29,10 @@ import type { DomainItem, EquipmentSlot } from '@mythos/core/character';
 
 import { Banner } from '@/components/Banner';
 import { Screen } from '@/components/Screen';
+import { SegmentedControl, type Segment } from '@/components/SegmentedControl';
 import { useIsOffline } from '@/lib/onlineStatus';
 import { useReduceMotion } from '@/lib/useReduceMotion';
+import { UpgradeBoard } from '@/features/bis/UpgradeBoard';
 import { useRememberVisit } from '@/features/roster/useRememberVisit';
 import { MythicPlusPanel } from '@/features/progression/components/MythicPlusPanel';
 import { RaidProgressionPanel } from '@/features/progression/components/RaidProgressionPanel';
@@ -38,7 +41,6 @@ import { parseCharacterParams, useCharacter } from './api/useCharacter';
 import { useRefreshCharacter } from './api/useRefreshCharacter';
 import { CharacterErrorState } from './components/CharacterErrorState';
 import { CharacterHeader } from './components/CharacterHeader';
-import { CharacterTabs, type CharacterTab } from './components/CharacterTabs';
 import { PaperDoll } from './components/PaperDoll';
 import { RefreshBar } from './components/RefreshBar';
 import { SlotSheet, type SlotSelection } from './components/SlotSheet';
@@ -50,9 +52,9 @@ type TabId = 'gear' | 'progression';
 
 /**
  * v1's two tabs. Talents is the 1.1 addition (`FEATURES.talents`), and it
- * arrives as a third entry here plus its content — see CharacterTabs.
+ * arrives as a third entry here plus its content — see SegmentedControl.
  */
-const TABS: readonly CharacterTab<TabId>[] = [
+const TABS: readonly Segment<TabId>[] = [
   { id: 'gear', label: 'Gear' },
   { id: 'progression', label: 'Progression' },
 ];
@@ -160,14 +162,13 @@ export default function CharacterScreen() {
 
               <RefreshBar fetchedAt={data.fetchedAt} refresh={refresh} />
 
-              <CharacterTabs tabs={TABS} active={tab} onChange={setTab} />
+              <SegmentedControl segments={TABS} active={tab} onChange={setTab} />
 
               {tab === 'gear' ? (
                 <View className="gap-4">
                   <PaperDoll equipment={data.equipment} onSelectSlot={selectSlot} />
                   <StatsPanel stats={data.stats} priority={data.bis.statPriority} />
-                  {/* Phase 7's upgrade board goes here. Its input, `data.bis`,
-                      is already fetched and already in this component. */}
+                  <UpgradeBoard equipment={data.equipment} bis={data.bis} />
                 </View>
               ) : (
                 <View className="gap-4">

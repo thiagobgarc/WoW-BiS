@@ -5,19 +5,32 @@
  *
  * `seasonSlots` is injected rather than imported from a concrete season
  * config module: this file lives in packages/core, which must not depend
- * on apps/web's seasonConfig.ts (or, eventually, a mobile equivalent) —
- * see docs/architecture.md Section 5's "no hardcoded season data" rule.
- * The caller (apps/web today; the mobile app once it fetches /v1/meta)
- * owns getting the current season's slot lists to this function.
+ * on apps/web's seasonConfig.ts — see docs/architecture.md Section 5's
+ * "no hardcoded season data" rule. apps/web passes its seasonConfig
+ * straight in; apps/mobile passes what /v1/meta gave it, which is how the
+ * same lists reach a device without being compiled into one.
  */
+import { z } from 'zod';
 import type { EquipmentBySlot, EquipmentSlot } from '../character/types';
 import type { ComparisonRow } from './compareGear';
 import { slotLabel } from '../utils/format';
 
-export interface SeasonSlots {
-  enchantableSlots: readonly string[];
-  embellishableSlots: readonly string[];
-}
+/**
+ * Which slots this season takes an enchant, and which can carry a crafted
+ * embellishment. Both rotate by season and patch.
+ *
+ * A Zod schema rather than a bare interface because this now crosses the
+ * wire: `/v1/meta` carries it so the mobile app can compute quick wins with
+ * no copy of `seasonConfig` compiled into its binary (architecture.md
+ * Section 5), and `packages/api-contract` composes from core's schemas
+ * rather than restating shapes. The arrays stay `readonly` so an `as const`
+ * config — which is how apps/web declares them — is assignable unchanged.
+ */
+export const SeasonSlotsSchema = z.object({
+  enchantableSlots: z.array(z.string()).readonly(),
+  embellishableSlots: z.array(z.string()).readonly(),
+});
+export type SeasonSlots = z.infer<typeof SeasonSlotsSchema>;
 
 export interface BossTarget {
   boss: string;

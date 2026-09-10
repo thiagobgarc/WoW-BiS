@@ -16,12 +16,12 @@
 import { useState } from 'react';
 import { KeyboardAvoidingView, Platform, ScrollView, Text, View } from 'react-native';
 import { useRouter } from 'expo-router';
-import { useQuery } from '@tanstack/react-query';
 
 import { Screen } from '@/components/Screen';
 import { Button } from '@/components/Button';
 import { TextField } from '@/components/TextField';
-import { api, apiBaseUrl } from '@/lib/api';
+import { apiBaseUrl } from '@/lib/api';
+import { useMeta } from '@/features/meta/api/useMeta';
 import { matchRecent, type RecentCharacter } from '@/features/roster/model/recentCharacters';
 import { useRecentCharacters, useRegion, useSetRegion } from '@/features/roster/store';
 import { RealmField } from './components/RealmField';
@@ -42,14 +42,12 @@ export default function SearchScreen() {
   const recent = useRecentCharacters();
 
   /**
-   * The season the BiS data describes. Purely informational — the screen is
-   * fully usable while this is pending or failed, so it has no loading or
-   * error state of its own, it is simply absent until it resolves.
+   * The season the BiS data describes. Purely informational here — the
+   * screen is fully usable while this is pending or failed, so it has no
+   * loading or error state of its own, it is simply absent until it
+   * resolves. The upgrade board shares the query; see useMeta.
    */
-  const meta = useQuery({
-    queryKey: ['meta'],
-    queryFn: ({ signal }) => api.getMeta(signal),
-  });
+  const meta = useMeta();
 
   const matches = matchRecent(recent, name);
   const submittable = canSearch(name, realm);
