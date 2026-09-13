@@ -19,13 +19,13 @@
  * rather than gating on the meta query.
  */
 import { Text, View } from 'react-native';
-import Ionicons from '@expo/vector-icons/Ionicons';
 import type { QuickWin } from '@mythos/core/bis';
 
+import { Icon, type IconName } from '@/components/Icon';
 import { CollapsibleSection } from '@/components/CollapsibleSection';
 import { colors } from '@/theme';
 
-const ICON: Record<QuickWin['type'], React.ComponentProps<typeof Ionicons>['name']> = {
+const ICON: Record<QuickWin['type'], IconName> = {
   enchant: 'sparkles',
   socket: 'diamond',
   embellishment: 'construct',
@@ -61,7 +61,7 @@ export function QuickWinsPanel({ quickWins, expanded, onToggle }: QuickWinsPanel
             accessibilityLabel={win.label}
             className="flex-row items-start gap-2"
           >
-            <Ionicons name={ICON[win.type]} size={14} color={colors.severity.close} />
+            <Icon name={ICON[win.type]} size={14} color={colors.severity.close} />
             <Text className="flex-1 text-xs leading-5 text-text-muted">{win.label}</Text>
           </View>
         ))}

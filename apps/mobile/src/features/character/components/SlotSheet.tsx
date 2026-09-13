@@ -33,9 +33,11 @@ import { useCallback, useMemo } from 'react';
 import { AccessibilityInfo, Linking, Pressable, Text, useWindowDimensions, View } from 'react-native';
 import BottomSheet, {
   BottomSheetBackdrop,
+  BottomSheetHandle,
   BottomSheetScrollView,
   useBottomSheetTimingConfigs,
   type BottomSheetBackdropProps,
+  type BottomSheetHandleProps,
 } from '@gorhom/bottom-sheet';
 import type { DomainItem, EquipmentSlot } from '@mythos/core/character';
 import { slotLabel } from '@mythos/core/utils';
@@ -68,6 +70,25 @@ export function SlotSheet({ selection, onClose, reduceMotion }: SlotSheetProps) 
    */
   const snapPoints = useMemo(() => [height * 0.6, height * 0.9], [height]);
 
+  /**
+   * The stock handle, minus its announcement. Rendering the library's own
+   * component keeps the grabber looking exactly as it did — this is an
+   * accessibility change, not a visual one.
+   */
+  const handle = useCallback(
+    (props: BottomSheetHandleProps) => (
+      <BottomSheetHandle
+        {...props}
+        indicatorStyle={{ backgroundColor: colors['text-faint'] }}
+        accessible={null}
+        accessibilityRole={null}
+        accessibilityLabel={null}
+        accessibilityHint={null}
+      />
+    ),
+    [],
+  );
+
   const backdrop = useCallback(
     (props: BottomSheetBackdropProps) => (
       <BottomSheetBackdrop {...props} appearsOnIndex={0} disappearsOnIndex={-1} pressBehavior="close" />
@@ -92,7 +113,22 @@ export function SlotSheet({ selection, onClose, reduceMotion }: SlotSheetProps) 
       animationConfigs={animationConfigs}
       backdropComponent={backdrop}
       backgroundStyle={{ backgroundColor: colors.panel }}
-      handleIndicatorStyle={{ backgroundColor: colors['text-faint'] }}
+      // The library announces its own chrome. Phase 9's TalkBack pass heard
+      // what that costs: three stops — "Bottom Sheet, adjustable", "Bottom
+      // sheet handle", "Bottom Sheet" — before a single word about the item.
+      // These props are nullable, unlike RN's, and null opts out rather than
+      // falling back to the library's defaults.
+      //
+      // Measured result: **three stops became one.** The custom handle below
+      // accounts for the stop that left; one "Bottom Sheet, adjustable"
+      // remains on a container these props do not appear to reach. It is a
+      // landmark at the top of an open sheet rather than noise in the middle
+      // of it, so it is left alone rather than chased further into the
+      // library's internals. Recorded in architecture.md Section 14.
+      accessible={null}
+      accessibilityRole={null}
+      accessibilityLabel={null}
+      handleComponent={handle}
     >
       <BottomSheetScrollView contentContainerStyle={{ padding: 20, paddingBottom: 40 }}>
         {selection ? <SlotSheetBody selection={selection} /> : null}
@@ -219,7 +255,7 @@ function WowheadLink({ url, itemName }: { url: string; itemName: string }) {
           AccessibilityInfo.announceForAccessibility('Could not open Wowhead.');
         });
       }}
-      className="mt-2 min-h-11 justify-center"
+      className="mt-2 min-h-[44px] justify-center"
     >
       <Text className="text-sm font-semibold text-link">View on Wowhead ↗</Text>
     </Pressable>

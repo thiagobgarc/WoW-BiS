@@ -77,7 +77,9 @@ export function CharacterHeader({ character, equipment, avatarUrl }: CharacterHe
           <Stat
             label="Tier"
             value={`${tier.owned}/${tier.total}`}
-            hint={`Tier set: ${tier.owned} of ${tier.total} pieces, ${tier.label}`}
+            hint="Tier set"
+            // "4/5" is a good thing to read and a poor thing to hear.
+            spokenValue={`${tier.owned} of ${tier.total} pieces`}
             // The bonus is the part a player acts on, so it is text, not a
             // color or a count they have to convert themselves.
             note={tier.label}
@@ -88,9 +90,36 @@ export function CharacterHeader({ character, equipment, avatarUrl }: CharacterHe
   );
 }
 
-function Stat({ label, value, hint, note }: { label: string; value: string; hint: string; note?: string }) {
+/**
+ * `hint` is the stat's *spoken name* and nothing more — it is composed with
+ * the value below, so a hint that already contains the value says it twice.
+ * Phase 9's TalkBack pass caught exactly that: the tier tile announced
+ * "Tier set: 4 of 5 pieces, 4pc active: 4/5, 4pc active".
+ *
+ * `spokenValue` exists for the case that caused it. A value can be worth
+ * reading in a form that is poor to hear — "4/5" is the right glyph in a
+ * 60pt-wide tile and the wrong sentence in a screen reader — so the tile
+ * shows `value` and announces `spokenValue` when the two should differ.
+ */
+function Stat({
+  label,
+  value,
+  hint,
+  spokenValue,
+  note,
+}: {
+  label: string;
+  value: string;
+  hint: string;
+  spokenValue?: string;
+  note?: string;
+}) {
   return (
-    <View accessible accessibilityLabel={`${hint}: ${value}${note ? `, ${note}` : ''}`} className="rounded-lg bg-panel px-2.5 py-1.5">
+    <View
+      accessible
+      accessibilityLabel={`${hint}: ${spokenValue ?? value}${note ? `, ${note}` : ''}`}
+      className="rounded-lg bg-panel px-2.5 py-1.5"
+    >
       <Text className="text-[10px] font-semibold uppercase tracking-wide text-text-faint">{label}</Text>
       <Text className="text-sm font-semibold text-link">{value}</Text>
       {note ? <Text className="text-[10px] text-text-dim">{note}</Text> : null}

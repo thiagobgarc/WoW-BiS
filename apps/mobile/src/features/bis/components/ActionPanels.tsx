@@ -14,11 +14,13 @@
  * names inside are the detail you open when you have picked one.
  */
 import { Text, View } from 'react-native';
-import Ionicons from '@expo/vector-icons/Ionicons';
-import type { ActionGroups } from '@mythos/core/bis';
+import type { ActionGroups, ComparisonRow } from '@mythos/core/bis';
 
+import { Icon } from '@/components/Icon';
 import { CollapsibleSection } from '@/components/CollapsibleSection';
 import { colors } from '@/theme';
+
+import { unroutedMessage, unroutedUpgradeSlots } from '../model/actionCoverage';
 
 /** Stable ids so the board can track which sections are open. */
 export type ActionPanelId = 'bosses' | 'dungeons' | 'craft' | 'catalyst';
@@ -49,14 +51,42 @@ function upgradeCount(slots: string[]): string {
 
 interface ActionPanelsProps {
   groups: ActionGroups;
+  /**
+   * The same rows `groups` was derived from. Needed because an empty group
+   * set means two different things — nothing left to chase, or nothing these
+   * panels know how to route you to — and only the rows tell them apart.
+   */
+  rows: ComparisonRow[];
   isExpanded: (id: ActionPanelId) => boolean;
   onToggle: (id: ActionPanelId) => void;
 }
 
-export function ActionPanels({ groups, isExpanded, onToggle }: ActionPanelsProps) {
+/** The quiet line under the panels, and the whole body of the empty one. */
+function Unrouted({ message }: { message: string }) {
+  return (
+    <View
+      accessible
+      accessibilityLabel={message}
+      className="flex-row items-start gap-2 rounded-xl border border-border bg-panel p-4"
+    >
+      <Icon name="help-circle" size={16} color={colors['text-dim']} style={{ marginTop: 2 }} />
+      <Text className="flex-1 text-xs leading-5 text-text-dim">{message}</Text>
+    </View>
+  );
+}
+
+export function ActionPanels({ groups, rows, isExpanded, onToggle }: ActionPanelsProps) {
   const { raidTargets, dungeonTargets, craftTargets, catalystTargets } = groups;
   const total =
     raidTargets.length + dungeonTargets.length + craftTargets.length + catalystTargets.length;
+  const unrouted = unroutedMessage(unroutedUpgradeSlots(rows));
+
+  // No panels *and* nothing unrouted is the only case where this content
+  // type is genuinely finished. With upgrades the panels cannot route,
+  // saying so is the honest empty state — see model/actionCoverage.ts.
+  if (total === 0 && unrouted) {
+    return <Unrouted message={unrouted} />;
+  }
 
   if (total === 0) {
     return (
@@ -65,7 +95,7 @@ export function ActionPanels({ groups, isExpanded, onToggle }: ActionPanelsProps
         accessibilityLabel="No upgrades left for this content type — every slot with a target is already best in slot."
         className="flex-row items-center gap-2 rounded-xl border border-severity-bis/30 bg-severity-bis/10 p-4"
       >
-        <Ionicons name="trophy" size={16} color={colors.severity.bis} />
+        <Icon name="trophy" size={16} color={colors.severity.bis} />
         <Text className="flex-1 text-xs leading-5 text-text-muted">
           Nothing left to chase here — every slot with a target is already best in slot.
         </Text>
@@ -146,6 +176,10 @@ export function ActionPanels({ groups, isExpanded, onToggle }: ActionPanelsProps
           />
         </CollapsibleSection>
       ) : null}
+
+      {/* Panels were rendered, but they do not cover everything. Without
+          this the omission is invisible: four sections that look complete. */}
+      {unrouted ? <Unrouted message={unrouted} /> : null}
     </View>
   );
 }

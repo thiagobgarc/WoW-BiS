@@ -22,15 +22,15 @@
  */
 import type { ReactNode } from 'react';
 import { Pressable, Text, View } from 'react-native';
-import Ionicons from '@expo/vector-icons/Ionicons';
 
+import { Icon, type IconName } from '@/components/Icon';
 import { colors } from '@/theme';
 
 interface CollapsibleSectionProps {
   title: string;
   /** Rendered beside the title and announced after it, e.g. "3". */
   count: number;
-  icon: React.ComponentProps<typeof Ionicons>['name'];
+  icon: IconName;
   expanded: boolean;
   onToggle: () => void;
   children: ReactNode;
@@ -51,12 +51,12 @@ export function CollapsibleSection({
         accessibilityState={{ expanded }}
         accessibilityLabel={`${title}, ${count} ${count === 1 ? 'item' : 'items'}`}
         onPress={onToggle}
-        className="min-h-11 flex-row items-center gap-2 p-4"
+        className="min-h-[44px] flex-row items-center gap-2 p-4"
       >
-        <Ionicons name={icon} size={16} color={colors['text-muted']} />
+        <Icon name={icon} size={16} color={colors['text-muted']} />
         <Text className="flex-1 text-sm font-bold text-text">{title}</Text>
         <Text className="text-xs font-semibold text-text-dim">{count}</Text>
-        <Ionicons
+        <Icon
           name={expanded ? 'chevron-up' : 'chevron-down'}
           size={16}
           color={colors['text-dim']}

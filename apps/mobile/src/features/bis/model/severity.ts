@@ -14,18 +14,15 @@
  * not the same circle in four fills — because "outline vs. filled" is
  * exactly the distinction that disappears at a glance on a phone.
  */
-import type { ComponentProps } from 'react';
-import type Ionicons from '@expo/vector-icons/Ionicons';
+import type { IconName } from '@/components/Icon';
 import type { ComparisonRow, Severity } from '@mythos/core/bis';
 import { slotLabel, sourceLabel } from '@mythos/core/utils';
 
 import { colors } from '@/theme';
 
-type IoniconName = ComponentProps<typeof Ionicons>['name'];
-
 export interface SeverityStyle {
   label: string;
-  icon: IoniconName;
+  icon: IconName;
   /** For the handful of RN APIs that take a color, not a className. */
   color: string;
   /** Chip container classes — tinted background, matching border. */

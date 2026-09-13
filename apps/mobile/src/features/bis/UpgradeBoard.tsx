@@ -33,11 +33,11 @@
  */
 import { useCallback, useMemo, useState } from 'react';
 import { Text, View } from 'react-native';
-import Ionicons from '@expo/vector-icons/Ionicons';
 import { compareGear, deriveActionGroups, type ContentType } from '@mythos/core/bis';
 import type { CharacterBis } from '@mythos/api-contract';
 import type { EquipmentBySlot, EquipmentSlot } from '@mythos/core/character';
 
+import { Icon } from '@/components/Icon';
 import { SegmentedControl } from '@/components/SegmentedControl';
 import { NO_SEASON_SLOTS, useMeta } from '@/features/meta/api/useMeta';
 import { colors } from '@/theme';
@@ -60,7 +60,7 @@ function Notice({ message }: { message: string }) {
       accessibilityLabel={message}
       className="flex-row items-start gap-2 rounded-xl border border-border bg-panel p-4"
     >
-      <Ionicons name="information-circle-outline" size={16} color={colors['text-muted']} />
+      <Icon name="information-circle-outline" size={16} color={colors['text-muted']} />
       <Text className="flex-1 text-xs leading-5 text-text-muted">{message}</Text>
     </View>
   );
@@ -167,7 +167,12 @@ export function UpgradeBoard({ equipment, bis }: UpgradeBoardProps) {
             ))}
           </View>
 
-          <ActionPanels groups={groups} isExpanded={isPanelExpanded} onToggle={togglePanel} />
+          <ActionPanels
+            groups={groups}
+            rows={result.rows}
+            isExpanded={isPanelExpanded}
+            onToggle={togglePanel}
+          />
         </>
       )}
     </View>

@@ -17,11 +17,11 @@
  */
 import { memo } from 'react';
 import { Pressable, Text, View } from 'react-native';
-import Ionicons from '@expo/vector-icons/Ionicons';
 import type { ComparisonRow, Target } from '@mythos/core/bis';
 import type { EquipmentSlot } from '@mythos/core/character';
 import { slotLabel, sourceLabel } from '@mythos/core/utils';
 
+import { Icon } from '@/components/Icon';
 import { ItemIcon } from '@/features/character/components/ItemIcon';
 import { colors } from '@/theme';
 
@@ -43,7 +43,7 @@ interface ComparisonRowCardProps {
 function TargetLine({ target }: { target: Target }) {
   return (
     <View className="flex-row items-start gap-3">
-      <View className="min-h-11 min-w-11 items-center justify-center rounded-lg border-2 border-accent/40 bg-accent-softer px-2">
+      <View className="min-h-[44px] min-w-[44px] items-center justify-center rounded-lg border-2 border-accent/40 bg-accent-softer px-2">
         <Text className="text-[10px] uppercase tracking-wide text-text-dim">Rank</Text>
         <Text className="text-sm font-bold text-text">{target.rank}</Text>
       </View>
@@ -98,7 +98,7 @@ function ComparisonRowCardImpl({ row, expanded, onToggleAlternatives }: Comparis
           <>
             <View className="my-3 flex-row items-center gap-2">
               <View className="h-px flex-1 bg-border" />
-              <Ionicons name={style.icon} size={14} color={style.color} />
+              <Icon name={style.icon} size={14} color={style.color} />
               <Text className={`text-xs font-bold ${style.text}`}>{deltaLabel(row)}</Text>
               <View className="h-px flex-1 bg-border" />
             </View>
@@ -120,9 +120,9 @@ function ComparisonRowCardImpl({ row, expanded, onToggleAlternatives }: Comparis
             accessibilityState={{ expanded }}
             accessibilityLabel={`${alternatives} alternative${alternatives > 1 ? 's' : ''} for ${slotLabel(row.physicalSlot)}`}
             onPress={() => onToggleAlternatives(row.physicalSlot)}
-            className="mt-3 min-h-11 flex-row items-center gap-1 border-t border-border pt-3"
+            className="mt-3 min-h-[44px] flex-row items-center gap-1 border-t border-border pt-3"
           >
-            <Ionicons
+            <Icon
               name={expanded ? 'chevron-down' : 'chevron-forward'}
               size={14}
               color={colors.link}

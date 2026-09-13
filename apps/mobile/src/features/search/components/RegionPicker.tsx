@@ -44,7 +44,7 @@ export function RegionPicker({ value, onChange }: RegionPickerProps) {
               accessibilityState={{ selected, checked: selected }}
               accessibilityLabel={region.toUpperCase()}
               onPress={() => onChange(region)}
-              className={`min-h-11 flex-1 items-center justify-center rounded-lg ${
+              className={`min-h-[44px] flex-1 items-center justify-center rounded-lg ${
                 selected ? 'bg-accent-soft' : ''
               }`}
             >

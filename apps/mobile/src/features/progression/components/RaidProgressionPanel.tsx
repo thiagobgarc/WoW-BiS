@@ -17,10 +17,10 @@
  */
 import { useState } from 'react';
 import { Pressable, Text, View } from 'react-native';
-import Ionicons from '@expo/vector-icons/Ionicons';
 import type { DomainRaidDifficultyProgress, DomainRaidProgress } from '@mythos/core/progression';
 import { timeAgo } from '@mythos/core/utils';
 
+import { Icon } from '@/components/Icon';
 import { Meter } from '@/components/Meter';
 import { colors } from '@/theme';
 
@@ -79,11 +79,11 @@ function DifficultySection({
         accessibilityLabel={`${difficulty.label}, ${summary}`}
         accessibilityHint={expanded ? 'Hides the boss list' : 'Shows the boss list'}
         onPress={onToggle}
-        className="min-h-11 justify-center"
+        className="min-h-[44px] justify-center"
       >
         <View className="flex-row items-center gap-2">
           <Text className="flex-1 text-sm font-semibold text-text">{difficulty.label}</Text>
-          <Ionicons name={expanded ? 'chevron-up' : 'chevron-down'} size={16} color={colors['text-dim']} />
+          <Icon name={expanded ? 'chevron-up' : 'chevron-down'} size={16} color={colors['text-dim']} />
         </View>
       </Pressable>
 
@@ -114,7 +114,7 @@ function DifficultySection({
                 }
                 className="flex-row items-center gap-2"
               >
-                <Ionicons
+                <Icon
                   name={boss.killed ? 'checkmark-circle' : 'ellipse-outline'}
                   size={16}
                   color={boss.killed ? colors.severity.bis : colors['text-faint']}

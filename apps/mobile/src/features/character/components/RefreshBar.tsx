@@ -15,10 +15,11 @@
  */
 import { useEffect } from 'react';
 import { AccessibilityInfo, Pressable, Text, View } from 'react-native';
-import Ionicons from '@expo/vector-icons/Ionicons';
 import { timeAgo } from '@mythos/core/utils';
 
+import { Icon } from '@/components/Icon';
 import { colors } from '@/theme';
+
 import type { RefreshController } from '../api/useRefreshCharacter';
 
 interface RefreshBarProps {
@@ -55,11 +56,11 @@ export function RefreshBar({ fetchedAt, refresh }: RefreshBarProps) {
           accessibilityHint="Asks Blizzard for a new copy of this character"
           disabled={disabled}
           onPress={refresh.refresh}
-          className={`min-h-11 flex-row items-center gap-1.5 rounded-lg border border-border px-3 ${
+          className={`min-h-[44px] flex-row items-center gap-1.5 rounded-lg border border-border px-3 ${
             disabled ? 'bg-panel' : 'bg-panel active:bg-panel-hover'
           }`}
         >
-          <Ionicons
+          <Icon
             name="refresh"
             size={14}
             color={disabled ? colors['text-faint'] : colors.text}

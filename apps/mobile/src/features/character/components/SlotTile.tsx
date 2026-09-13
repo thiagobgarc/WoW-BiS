@@ -11,9 +11,11 @@
  * `min-h-[88px]` rather than a fixed height: the tile has to grow when the
  * OS font size does, and a fixed height is exactly how the two most
  * space-constrained layouts in this app end up clipping text
- * (mobile-ux.md's Dynamic Type note).
+ * (mobile-ux.md's Dynamic Type note). Phase 9 finished that thought — the
+ * name’s two-line clamp lifts at accessibility text sizes, and the grid
+ * around this tile drops to one column (see `paperDollColumns`).
  */
-import { Pressable, Text, View } from 'react-native';
+import { Pressable, Text, useWindowDimensions, View } from 'react-native';
 import type { DomainItem, EquipmentSlot } from '@mythos/core/character';
 import { slotLabel } from '@mythos/core/utils';
 
@@ -27,6 +29,11 @@ interface SlotTileProps {
 }
 
 export function SlotTile({ slot, item, onPress }: SlotTileProps) {
+  // At ordinary text sizes two lines holds every item name in the game and
+  // keeps sixteen tiles scannable. At accessibility sizes it stops being a
+  // tidy clamp and starts hiding the name, so above 1.3x the tile is allowed
+  // to grow instead — which it can, because its height is a minimum.
+  const { fontScale } = useWindowDimensions();
   const emptySockets = item?.sockets.filter((socket) => !socket.filled).length ?? 0;
 
   return (
@@ -46,7 +53,10 @@ export function SlotTile({ slot, item, onPress }: SlotTileProps) {
           {item ? (
             <>
               {/* Default text color, never the quality color — see ItemIcon. */}
-              <Text numberOfLines={2} className="text-sm font-semibold text-text">
+              <Text
+                numberOfLines={fontScale > 1.3 ? undefined : 2}
+                className="text-sm font-semibold text-text"
+              >
                 {item.name}
               </Text>
               <Text className="mt-0.5 text-xs text-text-dim">

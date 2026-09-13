@@ -19,7 +19,7 @@ export function Button({ label, disabled, ...props }: ButtonProps) {
       accessibilityRole="button"
       accessibilityState={{ disabled: Boolean(disabled) }}
       disabled={disabled}
-      className={`min-h-11 items-center justify-center rounded-xl px-5 ${
+      className={`min-h-[44px] items-center justify-center rounded-xl px-5 ${
         disabled ? 'bg-panel-hover' : 'bg-accent active:bg-accent-hover'
       }`}
       {...props}

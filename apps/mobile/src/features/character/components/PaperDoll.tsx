@@ -21,11 +21,26 @@ import { SlotTile } from './SlotTile';
  * Breakpoints in points, not device classes. A large phone in landscape and
  * a small tablet in portrait want the same thing, and asking "how wide is
  * the window" is the only question that gets that right on both.
+ *
+ * Phase 9 added the second argument. `mobile-ux.md` names the paper doll as
+ * one of the two layouts most likely to clip under Dynamic Type, and the
+ * tile already grows vertically (`min-h`, never `h`) to absorb it — but two
+ * columns of 390pt phone at 200% text leaves each item name about six
+ * characters of width, which no amount of vertical growth fixes. Dividing
+ * the width by the font scale states the relationship directly: **text
+ * twice as large needs the room a screen half as wide would have needed**,
+ * so one rule covers large text, small phones and tablets instead of three.
+ *
+ * The 260 floor is where the fourth tier starts rather than 320, so an
+ * ordinary large-text setting (~1.3-1.5x) keeps two columns and only the
+ * genuinely large ones (2x and up) collapse to a single column.
  */
-export function paperDollColumns(width: number): number {
-  if (width >= 1000) return 4;
-  if (width >= 640) return 3;
-  return 2;
+export function paperDollColumns(width: number, fontScale = 1): number {
+  const effective = width / Math.max(1, fontScale);
+  if (effective >= 1000) return 4;
+  if (effective >= 640) return 3;
+  if (effective >= 260) return 2;
+  return 1;
 }
 
 interface PaperDollProps {
@@ -34,8 +49,8 @@ interface PaperDollProps {
 }
 
 export function PaperDoll({ equipment, onSelectSlot }: PaperDollProps) {
-  const { width } = useWindowDimensions();
-  const columns = paperDollColumns(width);
+  const { width, fontScale } = useWindowDimensions();
+  const columns = paperDollColumns(width, fontScale);
 
   return (
     // No flex `gap` here: percentage-width cells plus a gap overflow the row

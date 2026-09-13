@@ -22,9 +22,9 @@
  */
 import { useCallback, useMemo, useState } from 'react';
 import { Text, View } from 'react-native';
-import Ionicons from '@expo/vector-icons/Ionicons';
 import type { CharacterResponse } from '@mythos/api-contract';
 
+import { Icon } from '@/components/Icon';
 import { CollapsibleSection } from '@/components/CollapsibleSection';
 import { Meter } from '@/components/Meter';
 import { SegmentedControl, type Segment } from '@/components/SegmentedControl';
@@ -59,7 +59,7 @@ function Notice({ message }: { message: string }) {
       accessibilityLabel={message}
       className="flex-row items-start gap-2 rounded-xl border border-border bg-panel p-4"
     >
-      <Ionicons name="information-circle-outline" size={16} color={colors['text-muted']} />
+      <Icon name="information-circle-outline" size={16} color={colors['text-muted']} />
       <Text className="flex-1 text-xs leading-5 text-text-muted">{message}</Text>
     </View>
   );

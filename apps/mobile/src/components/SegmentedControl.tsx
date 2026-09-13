@@ -20,12 +20,19 @@
  * screen is the radiogroup — it selects a value, and nothing below it
  * changes.
  *
+ * It is also the app’s one selection haptic (`lib/haptics.ts`): a thumb
+ * changing tabs is the one target in this app people hit without looking at
+ * it. Firing it here rather than at the two call sites is the same argument
+ * as the accessibility state above — one primitive, one behaviour.
+ *
  * There is no transition animation to gate for reduce-motion: the content
  * swaps instantly. That is a decision, not an omission — a 60ms cross-fade
  * between two full screens of text buys nothing and is one more thing to
  * have to turn off.
  */
 import { Pressable, Text, View } from 'react-native';
+
+import { selection as selectionHaptic } from '@/lib/haptics';
 
 export interface Segment<Id extends string> {
   id: Id;
@@ -61,8 +68,14 @@ export function SegmentedControl<Id extends string>({
             accessibilityState={{ selected, checked: selected }}
             accessibilityLabel={segment.label}
             accessibilityHint={segment.accessibilityHint}
-            onPress={() => onChange(segment.id)}
-            className={`min-h-11 flex-1 items-center justify-center rounded-lg ${
+            // Only on an actual change: re-pressing the active segment is a
+            // no-op, and a no-op that buzzes is how haptics lose their meaning.
+            onPress={() => {
+              if (selected) return;
+              selectionHaptic();
+              onChange(segment.id);
+            }}
+            className={`min-h-[44px] flex-1 items-center justify-center rounded-lg ${
               selected ? 'bg-accent-soft' : ''
             }`}
           >

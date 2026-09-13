@@ -23,7 +23,7 @@ module.exports = {
     '^@/(.*)$': '<rootDir>/src/$1',
   },
   transformIgnorePatterns: [
-    'node_modules/(?!.*(?:react-native|@react-native|expo|@expo|@sentry|nativewind|react-native-css-interop|@shopify/flash-list|standard-navigation|@tanstack|yaml))',
+    'node_modules/(?!.*(?:react-native|@react-native|expo|@expo|@sentry|nativewind|react-native-css-interopstandard-navigation|@tanstack|yaml))',
   ],
   // The first suite in a cold run pays for transforming the React Native
   // tree; 5s is not enough for that on a laptop, and a timeout there looks

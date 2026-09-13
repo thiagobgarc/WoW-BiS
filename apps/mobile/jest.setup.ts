@@ -71,6 +71,9 @@ jest.mock('@gorhom/bottom-sheet', () => {
     BottomSheetScrollView: passthrough,
     BottomSheetView: passthrough,
     BottomSheetBackdrop: () => null,
+    // Phase 9 renders a custom handle to silence the stock one for screen
+    // readers; the mock needs the component to exist, not to draw anything.
+    BottomSheetHandle: () => null,
     useBottomSheetTimingConfigs: () => ({}),
   };
 });

@@ -25,6 +25,7 @@ import { MythosApiError } from '@mythos/api-client';
 import type { CharacterParams, CharacterResponse } from '@mythos/api-contract';
 
 import { api } from '@/lib/api';
+import { refreshFailed, refreshSucceeded } from '@/lib/haptics';
 import { characterQueryKey } from './useCharacter';
 import {
   REFRESH_COOLDOWN_SECONDS,
@@ -72,8 +73,14 @@ export function useRefreshCharacter(params: CharacterParams | null): RefreshCont
     onSuccess: (fresh: CharacterResponse, { target }) => {
       queryClient.setQueryData(characterQueryKey(target.region, target.realm, target.name), fresh);
       setCooldownUntil(cooldownFrom(REFRESH_COOLDOWN_SECONDS, Date.now()));
+      // A refresh that returns the same gear changes nothing on screen, so
+      // this is sometimes the only signal that it worked at all.
+      refreshSucceeded();
     },
     onError: (error: unknown) => {
+      // Every failure branch below, the 429 included: each one means the
+      // pull did not take, which is the thing worth feeling.
+      refreshFailed();
       if (error instanceof MythosApiError && error.code === 'rate_limited') {
         // The server's own number, even though it is the full cooldown
         // rather than what is left — over-waiting is the safe direction.

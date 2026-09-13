@@ -198,4 +198,44 @@ describe('UpgradeBoard', () => {
     // Not the empty Raid board, which looks broken.
     await findByText('Cowl of the Deep Delve');
   });
+
+  describe('action panels', () => {
+    /**
+     * The seeded fixture deliberately has no unrouted upgrade: its one
+     * vault target is a neck the character already out-levels. So this
+     * builds the case rather than borrowing it — a PvP target, above the
+     * equipped item, which no panel groups and which is therefore exactly
+     * the row Phase 8's device pass saw go missing.
+     */
+    const withPvpTarget: CharacterBis = {
+      ...SEEDED,
+      entries: SEEDED.entries.map((entry) =>
+        entry.slot === 'neck' && entry.contentType === 'raid'
+          ? { ...entry, itemName: "Gladiator's Chain", itemLevel: 660, source: { type: 'pvp' as const } }
+          : entry,
+      ),
+    };
+
+    it('names the upgrades no panel can route you to instead of dropping them', async () => {
+      const { findByText } = await board(withPvpTarget);
+
+      await findByText(/Neck has an upgrade with no farm route/);
+    });
+
+    it('never claims everything is BiS while an upgrade is still listed', async () => {
+      const { findByText, queryByText } = await board(withPvpTarget);
+
+      await findByText(/no farm route/);
+      // The exact sentence Phase 8's device pass caught sitting underneath
+      // a screen of Major-gap rows.
+      expect(queryByText(/every slot with a target is already best in slot/)).toBeNull();
+    });
+
+    it('stays quiet when every upgrade on the board is routed', async () => {
+      const { findByText, queryByText } = await board();
+
+      await findByText('Bosses to prioritise');
+      expect(queryByText(/no farm route/)).toBeNull();
+    });
+  });
 });

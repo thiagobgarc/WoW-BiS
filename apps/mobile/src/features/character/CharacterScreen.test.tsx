@@ -57,6 +57,15 @@ jest.mock('expo-router', () => ({
 
 const ARTHAS = { region: 'us', realm: 'illidan', name: 'Arthas' };
 
+/** How many subtrees are currently hidden from a screen reader. */
+function countHidden(node: unknown): number {
+  if (Array.isArray(node)) return node.reduce<number>((sum, child) => sum + countHidden(child), 0);
+  if (!node || typeof node !== 'object') return 0;
+  const element = node as { props?: Record<string, unknown>; children?: unknown };
+  const self = element.props?.accessibilityElementsHidden === true ? 1 : 0;
+  return self + countHidden(element.children);
+}
+
 beforeEach(() => {
   // The manager is module-global and survives between tests; a suite that
   // left it offline would silently put an offline banner on every screen.
@@ -78,6 +87,9 @@ describe('CharacterScreen', () => {
     expect(getByText('<Scourge>')).toBeTruthy();
 
     // Three of five tier slots are flagged in the fixture.
+    // The label reads as one sentence, not as the value twice: Phase 9's
+    // device pass found this announcing "...4pc active: 4/5, 4pc active".
+    expect(getByLabelText("Tier set: 3 of 5 pieces, 2pc active")).toBeTruthy();
     expect(getByText('3/5')).toBeTruthy();
     expect(getByText('2pc active')).toBeTruthy();
 
@@ -299,6 +311,23 @@ describe('CharacterScreen', () => {
       await findByText('Nothing equipped in this slot.');
     });
 
+    it('hides the screen behind it, so a swipe cannot walk out of the sheet', async () => {
+      const { findByText, getByLabelText, toJSON } = await renderWithProviders(<CharacterScreen />);
+      await findByText('Arthas');
+
+      const hidden = () => countHidden(toJSON());
+      const closed = hidden();
+
+      fireEvent.press(getByLabelText(/^Main Hand: Frostmourne/));
+      await findByText('Enchanted: Rune of the Fallen Crusader');
+
+      // The sheet is non-modal by design (see SlotSheet.tsx), so nothing
+      // hides the paper doll underneath unless the screen says so. Without
+      // this, TalkBack swipes straight out of the sheet into tiles that are
+      // not on screen — which is what Phase 9's device pass did.
+      expect(hidden()).toBeGreaterThan(closed);
+    });
+
     it('names an unfilled socket in the sheet, not only as a chip', async () => {
       const { findByText, getByLabelText, getByText } = await renderWithProviders(<CharacterScreen />);
       await findByText('Arthas');
@@ -307,6 +336,25 @@ describe('CharacterScreen', () => {
 
       await findByText('Socket: Culminating Ruby');
       expect(getByText('Empty Socket')).toBeTruthy();
+    });
+  });
+
+  describe('loading', () => {
+    it('announces the wait once and hides the placeholder blocks from a screen reader', async () => {
+      // Never resolves: the screen stays in the state this test is about.
+      mockGetCharacter.mockReturnValue(new Promise(() => {}));
+
+      const { findByLabelText, queryByLabelText } = await renderWithProviders(<CharacterScreen />);
+
+      // One element carries the whole announcement. The sixteen grey tiles
+      // behind it are decoration and must not be focus stops — a skeleton
+      // that announces block by block is worse than a spinner.
+      const region = await findByLabelText('Loading Arthas');
+      expect(region.props.accessibilityState).toEqual({ busy: true });
+
+      // Nothing real has arrived, so nothing real may be claimed: the paper
+      // doll's own label belongs to the loaded screen.
+      expect(queryByLabelText('Equipped gear')).toBeNull();
     });
   });
 });

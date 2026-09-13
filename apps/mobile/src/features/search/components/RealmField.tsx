@@ -57,7 +57,7 @@ export function RealmField({ region, value, onChange, onSubmitEditing }: RealmFi
               accessibilityRole="button"
               accessibilityLabel={`Realm ${realm}`}
               onPress={() => onChange(realm)}
-              className={`min-h-11 justify-center px-4 py-2 active:bg-panel-hover ${
+              className={`min-h-[44px] justify-center px-4 py-2 active:bg-panel-hover ${
                 index > 0 ? 'border-t border-border' : ''
               }`}
             >

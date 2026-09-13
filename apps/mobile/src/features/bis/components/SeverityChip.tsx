@@ -7,8 +7,9 @@
  * "Upgrade" between the slot name and the item is noise, not information.
  */
 import { Text, View } from 'react-native';
-import Ionicons from '@expo/vector-icons/Ionicons';
 import type { Severity } from '@mythos/core/bis';
+
+import { Icon } from '@/components/Icon';
 
 import { SEVERITY_STYLE } from '../model/severity';
 
@@ -21,7 +22,7 @@ export function SeverityChip({ severity }: { severity: Severity }) {
       importantForAccessibility="no-hide-descendants"
       className={`flex-row items-center gap-1 rounded-md border px-2 py-1 ${style.chip}`}
     >
-      <Ionicons name={style.icon} size={12} color={style.color} />
+      <Icon name={style.icon} size={12} color={style.color} />
       <Text className={`text-xs font-semibold ${style.text}`}>{style.label}</Text>
     </View>
   );

@@ -13,11 +13,12 @@
  * exists to answer.
  */
 import { Text, View } from 'react-native';
-import Ionicons from '@expo/vector-icons/Ionicons';
 import type { DomainDungeonProgress, DomainMythicPlusProfile } from '@mythos/core/progression';
 import { timeAgo } from '@mythos/core/utils';
 
+import { Icon } from '@/components/Icon';
 import { colors } from '@/theme';
+
 import { formatRunDuration, formatScore, runSummaryLabel } from '../model/runFormat';
 
 interface MythicPlusPanelProps {
@@ -74,7 +75,7 @@ function DungeonCard({ progress: { dungeon, run } }: { progress: DomainDungeonPr
       {run ? (
         <View className="mt-2 flex-row flex-wrap items-center gap-x-4 gap-y-1">
           <View className="flex-row items-center gap-1">
-            <Ionicons
+            <Icon
               name={run.timed ? 'checkmark-circle' : 'close-circle'}
               size={14}
               color={run.timed ? colors.severity.bis : colors.severity.gap}

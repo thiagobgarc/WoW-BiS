@@ -6,10 +6,9 @@
  * cannot distinguish amber from blue still gets "warning" from the glyph,
  * and a screen reader gets it from `accessibilityLabel`.
  */
-import type { ComponentProps } from 'react';
 import { Text, View } from 'react-native';
-import Ionicons from '@expo/vector-icons/Ionicons';
 
+import { Icon, type IconName } from '@/components/Icon';
 import { colors } from '@/theme';
 
 export type BannerTone = 'info' | 'warning';
@@ -29,7 +28,7 @@ const TONES = {
   },
 } as const satisfies Record<
   BannerTone,
-  { icon: ComponentProps<typeof Ionicons>['name']; color: string; container: string; prefix: string }
+  { icon: IconName; color: string; container: string; prefix: string }
 >;
 
 interface BannerProps {
@@ -47,7 +46,7 @@ export function Banner({ tone, message }: BannerProps) {
       accessibilityLabel={`${style.prefix}: ${message}`}
       className={`flex-row items-start gap-2 rounded-lg border p-3 ${style.container}`}
     >
-      <Ionicons name={style.icon} size={16} color={style.color} />
+      <Icon name={style.icon} size={16} color={style.color} />
       <Text className="flex-1 text-xs leading-5 text-text-muted">{message}</Text>
     </View>
   );

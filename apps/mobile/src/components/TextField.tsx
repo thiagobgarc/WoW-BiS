@@ -29,7 +29,7 @@ export const TextField = forwardRef<TextInput, TextFieldProps>(function TextFiel
         ref={ref}
         accessibilityLabel={label}
         placeholderTextColor={colors['text-faint']}
-        className="min-h-11 rounded-xl border border-border bg-panel px-4 py-2 text-base text-text"
+        className="min-h-[44px] rounded-xl border border-border bg-panel px-4 py-2 text-base text-text"
         {...props}
       />
     </View>

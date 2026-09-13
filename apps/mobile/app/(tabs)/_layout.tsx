@@ -7,8 +7,8 @@
  * root Stack rather than here.
  */
 import { Tabs } from 'expo-router';
-import Ionicons from '@expo/vector-icons/Ionicons';
 
+import { Icon } from '@/components/Icon';
 import { FEATURES } from '@/features';
 import { colors } from '@/theme';
 
@@ -26,7 +26,7 @@ export default function TabsLayout() {
         name="index"
         options={{
           title: 'Search',
-          tabBarIcon: ({ color, size }) => <Ionicons name="search" color={color} size={size} />,
+          tabBarIcon: ({ color, size }) => <Icon name="search" color={color} size={size} />,
         }}
       />
       <Tabs.Screen
@@ -34,14 +34,14 @@ export default function TabsLayout() {
         options={{
           title: 'Meta',
           href: FEATURES.meta ? undefined : null,
-          tabBarIcon: ({ color, size }) => <Ionicons name="trophy-outline" color={color} size={size} />,
+          tabBarIcon: ({ color, size }) => <Icon name="trophy-outline" color={color} size={size} />,
         }}
       />
       <Tabs.Screen
         name="settings"
         options={{
           title: 'Settings',
-          tabBarIcon: ({ color, size }) => <Ionicons name="settings-outline" color={color} size={size} />,
+          tabBarIcon: ({ color, size }) => <Icon name="settings-outline" color={color} size={size} />,
         }}
       />
     </Tabs>

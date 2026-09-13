@@ -12,8 +12,8 @@
  * are seeded from the same sources most players copy.
  */
 import { Text, View } from 'react-native';
-import Ionicons from '@expo/vector-icons/Ionicons';
 
+import { Icon } from '@/components/Icon';
 import { CollapsibleSection } from '@/components/CollapsibleSection';
 import { colors } from '@/theme';
 
@@ -55,7 +55,7 @@ function DiffRow({ row }: { row: TalentDiffRow }) {
           {detail ? ` · ${detail}` : ''}
         </Text>
       </View>
-      <Ionicons name={style.icon} size={16} color={style.color} />
+      <Icon name={style.icon} size={16} color={style.color} />
     </View>
   );
 }
@@ -74,7 +74,7 @@ export function TalentDiffList({ rows, openKinds, onToggleKind }: TalentDiffList
         accessibilityLabel="This build matches the recommended one exactly."
         className="flex-row items-center gap-2 rounded-xl border border-severity-bis/30 bg-severity-bis/10 p-4"
       >
-        <Ionicons name="checkmark-circle" size={16} color={colors.severity.bis} />
+        <Icon name="checkmark-circle" size={16} color={colors.severity.bis} />
         <Text className="flex-1 text-xs leading-5 text-text-muted">
           This build matches the recommended one exactly — every pick, every point.
         </Text>

@@ -43,7 +43,7 @@ export function RecentCharacterList({ characters, onSelect, filtered }: RecentCh
             character.className ? `, ${character.className}` : ''
           }`}
           onPress={() => onSelect(character)}
-          className="min-h-11 flex-row items-center overflow-hidden rounded-xl border border-border bg-panel active:bg-panel-hover"
+          className="min-h-[44px] flex-row items-center overflow-hidden rounded-xl border border-border bg-panel active:bg-panel-hover"
         >
           <View
             className="h-full w-1 self-stretch"

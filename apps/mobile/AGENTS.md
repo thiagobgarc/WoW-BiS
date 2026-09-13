@@ -68,3 +68,12 @@ Repo-specific rules:
   defect, and the two obvious fixes both break the suite outright — the
   header comment on `typeRealm` records what was tried. Don't "fix" it
   without running the whole suite.
+- **Tailwind's spacing scale is not dp here.** NativeWind's Metro plugin
+  defaults to `inlineRem = 14`, not the web's 16, so `h-11` — "44px" in
+  every Tailwind reference — lands as **38.5dp** on a device. Every
+  interactive element in this app was written `min-h-11` in the belief it
+  was meeting `mobile-ux.md`'s ≥44dp touch-target rule, and a Phase 9
+  `uiautomator` dump measured all of them at 101px on a 420dpi screen: 38.5.
+  Sizes that have to be a real measurement — touch targets above all — are
+  written in explicit brackets (`min-h-[44px]`), never on the spacing scale.
+  Nothing in a test catches this; only a dump or a ruler does.

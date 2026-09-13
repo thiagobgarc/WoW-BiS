@@ -835,3 +835,194 @@ the measurement justifies it, is a query parameter or a separate `/v1`
 endpoint, either of which is a contract change. **Measure it first**: nobody
 has weighed the field, and the number belongs in Phase 9's performance pass
 before anyone changes a contract over it.
+
+## 14. What Phase 9 settled
+
+Polish and accessibility. Sections 10–13 each recorded accessibility as done
+rather than deferred, so this phase was expected to be confirmation and
+measurement rather than retrofitting. That expectation was half right: the
+*code* was written correctly throughout, and a device pass with
+`uiautomator` still found four defects no test could have caught, one of
+them app-wide. The pass is the point of the phase.
+
+### 14.1 What the device pass found
+
+1. **Every touch target in the app was 38.5dp, not 44.** `mobile-ux.md`
+   requires ≥44×44pt "throughout, including slot tiles and severity chips",
+   and every interactive element was written `min-h-11` — which is `44px` in
+   every Tailwind reference and was read as meeting the rule. It does not:
+   NativeWind's Metro plugin defaults `inlineRem` to **14**, not the web's
+   16, so `h-11` is 2.75 × 14 = **38.5dp**. A dump measured eleven
+   components at 101px on a 420dpi screen, which is 38.5 exactly. All of
+   them are now `min-h-[44px]`, an explicit measurement rather than a scale
+   step, and the trap is recorded in `apps/mobile/AGENTS.md`. Nothing in the
+   suite could have caught this: the code was self-consistently wrong, and
+   only a ruler disagreed.
+2. **The tab bar announced ", Search" and ", Settings".** Icon fonts draw a
+   private-use codepoint inside a `<Text>`, which contributes an empty
+   fragment to any merged description. Rather than remember a prop at
+   twenty-one call sites, `components/Icon.tsx` now wraps every icon in the
+   app and hides it from the accessibility tree — every icon here is paired
+   with real text or sits inside a labelled parent, so the rule "icons are
+   decoration" holds app-wide and is enforced in one place.
+3. **The tier tile said everything twice**: "Tier set: 4 of 5 pieces, 4pc
+   active: 4/5, 4pc active". `Stat` composes `hint` and `value`, and the
+   tier caller passed a `hint` that already contained the value. The fix
+   separates the two — `hint` is the spoken *name*, and a new `spokenValue`
+   carries a form worth hearing where the visible one is not ("4 of 5
+   pieces" aloud, "4/5" on screen).
+4. **The slot sheet announced its own chrome three times** before a word
+   about the item — "Bottom Sheet, adjustable", "Bottom sheet handle",
+   "Bottom Sheet". `@gorhom/bottom-sheet`'s accessibility props are
+   nullable, so `null` opts out instead of falling back to its defaults, and
+   a custom `handleComponent` renders the library's own handle with its
+   announcement removed and its appearance untouched. Three stops became
+   one; the remaining container stop is a landmark at the top of an open
+   sheet, and chasing it further into the library was not worth the phase.
+
+### 14.2 The one thing that could not be fixed
+
+**The slot sheet does not hide the screen behind it from TalkBack.** A swipe
+walks straight out of the open sheet into the sixteen paper-doll tiles
+underneath, reading content that is not on screen. The sheet is non-modal by
+a Phase 6 decision (Section 11: `BottomSheetModal` portals into a container
+rendered before the app tree, so on Android the app paints over it), which
+means the modal half — containment — has to be supplied by hand.
+
+It is written, and on Android it does not work. `accessibilityElementsHidden`
+is the iOS mechanism and is correct. Its Android counterpart,
+`importantForAccessibility="no-hide-descendants"`, had no effect on RN
+0.86's New Architecture: verified against a dump with the value **hardcoded
+on**, again with `collapsable={false}` to rule out view flattening, and
+again through RN's `aria-hidden` alias. The subtree stayed in the tree all
+three times. The props stay in the source because they express the right
+intent and cost nothing, and because iOS is unverified rather than known
+broken — no Mac was available this phase.
+
+What Android needs is one of: `BottomSheetModal`, which reopens the Phase 6
+painting-order trade-off; explicit focus management on open; or a newer RN.
+**This is the phase's open item, and it is recorded rather than papered
+over.**
+
+### 14.3 Decisions
+
+5. **Loading is a skeleton, not a spinner.** The character screen showed a
+   centered `ActivityIndicator` and "Loading Arthas…", which says that
+   something is happening but not what is arriving, and moves every block
+   down the page when the data lands. `CharacterSkeleton` traces the real
+   screen — header, refresh bar, tabs, paper doll, stats — so arrival
+   changes the contents of the layout rather than the layout. It reuses
+   `paperDollColumns`, so the grid it draws is the grid about to appear.
+6. **The skeleton is one announcement and forty silent blocks.** Sixteen
+   grey rectangles read out one at a time is worse than a spinner. The
+   wrapper is the single accessible element, carries `busy`, and hides its
+   descendants on both platforms. Measured on device: **3 announced nodes of
+   45.**
+7. **Reduce motion stops the pulse; it does not remove the skeleton.** The
+   shape is the information and the animation is decoration, so with the
+   setting on the blocks hold at the midpoint opacity. The pulse is RN's
+   `Animated` rather than Reanimated — opacity on the native driver is all
+   it needs, and it keeps the blocks out of NativeWind's Reanimated interop.
+8. **Dynamic Type: the paper doll drops to one column before it clips.**
+   `mobile-ux.md` named the paper doll as one of the two layouts most likely
+   to clip, and the tile already grew vertically. Growth alone does not fix
+   two columns on a 390pt phone at 200% text, where each item name gets
+   about six characters. `paperDollColumns` now divides the width by the
+   font scale — *text twice as large needs the room a screen half as wide
+   would have needed* — so one rule covers large text, small phones and
+   tablets. The item name's two-line clamp also lifts above 1.3×. Verified
+   at 2×: one column, nothing clipped, every name in full.
+9. **Haptics are a fixed vocabulary of three, not an API.** `lib/haptics.ts`
+   exports named events rather than `impactAsync`, because the risk with
+   haptics is editorial, not technical: an app that buzzes on every tap
+   teaches people to ignore the buzz. The rule for adding a fourth is the
+   rule these three were chosen by — **feedback is for a state change you
+   cannot see coming, or a selection made without looking.** So: the
+   segmented control, and only on an actual change; and pull-to-refresh
+   succeeding or failing, the one action with a delayed, uncertain and
+   sometimes invisible outcome. Every call is fire-and-forget and swallows
+   its error. Both platforms suppress haptics system-wide when the user
+   turns them off, so there is no in-app toggle and no `AccessibilityInfo`
+   gate to write — unlike reduce motion, which RN reports but does not
+   enforce.
+10. **The app icon is the web's mark, ported, not new art.**
+    `favicon.svg`'s crimson pentagon on `#0a0e27` is generated at six sizes
+    with `sharp`: full-bleed and square for iOS (the OS masks it, and a
+    pre-rounded icon gets a dark halo inside Apple's own radius), foreground
+    and background for Android's adaptive icon with the mark inside the 66%
+    safe zone, a white silhouette for themed icons, a transparent splash
+    mark on the window background, and the rounded square only for web,
+    where nothing masks it. **This is deliberately a port and not a
+    commissioned icon** — a flat pentagon is honest brand parity and a weak
+    app icon, and replacing it with real art belongs with the other store
+    work in Phase 10.
+11. **Dark-only is confirmed, not revisited.** Section 8.9 settled it and
+    the roadmap asked this phase to "decide whether light mode exists at all
+    and say so". It does not, in v1. Nothing in Phases 5–9 has made the
+    token structure harder to add a light palette to: `themes[name]` is
+    still the only place a static color lives, `accentVars` is still the
+    only runtime one, and a drift test still pins both to the web's
+    stylesheet. Adding light mode remains a new key plus a provider.
+12. **Error states were already complete; empty states were not.**
+    `errorCopy.ts` is a `Record<ClientErrorCode, …>` — exhaustive by type,
+    so every code the client can produce has a screen, and the roadmap's
+    "empty and error states per code" needed no work on the error half. The
+    empty half had a real defect; see 14.4.
+
+### 14.4 The action panels' empty state was lying
+
+Phase 8's device pass found the upgrade board saying "every slot with a
+target is already best in slot" directly underneath visible Major-gap rows,
+and left it unfixed as pre-existing. It is this: `deriveActionGroups` buckets
+four of the eight source types — raid, dungeon, crafted, catalyst — so a
+target from the vault, PvP, a world drop or a profession produces no group
+at all, and an empty *panel set* was being rendered as an empty *board*.
+
+`features/bis/model/actionCoverage.ts` now counts what the panels cannot
+route you to, and the board says so — as the whole body of the empty state,
+and as a line underneath the panels when they render but do not cover
+everything, which is the same omission made invisible by four sections that
+look complete.
+
+Two things about where this lives. It is **in the mobile Application layer,
+not in `packages/core`**: what was wrong is the claim, and the claim is
+mobile's — widening a shared function to fix a sentence on one client is how
+a polish phase becomes a cross-app behaviour change. **The core gap is
+therefore still open, and the web still has it.** And the counter requires a
+condition `deriveActionGroups` has no need of — a **positive ilvl delta**.
+`compareGear` reports a slot whose equipped item out-levels the list as
+'close' with a negative delta, and the seeded fixture has one; counting it
+would have traded the old overclaim for a new one ("Neck has an upgrade").
+That was caught by running the fixture, not by reasoning about it.
+
+### 14.5 Cleared from earlier phases
+
+- **`@shopify/flash-list` is removed.** Section 12 flagged it as imported
+  nowhere after Phases 5, 6 and 7 each declined it for the same reason. Gone
+  from `package.json`, from `jest.config.js`'s `transformIgnorePatterns` and
+  from the README's version table.
+- **Phases 7 and 8 are verified on a device.** Sections 12 and 13 both close
+  with "nothing here has been on a device"; that was overtaken on
+  2026-09-10, and this phase exercised the same surfaces again. Those
+  caveats are stale.
+- **The talent-tree payload is measured.** Section 13 asked for a number
+  before anyone changed the contract over it: `talents.tree` is **42,921 of
+  a 68,130-byte** character response — **63%**, shipped on every character
+  load while `FEATURES.talents` is `false`. The number justifies the
+  concern; the contract change itself is still not this phase's work.
+
+### 14.6 What was verified, and how
+
+An emulator pass on `falar_pixel` (Android, 420dpi) against the local API,
+driven by `uiautomator` dumps rather than screenshots — the dump *is* the
+accessibility tree, so it answers "what does TalkBack say" directly instead
+of by inference. Covered: the search screen, the character screen and both
+v1 tabs, the slot sheet, the upgrade board and its action panels, the
+loading skeleton (forced by throttling the emulator's network to GPRS), and
+the whole character screen again at 2× font scale.
+
+**Not verified: iOS.** No Mac was available, so VoiceOver, Dynamic Type on
+iOS and the icon's appearance under Apple's mask are all unconfirmed. The
+roadmap's exit criterion asks for a pass on *both* platforms, and half of it
+is outstanding. Given that 14.2 turns on a platform difference, that half is
+worth more than usual here.

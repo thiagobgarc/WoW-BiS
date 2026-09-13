@@ -10,10 +10,11 @@
  * button that wastes the user's rate-limit budget on their behalf.
  */
 import { Text, View } from 'react-native';
-import Ionicons from '@expo/vector-icons/Ionicons';
 
+import { Icon } from '@/components/Icon';
 import { Button } from '@/components/Button';
 import { colors } from '@/theme';
+
 import type { ErrorCopy } from '../model/errorCopy';
 
 interface CharacterErrorStateProps {
@@ -24,7 +25,7 @@ interface CharacterErrorStateProps {
 export function CharacterErrorState({ copy, onRetry }: CharacterErrorStateProps) {
   return (
     <View accessible accessibilityRole="alert" className="mt-10 items-center gap-3 px-2">
-      <Ionicons name="alert-circle-outline" size={40} color={colors['text-faint']} />
+      <Icon name="alert-circle-outline" size={40} color={colors['text-faint']} />
       <Text accessibilityRole="header" className="text-center text-lg font-semibold text-text">
         {copy.title}
       </Text>

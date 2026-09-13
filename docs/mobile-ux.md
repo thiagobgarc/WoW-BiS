@@ -80,6 +80,14 @@ appears after Progression with the flag on and the two v1 tabs untouched.
 
 ## Accessibility parity (requirement, not a phase-10 nicety)
 
+> **Phase 9 measured every item below on a device.** Four held as written;
+> two did not, and one of those was wrong everywhere. The results are in
+> `architecture.md` Section 14, and the individual claims further down this
+> document have been corrected where the measurement contradicted them.
+> Read that section before trusting a "≥44pt" or "announces correctly" in
+> here — several were true of the source and false of the screen.
+
+
 The web app ships keyboard nav, visible focus, `aria-label`s, a skip link,
 colorblind-safe severity, and `prefers-reduced-motion` respect. Mobile
 equivalents:
@@ -92,6 +100,10 @@ equivalents:
   paper-doll slot tiles and tier-list rows, which are the most space-
   constrained layouts.
 - ≥44×44pt touch targets throughout, including slot tiles and severity chips.
+  **Measured at 38.5dp in Phase 9 and fixed.** Every target was written
+  `min-h-11`, which reads as 44 and is not: NativeWind's `inlineRem`
+  defaults to 14, not 16. Touch targets are now `min-h-[44px]` — a
+  measurement, not a scale step. See `architecture.md` 14.1.
 - `AccessibilityInfo.isReduceMotionEnabled` gating any tab-switch or
   bottom-sheet animation.
 - Item-quality colors remain **borders only**; item-name text stays in the
@@ -124,7 +136,8 @@ The first screen actually built, so it set precedents the rest inherit:
 - **Accessibility is built in, not deferred to Phase 9.** Every field has a
   real visible label that doubles as its accessibility label — a placeholder
   is not a substitute for the web's `<label>`; the region control is a
-  `radiogroup` of `radio`s so it announces "2 of 4"; every target is ≥44pt;
+  `radiogroup` of `radio`s so it announces "2 of 4"; every target is ≥44pt
+  (**believed, not measured — it was 38.5dp until Phase 9 fixed it**);
   and the class color on a recent row is decoration, with the class also
   spelled out in the row's label. Phase 9's pass should be confirming this,
   not retrofitting it.
@@ -219,9 +232,60 @@ and the one that declined the hardest port in this document on purpose.
   restatement.** A difference row is one composed sentence, not five
   fragments; every group is colour *and* glyph *and* word; every target is
   ≥44pt because it is the same `CollapsibleSection` and `SegmentedControl`
-  the other screens use. That the rules cost nothing to apply here is the
-  return on having built them as primitives.
+  the other screens use — which also meant every screen inherited the same
+  38.5dp mistake, and one fix in the primitives corrected all of them. That
+  the rules cost nothing to apply here is the return on having built them as
+  primitives — and that one miss propagated everywhere is the cost.
 - **Every empty state has copy.** No loadout on the character, no seeded
   build for the spec, a `talents` field that came back null, and a build that
   matches exactly — four states that could each be a blank screen, and none
   of them is.
+
+## What the polish pass settled (Section 14)
+
+The first phase with no new screen in it, and the first whose findings came
+from a device rather than from a test.
+
+- **Loading has a shape.** The character screen's spinner is now a skeleton
+  that traces the real layout, so the data arriving changes what is in the
+  blocks and not where the blocks are. It is one announcement — "Loading
+  Arthas, busy" — over forty silent placeholders, because a screen reader
+  reading out sixteen grey rectangles is worse than a spinner. With reduce
+  motion on, the pulse stops and the shapes stay.
+- **Dynamic Type reshapes the paper doll, it does not only stretch it.**
+  Above roughly 1.9× the grid drops to a single column, and the item name's
+  two-line clamp lifts above 1.3×. The rule is one line —
+  `width / fontScale` — and it covers large text, narrow phones and tablets
+  together rather than as three special cases.
+- **Haptics are three named events, and the list is closed.** The segmented
+  control on an actual change, and pull-to-refresh succeeding or failing.
+  Nothing with a visible, immediate result gets one: a tile that opens a
+  sheet, a link, a text field. An app that buzzes at everything teaches
+  people to ignore the buzz, so the bar for a fourth is the bar these three
+  cleared — *a state change you cannot see coming, or a selection made
+  without looking.*
+- **Icons are decoration, app-wide and by construction.** Every icon in the
+  app goes through `components/Icon.tsx`, which hides it from the
+  accessibility tree. The tab bar was announcing ", Search" before this —
+  an icon font's glyph is a `<Text>` with no spoken form, and it contributes
+  an empty fragment to every merged description it sits inside.
+- **A label is composed once, or it says everything twice.** The tier tile
+  announced "Tier set: 4 of 5 pieces, 4pc active: 4/5, 4pc active" because
+  its caller passed a hint that already contained the value. Where the
+  readable form and the speakable form differ — "4/5" against "4 of 5
+  pieces" — they are now two props, not one string doing both jobs.
+- **An empty panel set is not an empty board.** The upgrade board no longer
+  claims everything is BiS when it merely has nothing to route you to; it
+  names the upgrades whose targets come from the vault, PvP, world drops or
+  professions, both as the empty state and as a line under the panels when
+  they render without covering everything.
+- **Dark-only is confirmed for v1.** The question this phase was asked to
+  settle — whether light mode exists at all — is answered no, and the token
+  structure that would make it additive is unchanged.
+- **Open, and on the record: the slot sheet does not contain screen-reader
+  focus on Android.** A swipe walks out of the open sheet into the tiles
+  behind it. The containment is written and works on iOS; Android's
+  `importantForAccessibility="no-hide-descendants"` had no effect under RN
+  0.86's New Architecture, through three different attempts. See
+  `architecture.md` 14.2 — it is the phase's one unfixed defect, and it has
+  a named set of options rather than a shrug.

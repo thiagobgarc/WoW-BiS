@@ -24,7 +24,7 @@ than pin from memory, and to record what came out. Installed 2026-09-07:
 | @tanstack/react-query | `^5.102.8` | 5.102.8 |
 | react-native-mmkv | `^4.3.2` | 4.3.2 |
 | @sentry/react-native | `~7.11.0` | 7.11.0 |
-| @shopify/flash-list | `2.0.2` | 2.0.2 |
+| expo-haptics | `~57.0.3` | 57.0.3 |
 | expo-image | `~57.0.4` | 57.0.4 |
 | react-native-reanimated | `4.5.1` | 4.5.1 |
 | zod | `^4.5.4` | 4.5.4 |
