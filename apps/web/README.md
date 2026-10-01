@@ -139,19 +139,34 @@ construction — every chip pairs a color with a distinct icon and a text label
 
 BiS lists live as versioned JSON in `data/bis/{seasonId}/{class}-{spec}.json`,
 validated against `BisListSchema` (`src/lib/bis/types.ts`) both when read and
-when seeded. **Currently seeded (6 specs, one per armor type):**
+when seeded. **All 40 specs are covered, and the files are generated rather
+than hand-written:**
 
-| Class | Spec | Armor |
-|---|---|---|
-| Paladin | Retribution | Plate |
-| Death Knight | Frost | Plate |
-| Mage | Fire | Cloth |
-| Priest | Discipline | Cloth |
-| Druid | Restoration | Leather |
-| Hunter | Beast Mastery | Mail |
+```
+bun run bis:ingest     # derive every spec from Blizzard's loot tables
+bun run data:check     # validate, and report coverage and staleness
+bun run db:seed        # load the JSON into Postgres (only where DATABASE_URL is set)
+```
 
-**To add a spec**, create `data/bis/{CURRENT_SEASON_ID}/{class}-{spec}.json`
-(slugified, e.g. `warrior-fury.json`) matching this shape:
+`bis:ingest` reads Blizzard's journal (instance -> encounter -> items) plus the
+item-set endpoint for tier, scores each drop against the spec's stat priority,
+and writes one file per spec. It requires `BLIZZARD_CLIENT_ID`/`SECRET` and has
+no fixture fallback by design: deriving a list from mock data would write
+fabricated item ids into the serving path, which is exactly what this replaced.
+
+Two things it deliberately does not invent:
+
+- **Stat priority** is the one input Blizzard does not publish, because it is
+  sim output. It lives in `src/lib/ingest/specCatalogue.ts`, and every spec is
+  tagged `curated` or `default` — `default` means the item picks are real but
+  the secondary-stat ordering has not been sim-checked. `data:check` reports
+  the count so it never passes silently as settled.
+- **PvP entries** are not derived at all. Vendor gear has no journal encounter,
+  so there is nothing first-party to read.
+
+**To re-derive** after a tuning patch or a new season, update
+`src/lib/season/seasonConfig.ts` and re-run `bis:ingest`. To hand-author or
+override one spec, the file shape is:
 
 ```jsonc
 {

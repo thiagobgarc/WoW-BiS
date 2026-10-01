@@ -32,13 +32,29 @@ import {
   CharacterRaidsSchema,
   CharacterSpecializationsSchema,
   CharacterStatisticsSchema,
+  IngestItemSchema,
   ItemMediaSchema,
   ItemSchema,
+  ItemSetIndexSchema,
+  ItemSetSchema,
+  PlayableSpecIndexSchema,
+  PlayableSpecSchema,
+  JournalEncounterSchema,
+  JournalInstanceIndexSchema,
+  JournalInstanceSchema,
   MythicKeystoneProfileIndexSchema,
   MythicKeystoneSeasonSchema,
   RealmIndexSchema,
   TalentTreeIndexSchema,
   TalentTreeSchema,
+  type IngestItem,
+  type ItemSet,
+  type ItemSetIndex,
+  type PlayableSpec,
+  type PlayableSpecIndex,
+  type JournalEncounter,
+  type JournalInstance,
+  type JournalInstanceIndex,
   type CharacterEquipment,
   type CharacterMedia,
   type CharacterProfile,
@@ -53,6 +69,7 @@ import {
 } from './schemas';
 import {
   BlizzardApiError,
+  BlizzardCredentialsRequiredError,
   BlizzardUnavailableError,
   CharacterNotFoundError,
   CharacterPrivateError,
@@ -272,6 +289,94 @@ export async function getCharacterMythicKeystoneSeason(
     }
   });
   return { data, mock: false };
+}
+
+// --- Journal / loot tables (BiS ingest) ------------------------------------
+// Static game data, so these share the long item TTL and are keyed by id
+// only, never per-character. Unlike the character calls above there is no
+// mock fallback: the ingest is an offline job, and silently deriving a BiS
+// list from fixture data would bake fabricated item ids into Postgres —
+// exactly the failure this pipeline exists to undo. Missing credentials
+// must fail loudly instead.
+function requireCredentials(what: string): void {
+  if (!hasBlizzardCredentials()) {
+    throw new BlizzardCredentialsRequiredError(what);
+  }
+}
+
+export async function getJournalInstanceIndex(region: string): Promise<JournalInstanceIndex> {
+  requireCredentials('journal instance index');
+  return cached(`journal-instance-index:${region}`, TTL_ITEM_SECONDS, async () => {
+    const raw = await blizzardGet<unknown>('/data/wow/journal-instance/index', { namespace: 'static', region });
+    return JournalInstanceIndexSchema.parse(raw);
+  });
+}
+
+export async function getJournalInstance(region: string, instanceId: number): Promise<JournalInstance> {
+  requireCredentials('journal instance');
+  return cached(`journal-instance:${region}:${instanceId}`, TTL_ITEM_SECONDS, async () => {
+    const raw = await blizzardGet<unknown>(`/data/wow/journal-instance/${instanceId}`, { namespace: 'static', region });
+    return JournalInstanceSchema.parse(raw);
+  });
+}
+
+export async function getJournalEncounter(region: string, encounterId: number): Promise<JournalEncounter> {
+  requireCredentials('journal encounter');
+  return cached(`journal-encounter:${region}:${encounterId}`, TTL_ITEM_SECONDS, async () => {
+    const raw = await blizzardGet<unknown>(`/data/wow/journal-encounter/${encounterId}`, { namespace: 'static', region });
+    return JournalEncounterSchema.parse(raw);
+  });
+}
+
+export async function getPlayableSpecIndex(region: string): Promise<PlayableSpecIndex> {
+  requireCredentials('playable specialization index');
+  return cached(`playable-spec-index:${region}`, TTL_ITEM_SECONDS, async () => {
+    const raw = await blizzardGet<unknown>('/data/wow/playable-specialization/index', { namespace: 'static', region });
+    return PlayableSpecIndexSchema.parse(raw);
+  });
+}
+
+export async function getPlayableSpec(region: string, specId: number): Promise<PlayableSpec> {
+  requireCredentials('playable specialization');
+  return cached(`playable-spec:${region}:${specId}`, TTL_ITEM_SECONDS, async () => {
+    const raw = await blizzardGet<unknown>(`/data/wow/playable-specialization/${specId}`, { namespace: 'static', region });
+    return PlayableSpecSchema.parse(raw);
+  });
+}
+
+export async function getItemSetIndex(region: string): Promise<ItemSetIndex> {
+  requireCredentials('item set index');
+  return cached(`item-set-index:${region}`, TTL_ITEM_SECONDS, async () => {
+    const raw = await blizzardGet<unknown>('/data/wow/item-set/index', { namespace: 'static', region });
+    return ItemSetIndexSchema.parse(raw);
+  });
+}
+
+export async function getItemSet(region: string, setId: number): Promise<ItemSet> {
+  requireCredentials('item set');
+  return cached(`item-set:${region}:${setId}`, TTL_ITEM_SECONDS, async () => {
+    const raw = await blizzardGet<unknown>(`/data/wow/item-set/${setId}`, { namespace: 'static', region });
+    return ItemSetSchema.parse(raw);
+  });
+}
+
+/**
+ * Full item detail, including stats and set membership. Returns null on 404
+ * rather than throwing: journal encounter tables legitimately reference ids
+ * that the item endpoint does not serve, and one such gap must not abort an
+ * ingest run over several hundred items.
+ */
+export async function getIngestItem(region: string, itemId: number): Promise<IngestItem | null> {
+  requireCredentials('item detail');
+  try {
+    return await cached(`ingest-item:${region}:${itemId}`, TTL_ITEM_SECONDS, async () => {
+      const raw = await blizzardGet<unknown>(`/data/wow/item/${itemId}`, { namespace: 'static', region });
+      return IngestItemSchema.parse(raw);
+    });
+  } catch (err) {
+    if (err instanceof BlizzardApiError && err.status === 404) return null;
+    throw err;
+  }
 }
 
 export async function getItem(region: string, itemId: number): Promise<BlizzardItem | null> {

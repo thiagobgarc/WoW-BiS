@@ -40,3 +40,19 @@ export class BlizzardApiError extends Error {
     this.name = 'BlizzardApiError';
   }
 }
+
+/**
+ * Thrown by the ingest-only client calls when credentials are absent. The
+ * character path deliberately degrades to fixture data without credentials
+ * so the app runs with zero setup; the ingest must not, because its output
+ * is written to Postgres and then served as real best-in-slot advice.
+ */
+export class BlizzardCredentialsRequiredError extends Error {
+  constructor(public what: string) {
+    super(
+      `BLIZZARD_CLIENT_ID and BLIZZARD_CLIENT_SECRET are required to fetch ${what}. ` +
+        'The ingest pipeline has no fixture fallback by design.',
+    );
+    this.name = 'BlizzardCredentialsRequiredError';
+  }
+}

@@ -401,3 +401,112 @@ export const MythicKeystoneSeasonSchema = z
   })
   .loose();
 export type MythicKeystoneSeason = z.infer<typeof MythicKeystoneSeasonSchema>;
+
+// --- Journal (loot tables) + full item detail -------------------------------
+// Used only by the BiS ingest pipeline (src/lib/ingest). The journal is
+// Blizzard's own dungeon/raid encounter database: instance -> encounters ->
+// the items each encounter drops. It is the authoritative loot table, which
+// is what makes deriving a BiS list from first-party data possible at all.
+
+export const JournalInstanceIndexSchema = z
+  .object({
+    instances: z.array(z.object({ id: z.number(), name: z.string() }).loose()),
+  })
+  .loose();
+export type JournalInstanceIndex = z.infer<typeof JournalInstanceIndexSchema>;
+
+export const JournalInstanceSchema = z
+  .object({
+    id: z.number(),
+    name: z.string(),
+    encounters: z.array(z.object({ id: z.number(), name: z.string() }).loose()).optional(),
+  })
+  .loose();
+export type JournalInstance = z.infer<typeof JournalInstanceSchema>;
+
+export const JournalEncounterSchema = z
+  .object({
+    id: z.number(),
+    name: z.string(),
+    items: z
+      .array(z.object({ id: z.number(), item: z.object({ id: z.number(), name: z.string() }).loose() }).loose())
+      .optional(),
+  })
+  .loose();
+export type JournalEncounter = z.infer<typeof JournalEncounterSchema>;
+
+const ItemStatValueSchema = z
+  .object({
+    type: z.object({ type: z.string() }).loose(),
+    value: z.number(),
+    is_negated: z.boolean().optional(),
+  })
+  .loose();
+
+/**
+ * Deliberately separate from ItemSchema rather than widening it. ItemSchema
+ * serves the character page's hot path and is intentionally minimal; the
+ * ingest needs stats, armor subclass and set membership, which that path
+ * never reads. Keeping them apart means a schema change for the pipeline
+ * cannot destabilise character lookups.
+ */
+export const IngestItemSchema = z
+  .object({
+    id: z.number(),
+    name: z.string(),
+    level: z.number(),
+    quality: z.object({ type: z.string() }).loose(),
+    item_class: z.object({ name: z.string() }).loose().optional(),
+    item_subclass: z.object({ name: z.string() }).loose().optional(),
+    inventory_type: z.object({ type: z.string() }).loose().optional(),
+    is_equippable: z.boolean().optional(),
+    preview_item: z
+      .object({
+        stats: z.array(ItemStatValueSchema).optional(),
+        set: z.object({ item_set: z.object({ id: z.number(), name: z.string() }).loose() }).loose().optional(),
+      })
+      .loose()
+      .optional(),
+  })
+  .loose();
+export type IngestItem = z.infer<typeof IngestItemSchema>;
+
+/**
+ * Item sets. Tier pieces are NOT listed in journal encounter loot tables —
+ * verified against The Venomous Abyss, where none of the season's six tier
+ * sets appear in any encounter's items — so the set endpoint is the only
+ * first-party route to them.
+ */
+export const ItemSetIndexSchema = z
+  .object({
+    item_sets: z.array(z.object({ id: z.number(), name: z.string() }).loose()),
+  })
+  .loose();
+export type ItemSetIndex = z.infer<typeof ItemSetIndexSchema>;
+
+export const ItemSetSchema = z
+  .object({
+    id: z.number(),
+    name: z.string(),
+    items: z.array(z.object({ id: z.number(), name: z.string() }).loose()).optional(),
+    effects: z.array(z.object({ required_count: z.number() }).loose()).optional(),
+  })
+  .loose();
+export type ItemSet = z.infer<typeof ItemSetSchema>;
+
+export const PlayableSpecIndexSchema = z
+  .object({
+    character_specializations: z.array(z.object({ id: z.number(), name: z.string() }).loose()),
+  })
+  .loose();
+export type PlayableSpecIndex = z.infer<typeof PlayableSpecIndexSchema>;
+
+export const PlayableSpecSchema = z
+  .object({
+    id: z.number(),
+    name: z.string(),
+    playable_class: z.object({ id: z.number(), name: z.string() }).loose().optional(),
+    role: z.object({ type: z.string() }).loose().optional(),
+  })
+  .loose();
+export type PlayableSpec = z.infer<typeof PlayableSpecSchema>;
