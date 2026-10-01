@@ -13,9 +13,9 @@ interface Props {
 }
 
 function tierBonusLabel(count: number): string {
-  if (count >= 4) return '4pc active';
-  if (count >= 2) return '2pc active';
-  return 'no bonus active';
+  if (count >= 4) return 'Tier set, 4pc active';
+  if (count >= 2) return 'Tier set, 2pc active';
+  return 'Tier set, no bonus yet';
 }
 
 export function CharacterHeader({ character, equipment, avatarUrl, metaTier }: Props) {
@@ -23,55 +23,69 @@ export function CharacterHeader({ character, equipment, avatarUrl, metaTier }: P
   const accent = classColor(character.className);
 
   return (
-    <div
-      className="flex flex-col sm:flex-row gap-6 items-start p-5 rounded-xl border"
-      style={{
-        background: `linear-gradient(135deg, ${accent}14 0%, rgba(10,14,39,0.5) 100%)`,
-        borderColor: `${accent}26`,
-      }}
-    >
-      <div className="w-28 h-28 rounded-lg border-2 shrink-0 bg-panel flex items-center justify-center overflow-hidden" style={{ borderColor: accent }}>
-        {avatarUrl ? (
-          <img src={avatarUrl} alt={`${character.name}'s character render`} className="w-full h-full object-cover" />
-        ) : (
-          <span className="text-4xl" aria-hidden="true">⚔️</span>
-        )}
-      </div>
-
-      <div className="flex-1 min-w-0">
-        <h1 className="text-2xl font-bold mb-1" style={{ color: accent }}>
-          {character.name}
-        </h1>
-        <div className="flex items-center gap-2 text-sm text-text-muted">
-          <span>
-            {character.specName ? `${character.specName} ` : ''}
-            {character.className} • {character.realmName} ({character.region.toUpperCase()})
-          </span>
-          {metaTier && (
-            <a href="/meta" className="inline-flex" title={`${metaTier}-tier for Mythic+ — see the full meta list`}>
-              <TierBadge tier={metaTier} />
-            </a>
+    /* The spine carries this character's class color down the page. It is a
+       3px rule rather than the gradient wash this header used to have, for
+       the reason in global.css: as non-text, every one of the 13 class colors
+       clears 3:1 — as a fill behind text, ten of them do not. */
+    <header className="border-l-[3px] pl-6 sm:pl-10" style={{ borderColor: accent }}>
+      <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
+        <div
+          className="flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-[3px] border-2 bg-sunken"
+          style={{ borderColor: accent }}
+        >
+          {avatarUrl ? (
+            <img src={avatarUrl} alt={`${character.name}'s character render`} className="h-full w-full object-cover" />
+          ) : (
+            <span className="text-3xl" aria-hidden="true">
+              ⚔️
+            </span>
           )}
         </div>
-        {character.guildName && <div className="text-sm text-text-muted mt-1">Guild: {character.guildName}</div>}
 
-        <div className="flex flex-wrap gap-4 mt-3 text-sm">
-          <div className="flex items-center gap-1.5">
-            <span className="text-text-muted">iLvl (equipped):</span>
-            <span className="px-2 py-0.5 rounded bg-white/8 text-link font-semibold">{character.equippedItemLevel}</span>
+        <div className="min-w-0 flex-1">
+          {/* Display size is the one place the class color becomes type: at
+              this scale the 3:1 large-text bar applies, which all 13 pass. */}
+          <h1 className="display text-[clamp(2rem,5.5vw,3.25rem)]" style={{ color: accent }}>
+            {character.name}
+          </h1>
+
+          <div className="mt-2.5 flex flex-wrap items-center gap-x-3 gap-y-2">
+            <p className="text-base text-text">
+              {character.specName ? `${character.specName} ${character.className}` : character.className}
+            </p>
+            {metaTier && (
+              <a href="/meta" className="inline-flex no-underline" title={`${metaTier}-tier for Mythic+ — see the full meta list`}>
+                <TierBadge tier={metaTier} />
+              </a>
+            )}
           </div>
-          <div className="flex items-center gap-1.5">
-            <span className="text-text-muted">Avg iLvl:</span>
-            <span className="px-2 py-0.5 rounded bg-white/8 text-link font-semibold">{character.averageItemLevel}</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <span className="text-text-muted">Tier set:</span>
-            <span className="px-2 py-0.5 rounded bg-white/8 text-link font-semibold">
-              {tierCount}/5 pieces — {tierBonusLabel(tierCount)}
-            </span>
-          </div>
+
+          <p className="mt-1 text-sm text-text-dim">
+            {character.realmName}, {character.region.toUpperCase()}
+          </p>
+          {character.guildName && <p className="mt-0.5 text-sm text-text-dim">{character.guildName}</p>}
         </div>
       </div>
-    </div>
+
+      {/* Three figures, right-aligned within their columns and set in tabular
+          numerals, so they line up with every other number on the page. */}
+      <dl className="mt-7 grid grid-cols-3 border-t border-rule-strong pt-4">
+        <div>
+          <dt className="label">Item level</dt>
+          <dd className="figure mt-1 text-2xl font-bold">{character.equippedItemLevel}</dd>
+        </div>
+        <div>
+          <dt className="label">Average</dt>
+          <dd className="figure mt-1 text-2xl font-bold">{character.averageItemLevel}</dd>
+        </div>
+        <div>
+          <dt className="label">{tierBonusLabel(tierCount)}</dt>
+          <dd className="figure mt-1 text-2xl font-bold">
+            {tierCount}
+            <span className="text-text-dim">/5</span>
+          </dd>
+        </div>
+      </dl>
+    </header>
   );
 }

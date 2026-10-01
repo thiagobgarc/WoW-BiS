@@ -33,7 +33,7 @@ export function RefreshButton({ region, realm, name, onRefreshed }: Props) {
 
   return (
     <Button variant="secondary" size="sm" onClick={handleClick} disabled={state !== 'idle'}>
-      {state === 'loading' ? 'Refreshing…' : state === 'cooldown' ? 'On cooldown (60s)' : '🔄 Refresh'}
+      {state === 'loading' ? 'Refreshing…' : state === 'cooldown' ? 'On cooldown (60s)' : 'Refresh'}
     </Button>
   );
 }

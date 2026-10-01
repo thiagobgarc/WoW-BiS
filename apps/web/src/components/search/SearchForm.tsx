@@ -21,8 +21,12 @@ export function SearchForm() {
 
   return (
     <div>
+      {/* The name is the primary identifier, so it gets its own row at display
+          size; realm and region are qualifiers and sit beneath it at UI size.
+          The field itself is the hero of this page — there is nothing more
+          characteristic of a character lookup than typing the name. */}
       <form
-        className="flex flex-col sm:flex-row gap-3 mb-6"
+        className="max-w-2xl"
         onSubmit={(e) => {
           e.preventDefault();
           navigateToCharacter(name, realm, region);
@@ -35,39 +39,51 @@ export function SearchForm() {
           onSelect={(c: RecentCharacter) => navigateToCharacter(c.name, c.realmName, c.region)}
           recent={recent}
         />
-        <select
-          aria-label="Region"
-          value={region}
-          onChange={(e) => setRegion(e.target.value as (typeof REGIONS)[number])}
-          className="h-11 rounded-md border border-white/12 bg-panel px-4 text-sm text-text min-w-[100px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-        >
-          {REGIONS.map((r) => (
-            <option key={r} value={r}>
-              {r}
-            </option>
-          ))}
-        </select>
-        <RealmCombobox id="realm-search" region={region.toLowerCase()} value={realm} onChange={setRealm} />
-        <Button type="submit" disabled={!name.trim() || !realm.trim()}>
-          Search
-        </Button>
+
+        <div className="mt-3 flex flex-col gap-3 sm:flex-row">
+          <RealmCombobox id="realm-search" region={region.toLowerCase()} value={realm} onChange={setRealm} />
+          <select
+            aria-label="Region"
+            value={region}
+            onChange={(e) => setRegion(e.target.value as (typeof REGIONS)[number])}
+            className="min-h-[44px] min-w-[96px] rounded-[4px] border border-rule-strong bg-sunken px-4 text-sm text-text transition-colors duration-150 focus-visible:border-text focus-visible:outline-none"
+          >
+            {REGIONS.map((r) => (
+              <option key={r} value={r}>
+                {r}
+              </option>
+            ))}
+          </select>
+          <Button type="submit" disabled={!name.trim() || !realm.trim()} className="sm:px-8">
+            Search
+          </Button>
+        </div>
       </form>
 
       {recent.length > 0 && (
-        <div>
-          <div className="text-xs font-semibold text-text-dim uppercase tracking-wide mb-3">Recently viewed</div>
-          <div className="flex gap-2 flex-wrap">
+        <section className="mt-12 max-w-2xl" aria-labelledby="recent-heading">
+          <h2 id="recent-heading" className="label border-b border-rule pb-2 text-text-muted">
+            Recently viewed
+          </h2>
+          {/* Ruled columns, not dot-joined pills: name, realm and region are
+              three comparable fields, so they get three aligned columns. */}
+          <ul>
             {recent.map((c) => (
-              <button
-                key={`${c.region}-${c.realmSlug}-${c.name}`}
-                onClick={() => navigateToCharacter(c.name, c.realmName, c.region)}
-                className="px-3 py-2 rounded-md bg-accent-soft border border-accent/30 text-sm text-text hover:bg-accent/25 transition-colors duration-150 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-              >
-                {c.name} • {c.realmName} • {c.region.toUpperCase()}
-              </button>
+              <li key={`${c.region}-${c.realmSlug}-${c.name}`}>
+                <button
+                  onClick={() => navigateToCharacter(c.name, c.realmName, c.region)}
+                  className="group grid w-full min-h-[44px] grid-cols-[1fr_auto] items-center gap-x-4 gap-y-0.5 border-b border-rule py-2.5 text-left transition-colors duration-150 hover:bg-white/4 sm:grid-cols-[1fr_12rem_3rem]"
+                >
+                  <span className="truncate text-sm font-semibold">{c.name}</span>
+                  <span className="truncate text-sm text-text-dim sm:order-2">{c.realmName}</span>
+                  <span className="figure col-start-2 row-start-1 text-right text-xs text-text-dim sm:order-3 sm:col-start-auto sm:row-start-auto">
+                    {c.region.toUpperCase()}
+                  </span>
+                </button>
+              </li>
             ))}
-          </div>
-        </div>
+          </ul>
+        </section>
       )}
     </div>
   );

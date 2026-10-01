@@ -1,25 +1,28 @@
 import type { QuickWin } from '@mythos/core/bis';
 
-const ICON: Record<QuickWin['type'], string> = {
-  enchant: '✨',
-  socket: '💎',
-  embellishment: '🔧',
-};
-
+/**
+ * Enchants, gems and embellishments. The per-type emoji that used to prefix
+ * each row is gone: it duplicated what the label already said, and an icon
+ * font glyph with no spoken form only adds noise to a screen reader.
+ */
 export function QuickWinsPanel({ quickWins }: { quickWins: QuickWin[] }) {
   if (quickWins.length === 0) return null;
 
   return (
-    <div className="rounded-xl border border-severity-close/20 bg-severity-close/5 p-4">
-      <div className="text-sm font-bold mb-3">⚙️ Quick Wins <span className="text-text-dim font-normal">— free ilvl-equivalent power</span></div>
-      <ul className="space-y-2">
+    <section aria-labelledby="quick-wins-heading" className="border-l-2 border-severity-close pl-5">
+      <h3 id="quick-wins-heading" className="text-sm font-semibold">
+        Quick wins
+      </h3>
+      <p className="mt-1 max-w-[60ch] text-sm text-text-muted">
+        Enchants, gems and embellishments you haven't applied yet. Cheapest power on the board.
+      </p>
+      <ul className="mt-3">
         {quickWins.map((w, i) => (
-          <li key={i} className="text-xs text-text-muted flex items-center gap-2">
-            <span aria-hidden="true">{ICON[w.type]}</span>
+          <li key={i} className="border-b border-rule py-2 text-sm text-text last:border-none">
             {w.label}
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 }

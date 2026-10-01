@@ -8,22 +8,21 @@ interface Props {
   cachedBanner?: string;
 }
 
-const { icon, title, message, actionLabel = '← Back to Search', actionHref = '/', cachedBanner } = Astro.props;
+const { icon, title, message, actionLabel = 'Back to search', actionHref = '/', cachedBanner } = Astro.props;
 ---
 
-<div class="max-w-md mx-auto mt-24 px-6">
-  <div class="rounded-lg border border-severity-gap/30 bg-severity-gap/10 p-6 text-center">
-    <div class="text-4xl mb-3" aria-hidden="true">{icon}</div>
-    <div class="text-lg font-bold mb-2">{title}</div>
-    <p class="text-sm text-text-muted mb-4">{message}</p>
-    {
-      cachedBanner && (
-        <div class="rounded-md border border-link/30 bg-link/10 text-link text-xs p-3 mb-4">💾 {cachedBanner}</div>
-      )
-    }
+<!-- An error is direction, not mood: say what happened and what to do next.
+     The rule is in the severity scale's gap red; the action is achromatic,
+     because a class-colored fill fails AA on 10 of the 13 classes. -->
+<div class="mx-auto max-w-2xl px-6 py-24">
+  <div class="border-l-[3px] border-severity-gap pl-6 sm:pl-10">
+    <div class="text-3xl" aria-hidden="true">{icon}</div>
+    <h1 class="display mt-4 text-[clamp(1.75rem,5vw,2.5rem)]">{title}</h1>
+    <p class="mt-4 max-w-[58ch] text-base leading-relaxed text-text-muted">{message}</p>
+    {cachedBanner && <p class="mt-4 border-l-2 border-rule-strong pl-4 text-xs text-text-muted">{cachedBanner}</p>}
     <a
       href={actionHref}
-      class="inline-block px-5 py-2.5 rounded-md bg-accent text-white text-sm font-semibold hover:bg-accent-hover transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
+      class="mt-8 inline-flex min-h-[44px] items-center rounded-[4px] bg-text px-5 text-sm font-semibold text-bg no-underline transition-colors duration-150 hover:bg-white"
     >
       {actionLabel}
     </a>

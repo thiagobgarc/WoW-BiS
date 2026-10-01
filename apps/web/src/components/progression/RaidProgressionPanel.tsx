@@ -7,35 +7,38 @@ interface Props {
 
 export function RaidProgressionPanel({ progress }: Props) {
   return (
-    <div className="rounded-xl border border-white/8 bg-panel p-5 space-y-6">
-      <div className="text-lg font-bold">{progress.instanceName}</div>
-      <div className="grid gap-6 sm:grid-cols-2">
+    <section aria-labelledby="raid-heading">
+      <h2 id="raid-heading" className="text-lg font-bold [font-stretch:103%]">
+        {progress.instanceName}
+      </h2>
+
+      <div className="mt-8 grid gap-x-12 gap-y-10 sm:grid-cols-2">
         {progress.difficulties.map((diff) => (
-          <div key={diff.difficulty} className="rounded-lg border border-white/8 p-4">
-            <div className="flex items-center justify-between mb-3">
-              <span className="text-sm font-semibold">{diff.label}</span>
-              <span className="text-xs text-text-dim">
-                {diff.killed}/{diff.total} defeated
-              </span>
+          <div key={diff.difficulty}>
+            <div className="flex items-baseline justify-between gap-4 border-b border-rule-strong pb-2">
+              <h3 className="text-sm font-semibold">{diff.label}</h3>
+              <p className="figure text-sm">
+                <span className="font-semibold">{diff.killed}</span>
+                <span className="text-text-dim">/{diff.total} defeated</span>
+              </p>
             </div>
-            <div className="h-2 rounded-full bg-bg overflow-hidden mb-4">
+
+            <div className="mt-3 h-1 overflow-hidden bg-sunken">
               <div
-                className="h-full bg-accent rounded-full transition-[width] duration-150"
+                className="h-full bg-accent transition-[width] duration-150"
                 style={{ width: `${diff.total === 0 ? 0 : (diff.killed / diff.total) * 100}%` }}
               />
             </div>
-            <ul className="space-y-1.5">
+
+            <ul className="mt-2">
               {diff.bosses.map((boss) => (
-                <li key={boss.name} className="flex items-center gap-2 text-sm">
-                  <span
-                    aria-hidden="true"
-                    className={boss.killed ? 'text-severity-bis' : 'text-text-dim'}
-                  >
+                <li key={boss.name} className="flex items-center gap-2.5 border-b border-rule py-2 text-sm last:border-none">
+                  <span aria-hidden="true" className={boss.killed ? 'text-severity-bis' : 'text-text-dim'}>
                     {boss.killed ? '✓' : '○'}
                   </span>
-                  <span className={boss.killed ? 'text-text' : 'text-text-dim'}>{boss.name}</span>
+                  <span className={boss.killed ? 'truncate text-text' : 'truncate text-text-dim'}>{boss.name}</span>
                   {boss.killed && boss.lastKillTimestamp && (
-                    <span className="ml-auto text-xs text-text-dim">{timeAgo(boss.lastKillTimestamp)}</span>
+                    <span className="label ml-auto shrink-0">{timeAgo(boss.lastKillTimestamp)}</span>
                   )}
                 </li>
               ))}
@@ -43,6 +46,6 @@ export function RaidProgressionPanel({ progress }: Props) {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

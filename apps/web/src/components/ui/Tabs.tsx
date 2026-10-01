@@ -6,7 +6,7 @@ export const Tabs = TabsPrimitive.Root;
 export function TabsList({ className, ...props }: React.ComponentProps<typeof TabsPrimitive.List>) {
   return (
     <TabsPrimitive.List
-      className={cn('flex gap-0 flex-nowrap overflow-x-auto border-b border-white/8 mb-6', className)}
+      className={cn('flex flex-nowrap gap-1 overflow-x-auto border-b border-rule', className)}
       {...props}
     />
   );
@@ -16,10 +16,12 @@ export function TabsTrigger({ className, ...props }: React.ComponentProps<typeof
   return (
     <TabsPrimitive.Trigger
       className={cn(
-        'shrink-0 whitespace-nowrap px-4 py-3 text-sm font-semibold text-text-dim border-b-2 border-transparent transition-colors duration-150 cursor-pointer',
-        'hover:text-text-muted',
-        'data-[state=active]:text-text data-[state=active]:border-accent',
-        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg rounded-t-sm',
+        'shrink-0 cursor-pointer whitespace-nowrap border-b-2 border-transparent px-3 py-2.5 text-sm font-semibold [font-stretch:95%] text-text-dim transition-colors duration-150',
+        'min-h-[44px] hover:text-text',
+        // The active marker is the class color as a 2px rule — non-text, so
+        // it clears 3:1 on all 13 classes, which it would not as a fill.
+        'data-[state=active]:border-accent data-[state=active]:text-text',
+        'disabled:opacity-40 disabled:pointer-events-none',
         className,
       )}
       {...props}

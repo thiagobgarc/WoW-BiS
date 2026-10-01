@@ -54,16 +54,16 @@ export function TalentTreeSection({ tree, current, heroTree, heroSelections, rec
 
   return (
     <div>
-      <h2 className="text-xl font-bold mb-4">Talents</h2>
+      <h2 className="mb-3 text-base font-semibold">Talents</h2>
       <Tabs defaultValue="current">
         <TabsList>
-          <TabsTrigger value="current">Current Build</TabsTrigger>
+          <TabsTrigger value="current">Current build</TabsTrigger>
           <TabsTrigger value="recommended">Recommended (Mythic+)</TabsTrigger>
         </TabsList>
 
         <TabsContent value="current" className="focus-visible:outline-none">
           {current === null && !heroTree && (
-            <div className="rounded-md border border-severity-upgrade/30 bg-severity-upgrade/10 text-severity-upgrade text-xs p-3 mb-4">
+            <div className="mb-4 border-l-2 border-severity-upgrade pl-4 text-xs text-severity-upgrade">
               No talents selected on this character yet.
             </div>
           )}
@@ -75,7 +75,7 @@ export function TalentTreeSection({ tree, current, heroTree, heroSelections, rec
               three-across horizontal scroll for a tall single-column one;
               overflow-x-auto remains a per-tree safety net for trees still
               wider than the viewport. */}
-          <div className="overflow-x-auto rounded-lg border border-white/8 bg-bg/60 p-4">
+          <div className="overflow-x-auto rounded-[4px] border border-rule bg-sunken p-4">
             <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-2 w-fit mx-auto">
               <TalentTree nodes={tree.classNodes} selections={currentMap} title="Class Talents" />
               {heroTree && (
@@ -93,7 +93,7 @@ export function TalentTreeSection({ tree, current, heroTree, heroSelections, rec
 
         <TabsContent value="recommended" className="focus-visible:outline-none">
           {!recommended ? (
-            <div className="rounded-xl border border-severity-upgrade/20 bg-severity-upgrade/5 p-6 text-center text-sm text-text-muted">
+            <div className="border-l-2 border-severity-upgrade pl-5 text-sm text-text-muted">
               No recommended build has been seeded for this class/spec yet.
             </div>
           ) : (
@@ -104,13 +104,13 @@ export function TalentTreeSection({ tree, current, heroTree, heroSelections, rec
                 </div>
               )}
               {recommended.notes && <div className="text-xs text-text-dim mb-4 italic">{recommended.notes}</div>}
-              <div className="overflow-x-auto rounded-lg border border-white/8 bg-bg/60 p-4">
+              <div className="overflow-x-auto rounded-[4px] border border-rule bg-sunken p-4">
                 <div className="flex flex-col sm:flex-row justify-center items-center sm:items-start gap-6 sm:gap-2 w-fit mx-auto">
                   <TalentTree nodes={tree.classNodes} selections={recommendedMap} title="Class Talents" />
                   <TalentTree nodes={tree.specNodes} selections={recommendedMap} title="Spec Talents" />
                 </div>
               </div>
-              <p className="text-[11px] text-text-dim mt-3">
+              <p className="label mt-3">
                 Hero talent recommendations aren't seeded yet — this covers class/spec picks only.
               </p>
             </>

@@ -24,28 +24,31 @@ const ROLES: { value: MetaRole; label: string }[] = [
 
 const TIERS: MetaTier[] = ['S', 'A', 'B', 'C'];
 
-// Same severity scale as TierBadge — kept in sync there, not reused
-// directly, since the row background needs a lower alpha than the badge.
-const TIER_ROW_STYLES: Record<MetaTier, { label: string; bg: string; text: string }> = {
-  S: { label: 'S', bg: 'bg-severity-bis/10 border-severity-bis/30', text: 'text-severity-bis' },
-  A: { label: 'A', bg: 'bg-severity-close/10 border-severity-close/30', text: 'text-severity-close' },
-  B: { label: 'B', bg: 'bg-severity-upgrade/10 border-severity-upgrade/30', text: 'text-severity-upgrade' },
-  C: { label: 'C', bg: 'bg-severity-gap/10 border-severity-gap/30', text: 'text-severity-gap' },
+// Same severity scale as TierBadge — S/A/B/C is the same "how good is this"
+// gradient as BiS/Close/Upgrade/Gap, so it reuses that ramp rather than
+// introducing a second one. All four clear 6.2:1 as text on this ground.
+const TIER_TEXT: Record<MetaTier, string> = {
+  S: 'text-severity-bis',
+  A: 'text-severity-close',
+  B: 'text-severity-upgrade',
+  C: 'text-severity-gap',
 };
 
 function SpecIcon({ entry, iconUrl }: { entry: MetaTierEntry; iconUrl: string | null }) {
   const color = classColor(entry.class);
   const trigger = (
+    /* The class color is the border, never the fill and never the label: as
+       non-text it clears 3:1 on all 13 classes, which it does not as text. */
     <a
       href={`/meta/${urlSlug(entry.class)}/${urlSlug(entry.spec)}`}
       aria-label={`${entry.spec} ${entry.class}`}
-      className="block w-11 h-11 rounded-md border overflow-hidden bg-panel shrink-0 transition-transform duration-150 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-      style={{ borderColor: `${color}66`, boxShadow: `0 0 8px ${color}59` }}
+      className="block h-11 w-11 shrink-0 overflow-hidden rounded-[3px] border-2 bg-sunken no-underline transition-opacity duration-150 hover:opacity-80"
+      style={{ borderColor: color }}
     >
       {iconUrl ? (
-        <img src={iconUrl} alt="" className="w-full h-full object-cover" loading="lazy" />
+        <img src={iconUrl} alt="" className="h-full w-full object-cover" loading="lazy" />
       ) : (
-        <span className="flex items-center justify-center w-full h-full text-[10px] font-semibold" style={{ color }} aria-hidden="true">
+        <span className="flex h-full w-full items-center justify-center text-[10px] font-semibold text-text-muted" aria-hidden="true">
           {entry.class.slice(0, 2).toUpperCase()}
         </span>
       )}
@@ -54,11 +57,10 @@ function SpecIcon({ entry, iconUrl }: { entry: MetaTierEntry; iconUrl: string | 
 
   return (
     <Tooltip trigger={trigger}>
-      <div className="text-sm">
-        <span className="font-semibold" style={{ color }}>
-          {entry.class}
-        </span>
-        <span className="text-text-dim"> — {entry.spec}</span>
+      <div className="flex items-center gap-2 text-sm">
+        <span className="h-2.5 w-2.5 shrink-0 rounded-[1px]" style={{ background: color }} aria-hidden="true" />
+        <span className="font-semibold text-text">{entry.spec}</span>
+        <span className="text-text-dim">{entry.class}</span>
       </div>
     </Tooltip>
   );
@@ -79,15 +81,20 @@ function RoleTierRows({ entries, role, specIcons }: { entries: MetaTierEntry[]; 
   }, [entries, role]);
 
   return (
-    <div className="space-y-3 mt-4">
+    <div className="mt-2">
       {TIERS.map((tier) => {
         const specs = byTier.get(tier) ?? [];
         if (specs.length === 0) return null;
-        const style = TIER_ROW_STYLES[tier];
         return (
-          <div key={tier} className={`flex items-stretch gap-3 rounded-lg border ${style.bg} p-3`}>
-            <div className={`flex items-center justify-center w-10 shrink-0 text-xl font-extrabold ${style.text}`}>{style.label}</div>
-            <div className="flex flex-wrap gap-2 items-center">
+          /* A ruled row per tier, with the tier letter as a display figure in
+             the left gutter. The tinted rounded box each tier used to sit in
+             added four more cards without adding information. */
+          <div key={tier} className="grid grid-cols-[2.5rem_1fr] items-start gap-4 border-b border-rule py-4">
+            <div className={`figure text-3xl font-extrabold leading-none ${TIER_TEXT[tier]}`} aria-hidden="true">
+              {tier}
+            </div>
+            <div className="flex flex-wrap items-center gap-2">
+              <h3 className="sr-only">{tier} tier</h3>
               {specs.map((s) => (
                 <SpecIcon key={`${s.class}-${s.spec}`} entry={s} iconUrl={specIcons[specKey(s.class, s.spec)] ?? null} />
               ))}
@@ -122,11 +129,11 @@ function ContentPanel({ list, specIcons }: { list: MetaTierListData; specIcons: 
         </TabsContent>
       </Tabs>
 
-      <p className="text-xs text-text-dim mt-4">
-        Last updated {list.lastUpdated} — sourced from {list.source}. Rankings shift with tuning and gear access;
-        treat this as a snapshot, not gospel.
+      <p className="mt-6 max-w-[64ch] text-xs leading-relaxed text-text-dim">
+        Last updated {list.lastUpdated}, sourced from {list.source}. Rankings shift with tuning and gear access, so
+        treat this as a snapshot rather than gospel.
       </p>
-      {list.notes && <p className="text-xs text-text-dim mt-2 italic">{list.notes}</p>}
+      {list.notes && <p className="mt-2 max-w-[64ch] text-xs italic leading-relaxed text-text-dim">{list.notes}</p>}
     </div>
   );
 }
@@ -147,13 +154,13 @@ export function MetaTierList({ mythicPlus, raid, specIcons }: Props) {
           ))}
         </TabsList>
 
-        <TabsContent value={content} className="focus-visible:outline-none">
+        <TabsContent value={content} className="pt-6 focus-visible:outline-none">
           {activeList ? (
             <ContentPanel list={activeList} specIcons={specIcons} />
           ) : (
-            <div className="rounded-xl border border-severity-upgrade/20 bg-severity-upgrade/5 p-6 text-center text-sm text-text-dim mt-4">
+            <p className="border-l-2 border-severity-upgrade pl-5 text-sm text-text-muted">
               No {content === 'raid' ? 'raid' : 'Mythic+'} tier list has been seeded for this season yet.
-            </div>
+            </p>
           )}
         </TabsContent>
       </Tabs>

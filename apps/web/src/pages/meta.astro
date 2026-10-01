@@ -18,18 +18,19 @@ const specIcons = await getAllSpecIcons('us');
 <Layout title="Meta — Mythos" description="Current Mythic+ and Raid spec tier lists — see which specs are S-tier this season.">
   <SiteHeader currentPath={Astro.url.pathname} />
 
-  <main class="max-w-4xl mx-auto px-6 pb-16">
-    <h1 class="text-3xl font-bold mb-2">Meta</h1>
-    <p class="text-sm text-text-dim mb-8">Which specs are strongest right now.</p>
+  <div class="mx-auto max-w-5xl px-6 pb-20">
+    <div class="my-14 border-l-[3px] border-accent pl-6 sm:pl-10">
+      <h1 class="display text-[clamp(2.25rem,6vw,3.25rem)]">Which specs are strongest right now.</h1>
+    </div>
 
     {
       mythicPlus || raid ? (
         <MetaTierList client:load mythicPlus={mythicPlus} raid={raid} specIcons={specIcons} />
       ) : (
-        <div class="rounded-xl border border-severity-upgrade/20 bg-severity-upgrade/5 p-6 text-center text-sm text-text-dim">
+        <p class="border-l-2 border-severity-upgrade pl-5 text-sm text-text-muted">
           No tier list has been seeded for this season yet.
-        </div>
+        </p>
       )
     }
-  </main>
+  </div>
 </Layout>

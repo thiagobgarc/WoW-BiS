@@ -7,10 +7,21 @@ import { SearchForm } from '@/components/search/SearchForm';
 <Layout>
   <SiteHeader currentPath={Astro.url.pathname} />
 
-  <main class="max-w-2xl mx-auto mt-16 px-6">
-    <h1 class="text-3xl font-bold text-center mb-2">Find Your Upgrades</h1>
-    <p class="text-sm text-text-dim text-center mb-10">Character name, realm, and region</p>
+  <div class="mx-auto max-w-5xl px-6">
+    <!-- The spine. It runs the length of the page's content on every screen:
+         here in the brand default, on a character page in that character's
+         class color. Left-aligned throughout, so the headline, the name
+         field and every recent row share one axis. -->
+    <div class="my-14 border-l-[3px] border-accent pl-6 sm:my-20 sm:pl-10">
+      <h1 class="display max-w-[20ch] text-[clamp(2.5rem,7.5vw,4rem)]">Every slot you can still upgrade.</h1>
+      <p class="mt-6 max-w-[58ch] text-base leading-relaxed text-text-muted">
+        Look up a character and Mythos lines up what they're wearing against the best-in-slot list for their
+        spec — slot by slot, with where each replacement drops.
+      </p>
 
-    <SearchForm client:load />
-  </main>
+      <div class="mt-10">
+        <SearchForm client:load />
+      </div>
+    </div>
+  </div>
 </Layout>

@@ -27,46 +27,58 @@ export function UpgradeBoard({ equipment, bisEntries, seeded }: Props) {
 
   if (!seeded) {
     return (
-      <div className="rounded-xl border border-severity-upgrade/20 bg-severity-upgrade/5 p-6 text-center text-sm text-text-muted">
-        No BiS data has been seeded for this class/spec yet. See the README for how to add a spec's BiS list.
+      <div className="border-l-2 border-severity-upgrade pl-5">
+        <h2 className="mb-1 text-base font-semibold">What to upgrade</h2>
+        <p className="text-sm text-text-muted">
+          No best-in-slot list has been seeded for this class and spec yet. The README covers how to add one.
+        </p>
       </div>
     );
   }
 
   return (
     <div>
-      <h2 className="text-xl font-bold mb-4">Upgrade Board</h2>
-
-      <div className="mb-6">
-        <CompletionMeter
-          bisSlotsCount={result.bisSlotsCount}
-          totalSlots={result.totalSlots}
-          theoreticalMaxIlvl={result.theoreticalMaxIlvl}
-          currentIlvl={result.currentIlvl}
-        />
-      </div>
+      <CompletionMeter
+        bisSlotsCount={result.bisSlotsCount}
+        totalSlots={result.totalSlots}
+        theoreticalMaxIlvl={result.theoreticalMaxIlvl}
+        currentIlvl={result.currentIlvl}
+        contentType={contentType}
+      />
 
       <Tabs value={contentType} onValueChange={(v) => setContentType(v as ContentType)}>
-        <TabsList>
-          {CONTENT_TYPES.map((ct) => (
-            <TabsTrigger key={ct} value={ct}>
-              {TAB_LABEL[ct]}
-            </TabsTrigger>
-          ))}
-        </TabsList>
+        <div className="mt-12 flex flex-wrap items-baseline justify-between gap-x-6">
+          <h2 className="text-base font-semibold">What to upgrade</h2>
+          <TabsList className="border-none">
+            {CONTENT_TYPES.map((ct) => (
+              <TabsTrigger key={ct} value={ct}>
+                {TAB_LABEL[ct]}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+        </div>
 
         {CONTENT_TYPES.map((ct) => (
           <TabsContent key={ct} value={ct} className="focus-visible:outline-none">
             {ct === contentType && (
               <>
-                <div className="flex flex-col gap-3 mb-8">
+                {/* Column headings for the board: what you have on the left,
+                    what it gains you on the right, named rather than implied. */}
+                <div className="flex items-baseline justify-between border-y border-rule-strong py-2">
+                  <span className="label">Equipped, and what replaces it</span>
+                  {/* A column heading only where there is a column: below md
+                      the delta stacks under the row instead. */}
+                  <span className="label hidden md:inline">Gain</span>
+                </div>
+
+                <div>
                   {result.rows.map((row) => (
                     <ComparisonRow key={`${row.bisSlot}-${row.physicalSlot}`} row={row} />
                   ))}
                 </div>
 
-                <QuickWinsPanel quickWins={groups.quickWins} />
-                <div className="mt-5">
+                <div className="mt-12 space-y-12">
+                  <QuickWinsPanel quickWins={groups.quickWins} />
                   <ActionPanels groups={groups} />
                 </div>
               </>

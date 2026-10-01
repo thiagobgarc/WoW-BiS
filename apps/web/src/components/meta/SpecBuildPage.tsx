@@ -38,7 +38,7 @@ function BuildPanel({ tree, build }: { tree: DomainTalentTree; build: Recommende
 
   if (!build) {
     return (
-      <div className="rounded-xl border border-severity-upgrade/20 bg-severity-upgrade/5 p-6 text-center text-sm text-text-dim mt-4">
+      <div className="mt-4 border-l-2 border-severity-upgrade pl-5 text-sm text-text-dim">
         No meta build has been seeded for this spec/content type yet.
       </div>
     );
@@ -47,13 +47,13 @@ function BuildPanel({ tree, build }: { tree: DomainTalentTree; build: Recommende
   return (
     <div className="mt-4">
       {build.notes && <div className="text-xs text-text-dim mb-4 italic">{build.notes}</div>}
-      <div className="overflow-x-auto rounded-lg border border-white/8 bg-bg/60 p-4">
+      <div className="overflow-x-auto rounded-[4px] border border-rule bg-sunken p-4">
         <div className="flex flex-col sm:flex-row justify-center items-center sm:items-start gap-6 sm:gap-2 w-fit mx-auto">
           <TalentTree nodes={tree.classNodes} selections={selectionMap} title="Class Talents" />
           <TalentTree nodes={tree.specNodes} selections={selectionMap} title="Spec Talents" />
         </div>
       </div>
-      <p className="text-[11px] text-text-dim mt-3">
+      <p className="label mt-3">
         Hero talent recommendations aren't seeded yet — this covers class/spec picks only.
       </p>
     </div>
@@ -67,9 +67,10 @@ export function SpecBuildPage({ className, specName, tree, mythicPlusBuild, raid
 
   return (
     <TooltipProvider>
-      <div className="max-w-4xl mx-auto px-6 pb-16">
-        <div className="flex flex-wrap items-center gap-3 mb-2">
-          <h1 className="text-3xl font-bold" style={{ color: accent }}>
+      <div className="mx-auto max-w-5xl px-6 pb-20">
+        <div className="my-14 border-l-[3px] pl-6 sm:pl-10" style={{ borderColor: accent }}>
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+          <h1 className="display text-[clamp(2rem,5.5vw,3.25rem)]" style={{ color: accent }}>
             {specName} {className}
           </h1>
           {mythicPlusTier && (
@@ -83,9 +84,10 @@ export function SpecBuildPage({ className, specName, tree, mythicPlusBuild, raid
             </span>
           )}
         </div>
-        <p className="text-sm text-text-dim mb-8">
+        <p className="mt-4 max-w-[58ch] text-base text-text-muted">
           The current meta talent build for {specName} {className}.
         </p>
+        </div>
 
         <Tabs value={content} onValueChange={(v) => setContent(v as RecommendedContentType)}>
           <TabsList>

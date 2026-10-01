@@ -44,6 +44,20 @@ interface RefreshableData {
   stale: boolean;
 }
 
+/** Notices are achromatic with a rule: an advisory is not data, so it gets no
+ *  hue. The stale notice keeps amber, because caution is its actual meaning. */
+function Notice({ tone = 'neutral', children }: { tone?: 'neutral' | 'caution'; children: React.ReactNode }) {
+  return (
+    <p
+      className={`border-l-2 pl-4 text-xs leading-relaxed ${
+        tone === 'caution' ? 'border-severity-upgrade text-severity-upgrade' : 'border-rule-strong text-text-muted'
+      }`}
+    >
+      {children}
+    </p>
+  );
+}
+
 export function CharacterPage({
   character: initialCharacter,
   equipment: initialEquipment,
@@ -94,76 +108,75 @@ export function CharacterPage({
 
   return (
     <TooltipProvider>
-      <div className="max-w-5xl mx-auto px-6 pb-16 space-y-8">
-        {mock && (
-          <div className="rounded-md border border-link/30 bg-link/10 text-link text-xs p-3">
-            Showing sample data — no Blizzard API credentials configured yet. Set BLIZZARD_CLIENT_ID/SECRET to see
-            this character's real gear.
-          </div>
-        )}
-        {stale && (
-          <div className="rounded-md border border-severity-upgrade/30 bg-severity-upgrade/10 text-severity-upgrade text-xs p-3">
-            ⚠️ The Blizzard API is temporarily unavailable — showing cached data from {timeAgo(fetchedAt)}.
+      <div className="mx-auto max-w-5xl px-6 pb-20">
+        {(mock || stale) && (
+          <div className="space-y-3 pt-8">
+            {mock && (
+              <Notice>
+                Showing sample data — no Blizzard API credentials are configured. Set BLIZZARD_CLIENT_ID and
+                BLIZZARD_CLIENT_SECRET to see this character's real gear.
+              </Notice>
+            )}
+            {stale && <Notice tone="caution">The Blizzard API is temporarily unavailable. Showing gear cached {timeAgo(fetchedAt)}.</Notice>}
           </div>
         )}
 
-        <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
+        <div className="pt-10">
           <CharacterHeader character={character} equipment={equipment} avatarUrl={avatarUrl} metaTier={metaTier} />
         </div>
 
-        <Tabs defaultValue="gear">
-          <TabsList className="mb-0">
-            <TabsTrigger value="gear">Gear</TabsTrigger>
-            <TabsTrigger value="raid">Raid Progression</TabsTrigger>
-            <TabsTrigger value="mythic-plus">Mythic+</TabsTrigger>
-          </TabsList>
-
-          <div className="flex items-center justify-between text-xs text-text-dim my-4">
-            <span>Last updated {timeAgo(fetchedAt)}</span>
-            <RefreshButton region={character.region} realm={character.realmSlug} name={character.name} onRefreshed={refetch} />
+        <Tabs defaultValue="gear" className="mt-12">
+          <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2">
+            <TabsList className="border-none">
+              <TabsTrigger value="gear">Gear</TabsTrigger>
+              <TabsTrigger value="raid">Raid progression</TabsTrigger>
+              <TabsTrigger value="mythic-plus">Mythic+</TabsTrigger>
+            </TabsList>
+            <div className="flex items-center gap-4">
+              <span className="label">Updated {timeAgo(fetchedAt)}</span>
+              <RefreshButton region={character.region} realm={character.realmSlug} name={character.name} onRefreshed={refetch} />
+            </div>
           </div>
 
-          <TabsContent value="gear" className="space-y-8">
-            <section aria-label="Equipped gear">{refreshing ? <PaperDollSkeleton /> : <PaperDoll equipment={equipment} />}</section>
+          <div className="border-t border-rule">
+            <TabsContent value="gear" className="space-y-14 pt-10">
+              <section aria-label="Equipped gear">{refreshing ? <PaperDollSkeleton /> : <PaperDoll equipment={equipment} />}</section>
 
-            <StatsPanel stats={stats} priorityOrder={statPriority} />
+              <StatsPanel stats={stats} priorityOrder={statPriority} />
 
-            <section aria-label="Upgrade board">
-              <UpgradeBoard equipment={equipment} bisEntries={bisEntries} seeded={bisSeeded} />
-            </section>
-
-            {talents && (
-              <section aria-label="Talents">
-                <TalentTreeSection
-                  tree={talents.tree}
-                  current={talents.current}
-                  heroTree={talents.heroTree}
-                  heroSelections={talents.heroSelections}
-                  recommended={recommendedTalents}
-                />
+              <section aria-label="Upgrade board">
+                <UpgradeBoard equipment={equipment} bisEntries={bisEntries} seeded={bisSeeded} />
               </section>
-            )}
-          </TabsContent>
 
-          <TabsContent value="raid">
-            {raidProgress ? (
-              <RaidProgressionPanel progress={raidProgress} />
-            ) : (
-              <div className="rounded-xl border border-white/8 bg-panel p-5 text-sm text-text-dim">
-                Raid progression isn't available for this character right now.
-              </div>
-            )}
-          </TabsContent>
+              {talents && (
+                <section aria-label="Talents">
+                  <TalentTreeSection
+                    tree={talents.tree}
+                    current={talents.current}
+                    heroTree={talents.heroTree}
+                    heroSelections={talents.heroSelections}
+                    recommended={recommendedTalents}
+                  />
+                </section>
+              )}
+            </TabsContent>
 
-          <TabsContent value="mythic-plus">
-            {mythicPlus ? (
-              <MythicPlusPanel profile={mythicPlus} />
-            ) : (
-              <div className="rounded-xl border border-white/8 bg-panel p-5 text-sm text-text-dim">
-                Mythic+ progress isn't available for this character right now.
-              </div>
-            )}
-          </TabsContent>
+            <TabsContent value="raid" className="pt-10">
+              {raidProgress ? (
+                <RaidProgressionPanel progress={raidProgress} />
+              ) : (
+                <p className="text-sm text-text-dim">Raid progression isn't available for this character right now.</p>
+              )}
+            </TabsContent>
+
+            <TabsContent value="mythic-plus" className="pt-10">
+              {mythicPlus ? (
+                <MythicPlusPanel profile={mythicPlus} />
+              ) : (
+                <p className="text-sm text-text-dim">Mythic+ progress isn't available for this character right now.</p>
+              )}
+            </TabsContent>
+          </div>
         </Tabs>
       </div>
     </TooltipProvider>

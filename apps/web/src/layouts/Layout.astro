@@ -32,26 +32,32 @@ const {
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Archivo variable, both axes: width 62–125 and weight 100–900. One
+         family does display, UI and figures; the width axis replaces the
+         second typeface a design like this would normally reach for. -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body class="min-h-screen bg-bg text-text font-sans flex flex-col" style="font-family: 'Inter', system-ui, sans-serif;">
+  <body class="min-h-screen bg-bg text-text font-sans flex flex-col">
+    <!-- Neutral, not accent: a class-colored fill fails AA against both white
+         and dark text on 10 of the 13 classes. See global.css. -->
     <a
       href="#main-content"
-      class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-4 focus:left-4 focus:px-4 focus:py-2 focus:rounded-md focus:bg-accent focus:text-white focus:outline-none"
+      class="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-4 focus:left-4 focus:px-4 focus:py-2 focus:rounded focus:bg-text focus:text-bg focus:font-semibold focus:no-underline"
     >
       Skip to content
     </a>
     <main id="main-content" class="flex-1">
       <slot />
     </main>
-    <!-- text-dim, not text-faint: text-faint is ~3.2:1 against this dark background, below WCAG AA's 4.5:1 for body text -->
-    <footer class="border-t border-white/8 mt-16 py-6 px-6 text-center text-xs text-text-dim">
-      Not affiliated with or endorsed by Blizzard Entertainment. World of Warcraft and all related assets are the
-      property of Blizzard Entertainment, Inc. No game assets are rehosted — icons and media are loaded directly
-      from Blizzard's API.
+    <footer class="mt-20 border-t border-rule">
+      <p class="mx-auto max-w-5xl px-6 py-7 text-xs leading-relaxed text-text-dim">
+        Not affiliated with or endorsed by Blizzard Entertainment. World of Warcraft and all related assets are the
+        property of Blizzard Entertainment, Inc. No game assets are rehosted — icons and media are loaded directly
+        from Blizzard's API.
+      </p>
     </footer>
   </body>
 </html>

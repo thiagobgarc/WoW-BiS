@@ -17,7 +17,7 @@ test.beforeAll(async ({ browser }) => {
 test('search for a character and see the full upgrade board', async ({ page }) => {
   await page.goto('/');
 
-  await expect(page.getByRole('heading', { name: 'Find Your Upgrades' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Every slot you can still upgrade.' })).toBeVisible();
 
   await page.getByPlaceholder('Character name').fill('Arthas');
   const realmInput = page.getByPlaceholder('Realm');
@@ -38,7 +38,7 @@ test('search for a character and see the full upgrade board', async ({ page }) =
   // Progression tab strip (Raid/Mythic+) and a Talents tab strip
   // (Recommended (Mythic+)/(Raid)) whose tab names otherwise collide with
   // these on a plain page-wide role query.
-  await expect(page.getByRole('heading', { name: 'Upgrade Board' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'What to upgrade' })).toBeVisible();
   await expect(page.getByText(/of 16 slots/)).toBeVisible();
   const upgradeBoard = page.getByRole('region', { name: 'Upgrade board' });
   await expect(upgradeBoard.getByRole('tab', { name: 'Raid', exact: true })).toBeVisible();
@@ -59,5 +59,5 @@ test('search for a character and see the full upgrade board', async ({ page }) =
 
   // Recently-viewed chip appears back on the search page after a visit.
   await page.getByRole('link', { name: /Mythos/ }).click();
-  await expect(page.getByText('Arthas • Illidan • US')).toBeVisible();
+  await expect(page.getByRole('button', { name: /Arthas.*Illidan.*US/ })).toBeVisible();
 });

@@ -1,21 +1,21 @@
 import type { ActionGroups } from '@mythos/core/bis';
 
-function Panel({ title, icon, children }: { title: string; icon: string; children: React.ReactNode }) {
+function Group({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <div className="rounded-xl border border-white/8 bg-panel p-4">
-      <div className="text-sm font-bold mb-3">
-        <span aria-hidden="true">{icon}</span> {title}
-      </div>
-      <div className="space-y-0">{children}</div>
-    </div>
+    <section>
+      <h3 className="border-b border-rule-strong pb-2 text-sm font-semibold">{title}</h3>
+      <ul>{children}</ul>
+    </section>
   );
 }
 
+/** The count sits in its own right-aligned column, like every other figure. */
 function Row({ count, children }: { count: string; children: React.ReactNode }) {
   return (
-    <div className="text-xs py-2 border-b border-white/4 last:border-none text-text-muted">
-      <span className="text-link font-semibold">{count}</span> {children}
-    </div>
+    <li className="flex items-baseline justify-between gap-4 border-b border-rule py-2 text-sm last:border-none">
+      <span className="min-w-0 text-text">{children}</span>
+      <span className="figure shrink-0 text-xs text-text-dim">{count}</span>
+    </li>
   );
 }
 
@@ -25,52 +25,54 @@ export function ActionPanels({ groups }: { groups: ActionGroups }) {
 
   if (!hasAnything) {
     return (
-      <div className="rounded-xl border border-severity-bis/20 bg-severity-bis/5 p-6 text-center text-sm text-text-muted">
-        No upgrades found for this content type — you're fully BiS here. 🎉
+      <div className="border-l-2 border-severity-bis pl-5">
+        <p className="text-sm font-semibold">Nothing left to chase here.</p>
+        <p className="mt-1 text-sm text-text-muted">Every slot is at best in slot for this content type.</p>
       </div>
     );
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+    <div className="grid grid-cols-1 gap-x-12 gap-y-10 md:grid-cols-2">
       {groups.raidTargets.length > 0 && (
-        <Panel title="Bosses to Prioritize" icon="📍">
+        <Group title="Bosses worth prioritising">
           {groups.raidTargets.map((b) => (
             <Row key={`${b.boss}-${b.instance}`} count={`${b.slots.length} upgrade${b.slots.length > 1 ? 's' : ''}`}>
-              {b.boss} ({b.slots.join(', ')})
+              <span className="font-medium">{b.boss}</span>
+              <span className="text-text-dim"> {b.slots.join(', ')}</span>
             </Row>
           ))}
-        </Panel>
+        </Group>
       )}
 
       {groups.dungeonTargets.length > 0 && (
-        <Panel title="Dungeons to Farm" icon="🗡️">
+        <Group title="Dungeons to farm">
           {groups.dungeonTargets.map((d) => (
             <Row key={d.dungeon} count={`${d.slots.length} upgrade${d.slots.length > 1 ? 's' : ''}`}>
               {d.dungeon}
             </Row>
           ))}
-        </Panel>
+        </Group>
       )}
 
       {groups.craftTargets.length > 0 && (
-        <Panel title="Craft These" icon="🔨">
+        <Group title="Worth crafting">
           {groups.craftTargets.map((c) => (
-            <Row key={c.slot} count={`${c.slot}${c.craftQuality ? ` (Q${c.craftQuality})` : ''}`}>
+            <Row key={c.slot} count={`${c.slot}${c.craftQuality ? `, Q${c.craftQuality}` : ''}`}>
               {c.itemName}
             </Row>
           ))}
-        </Panel>
+        </Group>
       )}
 
       {groups.catalystTargets.length > 0 && (
-        <Panel title="Catalyst This" icon="⚙️">
+        <Group title="Worth a catalyst charge">
           {groups.catalystTargets.map((c) => (
             <Row key={c.slot} count={c.slot}>
               {c.itemName}
             </Row>
           ))}
-        </Panel>
+        </Group>
       )}
     </div>
   );

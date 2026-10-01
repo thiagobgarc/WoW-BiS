@@ -51,6 +51,7 @@ export function NameCombobox({ id, value, onChange, onSelect, recent }: Props) {
         aria-controls={`${id}-listbox`}
         aria-autocomplete="list"
         placeholder="Character name"
+        inputSize="lg"
         value={value}
         onChange={(e) => {
           onChange(e.target.value);
@@ -78,7 +79,7 @@ export function NameCombobox({ id, value, onChange, onSelect, recent }: Props) {
         <ul
           id={`${id}-listbox`}
           role="listbox"
-          className="absolute z-20 mt-1 w-full max-h-56 overflow-auto rounded-md border border-white/12 bg-panel shadow-xl"
+          className="absolute z-20 mt-1 max-h-56 w-full overflow-auto rounded-[4px] border border-rule-strong bg-panel shadow-2xl"
         >
           {suggestions.map((c, i) => (
             <li
@@ -86,8 +87,8 @@ export function NameCombobox({ id, value, onChange, onSelect, recent }: Props) {
               role="option"
               aria-selected={i === activeIndex}
               className={cn(
-                'px-4 py-2 text-sm cursor-pointer flex items-center justify-between gap-2',
-                i === activeIndex ? 'bg-accent-soft text-text' : 'text-text-muted hover:bg-white/5',
+                "flex min-h-[44px] cursor-pointer items-center justify-between gap-4 px-4 py-2 text-sm",
+                i === activeIndex ? "bg-white/10 text-text" : "text-text-muted hover:bg-white/6",
               )}
               onMouseDown={(e) => {
                 e.preventDefault();
@@ -95,8 +96,8 @@ export function NameCombobox({ id, value, onChange, onSelect, recent }: Props) {
               }}
             >
               <span>{c.name}</span>
-              <span className="text-xs text-text-dim shrink-0">
-                {c.realmName} • {c.region.toUpperCase()}
+              <span className="shrink-0 text-xs text-text-dim">
+                {c.realmName}<span className="figure pl-3">{c.region.toUpperCase()}</span>
               </span>
             </li>
           ))}

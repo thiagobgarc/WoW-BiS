@@ -91,7 +91,7 @@ export function RealmCombobox({ region, value, onChange, id }: Props) {
         <ul
           id={`${id}-listbox`}
           role="listbox"
-          className="absolute z-20 mt-1 w-full max-h-56 overflow-auto rounded-md border border-white/12 bg-panel shadow-xl"
+          className="absolute z-20 mt-1 max-h-56 w-full overflow-auto rounded-[4px] border border-rule-strong bg-panel shadow-2xl"
         >
           {suggestions.map((realm, i) => (
             <li
@@ -99,8 +99,8 @@ export function RealmCombobox({ region, value, onChange, id }: Props) {
               role="option"
               aria-selected={i === activeIndex}
               className={cn(
-                'px-4 py-2 text-sm cursor-pointer',
-                i === activeIndex ? 'bg-accent-soft text-text' : 'text-text-muted hover:bg-white/5',
+                "flex min-h-[44px] cursor-pointer items-center px-4 py-2 text-sm",
+                i === activeIndex ? "bg-white/10 text-text" : "text-text-muted hover:bg-white/6",
               )}
               onMouseDown={(e) => {
                 e.preventDefault();
