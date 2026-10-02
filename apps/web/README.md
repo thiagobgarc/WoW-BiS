@@ -199,6 +199,26 @@ current season's directory, so a malformed entry fails CI immediately. If you're
 using Postgres (`DATABASE_URL` set), run `bun run db:seed` to load it; otherwise
 it's picked up automatically from disk (see `getBisList.ts`'s zero-infra fallback).
 
+### Recommended talent builds
+
+Builds live in `data/talents/{seasonId}/{class}-{spec}.json` (Mythic+) and
+`...-raid.json`. Talent builds are theorycraft, so no Blizzard endpoint has them,
+but they aren't hand-transcribed either:
+
+```
+bun run talents:import            # fill in any missing spec/content builds
+bun run talents:import --force    # re-import every build after a patch
+```
+
+`talents:import` decodes the in-game export strings Icy Veins publishes for each
+spec (`src/lib/talents/exportString.ts`, Blizzard's own loadout format), using
+Raidbots' `talents.json` for the node serialization order. It only writes a
+build that decodes to the right spec with clean padding and whose every node and
+choice exists in Blizzard's tree for that spec. Otherwise it tries the page's
+next matching build, then reports the spec as unseeded. A string made against an
+older tree fails this check, which is the point. Each file's `notes` records
+the source label, URL, date and the original export string.
+
 ---
 
 ## Rolling the season

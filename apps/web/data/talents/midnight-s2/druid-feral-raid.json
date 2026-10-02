@@ -1,7 +1,7 @@
 {
   "season": "midnight-s2",
   "class": "Druid",
-  "spec": "Restoration",
+  "spec": "Feral",
   "contentType": "raid",
   "classSelections": [
     {
@@ -11,11 +11,6 @@
     },
     {
       "nodeId": 82199,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82205,
       "rank": 1,
       "optionIndex": 0
     },
@@ -30,18 +25,13 @@
       "optionIndex": 1
     },
     {
-      "nodeId": 82210,
+      "nodeId": 82209,
       "rank": 1,
       "optionIndex": 0
     },
     {
       "nodeId": 82214,
       "rank": 2,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82217,
-      "rank": 1,
       "optionIndex": 0
     },
     {
@@ -65,8 +55,18 @@
       "optionIndex": 0
     },
     {
-      "nodeId": 82225,
+      "nodeId": 82223,
       "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82224,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82225,
+      "rank": 2,
       "optionIndex": 0
     },
     {
@@ -115,13 +115,18 @@
       "optionIndex": 0
     },
     {
-      "nodeId": 82240,
+      "nodeId": 82239,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82243,
-      "rank": 2,
+      "nodeId": 82241,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82242,
+      "rank": 1,
       "optionIndex": 0
     },
     {
@@ -130,7 +135,7 @@
       "optionIndex": 0
     },
     {
-      "nodeId": 100173,
+      "nodeId": 92229,
       "rank": 1,
       "optionIndex": 0
     },
@@ -146,21 +151,21 @@
     },
     {
       "nodeId": 100177,
-      "rank": 2,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 100223,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 104082,
+      "nodeId": 104078,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 104084,
+      "nodeId": 104080,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 104081,
       "rank": 1,
       "optionIndex": 0
     },
@@ -172,150 +177,145 @@
   ],
   "specSelections": [
     {
-      "nodeId": 82045,
+      "nodeId": 82085,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82047,
+      "nodeId": 82088,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82049,
+      "nodeId": 82091,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82050,
+      "nodeId": 82092,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82051,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82052,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82053,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82054,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82055,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82057,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82058,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82059,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82060,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82063,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82064,
-      "rank": 1,
-      "optionIndex": 1
-    },
-    {
-      "nodeId": 82065,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82068,
+      "nodeId": 82094,
       "rank": 2,
       "optionIndex": 0
     },
     {
-      "nodeId": 82072,
+      "nodeId": 82096,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82073,
+      "nodeId": 82099,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82074,
+      "nodeId": 82100,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82101,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82102,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82104,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82106,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82107,
       "rank": 1,
       "optionIndex": 1
     },
     {
-      "nodeId": 82076,
+      "nodeId": 82108,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82079,
+      "nodeId": 82111,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82112,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82114,
       "rank": 1,
       "optionIndex": 1
     },
     {
-      "nodeId": 82080,
+      "nodeId": 82115,
       "rank": 2,
       "optionIndex": 0
     },
     {
-      "nodeId": 82082,
+      "nodeId": 82116,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82083,
+      "nodeId": 82117,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 103874,
+      "nodeId": 82118,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 103876,
+      "nodeId": 82119,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 104125,
+      "nodeId": 82121,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82122,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 110424,
+      "nodeId": 82123,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82124,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 92641,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110426,
       "rank": 4,
       "optionIndex": 0
     }
   ],
-  "notes": "Decoded from Icy Veins' \"Wildstalker Raid\" in-game export string (https://www.icy-veins.com/wow/restoration-druid-pve-healing-spec-builds-talents), imported 2026-10-02 by scripts/import-talents.ts. Export string: CkGAAAAAAAAAAAAAAAAAAAAAAYMmZZmZMzMmthBzsZsNmBAAAAAAAAAAbDa2YMNzY4BMLzMzMDDzAAAAAAAAAAIAAgZbmlmtZ2sxYmZwMwoZAAmZAYA"
+  "notes": "Decoded from Icy Veins' \"Raid / Single Target - Wildstalker\" in-game export string (https://www.icy-veins.com/wow/feral-druid-pve-dps-spec-builds-talents), imported 2026-10-02 by scripts/import-talents.ts. Export string: CcGAAAAAAAAAAAAAAAAAAAAAAAAAAAAwYMjxYmZMmtFWGbzMzYmZAAAAYLY2MMmZUzYWmZmZGjZMAAAAAAMwAAAAAAMbzs0sNzyGYmHAYxMYAAMzAgB"
 }

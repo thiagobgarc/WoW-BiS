@@ -258,18 +258,20 @@ function mapTalentNode(raw: TalentNode, iconUrls: Map<number, string>): DomainTa
  * embeds them a second time (verified against live character data).
  */
 export function mapTalentTree(raw: TalentTree, iconUrls: Map<number, string>, specId: number): DomainTalentTree {
+  // A node with no ranks has no talent to show (see TalentNodeSchema).
+  const real = (nodes: TalentNode[]) => nodes.filter((n) => n.ranks.length > 0);
   const heroTrees = (raw.hero_talent_trees ?? [])
     .filter((h) => !h.playable_specializations || h.playable_specializations.some((s) => s.id === specId))
     .map((h) => ({
       id: h.id,
       name: h.name,
-      nodes: h.hero_talent_nodes.map((n) => mapTalentNode(n, iconUrls)),
+      nodes: real(h.hero_talent_nodes).map((n) => mapTalentNode(n, iconUrls)),
     }));
   const heroNodeIds = new Set(heroTrees.flatMap((h) => h.nodes.map((n) => n.id)));
 
   return {
-    classNodes: raw.class_talent_nodes.map((n) => mapTalentNode(n, iconUrls)),
-    specNodes: raw.spec_talent_nodes.filter((n) => !heroNodeIds.has(n.id)).map((n) => mapTalentNode(n, iconUrls)),
+    classNodes: real(raw.class_talent_nodes).map((n) => mapTalentNode(n, iconUrls)),
+    specNodes: real(raw.spec_talent_nodes).filter((n) => !heroNodeIds.has(n.id)).map((n) => mapTalentNode(n, iconUrls)),
     heroTrees,
   };
 }

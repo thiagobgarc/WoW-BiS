@@ -1,321 +1,316 @@
 {
   "season": "midnight-s2",
-  "class": "Druid",
-  "spec": "Restoration",
+  "class": "Priest",
+  "spec": "Holy",
   "contentType": "raid",
   "classSelections": [
     {
-      "nodeId": 82198,
-      "rank": 1,
-      "optionIndex": 1
-    },
-    {
-      "nodeId": 82199,
+      "nodeId": 82556,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82205,
+      "nodeId": 82672,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82206,
+      "nodeId": 82673,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82207,
-      "rank": 1,
-      "optionIndex": 1
-    },
-    {
-      "nodeId": 82210,
+      "nodeId": 82675,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82214,
+      "nodeId": 82676,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82677,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82678,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82684,
       "rank": 2,
       "optionIndex": 0
     },
     {
-      "nodeId": 82217,
+      "nodeId": 82685,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82218,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82219,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82220,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82222,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82225,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82228,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82229,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82230,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82231,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82232,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82233,
+      "nodeId": 82686,
       "rank": 2,
       "optionIndex": 0
     },
     {
-      "nodeId": 82234,
+      "nodeId": 82687,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82235,
+      "nodeId": 82690,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82236,
+      "nodeId": 82696,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82240,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82243,
+      "nodeId": 82697,
       "rank": 2,
       "optionIndex": 0
     },
     {
-      "nodeId": 82244,
+      "nodeId": 82702,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 100173,
+      "nodeId": 82703,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 100175,
+      "nodeId": 82705,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 100176,
+      "nodeId": 82715,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 100177,
+      "nodeId": 82716,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82717,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82718,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108730,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108731,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109006,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109009,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109010,
       "rank": 2,
       "optionIndex": 0
     },
     {
-      "nodeId": 100223,
+      "nodeId": 109012,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 104082,
+      "nodeId": 109015,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 104084,
+      "nodeId": 109019,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 104085,
+      "nodeId": 109020,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109021,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109890,
       "rank": 1,
       "optionIndex": 0
     }
   ],
   "specSelections": [
     {
-      "nodeId": 82045,
+      "nodeId": 82604,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82047,
+      "nodeId": 82610,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82049,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82050,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82051,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82052,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82053,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82054,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82055,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82057,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82058,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82059,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82060,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82063,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82064,
-      "rank": 1,
-      "optionIndex": 1
-    },
-    {
-      "nodeId": 82065,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82068,
+      "nodeId": 82611,
       "rank": 2,
       "optionIndex": 0
     },
     {
-      "nodeId": 82072,
+      "nodeId": 82612,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82073,
+      "nodeId": 82613,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82074,
-      "rank": 1,
-      "optionIndex": 1
-    },
-    {
-      "nodeId": 82076,
+      "nodeId": 82614,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82079,
+      "nodeId": 82616,
       "rank": 1,
-      "optionIndex": 1
+      "optionIndex": 0
     },
     {
-      "nodeId": 82080,
+      "nodeId": 82617,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82618,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82620,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82621,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82622,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82627,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82630,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82631,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82634,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82635,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82636,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82637,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82638,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82639,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82641,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82642,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103900,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103901,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103914,
       "rank": 2,
       "optionIndex": 0
     },
     {
-      "nodeId": 82082,
+      "nodeId": 103916,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82083,
+      "nodeId": 104097,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 103874,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 103876,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 104125,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 110424,
+      "nodeId": 110409,
       "rank": 4,
       "optionIndex": 0
     }
   ],
-  "notes": "Decoded from Icy Veins' \"Wildstalker Raid\" in-game export string (https://www.icy-veins.com/wow/restoration-druid-pve-healing-spec-builds-talents), imported 2026-10-02 by scripts/import-talents.ts. Export string: CkGAAAAAAAAAAAAAAAAAAAAAAYMmZZmZMzMmthBzsZsNmBAAAAAAAAAAbDa2YMNzY4BMLzMzMDDzAAAAAAAAAAIAAgZbmlmtZ2sxYmZwMwoZAAmZAYA"
+  "notes": "Decoded from Icy Veins' \"Holy Priest Raid - Oracle Easy Mode\" in-game export string (https://www.icy-veins.com/wow/holy-priest-pve-healing-spec-builds-talents), imported 2026-10-02 by scripts/import-talents.ts. Export string: CEQAAAAAAAAAAAAAAAAAAAAAAADAAAAAAYBmZWGzMmZMMDzsMzYGAAAAzYWmBzMzwMMjBMTBwMLYIMmtBYMwiZmZBgZMzYMMzAMzMgB"
 }

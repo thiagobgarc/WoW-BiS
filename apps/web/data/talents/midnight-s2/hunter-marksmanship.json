@@ -1,321 +1,306 @@
 {
   "season": "midnight-s2",
-  "class": "Druid",
-  "spec": "Restoration",
-  "contentType": "raid",
+  "class": "Hunter",
+  "spec": "Marksmanship",
+  "contentType": "mythic-plus",
   "classSelections": [
     {
-      "nodeId": 82198,
+      "nodeId": 102380,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102381,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102384,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102387,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102389,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102390,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102391,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102394,
       "rank": 1,
       "optionIndex": 1
     },
     {
-      "nodeId": 82199,
+      "nodeId": 102395,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82205,
+      "nodeId": 102396,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102401,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102402,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82206,
+      "nodeId": 102404,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82207,
+      "nodeId": 102406,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102409,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102411,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102415,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102416,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102419,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102422,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102423,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102424,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103990,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109484,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109485,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109487,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109489,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110157,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110164,
       "rank": 1,
       "optionIndex": 1
-    },
-    {
-      "nodeId": 82210,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82214,
-      "rank": 2,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82217,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82218,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82219,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82220,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82222,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82225,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82228,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82229,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82230,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82231,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82232,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82233,
-      "rank": 2,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82234,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82235,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82236,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82240,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82243,
-      "rank": 2,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82244,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 100173,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 100175,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 100176,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 100177,
-      "rank": 2,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 100223,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 104082,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 104084,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 104085,
-      "rank": 1,
-      "optionIndex": 0
     }
   ],
   "specSelections": [
     {
-      "nodeId": 82045,
+      "nodeId": 103947,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82047,
+      "nodeId": 103956,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82049,
+      "nodeId": 103957,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82050,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82051,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82052,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82053,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82054,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82055,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82057,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82058,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82059,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82060,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82063,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82064,
+      "nodeId": 103958,
       "rank": 1,
       "optionIndex": 1
     },
     {
-      "nodeId": 82065,
+      "nodeId": 103959,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 103960,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82068,
+      "nodeId": 103961,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103962,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103964,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103966,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103974,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103975,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103977,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103978,
       "rank": 2,
       "optionIndex": 0
     },
     {
-      "nodeId": 82072,
+      "nodeId": 103979,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82073,
+      "nodeId": 103982,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82074,
-      "rank": 1,
-      "optionIndex": 1
-    },
-    {
-      "nodeId": 82076,
+      "nodeId": 103984,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82079,
-      "rank": 1,
-      "optionIndex": 1
-    },
-    {
-      "nodeId": 82080,
-      "rank": 2,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82082,
+      "nodeId": 103985,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82083,
+      "nodeId": 103986,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 103874,
+      "nodeId": 104095,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 103876,
+      "nodeId": 104127,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 104125,
+      "nodeId": 104130,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 110424,
+      "nodeId": 107288,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 107289,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110430,
       "rank": 4,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110572,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110573,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 110574,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110575,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110691,
+      "rank": 1,
       "optionIndex": 0
     }
   ],
-  "notes": "Decoded from Icy Veins' \"Wildstalker Raid\" in-game export string (https://www.icy-veins.com/wow/restoration-druid-pve-healing-spec-builds-talents), imported 2026-10-02 by scripts/import-talents.ts. Export string: CkGAAAAAAAAAAAAAAAAAAAAAAYMmZZmZMzMmthBzsZsNmBAAAAAAAAAAbDa2YMNzY4BMLzMzMDDzAAAAAAAAAAIAAgZbmlmtZ2sxYmZwMwoZAAmZAYA"
+  "notes": "Decoded from Icy Veins' \"Marksmanship Mythic+ - Sentinel\" in-game export string (https://www.icy-veins.com/wow/marksmanship-hunter-pve-dps-spec-builds-talents), imported 2026-10-02 by scripts/import-talents.ts. Export string: C4PAAAAAAAAAAAAAAAAAAAAAAwGMwMGzYZAjZwGAAAAAAAAYGzMzYbGzMjZYZMNjBzy22MzMzMzMzswMLDzAAA4BGjBgZsBGgNmZbGD"
 }

@@ -228,7 +228,10 @@ export const TalentNodeSchema = z
   .object({
     id: z.number(),
     node_type: z.object({ id: z.number(), type: z.enum(['ACTIVE', 'PASSIVE', 'CHOICE']) }).loose(),
-    ranks: z.array(TalentRankSchema),
+    // Evoker trees carry a stray node (93196) with no ranks at all — verified
+    // live 2026-10-02. Accepted here and dropped in mapTalentTree, rather than
+    // failing the whole tree and taking down three spec pages.
+    ranks: z.array(TalentRankSchema).default([]),
     display_row: z.number(),
     display_col: z.number(),
     raw_position_x: z.number().optional(),

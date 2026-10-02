@@ -1,321 +1,311 @@
 {
   "season": "midnight-s2",
-  "class": "Druid",
-  "spec": "Restoration",
+  "class": "Warlock",
+  "spec": "Affliction",
   "contentType": "raid",
   "classSelections": [
     {
-      "nodeId": 82198,
-      "rank": 1,
-      "optionIndex": 1
-    },
-    {
-      "nodeId": 82199,
+      "nodeId": 71918,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82205,
+      "nodeId": 71922,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82206,
+      "nodeId": 71923,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82207,
-      "rank": 1,
-      "optionIndex": 1
-    },
-    {
-      "nodeId": 82210,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82214,
+      "nodeId": 71924,
       "rank": 2,
       "optionIndex": 0
     },
     {
-      "nodeId": 82217,
+      "nodeId": 71926,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82218,
+      "nodeId": 71930,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82219,
+      "nodeId": 71931,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82220,
+      "nodeId": 71933,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82222,
+      "nodeId": 71936,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82225,
+      "nodeId": 71937,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82228,
+      "nodeId": 71942,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82229,
+      "nodeId": 71948,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82230,
+      "nodeId": 71949,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82231,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82232,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82233,
+      "nodeId": 71950,
       "rank": 2,
       "optionIndex": 0
     },
     {
-      "nodeId": 82234,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82235,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82236,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82240,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82243,
+      "nodeId": 71952,
       "rank": 2,
       "optionIndex": 0
     },
     {
-      "nodeId": 82244,
+      "nodeId": 71954,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 100173,
+      "nodeId": 71955,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 100175,
+      "nodeId": 71956,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 100176,
+      "nodeId": 71957,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 100177,
+      "nodeId": 100941,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109842,
       "rank": 2,
       "optionIndex": 0
     },
     {
-      "nodeId": 100223,
+      "nodeId": 109843,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 104082,
+      "nodeId": 109844,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 104084,
+      "nodeId": 109845,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 104085,
+      "nodeId": 109847,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110071,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110072,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110073,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110074,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110075,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110076,
       "rank": 1,
       "optionIndex": 0
     }
   ],
   "specSelections": [
     {
-      "nodeId": 82045,
+      "nodeId": 72032,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82047,
+      "nodeId": 72033,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82049,
+      "nodeId": 72034,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82050,
+      "nodeId": 72037,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82051,
+      "nodeId": 72041,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82052,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82053,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82054,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82055,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82057,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82058,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82059,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82060,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82063,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 82064,
+      "nodeId": 72045,
       "rank": 1,
       "optionIndex": 1
     },
     {
-      "nodeId": 82065,
+      "nodeId": 72046,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82068,
+      "nodeId": 72047,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 72049,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 72050,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 72051,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 72054,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 72058,
       "rank": 2,
       "optionIndex": 0
     },
     {
-      "nodeId": 82072,
+      "nodeId": 102031,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82073,
+      "nodeId": 102247,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82074,
-      "rank": 1,
-      "optionIndex": 1
-    },
-    {
-      "nodeId": 82076,
+      "nodeId": 109851,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82079,
+      "nodeId": 109852,
       "rank": 1,
-      "optionIndex": 1
+      "optionIndex": 0
     },
     {
-      "nodeId": 82080,
+      "nodeId": 109855,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109857,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109858,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109859,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109860,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109861,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109862,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109863,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109865,
       "rank": 2,
       "optionIndex": 0
     },
     {
-      "nodeId": 82082,
+      "nodeId": 110269,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 82083,
+      "nodeId": 110270,
       "rank": 1,
       "optionIndex": 0
     },
     {
-      "nodeId": 103874,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 103876,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 104125,
-      "rank": 1,
-      "optionIndex": 0
-    },
-    {
-      "nodeId": 110424,
+      "nodeId": 110405,
       "rank": 4,
       "optionIndex": 0
     }
   ],
-  "notes": "Decoded from Icy Veins' \"Wildstalker Raid\" in-game export string (https://www.icy-veins.com/wow/restoration-druid-pve-healing-spec-builds-talents), imported 2026-10-02 by scripts/import-talents.ts. Export string: CkGAAAAAAAAAAAAAAAAAAAAAAYMmZZmZMzMmthBzsZsNmBAAAAAAAAAAbDa2YMNzY4BMLzMzMDDzAAAAAAAAAAIAAgZbmlmtZ2sxYmZwMwoZAAmZAYA"
+  "notes": "Decoded from Icy Veins' \"Affliction Single-Target - Soul Harvester\" in-game export string (https://www.icy-veins.com/wow/affliction-warlock-pve-dps-spec-builds-talents), imported 2026-10-02 by scripts/import-talents.ts. Export string: CkQAAAAAAAAAAAAAAAAAAAAAAwMzMzoZhhZmZmlBAAYmZZ2mZmlxAAjllBGwEMDbBG2GAAAmBAAwMDzMjBzwMzMzMGMzMzAAmBG"
 }

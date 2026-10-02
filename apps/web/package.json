@@ -18,6 +18,7 @@
     "db:seed": "tsx scripts/seed.ts",
     "bis:ingest": "bun scripts/ingest-bis.ts",
     "data:check": "bun scripts/data-check.ts",
+    "talents:import": "bun scripts/import-talents.ts",
     "typecheck": "astro check && tsc --noEmit",
     "dev:host": "astro dev --host"
   },
