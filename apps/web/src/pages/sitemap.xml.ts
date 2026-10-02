@@ -1,20 +1,20 @@
 /**
- * The indexable, enumerable pages: home, the tier list, and one talent-build
- * page per spec. Character pages are left out — there are millions of
- * possible ones and they're discovered through links, not enumeration.
+ * The indexable, enumerable pages: home, the two hubs, and each spec's
+ * talent-build and BiS pages. Character pages are left out — there are
+ * millions of possible ones and they're discovered through links, not
+ * enumeration.
  */
 import type { APIRoute } from 'astro';
-import { SPEC_IDS, urlSlug } from '@/lib/meta/specIds';
+import { bisPath, specsByClass, talentBuildPath } from '@/lib/meta/specLinks';
 
 export const prerender = false;
 
 export const GET: APIRoute = ({ site, url }) => {
   const origin = site ?? url.origin;
-  const specPaths = Object.keys(SPEC_IDS).map((key) => {
-    const [className, specName] = key.split('::') as [string, string];
-    return `/meta/${urlSlug(className)}/${urlSlug(specName)}`;
-  });
-  const urls = ['/', '/meta', ...specPaths]
+  const specPaths = specsByClass().flatMap(({ className, specs }) =>
+    specs.flatMap((spec) => [talentBuildPath(className, spec), bisPath(className, spec)]),
+  );
+  const urls = ['/', '/bis', '/meta', ...specPaths]
     .map((path) => `  <url><loc>${new URL(path, origin).toString()}</loc></url>`)
     .join('\n');
 

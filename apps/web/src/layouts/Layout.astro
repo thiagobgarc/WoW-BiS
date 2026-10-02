@@ -18,7 +18,7 @@ const {
   title = 'WoW BiS Gear Planner — See Every Upgrade Left | Mythos',
   description = 'Look up your World of Warcraft character and see exactly what to upgrade, where each Best-in-Slot item drops, and how close you are to BiS.',
   accentColor,
-  ogImage,
+  ogImage: ogImageProp,
   canonicalPath = Astro.url.pathname,
   noindex = false,
   jsonLd = [],
@@ -28,6 +28,8 @@ const {
 // so preview deployments still point canonicals at production.
 const origin = Astro.site ?? Astro.url.origin;
 const canonical = new URL(canonicalPath, origin).toString();
+// Every page gets a large preview card; pages with their own pass ogImage.
+const ogImage = ogImageProp ?? new URL('/og/default.png', Astro.url.origin).toString();
 // "<" escaped so item or character names can never close the script tag.
 const ldJson = (data: Record<string, unknown>) => JSON.stringify(data).replace(/</g, '\\u003c');
 ---
@@ -47,10 +49,10 @@ const ldJson = (data: Record<string, unknown>) => JSON.stringify(data).replace(/
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
-    {ogImage && <meta property="og:image" content={ogImage} />}
-    {ogImage && <meta property="og:image:width" content="1200" />}
-    {ogImage && <meta property="og:image:height" content="630" />}
-    <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
     {jsonLd.map((data) => <script is:inline type="application/ld+json" set:html={ldJson(data)} />)}
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -76,6 +78,11 @@ const ldJson = (data: Record<string, unknown>) => JSON.stringify(data).replace(/
       <slot />
     </main>
     <footer class="mt-20 border-t border-rule">
+      <nav aria-label="Site" class="mx-auto flex max-w-5xl flex-wrap gap-x-6 gap-y-2 px-6 pt-7 text-sm text-text-muted">
+        <a href="/" class="link">Character lookup</a>
+        <a href="/bis" class="link">BiS gear by spec</a>
+        <a href="/meta" class="link">Spec tier list</a>
+      </nav>
       <p class="mx-auto max-w-5xl px-6 py-7 text-xs leading-relaxed text-text-dim">
         Not affiliated with or endorsed by Blizzard Entertainment. World of Warcraft and all related assets are the
         property of Blizzard Entertainment, Inc. No game assets are rehosted — icons and media are loaded directly

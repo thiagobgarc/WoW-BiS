@@ -1,0 +1,192 @@
+---
+/**
+ * Public best-in-slot list for one spec. Server-rendered with no island:
+ * it's a read-only table, so it ships zero client JS and is fully visible
+ * to crawlers. Same data the character upgrade board compares against.
+ */
+import Layout from '@/layouts/Layout.astro';
+import SiteHeader from '@/components/layout/SiteHeader.astro';
+import ErrorState from '@/components/error/ErrorState.astro';
+import { findSpecBySlug } from '@/lib/meta/specBySlug';
+import { urlSlug } from '@/lib/meta/specIds';
+import { bisPath, talentBuildPath } from '@/lib/meta/specLinks';
+import { getBisList } from '@/lib/bis/getBisList';
+import { SPEC_CATALOGUE, specSlug } from '@/lib/ingest/specCatalogue';
+import { CURRENT_SEASON_ID, seasonConfig } from '@/lib/season/seasonConfig';
+import { classColor, slotLabel, sourceLabel } from '@mythos/core/utils';
+import { BIS_SLOTS, DUAL_SLOT_CATEGORIES, type BisEntry, type ContentType } from '@mythos/core/bis';
+
+export const prerender = false;
+
+const { class: classSlug, spec: specSlugParam } = Astro.params as { class: string; spec: string };
+const ref = findSpecBySlug(classSlug, specSlugParam);
+
+const bis = ref ? await getBisList(CURRENT_SEASON_ID, ref.className, ref.specName) : null;
+const ok = !!ref && !!bis?.seeded;
+if (!ref) Astro.response.status = 404;
+
+const specLabel = ref ? `${ref.specName} ${ref.className}` : '';
+const profile = ref ? SPEC_CATALOGUE.find((p) => p.class === ref.className && p.spec === ref.specName) : undefined;
+const tierSet = ref ? seasonConfig.tierSets[specSlug(ref.className, ref.specName)] : undefined;
+
+const STAT_LABELS = { haste: 'Haste', crit: 'Critical Strike', mastery: 'Mastery', versatility: 'Versatility' } as const;
+const SECTIONS: { contentType: ContentType; heading: string }[] = [
+  { contentType: 'raid', heading: `Raid best-in-slot — ${seasonConfig.raid.name}` },
+  { contentType: 'mythic-plus', heading: 'Mythic+ best-in-slot' },
+];
+
+// Rings and trinkets are a ranked pool of two physical slots, so the pair
+// (rank 1 + rank 2) is the BiS loadout; every other slot shows its rank 1.
+function rowsFor(contentType: ContentType): { slot: string; entry: BisEntry | null }[] {
+  const entries = bis?.entries.filter((e) => e.contentType === contentType) ?? [];
+  return BIS_SLOTS.flatMap((slot) => {
+    const ranked = entries.filter((e) => e.slot === slot).sort((a, b) => a.rank - b.rank);
+    const count = (DUAL_SLOT_CATEGORIES as readonly string[]).includes(slot) ? 2 : 1;
+    return Array.from({ length: count }, (_, i) => ({ slot, entry: ranked[i] ?? null }));
+  });
+}
+
+const canonicalPath = ref ? bisPath(ref.className, ref.specName) : undefined;
+const origin = Astro.site ?? Astro.url.origin;
+const jsonLd =
+  ok && canonicalPath
+    ? [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Best-in-Slot', item: new URL('/bis', origin).toString() },
+            { '@type': 'ListItem', position: 2, name: `${specLabel} BiS`, item: new URL(canonicalPath, origin).toString() },
+          ],
+        },
+      ]
+    : [];
+---
+
+<Layout
+  title={ref ? `${specLabel} BiS Gear — ${seasonConfig.displayName} | Mythos` : 'Spec Not Found — Mythos'}
+  description={ref
+    ? `${specLabel} best-in-slot gear for raid and Mythic+ in ${seasonConfig.displayName}: every slot's top item, its item level, and the boss or dungeon it drops from.`
+    : undefined}
+  accentColor={ref ? classColor(ref.className) : undefined}
+  canonicalPath={canonicalPath}
+  ogImage={ref ? new URL(`/og/spec/${urlSlug(ref.className)}/${urlSlug(ref.specName)}.png`, Astro.url.origin).toString() : undefined}
+  noindex={!ok}
+  jsonLd={jsonLd}
+>
+  <SiteHeader currentPath={Astro.url.pathname} />
+
+  {
+    !ref || !bis ? (
+      <ErrorState icon="❓" title="Spec Not Found" message={`"${specSlugParam}" isn't a recognized spec for "${classSlug}".`} />
+    ) : !bis.seeded ? (
+      <ErrorState
+        icon="⏳"
+        title="No BiS List Yet"
+        message={`A best-in-slot list for ${specLabel} hasn't been generated for this season yet.`}
+        actionLabel="Browse other specs"
+        actionHref="/bis"
+      />
+    ) : (
+      <div class="mx-auto max-w-5xl px-6 pb-20">
+        <div class="my-14 border-l-[3px] border-accent pl-6 sm:pl-10">
+          <p class="label">
+            <a href="/bis" class="link">Best-in-Slot</a> · {seasonConfig.displayName}
+          </p>
+          <h1 class="display mt-3 text-[clamp(2rem,5.5vw,3.25rem)] text-accent">{specLabel} BiS gear</h1>
+          <p class="mt-4 max-w-[62ch] text-base leading-relaxed text-text-muted">
+            The best item for every {specLabel} slot in {seasonConfig.displayName}, for raid and for Mythic+, with
+            where each one drops. Items come from Blizzard's own loot tables and are ranked by the spec's secondary stat
+            priority.
+          </p>
+          <p class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium">
+            <a href={talentBuildPath(ref.className, ref.specName)} class="link">{specLabel} talent build</a>
+            <a href="/meta" class="link">Spec tier list</a>
+            <a href="/" class="link">Compare your character's gear</a>
+          </p>
+        </div>
+
+        <section aria-labelledby="stat-priority">
+          <h2 id="stat-priority" class="text-xl font-bold">Stat priority</h2>
+          <ol class="mt-3 flex flex-wrap gap-x-2 text-base">
+            {bis.statPriority.map((stat, i) => (
+              <li>
+                {i > 0 && <span class="text-text-dim" aria-hidden="true">› </span>}
+                {STAT_LABELS[stat]}
+              </li>
+            ))}
+          </ol>
+          {profile?.provenance === 'default' && (
+            <p class="mt-3 max-w-[62ch] border-l-2 border-severity-upgrade pl-4 text-sm text-text-muted">
+              This stat order is a provisional starting point that hasn't been checked against simulations yet, so the
+              item picks below follow it too. Sim your own character before spending upgrade currency.
+            </p>
+          )}
+        </section>
+
+        {
+          tierSet && (
+            <section aria-labelledby="tier-set" class="mt-12">
+              <h2 id="tier-set" class="text-xl font-bold">Tier set: {tierSet.name}</h2>
+              <dl class="mt-3 max-w-[62ch] space-y-2 text-sm text-text-muted">
+                <div>
+                  <dt class="inline font-semibold text-text">2-piece: </dt>
+                  <dd class="inline">{tierSet['2pc']}</dd>
+                </div>
+                <div>
+                  <dt class="inline font-semibold text-text">4-piece: </dt>
+                  <dd class="inline">{tierSet['4pc']}</dd>
+                </div>
+              </dl>
+            </section>
+          )
+        }
+
+        {
+          SECTIONS.map(({ contentType, heading }) => (
+            <section aria-labelledby={`bis-${contentType}`} class="mt-12">
+              <h2 id={`bis-${contentType}`} class="text-xl font-bold">
+                {heading}
+              </h2>
+              <div class="mt-4 overflow-x-auto">
+                <table class="w-full min-w-[560px] border-collapse text-left text-sm">
+                  <thead>
+                    <tr class="border-b border-rule-strong">
+                      <th scope="col" class="label py-2 pr-4 font-medium">Slot</th>
+                      <th scope="col" class="label py-2 pr-4 font-medium">Item</th>
+                      <th scope="col" class="label py-2 pr-4 text-right font-medium">Item level</th>
+                      <th scope="col" class="label py-2 font-medium">Source</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {rowsFor(contentType).map(({ slot, entry }) => (
+                      <tr class="border-b border-rule">
+                        <th scope="row" class="py-2.5 pr-4 font-normal text-text-muted">{slotLabel(slot)}</th>
+                        {entry ? (
+                          <>
+                            <td class="py-2.5 pr-4 font-medium">
+                              <a href={`https://www.wowhead.com/item=${entry.itemId}`} class="link" rel="noreferrer">
+                                {entry.itemName}
+                              </a>
+                              {entry.tierPiece && <span class="label ml-2">Tier</span>}
+                            </td>
+                            <td class="figure py-2.5 pr-4 text-right">{entry.itemLevel}</td>
+                            <td class="py-2.5 text-text-muted">{sourceLabel(entry.source)}</td>
+                          </>
+                        ) : (
+                          <td colspan="3" class="py-2.5 text-text-dim">
+                            No {contentType === 'raid' ? 'raid' : 'Mythic+'} drop for this slot this season
+                          </td>
+                        )}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          ))
+        }
+      </div>
+    )
+  }
+</Layout>

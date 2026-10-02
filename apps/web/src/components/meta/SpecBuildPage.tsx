@@ -7,6 +7,7 @@ import { classColor } from '@mythos/core/utils';
 import type { DomainTalentTree } from '@/lib/blizzard/domain';
 import type { RecommendedContentType, RecommendedTalentBuild } from '@mythos/core/talents';
 import type { MetaTier } from '@/lib/meta/types';
+import { bisPath } from '@/lib/meta/specLinks';
 
 interface Props {
   className: string;
@@ -86,6 +87,14 @@ export function SpecBuildPage({ className, specName, tree, mythicPlusBuild, raid
         </div>
         <p className="mt-4 max-w-[58ch] text-base text-text-muted">
           The current meta talent build for {specName} {className}.
+        </p>
+        <p className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium">
+          <a href={bisPath(className, specName)} className="link">
+            {specName} {className} BiS gear
+          </a>
+          <a href="/meta" className="link">
+            Spec tier list
+          </a>
         </p>
         </div>
 

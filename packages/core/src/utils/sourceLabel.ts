@@ -10,7 +10,9 @@ const DIFFICULTY_LABEL: Record<string, string> = {
 export function sourceLabel(source: Source): string {
   switch (source.type) {
     case 'raid':
-      return `${source.difficulty ? DIFFICULTY_LABEL[source.difficulty] : 'Raid'} — ${source.boss ?? 'Unknown Boss'}, ${source.instance ?? 'Raid'}`;
+      // Tier pieces have no single boss (they come from the set, not an
+      // encounter's loot table), so the boss is omitted rather than invented.
+      return `${source.difficulty ? DIFFICULTY_LABEL[source.difficulty] : 'Raid'} — ${source.boss ? `${source.boss}, ` : ''}${source.instance ?? 'Raid'}`;
     case 'dungeon':
       return `M+ ${source.dungeon ?? 'Dungeon'}${source.keyLevel ? ` (${source.keyLevel}+)` : ''}`;
     case 'crafted':

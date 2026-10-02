@@ -12,6 +12,9 @@ import { getMythicPlusTierList, findTierForSpec } from '@/lib/meta/getTierList';
 import { CURRENT_SEASON_ID } from '@/lib/season/seasonConfig';
 import { toApiError } from '@/lib/http/errorResponse';
 import { isValidRegion } from '@/lib/http/validateRegion';
+import { findSpecBySlug } from '@/lib/meta/specBySlug';
+import { bisPath, talentBuildPath } from '@/lib/meta/specLinks';
+import { urlSlug } from '@/lib/meta/specIds';
 import { rateLimit, clientIp } from '@/lib/http/rateLimit';
 import { classColor } from '@mythos/core/utils';
 import type { BisEntry, BisList } from '@mythos/core/bis';
@@ -123,6 +126,10 @@ const ogImage = full ? new URL(`/og/${key.region}/${key.realmSlug}/${key.name}.p
 // Realm and name are normalized into the key, so every spelling of a
 // character's URL collapses onto one canonical.
 const canonicalPath = `/character/${key.region}/${key.realmSlug}/${key.name}`;
+// The spec's public guide pages, when it's one we know (a character with no
+// spec picked yet, or a brand-new spec, gets no links rather than dead ones).
+const guideSpec =
+  full?.character.specName ? findSpecBySlug(urlSlug(full.character.className), urlSlug(full.character.specName)) : null;
 // Error states and fixture data shouldn't land in search results.
 const noindex = !!error || !full || full.mock;
 ---
@@ -161,6 +168,21 @@ const noindex = !!error || !full || full.mock;
           metaTier={metaTier}
         />
       )
+    )
+  }
+  {
+    !error && guideSpec && (
+      <nav aria-label="Spec guides" class="mx-auto mt-14 max-w-5xl px-6">
+        <h2 class="label">{guideSpec.specName} {guideSpec.className} guides</h2>
+        <p class="mt-2 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium">
+          <a href={bisPath(guideSpec.className, guideSpec.specName)} class="link">
+            {guideSpec.specName} {guideSpec.className} BiS gear
+          </a>
+          <a href={talentBuildPath(guideSpec.className, guideSpec.specName)} class="link">
+            {guideSpec.specName} {guideSpec.className} talent build
+          </a>
+        </p>
+      </nav>
     )
   }
 </Layout>

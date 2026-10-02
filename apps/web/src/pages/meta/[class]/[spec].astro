@@ -90,6 +90,7 @@ const jsonLd =
   description={description}
   accentColor={ref ? classColor(ref.className) : undefined}
   canonicalPath={canonicalPath}
+  ogImage={ref ? new URL(`/og/spec/${urlSlug(ref.className)}/${urlSlug(ref.specName)}.png`, Astro.url.origin).toString() : undefined}
   noindex={!ok}
   jsonLd={jsonLd}
 >
