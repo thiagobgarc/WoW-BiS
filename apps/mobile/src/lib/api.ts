@@ -59,6 +59,12 @@ function metroHost(): string | undefined {
  * host the client reached it on, so borrow that and change the port.
  */
 function resolveBaseUrl(): string {
+  // A release build that falls through to the dev fallbacks below would
+  // quietly talk plain HTTP to localhost. Fail at launch instead, where a
+  // preview build catches it before a store build ever ships.
+  if (!__DEV__ && !configuredUrl.startsWith('https://')) {
+    throw new Error('[mythos] Release builds need EXPO_PUBLIC_MYTHOS_API_URL set to an https:// URL.');
+  }
   if (configuredUrl) return configuredUrl.replace(/\/+$/, '');
 
   const host = metroHost();
