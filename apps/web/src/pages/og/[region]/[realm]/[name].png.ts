@@ -15,6 +15,8 @@ import { getCharacterProfile } from '@/lib/blizzard/client';
 import { mapProfile } from '@/lib/blizzard/domain';
 import { toCharacterKey } from '@/lib/blizzard/getFullCharacter';
 import { classColor } from '@mythos/core/utils';
+import { isValidRegion } from '@/lib/http/validateRegion';
+import { rateLimit, clientIp } from '@/lib/http/rateLimit';
 
 export const prerender = false;
 
@@ -39,7 +41,18 @@ function fallbackCard() {
   );
 }
 
-export const GET: APIRoute = async ({ params }) => {
+export const GET: APIRoute = async ({ params, clientAddress }) => {
+  // Same region gate as every other route that reaches Blizzard. This one was
+  // missing it, which let a crafted region send our bearer token to an
+  // arbitrary host (see apiHost in client.ts).
+  if (!isValidRegion(params.region!)) return fallbackCard();
+
+  // Each unique URL is a fresh Blizzard call that no cache absorbs. Over the
+  // limit we still answer with the generic card, since link-preview bots
+  // share IPs and a broken image is worse than a plain one.
+  const limit = await rateLimit(`og-character:${clientIp(() => clientAddress)}`, 30, 60);
+  if (!limit.allowed) return fallbackCard();
+
   const key = toCharacterKey(params.region!, params.realm!, params.name!.replace(/\.png$/, ''));
 
   try {

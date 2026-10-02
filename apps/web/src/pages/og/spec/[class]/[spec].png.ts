@@ -12,13 +12,9 @@ export const prerender = false;
 
 export const GET: APIRoute = ({ params }) => {
   const ref = findSpecBySlug(params.class!, params.spec!.replace(/\.png$/, ''));
-  if (!ref) {
-    return renderCard({
-      eyebrow: 'Mythos',
-      title: 'Every slot you can still upgrade.',
-      subtitle: 'WoW best-in-slot gear, talent builds and spec tier lists.',
-    });
-  }
+  // Nothing links to an unknown spec's card, and rendering one per made-up URL
+  // is free CPU for anyone who asks — so no render at all.
+  if (!ref) return new Response('Not found', { status: 404 });
   return renderCard({
     eyebrow: `Mythos · ${seasonConfig.displayName}`,
     title: `${ref.specName} ${ref.className}`,

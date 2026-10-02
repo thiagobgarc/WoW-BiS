@@ -57,8 +57,5 @@
     "typescript": "^5",
     "vite": "^8.2.2",
     "vitest": "^4.1.11"
-  },
-  "overrides": {
-    "path-to-regexp": "^6.3.0"
   }
 }

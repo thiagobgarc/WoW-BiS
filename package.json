@@ -17,5 +17,9 @@
     "mobile:android": "bun run --cwd apps/mobile android",
     "mobile:test": "bun run --cwd apps/mobile test",
     "dev:host": "bun run --cwd apps/web dev:host"
+  },
+  "overrides": {
+    "path-to-regexp": "^6.3.0",
+    "devalue": "^5.9.3"
   }
 }

@@ -11,6 +11,7 @@
  * to once per 60s per character (see `refreshCharacter`).
  */
 import { getCache } from '@/lib/cache/cache';
+import { REGIONS } from '@mythos/api-contract';
 import { seasonConfig } from '@/lib/season/seasonConfig';
 import { getBlizzardAccessToken } from './auth';
 import {
@@ -80,8 +81,17 @@ const TTL_ITEM_SECONDS = 7 * 24 * 60 * 60;
 const TTL_REALM_INDEX_SECONDS = 30 * 24 * 60 * 60;
 const REFRESH_COOLDOWN_SECONDS = 60;
 
-function apiHost(region: string): string {
-  return region === 'cn' ? 'https://gateway.battlenet.com.cn' : `https://${region}.api.blizzard.com`;
+// The hostname is built from the region and every request carries our OAuth
+// bearer token, so an unchecked region is a credential leak: "evil.com#"
+// yields https://evil.com#.api.blizzard.com, a request to evil.com with the
+// token attached (reproduced via the OG image route, 2026-10-02). Routes
+// validate too, but this is the one choke point every call passes through.
+export function apiHost(region: string): string {
+  const code = region.toLowerCase();
+  if (!(REGIONS as readonly string[]).includes(code)) {
+    throw new BlizzardApiError(`Unsupported region "${region}"`, 400);
+  }
+  return code === 'cn' ? 'https://gateway.battlenet.com.cn' : `https://${code}.api.blizzard.com`;
 }
 
 interface FetchOpts {
