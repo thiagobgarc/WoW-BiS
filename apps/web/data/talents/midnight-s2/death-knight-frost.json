@@ -1,0 +1,311 @@
+{
+  "season": "midnight-s2",
+  "class": "Death Knight",
+  "spec": "Frost",
+  "contentType": "mythic-plus",
+  "classSelections": [
+    {
+      "nodeId": 76081,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76071,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76072,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76045,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76067,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76073,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76084,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76052,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76074,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76069,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110029,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76066,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76068,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76075,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76061,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76085,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110030,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76065,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110031,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76076,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76064,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 76048,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76046,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76087,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76078,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76051,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76055,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76079,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76054,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102008,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102007,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "specSelections": [
+    {
+      "nodeId": 76115,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76116,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76114,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76117,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76096,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76113,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76118,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109258,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76112,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76098,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101929,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76110,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76121,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101931,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101930,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102009,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76037,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 106790,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76106,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76099,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76122,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76101,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76033,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76091,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101933,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76108,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76123,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 76093,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110400,
+      "rank": 4,
+      "optionIndex": 0
+    }
+  ],
+  "notes": "Sourced from SeeMeta's most-popular Mythic+ talent build (community usage data), checked 2026-08-24 against WoW patch 12.1.0 — replaces the earlier hand-picked placeholder build. Season config (seasonConfig.ts) has since been updated to real Midnight Season 2 (patch 12.1.0) data as of 2026-08-25."
+}

@@ -1,0 +1,42 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import SiteHeader from '@/components/layout/SiteHeader.astro';
+import { MetaTierList } from '@/components/meta/MetaTierList';
+import { getMythicPlusTierList, getRaidTierList } from '@/lib/meta/getTierList';
+import { getAllSpecIcons } from '@/lib/meta/getSpecIcons';
+import { CURRENT_SEASON_ID, seasonConfig } from '@/lib/season/seasonConfig';
+
+const [{ list: mythicPlus }, { list: raid }] = await Promise.all([
+  getMythicPlusTierList(CURRENT_SEASON_ID),
+  getRaidTierList(CURRENT_SEASON_ID),
+]);
+// Not character-specific, so there's no "viewer's region" to key off —
+// us is fine since spec icons are identical across every region.
+const specIcons = await getAllSpecIcons('us');
+---
+
+<Layout
+  title={`WoW Tier List: Mythic+ & Raid Specs — ${seasonConfig.displayName} | Mythos`}
+  description={`World of Warcraft spec tier lists for Mythic+ and raid in ${seasonConfig.displayName}. See which specs are S-tier right now and open any spec's talent build.`}
+>
+  <SiteHeader currentPath={Astro.url.pathname} />
+
+  <div class="mx-auto max-w-5xl px-6 pb-20">
+    <div class="my-14 border-l-[3px] border-accent pl-6 sm:pl-10">
+      <h1 class="display text-[clamp(2.25rem,6vw,3.25rem)]">Which specs are strongest right now.</h1>
+      <p class="mt-4 max-w-[58ch] text-base text-text-muted">
+        Mythic+ and raid tier lists for {seasonConfig.displayName}. Pick a spec to see its talent build.
+      </p>
+    </div>
+
+    {
+      mythicPlus || raid ? (
+        <MetaTierList client:load mythicPlus={mythicPlus} raid={raid} specIcons={specIcons} />
+      ) : (
+        <p class="border-l-2 border-severity-upgrade pl-5 text-sm text-text-muted">
+          No tier list has been seeded for this season yet.
+        </p>
+      )
+    }
+  </div>
+</Layout>

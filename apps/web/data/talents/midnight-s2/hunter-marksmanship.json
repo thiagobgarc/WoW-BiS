@@ -1,0 +1,306 @@
+{
+  "season": "midnight-s2",
+  "class": "Hunter",
+  "spec": "Marksmanship",
+  "contentType": "mythic-plus",
+  "classSelections": [
+    {
+      "nodeId": 102380,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102381,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102384,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102387,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102389,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102390,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102391,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102394,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 102395,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102396,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102401,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102402,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102404,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102406,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102409,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102411,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102415,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102416,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102419,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102422,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102423,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102424,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103990,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109484,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109485,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109487,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109489,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110157,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110164,
+      "rank": 1,
+      "optionIndex": 1
+    }
+  ],
+  "specSelections": [
+    {
+      "nodeId": 103947,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103956,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103957,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103958,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 103959,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 103960,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103961,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103962,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103964,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103966,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103974,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103975,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103977,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103978,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103979,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103982,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103984,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103985,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103986,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 104095,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 104127,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 104130,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 107288,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 107289,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110430,
+      "rank": 4,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110572,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110573,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 110574,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110575,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110691,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "notes": "Decoded from Icy Veins' \"Marksmanship Mythic+ - Sentinel\" in-game export string (https://www.icy-veins.com/wow/marksmanship-hunter-pve-dps-spec-builds-talents), imported 2026-10-02 by scripts/import-talents.ts. Export string: C4PAAAAAAAAAAAAAAAAAAAAAAwGMwMGzYZAjZwGAAAAAAAAYGzMzYbGzMjZYZMNjBzy22MzMzMzMzswMLDzAAA4BGjBgZsBGgNmZbGD"
+}

@@ -1,0 +1,52 @@
+// @ts-check
+import { defineConfig } from 'astro/config';
+import { loadEnv } from 'vite';
+
+import react from '@astrojs/react';
+import tailwindcss from '@tailwindcss/vite';
+import vercel from '@astrojs/vercel';
+
+// Vite's dev server deliberately does NOT copy .env values into process.env
+// (only into import.meta.env), but our server-side code reads process.env
+// directly (auth.ts, cache.ts, db/client.ts, mock.ts) so it works unchanged
+// against real process.env in production (Vercel injects it natively there).
+// Backfill anything .env provides that isn't already set, so local `astro
+// dev` behaves the same way.
+const fileEnv = loadEnv(process.env.NODE_ENV ?? 'development', process.cwd(), '');
+for (const [key, value] of Object.entries(fileEnv)) {
+  if (process.env[key] === undefined) process.env[key] = value;
+}
+
+// Absolute origin for canonical URLs, og:url and the sitemap. SITE_URL wins
+// (set it once a custom domain exists); otherwise Vercel's production
+// hostname. Left undefined locally, where Layout falls back to the request
+// origin.
+const site =
+  process.env.SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : undefined);
+
+// https://astro.build/config
+export default defineConfig({
+  site,
+  output: 'server',
+  integrations: [react()],
+  // The dev toolbar's fixed-position overlay was intermittently swallowing
+  // Playwright clicks on elements underneath it (silently — no console error,
+  // no exception) with no effect on production. Dev-only convenience, not
+  // worth the flake; re-enable locally if you want it (astro.build/config#devtoolbar).
+  devToolbar: { enabled: false },
+
+  vite: {
+    plugins: [tailwindcss()],
+    // @mythos/core (packages/core) is a workspace package consumed as
+    // TypeScript source, not a prebuilt npm package — it has no compiled
+    // JS for Vite's SSR step to require. noExternal tells Vite to run it
+    // through the same transform pipeline as this app's own source instead
+    // of trying to load it directly from node_modules.
+    ssr: {
+      noExternal: ['@mythos/core', '@mythos/api-contract']
+    }
+  },
+
+  adapter: vercel()
+});

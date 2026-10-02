@@ -1,0 +1,321 @@
+{
+  "season": "midnight-s2",
+  "class": "Demon Hunter",
+  "spec": "Devourer",
+  "contentType": "mythic-plus",
+  "classSelections": [
+    {
+      "nodeId": 90927,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90929,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90930,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90931,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90933,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90934,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90935,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90936,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90937,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90938,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90940,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90942,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90946,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90949,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90950,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90994,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90996,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90997,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 91000,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 91001,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 91002,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 91006,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 91007,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 95149,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 95150,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 95152,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 95154,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 107346,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 107347,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108723,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110011,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "specSelections": [
+    {
+      "nodeId": 107336,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 107338,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 107339,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 107340,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 107341,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 107342,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 107343,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 107344,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 107345,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 107770,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 107771,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 107774,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 107775,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 107999,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108122,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108123,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 108136,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108143,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108144,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108628,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108726,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 108727,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109503,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110009,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110165,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110166,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110167,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110168,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110171,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110172,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110173,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "notes": "Decoded from Icy Veins' \"Devourer AoE - Void-Scarred\" in-game export string (https://www.icy-veins.com/wow/devourer-demon-hunter-pve-dps-spec-builds-talents), imported 2026-10-02 by scripts/import-talents.ts. Export string: CgcBAAAAAAAAAAAAAAAAAAAAAAAWMzMzMzYMGmBAAAAAAY5BGz2gZAAAAAAAAYGzw8AzMzMzMzMjZ2mZM202CACYAMmZmtZmpZZmlZmhZGA"
+}

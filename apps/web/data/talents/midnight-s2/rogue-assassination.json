@@ -1,0 +1,306 @@
+{
+  "season": "midnight-s2",
+  "class": "Rogue",
+  "spec": "Assassination",
+  "contentType": "mythic-plus",
+  "classSelections": [
+    {
+      "nodeId": 90636,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90684,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90686,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90687,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90692,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 90695,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90697,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90740,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90741,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 90742,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 90743,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90744,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90745,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90746,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90747,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90748,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90749,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90750,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90751,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90752,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90754,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90756,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90758,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90759,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90760,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90762,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90763,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 90764,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 94562,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101714,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110323,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110324,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "specSelections": [
+    {
+      "nodeId": 90624,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90625,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90626,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90628,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90630,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90633,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90634,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90757,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90766,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90767,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90768,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90769,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90770,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90771,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90772,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90775,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90776,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90779,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90780,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90783,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90785,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 94536,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 94553,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 94554,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 94555,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 94557,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110433,
+      "rank": 4,
+      "optionIndex": 0
+    }
+  ],
+  "notes": "Decoded from Icy Veins' \"Assassination Mythic+/Delves - Fatebound\" in-game export string (https://www.icy-veins.com/wow/assassination-rogue-pve-dps-spec-builds-talents), imported 2026-10-02 by scripts/import-talents.ts. Export string: CMQAAAAAAAAAAAAAAAAAAAAAAYmlZmFDAAAAAAzygtZAAAAAAttNzMzMzMGLzMzsNzyMz8AmxMjxwMjxAYgFYGjGzCgtBsZAwMzMMA"
+}

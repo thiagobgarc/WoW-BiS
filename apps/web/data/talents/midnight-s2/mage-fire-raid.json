@@ -1,0 +1,321 @@
+{
+  "season": "midnight-s2",
+  "class": "Mage",
+  "spec": "Fire",
+  "contentType": "raid",
+  "classSelections": [
+    {
+      "nodeId": 62119,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62115,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62122,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108654,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 62102,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62123,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62114,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108660,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62124,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62084,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62104,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101883,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 62116,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62105,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108661,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110597,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93524,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62125,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62127,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62098,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108659,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108658,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110081,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62096,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108657,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62086,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62129,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62100,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62091,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62085,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62094,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108656,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "specSelections": [
+    {
+      "nodeId": 100998,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 100989,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109409,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109407,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 100995,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109406,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101027,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109403,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101021,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110322,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101009,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101024,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101029,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101016,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109411,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109408,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109401,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109399,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109400,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109402,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109398,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110086,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101019,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109393,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109396,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109394,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 100999,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101007,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 101015,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110423,
+      "rank": 4,
+      "optionIndex": 0
+    }
+  ],
+  "notes": "Sourced from SeeMeta's most-popular Fire Mage RAID talent build (community usage data, https://seemeta.com/en/wow/mage/fire/raid/talents, Popularity 100.00% on the single build shown), checked 2026-09-03 against WoW patch 12.1.0 (Midnight Season 2). Cross-checked hero-tree choice (Sunfury over Frostfire for raid) and general build philosophy against Icy Veins (https://www.icy-veins.com/wow/fire-mage-pve-dps-spec-builds-talents) and Maxroll (https://maxroll.gg/wow/class-guides/fire-mage-raid-guide), which agree Sunfury is the raid hero tree and this build stays flexible for AoE without swaps -- explaining why it takes the Meteor/Deep Impact/Blast Zone AoE-utility branch in the spec tree instead of the Wildfire/Master of Flame/Burnout single-target passive branch, and drops Firestarter (confirmed absent from the SeeMeta build across three independent extraction passes) in favor of that flexibility. Relative to the existing mythic-plus.json build for this spec, this raid build swaps: class tree -- Time Walk -> Temporal Realignment (node 108654), and adds Spellsteal, Supernova (over Dragon's Breath), Remove Curse, Improved Warding, and Time Manipulation in place of Improved Conjuration, Improved Counterspell, and Incantation of Swiftness (raid favors dispel/utility over the M+ build's extra defensive-CD-reduction picks); spec tree -- drops Wildfire/Master of Flame/Burnout in favor of Fuel the Fire/Meteor/Deep Impact/Blast Zone/Flame Accelerant/Pyroclasm, and takes Critical Mass at only 1/2 rank (down from 2/2 in the M+ build) to free up a point for this branch. Icy Veins separately notes Greater Invisibility and Incantation of Swiftness (not present in this build) are optional swap targets for Remove Curse or Improved Counterspell on fights needing extra dispel/interrupt -- this build already defaults to Remove Curse, so treat that swap note as situational, not a contradiction. The Fired Up node (110423) is taken at rank 4 even though the fetched Blizzard tree data lists its maxRank as 1; this mirrors the same handling already present in the existing mage-fire.json (mythic-plus) file for this node, so it is assumed to be a known quirk of the simplified tree data (e.g. a capstone whose true rank scaling isn't captured by maxRank) rather than an error introduced here. All node IDs and option indices were validated against the fetched Blizzard talent tree data (classNodes/specNodes) before writing."
+}

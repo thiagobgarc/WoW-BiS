@@ -1,0 +1,115 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import SiteHeader from '@/components/layout/SiteHeader.astro';
+import ErrorState from '@/components/error/ErrorState.astro';
+import { SpecBuildPage } from '@/components/meta/SpecBuildPage';
+import { findSpecBySlug } from '@/lib/meta/specBySlug';
+import { getSpecTalentTree } from '@/lib/blizzard/getSpecTalentTree';
+import { getRecommendedBuild, getRaidRecommendedBuild } from '@/lib/talents/getRecommendedBuild';
+import { getMythicPlusTierList, getRaidTierList, findTierForSpec } from '@/lib/meta/getTierList';
+import { CURRENT_SEASON_ID, seasonConfig } from '@/lib/season/seasonConfig';
+import { urlSlug } from '@/lib/meta/specIds';
+import { classColor } from '@mythos/core/utils';
+import type { DomainTalentTree } from '@/lib/blizzard/domain';
+import type { RecommendedTalentBuild } from '@mythos/core/talents';
+import type { MetaTier } from '@/lib/meta/types';
+
+export const prerender = false;
+
+const { class: classSlug, spec: specSlug } = Astro.params as { class: string; spec: string };
+const ref = findSpecBySlug(classSlug, specSlug);
+
+let tree: DomainTalentTree | null = null;
+let mythicPlusBuild: RecommendedTalentBuild | null = null;
+let raidBuild: RecommendedTalentBuild | null = null;
+let mythicPlusTier: MetaTier | null = null;
+let raidTier: MetaTier | null = null;
+let error: { title: string; icon: string; message: string } | null = null;
+
+if (!ref) {
+  Astro.response.status = 404;
+  error = { title: 'Spec Not Found', icon: '❓', message: `"${specSlug}" isn't a recognized spec for "${classSlug}".` };
+} else {
+  try {
+    const [treeResult, mPlusBuildResult, raidBuildResult, mPlusList, raidList] = await Promise.all([
+      getSpecTalentTree('us', ref.specId),
+      getRecommendedBuild(CURRENT_SEASON_ID, ref.className, ref.specName),
+      getRaidRecommendedBuild(CURRENT_SEASON_ID, ref.className, ref.specName),
+      getMythicPlusTierList(CURRENT_SEASON_ID),
+      getRaidTierList(CURRENT_SEASON_ID),
+    ]);
+    tree = treeResult.tree;
+    mythicPlusBuild = mPlusBuildResult.build;
+    raidBuild = raidBuildResult.build;
+    mythicPlusTier = mPlusList.list ? findTierForSpec(mPlusList.list.entries, ref.className, ref.specName) : null;
+    raidTier = raidList.list ? findTierForSpec(raidList.list.entries, ref.className, ref.specName) : null;
+  } catch {
+    // Talent-tree fetch is the only thing here that can fail (Blizzard
+    // rate-limited/unavailable) — same "never leak a raw error" contract
+    // as the character page.
+    Astro.response.status = 503;
+    error = {
+      title: 'Blizzard API Temporarily Unavailable',
+      icon: '⚠️',
+      message: 'The Blizzard API is experiencing heavy load — please retry in a moment.',
+    };
+  }
+}
+
+const ok = !error && ref && tree;
+const specLabel = ref ? `${ref.specName} ${ref.className}` : '';
+// Slugs resolve case-insensitively, so /meta/Mage/Frost and /meta/mage/frost
+// are the same page — point search engines at the lowercase spelling.
+const canonicalPath = ref ? `/meta/${urlSlug(ref.className)}/${urlSlug(ref.specName)}` : undefined;
+const tierSummary = [mythicPlusTier && `${mythicPlusTier}-tier in Mythic+`, raidTier && `${raidTier}-tier in raid`]
+  .filter(Boolean)
+  .join(', ');
+// Only claim a recommended build when one is actually seeded for this spec.
+const subject = mythicPlusBuild || raidBuild ? `Best ${specLabel} talent build` : `${specLabel} talent tree and tier ranking`;
+const description = ref
+  ? `${subject} for Mythic+ and raid in ${seasonConfig.displayName}${tierSummary ? ` — currently ${tierSummary}` : ''}.`
+  : undefined;
+const origin = Astro.site ?? Astro.url.origin;
+const jsonLd =
+  ok && canonicalPath
+    ? [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Meta', item: new URL('/meta', origin).toString() },
+            { '@type': 'ListItem', position: 2, name: specLabel, item: new URL(canonicalPath, origin).toString() },
+          ],
+        },
+      ]
+    : [];
+---
+
+<Layout
+  title={ref ? `${specLabel} Talent Build — ${seasonConfig.displayName} | Mythos` : 'Spec Not Found — Mythos'}
+  description={description}
+  accentColor={ref ? classColor(ref.className) : undefined}
+  canonicalPath={canonicalPath}
+  ogImage={ref ? new URL(`/og/spec/${urlSlug(ref.className)}/${urlSlug(ref.specName)}.png`, Astro.url.origin).toString() : undefined}
+  noindex={!ok}
+  jsonLd={jsonLd}
+>
+  <SiteHeader currentPath={Astro.url.pathname} />
+
+  {
+    error || !ref || !tree ? (
+      <ErrorState icon={error?.icon ?? '❓'} title={error?.title ?? 'Spec Not Found'} message={error?.message ?? ''} />
+    ) : (
+      <SpecBuildPage
+        client:load
+        className={ref.className}
+        specName={ref.specName}
+        tree={tree}
+        mythicPlusBuild={mythicPlusBuild}
+        raidBuild={raidBuild}
+        mythicPlusTier={mythicPlusTier}
+        raidTier={raidTier}
+      />
+    )
+  }
+</Layout>

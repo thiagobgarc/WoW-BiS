@@ -1,0 +1,30 @@
+---
+interface Props {
+  icon: string;
+  title: string;
+  message: string;
+  actionLabel?: string;
+  actionHref?: string;
+  cachedBanner?: string;
+}
+
+const { icon, title, message, actionLabel = 'Back to search', actionHref = '/', cachedBanner } = Astro.props;
+---
+
+<!-- An error is direction, not mood: say what happened and what to do next.
+     The rule is in the severity scale's gap red; the action is achromatic,
+     because a class-colored fill fails AA on 10 of the 13 classes. -->
+<div class="mx-auto max-w-2xl px-6 py-24">
+  <div class="border-l-[3px] border-severity-gap pl-6 sm:pl-10">
+    <div class="text-3xl" aria-hidden="true">{icon}</div>
+    <h1 class="display mt-4 text-[clamp(1.75rem,5vw,2.5rem)]">{title}</h1>
+    <p class="mt-4 max-w-[58ch] text-base leading-relaxed text-text-muted">{message}</p>
+    {cachedBanner && <p class="mt-4 border-l-2 border-rule-strong pl-4 text-xs text-text-muted">{cachedBanner}</p>}
+    <a
+      href={actionHref}
+      class="mt-8 inline-flex min-h-[44px] items-center rounded-[4px] bg-text px-5 text-sm font-semibold text-bg no-underline transition-colors duration-150 hover:bg-white"
+    >
+      {actionLabel}
+    </a>
+  </div>
+</div>

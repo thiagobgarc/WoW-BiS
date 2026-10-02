@@ -1,0 +1,316 @@
+{
+  "season": "midnight-s2",
+  "class": "Shaman",
+  "spec": "Restoration",
+  "contentType": "raid",
+  "classSelections": [
+    {
+      "nodeId": 103581,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 103582,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103584,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103585,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103586,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103587,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103588,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103590,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103591,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 103593,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103594,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103596,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103598,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103601,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103602,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103606,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103607,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 103611,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103612,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103613,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103614,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103615,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103616,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103617,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103620,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103625,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103626,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103627,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109386,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109387,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109388,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110085,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "specSelections": [
+    {
+      "nodeId": 80976,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81018,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81021,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81022,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81024,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81027,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81031,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81032,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81033,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 81037,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81038,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81040,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81041,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81042,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81044,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81047,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81048,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81049,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81051,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81052,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81055,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 92677,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103427,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103428,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103432,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103433,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109301,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110403,
+      "rank": 4,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 113376,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "notes": "Decoded from Icy Veins' \"Restoration Raid - Totemic\" in-game export string (https://www.icy-veins.com/wow/restoration-shaman-pve-healing-spec-builds-talents), imported 2026-10-02 by scripts/import-talents.ts. Export string: CgQAAAAAAAAAAAAAAAAAAAAAAAAAAgBAAAAzMzsssNjZGjZGzMYsBbwMW0YbAMDsZGmBbjZmpZbZmhZMbsMzMzYwsMAAAwMzgZGAYwM"
+}

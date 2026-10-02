@@ -1,0 +1,296 @@
+{
+  "season": "midnight-s2",
+  "class": "Hunter",
+  "spec": "Beast Mastery",
+  "contentType": "raid",
+  "classSelections": [
+    {
+      "nodeId": 102381,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102422,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102411,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102401,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102406,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102423,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110157,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109485,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102380,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102292,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102384,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102404,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102395,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109484,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102396,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109487,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102424,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102390,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109483,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110154,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102397,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102391,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109486,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109488,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102416,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102409,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110164,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102387,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "specSelections": [
+    {
+      "nodeId": 102346,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110158,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102377,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102368,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102347,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102343,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102340,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102354,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102342,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102370,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102357,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102373,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102374,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102353,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102358,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102372,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102344,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102336,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102360,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102362,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102356,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110692,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110428,
+      "rank": 4,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102363,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102341,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102338,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102355,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102369,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102351,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "notes": "Sourced 2026-09-03 for patch 12.1 (Midnight Season 2), Pack Leader hero talent. Primary source: Maxroll.gg 'Beast Mastery Hunter Raid Guide' (https://maxroll.gg/wow/class-guides/beast-mastery-hunter-raid-guide), Pack Leader 'Situational Cleave' build — this variant (used for encounters with 2+ enemies for short periods) is treated here as the general-purpose raid recommendation, matching Icy Veins' framing of its equivalent 'Raid AoE/Cleave' build (https://www.icy-veins.com/wow/beast-mastery-hunter-pve-dps-spec-builds-talents) as the one 'you will use for the bulk of' a raid tier since most encounters have adds/cleave targets. Spec tree was built by taking this repo's existing verified Mythic+ Beast Mastery spec tree (hunter-beast-mastery.json) as a known-valid baseline and applying Maxroll's verbatim-quoted 'Talent Adjustments' diff for Situational Cleave vs their single-target default (Added: Wild Thrash, Beast Cleave, Kill Cleave, Laceration, Training Expert x2, Aspect of the Beast; Removed: Thrill of the Hunt x2, Dire Frenzy x2, Huntmaster's Call, Wildspeaker, Dire Command) — verified by hand against the real node/prerequisite graph fetched from Blizzard's API (every added node's prerequisite is satisfied by a kept node, no orphans) and by point-budget (removed 7 points, added 7 points; spec tree total remains 34, unchanged from the Mythic+ baseline). Class tree kept identical to the Mythic+ baseline except node 110164 was swapped from optionIndex 1 (Guardian's Hide) to optionIndex 0 (Roar of Sacrifice) — both Maxroll and Icy Veins explicitly call out Roar of Sacrifice as the raid pick (external defensive) over the M+-leaning Guardian's Hide (passive damage reduction). ASSUMPTIONS / UNCERTAIN — please spot-check: (1) Icy Veins' own prose ('keeps the full Beast Cleave package from our Mythic+ build and takes Thrill of the Hunt over Training Expert') implies the OPPOSITE polarity on that one node pair versus Maxroll's directly-quoted diff used here (Maxroll: raid-cleave ADDS Training Expert x2 and REMOVES Thrill of the Hunt, relative to their own raid single-target build). This file follows Maxroll's diff since it was extracted verbatim from raw page HTML rather than through an AI-summarized fetch, and Icy Veins' comparison is against a different baseline (their own Mythic+ build, not this repo's). (2) Maxroll separately flags Emergency Salve (node 102389, dispels Poison/Disease via Feign Death/Aspect of the Turtle) as valuable for raid, but no budget-neutral, unambiguous swap to fit it into the class tree could be confirmed from sourcing, so it was NOT included — flagging for manual review. (3) Situational class-tree utility choices left matching the Mythic+ baseline (Kodo vs Devilsaur Tranquilizer, Tar Trap vs Scare Beast, Tar-Coated Bindings vs Horsehair Tether, Binding Shot/Intimidation/Tranquilizing Shot) since both guides describe these as encounter-dependent rather than giving a single raid-general answer."
+}

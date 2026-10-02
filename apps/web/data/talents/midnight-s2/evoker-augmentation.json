@@ -1,0 +1,326 @@
+{
+  "season": "midnight-s2",
+  "class": "Evoker",
+  "spec": "Augmentation",
+  "contentType": "mythic-plus",
+  "classSelections": [
+    {
+      "nodeId": 93288,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93289,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93292,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93293,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93294,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93300,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93302,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93304,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93305,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93306,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93308,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93309,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93310,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93311,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93312,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93340,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93341,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93342,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93343,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93344,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93346,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93348,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93349,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93350,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93351,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 93352,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93354,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93355,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93715,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103843,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103844,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110064,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "specSelections": [
+    {
+      "nodeId": 93195,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93198,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93199,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93200,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93201,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93202,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 93203,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93206,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93207,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93208,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93209,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93211,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93212,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93213,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93219,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93220,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93221,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 93222,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93223,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93226,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93227,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93229,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93230,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93232,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93234,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93358,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93367,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93368,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93369,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 102248,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110415,
+      "rank": 4,
+      "optionIndex": 0
+    }
+  ],
+  "notes": "Decoded from Icy Veins' \"Weekly Mythic+ Build - Scalecommander\" in-game export string (https://www.icy-veins.com/wow/augmentation-evoker-pve-dps-spec-builds-talents), imported 2026-10-02 by scripts/import-talents.ts. Export string: CEcBAAAAAAAAAAAAAAAAAAAAAMMzMbjZmxyMYmtZMzMmBAAAAAAAAmhHYGYM1YmZGAAAAMzMjxMz2YmBmZzYwCsMGGbDgZQshxMYmBDG"
+}

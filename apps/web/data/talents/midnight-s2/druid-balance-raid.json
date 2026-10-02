@@ -1,0 +1,321 @@
+{
+  "season": "midnight-s2",
+  "class": "Druid",
+  "spec": "Balance",
+  "contentType": "raid",
+  "classSelections": [
+    {
+      "nodeId": 82198,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82201,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82202,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82206,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82207,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 82208,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82209,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82210,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82214,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82218,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82219,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82220,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82225,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82228,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82229,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82231,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82232,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82233,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82234,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82235,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82236,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82237,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82241,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82244,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93714,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 100175,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 100176,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 100177,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 100223,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 104078,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 104080,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 104082,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 104083,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 104085,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "specSelections": [
+    {
+      "nodeId": 88201,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 88203,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 88204,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 88206,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 88207,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 88208,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 88212,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 88214,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 88215,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 88218,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 88221,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 88222,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 88223,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 88224,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 88225,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 88226,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 88227,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 88231,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 88234,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 88235,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 88236,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 91048,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103846,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103847,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108032,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108033,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110279,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110421,
+      "rank": 4,
+      "optionIndex": 0
+    }
+  ],
+  "notes": "Decoded from Icy Veins' \"Balance Druid Single-Target - Elune's\" in-game export string (https://www.icy-veins.com/wow/balance-druid-pve-dps-spec-builds-talents), imported 2026-10-02 by scripts/import-talents.ts. Export string: CYGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWoMbNjxMD8AmFzMzMLMMMmZZGGzYhlZWmZMmZDDAGbLzMYMbDgJAAAALMzMzgNjZMmBAwMDWGA"
+}

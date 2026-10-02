@@ -1,0 +1,316 @@
+{
+  "season": "midnight-s2",
+  "class": "Mage",
+  "spec": "Frost",
+  "contentType": "raid",
+  "classSelections": [
+    {
+      "nodeId": 62085,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62086,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62091,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62094,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62096,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62098,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62100,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62102,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62104,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62105,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62107,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62112,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62114,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62115,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62116,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62117,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62122,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62123,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62124,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62125,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62127,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93524,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108654,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 108655,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108657,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108658,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108659,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108660,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108661,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110081,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110597,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "specSelections": [
+    {
+      "nodeId": 62150,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62151,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62153,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62157,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62163,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62164,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62170,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62173,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62176,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62177,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62178,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62179,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62180,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62182,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 62184,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 81468,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103771,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 108653,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 108849,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108850,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 108851,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108855,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108858,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108859,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108864,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109915,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109916,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110258,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110283,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110422,
+      "rank": 4,
+      "optionIndex": 0
+    }
+  ],
+  "notes": "Decoded from Icy Veins' \"Frost Light Cleave/Raid\" in-game export string (https://www.icy-veins.com/wow/frost-mage-pve-dps-spec-builds-talents), imported 2026-10-02 by scripts/import-talents.ts. Export string: CAEAAAAAAAAAAAAAAAAAAAAAAYGGLzMzsMmZmYmZGzMzMziZmZMjZAAAgZmZWWmZaDAAAAAA2AYbbMzMDmthxMsAAAwMbAzADYGMMA"
+}

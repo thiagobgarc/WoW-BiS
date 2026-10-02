@@ -1,0 +1,296 @@
+{
+  "season": "midnight-s2",
+  "class": "Demon Hunter",
+  "spec": "Vengeance",
+  "contentType": "raid",
+  "classSelections": [
+    {
+      "nodeId": 90928,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90929,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90931,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90933,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90934,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90935,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90936,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90938,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90939,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90940,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90941,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90942,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90946,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90948,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90949,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90950,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90994,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 90996,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90999,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 91000,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 91001,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 91002,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 91004,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 95149,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 95150,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 95151,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 95152,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108722,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108728,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "specSelections": [
+    {
+      "nodeId": 90951,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90955,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90956,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90958,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90959,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90960,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90961,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90962,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90967,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90968,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90970,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90971,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90972,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90974,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90975,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90977,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90978,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90980,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90981,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90982,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90983,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90986,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90987,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90988,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90989,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90990,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90991,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110425,
+      "rank": 4,
+      "optionIndex": 0
+    }
+  ],
+  "notes": "Decoded from Icy Veins' \"Vengeance Single Target\" in-game export string (https://www.icy-veins.com/wow/vengeance-demon-hunter-pve-tank-spec-builds-talents), imported 2026-10-02 by scripts/import-talents.ts. Export string: CUkAAAAAAAAAAAAAAAAAAAAAAAAMjZmZMzMjMzMYWMzMDMjZGzYGzMDzMzM2GzsNGAAAAAAAAwMzYDAAAADGzMzMbtNzMDAAAAAwA"
+}

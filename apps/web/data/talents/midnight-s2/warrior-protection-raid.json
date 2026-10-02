@@ -1,0 +1,316 @@
+{
+  "season": "midnight-s2",
+  "class": "Warrior",
+  "spec": "Protection",
+  "contentType": "raid",
+  "classSelections": [
+    {
+      "nodeId": 90261,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90324,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90326,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90328,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90329,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90330,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90331,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90343,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90346,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90351,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90352,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90353,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90355,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90360,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90366,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90368,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90371,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90378,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90381,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90382,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90385,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 95956,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 95959,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108542,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108543,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108544,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108686,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108705,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 110118,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110119,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110653,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "specSelections": [
+    {
+      "nodeId": 90264,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 90265,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90295,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90296,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90297,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90298,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90301,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90302,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90303,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90304,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90305,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90306,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90308,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90309,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90310,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90311,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90312,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 90314,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90317,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90318,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90319,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90320,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90432,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90433,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90448,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90449,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90451,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 107577,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 107578,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110411,
+      "rank": 4,
+      "optionIndex": 0
+    }
+  ],
+  "notes": "Decoded from Icy Veins' \"Single-Target - Colossus\" in-game export string (https://www.icy-veins.com/wow/protection-warrior-pve-tank-spec-builds-talents), imported 2026-10-02 by scripts/import-talents.ts. Export string: CkEAAAAAAAAAAAAAAAAAAAAAA02AAAzMDzMzMzMzmxsMjxYmGGDLzMzMDGzMAAAAYZAYGDAsYGDbwAzwCNmZBmxMDmNAAzMAgZgxA"
+}

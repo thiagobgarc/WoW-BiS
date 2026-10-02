@@ -1,0 +1,45 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import SiteHeader from '@/components/layout/SiteHeader.astro';
+import { bisPath, specsByClass } from '@/lib/meta/specLinks';
+import { seasonConfig } from '@/lib/season/seasonConfig';
+import { classColor } from '@mythos/core/utils';
+
+const classes = specsByClass();
+---
+
+<Layout
+  title={`WoW BiS Gear for Every Spec — ${seasonConfig.displayName} | Mythos`}
+  description={`World of Warcraft best-in-slot gear lists for all ${classes.reduce((n, c) => n + c.specs.length, 0)} specs in ${seasonConfig.displayName} — raid and Mythic+ picks for every slot, with where each item drops.`}
+>
+  <SiteHeader currentPath={Astro.url.pathname} />
+
+  <div class="mx-auto max-w-5xl px-6 pb-20">
+    <div class="my-14 border-l-[3px] border-accent pl-6 sm:pl-10">
+      <h1 class="display text-[clamp(2.25rem,6vw,3.25rem)]">Best-in-slot gear, every spec.</h1>
+      <p class="mt-4 max-w-[58ch] text-base leading-relaxed text-text-muted">
+        Raid and Mythic+ BiS lists for {seasonConfig.displayName}, built from Blizzard's loot tables. Pick a spec, or
+        <a href="/" class="link">look up your character</a> to see which of these you're still missing.
+      </p>
+    </div>
+
+    <div class="grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        classes.map(({ className, specs }) => (
+          <section style={`--accent: ${classColor(className)};`}>
+            <h2 class="border-l-[3px] border-accent pl-3 text-lg font-bold">{className}</h2>
+            <ul class="mt-2 space-y-1 pl-[15px] text-sm">
+              {specs.map((spec) => (
+                <li>
+                  <a href={bisPath(className, spec)} class="link">
+                    {spec} {className} BiS
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))
+      }
+    </div>
+  </div>
+</Layout>

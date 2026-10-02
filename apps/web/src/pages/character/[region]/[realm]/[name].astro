@@ -1,0 +1,188 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import SiteHeader from '@/components/layout/SiteHeader.astro';
+import ErrorState from '@/components/error/ErrorState.astro';
+import { CharacterPage } from '@/components/character/CharacterPage';
+import { getFullCharacter, toCharacterKey } from '@/lib/blizzard/getFullCharacter';
+import { getCharacterTalents } from '@/lib/blizzard/getCharacterTalents';
+import { getCharacterProgression } from '@/lib/blizzard/getCharacterProgression';
+import { getBisList } from '@/lib/bis/getBisList';
+import { getRecommendedBuild } from '@/lib/talents/getRecommendedBuild';
+import { getMythicPlusTierList, findTierForSpec } from '@/lib/meta/getTierList';
+import { CURRENT_SEASON_ID } from '@/lib/season/seasonConfig';
+import { toApiError } from '@/lib/http/errorResponse';
+import { isValidRegion } from '@/lib/http/validateRegion';
+import { findSpecBySlug } from '@/lib/meta/specBySlug';
+import { bisPath, talentBuildPath } from '@/lib/meta/specLinks';
+import { urlSlug } from '@/lib/meta/specIds';
+import { rateLimit, clientIp } from '@/lib/http/rateLimit';
+import { classColor } from '@mythos/core/utils';
+import type { BisEntry, BisList } from '@mythos/core/bis';
+import type { CharacterTalents } from '@/lib/blizzard/getCharacterTalents';
+import type { DomainMythicPlusProfile, DomainRaidProgress } from '@/lib/blizzard/domain';
+import type { RecommendedTalentBuild } from '@mythos/core/talents';
+import type { MetaTier } from '@/lib/meta/types';
+
+export const prerender = false;
+
+const { region, realm, name } = Astro.params as { region: string; realm: string; name: string };
+const key = toCharacterKey(region, realm, name);
+
+let full: Awaited<ReturnType<typeof getFullCharacter>> | null = null;
+let bisEntries: BisEntry[] = [];
+let bisSeeded = false;
+let statPriority: BisList['statPriority'] | undefined;
+let talents: CharacterTalents | null = null;
+let recommendedTalents: RecommendedTalentBuild | null = null;
+let raidProgress: DomainRaidProgress | null = null;
+let mythicPlus: DomainMythicPlusProfile | null = null;
+let metaTier: MetaTier | null = null;
+let error: { status: number; title: string; icon: string; message: string } | null = null;
+
+if (!isValidRegion(region)) {
+  error = { status: 400, title: 'Unknown Region', icon: '❓', message: `"${region}" isn't a recognized WoW region.` };
+  Astro.response.status = 400;
+} else {
+  const ip = clientIp(() => Astro.clientAddress);
+  const limit = await rateLimit(`character-page:${ip}`, 20, 60);
+  if (!limit.allowed) {
+    error = { status: 429, title: 'Slow Down', icon: '⏳', message: 'Too many character lookups — please wait a moment and try again.' };
+    Astro.response.status = 429;
+  }
+}
+
+// Region invalid or rate-limited above — skip the Blizzard calls entirely
+// rather than letting them run and overwrite the already-set 400/429 error.
+if (!error) {
+  try {
+    full = await getFullCharacter(key);
+    if (full.character.specName) {
+      const bis = await getBisList(CURRENT_SEASON_ID, full.character.className, full.character.specName);
+      bisEntries = bis.entries;
+      bisSeeded = bis.seeded;
+      statPriority = bis.seeded ? bis.statPriority : undefined;
+
+      const recommended = await getRecommendedBuild(CURRENT_SEASON_ID, full.character.className, full.character.specName);
+      recommendedTalents = recommended.build;
+
+      // Meta tier is a supplementary badge, not core to the page — same
+      // reasoning as talents/progression below: an unseeded or bad tier list
+      // shouldn't take down the whole page.
+      try {
+        const tierList = await getMythicPlusTierList(CURRENT_SEASON_ID);
+        if (tierList.list) {
+          metaTier = findTierForSpec(tierList.list.entries, full.character.className, full.character.specName);
+        }
+      } catch {
+        metaTier = null;
+      }
+    }
+    if (full.character.specId) {
+      // Talents are a supplementary section, not core to the page — a failure
+      // here (e.g. an obscure spec with no published talent tree yet)
+      // shouldn't take down the whole character page.
+      try {
+        talents = await getCharacterTalents(key, full.character.specId);
+      } catch {
+        talents = null;
+      }
+    }
+    // Raid Progression / Mythic+ are supplementary tabs, not core to the
+    // page — same reasoning as talents above: a failure here (e.g. Blizzard
+    // rate-limiting the extra calls) shouldn't take down the whole page.
+    try {
+      const progression = await getCharacterProgression(key);
+      raidProgress = progression.raid;
+      mythicPlus = progression.mythicPlus;
+    } catch {
+      raidProgress = null;
+      mythicPlus = null;
+    }
+  } catch (err) {
+    const { status, body } = toApiError(err);
+    const presentation: Record<string, { title: string; icon: string }> = {
+      character_not_found: { title: 'Character Not Found', icon: '❌' },
+      character_private: { title: 'Profile Is Private', icon: '🔒' },
+      realm_not_resolved: { title: 'Realm Not Found', icon: '❓' },
+      blizzard_unavailable: { title: 'Blizzard API Temporarily Unavailable', icon: '⚠️' },
+      blizzard_error: { title: 'Something Went Wrong', icon: '⚠️' },
+      unknown: { title: 'Something Went Wrong', icon: '⚠️' },
+    };
+    const p = presentation[body.error] ?? presentation.unknown;
+    error = { status, title: p.title, icon: p.icon, message: body.message };
+    Astro.response.status = status;
+  }
+}
+
+const accent = full ? classColor(full.character.className) : undefined;
+const specLabel = full ? [full.character.specName, full.character.className].filter(Boolean).join(' ') : '';
+const title = full
+  ? `${full.character.name} — ${specLabel}, ${full.character.realmName} (${full.character.region.toUpperCase()}) | Mythos`
+  : 'Character — Mythos';
+const description = full
+  ? `${full.character.name} is a ${full.character.equippedItemLevel} ilvl ${specLabel} on ${full.character.realmName} (${full.character.region.toUpperCase()}). See their gear against the Best-in-Slot list and exactly what to upgrade next.`
+  : undefined;
+const ogImage = full ? new URL(`/og/${key.region}/${key.realmSlug}/${key.name}.png`, Astro.url.origin).toString() : undefined;
+// Realm and name are normalized into the key, so every spelling of a
+// character's URL collapses onto one canonical.
+const canonicalPath = `/character/${key.region}/${key.realmSlug}/${key.name}`;
+// The spec's public guide pages, when it's one we know (a character with no
+// spec picked yet, or a brand-new spec, gets no links rather than dead ones).
+const guideSpec =
+  full?.character.specName ? findSpecBySlug(urlSlug(full.character.className), urlSlug(full.character.specName)) : null;
+// Error states and fixture data shouldn't land in search results.
+const noindex = !!error || !full || full.mock;
+---
+
+<Layout
+  title={title}
+  description={description}
+  accentColor={accent}
+  ogImage={ogImage}
+  canonicalPath={canonicalPath}
+  noindex={noindex}
+>
+  <SiteHeader currentPath={Astro.url.pathname} />
+
+  {
+    error ? (
+      <ErrorState icon={error.icon} title={error.title} message={error.message} />
+    ) : (
+      full && (
+        <CharacterPage
+          client:load
+          character={full.character}
+          equipment={full.equipment}
+          stats={full.stats}
+          avatarUrl={full.avatarUrl}
+          mock={full.mock}
+          fetchedAt={full.fetchedAt}
+          stale={full.stale}
+          bisEntries={bisEntries}
+          bisSeeded={bisSeeded}
+          statPriority={statPriority}
+          talents={talents}
+          recommendedTalents={recommendedTalents}
+          raidProgress={raidProgress}
+          mythicPlus={mythicPlus}
+          metaTier={metaTier}
+        />
+      )
+    )
+  }
+  {
+    !error && guideSpec && (
+      <nav aria-label="Spec guides" class="mx-auto mt-14 max-w-5xl px-6">
+        <h2 class="label">{guideSpec.specName} {guideSpec.className} guides</h2>
+        <p class="mt-2 flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium">
+          <a href={bisPath(guideSpec.className, guideSpec.specName)} class="link">
+            {guideSpec.specName} {guideSpec.className} BiS gear
+          </a>
+          <a href={talentBuildPath(guideSpec.className, guideSpec.specName)} class="link">
+            {guideSpec.specName} {guideSpec.className} talent build
+          </a>
+        </p>
+      </nav>
+    )
+  }
+</Layout>

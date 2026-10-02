@@ -1,0 +1,36 @@
+---
+interface Props {
+  currentPath: string;
+}
+const { currentPath } = Astro.props;
+
+const NAV = [
+  { href: '/bis', label: 'BiS Gear' },
+  { href: '/meta', label: 'Tier List' },
+];
+---
+
+<header class="border-b border-rule">
+  <div class="mx-auto flex max-w-5xl items-center gap-8 px-6 py-5">
+    <!-- The accent bar is the same spine that runs down the page body. On a
+         character page it is that character's class color; here on search and
+         meta it is the brand default. Class color as a rule, never as paint. -->
+    <a href="/" class="flex items-center gap-2.5 no-underline">
+      <span class="h-[18px] w-[3px] shrink-0 bg-accent" aria-hidden="true"></span>
+      <span class="text-lg font-extrabold tracking-tight [font-stretch:105%]">Mythos</span>
+    </a>
+    <nav class="flex gap-6 text-sm font-medium">
+      {
+        NAV.map((item) => (
+          <a
+            href={item.href}
+            class={`no-underline transition-colors duration-150 ${currentPath.startsWith(item.href) ? 'text-text' : 'text-text-dim hover:text-text'}`}
+            aria-current={currentPath.startsWith(item.href) ? 'page' : undefined}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>

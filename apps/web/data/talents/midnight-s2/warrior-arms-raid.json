@@ -1,0 +1,301 @@
+{
+  "season": "midnight-s2",
+  "class": "Warrior",
+  "spec": "Arms",
+  "contentType": "raid",
+  "classSelections": [
+    {
+      "nodeId": 90322,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90326,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90327,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90328,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90331,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90337,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90344,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90346,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90347,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90348,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 90352,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90353,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90355,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90360,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90366,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90368,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90371,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90378,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90381,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90382,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90385,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 92537,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 95956,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108542,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108543,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108544,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108676,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 108685,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108705,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 109391,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110119,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "specSelections": [
+    {
+      "nodeId": 90269,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90270,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90271,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90273,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90274,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90276,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90277,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90279,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90282,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90283,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90290,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90291,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90292,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90293,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90438,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90439,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90441,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90444,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90445,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 90447,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109683,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109684,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109685,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109686,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109687,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110176,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110407,
+      "rank": 4,
+      "optionIndex": 0
+    }
+  ],
+  "notes": "Decoded from Icy Veins' \"Arms Single-Target - Slayer\" in-game export string (https://www.icy-veins.com/wow/arms-warrior-pve-dps-spec-builds-talents), imported 2026-10-02 by scripts/import-talents.ts. Export string: CcEAAAAAAAAAAAAAAAAAAAAAAAzMzsMzMmZGAAAghphxYmZzMzMzgxMDAAAAgZWmZAhxyyALgBMDTgZwGYmx2YbglZWGgZGAMDDA"
+}

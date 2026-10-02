@@ -1,0 +1,311 @@
+{
+  "season": "midnight-s2",
+  "class": "Warlock",
+  "spec": "Affliction",
+  "contentType": "raid",
+  "classSelections": [
+    {
+      "nodeId": 71918,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71922,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71923,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71924,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71926,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71930,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71931,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71933,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71936,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71937,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71942,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71948,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71949,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71950,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71952,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71954,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71955,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71956,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71957,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 100941,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109842,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109843,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109844,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109845,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109847,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110071,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110072,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110073,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110074,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110075,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110076,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "specSelections": [
+    {
+      "nodeId": 72032,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 72033,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 72034,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 72037,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 72041,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 72045,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 72046,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 72047,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 72049,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 72050,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 72051,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 72054,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 72058,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102031,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 102247,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109851,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109852,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109855,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109857,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109858,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109859,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109860,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109861,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109862,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109863,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109865,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110269,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110270,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110405,
+      "rank": 4,
+      "optionIndex": 0
+    }
+  ],
+  "notes": "Decoded from Icy Veins' \"Affliction Single-Target - Soul Harvester\" in-game export string (https://www.icy-veins.com/wow/affliction-warlock-pve-dps-spec-builds-talents), imported 2026-10-02 by scripts/import-talents.ts. Export string: CkQAAAAAAAAAAAAAAAAAAAAAAwMzMzoZhhZmZmlBAAYmZZ2mZmlxAAjllBGwEMDbBG2GAAAmBAAwMDzMjBzwMzMzMGMzMzAAmBG"
+}

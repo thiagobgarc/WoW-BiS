@@ -1,0 +1,207 @@
+@import "tailwindcss";
+
+/*
+ * MYTHOS VISUAL SYSTEM
+ *
+ * Governing rule: hue is quantitative, never decorative.
+ *
+ * Every color on this page is data — item quality (canonical Blizzard
+ * values), upgrade severity (always paired with an icon and a text label),
+ * and the one class color of the character being viewed. The chrome is
+ * achromatic on purpose: a tinted ground, a colored button and a blue link
+ * would be three decorative hues competing with the twenty-one meaningful
+ * ones for the reader's attention.
+ *
+ * `--accent` is the looked-up character's class color, set at the layout
+ * level as a server-rendered inline style on <html>. Its use is constrained
+ * by measurement, not taste — see the note above --accent below.
+ */
+:root {
+  /* Ground. Near-neutral, a whisper warm so that the cool class colors
+     (mage cyan, shaman blue, monk jade) read as cool against it. */
+  --color-bg: #121113;
+  --color-panel: #1b1a1d;
+  --color-panel-hover: #221f24;
+  --color-sunken: #0c0b0d;
+
+  /* Rules do the work that borders-around-boxes used to. */
+  --color-rule: rgb(255 255 255 / 0.07);
+  --color-rule-strong: rgb(255 255 255 / 0.14);
+  --color-border: var(--color-rule);
+
+  /* Measured against #121113 (ground) and #1b1a1d (raised), the stricter of
+     the two in each case. text-dim is 5.15 / 4.74 — the old #8d92a4 sat at
+     4.31 / 3.97 and failed AA on raised surfaces. Nothing below 4.5:1 is
+     allowed to carry body text; the old --color-text-faint (#5f6470, ~3.2:1)
+     is gone rather than retuned, since every place it was used was text. */
+  --color-text: #edebe8;        /* 15.82 / 14.56 */
+  --color-text-muted: #a8a4a0;  /*  7.61 /  7.00 */
+  --color-text-dim: #8a857f;    /*  5.15 /  4.74 */
+
+  /*
+   * The class color is a MARKER, never paint.
+   *
+   * Measured across all 13 canonical class colors on this ground:
+   *   · as a fill behind white text — 10 of 13 fail AA (monk 1.33, rogue
+   *     1.14, priest 1.00); the 3 that pass white fail dark text. There is
+   *     no single foreground that works on all 13, so the class color is
+   *     never a fill behind text.
+   *   · as small text — death knight 3.22, demon hunter 3.43, shaman 3.91
+   *     all fail the 4.5:1 body-text bar.
+   *   · as non-text UI and as large display type — all 13 clear 3:1.
+   *
+   * So it appears as a rule, a spine, a border, or display-size type. The
+   * soft tints below are derived with color-mix so they actually track the
+   * character's class; they were previously hardcoded crimson, which left a
+   * mage page with a cyan --accent and crimson accent-soft backgrounds.
+   */
+  --accent: #c41e3a;
+  --accent-soft: color-mix(in srgb, var(--accent) 15%, transparent);
+  --accent-softer: color-mix(in srgb, var(--accent) 8%, transparent);
+  --accent-rule: color-mix(in srgb, var(--accent) 55%, transparent);
+
+  /* Canonical WoW item quality colors — non-negotiable, do not theme these.
+     Used on borders and swatches (3:1 non-text bar), never as body text:
+     rare is 3.60 and epic 3.55 against a raised surface. */
+  --quality-poor: #9d9d9d;
+  --quality-common: #ffffff;
+  --quality-uncommon: #1eff00;
+  --quality-rare: #0070dd;
+  --quality-epic: #a335ee;
+  --quality-legendary: #ff8000;
+  --quality-artifact: #e6cc80;
+  --quality-heirloom: #00ccff;
+
+  /* Colorblind-safe severity scale — always paired with icon + text label.
+     All four clear 6.2:1 as text on both surfaces. */
+  --severity-bis: #1eff00;
+  --severity-close: #ffc107;
+  --severity-upgrade: #ff9800;
+  --severity-gap: #ff6b6b;
+}
+
+@theme inline {
+  --color-bg: var(--color-bg);
+  --color-panel: var(--color-panel);
+  --color-panel-hover: var(--color-panel-hover);
+  --color-sunken: var(--color-sunken);
+  --color-rule: var(--color-rule);
+  --color-rule-strong: var(--color-rule-strong);
+  --color-border: var(--color-border);
+  --color-text: var(--color-text);
+  --color-text-muted: var(--color-text-muted);
+  --color-text-dim: var(--color-text-dim);
+
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-softer: var(--accent-softer);
+  --color-accent-rule: var(--accent-rule);
+
+  --color-quality-poor: var(--quality-poor);
+  --color-quality-common: var(--quality-common);
+  --color-quality-uncommon: var(--quality-uncommon);
+  --color-quality-rare: var(--quality-rare);
+  --color-quality-epic: var(--quality-epic);
+  --color-quality-legendary: var(--quality-legendary);
+  --color-quality-artifact: var(--quality-artifact);
+  --color-quality-heirloom: var(--quality-heirloom);
+
+  --color-severity-bis: var(--severity-bis);
+  --color-severity-close: var(--severity-close);
+  --color-severity-upgrade: var(--severity-upgrade);
+  --color-severity-gap: var(--severity-gap);
+
+  --font-sans: 'Archivo', system-ui, sans-serif;
+}
+
+/*
+ * TYPE — one family, worked across both of its axes.
+ *
+ * Archivo variable, serving wdth 62–125 and wght 100–900. One family rather
+ * than a display/body pair, because this interface is labels and numbers
+ * with almost no prose: the expressive range comes from width and weight,
+ * not from a second typeface. The width axis is what makes dense slot and
+ * column labels fit without resorting to tracked-out all-caps.
+ *
+ * JetBrains Mono was removed. It was loaded on every page and used nowhere;
+ * column alignment comes from tabular figures instead, which is what it was
+ * standing in for.
+ */
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Archivo', system-ui, sans-serif;
+  font-synthesis-weight: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* The number is the hero of this interface, so figures get their own
+   treatment: lining, tabular, and tightened — item levels and deltas are
+   read down a column, and they only line up if every digit is one width. */
+.figure {
+  font-variant-numeric: tabular-nums lining-nums;
+  font-feature-settings: 'tnum' 1, 'lnum' 1;
+  letter-spacing: -0.02em;
+}
+
+/* Replaces the tracked-out ALL-CAPS micro-label. Same job — naming a column
+   or a field — done with size, width and weight instead of shouting. */
+.label {
+  font-size: 0.75rem;
+  line-height: 1.25;
+  font-weight: 500;
+  font-stretch: 87.5%;
+  color: var(--color-text-dim);
+}
+
+/* Links are underlined text, not colored text: color is reserved for data. */
+.link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--color-rule-strong);
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+  transition: text-decoration-color 150ms;
+}
+.link:hover {
+  text-decoration-color: currentColor;
+}
+
+/* Display type: set tight, since it runs at 40–64px. */
+.display {
+  font-weight: 800;
+  font-stretch: 105%;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+:where(a, button, input, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*
+ * MOTION — one orchestrated moment, and nothing else.
+ *
+ * The completion meter fills once when the character page first paints:
+ * it is the page's headline claim ("4 of 16 slots at best"), so it earns
+ * the single piece of motion that nobody asked for. Everything else in the
+ * app animates only in answer to a click. Reduced-motion is honoured by the
+ * global block above, which collapses this to 0.01ms.
+ */
+@keyframes meter-fill {
+  from { transform: scaleX(0); }
+}
+.meter-fill {
+  transform-origin: left center;
+  animation: meter-fill 700ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}

@@ -1,0 +1,296 @@
+{
+  "season": "midnight-s2",
+  "class": "Evoker",
+  "spec": "Preservation",
+  "contentType": "raid",
+  "classSelections": [
+    {
+      "nodeId": 93288,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93289,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93291,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93292,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93294,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93299,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93300,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93302,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93304,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93306,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93308,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93309,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93310,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93311,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93340,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93341,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93343,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93344,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93345,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93346,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93347,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93348,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93350,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93351,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 93352,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93353,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93354,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93355,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93715,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 103843,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110064,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "specSelections": [
+    {
+      "nodeId": 93237,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93238,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93239,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93240,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93241,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93246,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93247,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93248,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93250,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93254,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93255,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93257,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93258,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 93260,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93263,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93264,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93265,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93266,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93267,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 93268,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93336,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93337,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93338,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 93339,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 99803,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110413,
+      "rank": 4,
+      "optionIndex": 0
+    }
+  ],
+  "notes": "Decoded from Icy Veins' \"Flameshaper Raiding - Flameshaper\" in-game export string (https://www.icy-veins.com/wow/preservation-evoker-pve-healing-spec-builds-talents), imported 2026-10-02 by scripts/import-talents.ts. Export string: CwbBAAAAAAAAAAAAAAAAAAAAAAAAAAAMzMDmZMYGzmhZmZbAAAMjZMYGzIzMDAAAwMzMZmZmxsNzMAYGzALgFwMMB2MsZYAMzMGA"
+}

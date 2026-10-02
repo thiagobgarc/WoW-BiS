@@ -1,0 +1,311 @@
+{
+  "season": "midnight-s2",
+  "class": "Warlock",
+  "spec": "Demonology",
+  "contentType": "mythic-plus",
+  "classSelections": [
+    {
+      "nodeId": 71918,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71922,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71923,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71926,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71930,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71931,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71933,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71936,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71937,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71941,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71942,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71947,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 71949,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71950,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71952,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71955,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71956,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 71957,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 100941,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109840,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109842,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109843,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109844,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109846,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109847,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109848,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 110071,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110072,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110073,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110074,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110075,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110076,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "specSelections": [
+    {
+      "nodeId": 101887,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101888,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101891,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101893,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101894,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101895,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 101903,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101905,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101908,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101909,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101914,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101920,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 101923,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109241,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109244,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109248,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109250,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109251,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109252,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109257,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109934,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110191,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110194,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110197,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 110198,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110199,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110201,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110404,
+      "rank": 4,
+      "optionIndex": 0
+    }
+  ],
+  "notes": "Decoded from Icy Veins' \"Demonology AoE - Diabolist\" in-game export string (https://www.icy-veins.com/wow/demonology-warlock-pve-dps-spec-builds-talents), imported 2026-10-02 by scripts/import-talents.ts. Export string: CoQAAAAAAAAAAAAAAAAAAAAAAwMjZGNLmxmZGzyAAAAAAAAGzYYBGYb0CNsYMzYZ2mZmxMAwMjZGzMDwYmxMbAAgxMzMzww2MGwA"
+}

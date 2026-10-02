@@ -1,0 +1,10 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import SiteHeader from '@/components/layout/SiteHeader.astro';
+import ErrorState from '@/components/error/ErrorState.astro';
+---
+
+<Layout title="Page Not Found — Mythos" noindex>
+  <SiteHeader currentPath={Astro.url.pathname} />
+  <ErrorState icon="❓" title="Page Not Found" message="There's nothing at this address. Search for a character instead." />
+</Layout>

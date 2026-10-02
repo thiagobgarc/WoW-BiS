@@ -1,0 +1,5052 @@
+{
+  "id": 750,
+  "name": "Frost",
+  "class_talent_nodes": [
+    {
+      "id": 99821,
+      "node_type": {
+        "id": 2,
+        "type": "CHOICE"
+      },
+      "ranks": [
+        {
+          "rank": 1
+        }
+      ],
+      "display_row": 1,
+      "display_col": 11,
+      "raw_position_x": 8400,
+      "raw_position_y": 600
+    },
+    {
+      "id": 76081,
+      "node_type": {
+        "id": 0,
+        "type": "ACTIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "default_points": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101212,
+              "name": "Icebound Fortitude"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 48792,
+                "name": "Icebound Fortitude"
+              },
+              "description": "Your blood freezes, granting immunity to Stun effects and reducing all damage you take by 30% for 8 sec.",
+              "cast_time": "Instant",
+              "cooldown": "2 min cooldown"
+            }
+          }
+        }
+      ],
+      "display_row": 2,
+      "display_col": 2,
+      "raw_position_x": 3000,
+      "raw_position_y": 1200,
+      "unlocks": [
+        76045
+      ]
+    },
+    {
+      "id": 76071,
+      "node_type": {
+        "id": 0,
+        "type": "ACTIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101202,
+              "name": "Death Strike"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 49998,
+                "name": "Death Strike"
+              },
+              "description": "Focuses dark power into a strike that deals 53 Physical damage and heals you for 20.00% of all damage taken in the last 5 sec, minimum 7.0% of maximum health.",
+              "cast_time": "Instant"
+            }
+          }
+        }
+      ],
+      "display_row": 2,
+      "display_col": 4,
+      "raw_position_x": 4200,
+      "raw_position_y": 1200,
+      "unlocks": [
+        76067
+      ]
+    },
+    {
+      "id": 76072,
+      "node_type": {
+        "id": 0,
+        "type": "ACTIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101203,
+              "name": "Raise Dead"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 46585,
+                "name": "Raise Dead"
+              },
+              "description": "Raises a ghoul to fight by your side.  You can have a maximum of one ghoul at a time. Lasts 1 min.",
+              "cast_time": "Instant",
+              "cooldown": "2 min cooldown"
+            }
+          }
+        }
+      ],
+      "display_row": 2,
+      "display_col": 6,
+      "raw_position_x": 5400,
+      "raw_position_y": 1200,
+      "unlocks": [
+        76073
+      ]
+    },
+    {
+      "id": 76045,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101175,
+              "name": "Runic Attenuation"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 207104,
+                "name": "Runic Attenuation"
+              },
+              "description": "Auto attacks have a chance to generate 3 Runic Power.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 3,
+      "display_col": 2,
+      "raw_position_x": 3000,
+      "raw_position_y": 1800,
+      "locked_by": [
+        76081
+      ],
+      "unlocks": [
+        76052,
+        76044,
+        76084
+      ]
+    },
+    {
+      "id": 76067,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101198,
+              "name": "Improved Death Strike"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 374277,
+                "name": "Improved Death Strike"
+              },
+              "description": "Death Strike's cost is reduced by 10, and its healing is increased by 60%.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 3,
+      "display_col": 4,
+      "raw_position_x": 4200,
+      "raw_position_y": 1800,
+      "locked_by": [
+        76071
+      ],
+      "unlocks": [
+        76052,
+        76069,
+        76074
+      ]
+    },
+    {
+      "id": 76073,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101204,
+              "name": "Cleaving Strikes"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 316916,
+                "name": "Cleaving Strikes"
+              },
+              "description": null,
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 3,
+      "display_col": 6,
+      "raw_position_x": 5400,
+      "raw_position_y": 1800,
+      "locked_by": [
+        76072
+      ],
+      "unlocks": [
+        110029,
+        76059,
+        76069
+      ]
+    },
+    {
+      "id": 76084,
+      "node_type": {
+        "id": 0,
+        "type": "ACTIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101215,
+              "name": "Mind Freeze"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 47528,
+                "name": "Mind Freeze"
+              },
+              "description": "Smash the target's mind with cold, interrupting spellcasting and preventing any spell in that school from being cast for 5 sec.",
+              "cast_time": "Instant",
+              "cooldown": "15 sec cooldown"
+            }
+          }
+        }
+      ],
+      "display_row": 4,
+      "display_col": 1,
+      "raw_position_x": 2400,
+      "raw_position_y": 2400,
+      "locked_by": [
+        76045
+      ],
+      "unlocks": [
+        101708,
+        76083
+      ]
+    },
+    {
+      "id": 76044,
+      "node_type": {
+        "id": 0,
+        "type": "ACTIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101174,
+              "name": "Blinding Sleet"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 207167,
+                "name": "Blinding Sleet"
+              },
+              "description": "Targets in a cone in front of you are blinded, causing them to wander disoriented for 5 sec. Damage may cancel the effect.\r\n\r\nWhen Blinding Sleet ends, enemies are slowed by 50% for 6 sec.",
+              "cast_time": "Instant",
+              "cooldown": "1 min cooldown"
+            }
+          }
+        }
+      ],
+      "display_row": 4,
+      "display_col": 2,
+      "raw_position_x": 3000,
+      "raw_position_y": 2400,
+      "locked_by": [
+        76045
+      ],
+      "unlocks": [
+        101708
+      ]
+    },
+    {
+      "id": 76052,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101182,
+              "name": "Gloom Ward"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 391571,
+                "name": "Gloom Ward"
+              },
+              "description": "Absorbs are 15% more effective on you. ",
+              "cast_time": "Passive"
+            }
+          }
+        },
+        {
+          "rank": 2,
+          "tooltip": {
+            "talent": {
+              "id": 101182,
+              "name": "Gloom Ward"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 391571,
+                "name": "Gloom Ward"
+              },
+              "description": "Absorbs are 30% more effective on you. ",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 4,
+      "display_col": 3,
+      "raw_position_x": 3600,
+      "raw_position_y": 2400,
+      "locked_by": [
+        76045,
+        76067
+      ],
+      "unlocks": [
+        76068,
+        76066,
+        101708
+      ]
+    },
+    {
+      "id": 76074,
+      "node_type": {
+        "id": 2,
+        "type": "CHOICE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "choice_of_tooltips": [
+            {
+              "talent": {
+                "id": 101205,
+                "name": "March of Darkness"
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "id": 391546,
+                  "name": "March of Darkness"
+                },
+                "description": "Death's Advance grants an additional 25% movement speed over the first 3 sec.",
+                "cast_time": "Passive"
+              }
+            },
+            {
+              "talent": {
+                "id": 138304,
+                "name": "Wraith Walk"
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "id": 212552,
+                  "name": "Wraith Walk"
+                },
+                "description": "Embrace the power of the Shadowlands, removing all root effects and increasing your movement speed by 70% for 4 sec. Taking any action cancels the effect.\r\n\r\nWhile active, your movement speed cannot be reduced below 170%.",
+                "cast_time": "Channeled",
+                "cooldown": "1 min cooldown"
+              }
+            }
+          ]
+        }
+      ],
+      "display_row": 4,
+      "display_col": 4,
+      "raw_position_x": 4200,
+      "raw_position_y": 2400,
+      "locked_by": [
+        76067
+      ],
+      "unlocks": [
+        76068
+      ]
+    },
+    {
+      "id": 76069,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101200,
+              "name": "Unholy Momentum"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 374265,
+                "name": "Unholy Momentum"
+              },
+              "description": "Increases Haste by 2%.",
+              "cast_time": "Passive"
+            }
+          }
+        },
+        {
+          "rank": 2,
+          "tooltip": {
+            "talent": {
+              "id": 101200,
+              "name": "Unholy Momentum"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 374265,
+                "name": "Unholy Momentum"
+              },
+              "description": "Increases Haste by 4%.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 4,
+      "display_col": 5,
+      "raw_position_x": 4800,
+      "raw_position_y": 2400,
+      "locked_by": [
+        76073,
+        76067
+      ],
+      "unlocks": [
+        76075,
+        76068,
+        76061
+      ]
+    },
+    {
+      "id": 76059,
+      "node_type": {
+        "id": 0,
+        "type": "ACTIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101190,
+              "name": "Control Undead"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 111673,
+                "name": "Control Undead"
+              },
+              "description": "Dominates the target undead creature up to level 71, forcing it to do your bidding for 5 min.",
+              "cast_time": "1.5 sec cast"
+            }
+          }
+        }
+      ],
+      "display_row": 4,
+      "display_col": 6,
+      "raw_position_x": 5400,
+      "raw_position_y": 2400,
+      "locked_by": [
+        76073
+      ],
+      "unlocks": [
+        76061
+      ]
+    },
+    {
+      "id": 110029,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 141296,
+              "name": "Enfeeble"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 392566,
+                "name": "Enfeeble"
+              },
+              "description": "Your ghoul's attacks have a chance to apply Enfeeble, reducing the enemies movement speed by 30% and the damage they deal to you by 12% for 6 sec.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 4,
+      "display_col": 7,
+      "raw_position_x": 6000,
+      "raw_position_y": 2400,
+      "locked_by": [
+        76073
+      ],
+      "unlocks": [
+        76060,
+        76061
+      ]
+    },
+    {
+      "id": 76083,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101214,
+              "name": "Coldthirst"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 378848,
+                "name": "Coldthirst"
+              },
+              "description": "Successfully interrupting an enemy with Mind Freeze grants 10 Runic Power and reduces its cooldown by 3 sec.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 5,
+      "display_col": 1,
+      "raw_position_x": 2400,
+      "raw_position_y": 3000,
+      "locked_by": [
+        76084
+      ],
+      "unlocks": [
+        76085
+      ]
+    },
+    {
+      "id": 101708,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 130438,
+              "name": "Proliferating Chill"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 373930,
+                "name": "Proliferating Chill"
+              },
+              "description": "Chains of Ice affects 1 additional nearby enemy.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 5,
+      "display_col": 2,
+      "raw_position_x": 3000,
+      "raw_position_y": 3000,
+      "locked_by": [
+        76052,
+        76084,
+        76044
+      ],
+      "unlocks": [
+        76085
+      ]
+    },
+    {
+      "id": 76066,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101197,
+              "name": "Permafrost"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 207200,
+                "name": "Permafrost"
+              },
+              "description": "Your auto attack damage grants you an absorb shield equal to 50% of the damage dealt.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 5,
+      "display_col": 3,
+      "raw_position_x": 3600,
+      "raw_position_y": 3000,
+      "locked_by": [
+        76052
+      ],
+      "unlocks": [
+        110030,
+        76065,
+        76085
+      ]
+    },
+    {
+      "id": 76068,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101199,
+              "name": "Veteran of the Third War"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 48263,
+                "name": "Veteran of the Third War"
+              },
+              "description": "Stamina increased by 20%.\r\n",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 5,
+      "display_col": 4,
+      "raw_position_x": 4200,
+      "raw_position_y": 3000,
+      "locked_by": [
+        76069,
+        76052,
+        76074
+      ],
+      "unlocks": [
+        76065
+      ]
+    },
+    {
+      "id": 76075,
+      "node_type": {
+        "id": 0,
+        "type": "ACTIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101206,
+              "name": "Death Pact"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 48743,
+                "name": "Death Pact"
+              },
+              "description": "Create a death pact that heals you for 50% of your maximum health, but absorbs incoming healing equal to 30% of your max health for 15 sec.",
+              "cast_time": "Instant",
+              "cooldown": "2 min cooldown"
+            }
+          }
+        }
+      ],
+      "display_row": 5,
+      "display_col": 5,
+      "raw_position_x": 4800,
+      "raw_position_y": 3000,
+      "locked_by": [
+        76069
+      ],
+      "unlocks": [
+        110031,
+        76076,
+        76065
+      ]
+    },
+    {
+      "id": 76061,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101192,
+              "name": "Brittle"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 374504,
+                "name": "Brittle"
+              },
+              "description": "Your diseases have a chance to weaken your enemy causing your attacks against them to deal 6% increased damage for 5 sec.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 5,
+      "display_col": 6,
+      "raw_position_x": 5400,
+      "raw_position_y": 3000,
+      "locked_by": [
+        110029,
+        76069,
+        76059
+      ],
+      "unlocks": [
+        76076
+      ]
+    },
+    {
+      "id": 76060,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101191,
+              "name": "Blood Bond"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 1267028,
+                "name": "Blood Bond"
+              },
+              "description": "While you are below 50% health, your Ghoul sacrifices 4% of its maximum health to heal you for 1% of your maximum health every sec.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 5,
+      "display_col": 7,
+      "raw_position_x": 6000,
+      "raw_position_y": 3000,
+      "locked_by": [
+        110029
+      ],
+      "unlocks": [
+        76076
+      ]
+    },
+    {
+      "id": 76085,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101216,
+              "name": "Icy Talons"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 194878,
+                "name": "Icy Talons"
+              },
+              "description": "Your Runic Power spending abilities increase your melee attack speed by 6% for 10 sec, stacking up to 3 times.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 6,
+      "display_col": 2,
+      "raw_position_x": 3000,
+      "raw_position_y": 3600,
+      "locked_by": [
+        76066,
+        101708,
+        76083
+      ],
+      "unlocks": [
+        76064,
+        76086
+      ]
+    },
+    {
+      "id": 110030,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 141297,
+              "name": "Death Notes"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 1266819,
+                "name": "Death Notes"
+              },
+              "description": "Raise Ally costs 30 less Runic Power.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 6,
+      "display_col": 3,
+      "raw_position_x": 3600,
+      "raw_position_y": 3600,
+      "locked_by": [
+        76066
+      ],
+      "unlocks": [
+        76064
+      ]
+    },
+    {
+      "id": 76065,
+      "node_type": {
+        "id": 0,
+        "type": "ACTIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101196,
+              "name": "Anti-Magic Zone"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 51052,
+                "name": "Anti-Magic Zone"
+              },
+              "description": "Places an Anti-Magic Zone for 6 sec, reducing the magic damage taken by party or raid members by 15%.",
+              "cast_time": "Instant",
+              "cooldown": "4 min cooldown"
+            }
+          }
+        }
+      ],
+      "display_row": 6,
+      "display_col": 4,
+      "raw_position_x": 4200,
+      "raw_position_y": 3600,
+      "locked_by": [
+        76068,
+        76075,
+        76066
+      ],
+      "unlocks": [
+        76064,
+        76048,
+        76046
+      ]
+    },
+    {
+      "id": 110031,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 141298,
+              "name": "Death Defiance"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 1266818,
+                "name": "Death Defiance"
+              },
+              "description": "The cooldown of Death Pact is reduced by 30 sec, and you receive 50% increased healing while its healing absorb is active.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 6,
+      "display_col": 5,
+      "raw_position_x": 4800,
+      "raw_position_y": 3600,
+      "locked_by": [
+        76075
+      ],
+      "unlocks": [
+        76046
+      ]
+    },
+    {
+      "id": 76076,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101207,
+              "name": "Unholy Bond"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 374261,
+                "name": "Unholy Bond"
+              },
+              "description": "Increases the effectiveness of your Runeforge effects by 20%.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 6,
+      "display_col": 6,
+      "raw_position_x": 5400,
+      "raw_position_y": 3600,
+      "locked_by": [
+        76060,
+        76075,
+        76061
+      ],
+      "unlocks": [
+        76057,
+        76046
+      ]
+    },
+    {
+      "id": 76086,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101217,
+              "name": "Ice Prison"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 454786,
+                "name": "Ice Prison"
+              },
+              "description": "Chains of Ice now also roots enemies for 4 sec but its cooldown is increased to 12 sec.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 7,
+      "display_col": 1,
+      "raw_position_x": 2400,
+      "raw_position_y": 4200,
+      "locked_by": [
+        76085
+      ],
+      "unlocks": [
+        76087
+      ]
+    },
+    {
+      "id": 76064,
+      "node_type": {
+        "id": 2,
+        "type": "CHOICE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "choice_of_tooltips": [
+            {
+              "talent": {
+                "id": 101195,
+                "name": "Asphyxiate"
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "id": 221562,
+                  "name": "Asphyxiate"
+                },
+                "description": "Lifts the enemy target off the ground, crushing their throat with dark energy and stunning them for 5 sec.",
+                "cast_time": "Instant",
+                "cooldown": "45 sec cooldown"
+              }
+            },
+            {
+              "talent": {
+                "id": 141299,
+                "name": "Death's Reach"
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "id": 276079,
+                  "name": "Death's Reach"
+                },
+                "description": "Increases the range of Death Grip by 10 yds.\r\n\r\nKilling an enemy that yields experience or honor resets the cooldown of Death Grip.",
+                "cast_time": "Passive"
+              }
+            }
+          ]
+        }
+      ],
+      "display_row": 7,
+      "display_col": 3,
+      "raw_position_x": 3600,
+      "raw_position_y": 4200,
+      "locked_by": [
+        110030,
+        76085,
+        76065
+      ],
+      "unlocks": [
+        76078,
+        76087
+      ]
+    },
+    {
+      "id": 76048,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101178,
+              "name": "Assimilation"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 374383,
+                "name": "Assimilation"
+              },
+              "description": "The cooldown of Anti-Magic Zone is reduced by 60 sec and its duration is increased by 2 sec.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 7,
+      "display_col": 4,
+      "raw_position_x": 4200,
+      "raw_position_y": 4200,
+      "locked_by": [
+        76065
+      ],
+      "unlocks": [
+        76078
+      ]
+    },
+    {
+      "id": 76046,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101176,
+              "name": "Anti-Magic Barrier"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 205727,
+                "name": "Anti-Magic Barrier"
+              },
+              "description": "Reduces the cooldown of Anti-Magic Shell by 20 sec and increases its duration and amount absorbed by 40%.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 7,
+      "display_col": 5,
+      "raw_position_x": 4800,
+      "raw_position_y": 4200,
+      "locked_by": [
+        110031,
+        76076,
+        76065
+      ],
+      "unlocks": [
+        76058,
+        76078
+      ]
+    },
+    {
+      "id": 76057,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101188,
+              "name": "Grip of the Dead"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 273952,
+                "name": "Grip of the Dead"
+              },
+              "description": "Death and Decay reduces the movement speed of enemies within its area by 90%, decaying by 10% every sec.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 7,
+      "display_col": 7,
+      "raw_position_x": 6000,
+      "raw_position_y": 4200,
+      "locked_by": [
+        76076
+      ],
+      "unlocks": [
+        76058
+      ]
+    },
+    {
+      "id": 76087,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101218,
+              "name": "Suppression"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 374049,
+                "name": "Suppression"
+              },
+              "description": "Damage taken from area of effect attacks reduced by 3%. When suffering a loss of control effect, this bonus is increased by an additional 6% for 6 sec.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 8,
+      "display_col": 2,
+      "raw_position_x": 3000,
+      "raw_position_y": 4800,
+      "locked_by": [
+        76086,
+        76064
+      ],
+      "unlocks": [
+        76088,
+        76051
+      ]
+    },
+    {
+      "id": 76078,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101209,
+              "name": "Blood Scent"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 374030,
+                "name": "Blood Scent"
+              },
+              "description": "Increases Leech by 3%.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 8,
+      "display_col": 4,
+      "raw_position_x": 4200,
+      "raw_position_y": 4800,
+      "locked_by": [
+        76048,
+        76064,
+        76046
+      ],
+      "unlocks": [
+        76055,
+        76051
+      ]
+    },
+    {
+      "id": 76058,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101189,
+              "name": "Unholy Endurance"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 389682,
+                "name": "Unholy Endurance"
+              },
+              "description": "Increases Lichborne duration by 2 sec and reduces the cooldown by 30 sec. ",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 8,
+      "display_col": 6,
+      "raw_position_x": 5400,
+      "raw_position_y": 4800,
+      "locked_by": [
+        76057,
+        76046
+      ],
+      "unlocks": [
+        76056,
+        76055
+      ]
+    },
+    {
+      "id": 76088,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101219,
+              "name": "Osmosis"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 454835,
+                "name": "Osmosis"
+              },
+              "description": "Anti-Magic Shell increases healing received by 15%.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 9,
+      "display_col": 1,
+      "raw_position_x": 2400,
+      "raw_position_y": 5400,
+      "locked_by": [
+        76087
+      ],
+      "unlocks": [
+        76079
+      ]
+    },
+    {
+      "id": 76051,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101181,
+              "name": "Insidious Chill"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 391566,
+                "name": "Insidious Chill"
+              },
+              "description": "Your auto-attacks reduce the target's auto-attack speed by 5% for 30 sec, stacking up to 4 times.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 9,
+      "display_col": 3,
+      "raw_position_x": 3600,
+      "raw_position_y": 5400,
+      "locked_by": [
+        76078,
+        76087
+      ],
+      "unlocks": [
+        76079,
+        76080
+      ]
+    },
+    {
+      "id": 76055,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101185,
+              "name": "Runic Protection"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 454788,
+                "name": "Runic Protection"
+              },
+              "description": "Your chance to be critically struck is reduced by 3% and your Armor is increased by 6%.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 9,
+      "display_col": 5,
+      "raw_position_x": 4800,
+      "raw_position_y": 5400,
+      "locked_by": [
+        76058,
+        76078
+      ],
+      "unlocks": [
+        76054,
+        76080
+      ]
+    },
+    {
+      "id": 76056,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101186,
+              "name": "Blood Draw"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 374598,
+                "name": "Blood Draw"
+              },
+              "description": "When you fall below 30% health you drain 42 health from nearby enemies, the damage you take is reduced by 10% and your Death Strike cost is reduced by 10 for 8 sec.\r\n\r\nCan only occur every 2 min.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 9,
+      "display_col": 7,
+      "raw_position_x": 6000,
+      "raw_position_y": 5400,
+      "locked_by": [
+        76058
+      ],
+      "unlocks": [
+        76054
+      ]
+    },
+    {
+      "id": 76079,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101210,
+              "name": "Rune Mastery"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 374574,
+                "name": "Rune Mastery"
+              },
+              "description": "Consuming a Rune has a chance to increase your Strength by 3% for 8 sec.",
+              "cast_time": "Passive"
+            }
+          }
+        },
+        {
+          "rank": 2,
+          "tooltip": {
+            "talent": {
+              "id": 101210,
+              "name": "Rune Mastery"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 374574,
+                "name": "Rune Mastery"
+              },
+              "description": "Consuming a Rune has a chance to increase your Strength by 6% for 8 sec.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 10,
+      "display_col": 2,
+      "raw_position_x": 3000,
+      "raw_position_y": 6000,
+      "locked_by": [
+        76051,
+        76088
+      ],
+      "unlocks": [
+        76050,
+        102008
+      ]
+    },
+    {
+      "id": 76080,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101211,
+              "name": "Subduing Grasp"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 454822,
+                "name": "Subduing Grasp"
+              },
+              "description": "When you would pull an enemy, the damage they deal to you is reduced by 6% for 6 sec.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 10,
+      "display_col": 4,
+      "raw_position_x": 4200,
+      "raw_position_y": 6000,
+      "locked_by": [
+        76055,
+        76051
+      ],
+      "unlocks": [
+        102007,
+        76050
+      ]
+    },
+    {
+      "id": 76054,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101184,
+              "name": "Will of the Necropolis"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 206967,
+                "name": "Will of the Necropolis"
+              },
+              "description": "Damage taken below 30% Health is reduced by 20%.",
+              "cast_time": "Passive"
+            }
+          }
+        },
+        {
+          "rank": 2,
+          "tooltip": {
+            "talent": {
+              "id": 101184,
+              "name": "Will of the Necropolis"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 206967,
+                "name": "Will of the Necropolis"
+              },
+              "description": "Damage taken below 30% Health is reduced by 35%.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 10,
+      "display_col": 6,
+      "raw_position_x": 5400,
+      "raw_position_y": 6000,
+      "locked_by": [
+        76055,
+        76056
+      ],
+      "unlocks": [
+        102007,
+        76053
+      ]
+    },
+    {
+      "id": 102008,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 130847,
+              "name": "Null Magic"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 454842,
+                "name": "Null Magic"
+              },
+              "description": "Magic damage taken is reduced by 8% and the duration of harmful Magic effects against you are reduced by 35%.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 11,
+      "display_col": 1,
+      "raw_position_x": 2400,
+      "raw_position_y": 6600,
+      "locked_by": [
+        76079
+      ]
+    },
+    {
+      "id": 76050,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101180,
+              "name": "Unyielding Will"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 457574,
+                "name": "Unyielding Will"
+              },
+              "description": "Anti-Magic Shell now removes all harmful magical effects when activated, but its cooldown is increased by 20 sec.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 11,
+      "display_col": 3,
+      "raw_position_x": 3600,
+      "raw_position_y": 6600,
+      "locked_by": [
+        76080,
+        76079
+      ]
+    },
+    {
+      "id": 102007,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 130846,
+              "name": "Death's Echo"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 356367,
+                "name": "Death's Echo"
+              },
+              "description": "Death's Advance, Death and Decay, and Death Grip have 1 additional charge.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 11,
+      "display_col": 5,
+      "raw_position_x": 4800,
+      "raw_position_y": 6600,
+      "locked_by": [
+        76080,
+        76054
+      ]
+    },
+    {
+      "id": 76053,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101183,
+              "name": "Vestigial Shell"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 454851,
+                "name": "Vestigial Shell"
+              },
+              "description": "Casting Anti-Magic Shell grants 2 nearby allies a Lesser Anti-Magic Shell that Absorbs up to 148 magic damage and reduces the duration of harmful Magic effects against them by 50%. ",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 11,
+      "display_col": 7,
+      "raw_position_x": 6000,
+      "raw_position_y": 6600,
+      "locked_by": [
+        76054
+      ]
+    }
+  ],
+  "spec_talent_nodes": [
+    {
+      "id": 95062,
+      "node_type": {
+        "id": 0,
+        "type": "ACTIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 122671,
+              "name": "Reaper's Mark"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 439843,
+                "name": "Reaper's Mark"
+              },
+              "description": "Viciously slice into the soul of your enemy, dealing 81 Shadowfrost damage and applying Reaper's Mark.\r\n\r\nEach time you deal Shadow or Frost damage, add a stack of Reaper's Mark. After 12 sec or reaching 40 stacks, the mark explodes, dealing 10 damage per stack.\r\n\r\nReaper's Mark travels to an unmarked enemy nearby if the target dies.",
+              "cast_time": "Instant",
+              "cooldown": "45 sec cooldown"
+            }
+          }
+        }
+      ],
+      "display_row": 2,
+      "display_col": 10,
+      "raw_position_x": 8100,
+      "raw_position_y": 1200,
+      "unlocks": [
+        95058,
+        95036,
+        95043,
+        109735
+      ]
+    },
+    {
+      "id": 76115,
+      "node_type": {
+        "id": 0,
+        "type": "ACTIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101247,
+              "name": "Frost Strike"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 49143,
+                "name": "Frost Strike"
+              },
+              "description": "Chill your weapon with icy power and quickly strike the enemy, dealing 58 Frost damage.",
+              "cast_time": "Instant"
+            }
+          }
+        }
+      ],
+      "display_row": 2,
+      "display_col": 18,
+      "raw_position_x": 12600,
+      "raw_position_y": 1200,
+      "unlocks": [
+        76116,
+        76114
+      ]
+    },
+    {
+      "id": 95036,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 122645,
+              "name": "Wave of Souls"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 439851,
+                "name": "Wave of Souls"
+              },
+              "description": "Reaper's Mark sends forth bursts of Shadowfrost energy and back, dealing 34 Shadowfrost damage both ways to all enemies caught in its path.\r\n\r\nWave of Souls critical strikes cause enemies to take 5% increased Shadowfrost damage for 15 sec, stacking up to 2 times, and it is always a critical strike on its way back.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 3,
+      "display_col": 9,
+      "raw_position_x": 7200,
+      "raw_position_y": 1800,
+      "locked_by": [
+        95062
+      ],
+      "unlocks": [
+        95061
+      ]
+    },
+    {
+      "id": 95058,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 122667,
+              "name": "Wither Away"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 441894,
+                "name": "Wither Away"
+              },
+              "description": "Frost Fever deals its damage 75% faster, and the second scythe of Exterminate applies Frost Fever.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 3,
+      "display_col": 10,
+      "raw_position_x": 7800,
+      "raw_position_y": 1800,
+      "locked_by": [
+        95062
+      ],
+      "unlocks": [
+        95034
+      ]
+    },
+    {
+      "id": 95043,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 122652,
+              "name": "Bind in Darkness"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 440031,
+                "name": "Bind in Darkness"
+              },
+              "description": "Rime empowered Howling Blast deals 60% increased damage to its main target, and is now Shadowfrost.\r\n\r\nShadowfrost damage applies 2 stacks to Reaper's Mark and 4 stacks when it is a critical strike.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 3,
+      "display_col": 11,
+      "raw_position_x": 8400,
+      "raw_position_y": 1800,
+      "locked_by": [
+        95062
+      ],
+      "unlocks": [
+        95035
+      ]
+    },
+    {
+      "id": 109735,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 140748,
+              "name": "Frigid Resolve"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 1265859,
+                "name": "Frigid Resolve"
+              },
+              "description": "The effectiveness of Permafrost is increased by 100% and Exterminate grants Permafrost equal to 10% of the damage dealt.\r\n\r\nPermafrost\r\nYour auto attack damage grants you an absorb shield equal to 50% of the damage dealt.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 3,
+      "display_col": 12,
+      "raw_position_x": 9000,
+      "raw_position_y": 1800,
+      "locked_by": [
+        95062
+      ],
+      "unlocks": [
+        109734
+      ]
+    },
+    {
+      "id": 76116,
+      "node_type": {
+        "id": 0,
+        "type": "ACTIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101248,
+              "name": "Obliterate"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 49020,
+                "name": "Obliterate"
+              },
+              "description": "A brutal attack that deals 28 Physical and 28 Frost damage.",
+              "cast_time": "Instant"
+            }
+          }
+        }
+      ],
+      "display_row": 3,
+      "display_col": 17,
+      "raw_position_x": 12000,
+      "raw_position_y": 1800,
+      "locked_by": [
+        76115
+      ],
+      "unlocks": [
+        76117,
+        76096
+      ]
+    },
+    {
+      "id": 76114,
+      "node_type": {
+        "id": 0,
+        "type": "ACTIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101246,
+              "name": "Howling Blast"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 49184,
+                "name": "Howling Blast"
+              },
+              "description": "Blast the target with a frigid wind, dealing 15 Frost damage to that foe, and reduced damage to all other enemies within 10 yards, infecting all targets with Frost Fever.\r\n\r\n Frost Fever\r\nA disease that deals 117 Frost damage over 24 sec and has a chance to grant the Death Knight 4 Runic Power each time it deals damage.",
+              "cast_time": "Instant"
+            }
+          }
+        }
+      ],
+      "display_row": 3,
+      "display_col": 19,
+      "raw_position_x": 13200,
+      "raw_position_y": 1800,
+      "locked_by": [
+        76115
+      ],
+      "unlocks": [
+        76113,
+        76096
+      ]
+    },
+    {
+      "id": 95061,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 122670,
+              "name": "Soul Rupture"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 437161,
+                "name": "Soul Rupture"
+              },
+              "description": "When Reaper's Mark explodes, it deals 20% of the damage dealt to nearby enemies.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 4,
+      "display_col": 9,
+      "raw_position_x": 7200,
+      "raw_position_y": 2400,
+      "locked_by": [
+        95036
+      ],
+      "unlocks": [
+        95032
+      ]
+    },
+    {
+      "id": 95034,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 122643,
+              "name": "Grim Reaper"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 434905,
+                "name": "Grim Reaper"
+              },
+              "description": "Reaper's Mark initial strike grants Killing Machine.\r\n\r\nReaper's Mark explosion deals up to 30% increased damage based on your target's missing health.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 4,
+      "display_col": 10,
+      "raw_position_x": 7800,
+      "raw_position_y": 2400,
+      "locked_by": [
+        95058
+      ],
+      "unlocks": [
+        95057
+      ]
+    },
+    {
+      "id": 95035,
+      "node_type": {
+        "id": 2,
+        "type": "CHOICE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "choice_of_tooltips": [
+            {
+              "talent": {
+                "id": 122644,
+                "name": "Pact of the Deathbringer"
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "id": 440476,
+                  "name": "Pact of the Deathbringer"
+                },
+                "description": "When you suffer a damaging effect equal to 25% of your maximum health, you instantly cast Death Pact at 50% effectiveness. May only occur every 2 min.\r\n\r\nWhen a Reaper's Mark explodes, the cooldowns of this effect and Death Pact are reduced by 5 sec.",
+                "cast_time": "Passive"
+              }
+            },
+            {
+              "talent": {
+                "id": 128258,
+                "name": "Rune Carved Plates"
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "id": 440282,
+                  "name": "Rune Carved Plates"
+                },
+                "description": "Each Rune spent reduces the magic damage you take by 1.5% and each Rune generated reduces the physical damage you take by 1.5% for 5 sec, up to 5 times.",
+                "cast_time": "Passive"
+              }
+            }
+          ]
+        }
+      ],
+      "display_row": 4,
+      "display_col": 11,
+      "raw_position_x": 8400,
+      "raw_position_y": 2400,
+      "locked_by": [
+        95043
+      ],
+      "unlocks": [
+        95049
+      ]
+    },
+    {
+      "id": 109734,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 140747,
+              "name": "Deathly Blows"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 1265932,
+                "name": "Deathly Blows"
+              },
+              "description": "Death Strike damage increased by 12%.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 4,
+      "display_col": 12,
+      "raw_position_x": 9000,
+      "raw_position_y": 2400,
+      "locked_by": [
+        109735
+      ],
+      "unlocks": [
+        109733
+      ]
+    },
+    {
+      "id": 76117,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101249,
+              "name": "Killing Machine"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 51128,
+                "name": "Killing Machine"
+              },
+              "description": "Your auto attack critical strikes have a chance to make your next Obliterate deal Frost damage and critically strike, or make your next Frostscythe critically strike for 4 times the normal damage.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 4,
+      "display_col": 16,
+      "raw_position_x": 11400,
+      "raw_position_y": 2400,
+      "locked_by": [
+        76116
+      ],
+      "unlocks": [
+        76118,
+        76103
+      ]
+    },
+    {
+      "id": 76096,
+      "node_type": {
+        "id": 0,
+        "type": "ACTIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101227,
+              "name": "Empower Rune Weapon"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 47568,
+                "name": "Empower Rune Weapon"
+              },
+              "description": "Drain the will of your enemy to empower your rune weapon, dealing 91 Shadowfrost damage and reduced damage to enemies nearby, gaining 40 Runic Power, and grants you Killing Machine.",
+              "cast_time": "Instant"
+            }
+          }
+        }
+      ],
+      "display_row": 4,
+      "display_col": 18,
+      "raw_position_x": 12600,
+      "raw_position_y": 2400,
+      "locked_by": [
+        76116,
+        76114
+      ],
+      "unlocks": [
+        109258,
+        76102,
+        76103
+      ]
+    },
+    {
+      "id": 76113,
+      "node_type": {
+        "id": 0,
+        "type": "ACTIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101245,
+              "name": "Frostscythe"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 207230,
+                "name": "Frostscythe"
+              },
+              "description": "A sweeping attack that strikes all enemies in front of you for 17 Frost damage. Deals reduced damage beyond 5 targets. \r\n\r\nConsumes Killing Machine to have its critical strikes deal 4 times the normal damage.",
+              "cast_time": "Instant"
+            }
+          }
+        }
+      ],
+      "display_row": 4,
+      "display_col": 20,
+      "raw_position_x": 13800,
+      "raw_position_y": 2400,
+      "locked_by": [
+        76114
+      ],
+      "unlocks": [
+        76112,
+        76102
+      ]
+    },
+    {
+      "id": 95032,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 122641,
+              "name": "Swift and Painful"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 443560,
+                "name": "Swift and Painful"
+              },
+              "description": "If no enemies are struck by Soul Rupture, you gain 10% Strength for 8 sec.\r\n\r\nWave of Souls is 100% more effective on the main target of your Reaper's Mark.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 5,
+      "display_col": 9,
+      "raw_position_x": 7200,
+      "raw_position_y": 3000,
+      "locked_by": [
+        95061
+      ],
+      "unlocks": [
+        95068
+      ]
+    },
+    {
+      "id": 95057,
+      "node_type": {
+        "id": 2,
+        "type": "CHOICE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "choice_of_tooltips": [
+            {
+              "talent": {
+                "id": 122666,
+                "name": "Dark Talons"
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "id": 436687,
+                  "name": "Dark Talons"
+                },
+                "description": "Consuming Killing Machine or Rime has a 25% chance to grant 3 stacks of Icy Talons and increase its maximum stacks by the same amount for 6 sec.\r\n\r\nRunic Power spending abilities count as Shadowfrost while Icy Talons is active.",
+                "cast_time": "Passive"
+              }
+            },
+            {
+              "talent": {
+                "id": 133073,
+                "name": "Reaper's Onslaught"
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "id": 469870,
+                  "name": "Reaper's Onslaught"
+                },
+                "description": "Reduces the cooldown of Reaper's Mark by 15 sec, but the amount of Obliterates and Frostscythes empowered by Exterminate is reduced by 1.",
+                "cast_time": "Passive"
+              }
+            }
+          ]
+        }
+      ],
+      "display_row": 5,
+      "display_col": 10,
+      "raw_position_x": 7800,
+      "raw_position_y": 3000,
+      "locked_by": [
+        95034
+      ],
+      "unlocks": [
+        95068
+      ]
+    },
+    {
+      "id": 95049,
+      "node_type": {
+        "id": 2,
+        "type": "CHOICE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "choice_of_tooltips": [
+            {
+              "talent": {
+                "id": 122658,
+                "name": "Death's Messenger"
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "id": 437122,
+                  "name": "Death's Messenger"
+                },
+                "description": "Reduces the cooldowns of Lichborne and Raise Dead by 30 sec.",
+                "cast_time": "Passive"
+              }
+            },
+            {
+              "talent": {
+                "id": 133041,
+                "name": "Expelling Shield"
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "id": 439948,
+                  "name": "Expelling Shield"
+                },
+                "description": "When an enemy deals direct damage to your Anti-Magic Shell, their cast speed is reduced by 10% for 6 sec.",
+                "cast_time": "Passive"
+              }
+            }
+          ]
+        }
+      ],
+      "display_row": 5,
+      "display_col": 11,
+      "raw_position_x": 8400,
+      "raw_position_y": 3000,
+      "locked_by": [
+        95035
+      ],
+      "unlocks": [
+        95068
+      ]
+    },
+    {
+      "id": 109733,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 140746,
+              "name": "Echoing Fury"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 1265855,
+                "name": "Echoing Fury"
+              },
+              "description": "Reaper's Mark deals 5% increased damage.\r\n\r\nCasting Dancing Rune Weapon grants 1 stack of Exterminate with 100% first scythe and 100% second scythe effectiveness.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 5,
+      "display_col": 12,
+      "raw_position_x": 9000,
+      "raw_position_y": 3000,
+      "locked_by": [
+        109734
+      ],
+      "unlocks": [
+        95068
+      ]
+    },
+    {
+      "id": 76118,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101250,
+              "name": "Arctic Assault"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 456230,
+                "name": "Arctic Assault"
+              },
+              "description": "Consuming Killing Machine fires a Glacial Advance through your target at 60% effectiveness.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 5,
+      "display_col": 16,
+      "raw_position_x": 11400,
+      "raw_position_y": 3000,
+      "locked_by": [
+        76117
+      ],
+      "unlocks": [
+        76098,
+        76121,
+        76100
+      ]
+    },
+    {
+      "id": 76103,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101235,
+              "name": "Runic Overflow"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 316803,
+                "name": "Runic Overflow"
+              },
+              "description": "Increases Frost Strike and Glacial Advance damage by 10%.",
+              "cast_time": "Passive"
+            }
+          }
+        },
+        {
+          "rank": 2,
+          "tooltip": {
+            "talent": {
+              "id": 101235,
+              "name": "Runic Overflow"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 316803,
+                "name": "Runic Overflow"
+              },
+              "description": "Increases Frost Strike and Glacial Advance damage by 20%.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 5,
+      "display_col": 17,
+      "raw_position_x": 12000,
+      "raw_position_y": 3000,
+      "locked_by": [
+        76117,
+        76096
+      ],
+      "unlocks": [
+        76098
+      ]
+    },
+    {
+      "id": 109258,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 138148,
+              "name": "Frostbound Will"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 1238680,
+                "name": "Frostbound Will"
+              },
+              "description": "Consuming Rime reduces the cooldown of Empower Rune Weapon by 6 sec.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 5,
+      "display_col": 18,
+      "raw_position_x": 12600,
+      "raw_position_y": 3000,
+      "locked_by": [
+        76096
+      ],
+      "unlocks": [
+        101929,
+        106791,
+        76098
+      ]
+    },
+    {
+      "id": 76102,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101234,
+              "name": "Runic Command"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 376251,
+                "name": "Runic Command"
+              },
+              "description": "Increases your maximum Runic Power by 10.\r\n\r\nIncreases Rune regeneration rate by 8%.",
+              "cast_time": "Passive"
+            }
+          }
+        },
+        {
+          "rank": 2,
+          "tooltip": {
+            "talent": {
+              "id": 101234,
+              "name": "Runic Command"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 376251,
+                "name": "Runic Command"
+              },
+              "description": "Increases your maximum Runic Power by 20.\r\n\r\nIncreases Rune regeneration rate by 15%.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 5,
+      "display_col": 19,
+      "raw_position_x": 13200,
+      "raw_position_y": 3000,
+      "locked_by": [
+        76113,
+        76096
+      ],
+      "unlocks": [
+        106791
+      ]
+    },
+    {
+      "id": 76112,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101244,
+              "name": "Biting Cold"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 377056,
+                "name": "Biting Cold"
+              },
+              "description": "Remorseless Winter damage is increased by 35%. The first time Remorseless Winter deals damage to 3 different enemies, you gain Rime.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 5,
+      "display_col": 20,
+      "raw_position_x": 13800,
+      "raw_position_y": 3000,
+      "locked_by": [
+        76113
+      ],
+      "unlocks": [
+        76110,
+        76092,
+        106791
+      ]
+    },
+    {
+      "id": 95068,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 122677,
+              "name": "Exterminate"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 441378,
+                "name": "Exterminate"
+              },
+              "description": "After Reaper's Mark explodes, your next 2 Obliterates or Frostscythes cost 1 Rune and summon 2 scythes to strike your enemies.\r\n\r\nThe first scythe strikes your target for 154 Shadowfrost damage and the second scythe strikes all enemies around your target for 63 Shadowfrost damage. Deals reduced damage beyond 8 targets.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 6,
+      "display_col": 10,
+      "raw_position_x": 8100,
+      "raw_position_y": 3600,
+      "locked_by": [
+        95057,
+        95032,
+        95049,
+        109733
+      ]
+    },
+    {
+      "id": 76100,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101232,
+              "name": "Inexorable Assault"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 253593,
+                "name": "Inexorable Assault"
+              },
+              "description": "Gain Inexorable Assault every 4 sec, stacking up to 5 times.\r\n\r\nObliterate consumes up to 3 stacks, dealing an additional 9 Frost damage for each stack consumed.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 6,
+      "display_col": 15,
+      "raw_position_x": 10800,
+      "raw_position_y": 3600,
+      "locked_by": [
+        76118
+      ],
+      "unlocks": [
+        76037,
+        76121
+      ]
+    },
+    {
+      "id": 76098,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101230,
+              "name": "Frostreaper"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 1230301,
+                "name": "Frostreaper"
+              },
+              "description": "Obliterate deals 10% increased damage and has a chance to tether the souls of its target and a nearby enemy to yours.\r\n\r\nFrost Strike severs the tethers, dealing 72 Shadowfrost damage to both foes.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 6,
+      "display_col": 17,
+      "raw_position_x": 12000,
+      "raw_position_y": 3600,
+      "locked_by": [
+        76103,
+        76118,
+        109258
+      ],
+      "unlocks": [
+        76121
+      ]
+    },
+    {
+      "id": 101929,
+      "node_type": {
+        "id": 0,
+        "type": "ACTIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 130705,
+              "name": "Pillar of Frost"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 51271,
+                "name": "Pillar of Frost"
+              },
+              "description": "The power of frost increases your Strength by 20% for 12 sec.",
+              "cast_time": "Instant",
+              "cooldown": "45 sec cooldown"
+            }
+          }
+        }
+      ],
+      "display_row": 6,
+      "display_col": 18,
+      "raw_position_x": 12600,
+      "raw_position_y": 3600,
+      "locked_by": [
+        109258
+      ],
+      "unlocks": [
+        102009,
+        101931,
+        101930
+      ]
+    },
+    {
+      "id": 106791,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 136420,
+              "name": "Icy Onslaught"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 1230272,
+                "name": "Icy Onslaught"
+              },
+              "description": "Frost Strike and Glacial Advance now cause your next Frost Strike and Glacial Advance to deal 15% increased damage and cost 5 more Runic Power. \r\n\r\nThis effect stacks until the next Runic Empowerment.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 6,
+      "display_col": 19,
+      "raw_position_x": 13200,
+      "raw_position_y": 3600,
+      "locked_by": [
+        109258,
+        76112,
+        76102
+      ],
+      "unlocks": [
+        76092
+      ]
+    },
+    {
+      "id": 76110,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101242,
+              "name": "Gathering Storm"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 194912,
+                "name": "Gathering Storm"
+              },
+              "description": "Each Rune spent during Remorseless Winter increases its damage by 10%, and extends its duration by 0.5 sec.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 6,
+      "display_col": 21,
+      "raw_position_x": 14400,
+      "raw_position_y": 3600,
+      "locked_by": [
+        76112
+      ],
+      "unlocks": [
+        76109,
+        76092
+      ]
+    },
+    {
+      "id": 95066,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 122675,
+              "name": "Rider's Champion"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 444005,
+                "name": "Rider's Champion"
+              },
+              "description": "Spending Runes has a chance to call forth the aid of a Horsemen for 10 sec.\r\n\r\nMograine\r\nCasts Death and Decay at his location that follows his position and extends the duration of your diseases by 1.0 sec whenever it deals damage.\r\n\r\nWhitemane\r\nCasts Undeath on your target dealing 2 Shadowfrost damage per stack every 3 sec, for 24 sec. Each time Undeath deals damage it gains a stack. Cannot be refreshed.\r\n\r\nTrollbane\r\nCasts Chains of Ice on your target slowing their movement speed by 40% and increasing the damage they take from you by 5% for 8 sec.\r\n\r\nNazgrim\r\nWhile Nazgrim is active you gain Apocalyptic Conquest, increasing your Strength by 5%.\r\n",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 7,
+      "display_col": 10,
+      "raw_position_x": 8100,
+      "raw_position_y": 4200,
+      "unlocks": [
+        95060,
+        95067,
+        95037,
+        109741
+      ]
+    },
+    {
+      "id": 76121,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101254,
+              "name": "Murderous Efficiency"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 207061,
+                "name": "Murderous Efficiency"
+              },
+              "description": "Consuming the Killing Machine effect has a 20% chance to grant you 1 Rune.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 7,
+      "display_col": 16,
+      "raw_position_x": 11400,
+      "raw_position_y": 4200,
+      "locked_by": [
+        76118,
+        76098,
+        76100
+      ],
+      "unlocks": [
+        106790,
+        76037
+      ]
+    },
+    {
+      "id": 101931,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 130707,
+              "name": "Rage of the Frozen Champion"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 377076,
+                "name": "Rage of the Frozen Champion"
+              },
+              "description": "Frost Strike and Glacial Advance have a 15% increased chance to trigger Rime and Howling Blast generates 8 Runic Power while Rime is active.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 7,
+      "display_col": 17,
+      "raw_position_x": 12000,
+      "raw_position_y": 4200,
+      "locked_by": [
+        101929
+      ],
+      "unlocks": [
+        76101,
+        106790,
+        76106
+      ]
+    },
+    {
+      "id": 101930,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 130706,
+              "name": "Enduring Strength"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 377190,
+                "name": "Enduring Strength"
+              },
+              "description": "When Pillar of Frost expires, your Strength is increased by 8% for 6 sec. This effect lasts 2 sec longer, up to 20 sec, for each Obliterate and Frostscythe critical strike during Pillar of Frost.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 7,
+      "display_col": 18,
+      "raw_position_x": 12600,
+      "raw_position_y": 4200,
+      "locked_by": [
+        101929
+      ],
+      "unlocks": [
+        76106
+      ]
+    },
+    {
+      "id": 102009,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 130848,
+              "name": "Frozen Dominion"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 377226,
+                "name": "Frozen Dominion"
+              },
+              "description": "Pillar of Frost now summons a Remorseless Winter that lasts 4 sec longer.\r\n\r\nEach enemy Remorseless Winter damages grants you 5% Mastery, up to 26% for 15 sec.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 7,
+      "display_col": 19,
+      "raw_position_x": 13200,
+      "raw_position_y": 4200,
+      "locked_by": [
+        101929
+      ],
+      "unlocks": [
+        76105,
+        76099,
+        76106
+      ]
+    },
+    {
+      "id": 76092,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101223,
+              "name": "Frigid Executioner"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 377073,
+                "name": "Frigid Executioner"
+              },
+              "description": "Runic Empowerment has a 25% chance to refund 1 additional Rune.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 7,
+      "display_col": 20,
+      "raw_position_x": 13800,
+      "raw_position_y": 4200,
+      "locked_by": [
+        106791,
+        76110,
+        76112
+      ],
+      "unlocks": [
+        76099,
+        76109
+      ]
+    },
+    {
+      "id": 95060,
+      "node_type": {
+        "id": 2,
+        "type": "CHOICE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "choice_of_tooltips": [
+            {
+              "talent": {
+                "id": 122669,
+                "name": "On a Paler Horse"
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "id": 444008,
+                  "name": "On a Paler Horse"
+                },
+                "description": "While outdoors you are able to mount your Acherus Deathcharger in combat.",
+                "cast_time": "Passive"
+              }
+            },
+            {
+              "talent": {
+                "id": 128250,
+                "name": "Death Charge"
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "id": 444010,
+                  "name": "Death Charge"
+                },
+                "description": "Call upon your Death Charger to break free of movement impairment effects.\r\n\r\nFor 10 sec, while upon your Death Charger your movement speed is increased by 100%, you cannot be slowed below 100% of normal speed, and you are immune to forced movement effects and knockbacks.",
+                "cast_time": "Passive"
+              }
+            }
+          ]
+        }
+      ],
+      "display_row": 8,
+      "display_col": 9,
+      "raw_position_x": 7200,
+      "raw_position_y": 4800,
+      "locked_by": [
+        95066
+      ],
+      "unlocks": [
+        95047
+      ]
+    },
+    {
+      "id": 95067,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 122676,
+              "name": "Mograine's Might"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 444047,
+                "name": "Mograine's Might"
+              },
+              "description": "Your damage is increased by 5% and you gain  while inside Mograine's Death and Decay.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 8,
+      "display_col": 10,
+      "raw_position_x": 7800,
+      "raw_position_y": 4800,
+      "locked_by": [
+        95066
+      ],
+      "unlocks": [
+        95059
+      ]
+    },
+    {
+      "id": 95037,
+      "node_type": {
+        "id": 2,
+        "type": "CHOICE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "choice_of_tooltips": [
+            {
+              "talent": {
+                "id": 122646,
+                "name": "Horsemen's Aid"
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "id": 444074,
+                  "name": "Horsemen's Aid"
+                },
+                "description": "While at your aid, the Horsemen will occasionally cast Anti-Magic Shell on you and themselves at 80% effectiveness.\r\n\r\nYou may only benefit from this effect every 45 sec.",
+                "cast_time": "Passive"
+              }
+            },
+            {
+              "talent": {
+                "id": 128248,
+                "name": "Pact of the Apocalypse"
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "id": 444083,
+                  "name": "Pact of the Apocalypse"
+                },
+                "description": "When you take damage, 5% of the damage is redirected to each active horsemen.",
+                "cast_time": "Passive"
+              }
+            }
+          ]
+        }
+      ],
+      "display_row": 8,
+      "display_col": 11,
+      "raw_position_x": 8400,
+      "raw_position_y": 4800,
+      "locked_by": [
+        95066
+      ],
+      "unlocks": [
+        95063
+      ]
+    },
+    {
+      "id": 109741,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 140754,
+              "name": "Ride or Die!"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 1265959,
+                "name": "Ride or Die!"
+              },
+              "description": "Dark Transformation summons forth Whitemane for 6 sec.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 8,
+      "display_col": 12,
+      "raw_position_x": 9000,
+      "raw_position_y": 4800,
+      "locked_by": [
+        95066
+      ],
+      "unlocks": [
+        109740
+      ]
+    },
+    {
+      "id": 76037,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101167,
+              "name": "Howling Blades"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 1230223,
+                "name": "Howling Blades"
+              },
+              "description": "Rime empowered Howling Blast unleashes 2 icy blades at its target that deal 8 Frost damage and have 15% chance to grant Killing Machine.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 8,
+      "display_col": 15,
+      "raw_position_x": 10800,
+      "raw_position_y": 4800,
+      "locked_by": [
+        76100,
+        76121
+      ],
+      "unlocks": [
+        76122
+      ]
+    },
+    {
+      "id": 106790,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 136419,
+              "name": "Cryogenic Chamber"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 456237,
+                "name": "Cryogenic Chamber"
+              },
+              "description": "When Howling Blast consumes Rime, 15% of the damage it deals is gathered into the next cast of Remorseless Winter, up to 20 times.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 8,
+      "display_col": 16,
+      "raw_position_x": 11400,
+      "raw_position_y": 4800,
+      "locked_by": [
+        101931,
+        76121
+      ],
+      "unlocks": [
+        76101,
+        76122
+      ]
+    },
+    {
+      "id": 76106,
+      "node_type": {
+        "id": 0,
+        "type": "ACTIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101238,
+              "name": "Frostwyrm's Fury"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 279302,
+                "name": "Frostwyrm's Fury"
+              },
+              "description": "Summons a frostwyrm who breathes on all enemies within 40 yd in front of you, dealing 104 Frost damage, stunning enemies for 3 sec, and slowing movement speed by 50% for 10 sec.",
+              "cast_time": "Instant",
+              "cooldown": "1.5 min cooldown"
+            }
+          }
+        }
+      ],
+      "display_row": 8,
+      "display_col": 18,
+      "raw_position_x": 12600,
+      "raw_position_y": 4800,
+      "locked_by": [
+        101930,
+        102009,
+        101931
+      ],
+      "unlocks": [
+        76105,
+        76101
+      ]
+    },
+    {
+      "id": 76099,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101231,
+              "name": "Everfrost"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 376938,
+                "name": "Everfrost"
+              },
+              "description": "Rime empowered Howling Blast deals 50% increased damage to secondary targets.\r\n\r\nRemorseless Winter deals 6% increased damage to enemies it hits, stacking up to 10 times.\r\n",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 8,
+      "display_col": 20,
+      "raw_position_x": 13800,
+      "raw_position_y": 4800,
+      "locked_by": [
+        76092,
+        102009
+      ],
+      "unlocks": [
+        76105,
+        76033
+      ]
+    },
+    {
+      "id": 76109,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101241,
+              "name": "Northwinds"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 1230284,
+                "name": "Northwinds"
+              },
+              "description": "Howling Blast now hits an additional target with maximum effectiveness. \r\n\r\nRime increases Howling Blast damage done by an additional 75%.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 8,
+      "display_col": 21,
+      "raw_position_x": 14400,
+      "raw_position_y": 4800,
+      "locked_by": [
+        76110,
+        76092
+      ],
+      "unlocks": [
+        76033
+      ]
+    },
+    {
+      "id": 95047,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 122656,
+              "name": "Whitemane's Famine"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 444033,
+                "name": "Whitemane's Famine"
+              },
+              "description": "When Scourge Strike damages an enemy affected by Undeath it gains 1 stack and infects another nearby enemy.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 9,
+      "display_col": 9,
+      "raw_position_x": 7200,
+      "raw_position_y": 5400,
+      "locked_by": [
+        95060
+      ],
+      "unlocks": [
+        95044
+      ]
+    },
+    {
+      "id": 95059,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 122668,
+              "name": "Nazgrim's Conquest"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 444052,
+                "name": "Nazgrim's Conquest"
+              },
+              "description": "If an enemy dies while Nazgrim is active, the strength of Apocalyptic Conquest is increased by 3%.\r\n\r\nAdditionally, each Rune you spend increase its value by 1%.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 9,
+      "display_col": 10,
+      "raw_position_x": 7800,
+      "raw_position_y": 5400,
+      "locked_by": [
+        95067
+      ],
+      "unlocks": [
+        95042
+      ]
+    },
+    {
+      "id": 95063,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 122672,
+              "name": "Trollbane's Icy Fury"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 444097,
+                "name": "Trollbane's Icy Fury"
+              },
+              "description": "Scourge Strike shatters Trollbane's Chains of Ice when hit, dealing 36 Shadowfrost damage to nearby enemies, and slowing them by 40% for 4 sec. Deals reduced damage beyond 8 targets.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 9,
+      "display_col": 11,
+      "raw_position_x": 8400,
+      "raw_position_y": 5400,
+      "locked_by": [
+        95037
+      ],
+      "unlocks": [
+        95054
+      ]
+    },
+    {
+      "id": 109740,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 140753,
+              "name": "Let Terror Reign"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 1265949,
+                "name": "Let Terror Reign"
+              },
+              "description": "Casting Death Coil or Epidemic orders Whitemane to cast her Death Coil or Epidemic alongside you at 125% effectiveness.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 9,
+      "display_col": 12,
+      "raw_position_x": 9000,
+      "raw_position_y": 5400,
+      "locked_by": [
+        109741
+      ],
+      "unlocks": [
+        109739
+      ]
+    },
+    {
+      "id": 76122,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101255,
+              "name": "Bonegrinder"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 377098,
+                "name": "Bonegrinder"
+              },
+              "description": "Consuming Killing Machine grants 1% critical strike chance for 10 sec, stacking up to 5 times. At 5 stacks your next Killing Machine consumes the stacks and grants you 10% increased Frost damage for 10 sec.",
+              "cast_time": "Passive"
+            }
+          }
+        },
+        {
+          "rank": 2,
+          "tooltip": {
+            "talent": {
+              "id": 101255,
+              "name": "Bonegrinder"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 377098,
+                "name": "Bonegrinder"
+              },
+              "description": "Consuming Killing Machine grants 1% critical strike chance for 10 sec, stacking up to 5 times. At 5 stacks your next Killing Machine consumes the stacks and grants you 20% increased Frost damage for 10 sec.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 9,
+      "display_col": 16,
+      "raw_position_x": 11400,
+      "raw_position_y": 5400,
+      "locked_by": [
+        76037,
+        106790
+      ],
+      "unlocks": [
+        76091,
+        101933
+      ]
+    },
+    {
+      "id": 76101,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101233,
+              "name": "Smothering Offense"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 435005,
+                "name": "Smothering Offense"
+              },
+              "description": "Your auto attack damage is increased by 10%. \r\n\r\nThis amount is increased for each stack of Icy Talons you have and it can stack up to 2 additional times.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 9,
+      "display_col": 17,
+      "raw_position_x": 12000,
+      "raw_position_y": 5400,
+      "locked_by": [
+        101931,
+        76106,
+        106790
+      ],
+      "unlocks": [
+        101933
+      ]
+    },
+    {
+      "id": 76105,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101237,
+              "name": "Avalanche"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 207142,
+                "name": "Avalanche"
+              },
+              "description": "Casting Howling Blast with Rime active causes jagged icicles to fall on enemies nearby your target, applying Razorice and dealing 7 Frost damage.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 9,
+      "display_col": 19,
+      "raw_position_x": 13200,
+      "raw_position_y": 5400,
+      "locked_by": [
+        76099,
+        102009,
+        76106
+      ],
+      "unlocks": [
+        76095
+      ]
+    },
+    {
+      "id": 76033,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101163,
+              "name": "Icebreaker"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 392950,
+                "name": "Icebreaker"
+              },
+              "description": "When empowered by Rime, Howling Blast deals 30% increased damage to your primary target.",
+              "cast_time": "Passive"
+            }
+          }
+        },
+        {
+          "rank": 2,
+          "tooltip": {
+            "talent": {
+              "id": 101163,
+              "name": "Icebreaker"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 392950,
+                "name": "Icebreaker"
+              },
+              "description": "When empowered by Rime, Howling Blast deals 60% increased damage to your primary target.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 9,
+      "display_col": 20,
+      "raw_position_x": 13800,
+      "raw_position_y": 5400,
+      "locked_by": [
+        76109,
+        76099
+      ],
+      "unlocks": [
+        76108,
+        76095
+      ]
+    },
+    {
+      "id": 95044,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 122653,
+              "name": "Hungering Thirst"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 444037,
+                "name": "Hungering Thirst"
+              },
+              "description": "The damage of your diseases and Death Coil are increased by 5%.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 10,
+      "display_col": 9,
+      "raw_position_x": 7200,
+      "raw_position_y": 6000,
+      "locked_by": [
+        95047
+      ],
+      "unlocks": [
+        95041
+      ]
+    },
+    {
+      "id": 95042,
+      "node_type": {
+        "id": 2,
+        "type": "CHOICE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "choice_of_tooltips": [
+            {
+              "talent": {
+                "id": 122651,
+                "name": "Fury of the Horsemen"
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "id": 444069,
+                  "name": "Fury of the Horsemen"
+                },
+                "description": "Every 50 Runic Power you spend extends the duration of the Horsemen's aid in combat by 1 sec, up to 5 sec.",
+                "cast_time": "Passive"
+              }
+            },
+            {
+              "talent": {
+                "id": 128249,
+                "name": "A Feast of Souls"
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "id": 444072,
+                  "name": "A Feast of Souls"
+                },
+                "description": "While you have 2 or more Horsemen aiding you, your  increased damage.",
+                "cast_time": "Passive"
+              }
+            }
+          ]
+        }
+      ],
+      "display_row": 10,
+      "display_col": 10,
+      "raw_position_x": 7800,
+      "raw_position_y": 6000,
+      "locked_by": [
+        95059
+      ],
+      "unlocks": [
+        95041
+      ]
+    },
+    {
+      "id": 95054,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 122663,
+              "name": "Mawsworn Menace"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 444099,
+                "name": "Mawsworn Menace"
+              },
+              "description": "Scourge Strike deals 15% increased damage and the cooldown of your Death and Decay is reduced by 5 sec.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 10,
+      "display_col": 11,
+      "raw_position_x": 8400,
+      "raw_position_y": 6000,
+      "locked_by": [
+        95063
+      ],
+      "unlocks": [
+        95041
+      ]
+    },
+    {
+      "id": 109739,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 140752,
+              "name": "Unholy Armaments"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 1265971,
+                "name": "Unholy Armaments"
+              },
+              "description": "The abilities that Horsemen cast deal 5% increased damage..",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 10,
+      "display_col": 12,
+      "raw_position_x": 9000,
+      "raw_position_y": 6000,
+      "locked_by": [
+        109740
+      ],
+      "unlocks": [
+        95041
+      ]
+    },
+    {
+      "id": 76091,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101222,
+              "name": "Obliteration"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 281238,
+                "name": "Obliteration"
+              },
+              "description": "During Pillar of Frost, Frost Strike and Howling Blast always grant Killing Machine and have a 20% chance to generate a Rune.\r\n\r\nAdditionally during Pillar of Frost, Empower Rune Weapon causes your next Obliterate or Frostscythe to cost no Runes.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 10,
+      "display_col": 15,
+      "raw_position_x": 10800,
+      "raw_position_y": 6000,
+      "locked_by": [
+        76122
+      ],
+      "unlocks": [
+        76123
+      ]
+    },
+    {
+      "id": 101933,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 130709,
+              "name": "Icy Death Torrent"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 435010,
+                "name": "Icy Death Torrent"
+              },
+              "description": "Your auto attack critical strikes have a chance to send out a torrent of ice dealing 49 Frost damage to enemies in front of you.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 10,
+      "display_col": 17,
+      "raw_position_x": 12000,
+      "raw_position_y": 6000,
+      "locked_by": [
+        76101,
+        76122
+      ],
+      "unlocks": [
+        101932
+      ]
+    },
+    {
+      "id": 76095,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101226,
+              "name": "Shattering Blade"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 207057,
+                "name": "Shattering Blade"
+              },
+              "description": "When Frost Strike damages an enemy with 5 stacks of Razorice it will consume them to deal an additional 115% damage.\r\n\r\nFrostbane consumes the Razorice on your main target to deal an additional 300% damage.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 10,
+      "display_col": 19,
+      "raw_position_x": 13200,
+      "raw_position_y": 6000,
+      "locked_by": [
+        76105,
+        76033
+      ],
+      "unlocks": [
+        76094
+      ]
+    },
+    {
+      "id": 76108,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101240,
+              "name": "Hyperpyrexia"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 456238,
+                "name": "Hyperpyrexia"
+              },
+              "description": "Your Runic Power spending abilities have a chance to additionally deal 30% of the damage dealt over 4 sec.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 10,
+      "display_col": 21,
+      "raw_position_x": 14400,
+      "raw_position_y": 6000,
+      "locked_by": [
+        76033
+      ],
+      "unlocks": [
+        76093
+      ]
+    },
+    {
+      "id": 95041,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 122650,
+              "name": "Apocalypse Now"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 444040,
+                "name": "Apocalypse Now"
+              },
+              "description": "Army of the Dead and Frostwyrm's Fury call upon all 4 Horsemen to aid you for 20 sec.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 11,
+      "display_col": 10,
+      "raw_position_x": 8100,
+      "raw_position_y": 6600,
+      "locked_by": [
+        95042,
+        95044,
+        95054,
+        109739
+      ]
+    },
+    {
+      "id": 76123,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101256,
+              "name": "Killing Streak"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 1230153,
+                "name": "Killing Streak"
+              },
+              "description": "Obliterate and Frostscythe consume all Killing Machines to deal 25% increased critical strike damage and grant 1.5% Haste for 8 sec for each stack consumed.\r\n\r\nMultiple applications may overlap.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 11,
+      "display_col": 15,
+      "raw_position_x": 10800,
+      "raw_position_y": 6600,
+      "locked_by": [
+        76091
+      ]
+    },
+    {
+      "id": 101932,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 130708,
+              "name": "The Long Winter"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 456240,
+                "name": "The Long Winter"
+              },
+              "description": "While Pillar of Frost is active your auto-attack critical strikes increase its duration by 1 sec, up to a maximum of 4 sec.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 11,
+      "display_col": 17,
+      "raw_position_x": 12000,
+      "raw_position_y": 6600,
+      "locked_by": [
+        101933
+      ]
+    },
+    {
+      "id": 76094,
+      "node_type": {
+        "id": 1,
+        "type": "PASSIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101225,
+              "name": "Frostbane"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 455993,
+                "name": "Frostbane"
+              },
+              "description": "Each foe struck with Glacial Advance has a chance to transform your next Frost Strike into Frostbane. The chance increases with the number of Razorice stacks on the target.\r\n\r\nFrostbane\r\nStart a frozen onslaught that strikes twice, unleashing the chilling essence of winter, dealing 20 Frost damage to all enemies caught in its wake with each strike.\r\n\r\nEach enemy struck reduces the damage dealt to the next foe by 5%, down to 40%.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 11,
+      "display_col": 19,
+      "raw_position_x": 13200,
+      "raw_position_y": 6600,
+      "locked_by": [
+        76095
+      ]
+    },
+    {
+      "id": 76093,
+      "node_type": {
+        "id": 0,
+        "type": "ACTIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 101224,
+              "name": "Breath of Sindragosa"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 1249658,
+                "name": "Breath of Sindragosa"
+              },
+              "description": "Call upon Sindragosa's aid in battle for 8 sec, continuously dealing 38 Frost damage every 1 sec to enemies in a cone in front of you. Consuming Killing Machine or Rime increases the duration by 0.8 sec. Deals reduced damage to secondary targets.\r\n\r\nGrants a charge of Empower Rune Weapon at the start and 2 Runes at the end.",
+              "cast_time": "Instant",
+              "cooldown": "1.5 min cooldown"
+            }
+          }
+        }
+      ],
+      "display_row": 11,
+      "display_col": 21,
+      "raw_position_x": 14400,
+      "raw_position_y": 6600,
+      "locked_by": [
+        76108
+      ]
+    },
+    {
+      "id": 110400,
+      "node_type": {
+        "id": 0,
+        "type": "ACTIVE"
+      },
+      "ranks": [
+        {
+          "rank": 1,
+          "tooltip": {
+            "talent": {
+              "id": 141731,
+              "name": "Chosen of Frostbrood"
+            },
+            "spell_tooltip": {
+              "spell": {
+                "id": 1265632,
+                "name": "Chosen of Frostbrood"
+              },
+              "description": "Frostwyrm's Fury deals 100% increased damage to the first enemy it hits and grants you 15% Haste for 12 sec.",
+              "cast_time": "Passive"
+            }
+          }
+        }
+      ],
+      "display_row": 12,
+      "display_col": 18,
+      "raw_position_x": 12600,
+      "raw_position_y": 7350
+    }
+  ],
+  "hero_talent_trees": [
+    {
+      "id": 31,
+      "name": "San'layn",
+      "hero_talent_nodes": [
+        {
+          "id": 95033,
+          "locked_by": [
+            95064
+          ],
+          "unlocks": [
+            95045
+          ],
+          "node_type": {
+            "id": 1,
+            "type": "PASSIVE"
+          },
+          "ranks": [
+            {
+              "rank": 1,
+              "tooltip": {
+                "talent": {
+                  "key": {
+                    "href": "https://us.api.blizzard.com/data/wow/talent/122642?namespace=static-12.1.0_68914-us"
+                  },
+                  "name": "Infliction of Sorrow",
+                  "id": 122642
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "key": {
+                      "href": "https://us.api.blizzard.com/data/wow/spell/434143?namespace=static-12.1.0_68914-us"
+                    },
+                    "name": "Infliction of Sorrow",
+                    "id": 434143
+                  },
+                  "description": "When Vampiric Strike damages an enemy affected by your plagues, it extends the duration of the plagues by 3.0 sec, and deals 10% of the remaining damage to the enemy.",
+                  "cast_time": "Passive"
+                }
+              }
+            }
+          ],
+          "display_row": 4,
+          "display_col": 21,
+          "raw_position_x": 14700,
+          "raw_position_y": 2400
+        },
+        {
+          "id": 95040,
+          "locked_by": [
+            95065
+          ],
+          "unlocks": [
+            95053
+          ],
+          "node_type": {
+            "id": 1,
+            "type": "PASSIVE"
+          },
+          "ranks": [
+            {
+              "rank": 1,
+              "tooltip": {
+                "talent": {
+                  "key": {
+                    "href": "https://us.api.blizzard.com/data/wow/talent/122649?namespace=static-12.1.0_68914-us"
+                  },
+                  "name": "Incite Terror",
+                  "id": 122649
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "key": {
+                      "href": "https://us.api.blizzard.com/data/wow/spell/434151?namespace=static-12.1.0_68914-us"
+                    },
+                    "name": "Incite Terror",
+                    "id": 434151
+                  },
+                  "description": "Vampiric Strike and Scourge Strike cause your targets to take 1% increased Shadow damage, up to 5% for 15 sec.\r\n\r\nVampiric Strike benefits from Incite Terror at 400% effectiveness.",
+                  "cast_time": "Passive"
+                }
+              }
+            }
+          ],
+          "display_row": 5,
+          "display_col": 22,
+          "raw_position_x": 15300,
+          "raw_position_y": 3000
+        },
+        {
+          "id": 95045,
+          "locked_by": [
+            95033
+          ],
+          "unlocks": [
+            95053
+          ],
+          "node_type": {
+            "id": 1,
+            "type": "PASSIVE"
+          },
+          "ranks": [
+            {
+              "rank": 1,
+              "tooltip": {
+                "talent": {
+                  "key": {
+                    "href": "https://us.api.blizzard.com/data/wow/talent/122654?namespace=static-12.1.0_68914-us"
+                  },
+                  "name": "Inevitable",
+                  "id": 122654
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "key": {
+                      "href": "https://us.api.blizzard.com/data/wow/spell/1280658?namespace=static-12.1.0_68914-us"
+                    },
+                    "name": "Inevitable",
+                    "id": 1280658
+                  },
+                  "description": "Your plagues deal up to 30% increased damage based on the target's missing health.",
+                  "cast_time": "Passive"
+                }
+              }
+            }
+          ],
+          "display_row": 5,
+          "display_col": 21,
+          "raw_position_x": 14700,
+          "raw_position_y": 3000
+        },
+        {
+          "id": 95046,
+          "locked_by": [
+            95056
+          ],
+          "unlocks": [
+            95055
+          ],
+          "node_type": {
+            "id": 1,
+            "type": "PASSIVE"
+          },
+          "ranks": [
+            {
+              "rank": 1,
+              "tooltip": {
+                "talent": {
+                  "key": {
+                    "href": "https://us.api.blizzard.com/data/wow/talent/122655?namespace=static-12.1.0_68914-us"
+                  },
+                  "name": "The Blood is Life",
+                  "id": 122655
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "key": {
+                      "href": "https://us.api.blizzard.com/data/wow/spell/434260?namespace=static-12.1.0_68914-us"
+                    },
+                    "name": "The Blood is Life",
+                    "id": 434260
+                  },
+                  "description": "Dark Transformation summons a Blood Beast to attack your enemy for 10 sec.\r\n\r\nEach time the Blood Beast attacks, it stores a portion of the damage dealt. When the Blood Beast dies, it explodes, dealing 15% of the damage accumulated to nearby enemies and healing the Death Knight for the same amount. Deals reduced damage beyond 8 targets.",
+                  "cast_time": "Passive"
+                }
+              }
+            }
+          ],
+          "display_row": 4,
+          "display_col": 23,
+          "raw_position_x": 15900,
+          "raw_position_y": 2400
+        },
+        {
+          "id": 95048,
+          "locked_by": [
+            95051
+          ],
+          "unlocks": [
+            95065
+          ],
+          "node_type": {
+            "id": 2,
+            "type": "CHOICE"
+          },
+          "ranks": [
+            {
+              "rank": 1,
+              "choice_of_tooltips": [
+                {
+                  "talent": {
+                    "key": {
+                      "href": "https://us.api.blizzard.com/data/wow/talent/122657?namespace=static-12.1.0_68914-us"
+                    },
+                    "name": "Blood-Soaked Ground",
+                    "id": 122657
+                  },
+                  "spell_tooltip": {
+                    "spell": {
+                      "key": {
+                        "href": "https://us.api.blizzard.com/data/wow/spell/434033?namespace=static-12.1.0_68914-us"
+                      },
+                      "name": "Blood-Soaked Ground",
+                      "id": 434033
+                    },
+                    "description": "While you are within your Death and Decay, your physical damage taken is reduced by 8% and your chance to gain Vampiric Strike is increased by 5%.",
+                    "cast_time": "Passive"
+                  }
+                },
+                {
+                  "talent": {
+                    "key": {
+                      "href": "https://us.api.blizzard.com/data/wow/talent/141599?namespace=static-12.1.0_68914-us"
+                    },
+                    "name": "Desecrate",
+                    "id": 141599
+                  },
+                  "spell_tooltip": {
+                    "spell": {
+                      "key": {
+                        "href": "https://us.api.blizzard.com/data/wow/spell/1234559?namespace=static-12.1.0_68914-us"
+                      },
+                      "name": "Desecrate",
+                      "id": 1234559
+                    },
+                    "description": "Death and Decay deals its damage 100% faster.",
+                    "cast_time": "Passive"
+                  }
+                }
+              ]
+            }
+          ],
+          "display_row": 3,
+          "display_col": 22,
+          "raw_position_x": 15300,
+          "raw_position_y": 1800
+        },
+        {
+          "id": 95051,
+          "unlocks": [
+            95064,
+            95048,
+            95056,
+            109737
+          ],
+          "node_type": {
+            "id": 1,
+            "type": "PASSIVE"
+          },
+          "ranks": [
+            {
+              "rank": 1,
+              "tooltip": {
+                "talent": {
+                  "key": {
+                    "href": "https://us.api.blizzard.com/data/wow/talent/122660?namespace=static-12.1.0_68914-us"
+                  },
+                  "name": "Vampiric Strike",
+                  "id": 122660
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "key": {
+                      "href": "https://us.api.blizzard.com/data/wow/spell/433901?namespace=static-12.1.0_68914-us"
+                    },
+                    "name": "Vampiric Strike",
+                    "id": 433901
+                  },
+                  "description": "Your Death Coil and Death Strike have a 25% chance to make your next Scourge Strike become Vampiric Strike.\r\n\r\nVampiric Strike heals you for 2% of your maximum health and grants you Essence of the Blood Queen, increasing your Haste by 1.0%, up to 5.0% for 20 sec.\r\n",
+                  "cast_time": "Passive"
+                }
+              },
+              "default_points": 1
+            }
+          ],
+          "display_row": 2,
+          "display_col": 23,
+          "raw_position_x": 15600,
+          "raw_position_y": 1200
+        },
+        {
+          "id": 95053,
+          "locked_by": [
+            95040,
+            95045,
+            95055,
+            109736
+          ],
+          "node_type": {
+            "id": 1,
+            "type": "PASSIVE"
+          },
+          "ranks": [
+            {
+              "rank": 1,
+              "tooltip": {
+                "talent": {
+                  "key": {
+                    "href": "https://us.api.blizzard.com/data/wow/talent/122662?namespace=static-12.1.0_68914-us"
+                  },
+                  "name": "Gift of the San'layn",
+                  "id": 122662
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "key": {
+                      "href": "https://us.api.blizzard.com/data/wow/spell/434152?namespace=static-12.1.0_68914-us"
+                    },
+                    "name": "Gift of the San'layn",
+                    "id": 434152
+                  },
+                  "description": "While Dark Transformation is active you gain Gift of the San'layn.\r\n\r\nGift of the San'layn increases the effectiveness of your Essence of the Blood Queen by 200%, and Vampiric Strike replaces your Scourge Strike for the duration.\r\n",
+                  "cast_time": "Passive"
+                }
+              }
+            }
+          ],
+          "display_row": 6,
+          "display_col": 23,
+          "raw_position_x": 15600,
+          "raw_position_y": 3600
+        },
+        {
+          "id": 95055,
+          "locked_by": [
+            95046
+          ],
+          "unlocks": [
+            95053
+          ],
+          "node_type": {
+            "id": 2,
+            "type": "CHOICE"
+          },
+          "ranks": [
+            {
+              "rank": 1,
+              "choice_of_tooltips": [
+                {
+                  "talent": {
+                    "key": {
+                      "href": "https://us.api.blizzard.com/data/wow/talent/122664?namespace=static-12.1.0_68914-us"
+                    },
+                    "name": "Pact of the San'layn",
+                    "id": 122664
+                  },
+                  "spell_tooltip": {
+                    "spell": {
+                      "key": {
+                        "href": "https://us.api.blizzard.com/data/wow/spell/434261?namespace=static-12.1.0_68914-us"
+                      },
+                      "name": "Pact of the San'layn",
+                      "id": 434261
+                    },
+                    "description": "You store 10% of all Shadow damage dealt into your Blood Beast to explode for additional damage when it expires.",
+                    "cast_time": "Passive"
+                  }
+                },
+                {
+                  "talent": {
+                    "key": {
+                      "href": "https://us.api.blizzard.com/data/wow/talent/122905?namespace=static-12.1.0_68914-us"
+                    },
+                    "name": "Sanguine Scent",
+                    "id": 122905
+                  },
+                  "spell_tooltip": {
+                    "spell": {
+                      "key": {
+                        "href": "https://us.api.blizzard.com/data/wow/spell/434263?namespace=static-12.1.0_68914-us"
+                      },
+                      "name": "Sanguine Scent",
+                      "id": 434263
+                    },
+                    "description": "Your Death Coil and Death Strike have a 15% increased chance to trigger Vampiric Strike when damaging enemies below 35% health.",
+                    "cast_time": "Passive"
+                  }
+                }
+              ]
+            }
+          ],
+          "display_row": 5,
+          "display_col": 23,
+          "raw_position_x": 15900,
+          "raw_position_y": 3000
+        },
+        {
+          "id": 95056,
+          "locked_by": [
+            95051
+          ],
+          "unlocks": [
+            95046
+          ],
+          "node_type": {
+            "id": 2,
+            "type": "CHOICE"
+          },
+          "ranks": [
+            {
+              "rank": 1,
+              "choice_of_tooltips": [
+                {
+                  "talent": {
+                    "key": {
+                      "href": "https://us.api.blizzard.com/data/wow/talent/122665?namespace=static-12.1.0_68914-us"
+                    },
+                    "name": "Vampiric Aura",
+                    "id": 122665
+                  },
+                  "spell_tooltip": {
+                    "spell": {
+                      "key": {
+                        "href": "https://us.api.blizzard.com/data/wow/spell/434100?namespace=static-12.1.0_68914-us"
+                      },
+                      "name": "Vampiric Aura",
+                      "id": 434100
+                    },
+                    "description": "Your Leech is increased by 2%.\r\n\r\nWhile Lichborne is active, the Leech bonus of this effect is increased by 100%, and it affects 4 allies within 12 yds. ",
+                    "cast_time": "Passive"
+                  }
+                },
+                {
+                  "talent": {
+                    "key": {
+                      "href": "https://us.api.blizzard.com/data/wow/talent/122903?namespace=static-12.1.0_68914-us"
+                    },
+                    "name": "Bloody Fortitude",
+                    "id": 122903
+                  },
+                  "spell_tooltip": {
+                    "spell": {
+                      "key": {
+                        "href": "https://us.api.blizzard.com/data/wow/spell/434136?namespace=static-12.1.0_68914-us"
+                      },
+                      "name": "Bloody Fortitude",
+                      "id": 434136
+                    },
+                    "description": "Icebound Fortitude reduces all damage you take by up to an additional 20% based on your missing health.\r\n\r\nKilling an enemy that yields experience or honor reduces the cooldown of Icebound Fortitude by 3 sec.",
+                    "cast_time": "Passive"
+                  }
+                }
+              ]
+            }
+          ],
+          "display_row": 3,
+          "display_col": 23,
+          "raw_position_x": 15900,
+          "raw_position_y": 1800
+        },
+        {
+          "id": 95064,
+          "locked_by": [
+            95051
+          ],
+          "unlocks": [
+            95033
+          ],
+          "node_type": {
+            "id": 2,
+            "type": "CHOICE"
+          },
+          "ranks": [
+            {
+              "rank": 1,
+              "choice_of_tooltips": [
+                {
+                  "talent": {
+                    "key": {
+                      "href": "https://us.api.blizzard.com/data/wow/talent/122673?namespace=static-12.1.0_68914-us"
+                    },
+                    "name": "Newly Turned",
+                    "id": 122673
+                  },
+                  "spell_tooltip": {
+                    "spell": {
+                      "key": {
+                        "href": "https://us.api.blizzard.com/data/wow/spell/433934?namespace=static-12.1.0_68914-us"
+                      },
+                      "name": "Newly Turned",
+                      "id": 433934
+                    },
+                    "description": "Raise Ally revives players at full health and grants you and your ally an absorb shield equal to 20% of your maximum health.",
+                    "cast_time": "Passive"
+                  }
+                },
+                {
+                  "talent": {
+                    "key": {
+                      "href": "https://us.api.blizzard.com/data/wow/talent/122904?namespace=static-12.1.0_68914-us"
+                    },
+                    "name": "Vampiric Speed",
+                    "id": 122904
+                  },
+                  "spell_tooltip": {
+                    "spell": {
+                      "key": {
+                        "href": "https://us.api.blizzard.com/data/wow/spell/434028?namespace=static-12.1.0_68914-us"
+                      },
+                      "name": "Vampiric Speed",
+                      "id": 434028
+                    },
+                    "description": "Death's Advance and Wraith Walk movement speed bonuses are increased by 10%.\r\n\r\nActivating Death's Advance or Wraith Walk increases 4 nearby allies movement speed by 20% for 5 sec.",
+                    "cast_time": "Passive"
+                  }
+                }
+              ]
+            }
+          ],
+          "display_row": 3,
+          "display_col": 21,
+          "raw_position_x": 14700,
+          "raw_position_y": 1800
+        },
+        {
+          "id": 95065,
+          "locked_by": [
+            95048
+          ],
+          "unlocks": [
+            95040
+          ],
+          "node_type": {
+            "id": 1,
+            "type": "PASSIVE"
+          },
+          "ranks": [
+            {
+              "rank": 1,
+              "tooltip": {
+                "talent": {
+                  "key": {
+                    "href": "https://us.api.blizzard.com/data/wow/talent/122674?namespace=static-12.1.0_68914-us"
+                  },
+                  "name": "Frenzied Bloodthirst",
+                  "id": 122674
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "key": {
+                      "href": "https://us.api.blizzard.com/data/wow/spell/434075?namespace=static-12.1.0_68914-us"
+                    },
+                    "name": "Frenzied Bloodthirst",
+                    "id": 434075
+                  },
+                  "description": "Essence of the Blood Queen stacks 2 additional times and increases the damage of your Death Coil and Death Strike by 5%, and Epidemic by 5% per stack.",
+                  "cast_time": "Passive"
+                }
+              }
+            }
+          ],
+          "display_row": 4,
+          "display_col": 22,
+          "raw_position_x": 15300,
+          "raw_position_y": 2400
+        },
+        {
+          "id": 109736,
+          "locked_by": [
+            109738
+          ],
+          "unlocks": [
+            95053
+          ],
+          "node_type": {
+            "id": 1,
+            "type": "PASSIVE"
+          },
+          "ranks": [
+            {
+              "rank": 1,
+              "tooltip": {
+                "talent": {
+                  "key": {
+                    "href": "https://us.api.blizzard.com/data/wow/talent/140749?namespace=static-12.1.0_68914-us"
+                  },
+                  "name": "Transfusion",
+                  "id": 140749
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "key": {
+                      "href": "https://us.api.blizzard.com/data/wow/spell/1265574?namespace=static-12.1.0_68914-us"
+                    },
+                    "name": "Transfusion",
+                    "id": 1265574
+                  },
+                  "description": "Vampiric Strike increases the damage of your Dancing Rune Weapons by 20% for 8 sec.\r\n\r\nMultiple applications may overlap.",
+                  "cast_time": "Passive"
+                }
+              }
+            }
+          ],
+          "display_row": 5,
+          "display_col": 24,
+          "raw_position_x": 16500,
+          "raw_position_y": 3000
+        },
+        {
+          "id": 109737,
+          "locked_by": [
+            95051
+          ],
+          "unlocks": [
+            109738
+          ],
+          "node_type": {
+            "id": 1,
+            "type": "PASSIVE"
+          },
+          "ranks": [
+            {
+              "rank": 1,
+              "tooltip": {
+                "talent": {
+                  "key": {
+                    "href": "https://us.api.blizzard.com/data/wow/talent/140750?namespace=static-12.1.0_68914-us"
+                  },
+                  "name": "Thrill of Blood",
+                  "id": 140750
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "key": {
+                      "href": "https://us.api.blizzard.com/data/wow/spell/1265547?namespace=static-12.1.0_68914-us"
+                    },
+                    "name": "Thrill of Blood",
+                    "id": 1265547
+                  },
+                  "description": "Essence of the Blood Queen additionally increases your Mastery by 1.0% per stack.\r\n\r\nBlood Plague deals 5% increased damage.",
+                  "cast_time": "Passive"
+                }
+              }
+            }
+          ],
+          "display_row": 3,
+          "display_col": 24,
+          "raw_position_x": 16500,
+          "raw_position_y": 1800
+        },
+        {
+          "id": 109738,
+          "locked_by": [
+            109737
+          ],
+          "unlocks": [
+            109736
+          ],
+          "node_type": {
+            "id": 1,
+            "type": "PASSIVE"
+          },
+          "ranks": [
+            {
+              "rank": 1,
+              "tooltip": {
+                "talent": {
+                  "key": {
+                    "href": "https://us.api.blizzard.com/data/wow/talent/140751?namespace=static-12.1.0_68914-us"
+                  },
+                  "name": "Visceral Strength",
+                  "id": 140751
+                },
+                "spell_tooltip": {
+                  "spell": {
+                    "key": {
+                      "href": "https://us.api.blizzard.com/data/wow/spell/434157?namespace=static-12.1.0_68914-us"
+                    },
+                    "name": "Visceral Strength",
+                    "id": 434157
+                  },
+                  "description": "When Sudden Doom is consumed, you gain 4% Strength for 5 sec.",
+                  "cast_time": "Passive"
+                }
+              }
+            }
+          ],
+          "display_row": 4,
+          "display_col": 24,
+          "raw_position_x": 16500,
+          "raw_position_y": 2400
+        }
+      ]
+    }
+  ]
+}

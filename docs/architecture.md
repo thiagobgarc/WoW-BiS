@@ -1,0 +1,1028 @@
+# Mythos Mobile — Architecture
+
+Status: Phase 5 complete (2026-09-07) — the monorepo move, `packages/core`,
+`packages/api-contract`, `packages/api-client`, the `/api/v1` routes, the
+`apps/mobile` Expo scaffold and the search + roster screens described below
+are implemented, not just planned; see the git history for the exact commits. Verified against the `worldofwarcraft` repo as of
+2026-09-03 (Astro 7.2, React 19.2, Zod 4.4, `astro check`/`tsc` clean on
+that date) and re-verified against each phase's actual implementation.
+
+**Scope note — what has and hasn't moved.** Section 1's table describes the
+full target end state. Phase 2 moved `bis/` (types, `compareGear`,
+`deriveActionGroups`), `talents/` (types, `diffTalents`), `realm/`
+(`realmSlug`), `utils/` (`classColors`, `itemQuality`, `format`,
+`sourceLabel`), and the minimal `character` types those pure functions
+needed. Phase 3 moved the rest of what crosses the API boundary:
+`meta/types.ts`, the talent-tree structural types (`DomainTalentTree` and
+friends) and a new `progression/` module (`DomainRaidProgress`,
+`DomainMythicPlusProfile`, `RAID_DIFFICULTIES`). All of it is type-only —
+the mappers that produce these shapes from Blizzard's raw responses stay in
+`apps/web`, and `domain.ts` re-exports everything so no call site changed.
+
+Phase 3 also converted these shapes to Zod-first (schema + `z.infer`)
+rather than hand-written interfaces. They *are* the `/v1` payload shapes, so
+`packages/api-contract` composes its response schemas from them instead of
+maintaining a parallel copy that could silently drift.
+
+Two things this note previously listed as Phase 3 work are deliberately
+**not** done, because implementing Phase 3 showed neither has a consumer:
+
+- **The season config type.** `/v1/meta` exposes three scalar season fields
+  (`id`, `displayName`, `raidName`), not the config object, and
+  `deriveActionGroups` already takes the narrow `SeasonSlots` interface
+  `packages/core` defines itself. Moving the full `SeasonConfig` type would
+  put season structure into core with nothing importing it.
+- **`packages/data`.** The seed JSON stays at `apps/web/data`. `/v1/bis` and
+  `/v1/meta` serve it over HTTP from `apps/web`, which reads it in-process;
+  no other package needs the files, and mobile is forbidden from bundling
+  season data at all (Section 5). Promoting it to a package would mean
+  reworking the `process.cwd()`-relative loaders for no consumer.
+
+Revisit either if something actually needs them.
+
+## 0. Corrections to the brief
+
+The build prompt this document is based on was accurate about the repo's shape
+in most respects, but out of date in three ways worth stating up front, because
+they change the API surface and the bounded-context list below:
+
+1. **`meta` is a real, independent feature**, not covered anywhere in the
+   original prompt. `src/pages/meta.astro` and
+   `src/pages/meta/[class]/[spec].astro` serve a tier list (`data/meta/{season}/{mythic-plus,raid}-tier-list.json`, schema in `src/lib/meta/types.ts`) and a per-spec
+   "recommended build" page that composes `getSpecTalentTree` (Blizzard's spec
+   talent tree, keyed by spec id — no character required) with
+   `getRecommendedBuild`/`getRaidRecommendedBuild` and the tier badge. This is
+   browsable with **no character lookup at all** — it's the "what's good right
+   now" surface, structurally independent of the `character` context.
+2. **`progression` (raid + Mythic+ tabs) is a real, separate composition**,
+   not part of `getFullCharacter`. `getCharacterProgression.ts` calls three
+   more Blizzard endpoints (raid encounters, M+ profile index, M+ season
+   detail) and is composed into the character page alongside gear/BiS/talents.
+   It has its own domain types (`DomainRaidProgress`,
+   `DomainMythicPlusProfile`) and its own components
+   (`RaidProgressionPanel`, `MythicPlusPanel`). The mobile character screen
+   and the `/v1/character/...` payload both need to account for it.
+3. **A rate limiter and an error envelope already exist** —
+   `src/lib/http/rateLimit.ts` (cache-backed fixed window, already used on
+   `/api/character`, `/api/character/refresh`, `/api/realms`, and the
+   character page itself) and `src/lib/http/errorResponse.ts`
+   (`toApiError()`, mapping the five typed Blizzard/domain errors to
+   `{ error, message }`). The mobile API reuses both rather than adding
+   `@upstash/ratelimit` as a new dependency or hand-rolling a new envelope —
+   `toApiError` is extended (Section titled "Error envelope" in
+   `api-contract.md`), not replaced.
+
+Everything else in the original brief — the layering stance, the DDD
+rejection of event sourcing/CQRS, the pure-domain module list, the "one round
+trip" API instinct — held up against the code and is carried forward below.
+
+## 1. What's actually shared vs. server-only (verified)
+
+| Module | Shared verbatim into `packages/core`? | Notes |
+|---|---|---|
+| `src/lib/bis/compareGear.ts`, `deriveActionGroups.ts`, `types.ts` | Yes | Zero I/O, confirmed no imports outside `@/lib/blizzard/domain` (types only) and `./types`. |
+| `src/lib/talents/diffTalents.ts`, `types.ts` | Yes | Pure. `getRecommendedBuild.ts`/`loadRecommended.ts` are **not** pure (`fs` reads via `loadSeedFile`-style loaders) — those stay server-side; only the Zod schemas in `types.ts` move. |
+| `src/lib/blizzard/domain.ts` | **Types only** — mappers stay server-side | Corrected from an earlier draft of this document, which said the mapper functions (`mapProfile`, `mapEquipment`, `mapStatistics`, `mapTalentTree`, `mapTalentSelections`, `mapRaidProgress`, `mapMythicPlusProfile`) would move too. They can't: every one of them takes an already-parsed Blizzard shape (`schemas.ts` types) as input, and `schemas.ts` is large, Blizzard-specific, and explicitly server-only per this same table. Only the *output* types move — `EquipmentSlot`, `DomainItem`, `EquipmentBySlot`, `TalentSelection`, `DomainCharacter`, `SecondaryStats` in Phase 2, then `DomainTalentTree`/`DomainRaidProgress`/`DomainMythicPlusProfile` and friends in Phase 3 (into `core/talents` and the new `core/progression`). `domain.ts` re-exports all of them, so its existing consumers are unaffected, and it keeps the mappers. Mobile never sees a raw Blizzard shape; it only ever sees these already-mapped types, which is what the `/v1` API returns. This is what the original build prompt said before Phase 1 introduced the error. |
+| `src/lib/season/seasonConfig.ts` | **Values via `/v1/meta`; the type stays in `apps/web`** | See Section 5's "no hardcoded season" rule — the mobile app fetches season data from `/v1/meta` / `/v1/bis/:season`, never from a compiled-in copy. An earlier draft also had the *type* moving so `packages/core` could type against it; Phase 3 found nothing that needs it (`deriveActionGroups` defines its own narrow `SeasonSlots`, and `/v1/meta` exposes three scalar fields, not the config object), so it stays put. See Section 0. |
+| `src/lib/realmSlug.ts` | Yes | 19 unit tests move with it. |
+| `src/lib/meta/types.ts` (`MetaTierListSchema` etc.) | Yes (Phase 3) | Pure Zod schema, same pattern as `bis/types.ts`. `MetaTierSchema` is part of the `/v1/character/...` response, which is what finally pulled it across; `apps/web` keeps a re-export shim at `@/lib/meta/types` so its nine consumers were untouched. |
+| `src/lib/utils/classColors.ts`, `itemQuality.ts`, `format.ts` (`timeAgo`), `sourceLabel.ts` | Yes | Pure formatters/lookup tables the original brief already called out. |
+| `src/lib/blizzard/client.ts`, `auth.ts`, `schemas.ts`, `getFullCharacter.ts`, `getCharacterTalents.ts`, `getCharacterProgression.ts`, `getSpecTalentTree.ts`, `mock.ts`, `mockRealms.ts` | **No — server only** | OAuth, raw Blizzard schemas, and every "compose Blizzard calls" function stay in `apps/web`. These become the implementation behind `/v1` routes, not code mobile imports. |
+| `src/lib/cache/cache.ts`, `src/lib/db/*`, `src/lib/http/rateLimit.ts`, `errorResponse.ts` | **No — server only** | Mobile gets its own device-side persistence (Section 6.3); the rate limiter and error mapper are server infrastructure the `/v1` routes call into, same as today's `/api/*` routes do. |
+| `src/lib/bis/getBisList.ts`, `src/lib/talents/getRecommendedBuild.ts`, `src/lib/meta/getTierList.ts`, `loadTierList.ts`, `specBySlug.ts` | **No — server only** | Each does `fs`/DB reads. They become the implementation behind `/v1/bis`, `/v1/talents`, `/v1/meta/*`. |
+
+## 2. Layering
+
+```
+Presentation   (apps/mobile: screens, RN components — no business logic)
+      ↓ depends on
+Application    (apps/mobile: src/features/<context>/model — view-model
+                derivation, composes packages/core functions into screen data;
+                src/features/<context>/api — TanStack Query hooks over
+                @mythos/api-client)
+      ↓ depends on
+Domain         (packages/core: compareGear, deriveActionGroups, diffTalents,
+                domain types, seasonConfig shape, realmSlug, formatters —
+                zero I/O, zero React, zero fetch)
+      ↑ implemented by
+Infrastructure (apps/mobile/src/lib: MMKV persistence, TanStack Query
+                persister, deep-link handling, Sentry init, the concrete
+                fetch used by @mythos/api-client; apps/web/src/lib: the
+                existing Blizzard client/cache/db, now also backing /v1)
+```
+
+Dependency direction is inward: Presentation → Application → Domain never
+reverses, and Infrastructure depends on Domain-defined interfaces (e.g.
+`api-client` is typed against `api-contract` schemas, not the other way
+round). This isn't a new pattern for this codebase — `compareGear`/
+`deriveActionGroups`/`diffTalents` already are the domain layer, they're
+just not packaged as one yet. Phase 2 packages what already exists; it does
+not invent a new architecture for the domain logic.
+
+## 3. Bounded contexts (DDD, lightly)
+
+Eight contexts, expanded from the brief's six to reflect what the code
+actually does (additions bolded):
+
+| Context | Owns | Write model? |
+|---|---|---|
+| `character` | Identity + equipped-gear snapshot (`DomainCharacter`, `EquipmentBySlot`, `SecondaryStats`) | No — read-only projection of Blizzard state |
+| `bis` | BiS targets, `compareGear` output, severity | No |
+| `talents` | Talent tree structure, a character's current build, the diff against a recommended build | No |
+| **`progression`** | Raid difficulty/boss-kill state and Mythic+ best-run state for the current season | No |
+| **`meta`** | The hand-authored tier list and per-spec recommended builds, independent of any character | No |
+| `season` | `seasonConfig` — the single source of season-scoped reference data | No (config, not user data) |
+| `roster` | The user's own recent/saved characters | **Yes — the only context with a real write model**, and it's entirely device-local (Section 4's "no user accounts" call) |
+| `catalog` | Realm index, item media/icon URLs | No |
+
+`progression` and `meta` are split out from `character` because they compose
+from genuinely different Blizzard endpoints, have their own domain types, and
+— for `meta` specifically — don't require a character at all. Keeping them
+distinct keeps the `/v1` endpoint table honest about what each request
+actually needs to fetch.
+
+## 4. Rejected alternatives (explicit, not omissions)
+
+- **Event sourcing — rejected.** Equipped gear, raid progress, and M+ rating
+  are Blizzard's state, not ours; every screen is a pure derivation from a
+  timestamped snapshot (`FullCharacter.fetchedAt`/`.stale`,
+  `CharacterProgression`). There is no user-authored history to source events
+  from. An event store here has no consumer — it would be ceremony.
+- **CQRS as a formal pattern — rejected, keep the instinct.** One real write
+  model (`roster`, device-local) and everything else is a read projection.
+  Splitting reads/writes into separate models for a single local writer is a
+  diagram, not an architecture.
+- **User accounts / server-side auth — rejected.** Nothing in the product
+  needs cross-device identity. Recent/favorite characters are device-local
+  (Zustand + MMKV, not a server write). This keeps the App Store privacy
+  declaration close to "no data collected" and removes an entire class of
+  work (auth flows, token storage, account recovery, GDPR data-export
+  requests). Revisit only if cross-device roster sync becomes an explicit,
+  requested feature — and if it does, it's additive (a sync endpoint under
+  `roster`), not a rearchitecture.
+- **Certificate pinning — rejected.** No user credentials and no auth token
+  ever touch the device; the only thing pinning would protect is a
+  read-only public API response. Not worth the operational cost of managing
+  pin rotation for this threat model. Stated explicitly so it isn't mistaken
+  for an oversight.
+
+## 5. What replaces them: snapshot + cache-invalidation
+
+`FullCharacter` (and, by the same pattern, `CharacterProgression` and the
+tier-list/recommended-build responses) is an immutable, timestamped snapshot.
+The server already keeps a 7-day stale copy and returns `stale: true` when
+Blizzard is down (`getFullCharacter.ts`). On device this extends by one hop:
+
+- Every `/v1` response is persisted (TanStack Query + MMKV persister), keyed
+  by request (character key, season, class/spec).
+- The UI always renders the last snapshot instantly, revalidating behind it —
+  never a blocking spinner over data already on disk.
+- An explicit "last updated X ago" / "offline" banner is a first-class UI
+  state, not an edge case, mirroring the server's own `stale` flag.
+
+This is the defensible "what did we know, and when" answer the reference
+document gets from event sourcing — achieved here with a cache-invalidation
+model appropriate to a domain with no real event history.
+
+**No hardcoded season data in the mobile binary.** `seasonConfig`'s *shape*
+is shared as a type (so `packages/core`'s consumers can be typed against it),
+but its *values* are never compiled into the app. The mobile app always reads
+season data from `/v1/meta` and `/v1/bis/:season` at runtime, with the last
+successfully fetched copy persisted as the offline fallback — never the copy
+from whatever `seasonConfig.ts` looked like when the binary was built. A
+season roll must not require an app-store release; see Section 11.5 of the
+original brief, which this document affirms without change.
+
+## 6. Target repository shape
+
+As of Phase 3, the repo root is still named `worldofwarcraft` on disk (not
+renamed to `mythos/`) — the rename is a cosmetic, fully-reversible local
+folder rename with no functional dependency, deliberately deferred so it
+doesn't get tangled with the Vercel root-directory setting change the move
+already requires. `apps/mobile` exists as of Phase 4, with the layout below
+plus two additions the scaffold needed: `src/testing/` (the provider wrapper
+screen tests need) and `src/features.ts` (the 1.1 feature flags).
+`packages/core`, `packages/api-contract` and `packages/api-client` all exist;
+`packages/data` does not, and `data/` stays at `apps/web/data` — see the
+scope note in Section 0 for why.
+
+One rule the scaffold added: **files under `app/` are one-line re-exports of
+a screen in `src/features/`**, never the screen itself. expo-router builds a
+`require.context` over `app/`, so a test file colocated with a route pulls
+the testing library into the shipped bundle — which is how this was found.
+
+```
+mythos/
+├── apps/
+│   ├── web/                       # existing Astro app, moved wholesale
+│   └── mobile/                    # NEW — Expo app
+│       ├── app/                   # expo-router routes, no logic
+│       └── src/
+│           ├── features/          # one folder per bounded context (8, see Section 3)
+│           ├── components/        # RN design-system primitives
+│           ├── lib/                # MMKV, Query persister, deep links, Sentry
+│           └── theme/
+├── packages/
+│   ├── core/                      # pure domain — see Section 1's table for exactly what moves
+│   ├── api-contract/              # Zod schemas for every /v1 request+response
+│   ├── api-client/                # typed fetch client over api-contract; DI'd fetch + baseUrl
+│   └── data/                      # data/bis/**, data/talents/**, data/meta/** seed JSON
+└── docs/
+    ├── architecture.md            # this file
+    ├── api-contract.md
+    ├── mobile-ux.md
+    └── release.md                 # produced in Phase 10
+```
+
+**Dependency rules, enforced not merely stated:**
+
+- `packages/core` imports nothing but `zod`.
+- `packages/api-contract` imports `zod` + `core` only. It composes its
+  response schemas from `core`'s schemas rather than restating the shapes,
+  so a domain type change is a compile error in the contract rather than a
+  runtime surprise on a phone.
+- `packages/api-client` imports `core` + `api-contract` only; takes `fetch`
+  and `baseUrl` by injection.
+- `apps/*` may import `packages/*`; `packages/*` never imports `apps/*`.
+- Everything in Section 1's "server only" row stays in `apps/web` — none of
+  it is a candidate for `packages/core`, because anything there is a
+  candidate for bundling into a device binary, and `client.ts`/`auth.ts`
+  process Blizzard credentials.
+
+Enforced today by a plain Vitest test per package (`src/__tests__/boundaries.test.ts`
+in `core`, `api-contract` and `api-client`) that scans every import/export
+statement and fails on anything outside that package's allowlist. This is
+deliberately not `eslint-plugin-import` + `import/no-restricted-paths` as an
+earlier draft of this document proposed: these three allowlists are the only
+boundaries the repo currently needs enforced, the check is the same `bun run
+test` everything else already runs, and it costs no new dependency or lint
+config. Swap in a fuller import-lint setup if `apps/mobile` turns out to need
+per-feature rules of its own.
+
+The one rule the tests can't see is the last bullet, since it's about what
+*didn't* move; it's enforced by the first three, which fail the moment a
+package reaches for `node:*`, `react`, `expo-*`, or an `@/` path.
+
+## 7. Mobile stack
+
+| Concern | Choice | Why |
+|---|---|---|
+| Runtime | Expo (managed) | EAS Build/Submit + `expo-updates` OTA is the shortest credible path to both stores solo. Resolve the current stable SDK/RN/React versions at install time (`npx create-expo-app@latest`, then `npx expo install` per package) — do not pin from memory; record the resolved versions in `apps/mobile/README.md`. |
+| Routing | Expo Router | File-based, deep links + universal links for the web app's shareable character URLs and OG images for free. |
+| Server state | TanStack Query + MMKV persister | Matches the stale-while-revalidate/offline semantics `getFullCharacter`'s `stale` flag already models server-side. |
+| Local state | `useState`, plus a small Zustand store for `roster` only | No global store before there's global state — `roster` is the one context with real client state. |
+| Styling | NativeWind (confirmed, Section 8.7) | Ports the web's Tailwind tokens (class colors, severity colors, spacing) as values instead of re-eyeballing. |
+| Lists | FlashList | Long comparison/action-panel/tier-list rows. |
+| Images | expo-image | Blizzard media URLs (item icons, avatars, talent/spell icons) — cache aggressively; icons are immutable per id. |
+| Validation | Zod (same major version as `api-contract`, currently v4) | Same boundary discipline the web app already applies to Blizzard's responses, applied to the mobile API. |
+| Storage | MMKV | Synchronous, fast, the standard Query-persister pairing. |
+| Rate limiting / error mapping (server side) | **Reuse `src/lib/http/rateLimit.ts` and `errorResponse.ts`** | Already exist, already used on every current `/api/*` route. No new dependency. |
+| Errors (client) | Sentry (`@sentry/react-native`) | A device console isn't readable after ship; without it a store release is unobservable. Declare it in the iOS privacy manifest. |
+| Tests | Vitest (`packages/*`, unchanged runner), jest-expo + RNTL (`apps/mobile` units), Maestro (`apps/mobile` E2E) | Vitest can't run Metro/Hermes; jest-expo is the supported RN path. Maestro over Detox for setup cost. |
+
+## 8. Decisions (recorded 2026-09-03)
+
+All ten open questions from the original brief's Section 12 have been put to
+the repo owner and answered. These are now settled inputs to Phase 2 onward,
+not open questions:
+
+1. **Developer accounts — neither exists yet.** Start Apple Developer
+   Program and Google Play Console enrollment now, in parallel with Phase
+   2/3 engineering — Apple's identity verification and Google's new-account
+   closed-testing requirement are the long poles in the schedule and must
+   not be discovered at Phase 10. **Action item, not blocking Phase 2.**
+2. **Bundle ID / app name — `com.thiagobuenogarcia.mythos`, "Mythos."**
+   Accepted as recommended, pending a store-availability check for the name
+   "Mythos" (do this before Phase 4 scaffolding locks it into `app.config.ts`
+   and before it appears in any store listing).
+3. **Monorepo move — yes, full move.** `worldofwarcraft` becomes
+   `mythos/apps/web`; done as Phase 2's own unit of work with the existing
+   web Vitest + Playwright suite as the exit proof, plus a Vercel
+   root-directory setting fix for the existing deployment.
+4. **API hosting — same Vercel project as web, `/v1` namespace.** No
+   separate deployment; `/v1` routes live alongside the existing `/api/*`
+   routes in `apps/web`.
+5. **Postgres — stays optional, zero-infra by default.** `/v1/bis` and
+   `/v1/meta/tier-list` (see item 10 on `meta`'s v1 status) serve from disk
+   via the existing `getBisList`/`loadTierList` fallback, exactly as today.
+   No production Postgres dependency introduced for mobile.
+6. **Branch workflow — shared, no mobile-specific branch.** `apps/mobile`
+   follows the existing `development` → `main` flow once the monorepo move
+   lands; one branch, one PR flow for both apps.
+7. **Styling — NativeWind.** Confirmed as the mobile styling approach.
+8. **Crash reporting — Sentry only, no product analytics.** Confirmed;
+   declare it in the iOS privacy manifest as crash-diagnostics collection,
+   nothing else.
+9. **Theme — dark-only for v1.** No light-mode work in v1; the theme token
+   structure should still be shaped so light mode is additive later, not a
+   rearchitecture, but no light palette is authored or QA'd for v1.
+10. **v1 scope — Gear + Progression.** Search, paper doll, upgrade board,
+    **and** the raid/Mythic+ progression tabs ship in the first release.
+    **`meta` (tier list + spec build) and `talents` (diff-first list, let
+    alone the pannable tree) are both deferred to 1.1+** — this changes the
+    Section 3 bounded-context list's *shipping* status (the contexts still
+    exist in the domain model; `meta` and `talents` just have no mobile UI
+    or `/v1` traffic until 1.1) and is reflected in `mobile-ux.md`'s
+    navigation shape and `api-contract.md`'s v1/1.1 labeling per endpoint.
+
+## 9. What Phase 4 settled
+
+Section 7 chose the stack; scaffolding it forced decisions Section 7 could
+not have made in the abstract. Resolved versions live in
+`apps/mobile/README.md`, per Section 7's own instruction. The decisions:
+
+1. **Zustand was not installed.** Section 7 lists it "for `roster` only".
+   There is no roster yet, and the rule in that same row is "no global store
+   before there's global state". It arrives with Phase 5, not before.
+   *(Superseded by Phase 5, which installed it — see Section 10.1.)*
+2. **NativeWind 4 + Tailwind v3 on mobile, Tailwind v4 on web.** NativeWind 4
+   peer-depends on Tailwind v3 through `react-native-css-interop`; NativeWind
+   5, which targets v4, was still preview. The apps share no stylesheet —
+   only the token values in `apps/mobile/src/theme/palette.json`, which a
+   test diffs against the web's `global.css` on every run, so "ported as
+   values" (Section 7) stays true rather than becoming "roughly the same".
+3. **The accent is a runtime CSS variable, not a compile-time token.** The
+   web re-themes per character by setting `--accent` inline in
+   `Layout.astro`. NativeWind's `vars()` is the same mechanism, so
+   `accentVars(className)` is spread onto a wrapping View and every
+   `accent-*` class below it resolves. `--accent-hover/-soft/-softer` are
+   derived from the class color rather than listed, since there is one pair
+   of literals on the web but thirteen class colors here.
+4. **The 1.1 Meta slot exists and is hidden.** `mobile-ux.md` left the *how*
+   to this phase. The route file and its tab entry both exist; the tab's
+   `href` is `null` while `FEATURES.meta` is false. 1.1 is a flag flip plus
+   the screen's content, never a navigation restructure — which is the change
+   that would ripple into deep links.
+5. **Bun's linker is `hoisted`** (`bunfig.toml`). Babel resolves presets and
+   plugins by name from the config file's directory; Bun's default isolated
+   layout hides them under `node_modules/.bun/<hash>/`, and both Metro and
+   jest-expo fail with "Cannot find module '@babel/plugin-transform-react-jsx'"
+   for a package that is installed. This is a repo-wide setting that exists
+   for `apps/mobile`; `apps/web` is indifferent to it.
+6. **React is pinned to one exact version repo-wide (19.2.3, Expo's).**
+   `apps/web` floated on `^19.2.8`, which put a second copy of React in the
+   tree that `expo-doctor` correctly flags: two Reacts is the "Invalid hook
+   call" failure mode, and the tree is what EAS builds from. Web now takes
+   React patches on the Expo SDK's cadence.
+7. **`packages/*` typecheck under `noUncheckedIndexedAccess`.** The mobile
+   app turned it on and immediately surfaced three unguarded array accesses
+   in `api-client`'s version comparison — a function whose job is deciding
+   whether to lock a user out of the app. The flag is now on in all three
+   packages so that class of bug fails in the package, not in the consumer.
+8. **Routes under `app/` are one-line re-exports.** See Section 6.
+
+Two exit criteria from the phase plan could not be met on this machine and
+are not blocked on code: an **iOS simulator** needs macOS, and a **dev EAS
+build on a real device** needs an Expo account (`eas init`) plus the
+developer-program enrolments in 8.1. What was verified instead: Metro
+bundles both platforms (`expo export --platform ios --platform android`),
+`expo-doctor` passes 21/21, and the app builds, installs and runs on an
+Android emulator.
+
+## 10. What Phase 5 settled
+
+Search and the `roster` context. The phase's exit criterion — "searchable and
+navigable in mock mode with no server" — is the reason most of these went the
+way they did: on this screen the offline path is the design, not a fallback.
+
+1. **Zustand is installed, and only the `roster` context uses it.** Section
+   9.1 held it back until there was global state; there is now. The store
+   holds two slices, both genuinely cross-screen: the recent list (written on
+   the character screen, read on search) and the last-used region (has to
+   outlive the search screen's unmount when a character is pushed). Nothing
+   else in the app has a store, and server state stays in TanStack Query.
+2. **The roster persists to MMKV, not to the query cache**, keeping
+   `storage.ts`'s existing split by lifetime: the query cache is disposable
+   and expires after a day, the roster is the only thing in the app a person
+   would miss and never expires. Zustand's `persist` rehydrates
+   *synchronously* because MMKV is synchronous, so the first frame of the
+   search screen already has the recents — an async store would flash empty.
+3. **Anything restored from disk is parsed, not trusted.** A persisted
+   roster is restored before any schema check would otherwise run and can
+   outlive the build that wrote it by years, so it goes through the same Zod
+   parse a network response would. Malformed entries are dropped one at a
+   time rather than failing the list — losing one row is recoverable, losing
+   the roster is not.
+4. **The roster is written when a character *resolves*, not when the form is
+   submitted.** The web adds to its list inside the search form; that would
+   miss every character reached by deep link (which is the whole point of the
+   universal-link work in Section 9.4), and it would store whatever the user
+   typed. Writing on the character screen instead means deep links count and
+   the stored name is Blizzard's own spelling — which also makes dedup
+   reliable, since two spellings converge on one entry. A failed lookup
+   records nothing, so the list cannot fill with typos.
+5. **Two deliberate deviations from the web's `RecentCharacter`**, which
+   `mobile-ux.md` says to keep as-is:
+   - Dedup is **case-insensitive on the name**. WoW names are unique per
+     realm case-insensitively, so `Arthas` and `arthas` are one character;
+     the web's `===` comparison would keep both. That is a latent bug there,
+     not a rule worth porting.
+   - The stored shape gains an optional **`className`**. The web has no use
+     for it; this app re-themes per character from the class color already,
+     so carrying it lets a recent row wear its own class color at no cost.
+     Nullable, because entries written by an older build won't have it.
+6. **The region picker offers four of the contract's five regions.** `cn` is
+   valid in `RegionSchema` because the schema describes what the *API*
+   accepts, but Blizzard serves mainland China from a separate API host with
+   separate credentials that `apps/web` has never been configured for.
+   Offering it would produce a lookup that cannot succeed. The contract stays
+   permissive; the picker stays honest.
+7. **Autocomplete never gates the search button.** Requiring the typed realm
+   to match a suggestion would make the screen unusable exactly when the
+   network is down. A realm that doesn't exist fails at the character screen,
+   where every other lookup failure already surfaces. Both autocomplete
+   failure states — offline, and the server serving sample realms — render as
+   one line of hint text, never as an error screen.
+8. **Offline realm autocomplete is partial, and the endpoint is why.** Any
+   prefix fetched before is answered from the persisted query cache with no
+   network. A prefix never typed on this device is not, because
+   `/v1/realms` caps a response at 20 matches — there is no way to pull a
+   region's whole realm list down in one request, so there is no full offline
+   index to build from. `apps/web/src/pages/api/v1/realms.ts` claims a mobile
+   client can persist the index "for the same 30 days"; that is only true
+   per-prefix. Fixing it properly means an additive endpoint (a full-index
+   mode, or an `If-None-Match`-style conditional like `/v1/bis` already has)
+   and belongs in a later phase, not a retrofit here.
+9. **A `staleTime` over ~24 days silently means "refetch immediately".**
+   The realm query was first written with a 30-day `staleTime` to mirror the
+   server's cache. TanStack schedules the stale transition with `setTimeout`,
+   and Node and Hermes both clamp a delay past 2^31-1 ms to 1ms and fire it
+   at once — so the longest-lived cache in the app was refetching on the next
+   tick. It is `Infinity` now, which query-core's `isValidTimeout` excludes
+   from scheduling altogether. Any *finite* duration handed to Query in this
+   codebase has to stay under ~24 days; `gcTime`'s one day already is.
+10. **Long lists get FlashList; short bounded ones don't.** Realm suggestions
+    cap at 20 and the roster at 8, and both render inside the search screen's
+    ScrollView, where a FlashList would nest two virtualised lists — the
+    arrangement RN warns about — to save nothing. Section 7's FlashList row
+    is about the comparison/action/tier-list rows, which are unbounded.
+11. **Settings clears the roster through the store, not through MMKV.**
+    Wiping the key underneath a live Zustand store leaves the list in memory,
+    and the next visit persists it straight back. The store owns its key.
+
+Verified: `bun run typecheck` and all 72 `apps/mobile` tests pass, the three
+`packages/*` suites still pass (65 tests), and `expo export` bundles both
+platforms. Not verified on device this phase — the Android emulator run from
+Phase 4 was not repeated, so "runs on a phone" rests on the bundle building
+and the unit tests, not on a launch.
+
+## 11. What Phase 6 settled
+
+The character screen: header, paper doll, slot sheet, stats, the
+Gear/Progression tabs, snapshot persistence, the stale/offline banner and
+pull-to-refresh with the cooldown surfaced. The phase's exit criterion — "a
+real character renders end-to-end against the live API; airplane mode still
+renders the last snapshot with an accurate banner" — is what most of these
+decisions answer to.
+
+1. **The Progression tab shipped here, and the tab shell with it.** The
+   original phase plan had no home for the raid/M+ panels: they were added to
+   `mobile-ux.md` after that plan was written (Section 0's "not in the
+   original brief" additions), Phase 7 is explicitly the upgrade board, and
+   Phase 8 is talents. Building the Gear/Progression navigator without
+   Progression would have shipped a visible dead tab and forced a second pass
+   over the screen's top-level layout. Both tabs read the one payload, so the
+   marginal cost was two components, not a request.
+2. **A failed request is a banner; only an empty cache is an error screen.**
+   The split is the whole point of Section 5's snapshot model, and it lives in
+   two pure modules — `model/snapshot.ts` decides what the banner says,
+   `model/errorCopy.ts` maps a contract error code to a screen — rather than
+   in conditionals inside the component. The error screen offers "try again"
+   only when the contract's own `retryable` flag says a retry could change the
+   answer, so a lookup for a character that does not exist cannot burn the
+   user's rate-limit budget on their behalf.
+3. **Offline is read from the OS, not inferred from a failed request.**
+   Discovered on a device: a cold launch in airplane mode inside `staleTime`
+   refetches nothing, so there is no error to report and the screen presents
+   an hours-old snapshot as though it were live. Worse, TanStack's
+   `onlineManager` defaults to a *browser* implementation listening for
+   `window` events that do not exist in React Native — so it believed the
+   device was permanently online and `refetchOnReconnect`, set since Phase 4,
+   had never once fired. `src/lib/onlineStatus.ts` feeds the manager from
+   `expo-network` and the banner subscribes to the same manager, so the UI and
+   Query can never disagree about connectivity.
+4. **The refresh cooldown is anchored to our own success, not to the 429.**
+   `refreshCharacter` in `apps/web` returns the constant
+   `REFRESH_COOLDOWN_SECONDS` whenever the cooldown key is present, not the
+   remainder — a client 55 seconds in is still told "60". So a successful
+   refresh starts a local 60s countdown (accurate, because we know when the
+   server reset the timer) and the 429's value is the fallback for a cooldown
+   this install did not start. Pull-to-refresh is disabled outright while it
+   runs: a gesture that can only produce a 429 should not fire the request.
+5. **A refresh failure feeds the same banner as a query failure.** A
+   mutation's error never reaches the query, so the first cut of this screen
+   had a tap on Refresh while offline produce no visible reaction at all. The
+   refresh hook exposes its error and the screen passes whichever failed.
+6. **Quality colors stay on borders, in the sheet as well as the tile.**
+   `mobile-ux.md` states the rule and the web's own tooltip breaks it (it
+   colors the item name by quality). The rule won: epic purple fails 4.5:1 as
+   body text on this panel, and the icon border carries the same information
+   under the 3:1 non-text rule instead.
+7. **The `metaTier` badge is not rendered in v1.** The payload carries it, and
+   the web puts it beside the character's name — but it is a rank *within the
+   tier list*, and the tier list is the `meta` surface deferred to 1.1
+   (Section 8.10). A badge reading "S" with nothing to tap through to is a
+   riddle. It returns with the Meta tab, behind the same flag.
+8. **`@gorhom/bottom-sheet`, and the non-modal `BottomSheet` specifically.**
+   The dependency is justified by mobile-ux.md's mapping of the web's hover
+   `Tooltip` — touch has no hover — and both its peers were already installed.
+   The modal variant does not work here: it portals into a hosting container
+   that `BottomSheetModalProvider` renders *before* the app tree, so on
+   Android the app's opaque screen paints over it and `present()` succeeds
+   silently. The non-modal sheet renders where it is written, last in the
+   screen, which is also what makes its open state a prop rather than an
+   imperative ref.
+9. **Sixteen slot tiles are a wrapping flex grid, not a FlashList.** Same rule
+   Section 10.10 recorded: the list is bounded, always fully scrolled past,
+   and sits inside the screen's ScrollView where a virtualised list would
+   nest inside another one for nothing. Column count comes from the window
+   width in points, not from a device class.
+10. **Tab switching has no animation, so there is nothing to gate.**
+    `mobile-ux.md` asks for reduce-motion gating on tab switches and the
+    bottom sheet. The sheet's animation is gated by collapsing its duration;
+    the tabs simply swap content, which is a decision rather than an
+    omission — a cross-fade between two screens of text buys nothing and is
+    one more thing to have to turn off.
+
+Verified on an Android emulator against the live `/v1` API with real Blizzard
+credentials: a real character renders end-to-end (header, avatar, class
+accent, paper doll with item icons and quality borders, empty-slot tile,
+stats, both tabs), the slot sheet opens with the full server-composed
+tooltip, header-button and pull-to-refresh both work and surface the
+countdown, and toggling airplane mode raises the offline banner immediately
+while the character stays on screen. A cold launch with the API unreachable
+restores the snapshot from MMKV and renders it.
+
+**Not verified, and why:** a cold launch *in* airplane mode. A development
+build fetches its JS bundle from Metro at launch, and airplane mode takes
+`adb reverse`'s loopback with it, so the app cannot start at all — the
+failure is the dev client's, not the app's. Proving that last case needs a
+preview build (`eas.json`'s `preview` profile), which needs the Expo account
+in Section 8.1. The two halves either side of it are verified above.
+
+**Found but not fixed — server-side, pre-existing.** `progression` came back
+`null` from `/v1/character/...` for several live characters before returning
+data for the same character minutes later. `composeCharacter` catches every
+failure from `getCharacterProgression` and nulls the field without logging,
+so which upstream Blizzard call intermittently fails was not isolated. The
+mobile client handles `null` correctly — it is a documented, supplementary
+field — so this is a data-quality issue for a later phase, not a Phase 6
+blocker.
+
+## 12. What Phase 7 settled
+
+The upgrade board: the content-type segmented control, the comparison rows,
+the completion meter, the quick wins and the action panels, as the third
+block of the character screen's Gear tab. The phase's exit criterion — "tab
+switching is instant and works offline" — is what most of these answer to,
+and the short version of the answer is that **the board issues no request at
+all**.
+
+1. **`/v1/meta` grew `seasonSlots`, and that is the entire server-side
+   change.** `deriveActionGroups` takes its slot rules by injection
+   specifically so `packages/core` need not depend on `apps/web`'s
+   `seasonConfig` — but the phone had nothing to inject. Three options, and
+   only one survives Section 5: compile the two lists into the app (a wrong
+   enchant hint would then need an app-store release to fix, which is the
+   exact failure mode "no hardcoded season data in the mobile binary" exists
+   to prevent); drop the enchant and embellishment quick wins (the
+   highest-value, lowest-effort section on the board, per `mobile-ux.md`); or
+   make them part of the season's own description, next to the season id the
+   app already reads from there. The last one. `SeasonSlotsSchema` moved from
+   a bare interface to a Zod schema in `packages/core` so the contract
+   composes from it rather than restating it — the same rule Phase 3 set for
+   every other domain type.
+2. **The field is optional on the wire.** It was added after the client had
+   shipped a build without it. Required, it would mean a client *newer* than
+   the deployed server fails to parse the whole `/v1/meta` response — losing
+   the season line and, far more seriously, the
+   `minimumSupportedClientVersion` gate that exists to stop exactly that
+   class of mismatch — in exchange for a section of hints. Absent means "no
+   enchant or embellishment hints"; the socket hints come off the character's
+   own equipment and are unaffected. There is no compiled-in fallback,
+   because a hint from whatever the season looked like at build time is a
+   wrong answer that looks exactly like a right one.
+3. **The comparison rows are plain views, not a `FlashList`** — a deliberate
+   departure from both the phase plan and `mobile-ux.md`'s mapping table,
+   which is why that table has been amended. Two facts settle it. The list is
+   bounded by a compile-time constant: `BIS_SLOTS` is a closed 14-entry union
+   of which two expand to a pair of physical slots, so `compareGear` cannot
+   return more than sixteen rows for any character, any spec or any season —
+   virtualisation is for lists whose length is data. And the board renders
+   inside the character screen's own `ScrollView`, where a same-axis
+   `FlashList` does not virtualise anyway: it renders every row and warns
+   while doing it, i.e. a slower `.map()`. The variant that *would*
+   virtualise — hoisting the whole Gear tab into one list with the paper doll
+   as its header — restructures a screen Phase 6 shipped in order to window
+   sixteen items. This is the third time this call has been made for the same
+   reason; see Sections 10.10 and 11.9.
+4. **"Instant" is not a timing target, it is the absence of a request.**
+   `data.bis` arrives with the character in the one round trip, both pure
+   functions run on device, and `/v1/meta` was fetched by the launch screen
+   and persisted by MMKV. Switching a segment recomputes two pure functions
+   over a few dozen entries with the radio off. The test for it asserts that
+   nothing was fetched — the property itself, rather than a duration, which
+   is only a proxy for it on one machine.
+5. **Quick wins sit *above* the comparison rows, inverting the web's order.**
+   `mobile-ux.md` asks for it and the reason holds up: a missing enchant is
+   fixed tonight, a rank-1 raid target is fixed in three weeks, and on a
+   screen where one section is visible at a time the actionable one goes
+   first. It is also the only section open by default — a section that is
+   both first and folded is just a heading — while the four action panels
+   below the rows are collapsed with their counts in the header, because
+   "Bosses to prioritise, 3" is most of the answer.
+6. **`CharacterTabs` became `components/SegmentedControl`.** Phase 6 built it
+   for Gear | Progression; the board needs the identical control for
+   Raid | Mythic+ | PvP. Two features importing one primitive from
+   `components/` is Section 6's rule; one feature importing another feature's
+   component is not.
+7. **The `/v1/meta` query moved out of `SearchScreen` into
+   `features/meta/api/useMeta`.** Phase 5 inlined it because one screen used
+   it. Two screens with the same query key written out twice is how a screen
+   ends up refetching what is already in the cache, and the `meta` bounded
+   context is where it belonged in the first place.
+8. **A comparison row is one accessibility element, not eleven.** The row is
+   a grid of short labels — "Head", "636", "Equipped", "648", "BiS Rank 1" —
+   which is precisely the shape that tells a screen-reader user nothing when
+   swiped one fragment at a time. `rowAccessibilityLabel` composes the whole
+   row into a sentence, and the alternatives disclosure is the only separate
+   stop: sixteen rows cost sixteen to thirty-two stops instead of nearly two
+   hundred.
+9. **Two of `compareGear`'s outputs do not mean what a naive template
+   assumes.** Its delta is *negative* when the equipped item out-levels the
+   target — routine after a Great Vault week — so `+${delta}` renders
+   "+-6 iLvl"; those rows read "At or above" instead. And for an empty slot
+   the delta is the target's entire item level, so the same template offers
+   "+648 iLvl", a number nobody can act on; those read "Fill now". Both live
+   in `model/severity.ts` with tests, not in JSX.
+10. **`severity === 'bis'` is not the same as "already best in slot".**
+    `severityFor` returns `bis` both for an exact match and for a row with no
+    target at all, which is reachable whenever a dual-slot category has a
+    single seeded entry. `isMatch` is the discriminator, and the two states
+    say different things on screen — "This is the BiS item" versus "No BiS
+    target for this slot this season."
+11. **Every content type keeps its segment, seeded or not, and the board
+    opens on the first one that has entries.** A spec seeded for raid and
+    Mythic+ but not PvP is what a real seed file looks like, so an empty
+    segment is a normal state with its own sentence rather than an error or
+    an absence — a control that changes shape as you tap through it is worse
+    than one that sometimes has nothing behind a segment. Opening on an empty
+    Raid board for a Mythic+-only spec, meanwhile, looks like a bug.
+12. **The target item renders with no icon.** A `BisEntry` is authored data —
+    an item id and a name, with nothing having resolved that id against
+    Blizzard's media endpoint — so there is no icon URL, and a placeholder
+    beside a real equipped icon reads as "this item has no icon" rather than
+    "we didn't fetch one". The BiS rank takes that space instead, which is
+    the information the target actually adds. Resolving target icons would
+    cost a Blizzard media call per row, which is not worth a round trip on a
+    phone network for decoration.
+13. **An unseeded spec is a notice, not an error.** Most specs are unseeded
+    at any given time, and the seed files belong to the web repo rather than
+    to the player. The web points at its README here, which is not an
+    instruction a phone can act on, so the mobile copy stops at the fact.
+
+**Verified by the suite:** 184 mobile tests across 19 suites, of which 31 in
+three new ones are the board's — every severity, both dual-slot assignments,
+the empty segment, the unseeded spec, the alternatives disclosure, the quick
+wins with and without `seasonSlots`, and a whole board rendered with the
+`/v1/meta` query rejecting outright, which is the offline half of the exit
+criterion. `packages/core`, `packages/api-contract`, `packages/api-client`
+and `apps/web` all typecheck and pass, including the `/v1/meta` contract test
+that now asserts the new field.
+
+**Not verified, and why:** nothing here has been on a device yet. Phase 6's
+verification pass needs the emulator, Metro and a local API with real
+Blizzard credentials, and this phase added no native module, so the existing
+dev client will take the new JS unchanged — but "tab switching is instant" is
+a claim about a phone, and it has not been made on one.
+
+**One thing the test harness taught, worth keeping:** two `fireEvent.press`
+calls in the same synchronous block overlap RNTL's `act()` scopes, and the
+renderer does not fail at that point — it wedges, and every *subsequent* test
+in the file fails with "unable to find an element" for things that plainly
+render. Await something between presses. This cost a confusing debugging pass
+where six passing tests were followed by seven that looked like a broken
+component; it is recorded in `apps/mobile/AGENTS.md`.
+
+**Found, not fixed — `@shopify/flash-list` is now imported nowhere.** Phase 4
+installed it because the plan called for it in three places. Phase 5 declined
+it for the realm suggestions (Section 10.10), Phase 6 for the paper doll's
+tiles (Section 11.9), and Phase 7 for the comparison rows (12.3 above) — all
+three for the same reason, each list being bounded and nested inside a
+`ScrollView`. Nothing left needs it: the talent tree at 1.1 is a pannable
+canvas, not a list. That leaves a native module in the binary, in the dev
+client and in `jest.config.js`'s `transformIgnorePatterns` for nothing, which
+is bundle size and one more thing in an App Store review's dependency
+surface. Removing it is a dev-client rebuild and a change to Phase 4's
+scaffold rather than a line in this phase's diff, so it is left standing and
+flagged here — the natural place to take it out is Phase 9 or 10, alongside
+the other size and release work.
+
+## 13. What Phase 8 settled
+
+The Talents tab: the diff against the recommended build, and the character's
+own build as a list. Built, and **gated off** — Section 8.10 defers this
+surface to 1.1, so `FEATURES.talents` stays `false` and the tab does not
+render. Phase 8 is the content; 1.1 is the flag.
+
+1. **The pannable, pinch-zoom tree is not built, and that is a Phase 1
+   decision rather than a shortcut taken here.** `mobile-ux.md`'s mapping
+   table already said "the pannable tree stays out of scope even at 1.1",
+   and building it now would have contradicted the document rather than
+   fulfilled the phase. The reasoning holds up on inspection: a class tree
+   is roughly twenty columns by ten rows of 40px icons, so on a phone it is
+   either unreadably small or a two-axis pan; and the thing a player would
+   pan it *for* — changing a talent — cannot be done from this app at all,
+   because the game is the only place a build can be edited. The roadmap's
+   exit criterion is "the diff view is complete and usable on its own", and
+   that is what was built.
+2. **The build list is a replacement for the tree, not a fallback to it.**
+   The second segment lists what the character has taken, grouped Class /
+   Hero / Spec exactly as the web draws its three trees, in tree order. It
+   scrolls on one axis, it can be read aloud, and it answers the question
+   the tree was being read to answer. Calling it a fallback would imply
+   something better is coming; nothing is.
+3. **Four kinds of difference, not one bucket.** `diffTalents` returns
+   `missingNodeIds`, which merges two genuinely different situations: a
+   talent not taken at all, and a choice node taken the other way. The
+   second is usually deliberate, and its row has to name *what you took*.
+   Two more kinds sit either side of what `diffTalents` measures — a talent
+   taken at a lower rank than the build puts points into, and a talent taken
+   that the build does not take, which is what pays for everything else.
+4. **`diffTalents` stays the authority on the headline number.** Its comment
+   is explicit that rank is not compared — "a lower rank still counts as
+   picked" — and that stays true, so the phone and the web report the same
+   "x of y" for the same character. The rank shortfall is a *row* without
+   being a demotion. A test asserts the two numbers agree, because a screen
+   saying "5 of 9" over a list of six rows is worse than either number
+   alone.
+5. **Hero talents are excluded from the diff entirely and listed in the
+   build view.** The seed files carry no hero recommendations (the scoping
+   note in `packages/core/src/talents/types.ts`), so every hero pick a
+   character has would land in "not in the build" and bury the real
+   differences under noise. In the build view the same picks are
+   information; in the diff they would be a verdict against nothing. The
+   summary says so in a line rather than leaving the number to be
+   misread.
+6. **A recommended pick whose node the tree no longer has is a visible row.**
+   Seeds are authored against a tree that changes at every patch. Dropping
+   the pick silently would leave the visible list unable to account for the
+   headline total, so it renders as "Unknown talent (node 999)" with a line
+   saying the build was seeded against an older tree — which surfaces a
+   stale seed instead of hiding one.
+7. **Structural nodes are skipped in both derivations.** A node with no
+   options is the top-of-tree class/spec selector, which the web draws as a
+   plain dot. It has no name, so it can never be a useful row, and a
+   character can legitimately have one "selected" — the fixture does, so
+   both code paths are exercised rather than assumed.
+8. **None of the copy says "wrong", and a test asserts it.** A recommended
+   build is one seeded opinion about one content type. A player who took the
+   other side of a choice node usually knows why, and a screen that grades
+   them is both presumptuous and, for anyone playing content the build was
+   not written for, incorrect. The four group titles are "Not taken",
+   "Different choice", "Fewer points" and "Not in the build".
+9. **The headline is a count, not a percentage.** "5 of 9 picks match" is the
+   same information as "56%" without inviting anyone to optimise a number
+   that is one person's seeded opinion — and it is what the web says for the
+   same character.
+10. **The content type comes from the build, not from a constant.** The web
+    hardcodes "Recommended (Mythic+)" in its tab label while
+    `loadRecommendedBuildFile` can equally return a raid build; the mobile
+    header reads `recommended.contentType`. Same class of bug as the upgrade
+    board's "Raid BiS completion" label, fixed the same way.
+11. **The derivation lives in `features/talents/model`, not
+    `packages/core`.** Section 2 defines the Application layer as exactly
+    this — "view-model derivation, composes packages/core functions into
+    screen data" — and nothing but this screen wants it, because the web
+    renders trees rather than a diff. `diffTalents` stays in the domain
+    layer, where both apps use it.
+12. **`CollapsibleSection` followed `SegmentedControl` into `components/`.**
+    Phase 7 built it in `features/bis`; the diff's four groups need the
+    identical thing. Second primitive to make that trip in two phases, which
+    is the rule in Section 6 working rather than a sign of churn.
+13. **The tab is a filtered array entry, and a second test file proves the
+    flag flip.** `FEATURES.talents` is a compile-time constant and
+    `jest.mock` is file-wide, so `CharacterScreen.test.tsx` keeps exercising
+    v1's real configuration — and asserts the tab is absent — while
+    `CharacterScreen.talents.test.tsx` mocks the flag on and asserts the tab
+    appears after Progression with the two v1 tabs untouched. That is
+    Section 11.1's "a third entry plus its content, not a restructure",
+    cashed in and now guarded.
+14. **Nothing here fetches, for the third screen running.** `talents` and
+    `recommendedTalents` ride in with the character; `api-contract.md` says
+    they ship in v1's response shape specifically so this tab is a
+    client-only addition at 1.1. Switching segments is two pure derivations
+    over data already on the device.
+
+**Verified by the suite:** 38 new tests across five files — the derivation's
+arithmetic against `diffTalents`, the copy, every empty state, and both
+sides of the feature flag. The full mobile suite, `packages/*` and
+`apps/web` all typecheck and pass.
+
+**Not verified, and why:** as with Phase 7, nothing here has been on a
+device. The tab is also gated off, so there is nothing to see on one without
+flipping the flag first — which makes a device pass on this surface most
+useful *with* the Phase 7 pass, not before it.
+
+**Found, not fixed — v1 pays for the talent tree in bytes and does not
+render it.** `GET /v1/character/...` carries the full `talents.tree`: every
+class, spec and hero node, each with its options' names, descriptions and
+icon URLs. `api-contract.md` justifies including it on the grounds that it
+costs no extra Blizzard call, which is true and is about *composition* cost,
+not *response* cost — and the response crosses a phone network on every
+character load in a release where `FEATURES.talents` is `false`. The fix, if
+the measurement justifies it, is a query parameter or a separate `/v1`
+endpoint, either of which is a contract change. **Measure it first**: nobody
+has weighed the field, and the number belongs in Phase 9's performance pass
+before anyone changes a contract over it.
+
+## 14. What Phase 9 settled
+
+Polish and accessibility. Sections 10–13 each recorded accessibility as done
+rather than deferred, so this phase was expected to be confirmation and
+measurement rather than retrofitting. That expectation was half right: the
+*code* was written correctly throughout, and a device pass with
+`uiautomator` still found four defects no test could have caught, one of
+them app-wide. The pass is the point of the phase.
+
+### 14.1 What the device pass found
+
+1. **Every touch target in the app was 38.5dp, not 44.** `mobile-ux.md`
+   requires ≥44×44pt "throughout, including slot tiles and severity chips",
+   and every interactive element was written `min-h-11` — which is `44px` in
+   every Tailwind reference and was read as meeting the rule. It does not:
+   NativeWind's Metro plugin defaults `inlineRem` to **14**, not the web's
+   16, so `h-11` is 2.75 × 14 = **38.5dp**. A dump measured eleven
+   components at 101px on a 420dpi screen, which is 38.5 exactly. All of
+   them are now `min-h-[44px]`, an explicit measurement rather than a scale
+   step, and the trap is recorded in `apps/mobile/AGENTS.md`. Nothing in the
+   suite could have caught this: the code was self-consistently wrong, and
+   only a ruler disagreed.
+2. **The tab bar announced ", Search" and ", Settings".** Icon fonts draw a
+   private-use codepoint inside a `<Text>`, which contributes an empty
+   fragment to any merged description. Rather than remember a prop at
+   twenty-one call sites, `components/Icon.tsx` now wraps every icon in the
+   app and hides it from the accessibility tree — every icon here is paired
+   with real text or sits inside a labelled parent, so the rule "icons are
+   decoration" holds app-wide and is enforced in one place.
+3. **The tier tile said everything twice**: "Tier set: 4 of 5 pieces, 4pc
+   active: 4/5, 4pc active". `Stat` composes `hint` and `value`, and the
+   tier caller passed a `hint` that already contained the value. The fix
+   separates the two — `hint` is the spoken *name*, and a new `spokenValue`
+   carries a form worth hearing where the visible one is not ("4 of 5
+   pieces" aloud, "4/5" on screen).
+4. **The slot sheet announced its own chrome three times** before a word
+   about the item — "Bottom Sheet, adjustable", "Bottom sheet handle",
+   "Bottom Sheet". `@gorhom/bottom-sheet`'s accessibility props are
+   nullable, so `null` opts out instead of falling back to its defaults, and
+   a custom `handleComponent` renders the library's own handle with its
+   announcement removed and its appearance untouched. Three stops became
+   one; the remaining container stop is a landmark at the top of an open
+   sheet, and chasing it further into the library was not worth the phase.
+
+### 14.2 The one thing that could not be fixed
+
+**The slot sheet does not hide the screen behind it from TalkBack.** A swipe
+walks straight out of the open sheet into the sixteen paper-doll tiles
+underneath, reading content that is not on screen. The sheet is non-modal by
+a Phase 6 decision (Section 11: `BottomSheetModal` portals into a container
+rendered before the app tree, so on Android the app paints over it), which
+means the modal half — containment — has to be supplied by hand.
+
+It is written, and on Android it does not work. `accessibilityElementsHidden`
+is the iOS mechanism and is correct. Its Android counterpart,
+`importantForAccessibility="no-hide-descendants"`, had no effect on RN
+0.86's New Architecture: verified against a dump with the value **hardcoded
+on**, again with `collapsable={false}` to rule out view flattening, and
+again through RN's `aria-hidden` alias. The subtree stayed in the tree all
+three times. The props stay in the source because they express the right
+intent and cost nothing, and because iOS is unverified rather than known
+broken — no Mac was available this phase.
+
+What Android needs is one of: `BottomSheetModal`, which reopens the Phase 6
+painting-order trade-off; explicit focus management on open; or a newer RN.
+**This is the phase's open item, and it is recorded rather than papered
+over.**
+
+### 14.3 Decisions
+
+5. **Loading is a skeleton, not a spinner.** The character screen showed a
+   centered `ActivityIndicator` and "Loading Arthas…", which says that
+   something is happening but not what is arriving, and moves every block
+   down the page when the data lands. `CharacterSkeleton` traces the real
+   screen — header, refresh bar, tabs, paper doll, stats — so arrival
+   changes the contents of the layout rather than the layout. It reuses
+   `paperDollColumns`, so the grid it draws is the grid about to appear.
+6. **The skeleton is one announcement and forty silent blocks.** Sixteen
+   grey rectangles read out one at a time is worse than a spinner. The
+   wrapper is the single accessible element, carries `busy`, and hides its
+   descendants on both platforms. Measured on device: **3 announced nodes of
+   45.**
+7. **Reduce motion stops the pulse; it does not remove the skeleton.** The
+   shape is the information and the animation is decoration, so with the
+   setting on the blocks hold at the midpoint opacity. The pulse is RN's
+   `Animated` rather than Reanimated — opacity on the native driver is all
+   it needs, and it keeps the blocks out of NativeWind's Reanimated interop.
+8. **Dynamic Type: the paper doll drops to one column before it clips.**
+   `mobile-ux.md` named the paper doll as one of the two layouts most likely
+   to clip, and the tile already grew vertically. Growth alone does not fix
+   two columns on a 390pt phone at 200% text, where each item name gets
+   about six characters. `paperDollColumns` now divides the width by the
+   font scale — *text twice as large needs the room a screen half as wide
+   would have needed* — so one rule covers large text, small phones and
+   tablets. The item name's two-line clamp also lifts above 1.3×. Verified
+   at 2×: one column, nothing clipped, every name in full.
+9. **Haptics are a fixed vocabulary of three, not an API.** `lib/haptics.ts`
+   exports named events rather than `impactAsync`, because the risk with
+   haptics is editorial, not technical: an app that buzzes on every tap
+   teaches people to ignore the buzz. The rule for adding a fourth is the
+   rule these three were chosen by — **feedback is for a state change you
+   cannot see coming, or a selection made without looking.** So: the
+   segmented control, and only on an actual change; and pull-to-refresh
+   succeeding or failing, the one action with a delayed, uncertain and
+   sometimes invisible outcome. Every call is fire-and-forget and swallows
+   its error. Both platforms suppress haptics system-wide when the user
+   turns them off, so there is no in-app toggle and no `AccessibilityInfo`
+   gate to write — unlike reduce motion, which RN reports but does not
+   enforce.
+10. **The app icon is the web's mark, ported, not new art.**
+    `favicon.svg`'s crimson pentagon on `#0a0e27` is generated at six sizes
+    with `sharp`: full-bleed and square for iOS (the OS masks it, and a
+    pre-rounded icon gets a dark halo inside Apple's own radius), foreground
+    and background for Android's adaptive icon with the mark inside the 66%
+    safe zone, a white silhouette for themed icons, a transparent splash
+    mark on the window background, and the rounded square only for web,
+    where nothing masks it. **This is deliberately a port and not a
+    commissioned icon** — a flat pentagon is honest brand parity and a weak
+    app icon, and replacing it with real art belongs with the other store
+    work in Phase 10.
+11. **Dark-only is confirmed, not revisited.** Section 8.9 settled it and
+    the roadmap asked this phase to "decide whether light mode exists at all
+    and say so". It does not, in v1. Nothing in Phases 5–9 has made the
+    token structure harder to add a light palette to: `themes[name]` is
+    still the only place a static color lives, `accentVars` is still the
+    only runtime one, and a drift test still pins both to the web's
+    stylesheet. Adding light mode remains a new key plus a provider.
+12. **Error states were already complete; empty states were not.**
+    `errorCopy.ts` is a `Record<ClientErrorCode, …>` — exhaustive by type,
+    so every code the client can produce has a screen, and the roadmap's
+    "empty and error states per code" needed no work on the error half. The
+    empty half had a real defect; see 14.4.
+
+### 14.4 The action panels' empty state was lying
+
+Phase 8's device pass found the upgrade board saying "every slot with a
+target is already best in slot" directly underneath visible Major-gap rows,
+and left it unfixed as pre-existing. It is this: `deriveActionGroups` buckets
+four of the eight source types — raid, dungeon, crafted, catalyst — so a
+target from the vault, PvP, a world drop or a profession produces no group
+at all, and an empty *panel set* was being rendered as an empty *board*.
+
+`features/bis/model/actionCoverage.ts` now counts what the panels cannot
+route you to, and the board says so — as the whole body of the empty state,
+and as a line underneath the panels when they render but do not cover
+everything, which is the same omission made invisible by four sections that
+look complete.
+
+Two things about where this lives. It is **in the mobile Application layer,
+not in `packages/core`**: what was wrong is the claim, and the claim is
+mobile's — widening a shared function to fix a sentence on one client is how
+a polish phase becomes a cross-app behaviour change. **The core gap is
+therefore still open, and the web still has it.** And the counter requires a
+condition `deriveActionGroups` has no need of — a **positive ilvl delta**.
+`compareGear` reports a slot whose equipped item out-levels the list as
+'close' with a negative delta, and the seeded fixture has one; counting it
+would have traded the old overclaim for a new one ("Neck has an upgrade").
+That was caught by running the fixture, not by reasoning about it.
+
+### 14.5 Cleared from earlier phases
+
+- **`@shopify/flash-list` is removed.** Section 12 flagged it as imported
+  nowhere after Phases 5, 6 and 7 each declined it for the same reason. Gone
+  from `package.json`, from `jest.config.js`'s `transformIgnorePatterns` and
+  from the README's version table.
+- **Phases 7 and 8 are verified on a device.** Sections 12 and 13 both close
+  with "nothing here has been on a device"; that was overtaken on
+  2026-09-10, and this phase exercised the same surfaces again. Those
+  caveats are stale.
+- **The talent-tree payload is measured.** Section 13 asked for a number
+  before anyone changed the contract over it: `talents.tree` is **42,921 of
+  a 68,130-byte** character response — **63%**, shipped on every character
+  load while `FEATURES.talents` is `false`. The number justifies the
+  concern; the contract change itself is still not this phase's work.
+
+### 14.6 What was verified, and how
+
+An emulator pass on `falar_pixel` (Android, 420dpi) against the local API,
+driven by `uiautomator` dumps rather than screenshots — the dump *is* the
+accessibility tree, so it answers "what does TalkBack say" directly instead
+of by inference. Covered: the search screen, the character screen and both
+v1 tabs, the slot sheet, the upgrade board and its action panels, the
+loading skeleton (forced by throttling the emulator's network to GPRS), and
+the whole character screen again at 2× font scale.
+
+**Not verified: iOS.** No Mac was available, so VoiceOver, Dynamic Type on
+iOS and the icon's appearance under Apple's mask are all unconfirmed. The
+roadmap's exit criterion asks for a pass on *both* platforms, and half of it
+is outstanding. Given that 14.2 turns on a platform difference, that half is
+worth more than usual here.

@@ -1,0 +1,311 @@
+{
+  "season": "midnight-s2",
+  "class": "Priest",
+  "spec": "Discipline",
+  "contentType": "raid",
+  "classSelections": [
+    {
+      "nodeId": 82556,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82672,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82673,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82676,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82677,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82678,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82684,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82685,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82686,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82687,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82690,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82696,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82697,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82701,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82702,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82703,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82712,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82713,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82715,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82716,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82717,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82718,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82719,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 108731,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109006,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109010,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109011,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109012,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109015,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109020,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109021,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 109890,
+      "rank": 1,
+      "optionIndex": 0
+    }
+  ],
+  "specSelections": [
+    {
+      "nodeId": 82564,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82566,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82568,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82569,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82571,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82572,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82575,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82576,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82577,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82581,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82582,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82587,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82588,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 82589,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82590,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82591,
+      "rank": 1,
+      "optionIndex": 1
+    },
+    {
+      "nodeId": 82592,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82593,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82594,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82595,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82596,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82597,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82598,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82599,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82600,
+      "rank": 2,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 82601,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 86730,
+      "rank": 1,
+      "optionIndex": 0
+    },
+    {
+      "nodeId": 110410,
+      "rank": 4,
+      "optionIndex": 0
+    }
+  ],
+  "notes": "Decoded from Icy Veins' \"Voidweaver Raid\" in-game export string (https://www.icy-veins.com/wow/discipline-priest-pve-healing-spec-builds-talents), imported 2026-10-02 by scripts/import-talents.ts. Export string: CAQAAAAAAAAAAAAAAAAAAAAAAADsMmxyYmBzgZbmtZmZmZmBAAAAAAAAAgZYZGMzMDzYmBMNTzMYmBAAY2mtFwYzAAwYMzYwMYmBjgB"
+}
