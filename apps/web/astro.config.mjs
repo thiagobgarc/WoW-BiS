@@ -17,8 +17,17 @@ for (const [key, value] of Object.entries(fileEnv)) {
   if (process.env[key] === undefined) process.env[key] = value;
 }
 
+// Absolute origin for canonical URLs, og:url and the sitemap. SITE_URL wins
+// (set it once a custom domain exists); otherwise Vercel's production
+// hostname. Left undefined locally, where Layout falls back to the request
+// origin.
+const site =
+  process.env.SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : undefined);
+
 // https://astro.build/config
 export default defineConfig({
+  site,
   output: 'server',
   integrations: [react()],
   // The dev toolbar's fixed-position overlay was intermittently swallowing

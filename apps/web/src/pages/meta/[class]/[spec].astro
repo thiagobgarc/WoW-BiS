@@ -7,7 +7,8 @@ import { findSpecBySlug } from '@/lib/meta/specBySlug';
 import { getSpecTalentTree } from '@/lib/blizzard/getSpecTalentTree';
 import { getRecommendedBuild, getRaidRecommendedBuild } from '@/lib/talents/getRecommendedBuild';
 import { getMythicPlusTierList, getRaidTierList, findTierForSpec } from '@/lib/meta/getTierList';
-import { CURRENT_SEASON_ID } from '@/lib/season/seasonConfig';
+import { CURRENT_SEASON_ID, seasonConfig } from '@/lib/season/seasonConfig';
+import { urlSlug } from '@/lib/meta/specIds';
 import { classColor } from '@mythos/core/utils';
 import type { DomainTalentTree } from '@/lib/blizzard/domain';
 import type { RecommendedTalentBuild } from '@mythos/core/talents';
@@ -54,12 +55,43 @@ if (!ref) {
     };
   }
 }
+
+const ok = !error && ref && tree;
+const specLabel = ref ? `${ref.specName} ${ref.className}` : '';
+// Slugs resolve case-insensitively, so /meta/Mage/Frost and /meta/mage/frost
+// are the same page — point search engines at the lowercase spelling.
+const canonicalPath = ref ? `/meta/${urlSlug(ref.className)}/${urlSlug(ref.specName)}` : undefined;
+const tierSummary = [mythicPlusTier && `${mythicPlusTier}-tier in Mythic+`, raidTier && `${raidTier}-tier in raid`]
+  .filter(Boolean)
+  .join(', ');
+// Only claim a recommended build when one is actually seeded for this spec.
+const subject = mythicPlusBuild || raidBuild ? `Best ${specLabel} talent build` : `${specLabel} talent tree and tier ranking`;
+const description = ref
+  ? `${subject} for Mythic+ and raid in ${seasonConfig.displayName}${tierSummary ? ` — currently ${tierSummary}` : ''}.`
+  : undefined;
+const origin = Astro.site ?? Astro.url.origin;
+const jsonLd =
+  ok && canonicalPath
+    ? [
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Meta', item: new URL('/meta', origin).toString() },
+            { '@type': 'ListItem', position: 2, name: specLabel, item: new URL(canonicalPath, origin).toString() },
+          ],
+        },
+      ]
+    : [];
 ---
 
 <Layout
-  title={ref ? `${ref.specName} ${ref.className} — Meta — Mythos` : 'Spec Not Found — Mythos'}
-  description={ref ? `The current meta talent build for ${ref.specName} ${ref.className}.` : undefined}
+  title={ref ? `${specLabel} Talent Build — ${seasonConfig.displayName} | Mythos` : 'Spec Not Found — Mythos'}
+  description={description}
   accentColor={ref ? classColor(ref.className) : undefined}
+  canonicalPath={canonicalPath}
+  noindex={!ok}
+  jsonLd={jsonLd}
 >
   <SiteHeader currentPath={Astro.url.pathname} />
 

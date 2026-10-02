@@ -112,14 +112,29 @@ if (!error) {
 }
 
 const accent = full ? classColor(full.character.className) : undefined;
-const title = full ? `${full.character.name} — ${full.character.className} — Mythos` : 'Character — Mythos';
+const specLabel = full ? [full.character.specName, full.character.className].filter(Boolean).join(' ') : '';
+const title = full
+  ? `${full.character.name} — ${specLabel}, ${full.character.realmName} (${full.character.region.toUpperCase()}) | Mythos`
+  : 'Character — Mythos';
 const description = full
-  ? `${full.character.name} is ${full.character.equippedItemLevel} ilvl on ${full.character.realmName} (${full.character.region.toUpperCase()}). See exactly what to upgrade next.`
+  ? `${full.character.name} is a ${full.character.equippedItemLevel} ilvl ${specLabel} on ${full.character.realmName} (${full.character.region.toUpperCase()}). See their gear against the Best-in-Slot list and exactly what to upgrade next.`
   : undefined;
 const ogImage = full ? new URL(`/og/${key.region}/${key.realmSlug}/${key.name}.png`, Astro.url.origin).toString() : undefined;
+// Realm and name are normalized into the key, so every spelling of a
+// character's URL collapses onto one canonical.
+const canonicalPath = `/character/${key.region}/${key.realmSlug}/${key.name}`;
+// Error states and fixture data shouldn't land in search results.
+const noindex = !!error || !full || full.mock;
 ---
 
-<Layout title={title} description={description} accentColor={accent} ogImage={ogImage}>
+<Layout
+  title={title}
+  description={description}
+  accentColor={accent}
+  ogImage={ogImage}
+  canonicalPath={canonicalPath}
+  noindex={noindex}
+>
   <SiteHeader currentPath={Astro.url.pathname} />
 
   {

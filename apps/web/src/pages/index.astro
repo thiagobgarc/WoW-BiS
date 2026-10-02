@@ -2,9 +2,19 @@
 import Layout from '@/layouts/Layout.astro';
 import SiteHeader from '@/components/layout/SiteHeader.astro';
 import { SearchForm } from '@/components/search/SearchForm';
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Mythos',
+    url: new URL('/', Astro.site ?? Astro.url.origin).toString(),
+    description: 'World of Warcraft Best-in-Slot gear planner and spec meta tier lists.',
+  },
+];
 ---
 
-<Layout>
+<Layout jsonLd={jsonLd}>
   <SiteHeader currentPath={Astro.url.pathname} />
 
   <div class="mx-auto max-w-5xl px-6">

@@ -6,14 +6,30 @@ interface Props {
   description?: string;
   accentColor?: string;
   ogImage?: string;
+  /** Path for rel=canonical when the request path isn't the preferred spelling (e.g. case-insensitive routes). */
+  canonicalPath?: string;
+  /** Keep the page out of search indexes — error states, mock data. */
+  noindex?: boolean;
+  /** schema.org objects, each emitted as its own JSON-LD block. */
+  jsonLd?: Record<string, unknown>[];
 }
 
 const {
-  title = 'Mythos — WoW Best-in-Slot Gear Planner',
-  description = 'Look up your character and see exactly what to upgrade, where it drops, and how close you are to Best-in-Slot.',
+  title = 'WoW BiS Gear Planner — See Every Upgrade Left | Mythos',
+  description = 'Look up your World of Warcraft character and see exactly what to upgrade, where each Best-in-Slot item drops, and how close you are to BiS.',
   accentColor,
   ogImage,
+  canonicalPath = Astro.url.pathname,
+  noindex = false,
+  jsonLd = [],
 } = Astro.props;
+
+// Astro.site comes from SITE_URL / Vercel's production host (astro.config.mjs),
+// so preview deployments still point canonicals at production.
+const origin = Astro.site ?? Astro.url.origin;
+const canonical = new URL(canonicalPath, origin).toString();
+// "<" escaped so item or character names can never close the script tag.
+const ldJson = (data: Record<string, unknown>) => JSON.stringify(data).replace(/</g, '\\u003c');
 ---
 
 <html lang="en" style={accentColor ? `--accent: ${accentColor};` : undefined}>
@@ -23,12 +39,19 @@ const {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    {noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonical} />}
+    <meta name="theme-color" content="#121113" />
 
+    <meta property="og:site_name" content="Mythos" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
     {ogImage && <meta property="og:image" content={ogImage} />}
-    <meta name="twitter:card" content="summary_large_image" />
+    {ogImage && <meta property="og:image:width" content="1200" />}
+    {ogImage && <meta property="og:image:height" content="630" />}
+    <meta name="twitter:card" content={ogImage ? 'summary_large_image' : 'summary'} />
+    {jsonLd.map((data) => <script is:inline type="application/ld+json" set:html={ldJson(data)} />)}
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
