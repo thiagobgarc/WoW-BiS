@@ -2,13 +2,12 @@
  * Reads the versioned recommended-talent-build seed JSON from /data/talents.
  * JSON-file-only (no DB fallback) — unlike BiS data, this is small and
  * doesn't need Postgres/seed-script parity; see getRecommendedBuild.ts.
+ * Bundled via import.meta.glob for the same reason as bis/loadSeeds.ts.
  */
-import { readFile } from 'node:fs/promises';
-import path from 'node:path';
-import { specSlug } from '@/lib/bis/loadSeeds';
+import { specSlug } from '@/lib/ingest/specCatalogue';
 import { RecommendedTalentBuildSchema, type RecommendedContentType, type RecommendedTalentBuild } from '@mythos/core/talents';
 
-const DATA_ROOT = path.join(process.cwd(), 'data', 'talents');
+const SEED_FILES = import.meta.glob<unknown>('../../../data/talents/*/*.json', { import: 'default' });
 
 // Mythic+ keeps the original bare filename (no suffix) so the existing
 // seed files under data/talents/<season>/ don't need renaming.
@@ -23,12 +22,12 @@ export async function loadRecommendedBuildFile(
   specName: string,
   contentType: RecommendedContentType = 'mythic-plus',
 ): Promise<RecommendedTalentBuild | null> {
-  const filePath = path.join(DATA_ROOT, season, fileName(className, specName, contentType));
+  const key = `../../../data/talents/${season}/${fileName(className, specName, contentType)}`;
+  const load = SEED_FILES[key];
+  if (!load) return null;
   try {
-    const raw = await readFile(filePath, 'utf-8');
-    return RecommendedTalentBuildSchema.parse(JSON.parse(raw));
+    return RecommendedTalentBuildSchema.parse(await load());
   } catch (err) {
-    if ((err as NodeJS.ErrnoException).code === 'ENOENT') return null;
-    throw new Error(`Invalid talent seed file ${filePath}: ${err instanceof Error ? err.message : String(err)}`);
+    throw new Error(`Invalid talent seed file ${key}: ${err instanceof Error ? err.message : String(err)}`);
   }
 }

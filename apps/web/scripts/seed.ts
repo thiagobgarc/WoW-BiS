@@ -3,11 +3,31 @@
  * Run with `bun run db:seed` (requires DATABASE_URL and migrations applied
  * — run `bun run db:generate && bun run db:migrate` first).
  */
+import { readdir, readFile } from 'node:fs/promises';
+import path from 'node:path';
 import { eq, and } from 'drizzle-orm';
+import { BisListSchema, type BisList } from '@mythos/core/bis';
 import { getDb } from '../src/lib/db/client';
 import { bisEntries, bisLists } from '../src/lib/db/schema';
-import { loadAllSeeds } from '../src/lib/bis/loadSeeds';
 import { CURRENT_SEASON_ID } from '../src/lib/season/seasonConfig';
+
+// Read from disk directly: the app's loader (src/lib/bis/loadSeeds.ts) uses
+// Vite's import.meta.glob, which doesn't exist when tsx runs this script.
+async function loadAllSeeds(season: string): Promise<BisList[]> {
+  const seasonDir = path.join(process.cwd(), 'data', 'bis', season);
+  let files: string[];
+  try {
+    files = await readdir(seasonDir);
+  } catch (err) {
+    if ((err as NodeJS.ErrnoException).code === 'ENOENT') return [];
+    throw err;
+  }
+  const lists: BisList[] = [];
+  for (const file of files.filter((f) => f.endsWith('.json')).sort()) {
+    lists.push(BisListSchema.parse(JSON.parse(await readFile(path.join(seasonDir, file), 'utf-8'))));
+  }
+  return lists;
+}
 
 async function main() {
   const db = getDb();
