@@ -1,46 +1,43 @@
 /**
  * Reads and validates the versioned BiS seed JSON files from /data/bis.
- * Used by the seed script (scripts/seed.ts) to populate Postgres, and as
- * a zero-infra fallback (see getBisList.ts) so the upgrade board works
- * before DATABASE_URL is configured.
+ * Used as the zero-infra fallback (see getBisList.ts) so the upgrade board
+ * works before DATABASE_URL is configured.
+ *
+ * The files are bundled through Vite's import.meta.glob rather than read
+ * from disk: a deployed Vercel function doesn't carry /data and its cwd
+ * isn't apps/web, so a runtime readFile finds nothing there. Each file is
+ * its own lazily-loaded chunk. Scripts run outside Vite (scripts/seed.ts)
+ * read the files from disk themselves.
  */
-import { readdir, readFile } from 'node:fs/promises';
-import path from 'node:path';
 import { BisListSchema, type BisList } from '@mythos/core/bis';
 
-const DATA_ROOT = path.join(process.cwd(), 'data', 'bis');
+export { specSlug } from '@/lib/ingest/specCatalogue';
+import { specSlug } from '@/lib/ingest/specCatalogue';
 
-export function specSlug(className: string, specName: string): string {
-  return `${className.toLowerCase().replace(/\s+/g, '-')}-${specName.toLowerCase().replace(/\s+/g, '-')}`;
+const SEED_FILES = import.meta.glob<unknown>('../../../data/bis/*/*.json', { import: 'default' });
+
+function seedKey(season: string, slug: string): string {
+  return `../../../data/bis/${season}/${slug}.json`;
+}
+
+function parse(key: string, raw: unknown): BisList {
+  try {
+    return BisListSchema.parse(raw);
+  } catch (err) {
+    throw new Error(`Invalid BiS seed file ${key}: ${err instanceof Error ? err.message : String(err)}`);
+  }
 }
 
 export async function loadSeedFile(season: string, className: string, specName: string): Promise<BisList | null> {
-  const filePath = path.join(DATA_ROOT, season, `${specSlug(className, specName)}.json`);
-  try {
-    const raw = await readFile(filePath, 'utf-8');
-    return BisListSchema.parse(JSON.parse(raw));
-  } catch (err) {
-    if ((err as NodeJS.ErrnoException).code === 'ENOENT') return null;
-    throw new Error(`Invalid BiS seed file ${filePath}: ${err instanceof Error ? err.message : String(err)}`);
-  }
+  const key = seedKey(season, specSlug(className, specName));
+  const load = SEED_FILES[key];
+  return load ? parse(key, await load()) : null;
 }
 
 export async function loadAllSeeds(season: string): Promise<BisList[]> {
-  const seasonDir = path.join(DATA_ROOT, season);
-  let files: string[];
-  try {
-    files = await readdir(seasonDir);
-  } catch (err) {
-    if ((err as NodeJS.ErrnoException).code === 'ENOENT') return [];
-    throw err;
-  }
-
-  const lists: BisList[] = [];
-  for (const file of files.filter((f) => f.endsWith('.json'))) {
-    const raw = await readFile(path.join(seasonDir, file), 'utf-8');
-    lists.push(BisListSchema.parse(JSON.parse(raw)));
-  }
-  return lists;
+  const prefix = `../../../data/bis/${season}/`;
+  const keys = Object.keys(SEED_FILES).filter((k) => k.startsWith(prefix)).sort();
+  return Promise.all(keys.map(async (k) => parse(k, await SEED_FILES[k]!())));
 }
 
 /** Which specs currently have seed data, for surfacing "not yet seeded" in the UI. */

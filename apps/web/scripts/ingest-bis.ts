@@ -17,7 +17,7 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { BisListSchema } from '@mythos/core/bis';
-import { specSlug } from '../src/lib/bis/loadSeeds';
+import { specSlug } from '../src/lib/ingest/specCatalogue';
 import { CURRENT_SEASON_ID, seasonConfig } from '../src/lib/season/seasonConfig';
 import { runIngest } from '../src/lib/ingest/runIngest';
 
