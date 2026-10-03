@@ -44,6 +44,7 @@ import { slotLabel } from '@mythos/core/utils';
 
 import { colors } from '@/theme';
 import { setEffectText } from '../model/setEffect';
+import { isWowheadUrl } from '../model/externalLinks';
 import { ItemIcon } from './ItemIcon';
 
 export interface SlotSelection {
@@ -248,6 +249,12 @@ function WowheadLink({ url, itemName }: { url: string; itemName: string }) {
       accessibilityLabel={`View ${itemName} on Wowhead`}
       accessibilityHint="Opens in your browser"
       onPress={() => {
+        // The URL comes from the API, and openURL will launch any scheme —
+        // other apps' deep links included — so only ever hand it Wowhead.
+        if (!isWowheadUrl(url)) {
+          AccessibilityInfo.announceForAccessibility('Could not open Wowhead.');
+          return;
+        }
         // The system browser, not a WebView: nothing here needs to observe
         // the session, and an in-app browser is a place a login form could
         // appear inside our own chrome.
