@@ -10,6 +10,8 @@
  *   - Trinkets and weapons are ranked on stat fit and item level. Their real
  *     value is in procs and on-use effects, which only a sim can evaluate.
  *     Those entries carry a note saying so.
+ *   - Dual wielding. One-hand weapons rank in the main-hand slot only, so a
+ *     dual-wield spec's second weapon is not listed as an off-hand.
  *   - PvP gear has no journal encounter to read, so no PvP entries are
  *     derived at all. The old hand-authored seeds had some; they were built
  *     on item ids that do not exist, so losing them loses nothing real.
@@ -199,7 +201,7 @@ export function deriveBisList(
   // otherwise rank as a normal candidate. Exclude tier that is not this
   // spec's: a Death Knight should never be told to chase a Mage's set.
   const usable = candidates.filter(
-    (c) => isUsableBySpec(c.item, spec.armorType) && (!c.isTierOfSomeSpec || isTier(c)),
+    (c) => isUsableBySpec(c.item, spec) && (!c.isTierOfSomeSpec || isTier(c)),
   );
 
   for (const contentType of ['raid', 'mythic-plus'] as const) {

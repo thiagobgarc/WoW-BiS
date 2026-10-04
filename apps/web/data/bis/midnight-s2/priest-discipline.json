@@ -404,40 +404,23 @@
       "slot": "main_hand",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268202,
-      "itemName": "Jaw of the Shackled Goddess",
+      "itemId": 268205,
+      "itemName": "Venomancer's Winged Channeler",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
+        "boss": "Vashnik the Malignant",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 100
+      "statPriorityFit": 76
     },
     {
       "slot": "off_hand",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 268196,
-      "itemName": "Venom-Slashed Scuteward",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 80
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "raid",
-      "rank": 2,
       "itemId": 268197,
       "itemName": "Spine of the Hissing Abyss",
       "itemLevel": 318,
@@ -864,24 +847,6 @@
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 273795,
-      "itemName": "Coiled Fangstone",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Altar of Fangs",
-        "boss": "Rav'i",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 50,
-      "notes": "Ranked on stat fit and item level only — trinket procs need a sim to evaluate."
-    },
-    {
-      "slot": "trinket",
-      "contentType": "mythic-plus",
-      "rank": 3,
       "itemId": 250215,
       "itemName": "Freightrunner's Flask",
       "itemLevel": 311,
@@ -897,16 +862,34 @@
       "notes": "Ranked on stat fit and item level only — trinket procs need a sim to evaluate."
     },
     {
-      "slot": "main_hand",
+      "slot": "trinket",
       "contentType": "mythic-plus",
-      "rank": 1,
-      "itemId": 273784,
-      "itemName": "Ancestral Amani Recurve",
+      "rank": 3,
+      "itemId": 273794,
+      "itemName": "Knot of Writhing Serpents",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
         "dungeon": "Altar of Fangs",
-        "boss": "Zul'jan",
+        "boss": "The Writhing Coil",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 50,
+      "notes": "Ranked on stat fit and item level only — trinket procs need a sim to evaluate."
+    },
+    {
+      "slot": "main_hand",
+      "contentType": "mythic-plus",
+      "rank": 1,
+      "itemId": 251188,
+      "itemName": "Doompetal",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "The Blinding Vale",
+        "boss": "Ikuzz the Light Hunter",
         "keyLevel": 10
       },
       "tierPiece": false,
@@ -917,13 +900,13 @@
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 159643,
-      "itemName": "Crossbow of Forgotten Majesty",
+      "itemId": 159636,
+      "itemName": "Staff of the Lightning Serpent",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Kings' Rest",
-        "boss": "The Council of Tribes",
+        "dungeon": "Temple of Sethraliss",
+        "boss": "Adderis and Aspix",
         "keyLevel": 10
       },
       "tierPiece": false,
@@ -934,23 +917,6 @@
       "slot": "off_hand",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 251150,
-      "itemName": "Tempest's Shelter",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Den of Nalorakk",
-        "boss": "Sentinel of Winter",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 85
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 251191,
       "itemName": "Luminescent Sprout",
       "itemLevel": 311,
@@ -963,6 +929,23 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 80
+    },
+    {
+      "slot": "off_hand",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 159667,
+      "itemName": "Vessel of Last Rites",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Kings' Rest",
+        "boss": "Mchimba the Embalmer",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 73
     }
   ]
 }

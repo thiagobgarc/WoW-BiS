@@ -323,23 +323,6 @@
       "slot": "main_hand",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 268215,
-      "itemName": "Abyssal Broodfiend's Bardiche",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 100
-    },
-    {
-      "slot": "main_hand",
-      "contentType": "raid",
-      "rank": 2,
       "itemId": 268203,
       "itemName": "Hexing Spiritrender",
       "itemLevel": 318,
@@ -347,6 +330,23 @@
         "type": "raid",
         "instance": "The Venomous Abyss",
         "boss": "Nek'zali the Soulcoiler",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 82
+    },
+    {
+      "slot": "main_hand",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268210,
+      "itemName": "Malevolent Spiritcudgel",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Lost Explorers",
         "difficulty": "mythic"
       },
       "tierPiece": false,
@@ -369,23 +369,6 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 74
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268196,
-      "itemName": "Venom-Slashed Scuteward",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 27
     },
     {
       "slot": "head",
@@ -784,24 +767,6 @@
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 273795,
-      "itemName": "Coiled Fangstone",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Altar of Fangs",
-        "boss": "Rav'i",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 50,
-      "notes": "Ranked on stat fit and item level only — trinket procs need a sim to evaluate."
-    },
-    {
-      "slot": "trinket",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 250215,
       "itemName": "Freightrunner's Flask",
       "itemLevel": 311,
@@ -819,7 +784,7 @@
     {
       "slot": "trinket",
       "contentType": "mythic-plus",
-      "rank": 3,
+      "rank": 2,
       "itemId": 273794,
       "itemName": "Knot of Writhing Serpents",
       "itemLevel": 311,
@@ -827,6 +792,24 @@
         "type": "dungeon",
         "dungeon": "Altar of Fangs",
         "boss": "The Writhing Coil",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 50,
+      "notes": "Ranked on stat fit and item level only — trinket procs need a sim to evaluate."
+    },
+    {
+      "slot": "trinket",
+      "contentType": "mythic-plus",
+      "rank": 3,
+      "itemId": 250214,
+      "itemName": "Lightspire Core",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "The Blinding Vale",
+        "boss": "Lightwarden Ruia",
         "keyLevel": 10
       },
       "tierPiece": false,
@@ -855,8 +838,8 @@
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 273793,
-      "itemName": "Hydraspine Twinblade",
+      "itemId": 273780,
+      "itemName": "Venom-Etched Crescent",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
@@ -866,29 +849,12 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 84
+      "statPriorityFit": 70
     },
     {
       "slot": "off_hand",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 193754,
-      "itemName": "Drake Rider's Stecktarge",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Ruby Life Pools",
-        "boss": "Kyrakka and Erkhart Stormvein",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 78
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 271681,
       "itemName": "Perennial Frostbound Charm",
       "itemLevel": 311,
@@ -901,6 +867,23 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 75
+    },
+    {
+      "slot": "off_hand",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 251191,
+      "itemName": "Luminescent Sprout",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "The Blinding Vale",
+        "boss": "Lightwarden Ruia",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 66
     }
   ]
 }

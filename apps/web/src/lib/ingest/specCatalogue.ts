@@ -54,7 +54,7 @@ export const SPEC_CATALOGUE: SpecProfile[] = [
   { class: 'Death Knight', spec: 'Frost', role: 'dps', armorType: 'plate', primaryStat: 'strength', statPriority: ['crit', 'mastery', 'haste', 'versatility'], provenance: C },
   { class: 'Death Knight', spec: 'Unholy', role: 'dps', armorType: 'plate', primaryStat: 'strength', statPriority: ['haste', 'mastery', 'crit', 'versatility'], provenance: D },
 
-  { class: 'Demon Hunter', spec: 'Devourer', role: 'dps', armorType: 'leather', primaryStat: 'agility', statPriority: ['mastery', 'crit', 'haste', 'versatility'], provenance: D },
+  { class: 'Demon Hunter', spec: 'Devourer', role: 'dps', armorType: 'leather', primaryStat: 'intellect', statPriority: ['mastery', 'crit', 'haste', 'versatility'], provenance: D },
   { class: 'Demon Hunter', spec: 'Havoc', role: 'dps', armorType: 'leather', primaryStat: 'agility', statPriority: ['crit', 'haste', 'mastery', 'versatility'], provenance: D },
   { class: 'Demon Hunter', spec: 'Vengeance', role: 'tank', armorType: 'leather', primaryStat: 'agility', statPriority: ['versatility', 'haste', 'mastery', 'crit'], provenance: D },
 

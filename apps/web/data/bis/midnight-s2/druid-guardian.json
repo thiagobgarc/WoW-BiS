@@ -322,13 +322,13 @@
       "slot": "trinket",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 270161,
-      "itemName": "Fang of Umbral Malignance",
+      "itemId": 270160,
+      "itemName": "First Mate's Shellward",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Vashnik the Malignant",
+        "boss": "The Lost Explorers",
         "difficulty": "mythic"
       },
       "tierPiece": false,
@@ -369,40 +369,6 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 58
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "raid",
-      "rank": 1,
-      "itemId": 268197,
-      "itemName": "Spine of the Hissing Abyss",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Entombed Sentinels",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 57
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268196,
-      "itemName": "Venom-Slashed Scuteward",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 33
     },
     {
       "slot": "head",
@@ -799,24 +765,6 @@
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 273795,
-      "itemName": "Coiled Fangstone",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Altar of Fangs",
-        "boss": "Rav'i",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 50,
-      "notes": "Ranked on stat fit and item level only — trinket procs need a sim to evaluate."
-    },
-    {
-      "slot": "trinket",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 250215,
       "itemName": "Freightrunner's Flask",
       "itemLevel": 311,
@@ -834,14 +782,32 @@
     {
       "slot": "trinket",
       "contentType": "mythic-plus",
-      "rank": 3,
-      "itemId": 273794,
-      "itemName": "Knot of Writhing Serpents",
+      "rank": 2,
+      "itemId": 250214,
+      "itemName": "Lightspire Core",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Altar of Fangs",
-        "boss": "The Writhing Coil",
+        "dungeon": "The Blinding Vale",
+        "boss": "Lightwarden Ruia",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 50,
+      "notes": "Ranked on stat fit and item level only — trinket procs need a sim to evaluate."
+    },
+    {
+      "slot": "trinket",
+      "contentType": "mythic-plus",
+      "rank": 3,
+      "itemId": 159617,
+      "itemName": "Lustrous Golden Plumage",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Kings' Rest",
+        "boss": "The Golden Serpent",
         "keyLevel": 10
       },
       "tierPiece": false,
@@ -853,42 +819,8 @@
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 251230,
-      "itemName": "Charonic Crescent",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Charonus",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 86
-    },
-    {
-      "slot": "main_hand",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 158714,
-      "itemName": "Swarm's Edge",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Temple of Sethraliss",
-        "boss": "Merektha",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 86
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "mythic-plus",
-      "rank": 1,
-      "itemId": 193754,
-      "itemName": "Drake Rider's Stecktarge",
+      "itemId": 193756,
+      "itemName": "Skyferno Rondel",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
@@ -898,24 +830,24 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 87
+      "statPriorityFit": 78
     },
     {
-      "slot": "off_hand",
+      "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 159664,
-      "itemName": "Bulwark of Brimming Potential",
+      "itemId": 251143,
+      "itemName": "Grim Harvest Gloves",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Temple of Sethraliss",
-        "boss": "Galvazzt",
+        "dungeon": "Den of Nalorakk",
+        "boss": "The Hoardmonger",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60
+      "statPriorityFit": 66
     }
   ]
 }

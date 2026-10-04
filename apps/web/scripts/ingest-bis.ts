@@ -51,11 +51,26 @@ async function main(): Promise<void> {
   // from every list, which still looks like a successful run. Fail instead.
   // A spec Blizzard knows and the catalogue does not gets no BiS list at all,
   // and nothing else in the run would say so.
-  if (report.specsMissingFromCatalogue.length > 0 || report.specsUnknownToBlizzard.length > 0) {
+  if (
+    report.specsMissingFromCatalogue.length > 0 ||
+    report.specsUnknownToBlizzard.length > 0 ||
+    report.primaryStatMismatches.length > 0
+  ) {
     console.error('Spec catalogue is out of sync with Blizzard:');
     for (const s of report.specsMissingFromCatalogue) console.error(`  missing from specCatalogue.ts: ${s}`);
     for (const s of report.specsUnknownToBlizzard) console.error(`  not published by Blizzard: ${s}`);
+    for (const s of report.primaryStatMismatches) console.error(`  wrong primary stat: ${s}`);
     console.error('\nUpdate src/lib/ingest/specCatalogue.ts and re-run.');
+    process.exitCode = 1;
+    return;
+  }
+
+  // weaponProficiency.ts lets unknown weapon types through to every class,
+  // which is only safe if a human then adds the rule.
+  if (report.unknownWeaponSubclasses.length > 0) {
+    console.error('Weapon types with no proficiency rule:');
+    for (const s of report.unknownWeaponSubclasses) console.error(`  - ${s}`);
+    console.error('\nAdd them to src/lib/ingest/weaponProficiency.ts and re-run.');
     process.exitCode = 1;
     return;
   }

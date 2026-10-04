@@ -510,6 +510,7 @@ export const PlayableSpecSchema = z
     name: z.string(),
     playable_class: z.object({ id: z.number(), name: z.string() }).loose().optional(),
     role: z.object({ type: z.string() }).loose().optional(),
+    primary_stat_type: z.object({ type: z.string() }).loose().optional(),
   })
   .loose();
-export type PlayableSpec = z.infer<typeof PlayableSpecSchema>;
+export type PlayableSpec =z.infer<typeof PlayableSpecSchema>;

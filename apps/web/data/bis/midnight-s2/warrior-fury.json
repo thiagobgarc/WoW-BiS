@@ -323,8 +323,8 @@
       "slot": "main_hand",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 271092,
-      "itemName": "Jan'thrazet, the Soul Fang",
+      "itemId": 268202,
+      "itemName": "Jaw of the Shackled Goddess",
       "itemLevel": 318,
       "source": {
         "type": "raid",
@@ -340,18 +340,18 @@
       "slot": "main_hand",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268202,
-      "itemName": "Jaw of the Shackled Goddess",
+      "itemId": 268214,
+      "itemName": "Malignant Toothed Edge",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
+        "boss": "Vashnik the Malignant",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 100
+      "statPriorityFit": 88
     },
     {
       "slot": "off_hand",
@@ -369,23 +369,6 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 80
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268197,
-      "itemName": "Spine of the Hissing Abyss",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Entombed Sentinels",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 76
     },
     {
       "slot": "head",
@@ -818,13 +801,13 @@
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 250215,
-      "itemName": "Freightrunner's Flask",
+      "itemId": 250243,
+      "itemName": "Manaheart's Binding Flame",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
         "dungeon": "Murder Row",
-        "boss": "Zaen Bladesorrow",
+        "boss": "Kystia Manaheart",
         "keyLevel": 10
       },
       "tierPiece": false,
@@ -836,13 +819,13 @@
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 273784,
-      "itemName": "Ancestral Amani Recurve",
+      "itemId": 251218,
+      "itemName": "Taz'Rah's Cosmic Edge",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Altar of Fangs",
-        "boss": "Zul'jan",
+        "dungeon": "Voidscar Arena",
+        "boss": "Taz'Rah",
         "keyLevel": 10
       },
       "tierPiece": false,
@@ -853,18 +836,18 @@
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 159643,
-      "itemName": "Crossbow of Forgotten Majesty",
+      "itemId": 193755,
+      "itemName": "Backdraft Cleaver",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Kings' Rest",
-        "boss": "The Council of Tribes",
+        "dungeon": "Ruby Life Pools",
+        "boss": "Kyrakka and Erkhart Stormvein",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 85
+      "statPriorityFit": 78
     },
     {
       "slot": "off_hand",
@@ -887,18 +870,18 @@
       "slot": "off_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 251191,
-      "itemName": "Luminescent Sprout",
+      "itemId": 193754,
+      "itemName": "Drake Rider's Stecktarge",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "The Blinding Vale",
-        "boss": "Lightwarden Ruia",
+        "dungeon": "Ruby Life Pools",
+        "boss": "Kyrakka and Erkhart Stormvein",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 80
+      "statPriorityFit": 36
     }
   ]
 }

@@ -19,7 +19,8 @@ import { buildCandidates, collectLootEntries, deriveBisList, type LootEntry } fr
 import { normaliseName } from './resolveSeasonContent';
 import { SPEC_CATALOGUE, findSpec } from './specCatalogue';
 
-type StatTuple = [string, number];
+/** [type, value, negated?] — negated mirrors Blizzard's greyed-out stats. */
+type StatTuple = [string, number] | [string, number, boolean];
 
 function item(overrides: Partial<IngestItem> & { id: number }, stats: StatTuple[] = []): IngestItem {
   const { preview_item: previewOverride, ...rest } = overrides;
@@ -30,7 +31,7 @@ function item(overrides: Partial<IngestItem> & { id: number }, stats: StatTuple[
     inventory_type: { type: 'HEAD' },
     ...rest,
     preview_item: {
-      stats: stats.map(([type, value]) => ({ type: { type }, value })),
+      stats: stats.map(([type, value, negated]) => ({ type: { type }, value, ...(negated ? { is_negated: true } : {}) })),
       set: previewOverride?.set,
     },
   } as IngestItem;
@@ -48,6 +49,20 @@ describe('parseItemStats', () => {
     const raw = item({ id: 2 }, [['CRIT_RATING', 70]]);
     raw.preview_item!.stats![0]!.is_negated = true;
     expect(parseItemStats(raw).secondaryEmpty).toBe(true);
+  });
+
+  /**
+   * Blizzard renders static tooltips for an intellect viewer, so an agility
+   * dagger arrives with AGILITY negated and nothing else. It still IS an
+   * agility dagger; dropping the stat made it look primary-less.
+   */
+  it('keeps negated primaries as options while excluding them from budget', () => {
+    const dagger = parseItemStats(item({ id: 8 }, [['AGILITY', 120, true], ['HASTE_RATING', 40]]));
+    expect(dagger.primary).toEqual({});
+    expect(dagger.primaryOptions).toEqual(['agility']);
+
+    const shield = parseItemStats(item({ id: 9 }, [['INTELLECT', 90], ['STRENGTH', 90, true]]));
+    expect(shield.primaryOptions.sort()).toEqual(['intellect', 'strength']);
   });
 });
 
@@ -96,16 +111,100 @@ describe('slot and gear mapping', () => {
 });
 
 describe('isUsableBySpec', () => {
+  const ret = findSpec('Paladin', 'Retribution')!; // plate, strength
+  const arcane = findSpec('Mage', 'Arcane')!; // cloth, intellect
+  const elemental = findSpec('Shaman', 'Elemental')!; // mail, intellect
+  const enhancement = findSpec('Shaman', 'Enhancement')!; // mail, agility
+
   it('gates armor on armor class', () => {
     const plate = item({ id: 15, item_subclass: { name: 'Plate' } });
-    expect(isUsableBySpec(plate, 'plate')).toBe(true);
-    expect(isUsableBySpec(plate, 'cloth')).toBe(false);
+    expect(isUsableBySpec(plate, ret)).toBe(true);
+    expect(isUsableBySpec(plate, arcane)).toBe(false);
   });
 
-  it('lets jewellery and weapons through, which carry no armor class', () => {
+  it('lets jewellery through, which carries no armor class or primary', () => {
     const ring = item({ id: 16, inventory_type: { type: 'FINGER' }, item_subclass: { name: 'Miscellaneous' } });
-    expect(isUsableBySpec(ring, 'plate')).toBe(true);
-    expect(isUsableBySpec(ring, 'cloth')).toBe(true);
+    expect(isUsableBySpec(ring, ret)).toBe(true);
+    expect(isUsableBySpec(ring, arcane)).toBe(true);
+  });
+
+  /** Regression: Enhancement was offered Elemental's intellect staff. */
+  it('gates weapons on primary stat, so same-armor specs do not share them', () => {
+    const staff = item({ id: 18, inventory_type: { type: 'TWOHWEAPON' }, item_subclass: { name: 'Staff' } }, [
+      ['INTELLECT', 200],
+      ['HASTE_RATING', 80],
+    ]);
+    expect(isUsableBySpec(staff, elemental)).toBe(true);
+    expect(isUsableBySpec(staff, enhancement)).toBe(false);
+  });
+
+  it('reads negated primaries when gating, as Blizzard reports agility and strength weapons', () => {
+    const fist = item({ id: 19, inventory_type: { type: 'WEAPON' }, item_subclass: { name: 'Fist Weapon' } }, [
+      ['AGILITY', 120, true],
+      ['HASTE_RATING', 40],
+    ]);
+    expect(isUsableBySpec(fist, enhancement)).toBe(true);
+    expect(isUsableBySpec(fist, elemental)).toBe(false);
+  });
+
+  it('gates off-hands and trinkets on primary stat too', () => {
+    const shield = item({ id: 20, inventory_type: { type: 'SHIELD' }, item_subclass: { name: 'Shield' } }, [
+      ['INTELLECT', 90],
+      ['STRENGTH', 90, true],
+    ]);
+    expect(isUsableBySpec(shield, elemental)).toBe(true);
+    expect(isUsableBySpec(shield, ret)).toBe(true);
+    expect(isUsableBySpec(shield, enhancement)).toBe(false);
+
+    const intTrinket = item({ id: 21, inventory_type: { type: 'TRINKET' } }, [['INTELLECT', 150]]);
+    expect(isUsableBySpec(intTrinket, ret)).toBe(false);
+  });
+
+  /** Regression: once primary was enforced, Enhancement got bows and guns. */
+  it('rejects weapon types the class cannot equip, even on the right primary', () => {
+    const bow = item({ id: 23, inventory_type: { type: 'RANGED' }, item_subclass: { name: 'Bow' } }, [['AGILITY', 200, true]]);
+    expect(isUsableBySpec(bow, enhancement)).toBe(false);
+    expect(isUsableBySpec(bow, findSpec('Hunter', 'Marksmanship')!)).toBe(true);
+
+    const sword = item({ id: 24, inventory_type: { type: 'WEAPON' }, item_subclass: { name: 'Sword' } }, [['INTELLECT', 120]]);
+    expect(isUsableBySpec(sword, elemental)).toBe(false);
+    expect(isUsableBySpec(sword, arcane)).toBe(true);
+  });
+
+  it('enforces one-hand-only proficiencies', () => {
+    const twoHandSword = item({ id: 25, inventory_type: { type: 'TWOHWEAPON' }, item_subclass: { name: 'Sword' } }, [['AGILITY', 200, true]]);
+    expect(isUsableBySpec(twoHandSword, findSpec('Rogue', 'Outlaw')!)).toBe(false);
+    expect(isUsableBySpec(twoHandSword, findSpec('Hunter', 'Survival')!)).toBe(true);
+  });
+
+  it('splits Hunter specs between ranged and melee weapons', () => {
+    const polearm = item({ id: 26, inventory_type: { type: 'TWOHWEAPON' }, item_subclass: { name: 'Polearm' } }, [['AGILITY', 200, true]]);
+    const gun = item({ id: 27, inventory_type: { type: 'RANGEDRIGHT' }, item_subclass: { name: 'Gun' } }, [['AGILITY', 200, true]]);
+    const survival = findSpec('Hunter', 'Survival')!;
+    const beastMastery = findSpec('Hunter', 'Beast Mastery')!;
+    expect(isUsableBySpec(polearm, survival)).toBe(true);
+    expect(isUsableBySpec(gun, survival)).toBe(false);
+    expect(isUsableBySpec(polearm, beastMastery)).toBe(false);
+    expect(isUsableBySpec(gun, beastMastery)).toBe(true);
+  });
+
+  /** A class missing from the proficiency table would silently lose every weapon. */
+  it('leaves every spec at least one weapon type', () => {
+    const weapons = [
+      item({ id: 28, inventory_type: { type: 'WEAPON' }, item_subclass: { name: 'Sword' } }),
+      item({ id: 29, inventory_type: { type: 'TWOHWEAPON' }, item_subclass: { name: 'Staff' } }),
+      item({ id: 30, inventory_type: { type: 'TWOHWEAPON' }, item_subclass: { name: 'Polearm' } }),
+      item({ id: 31, inventory_type: { type: 'RANGED' }, item_subclass: { name: 'Bow' } }),
+      item({ id: 32, inventory_type: { type: 'WEAPON' }, item_subclass: { name: 'Fist Weapon' } }),
+    ];
+    for (const spec of SPEC_CATALOGUE) {
+      expect(weapons.some((w) => isUsableBySpec(w, spec)), `${spec.class} ${spec.spec}`).toBe(true);
+    }
+  });
+
+  it('lets a trinket with no primary stat through for every spec', () => {
+    const proc = item({ id: 22, inventory_type: { type: 'TRINKET' } }, [['VERSATILITY', 60]]);
+    for (const spec of [ret, arcane, elemental, enhancement]) expect(isUsableBySpec(proc, spec)).toBe(true);
   });
 
   /**
@@ -116,7 +215,7 @@ describe('isUsableBySpec', () => {
    */
   it('does not filter plate reporting INTELLECT away from a strength spec', () => {
     const plate = item({ id: 17, item_subclass: { name: 'Plate' } }, [['INTELLECT', 65], ['CRIT_RATING', 31]]);
-    expect(isUsableBySpec(plate, 'plate')).toBe(true);
+    expect(isUsableBySpec(plate, ret)).toBe(true);
   });
 });
 
