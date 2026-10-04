@@ -159,14 +159,17 @@ async function checkTalents(): Promise<void> {
 
 function checkSeasonConfig(): void {
   console.log(`\nseasonConfig`);
-  const withTier = Object.keys(seasonConfig.tierSets).length;
-  if (withTier < SPEC_CATALOGUE.length) {
-    note(
-      `tierSets covers ${withTier} of ${SPEC_CATALOGUE.length} specs — the rest can carry no tier pieces ` +
-        'in their derived BiS lists',
-    );
+  const classes = [...new Set(SPEC_CATALOGUE.map((s) => s.class))];
+  const missing = classes.filter((c) => !seasonConfig.classTierSets[c]);
+  if (missing.length > 0) {
+    note(`classTierSets has no set for ${missing.join(', ')} — those specs carry no tier pieces`);
   } else {
-    ok('tierSets covers every spec');
+    ok('classTierSets covers every class');
+  }
+
+  const withBonuses = Object.keys(seasonConfig.tierSets).length;
+  if (withBonuses < SPEC_CATALOGUE.length) {
+    note(`tier bonus text is researched for ${withBonuses} of ${SPEC_CATALOGUE.length} specs`);
   }
 }
 

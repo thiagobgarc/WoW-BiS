@@ -14,6 +14,7 @@ import { buildCandidates, buildTierCandidates, collectLootEntries, deriveBisList
 import { resolveSeasonContent } from './resolveSeasonContent';
 import { SPEC_CATALOGUE, specSlug, type SpecProfile } from './specCatalogue';
 import { resolveTierSets } from './tierSets';
+import { KNOWN_WEAPON_SUBCLASSES } from './weaponProficiency';
 
 /** Blizzard allows 100 req/s; this stays far enough under to be a good citizen. */
 const CONCURRENCY = 8;
@@ -65,6 +66,10 @@ export interface IngestReport {
   specsMissingFromCatalogue: string[];
   /** Specs the catalogue lists that Blizzard does not publish. Fatal. */
   specsUnknownToBlizzard: string[];
+  /** Specs whose catalogue primary stat disagrees with Blizzard's. Fatal. */
+  primaryStatMismatches: string[];
+  /** Weapon subclasses weaponProficiency.ts has no rule for. Fatal. */
+  unknownWeaponSubclasses: string[];
 }
 
 export interface IngestResult {
@@ -100,26 +105,39 @@ function reportForSpec(spec: SpecProfile, list: BisList): SpecReport {
  * spec produces no BiS list and no error, which is indistinguishable from a
  * clean run — exactly the failure mode worth paying a few cached requests to
  * rule out.
+ *
+ * Primary stat is checked for the same reason: the catalogue had Devourer as
+ * agility when Blizzard says intellect, which would have filtered its whole
+ * weapon and trinket pool down to the wrong items without any error.
  */
 export async function verifyCatalogue(
   region: string,
   specs: SpecProfile[],
-): Promise<{ missingFromCatalogue: string[]; unknownToBlizzard: string[] }> {
+): Promise<{ missingFromCatalogue: string[]; unknownToBlizzard: string[]; primaryStatMismatches: string[] }> {
   const index = await getPlayableSpecIndex(region);
   const resolved = await mapWithConcurrency(index.character_specializations, CONCURRENCY, (s) =>
     getPlayableSpec(region, s.id),
   );
 
   const blizzard = new Set<string>();
+  const primaryStatMismatches: string[] = [];
   for (const spec of resolved) {
     if (!spec.playable_class) continue; // pet/NPC specs carry no class
-    blizzard.add(specSlug(spec.playable_class.name, spec.name));
+    const slug = specSlug(spec.playable_class.name, spec.name);
+    blizzard.add(slug);
+
+    const apiPrimary = spec.primary_stat_type?.type.toLowerCase();
+    const local = specs.find((s) => specSlug(s.class, s.spec) === slug);
+    if (local && apiPrimary && local.primaryStat !== apiPrimary) {
+      primaryStatMismatches.push(`${slug}: catalogue ${local.primaryStat}, Blizzard ${apiPrimary}`);
+    }
   }
   const local = new Set(specs.map((s) => specSlug(s.class, s.spec)));
 
   return {
     missingFromCatalogue: [...blizzard].filter((s) => !local.has(s)),
     unknownToBlizzard: [...local].filter((s) => !blizzard.has(s)),
+    primaryStatMismatches,
   };
 }
 
@@ -195,6 +213,15 @@ export async function runIngest(
       specsWithoutTierSet: tiers.specsWithoutTierSet,
       specsMissingFromCatalogue: catalogue.missingFromCatalogue,
       specsUnknownToBlizzard: catalogue.unknownToBlizzard,
+      primaryStatMismatches: catalogue.primaryStatMismatches,
+      unknownWeaponSubclasses: [
+        ...new Set(
+          candidates
+            .filter((c) => c.slot === 'main_hand' || c.slot === 'off_hand')
+            .map((c) => c.item.item_subclass?.name ?? '(none)')
+            .filter((name) => !KNOWN_WEAPON_SUBCLASSES.has(name)),
+        ),
+      ],
     },
   };
 }

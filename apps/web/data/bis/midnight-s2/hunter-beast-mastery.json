@@ -386,8 +386,8 @@
       "slot": "main_hand",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 268215,
-      "itemName": "Abyssal Broodfiend's Bardiche",
+      "itemId": 268207,
+      "itemName": "Caustic Repose Greatbow",
       "itemLevel": 318,
       "source": {
         "type": "raid",
@@ -397,48 +397,14 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 100
+      "statPriorityFit": 65
     },
     {
       "slot": "main_hand",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268203,
-      "itemName": "Hexing Spiritrender",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 90
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "raid",
-      "rank": 1,
-      "itemId": 268197,
-      "itemName": "Spine of the Hissing Abyss",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Entombed Sentinels",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 81
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268196,
-      "itemName": "Venom-Slashed Scuteward",
+      "itemId": 268200,
+      "itemName": "Gebbo's Backup Blaster",
       "itemLevel": 318,
       "source": {
         "type": "raid",
@@ -448,7 +414,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 48
+      "statPriorityFit": 59
     },
     {
       "slot": "head",
@@ -882,13 +848,13 @@
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 273795,
-      "itemName": "Coiled Fangstone",
+      "itemId": 250215,
+      "itemName": "Freightrunner's Flask",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Altar of Fangs",
-        "boss": "Rav'i",
+        "dungeon": "Murder Row",
+        "boss": "Zaen Bladesorrow",
         "keyLevel": 10
       },
       "tierPiece": false,
@@ -900,69 +866,35 @@
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 159645,
-      "itemName": "Headcracker of Supplication",
+      "itemId": 273784,
+      "itemName": "Ancestral Amani Recurve",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Kings' Rest",
-        "boss": "Dazar, The First King",
+        "dungeon": "Altar of Fangs",
+        "boss": "Zul'jan",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 86
+      "statPriorityFit": 65
     },
     {
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 251186,
-      "itemName": "Thorntalon Edge",
+      "itemId": 159643,
+      "itemName": "Crossbow of Forgotten Majesty",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "The Blinding Vale",
-        "boss": "Ikuzz the Light Hunter",
+        "dungeon": "Kings' Rest",
+        "boss": "The Council of Tribes",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 85
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "mythic-plus",
-      "rank": 1,
-      "itemId": 271681,
-      "itemName": "Perennial Frostbound Charm",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Den of Nalorakk",
-        "boss": "Sentinel of Winter",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 85
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 251191,
-      "itemName": "Luminescent Sprout",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "The Blinding Vale",
-        "boss": "Lightwarden Ruia",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 74
+      "statPriorityFit": 65
     }
   ]
 }

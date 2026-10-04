@@ -18,9 +18,15 @@ const CURATED_SPECS = [
   { class: 'Priest', spec: 'Discipline' },
 ];
 
+/**
+ * off_hand is not here: two-hander and ranged specs legitimately have no
+ * off-hand target. It used to be, and every spec passed only because agility
+ * and strength specs were all handed an intellect off-hand frill. The
+ * weapon-setup test below covers off_hand instead.
+ */
 const SINGULAR_SLOTS = [
   'head', 'neck', 'shoulder', 'back', 'chest', 'wrist',
-  'hands', 'waist', 'legs', 'feet', 'main_hand', 'off_hand',
+  'hands', 'waist', 'legs', 'feet', 'main_hand',
 ];
 
 describe('BiS seed files', () => {
@@ -58,6 +64,44 @@ describe('BiS seed files', () => {
         const hasRank1 = list.entries.some((e) => e.slot === slot && e.rank === 1);
         expect(hasRank1, `${list.class} ${list.spec} has no rank-1 entry for ${slot}`).toBe(true);
       }
+    }
+  });
+
+  /**
+   * Regression: Enhancement Shaman's list was a copy of Elemental's, intellect
+   * weapons included. Some sharing is legitimate (an INT/AGI warglaive suits
+   * both Devourer and Havoc), so this asserts the lists differ, and leaves
+   * per-item primary checks to isUsableBySpec's unit tests.
+   */
+  it('never gives specs with different primary stats the same weapons', async () => {
+    const lists = await loadAllSeeds(CURRENT_SEASON_ID);
+    const weapons = (cls: string, spec: string) =>
+      JSON.stringify(
+        lists
+          .find((l) => l.class === cls && l.spec === spec)!
+          .entries.filter((e) => e.slot === 'main_hand' || e.slot === 'off_hand')
+          .map((e) => e.itemId)
+          .sort(),
+      );
+    for (const a of SPEC_CATALOGUE) {
+      for (const b of SPEC_CATALOGUE) {
+        if (a.class !== b.class || a.primaryStat === b.primaryStat) continue;
+        expect(weapons(a.class, a.spec), `${a.class} ${a.spec} vs ${b.spec}`).not.toBe(weapons(b.class, b.spec));
+      }
+    }
+  });
+
+  /** Regression: Ret and Arms were offered shields, dual wielders no second weapon. */
+  it('lists an off-hand exactly for the specs whose weapon setup has one', async () => {
+    const lists = await loadAllSeeds(CURRENT_SEASON_ID);
+    const has = (cls: string, spec: string) =>
+      lists.find((l) => l.class === cls && l.spec === spec)!.entries.some((e) => e.slot === 'off_hand');
+
+    for (const [cls, spec] of [['Paladin', 'Retribution'], ['Warrior', 'Arms'], ['Death Knight', 'Blood'], ['Hunter', 'Marksmanship'], ['Monk', 'Windwalker']]) {
+      expect(has(cls!, spec!), `${cls} ${spec} should have no off-hand`).toBe(false);
+    }
+    for (const [cls, spec] of [['Shaman', 'Enhancement'], ['Rogue', 'Outlaw'], ['Demon Hunter', 'Havoc'], ['Warrior', 'Fury'], ['Warrior', 'Protection'], ['Paladin', 'Protection']]) {
+      expect(has(cls!, spec!), `${cls} ${spec} should have an off-hand`).toBe(true);
     }
   });
 

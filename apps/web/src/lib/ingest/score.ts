@@ -5,7 +5,8 @@
  */
 import type { ArmorType, BisSlot, StatPriority } from '@mythos/core/bis';
 import type { IngestItem } from '@/lib/blizzard/schemas';
-import type { PrimaryStat } from './specCatalogue';
+import type { PrimaryStat, SpecProfile } from './specCatalogue';
+import { canEquipWeapon } from './weaponProficiency';
 
 export type Secondary = 'haste' | 'crit' | 'versatility' | 'mastery';
 
@@ -76,6 +77,14 @@ export function armorTypeFor(item: IngestItem): ArmorType | null {
 
 export interface ParsedStats {
   primary: Partial<Record<PrimaryStat, number>>;
+  /**
+   * Every primary stat the item lists, negated or not. The static item
+   * endpoint renders tooltips for an intellect viewer, so an agility dagger
+   * reports only AGILITY with is_negated set. `primary` (budget) rightly drops
+   * that; eligibility must not, or every agility and strength weapon reads as
+   * having no primary stat at all.
+   */
+  primaryOptions: PrimaryStat[];
   secondary: Record<Secondary, number>;
   /** True when the item allocates no secondary budget at all. */
   secondaryEmpty: boolean;
@@ -84,8 +93,11 @@ export interface ParsedStats {
 export function parseItemStats(item: IngestItem): ParsedStats {
   const primary: Partial<Record<PrimaryStat, number>> = {};
   const secondary: Record<Secondary, number> = { haste: 0, crit: 0, versatility: 0, mastery: 0 };
+  const primaryOptions = new Set<PrimaryStat>();
 
   for (const stat of item.preview_item?.stats ?? []) {
+    const option = stat.type?.type ? PRIMARY_BY_TYPE[stat.type.type] : undefined;
+    if (option) primaryOptions.add(option);
     // A negated stat is a downgrade shown in grey in-game; it contributes
     // nothing and must not be counted as budget toward a priority fit.
     if (stat.is_negated) continue;
@@ -101,7 +113,7 @@ export function parseItemStats(item: IngestItem): ParsedStats {
   }
 
   const secondaryEmpty = (['haste', 'crit', 'versatility', 'mastery'] as const).every((k) => secondary[k] === 0);
-  return { primary, secondary, secondaryEmpty };
+  return { primary, primaryOptions: [...primaryOptions], secondary, secondaryEmpty };
 }
 
 /**
@@ -136,30 +148,49 @@ export function statPriorityFit(stats: ParsedStats, priority: StatPriority): num
 }
 
 /**
- * Whether a spec can actually wear this item — armor class, and nothing else.
- *
- * Primary stat deliberately does NOT filter here, despite being the obvious
- * thing to reach for. Modern armor has an adaptive primary stat, and the
- * static item endpoint reports one representative allocation rather than the
- * per-spec value: the season's plate chest "Baleful Grave-Knight's
- * Breastplate" lists INTELLECT and STRENGTH together, while other plate in
- * the same raid lists INTELLECT alone. Filtering on it excluded every
- * strength and agility spec from all armor and left them with four slots
- * (neck, back, finger, trinket) out of fourteen.
- *
- * Weapons are also unfiltered. Real weapon-type restrictions exist, but the
- * static endpoint does not expose them cleanly enough to filter on without
- * dropping legitimate picks, and over-filtering fails silently while
- * under-filtering merely offers a weapon a spec will visibly never equip.
+ * Slots whose primary stat is fixed on the item. Everything else either
+ * adapts to the wearer's spec (armor, cloaks) or carries no primary at all
+ * (neck, rings), so only here does primary stat decide eligibility.
  */
-export function isUsableBySpec(item: IngestItem, specArmor: ArmorType): boolean {
+const FIXED_PRIMARY_SLOTS: ReadonlySet<BisSlot> = new Set(['main_hand', 'off_hand', 'trinket']);
+
+/**
+ * Whether a spec can actually use this item: armor class for armor, primary
+ * stat for weapons, off-hands and trinkets.
+ *
+ * Armor deliberately does NOT filter on primary stat. Modern armor has an
+ * adaptive primary stat, and the static item endpoint reports one
+ * representative allocation rather than the per-spec value: the season's
+ * plate chest "Baleful Grave-Knight's Breastplate" lists INTELLECT and
+ * STRENGTH together, while other plate in the same raid lists INTELLECT
+ * alone. Filtering armor on it excluded every strength and agility spec from
+ * all armor and left them with four slots out of fourteen.
+ *
+ * Weapons, off-hands and trinkets are the opposite: their primary is fixed.
+ * Leaving them unfiltered is how an Enhancement Shaman was handed
+ * Elemental's intellect staff. An item listing no primary (most proc
+ * trinkets) suits everyone. Weapons and off-hands must also be a type the
+ * class can equip (see weaponProficiency.ts).
+ */
+export function isUsableBySpec(
+  item: IngestItem,
+  spec: Pick<SpecProfile, 'class' | 'spec' | 'armorType' | 'primaryStat'>,
+): boolean {
+  const slot = bisSlotFor(item);
+
+  if (slot && FIXED_PRIMARY_SLOTS.has(slot)) {
+    if (slot !== 'trinket' && !canEquipWeapon(item, spec)) return false;
+    const options = parseItemStats(item).primaryOptions;
+    return options.length === 0 || options.includes(spec.primaryStat);
+  }
+
   // Cloaks are classed as Cloth by Blizzard but every class wears them.
   // Without this exemption the armor gate denied the back slot to every
   // leather, mail and plate spec — 0 candidates each, while cloth got 6.
-  if (bisSlotFor(item) === 'back') return true;
+  if (slot === 'back') return true;
 
   const armor = armorTypeFor(item);
-  return armor === null || armor === specArmor;
+  return armor === null || armor === spec.armorType;
 }
 
 /** Cosmetics, housing decor and quest items all land in the journal tables. */

@@ -96,6 +96,22 @@
       "statPriorityFit": 60
     },
     {
+      "slot": "shoulder",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271526,
+      "itemName": "Enigmatic Dreamwatcher's Plumage",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 59
+    },
+    {
       "slot": "back",
       "contentType": "raid",
       "rank": 1,
@@ -147,6 +163,22 @@
       "statPriorityFit": 76
     },
     {
+      "slot": "chest",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271531,
+      "itemName": "Enigmatic Dreamwatcher's Lunar Raiment",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 49
+    },
+    {
       "slot": "wrist",
       "contentType": "raid",
       "rank": 1,
@@ -179,6 +211,22 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 81
+    },
+    {
+      "slot": "hands",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271529,
+      "itemName": "Enigmatic Dreamwatcher's Gauntlets",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 44
     },
     {
       "slot": "waist",
@@ -230,6 +278,22 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 89
+    },
+    {
+      "slot": "legs",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271527,
+      "itemName": "Enigmatic Dreamwatcher's Leggings",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 57
     },
     {
       "slot": "feet",
@@ -340,69 +404,18 @@
       "slot": "main_hand",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 268215,
-      "itemName": "Abyssal Broodfiend's Bardiche",
+      "itemId": 268205,
+      "itemName": "Venomancer's Winged Channeler",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 100
-    },
-    {
-      "slot": "main_hand",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268209,
-      "itemName": "Aman'muso, Warlord's Vengeance",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Coiled Altar",
+        "boss": "Vashnik the Malignant",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "raid",
-      "rank": 1,
-      "itemId": 268197,
-      "itemName": "Spine of the Hissing Abyss",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Entombed Sentinels",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 89
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268196,
-      "itemName": "Venom-Slashed Scuteward",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 57
     },
     {
       "slot": "head",
@@ -817,24 +830,6 @@
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 273795,
-      "itemName": "Coiled Fangstone",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Altar of Fangs",
-        "boss": "Rav'i",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 50,
-      "notes": "Ranked on stat fit and item level only — trinket procs need a sim to evaluate."
-    },
-    {
-      "slot": "trinket",
-      "contentType": "mythic-plus",
-      "rank": 3,
       "itemId": 250215,
       "itemName": "Freightrunner's Flask",
       "itemLevel": 311,
@@ -850,11 +845,46 @@
       "notes": "Ranked on stat fit and item level only — trinket procs need a sim to evaluate."
     },
     {
+      "slot": "trinket",
+      "contentType": "mythic-plus",
+      "rank": 3,
+      "itemId": 273794,
+      "itemName": "Knot of Writhing Serpents",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Altar of Fangs",
+        "boss": "The Writhing Coil",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 50,
+      "notes": "Ranked on stat fit and item level only — trinket procs need a sim to evaluate."
+    },
+    {
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 251224,
-      "itemName": "Hulking Handaxe",
+      "itemId": 273778,
+      "itemName": "Polished Lightwood Channeler",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Altar of Fangs",
+        "boss": "Zul'jan",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 81
+    },
+    {
+      "slot": "main_hand",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 251225,
+      "itemName": "Fang of Contagion",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
@@ -864,24 +894,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 90
-    },
-    {
-      "slot": "main_hand",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 251180,
-      "itemName": "Thornblade",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "The Blinding Vale",
-        "boss": "Lightblossom Trinity",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 85
+      "statPriorityFit": 66
     },
     {
       "slot": "off_hand",
@@ -904,8 +917,8 @@
       "slot": "off_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 251150,
-      "itemName": "Tempest's Shelter",
+      "itemId": 271681,
+      "itemName": "Perennial Frostbound Charm",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
@@ -915,7 +928,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 80
+      "statPriorityFit": 75
     }
   ]
 }

@@ -28,6 +28,22 @@
       "statPriorityFit": 82
     },
     {
+      "slot": "head",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271456,
+      "itemName": "Tempered Horns of the Jade Warlord",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 58
+    },
+    {
       "slot": "neck",
       "contentType": "raid",
       "rank": 1,
@@ -60,6 +76,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 70
+    },
+    {
+      "slot": "shoulder",
+      "contentType": "raid",
+      "rank": 1,
+      "itemId": 271454,
+      "itemName": "Raging Pauldrons of the Jade Warlord",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 57
     },
     {
       "slot": "back",
@@ -113,6 +145,22 @@
       "statPriorityFit": 90
     },
     {
+      "slot": "chest",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271459,
+      "itemName": "Cuirass of the Jade Warlord",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 58
+    },
+    {
       "slot": "wrist",
       "contentType": "raid",
       "rank": 1,
@@ -133,6 +181,22 @@
       "slot": "hands",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 271457,
+      "itemName": "Jeweled Gauntlets of the Jade Warlord",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 60
+    },
+    {
+      "slot": "hands",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 268220,
       "itemName": "Scaleplate Strangulators",
       "itemLevel": 318,
@@ -323,59 +387,25 @@
       "slot": "main_hand",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 271092,
-      "itemName": "Jan'thrazet, the Soul Fang",
+      "itemId": 268214,
+      "itemName": "Malignant Toothed Edge",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
+        "boss": "Vashnik the Malignant",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 100
+      "statPriorityFit": 88
     },
     {
       "slot": "main_hand",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268202,
-      "itemName": "Jaw of the Shackled Goddess",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 100
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "raid",
-      "rank": 1,
-      "itemId": 268196,
-      "itemName": "Venom-Slashed Scuteward",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 80
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268197,
-      "itemName": "Spine of the Hissing Abyss",
+      "itemId": 268198,
+      "itemName": "Caustic Keeper-Crusher",
       "itemLevel": 318,
       "source": {
         "type": "raid",
@@ -385,7 +415,41 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 76
+      "statPriorityFit": 59
+    },
+    {
+      "slot": "off_hand",
+      "contentType": "raid",
+      "rank": 1,
+      "itemId": 268198,
+      "itemName": "Caustic Keeper-Crusher",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Entombed Sentinels",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 59
+    },
+    {
+      "slot": "off_hand",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268213,
+      "itemName": "Maze-roa, Warlord's Fury",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 47
     },
     {
       "slot": "head",
@@ -818,13 +882,13 @@
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 250215,
-      "itemName": "Freightrunner's Flask",
+      "itemId": 250243,
+      "itemName": "Manaheart's Binding Flame",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
         "dungeon": "Murder Row",
-        "boss": "Zaen Bladesorrow",
+        "boss": "Kystia Manaheart",
         "keyLevel": 10
       },
       "tierPiece": false,
@@ -836,69 +900,70 @@
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 273784,
-      "itemName": "Ancestral Amani Recurve",
+      "itemId": 193755,
+      "itemName": "Backdraft Cleaver",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Altar of Fangs",
-        "boss": "Zul'jan",
+        "dungeon": "Ruby Life Pools",
+        "boss": "Kyrakka and Erkhart Stormvein",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 85
+      "statPriorityFit": 78
     },
     {
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 159643,
-      "itemName": "Crossbow of Forgotten Majesty",
+      "itemId": 251134,
+      "itemName": "Xathuux's Cleave",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Kings' Rest",
-        "boss": "The Council of Tribes",
+        "dungeon": "Murder Row",
+        "boss": "Xathuux the Annihilator",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 85
+      "statPriorityFit": 66
     },
     {
       "slot": "off_hand",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 251150,
-      "itemName": "Tempest's Shelter",
+      "itemId": 251134,
+      "itemName": "Xathuux's Cleave",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Den of Nalorakk",
-        "boss": "Sentinel of Winter",
+        "dungeon": "Murder Row",
+        "boss": "Xathuux the Annihilator",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 85
+      "statPriorityFit": 66
     },
     {
       "slot": "off_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 251191,
-      "itemName": "Luminescent Sprout",
+      "itemId": 159644,
+      "itemName": "Geti'ikku, Cut of Death",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "The Blinding Vale",
-        "boss": "Lightwarden Ruia",
+        "dungeon": "Kings' Rest",
+        "boss": "Dazar, The First King",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 80
+      "statPriorityFit": 50,
+      "notes": "No secondary stats on this item, so it is ranked by item level alone."
     }
   ]
 }

@@ -29,6 +29,7 @@ import type { SeasonConfig } from '@/lib/season/seasonConfig';
 import type { ResolvedSeasonContent } from './resolveSeasonContent';
 import { bisSlotFor, isRankableGear, isUsableBySpec, parseItemStats, statPriorityFit, type ParsedStats } from './score';
 import { specSlug, type SpecProfile } from './specCatalogue';
+import { fitsLoadout, loadoutsFor, type Loadout } from './weaponProficiency';
 
 /** Slots the Catalyst can convert a non-tier piece into a tier piece for. */
 const TIER_SLOTS: BisSlot[] = ['head', 'shoulder', 'chest', 'hands', 'legs'];
@@ -181,6 +182,52 @@ function noteFor(candidate: Candidate): string | undefined {
   return undefined;
 }
 
+interface Ranked {
+  candidate: Candidate;
+  fit: number;
+}
+
+/**
+ * Picks the spec's weapon setup for one content type and ranks its hands.
+ *
+ * Weapons cannot be ranked slot by slot like armor: whether the off-hand
+ * should hold a shield, a second weapon or nothing depends on what goes in
+ * the main hand. So each legal setup is ranked whole, the one whose best
+ * pieces fit the stat priority best wins (ties go to the earlier, preferred
+ * setup), and only its slots are emitted. A setup with no off-hand emits no
+ * off-hand target, so a two-hander user is never told their empty off-hand
+ * is a gap.
+ */
+function chooseWeapons(
+  pool: Candidate[],
+  loadouts: Loadout[],
+  rank: (pool: Candidate[], keep: number) => Ranked[],
+): { main_hand: Ranked[]; off_hand: Ranked[] } {
+  let best: { main_hand: Ranked[]; off_hand: Ranked[]; score: number; complete: boolean } | null = null;
+
+  for (const loadout of loadouts) {
+    const main = rank(pool.filter((c) => fitsLoadout(c.item, loadout, 'main')), RANKS_PER_SLOT);
+    if (main.length === 0) continue;
+
+    // Dual wielders need two weapons; do not name the main-hand pick twice.
+    const off = loadout.off
+      ? rank(
+          pool.filter((c) => fitsLoadout(c.item, loadout, 'off') && c.itemId !== main[0]!.candidate.itemId),
+          RANKS_PER_SLOT,
+        )
+      : [];
+    const complete = !loadout.off || off.length > 0;
+    const score = off.length > 0 ? (main[0]!.fit + off[0]!.fit) / 2 : main[0]!.fit;
+
+    // A complete setup always beats one missing its off-hand.
+    if (!best || (complete && !best.complete) || (complete === best.complete && score > best.score)) {
+      best = { main_hand: main, off_hand: off, score, complete };
+    }
+  }
+
+  return best ?? { main_hand: [], off_hand: [] };
+}
+
 /** Pure: ranks the candidate pool for one spec into a BiS list. */
 export function deriveBisList(
   spec: SpecProfile,
@@ -190,7 +237,7 @@ export function deriveBisList(
   /** This spec's tier item ids, from the item-set endpoint. */
   tierItemIds: ReadonlySet<number> = new Set(),
 ): BisList {
-  const tierSetName = config.tierSets[specSlug(spec.class, spec.spec)]?.name ?? null;
+  const tierSetName = config.classTierSets[spec.class] ?? null;
   const isTier = (c: Candidate) =>
     tierItemIds.has(c.itemId) || (tierSetName !== null && c.setName === tierSetName);
   const entries: BisEntry[] = [];
@@ -199,33 +246,45 @@ export function deriveBisList(
   // otherwise rank as a normal candidate. Exclude tier that is not this
   // spec's: a Death Knight should never be told to chase a Mage's set.
   const usable = candidates.filter(
-    (c) => isUsableBySpec(c.item, spec.armorType) && (!c.isTierOfSomeSpec || isTier(c)),
+    (c) => isUsableBySpec(c.item, spec) && (!c.isTierOfSomeSpec || isTier(c)),
   );
 
+  const rank = (pool: Candidate[], keep: number): Ranked[] =>
+    pool
+      .map((c) => ({ candidate: c, fit: statPriorityFit(c.stats, spec.statPriority) }))
+      .sort((a, b) => {
+        const aTier = isTier(a.candidate);
+        const bTier = isTier(b.candidate);
+        // Fit first: within one content type every drop shares an item
+        // level, so stat fit is what actually separates them. Tier breaks
+        // ties, because a set bonus beats a marginally better stat roll.
+        if (b.fit !== a.fit) return b.fit - a.fit;
+        if (aTier !== bTier) return aTier ? -1 : 1;
+        if (b.candidate.itemLevel !== a.candidate.itemLevel) return b.candidate.itemLevel - a.candidate.itemLevel;
+        return a.candidate.itemName.localeCompare(b.candidate.itemName);
+      })
+      // The same item can drop from more than one encounter; rank it once.
+      .filter((entry, i, all) => all.findIndex((o) => o.candidate.itemId === entry.candidate.itemId) === i)
+      .slice(0, keep);
+
+  const loadouts = loadoutsFor(specSlug(spec.class, spec.spec));
+
   for (const contentType of ['raid', 'mythic-plus'] as const) {
+    const weapons = chooseWeapons(
+      usable.filter((c) => (c.slot === 'main_hand' || c.slot === 'off_hand') && c.contentType === contentType),
+      loadouts,
+      rank,
+    );
+
     for (const slot of BIS_SLOTS) {
-      const pool = usable.filter((c) => c.slot === slot && c.contentType === contentType);
-      if (pool.length === 0) continue;
-
-      const isDual = slot === 'finger' || slot === 'trinket';
-      const keep = isDual ? RANKS_PER_DUAL_SLOT : RANKS_PER_SLOT;
-
-      const ranked = pool
-        .map((c) => ({ candidate: c, fit: statPriorityFit(c.stats, spec.statPriority) }))
-        .sort((a, b) => {
-          const aTier = isTier(a.candidate);
-          const bTier = isTier(b.candidate);
-          // Fit first: within one content type every drop shares an item
-          // level, so stat fit is what actually separates them. Tier breaks
-          // ties, because a set bonus beats a marginally better stat roll.
-          if (b.fit !== a.fit) return b.fit - a.fit;
-          if (aTier !== bTier) return aTier ? -1 : 1;
-          if (b.candidate.itemLevel !== a.candidate.itemLevel) return b.candidate.itemLevel - a.candidate.itemLevel;
-          return a.candidate.itemName.localeCompare(b.candidate.itemName);
-        })
-        // The same item can drop from more than one encounter; rank it once.
-        .filter((entry, i, all) => all.findIndex((o) => o.candidate.itemId === entry.candidate.itemId) === i)
-        .slice(0, keep);
+      let ranked: Ranked[];
+      if (slot === 'main_hand' || slot === 'off_hand') {
+        ranked = weapons[slot];
+      } else {
+        const pool = usable.filter((c) => c.slot === slot && c.contentType === contentType);
+        const isDual = slot === 'finger' || slot === 'trinket';
+        ranked = rank(pool, isDual ? RANKS_PER_DUAL_SLOT : RANKS_PER_SLOT);
+      }
 
       ranked.forEach(({ candidate, fit }, index) => {
         const tierPiece = isTier(candidate);

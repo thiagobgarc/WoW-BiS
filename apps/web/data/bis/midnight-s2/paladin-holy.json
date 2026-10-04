@@ -6,8 +6,8 @@
   "statPriority": [
     "haste",
     "crit",
-    "mastery",
-    "versatility"
+    "versatility",
+    "mastery"
   ],
   "entries": [
     {
@@ -26,6 +26,22 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 90
+    },
+    {
+      "slot": "head",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271465,
+      "itemName": "Warhelm of the Consecrated Flame",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 52
     },
     {
       "slot": "neck",
@@ -62,26 +78,25 @@
       "statPriorityFit": 56
     },
     {
-      "slot": "back",
+      "slot": "shoulder",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 268253,
-      "itemName": "Silken Voodoo Drape",
+      "itemId": 271463,
+      "itemName": "Pauldrons of the Consecrated Flame",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "The Coiled Altar",
         "difficulty": "mythic"
       },
-      "tierPiece": false,
+      "tierPiece": true,
       "catalystable": false,
-      "statPriorityFit": 58
+      "statPriorityFit": 52
     },
     {
       "slot": "back",
       "contentType": "raid",
-      "rank": 2,
+      "rank": 1,
       "itemId": 268248,
       "itemName": "Amani Summoning Shawl",
       "itemLevel": 318,
@@ -93,7 +108,24 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 52
+      "statPriorityFit": 57
+    },
+    {
+      "slot": "back",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268253,
+      "itemName": "Silken Voodoo Drape",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 44
     },
     {
       "slot": "chest",
@@ -110,7 +142,23 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 83
+      "statPriorityFit": 77
+    },
+    {
+      "slot": "chest",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271468,
+      "itemName": "Bulwark of the Consecrated Flame",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 45
     },
     {
       "slot": "wrist",
@@ -127,7 +175,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 48
+      "statPriorityFit": 34
     },
     {
       "slot": "hands",
@@ -147,6 +195,22 @@
       "statPriorityFit": 77
     },
     {
+      "slot": "hands",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271466,
+      "itemName": "Gauntlets of the Consecrated Flame",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 35
+    },
+    {
       "slot": "waist",
       "contentType": "raid",
       "rank": 1,
@@ -161,12 +225,28 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 58
+      "statPriorityFit": 52
     },
     {
       "slot": "legs",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 271464,
+      "itemName": "Greaves of the Consecrated Flame",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 88
+    },
+    {
+      "slot": "legs",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 268224,
       "itemName": "Venom Warden's Greaves",
       "itemLevel": 318,
@@ -178,24 +258,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 80
-    },
-    {
-      "slot": "legs",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 271878,
-      "itemName": "Chausses of Unbound Rancor",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 65
+      "statPriorityFit": 74
     },
     {
       "slot": "feet",
@@ -229,7 +292,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 59
+      "statPriorityFit": 45
     },
     {
       "slot": "finger",
@@ -263,7 +326,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 44
+      "statPriorityFit": 28
     },
     {
       "slot": "trinket",
@@ -323,35 +386,35 @@
       "slot": "main_hand",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 271092,
-      "itemName": "Jan'thrazet, the Soul Fang",
+      "itemId": 268211,
+      "itemName": "Baleful Hexblade",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
+        "boss": "The Coiled Altar",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 100
+      "statPriorityFit": 74
     },
     {
       "slot": "main_hand",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268202,
-      "itemName": "Jaw of the Shackled Goddess",
+      "itemId": 268210,
+      "itemName": "Malevolent Spiritcudgel",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
+        "boss": "The Lost Explorers",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 100
+      "statPriorityFit": 34
     },
     {
       "slot": "off_hand",
@@ -385,29 +448,12 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 59
+      "statPriorityFit": 46
     },
     {
       "slot": "head",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 251229,
-      "itemName": "Visor of the Predator",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Atroxus",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 56
-    },
-    {
-      "slot": "head",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 239050,
       "itemName": "Helm of the Raptor King",
       "itemLevel": 311,
@@ -419,7 +465,25 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53
+      "statPriorityFit": 65
+    },
+    {
+      "slot": "head",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 159422,
+      "itemName": "Helm of the Raptor King",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Kings' Rest",
+        "boss": "Dazar, The First King",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 50,
+      "notes": "No secondary stats on this item, so it is ranked by item level alone."
     },
     {
       "slot": "neck",
@@ -487,7 +551,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 78
+      "statPriorityFit": 71
     },
     {
       "slot": "back",
@@ -521,7 +585,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 78
+      "statPriorityFit": 70
     },
     {
       "slot": "chest",
@@ -538,24 +602,24 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 71
+      "statPriorityFit": 79
     },
     {
       "slot": "chest",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 193753,
-      "itemName": "Breastplate of Soaring Terror",
+      "itemId": 273787,
+      "itemName": "Aged Interwoven Scaleplate",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Ruby Life Pools",
-        "boss": "Kyrakka and Erkhart Stormvein",
+        "dungeon": "Altar of Fangs",
+        "boss": "The Writhing Coil",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 62
+      "statPriorityFit": 53
     },
     {
       "slot": "wrist",
@@ -623,7 +687,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 78
+      "statPriorityFit": 70
     },
     {
       "slot": "waist",
@@ -640,24 +704,24 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 78
+      "statPriorityFit": 70
     },
     {
       "slot": "waist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 251144,
-      "itemName": "Autumn's Boon Belt",
+      "itemId": 159442,
+      "itemName": "Sand-Scoured Greatbelt",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Den of Nalorakk",
-        "boss": "The Hoardmonger",
+        "dungeon": "Temple of Sethraliss",
+        "boss": "Galvazzt",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 32
+      "statPriorityFit": 33
     },
     {
       "slot": "legs",
@@ -691,7 +755,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 47
+      "statPriorityFit": 55
     },
     {
       "slot": "feet",
@@ -708,7 +772,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 63
+      "statPriorityFit": 72
     },
     {
       "slot": "feet",
@@ -725,7 +789,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 40
+      "statPriorityFit": 51
     },
     {
       "slot": "finger",
@@ -748,23 +812,6 @@
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 252258,
-      "itemName": "Sickening Signet of Atroxus",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Atroxus",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 82
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 3,
       "itemId": 159459,
       "itemName": "Ritual Binder's Ring",
       "itemLevel": 311,
@@ -776,7 +823,24 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 72
+      "statPriorityFit": 79
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 3,
+      "itemId": 252258,
+      "itemName": "Sickening Signet of Atroxus",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Voidscar Arena",
+        "boss": "Atroxus",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 76
     },
     {
       "slot": "trinket",
@@ -836,35 +900,35 @@
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 193755,
-      "itemName": "Backdraft Cleaver",
+      "itemId": 158369,
+      "itemName": "Galvanized Stormcrusher",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Ruby Life Pools",
-        "boss": "Kyrakka and Erkhart Stormvein",
+        "dungeon": "Temple of Sethraliss",
+        "boss": "Galvazzt",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 87
+      "statPriorityFit": 76
     },
     {
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 251195,
-      "itemName": "Thorned Reply",
+      "itemId": 160216,
+      "itemName": "Crackling Jade Kilij",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "The Blinding Vale",
-        "boss": "Ziekket",
+        "dungeon": "Kings' Rest",
+        "boss": "The Council of Tribes",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 85
+      "statPriorityFit": 47
     },
     {
       "slot": "off_hand",
@@ -887,18 +951,18 @@
       "slot": "off_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 251150,
-      "itemName": "Tempest's Shelter",
+      "itemId": 159667,
+      "itemName": "Vessel of Last Rites",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Den of Nalorakk",
-        "boss": "Sentinel of Winter",
+        "dungeon": "Kings' Rest",
+        "boss": "Mchimba the Embalmer",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 74
+      "statPriorityFit": 80
     }
   ]
 }

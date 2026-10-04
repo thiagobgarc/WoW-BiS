@@ -51,11 +51,26 @@ async function main(): Promise<void> {
   // from every list, which still looks like a successful run. Fail instead.
   // A spec Blizzard knows and the catalogue does not gets no BiS list at all,
   // and nothing else in the run would say so.
-  if (report.specsMissingFromCatalogue.length > 0 || report.specsUnknownToBlizzard.length > 0) {
+  if (
+    report.specsMissingFromCatalogue.length > 0 ||
+    report.specsUnknownToBlizzard.length > 0 ||
+    report.primaryStatMismatches.length > 0
+  ) {
     console.error('Spec catalogue is out of sync with Blizzard:');
     for (const s of report.specsMissingFromCatalogue) console.error(`  missing from specCatalogue.ts: ${s}`);
     for (const s of report.specsUnknownToBlizzard) console.error(`  not published by Blizzard: ${s}`);
+    for (const s of report.primaryStatMismatches) console.error(`  wrong primary stat: ${s}`);
     console.error('\nUpdate src/lib/ingest/specCatalogue.ts and re-run.');
+    process.exitCode = 1;
+    return;
+  }
+
+  // weaponProficiency.ts lets unknown weapon types through to every class,
+  // which is only safe if a human then adds the rule.
+  if (report.unknownWeaponSubclasses.length > 0) {
+    console.error('Weapon types with no proficiency rule:');
+    for (const s of report.unknownWeaponSubclasses) console.error(`  - ${s}`);
+    console.error('\nAdd them to src/lib/ingest/weaponProficiency.ts and re-run.');
     process.exitCode = 1;
     return;
   }
@@ -78,16 +93,18 @@ async function main(): Promise<void> {
         pad(spec.entryCount, 9) +
         pad(`${spec.slotsCovered}/14`, 7) +
         pad(spec.tierPieces, 6) +
-        (spec.provenance === 'curated' ? 'curated' : 'DEFAULT - unreviewed'),
+        (spec.provenance === 'default' ? 'DEFAULT - unreviewed' : spec.provenance),
     );
   }
 
   console.log('');
   console.log(`${report.specs.length} specs derived, ${empty.length} empty.`);
-  console.log(
-    `${unreviewed.length} use an unreviewed stat priority — their item picks are real, ` +
-      'but the secondary-stat ordering behind the ranking has not been sim-checked.',
-  );
+  if (unreviewed.length > 0) {
+    console.log(
+      `${unreviewed.length} use an unreviewed stat priority — their item picks are real, ` +
+        'but the secondary-stat ordering behind the ranking has not been sim-checked.',
+    );
+  }
   console.log('PvP: not derivable from journal data (vendor gear has no encounter). No PvP entries written.');
 
   if (report.tierSetsUnresolved.length > 0) {
@@ -95,8 +112,8 @@ async function main(): Promise<void> {
   }
   if (report.specsWithoutTierSet.length > 0) {
     console.log(
-      `${report.specsWithoutTierSet.length} specs have no tier set in seasonConfig.tierSets, so their lists ` +
-        'contain no tier pieces. Add the remaining set names there to close this.',
+      `${report.specsWithoutTierSet.length} specs have no tier set in seasonConfig.classTierSets, so their lists ` +
+        'contain no tier pieces. Add the class set name there to close this.',
     );
   }
 

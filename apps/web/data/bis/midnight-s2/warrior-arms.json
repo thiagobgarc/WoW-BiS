@@ -14,6 +14,22 @@
       "slot": "head",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 271456,
+      "itemName": "Tempered Horns of the Jade Warlord",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 90
+    },
+    {
+      "slot": "head",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 268229,
       "itemName": "Skullguard of the Risen Sacrifice",
       "itemLevel": 318,
@@ -60,6 +76,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56
+    },
+    {
+      "slot": "shoulder",
+      "contentType": "raid",
+      "rank": 1,
+      "itemId": 271454,
+      "itemName": "Raging Pauldrons of the Jade Warlord",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 59
     },
     {
       "slot": "back",
@@ -113,6 +145,22 @@
       "statPriorityFit": 58
     },
     {
+      "slot": "chest",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271459,
+      "itemName": "Cuirass of the Jade Warlord",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 57
+    },
+    {
       "slot": "wrist",
       "contentType": "raid",
       "rank": 1,
@@ -133,6 +181,22 @@
       "slot": "hands",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 271457,
+      "itemName": "Jeweled Gauntlets of the Jade Warlord",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 88
+    },
+    {
+      "slot": "hands",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 268220,
       "itemName": "Scaleplate Strangulators",
       "itemLevel": 318,
@@ -323,59 +387,8 @@
       "slot": "main_hand",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 268207,
-      "itemName": "Caustic Repose Greatbow",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 100
-    },
-    {
-      "slot": "main_hand",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 271093,
-      "itemName": "Zatha'tek, Breath of Corruption",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 100
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "raid",
-      "rank": 1,
-      "itemId": 268196,
-      "itemName": "Venom-Slashed Scuteward",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 77
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268197,
-      "itemName": "Spine of the Hissing Abyss",
+      "itemId": 268198,
+      "itemName": "Caustic Keeper-Crusher",
       "itemLevel": 318,
       "source": {
         "type": "raid",
@@ -385,7 +398,24 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 48
+      "statPriorityFit": 89
+    },
+    {
+      "slot": "main_hand",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268213,
+      "itemName": "Maze-roa, Warlord's Fury",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 83
     },
     {
       "slot": "head",
@@ -836,42 +866,25 @@
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 193767,
-      "itemName": "Havoc Crusher",
+      "itemId": 251134,
+      "itemName": "Xathuux's Cleave",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Ruby Life Pools",
-        "boss": "Kokia Blazehoof",
+        "dungeon": "Murder Row",
+        "boss": "Xathuux the Annihilator",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 87
+      "statPriorityFit": 85
     },
     {
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 251123,
-      "itemName": "Nibbles' Training Rod",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Murder Row",
-        "boss": "Kystia Manaheart",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 86
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "mythic-plus",
-      "rank": 1,
-      "itemId": 273779,
-      "itemName": "Nocuous Focal Fang",
+      "itemId": 273782,
+      "itemName": "Vile Writhefang Glaive",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
@@ -882,23 +895,6 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 84
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 193766,
-      "itemName": "Kokia's Burnout Rod",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Ruby Life Pools",
-        "boss": "Kokia Blazehoof",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 71
     }
   ]
 }

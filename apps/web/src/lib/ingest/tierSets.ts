@@ -9,10 +9,10 @@
  * `tierPiece: false` on every entry while the UI happily reported "4pc
  * active" from the character's own gear.
  *
- * seasonConfig.tierSets supplies the names; all six resolve to real Blizzard
- * item-set ids (2055-2063), so the names are trustworthy. It only covers six
- * specs, though, so the other 33 get no tier pieces at all — the ingest
- * reports that rather than hiding it.
+ * seasonConfig.classTierSets supplies one set name per class (Blizzard item
+ * sets 2055-2067). Tier is per class, so every spec of a class gets that
+ * class's pieces. This used to be keyed per spec and covered only six specs,
+ * which left the other 34 with no tier pieces at all.
  */
 import { getItemSet, getItemSetIndex } from '@/lib/blizzard/client';
 import type { SeasonConfig } from '@/lib/season/seasonConfig';
@@ -39,27 +39,31 @@ export async function resolveTierSets(
   config: SeasonConfig,
   specs: SpecProfile[],
 ): Promise<TierSetResolution> {
-  const configured = Object.entries(config.tierSets);
   const bySpecSlug = new Map<string, ResolvedTierSet>();
   const unresolved: string[] = [];
+  const classSets = Object.entries(config.classTierSets);
 
-  if (configured.length > 0) {
+  if (classSets.length > 0) {
     const index = await getItemSetIndex(region);
     const byName = new Map(index.item_sets.map((s) => [normaliseName(s.name), s]));
 
-    for (const [slug, tier] of configured) {
-      const hit = byName.get(normaliseName(tier.name));
+    // Tier is per class: resolve each class's set once, give it to every spec.
+    for (const [className, setName] of classSets) {
+      const hit = byName.get(normaliseName(setName));
       if (!hit) {
-        unresolved.push(tier.name);
+        unresolved.push(setName);
         continue;
       }
       const set = await getItemSet(region, hit.id);
-      bySpecSlug.set(slug, {
-        specSlug: slug,
-        setId: hit.id,
-        name: set.name ?? tier.name,
-        itemIds: (set.items ?? []).map((i) => i.id),
-      });
+      for (const spec of specs.filter((s) => s.class === className)) {
+        const slug = specSlug(spec.class, spec.spec);
+        bySpecSlug.set(slug, {
+          specSlug: slug,
+          setId: hit.id,
+          name: set.name ?? setName,
+          itemIds: (set.items ?? []).map((i) => i.id),
+        });
+      }
     }
   }
 

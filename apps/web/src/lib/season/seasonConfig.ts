@@ -142,12 +142,30 @@ export const seasonConfig = {
   // rather than guess. One-line change once S2's actual rotation is found.
   embellishableSlots: ['shoulder', 'back'] as const,
   enchantableSlots: ['back', 'chest', 'wrist', 'legs', 'feet', 'main_hand', 'off_hand', 'finger_1', 'finger_2'] as const,
+  // One tier set per class, shared by all its specs. Names are Blizzard's own
+  // item sets 2055-2067 (verified against /data/wow/item-set), so every spec
+  // gets its tier pieces. Bonus text is per spec and lives in tierSets below.
+  classTierSets: {
+    'Death Knight': "Baleful Grave-Knight's Crucible",
+    'Demon Hunter': "Abyssal Doomhound's Pursuit",
+    Druid: 'Bark of the Enigmatic Dreamwatcher',
+    Evoker: 'Echo of Calamity',
+    Hunter: "Skulking Viper's Ambush",
+    Mage: "Primal Leywarden's Attire",
+    Monk: 'Guile of the Monkey King',
+    Paladin: 'Radiance of the Consecrated Flame',
+    Priest: "Cosmic Penitent's Raiment",
+    Rogue: "Chosen Bloodslayer's Hexweave",
+    Shaman: "Ophidian Oracle's Prophecy",
+    Warlock: "Damned Necrolyte's Shattered Restraints",
+    Warrior: "Jade Warlord's Dominion",
+  } as Record<string, string>,
   tierSets: {
-    // Keyed by "{class}-{spec}" slug, matches BiS seed file naming.
-    // Set names and 2pc/4pc bonus text below are the real Season 2 tier
-    // sets (sourced from Icy Veins / Maxroll / aoeah.com, cross-checked),
-    // dropping from The Venomous Abyss, the Great Vault, the Midnight
-    // Catalyst, and PvP.
+    // Per-spec 2pc/4pc bonus text, keyed by "{class}-{spec}" slug. Only these
+    // six are researched (Icy Veins / Maxroll / aoeah.com, cross-checked).
+    // Blizzard's item-set endpoint is no substitute: it returns ONE spec's
+    // bonuses per class set (the Death Knight set reports Unholy's), so using
+    // it would show other specs the wrong bonus.
     'paladin-retribution': { name: 'Radiance of the Consecrated Flame', '2pc': 'Divine Purpose has an additional 10% chance to activate; consuming it grants Divine Power.', '4pc': 'Consuming Divine Purpose with Divine Storm causes your next Final Verdict to be free.' },
     'mage-fire': { name: "Primal Leywarden's Attire", '2pc': 'Pyroclasm causes Flame Strike and Pyroblast to always critically strike.', '4pc': 'Pyroclasm reduces the cast time of Flame Strike and Pyroblast by 20% and increases their damage bonus.' },
     'druid-restoration': { name: 'Bark of the Enigmatic Dreamwatcher', '2pc': 'Rejuvenation has a 15% chance to grant Genesis, causing all your HoTs to heal for 25% more.', '4pc': "Genesis's duration is increased by 4 sec, and gaining Genesis grants Clearcasting." },
