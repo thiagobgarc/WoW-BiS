@@ -11,9 +11,10 @@ import { findSpecBySlug } from '@/lib/meta/specBySlug';
 import { urlSlug } from '@/lib/meta/specIds';
 import { bisPath, talentBuildPath } from '@/lib/meta/specLinks';
 import { getBisList } from '@/lib/bis/getBisList';
+import { getItemIconUrls } from '@/lib/blizzard/getItemIcons';
 import { SPEC_CATALOGUE, specSlug } from '@/lib/ingest/specCatalogue';
 import { CURRENT_SEASON_ID, seasonConfig } from '@/lib/season/seasonConfig';
-import { classColor, slotLabel, sourceLabel } from '@mythos/core/utils';
+import { classColor, qualityColor, slotLabel, sourceLabel } from '@mythos/core/utils';
 import { BIS_SLOTS, DUAL_SLOT_CATEGORIES, type BisEntry, type ContentType } from '@mythos/core/bis';
 
 export const prerender = false;
@@ -24,6 +25,12 @@ const ref = findSpecBySlug(classSlug, specSlugParam);
 const bis = ref ? await getBisList(CURRENT_SEASON_ID, ref.className, ref.specName) : null;
 const ok = !!ref && !!bis?.seeded;
 if (!ref) Astro.response.status = 404;
+
+// Item icons are region-independent static data, so any region's media
+// endpoint serves them. Cosmetic: a failed lookup leaves the placeholder.
+const icons = ok
+  ? await getItemIconUrls('us', bis.entries.map((e) => e.itemId)).catch(() => new Map<number, string>())
+  : new Map<number, string>();
 
 const specLabel = ref ? `${ref.specName} ${ref.className}` : '';
 const profile = ref ? SPEC_CATALOGUE.find((p) => p.class === ref.className && p.spec === ref.specName) : undefined;
@@ -193,10 +200,26 @@ const jsonLd =
                         {entry ? (
                           <>
                             <td class="py-2.5 pr-4 font-medium">
-                              <a href={`https://www.wowhead.com/item=${entry.itemId}`} class="link" rel="noreferrer">
-                                {entry.itemName}
-                              </a>
-                              {entry.tierPiece && <span class="label ml-2">Tier</span>}
+                              <div class="flex items-center gap-3">
+                                {/* Same quality-border treatment as ItemIcon.tsx, as plain
+                                    markup so this page stays free of client JS. */}
+                                <span
+                                  class="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-[3px] border-2 bg-sunken"
+                                  style={{ borderColor: qualityColor('epic') }}
+                                >
+                                  {icons.get(entry.itemId) ? (
+                                    <img src={icons.get(entry.itemId)} alt="" class="h-full w-full object-cover" loading="lazy" width="32" height="32" />
+                                  ) : (
+                                    <span class="text-xs text-text-dim" aria-hidden="true">?</span>
+                                  )}
+                                </span>
+                                <span>
+                                  <a href={`https://www.wowhead.com/item=${entry.itemId}`} class="link" rel="noreferrer">
+                                    {entry.itemName}
+                                  </a>
+                                  {entry.tierPiece && <span class="label ml-2">Tier</span>}
+                                </span>
+                              </div>
                             </td>
                             <td class="figure py-2.5 pr-4 text-right">
                               {entry.popularity === undefined ? <span class="text-text-dim">—</span> : `${entry.popularity}%`}
