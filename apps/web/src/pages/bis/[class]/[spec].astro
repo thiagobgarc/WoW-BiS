@@ -188,7 +188,11 @@ const jsonLd =
                           </>
                         ) : (
                           <td colspan="3" class="py-2.5 text-text-dim">
-                            No {contentType === 'raid' ? 'raid' : 'Mythic+'} drop for this slot this season
+                            {/* An empty off-hand next to a main-hand pick means the chosen
+                                setup is a two-hander or ranged weapon, not missing loot. */}
+                            {slot === 'off_hand' && rowsFor(contentType).some((r) => r.slot === 'main_hand' && r.entry)
+                              ? 'Not used: the main-hand pick takes both hands'
+                              : `No ${contentType === 'raid' ? 'raid' : 'Mythic+'} drop for this slot this season`}
                           </td>
                         )}
                       </tr>
