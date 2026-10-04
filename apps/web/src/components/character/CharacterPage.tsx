@@ -26,6 +26,7 @@ interface Props {
   stale?: boolean;
   bisEntries: BisEntry[];
   bisSeeded: boolean;
+  bisIcons: Record<number, string>;
   statPriority?: (keyof SecondaryStats)[];
   talents: CharacterTalents | null;
   recommendedTalents: RecommendedTalentBuild | null;
@@ -68,6 +69,7 @@ export function CharacterPage({
   stale: initialStale,
   bisEntries,
   bisSeeded,
+  bisIcons,
   statPriority,
   talents,
   recommendedTalents,
@@ -145,7 +147,7 @@ export function CharacterPage({
               <StatsPanel stats={stats} priorityOrder={statPriority} />
 
               <section aria-label="Upgrade board">
-                <UpgradeBoard equipment={equipment} bisEntries={bisEntries} seeded={bisSeeded} />
+                <UpgradeBoard equipment={equipment} bisEntries={bisEntries} bisIcons={bisIcons} seeded={bisSeeded} />
               </section>
 
               {talents && (
