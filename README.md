@@ -1,5 +1,7 @@
 # Mythos
 
+## Enjoy my work? Feel free to **[Buy Me A Coffee](https://buymeacoffee.com/thiagobgarc)**
+
 Mythos is a Best-in-Slot gear planner for World of Warcraft. It is live at **[mythosbis.com](https://mythosbis.com)**.
 
 You type in your character name, realm and region. Mythos pulls your equipped gear from the Blizzard API and compares it slot by slot against the BiS list for your class and spec. It then shows you what to replace, where each item drops, and how close you are to being fully BiS.
