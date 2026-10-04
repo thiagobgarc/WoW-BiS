@@ -15,6 +15,8 @@ export interface BisResult {
   entries: BisEntry[];
   statPriority: BisList['statPriority'];
   armorType: BisList['armorType'];
+  /** Which top players the popularity was measured on; absent for stat-fit lists. */
+  samples?: BisList['samples'];
   seeded: boolean;
 }
 
@@ -30,7 +32,7 @@ export async function getBisList(season: string, className: string, specName: st
 async function getBisListFromSeed(season: string, className: string, specName: string): Promise<BisResult> {
   const list = await loadSeedFile(season, className, specName);
   if (!list) return NOT_SEEDED;
-  return { entries: list.entries, statPriority: list.statPriority, armorType: list.armorType, seeded: true };
+  return { entries: list.entries, statPriority: list.statPriority, armorType: list.armorType, samples: list.samples, seeded: true };
 }
 
 async function getBisListFromDb(season: string, className: string, specName: string): Promise<BisResult> {

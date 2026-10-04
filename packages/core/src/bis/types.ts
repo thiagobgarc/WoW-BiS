@@ -33,7 +33,9 @@ export const CONTENT_TYPES = ['raid', 'mythic-plus', 'pvp'] as const;
 export type ContentType = (typeof CONTENT_TYPES)[number];
 
 export const SourceSchema = z.object({
-  type: z.enum(['raid', 'dungeon', 'crafted', 'vault', 'catalyst', 'world', 'pvp', 'profession']),
+  // 'other': worn by top players but in no Adventure Guide loot table and not
+  // crafted. Labelled as unknown rather than guessed (e.g. as a world drop).
+  type: z.enum(['raid', 'dungeon', 'crafted', 'vault', 'catalyst', 'world', 'pvp', 'profession', 'other']),
   instance: z.string().optional(),
   boss: z.string().optional(),
   difficulty: z.enum(['lfr', 'normal', 'heroic', 'mythic']).optional(),
@@ -55,6 +57,12 @@ export const BisEntrySchema = z.object({
   catalystable: z.boolean(),
   statPriorityFit: z.number().min(0).max(100),
   notes: z.string().optional(),
+  /**
+   * Percent of sampled top players wearing this item. Absent when the entry
+   * came from stat fit instead (too few players to sample, or a slot the
+   * sample did not cover).
+   */
+  popularity: z.number().min(0).max(100).optional(),
 });
 export type BisEntry = z.infer<typeof BisEntrySchema>;
 
@@ -72,5 +80,17 @@ export const BisListSchema = z.object({
   armorType: ArmorTypeSchema,
   statPriority: StatPrioritySchema,
   entries: z.array(BisEntrySchema),
+  /** Who the popularity in each content type was measured on. */
+  samples: z
+    .partialRecord(
+      z.enum(CONTENT_TYPES),
+      z.object({
+        players: z.number().int().min(0),
+        source: z.enum(['warcraftlogs', 'raiderio']),
+        collectedAt: z.string(),
+      }),
+    )
+    .optional(),
 });
 export type BisList = z.infer<typeof BisListSchema>;
+export type BisSample = NonNullable<BisList['samples']>[ContentType];

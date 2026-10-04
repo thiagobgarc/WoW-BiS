@@ -10,6 +10,8 @@
  *
  * Flags:
  *   --dry-run      derive and report, write nothing
+ *   --spec=a,b     only these spec slugs (e.g. shaman-enhancement); prints
+ *                  their lists and writes nothing, for checking one spec
  *   --region=us    which regional API to read (default us; static data is
  *                  identical across regions, this only affects the host)
  *   --season=...   defaults to CURRENT_SEASON_ID
@@ -29,13 +31,16 @@ function flag(name: string, fallback: string): string {
 const DRY_RUN = process.argv.includes('--dry-run');
 const REGION = flag('region', 'us');
 const SEASON = flag('season', CURRENT_SEASON_ID);
+const ONLY_SPECS = flag('spec', '').split(',').filter(Boolean);
 
 function pad(value: string | number, width: number): string {
   return String(value).padEnd(width);
 }
 
 async function main(): Promise<void> {
-  const { lists, report } = await runIngest(REGION, seasonConfig, SEASON, (m) => console.log(m));
+  const { lists, report } = await runIngest(REGION, seasonConfig, SEASON, (m) => console.log(m), {
+    specs: ONLY_SPECS.length > 0 ? ONLY_SPECS : undefined,
+  });
 
   console.log('');
   console.log(`Season   ${report.season}  (region ${report.region})`);
@@ -117,7 +122,20 @@ async function main(): Promise<void> {
     );
   }
 
-  if (DRY_RUN) {
+  if (report.unsourcedItems.length > 0) {
+    console.log(`Popular items with no known source (listed as "other"): ${report.unsourcedItems.join(', ')}`);
+  }
+
+  for (const list of ONLY_SPECS.length > 0 ? lists : []) {
+    console.log(`\n${list.spec} ${list.class}  samples: ${JSON.stringify(list.samples ?? {})}`);
+    for (const e of list.entries) {
+      const share = e.popularity === undefined ? '  -' : String(e.popularity).padStart(3);
+      console.log(`  ${e.contentType.padEnd(11)} ${e.slot.padEnd(9)} ${e.rank} ${share}%  ${e.itemName}  [${e.source.type}${e.tierPiece ? ', tier' : ''}]`);
+    }
+  }
+
+  // A partial run must never overwrite the full set of seed files.
+  if (DRY_RUN || ONLY_SPECS.length > 0) {
     console.log('\n--dry-run: nothing written.');
     return;
   }
