@@ -93,16 +93,18 @@ async function main(): Promise<void> {
         pad(spec.entryCount, 9) +
         pad(`${spec.slotsCovered}/14`, 7) +
         pad(spec.tierPieces, 6) +
-        (spec.provenance === 'curated' ? 'curated' : 'DEFAULT - unreviewed'),
+        (spec.provenance === 'default' ? 'DEFAULT - unreviewed' : spec.provenance),
     );
   }
 
   console.log('');
   console.log(`${report.specs.length} specs derived, ${empty.length} empty.`);
-  console.log(
-    `${unreviewed.length} use an unreviewed stat priority — their item picks are real, ` +
-      'but the secondary-stat ordering behind the ranking has not been sim-checked.',
-  );
+  if (unreviewed.length > 0) {
+    console.log(
+      `${unreviewed.length} use an unreviewed stat priority — their item picks are real, ` +
+        'but the secondary-stat ordering behind the ranking has not been sim-checked.',
+    );
+  }
   console.log('PvP: not derivable from journal data (vendor gear has no encounter). No PvP entries written.');
 
   if (report.tierSetsUnresolved.length > 0) {
@@ -110,8 +112,8 @@ async function main(): Promise<void> {
   }
   if (report.specsWithoutTierSet.length > 0) {
     console.log(
-      `${report.specsWithoutTierSet.length} specs have no tier set in seasonConfig.tierSets, so their lists ` +
-        'contain no tier pieces. Add the remaining set names there to close this.',
+      `${report.specsWithoutTierSet.length} specs have no tier set in seasonConfig.classTierSets, so their lists ` +
+        'contain no tier pieces. Add the class set name there to close this.',
     );
   }
 

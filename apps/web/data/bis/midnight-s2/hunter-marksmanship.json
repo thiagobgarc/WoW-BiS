@@ -28,6 +28,22 @@
       "statPriorityFit": 89
     },
     {
+      "slot": "head",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271492,
+      "itemName": "Skulking Viper's Weeping Fangs",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 47
+    },
+    {
       "slot": "neck",
       "contentType": "raid",
       "rank": 1,
@@ -77,6 +93,22 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 76
+    },
+    {
+      "slot": "shoulder",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271490,
+      "itemName": "Jaws of the Skulking Viper",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 61
     },
     {
       "slot": "back",
@@ -147,6 +179,22 @@
       "statPriorityFit": 60
     },
     {
+      "slot": "hands",
+      "contentType": "raid",
+      "rank": 1,
+      "itemId": 271493,
+      "itemName": "Skulking Viper's Hidepiercers",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 33
+    },
+    {
       "slot": "waist",
       "contentType": "raid",
       "rank": 1,
@@ -184,6 +232,22 @@
       "slot": "legs",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 271491,
+      "itemName": "Skulking Viper's Coiled Legwraps",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 56
+    },
+    {
+      "slot": "legs",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 268237,
       "itemName": "Cuisses of the Uncoiled Union",
       "itemLevel": 318,

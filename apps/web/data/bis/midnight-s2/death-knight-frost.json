@@ -386,8 +386,25 @@
       "slot": "main_hand",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 268213,
-      "itemName": "Maze-roa, Warlord's Fury",
+      "itemId": 268208,
+      "itemName": "Strongblood's Ceremonial Cleaver",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Nek'zali the Soulcoiler",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 77
+    },
+    {
+      "slot": "main_hand",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268209,
+      "itemName": "Aman'muso, Warlord's Vengeance",
       "itemLevel": 318,
       "source": {
         "type": "raid",
@@ -397,24 +414,24 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 90
+      "statPriorityFit": 57
     },
     {
-      "slot": "main_hand",
+      "slot": "off_hand",
       "contentType": "raid",
-      "rank": 2,
-      "itemId": 268198,
-      "itemName": "Caustic Keeper-Crusher",
+      "rank": 1,
+      "itemId": 268202,
+      "itemName": "Jaw of the Shackled Goddess",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Entombed Sentinels",
+        "boss": "Ula'tek",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 81
+      "statPriorityFit": 40
     },
     {
       "slot": "head",
@@ -866,35 +883,69 @@
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 251134,
-      "itemName": "Xathuux's Cleave",
+      "itemId": 158373,
+      "itemName": "Resonating Crystal Scimitar",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Murder Row",
-        "boss": "Xathuux the Annihilator",
+        "dungeon": "Temple of Sethraliss",
+        "boss": "Avatar of Sethraliss",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 74
+      "statPriorityFit": 70
     },
     {
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 273782,
-      "itemName": "Vile Writhefang Glaive",
+      "itemId": 251195,
+      "itemName": "Thorned Reply",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Altar of Fangs",
-        "boss": "The Writhing Coil",
+        "dungeon": "The Blinding Vale",
+        "boss": "Ziekket",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 73
+      "statPriorityFit": 66
+    },
+    {
+      "slot": "off_hand",
+      "contentType": "mythic-plus",
+      "rank": 1,
+      "itemId": 251195,
+      "itemName": "Thorned Reply",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "The Blinding Vale",
+        "boss": "Ziekket",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 66
+    },
+    {
+      "slot": "off_hand",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 251218,
+      "itemName": "Taz'Rah's Cosmic Edge",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Voidscar Arena",
+        "boss": "Taz'Rah",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 51
     }
   ]
 }

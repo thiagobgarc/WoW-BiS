@@ -420,18 +420,18 @@
       "slot": "main_hand",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268205,
-      "itemName": "Venomancer's Winged Channeler",
+      "itemId": 268203,
+      "itemName": "Hexing Spiritrender",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Vashnik the Malignant",
+        "boss": "Nek'zali the Soulcoiler",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 76
+      "statPriorityFit": 52
     },
     {
       "slot": "off_hand",
@@ -916,52 +916,18 @@
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 273778,
-      "itemName": "Polished Lightwood Channeler",
+      "itemId": 251156,
+      "itemName": "Fallen Speaker's Staff",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Altar of Fangs",
-        "boss": "Zul'jan",
+        "dungeon": "Den of Nalorakk",
+        "boss": "Nalorakk",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 84
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "mythic-plus",
-      "rank": 1,
-      "itemId": 251191,
-      "itemName": "Luminescent Sprout",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "The Blinding Vale",
-        "boss": "Lightwarden Ruia",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 80
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 159667,
-      "itemName": "Vessel of Last Rites",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Kings' Rest",
-        "boss": "Mchimba the Embalmer",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 80
+      "statPriorityFit": 79
     }
   ]
 }

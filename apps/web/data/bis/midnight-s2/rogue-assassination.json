@@ -5,8 +5,8 @@
   "armorType": "leather",
   "statPriority": [
     "crit",
-    "mastery",
     "haste",
+    "mastery",
     "versatility"
   ],
   "entries": [
@@ -14,23 +14,6 @@
       "slot": "head",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 268219,
-      "itemName": "Shadow Hunter's Warmask",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Entombed Sentinels",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 50
-    },
-    {
-      "slot": "head",
-      "contentType": "raid",
-      "rank": 2,
       "itemId": 271875,
       "itemName": "Gaze of the Coiled Watcher",
       "itemLevel": 318,
@@ -42,24 +25,40 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 40
+      "statPriorityFit": 65
+    },
+    {
+      "slot": "head",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271510,
+      "itemName": "Chosen Bloodslayer's Spirit Shroud",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 60
     },
     {
       "slot": "neck",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 268251,
-      "itemName": "Amulet of the Twin Fangs",
+      "itemId": 268250,
+      "itemName": "Sentinel's Vitriolic Chain",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "The Twin Fangs",
+        "boss": "Entombed Sentinels",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 61
+      "statPriorityFit": 73
     },
     {
       "slot": "neck",
@@ -93,7 +92,23 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 88
+      "statPriorityFit": 80
+    },
+    {
+      "slot": "shoulder",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271508,
+      "itemName": "Chosen Bloodslayer's Voodoo Guards",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 33
     },
     {
       "slot": "back",
@@ -127,7 +142,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 57
+      "statPriorityFit": 48
     },
     {
       "slot": "chest",
@@ -144,7 +159,23 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 48
+      "statPriorityFit": 57
+    },
+    {
+      "slot": "chest",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271513,
+      "itemName": "Chosen Bloodslayer's Banded Poncho",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 49
     },
     {
       "slot": "wrist",
@@ -161,12 +192,28 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 79
+      "statPriorityFit": 88
     },
     {
       "slot": "hands",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 271511,
+      "itemName": "Chosen Bloodslayer's Fanged Grips",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 80
+    },
+    {
+      "slot": "hands",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 268234,
       "itemName": "Ruthless Slaughtergrips",
       "itemLevel": 318,
@@ -178,7 +225,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 76
+      "statPriorityFit": 59
     },
     {
       "slot": "waist",
@@ -195,7 +242,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 90
+      "statPriorityFit": 83
     },
     {
       "slot": "waist",
@@ -212,12 +259,28 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 57
+      "statPriorityFit": 48
     },
     {
       "slot": "legs",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 271509,
+      "itemName": "Chosen Bloodslayer's Reinforced Pants",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 77
+    },
+    {
+      "slot": "legs",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 268225,
       "itemName": "Coiled Hex Legguards",
       "itemLevel": 318,
@@ -229,7 +292,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 57
+      "statPriorityFit": 48
     },
     {
       "slot": "feet",
@@ -246,7 +309,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 81
+      "statPriorityFit": 89
     },
     {
       "slot": "finger",
@@ -263,7 +326,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 90
+      "statPriorityFit": 94
     },
     {
       "slot": "finger",
@@ -280,7 +343,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 71
+      "statPriorityFit": 51
     },
     {
       "slot": "trinket",
@@ -322,13 +385,13 @@
       "slot": "trinket",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 270168,
-      "itemName": "Font of Venomous Rage",
+      "itemId": 270169,
+      "itemName": "Hex Lord's Dooming Idol",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
+        "boss": "The Coiled Altar",
         "difficulty": "mythic"
       },
       "tierPiece": false,
@@ -368,7 +431,41 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 89
+      "statPriorityFit": 82
+    },
+    {
+      "slot": "off_hand",
+      "contentType": "raid",
+      "rank": 1,
+      "itemId": 268206,
+      "itemName": "Slithering Savage's Gavel",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Sszorak",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 82
+    },
+    {
+      "slot": "off_hand",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 270930,
+      "itemName": "Tomb-Creeper's Claw",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Nek'zali the Soulcoiler",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 76
     },
     {
       "slot": "head",
@@ -385,7 +482,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 75
+      "statPriorityFit": 85
     },
     {
       "slot": "head",
@@ -402,29 +499,12 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 65
+      "statPriorityFit": 80
     },
     {
       "slot": "neck",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 251234,
-      "itemName": "Graft of the Domanaar",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Charonus",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 88
-    },
-    {
-      "slot": "neck",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 273781,
       "itemName": "Strand of Warding Fangs",
       "itemLevel": 311,
@@ -436,7 +516,24 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 74
+      "statPriorityFit": 85
+    },
+    {
+      "slot": "neck",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 251234,
+      "itemName": "Graft of the Domanaar",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Voidscar Arena",
+        "boss": "Charonus",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 79
     },
     {
       "slot": "shoulder",
@@ -453,7 +550,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 78
+      "statPriorityFit": 87
     },
     {
       "slot": "shoulder",
@@ -487,7 +584,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 87
+      "statPriorityFit": 78
     },
     {
       "slot": "back",
@@ -504,7 +601,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60
+      "statPriorityFit": 77
     },
     {
       "slot": "chest",
@@ -521,7 +618,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 85
+      "statPriorityFit": 75
     },
     {
       "slot": "chest",
@@ -544,6 +641,23 @@
       "slot": "wrist",
       "contentType": "mythic-plus",
       "rank": 1,
+      "itemId": 251135,
+      "itemName": "Fury-fletched Armlets",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Murder Row",
+        "boss": "Xathuux the Annihilator",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 78
+    },
+    {
+      "slot": "wrist",
+      "contentType": "mythic-plus",
+      "rank": 2,
       "itemId": 251183,
       "itemName": "Rootwarden Wraps",
       "itemLevel": 311,
@@ -555,36 +669,19 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 87
-    },
-    {
-      "slot": "wrist",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 159300,
-      "itemName": "Kula's Butchering Wristwraps",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Kings' Rest",
-        "boss": "The Council of Tribes",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 73
+      "statPriorityFit": 78
     },
     {
       "slot": "hands",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 159312,
-      "itemName": "Desiccator's Blessed Gloves",
+      "itemId": 251124,
+      "itemName": "Gauntlets of Fevered Defense",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Kings' Rest",
-        "boss": "Mchimba the Embalmer",
+        "dungeon": "Murder Row",
+        "boss": "Kystia Manaheart",
         "keyLevel": 10
       },
       "tierPiece": false,
@@ -595,13 +692,13 @@
       "slot": "hands",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 251124,
-      "itemName": "Gauntlets of Fevered Defense",
+      "itemId": 159312,
+      "itemName": "Desiccator's Blessed Gloves",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Murder Row",
-        "boss": "Kystia Manaheart",
+        "dungeon": "Kings' Rest",
+        "boss": "Mchimba the Embalmer",
         "keyLevel": 10
       },
       "tierPiece": false,
@@ -623,24 +720,24 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 73
+      "statPriorityFit": 84
     },
     {
       "slot": "waist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 159317,
-      "itemName": "Whirling Dervish Sash",
+      "itemId": 251189,
+      "itemName": "Rootwalker Harness",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Temple of Sethraliss",
-        "boss": "Adderis and Aspix",
+        "dungeon": "The Blinding Vale",
+        "boss": "Ikuzz the Light Hunter",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 56
+      "statPriorityFit": 49
     },
     {
       "slot": "legs",
@@ -657,46 +754,29 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 85
+      "statPriorityFit": 74
     },
     {
       "slot": "legs",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 159329,
-      "itemName": "Leggings of the Galeforce Viper",
+      "itemId": 159313,
+      "itemName": "Breeches of the Sacred Hall",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Temple of Sethraliss",
-        "boss": "Adderis and Aspix",
+        "dungeon": "Kings' Rest",
+        "boss": "The Golden Serpent",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 45
+      "statPriorityFit": 39
     },
     {
       "slot": "feet",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 159327,
-      "itemName": "Sand-Shined Snakeskin Sandals",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Temple of Sethraliss",
-        "boss": "Merektha",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 84
-    },
-    {
-      "slot": "feet",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 251153,
       "itemName": "Arctic Explorer's Legwraps",
       "itemLevel": 311,
@@ -708,46 +788,29 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 62
+      "statPriorityFit": 78
+    },
+    {
+      "slot": "feet",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 159327,
+      "itemName": "Sand-Shined Snakeskin Sandals",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Temple of Sethraliss",
+        "boss": "Merektha",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 73
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 251136,
-      "itemName": "Signet of Snarling Servitude",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Murder Row",
-        "boss": "Xathuux the Annihilator",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 86
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 158366,
-      "itemName": "Charged Sandstone Band",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Temple of Sethraliss",
-        "boss": "Galvazzt",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 85
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 3,
       "itemId": 273792,
       "itemName": "Band of the Amani Warlord",
       "itemLevel": 311,
@@ -759,7 +822,41 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 62
+      "statPriorityFit": 78
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 251136,
+      "itemName": "Signet of Snarling Servitude",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Murder Row",
+        "boss": "Xathuux the Annihilator",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 76
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 3,
+      "itemId": 158366,
+      "itemName": "Charged Sandstone Band",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Temple of Sethraliss",
+        "boss": "Galvazzt",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 74
     },
     {
       "slot": "trinket",
@@ -801,24 +898,75 @@
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 250215,
-      "itemName": "Freightrunner's Flask",
+      "itemId": 193762,
+      "itemName": "Blazebinder's Hoof",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Murder Row",
-        "boss": "Zaen Bladesorrow",
+        "dungeon": "Ruby Life Pools",
+        "boss": "Kokia Blazehoof",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 50,
+      "statPriorityFit": 65,
       "notes": "Ranked on stat fit and item level only — trinket procs need a sim to evaluate."
     },
     {
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 1,
+      "itemId": 193767,
+      "itemName": "Havoc Crusher",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Ruby Life Pools",
+        "boss": "Kokia Blazehoof",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 87
+    },
+    {
+      "slot": "main_hand",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 275070,
+      "itemName": "Sharpened Lightwood Slasher",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Altar of Fangs",
+        "boss": "Zul'jan",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 85
+    },
+    {
+      "slot": "off_hand",
+      "contentType": "mythic-plus",
+      "rank": 1,
+      "itemId": 275070,
+      "itemName": "Sharpened Lightwood Slasher",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Altar of Fangs",
+        "boss": "Zul'jan",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 85
+    },
+    {
+      "slot": "off_hand",
+      "contentType": "mythic-plus",
+      "rank": 2,
       "itemId": 251128,
       "itemName": "Bladesorrow",
       "itemLevel": 311,
@@ -830,24 +978,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 85
-    },
-    {
-      "slot": "main_hand",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 251186,
-      "itemName": "Thorntalon Edge",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "The Blinding Vale",
-        "boss": "Ikuzz the Light Hunter",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 80
+      "statPriorityFit": 74
     }
   ]
 }

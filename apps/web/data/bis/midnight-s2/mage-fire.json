@@ -883,23 +883,6 @@
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 251188,
-      "itemName": "Doompetal",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "The Blinding Vale",
-        "boss": "Ikuzz the Light Hunter",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 85
-    },
-    {
-      "slot": "main_hand",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 159636,
       "itemName": "Staff of the Lightning Serpent",
       "itemLevel": 311,
@@ -914,38 +897,21 @@
       "statPriorityFit": 85
     },
     {
-      "slot": "off_hand",
-      "contentType": "mythic-plus",
-      "rank": 1,
-      "itemId": 251191,
-      "itemName": "Luminescent Sprout",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "The Blinding Vale",
-        "boss": "Lightwarden Ruia",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 80
-    },
-    {
-      "slot": "off_hand",
+      "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 159667,
-      "itemName": "Vessel of Last Rites",
+      "itemId": 251156,
+      "itemName": "Fallen Speaker's Staff",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Kings' Rest",
-        "boss": "Mchimba the Embalmer",
+        "dungeon": "Den of Nalorakk",
+        "boss": "Nalorakk",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 80
+      "statPriorityFit": 79
     }
   ]
 }

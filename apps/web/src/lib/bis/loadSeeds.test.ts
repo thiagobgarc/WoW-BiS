@@ -19,10 +19,10 @@ const CURATED_SPECS = [
 ];
 
 /**
- * off_hand is not here: two-hand and dual-wield specs legitimately have no
- * off-hand target (dual wielding is not modelled, see deriveBisList.ts). It
- * used to be, and every spec passed only because agility and strength specs
- * were all handed an intellect off-hand frill.
+ * off_hand is not here: two-hander and ranged specs legitimately have no
+ * off-hand target. It used to be, and every spec passed only because agility
+ * and strength specs were all handed an intellect off-hand frill. The
+ * weapon-setup test below covers off_hand instead.
  */
 const SINGULAR_SLOTS = [
   'head', 'neck', 'shoulder', 'back', 'chest', 'wrist',
@@ -88,6 +88,20 @@ describe('BiS seed files', () => {
         if (a.class !== b.class || a.primaryStat === b.primaryStat) continue;
         expect(weapons(a.class, a.spec), `${a.class} ${a.spec} vs ${b.spec}`).not.toBe(weapons(b.class, b.spec));
       }
+    }
+  });
+
+  /** Regression: Ret and Arms were offered shields, dual wielders no second weapon. */
+  it('lists an off-hand exactly for the specs whose weapon setup has one', async () => {
+    const lists = await loadAllSeeds(CURRENT_SEASON_ID);
+    const has = (cls: string, spec: string) =>
+      lists.find((l) => l.class === cls && l.spec === spec)!.entries.some((e) => e.slot === 'off_hand');
+
+    for (const [cls, spec] of [['Paladin', 'Retribution'], ['Warrior', 'Arms'], ['Death Knight', 'Blood'], ['Hunter', 'Marksmanship'], ['Monk', 'Windwalker']]) {
+      expect(has(cls!, spec!), `${cls} ${spec} should have no off-hand`).toBe(false);
+    }
+    for (const [cls, spec] of [['Shaman', 'Enhancement'], ['Rogue', 'Outlaw'], ['Demon Hunter', 'Havoc'], ['Warrior', 'Fury'], ['Warrior', 'Protection'], ['Paladin', 'Protection']]) {
+      expect(has(cls!, spec!), `${cls} ${spec} should have an off-hand`).toBe(true);
     }
   });
 

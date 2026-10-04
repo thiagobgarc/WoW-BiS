@@ -386,47 +386,30 @@
       "slot": "main_hand",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 268209,
-      "itemName": "Aman'muso, Warlord's Vengeance",
+      "itemId": 268214,
+      "itemName": "Malignant Toothed Edge",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "The Coiled Altar",
+        "boss": "Vashnik the Malignant",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 89
+      "statPriorityFit": 77
     },
     {
       "slot": "main_hand",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268208,
-      "itemName": "Strongblood's Ceremonial Cleaver",
+      "itemId": 268213,
+      "itemName": "Maze-roa, Warlord's Fury",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 80
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "raid",
-      "rank": 1,
-      "itemId": 268196,
-      "itemName": "Venom-Slashed Scuteward",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
+        "boss": "The Coiled Altar",
         "difficulty": "mythic"
       },
       "tierPiece": false,
@@ -882,23 +865,6 @@
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 251218,
-      "itemName": "Taz'Rah's Cosmic Edge",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Taz'Rah",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 80
-    },
-    {
-      "slot": "main_hand",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 193755,
       "itemName": "Backdraft Cleaver",
       "itemLevel": 311,
@@ -913,38 +879,21 @@
       "statPriorityFit": 56
     },
     {
-      "slot": "off_hand",
-      "contentType": "mythic-plus",
-      "rank": 1,
-      "itemId": 251150,
-      "itemName": "Tempest's Shelter",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Den of Nalorakk",
-        "boss": "Sentinel of Winter",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 80
-    },
-    {
-      "slot": "off_hand",
+      "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 193754,
-      "itemName": "Drake Rider's Stecktarge",
+      "itemId": 251230,
+      "itemName": "Charonic Crescent",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Ruby Life Pools",
-        "boss": "Kyrakka and Erkhart Stormvein",
+        "dungeon": "Voidscar Arena",
+        "boss": "Charonus",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 49
+      "statPriorityFit": 52
     }
   ]
 }

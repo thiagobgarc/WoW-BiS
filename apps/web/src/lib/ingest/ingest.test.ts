@@ -17,7 +17,8 @@ import {
 } from './score';
 import { buildCandidates, collectLootEntries, deriveBisList, type LootEntry } from './deriveBisList';
 import { normaliseName } from './resolveSeasonContent';
-import { SPEC_CATALOGUE, findSpec } from './specCatalogue';
+import { SPEC_CATALOGUE, findSpec, specSlug } from './specCatalogue';
+import { loadoutsFor } from './weaponProficiency';
 
 /** [type, value, negated?] — negated mirrors Blizzard's greyed-out stats. */
 type StatTuple = [string, number] | [string, number, boolean];
@@ -177,17 +178,6 @@ describe('isUsableBySpec', () => {
     expect(isUsableBySpec(twoHandSword, findSpec('Hunter', 'Survival')!)).toBe(true);
   });
 
-  it('splits Hunter specs between ranged and melee weapons', () => {
-    const polearm = item({ id: 26, inventory_type: { type: 'TWOHWEAPON' }, item_subclass: { name: 'Polearm' } }, [['AGILITY', 200, true]]);
-    const gun = item({ id: 27, inventory_type: { type: 'RANGEDRIGHT' }, item_subclass: { name: 'Gun' } }, [['AGILITY', 200, true]]);
-    const survival = findSpec('Hunter', 'Survival')!;
-    const beastMastery = findSpec('Hunter', 'Beast Mastery')!;
-    expect(isUsableBySpec(polearm, survival)).toBe(true);
-    expect(isUsableBySpec(gun, survival)).toBe(false);
-    expect(isUsableBySpec(polearm, beastMastery)).toBe(false);
-    expect(isUsableBySpec(gun, beastMastery)).toBe(true);
-  });
-
   /** A class missing from the proficiency table would silently lose every weapon. */
   it('leaves every spec at least one weapon type', () => {
     const weapons = [
@@ -326,6 +316,69 @@ describe('deriveBisList', () => {
     const list = deriveBisList(spec, candidatesFrom([chest, neck]), seasonConfig, 'midnight-s2');
     expect(list.entries.find((e) => e.slot === 'chest')!.catalystable).toBe(true);
     expect(list.entries.find((e) => e.slot === 'neck')!.catalystable).toBe(false);
+  });
+});
+
+describe('weapon loadouts', () => {
+  const weapon = (id: number, type: string, subclass: string, stats: StatTuple[]) =>
+    item({ id, name: `${subclass} ${id}`, inventory_type: { type }, item_subclass: { name: subclass } }, stats);
+
+  const agi1h = (id: number, sub = 'Fist Weapon') => weapon(id, 'WEAPON', sub, [['AGILITY', 100, true], ['HASTE_RATING', 50]]);
+  const str2h = (id: number, sub = 'Axe') => weapon(id, 'TWOHWEAPON', sub, [['STRENGTH', 200, true], ['MASTERY_RATING', 100]]);
+  const shield = (id: number) => weapon(id, 'SHIELD', 'Shield', [['INTELLECT', 90], ['STRENGTH', 90, true], ['HASTE_RATING', 40]]);
+
+  function derive(cls: string, specName: string, items: IngestItem[]) {
+    const entries: LootEntry[] = items.map((i) => ({ itemId: i.id, itemName: i.name, contentType: 'raid', instance: 'R', boss: 'B' }));
+    const candidates = buildCandidates(entries, new Map(items.map((i) => [i.id, i])), seasonConfig);
+    const list = deriveBisList(findSpec(cls, specName)!, candidates, seasonConfig, 'midnight-s2');
+    const names = (slot: string) => list.entries.filter((e) => e.slot === slot).map((e) => e.itemName);
+    return { main: names('main_hand'), off: names('off_hand') };
+  }
+
+  it('gives a dual-wield spec a second weapon in the off hand, never the same item', () => {
+    const { main, off } = derive('Shaman', 'Enhancement', [agi1h(40), agi1h(41, 'Axe')]);
+    expect(main).toHaveLength(2);
+    expect(off).toHaveLength(1);
+    expect(off[0]).not.toBe(main[0]);
+  });
+
+  it('never offers a two-hander spec a shield or off-hand', () => {
+    const { main, off } = derive('Paladin', 'Retribution', [str2h(42), shield(43), weapon(44, 'WEAPON', 'Sword', [['STRENGTH', 100, true]])]);
+    expect(main).toEqual(['Axe 42']);
+    expect(off).toEqual([]);
+  });
+
+  it('gives a tank a one-hander and a shield, not a two-hander', () => {
+    const sword = weapon(45, 'WEAPON', 'Sword', [['STRENGTH', 100, true], ['HASTE_RATING', 50]]);
+    const { main, off } = derive('Warrior', 'Protection', [str2h(46), sword, shield(47)]);
+    expect(main).toEqual(['Sword 45']);
+    expect(off).toEqual(['Shield 47']);
+  });
+
+  it('lists no off-hand when a caster staff beats the one-hand setup', () => {
+    const staff = weapon(48, 'TWOHWEAPON', 'Staff', [['INTELLECT', 200], ['HASTE_RATING', 100]]); // Fire's top stat
+    const dagger = weapon(49, 'WEAPON', 'Dagger', [['INTELLECT', 100], ['CRIT_RATING', 50]]); // Fire's worst stat
+    const frill = weapon(50, 'HOLDABLE', 'Miscellaneous', [['INTELLECT', 100], ['CRIT_RATING', 50]]);
+    const { main, off } = derive('Mage', 'Fire', [staff, dagger, frill]);
+    expect(main[0]).toBe('Staff 48');
+    expect(off).toEqual([]);
+  });
+
+  it('splits Hunter specs between ranged and melee weapons', () => {
+    const polearm = weapon(51, 'TWOHWEAPON', 'Polearm', [['AGILITY', 200, true]]);
+    const gun = weapon(52, 'RANGEDRIGHT', 'Gun', [['AGILITY', 200, true]]);
+    expect(derive('Hunter', 'Survival', [polearm, gun]).main).toEqual(['Polearm 51']);
+    expect(derive('Hunter', 'Beast Mastery', [polearm, gun]).main).toEqual(['Gun 52']);
+  });
+
+  it("limits Fury's Titan's Grip pair to axes, maces and swords", () => {
+    const { main, off } = derive('Warrior', 'Fury', [str2h(53, 'Polearm'), str2h(54, 'Axe'), str2h(55, 'Sword')]);
+    expect([...main, ...off]).not.toContain('Polearm 53');
+    expect(off).toHaveLength(1);
+  });
+
+  it('has a loadout for every catalogue spec', () => {
+    for (const spec of SPEC_CATALOGUE) expect(() => loadoutsFor(specSlug(spec.class, spec.spec))).not.toThrow();
   });
 });
 

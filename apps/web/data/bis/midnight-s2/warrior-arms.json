@@ -14,6 +14,22 @@
       "slot": "head",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 271456,
+      "itemName": "Tempered Horns of the Jade Warlord",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 90
+    },
+    {
+      "slot": "head",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 268229,
       "itemName": "Skullguard of the Risen Sacrifice",
       "itemLevel": 318,
@@ -60,6 +76,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56
+    },
+    {
+      "slot": "shoulder",
+      "contentType": "raid",
+      "rank": 1,
+      "itemId": 271454,
+      "itemName": "Raging Pauldrons of the Jade Warlord",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 59
     },
     {
       "slot": "back",
@@ -113,6 +145,22 @@
       "statPriorityFit": 58
     },
     {
+      "slot": "chest",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271459,
+      "itemName": "Cuirass of the Jade Warlord",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 57
+    },
+    {
       "slot": "wrist",
       "contentType": "raid",
       "rank": 1,
@@ -133,6 +181,22 @@
       "slot": "hands",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 271457,
+      "itemName": "Jeweled Gauntlets of the Jade Warlord",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 88
+    },
+    {
+      "slot": "hands",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 268220,
       "itemName": "Scaleplate Strangulators",
       "itemLevel": 318,
@@ -352,23 +416,6 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 83
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "raid",
-      "rank": 1,
-      "itemId": 268196,
-      "itemName": "Venom-Slashed Scuteward",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 77
     },
     {
       "slot": "head",
@@ -848,40 +895,6 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 84
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "mythic-plus",
-      "rank": 1,
-      "itemId": 251196,
-      "itemName": "Teldrassil's Sacrifice",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "The Blinding Vale",
-        "boss": "Ziekket",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 66
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 159664,
-      "itemName": "Bulwark of Brimming Potential",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Temple of Sethraliss",
-        "boss": "Galvazzt",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 60
     }
   ]
 }

@@ -6,8 +6,8 @@
   "statPriority": [
     "mastery",
     "crit",
-    "versatility",
-    "haste"
+    "haste",
+    "versatility"
   ],
   "entries": [
     {
@@ -28,6 +28,22 @@
       "statPriorityFit": 76
     },
     {
+      "slot": "head",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271501,
+      "itemName": "Calamitous Echo's Magmashapers",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 33
+    },
+    {
       "slot": "neck",
       "contentType": "raid",
       "rank": 1,
@@ -42,7 +58,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 88
+      "statPriorityFit": 91
     },
     {
       "slot": "neck",
@@ -79,6 +95,22 @@
       "statPriorityFit": 89
     },
     {
+      "slot": "shoulder",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271499,
+      "itemName": "Calamitous Echo's Sundered Peaks",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 51
+    },
+    {
       "slot": "back",
       "contentType": "raid",
       "rank": 1,
@@ -93,7 +125,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 76
+      "statPriorityFit": 82
     },
     {
       "slot": "back",
@@ -110,7 +142,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 57
+      "statPriorityFit": 52
     },
     {
       "slot": "chest",
@@ -133,18 +165,33 @@
       "slot": "chest",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268223,
-      "itemName": "Ophidian Fangmail",
+      "itemId": 271504,
+      "itemName": "Searing Caldera of Calamity",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "The Twin Fangs",
         "difficulty": "mythic"
       },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 35
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 76
+    },
+    {
+      "slot": "hands",
+      "contentType": "raid",
+      "rank": 1,
+      "itemId": 271502,
+      "itemName": "Calamitous Echo's Ebon Greathorns",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 61
     },
     {
       "slot": "waist",
@@ -161,7 +208,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 75
+      "statPriorityFit": 81
     },
     {
       "slot": "waist",
@@ -178,7 +225,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 57
+      "statPriorityFit": 51
     },
     {
       "slot": "legs",
@@ -195,12 +242,45 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 45
+      "statPriorityFit": 59
+    },
+    {
+      "slot": "legs",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271500,
+      "itemName": "Earthen Pillars of Calamity",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 57
     },
     {
       "slot": "feet",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 268233,
+      "itemName": "Ferocious Scaleboots",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Sszorak",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 81
+    },
+    {
+      "slot": "feet",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 268258,
       "itemName": "Boots of the Reckless Wayfarer",
       "itemLevel": 318,
@@ -213,23 +293,6 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 77
-    },
-    {
-      "slot": "feet",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268233,
-      "itemName": "Ferocious Scaleboots",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Sszorak",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 75
     },
     {
       "slot": "finger",
@@ -263,7 +326,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 58
+      "statPriorityFit": 61
     },
     {
       "slot": "trinket",
@@ -368,7 +431,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 74
+      "statPriorityFit": 81
     },
     {
       "slot": "head",
@@ -402,12 +465,29 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 78
+      "statPriorityFit": 71
     },
     {
       "slot": "neck",
       "contentType": "mythic-plus",
       "rank": 1,
+      "itemId": 251142,
+      "itemName": "Pendant of Malefic Fury",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Murder Row",
+        "boss": "Lithiel Cinderfury",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 82
+    },
+    {
+      "slot": "neck",
+      "contentType": "mythic-plus",
+      "rank": 2,
       "itemId": 251234,
       "itemName": "Graft of the Domanaar",
       "itemLevel": 311,
@@ -422,38 +502,21 @@
       "statPriorityFit": 77
     },
     {
-      "slot": "neck",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 251142,
-      "itemName": "Pendant of Malefic Fury",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Murder Row",
-        "boss": "Lithiel Cinderfury",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 76
-    },
-    {
       "slot": "shoulder",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 251131,
-      "itemName": "Jangling Felpaulets",
+      "itemId": 239049,
+      "itemName": "Spaulders of Prime Emperor",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Murder Row",
-        "boss": "Zaen Bladesorrow",
+        "dungeon": "Kings' Rest",
+        "boss": "Dazar, The First King",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 50
+      "statPriorityFit": 51
     },
     {
       "slot": "shoulder",
@@ -494,52 +557,52 @@
       "slot": "back",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 159288,
-      "itemName": "Cloak of the Restless Tribes",
+      "itemId": 251190,
+      "itemName": "Bloodthorn Burnous",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Kings' Rest",
-        "boss": "The Council of Tribes",
+        "dungeon": "The Blinding Vale",
+        "boss": "Ikuzz the Light Hunter",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 66
+      "statPriorityFit": 63
     },
     {
       "slot": "chest",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 239034,
-      "itemName": "Corrupted Hexxer's Vestments",
+      "itemId": 251233,
+      "itemName": "Manipulator's Vest",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Temple of Sethraliss",
-        "boss": "Avatar of Sethraliss",
+        "dungeon": "Voidscar Arena",
+        "boss": "Charonus",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60
+      "statPriorityFit": 56
     },
     {
       "slot": "chest",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 239046,
-      "itemName": "Loa-Blessed Chestguard",
+      "itemId": 273789,
+      "itemName": "Chestguard of Corroded Scales",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Kings' Rest",
-        "boss": "Dazar, The First King",
+        "dungeon": "Altar of Fangs",
+        "boss": "Zul'jan",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 57
+      "statPriorityFit": 52
     },
     {
       "slot": "wrist",
@@ -556,7 +619,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 73
+      "statPriorityFit": 64
     },
     {
       "slot": "wrist",
@@ -573,7 +636,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 46
+      "statPriorityFit": 54
     },
     {
       "slot": "hands",
@@ -607,7 +670,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 64
+      "statPriorityFit": 73
     },
     {
       "slot": "waist",
@@ -641,7 +704,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 52
+      "statPriorityFit": 64
     },
     {
       "slot": "legs",
@@ -658,19 +721,19 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 46
+      "statPriorityFit": 55
     },
     {
       "slot": "legs",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 193759,
-      "itemName": "Egg Tender's Leggings",
+      "itemId": 251141,
+      "itemName": "Lithiel's Linked Leggings",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Ruby Life Pools",
-        "boss": "Melidrussa Chillworn",
+        "dungeon": "Murder Row",
+        "boss": "Lithiel Cinderfury",
         "keyLevel": 10
       },
       "tierPiece": false,
@@ -709,7 +772,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 67
+      "statPriorityFit": 56
     },
     {
       "slot": "finger",
@@ -732,23 +795,6 @@
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 251194,
-      "itemName": "Lightwarden's Bind",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "The Blinding Vale",
-        "boss": "Lightwarden Ruia",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 79
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 3,
       "itemId": 251136,
       "itemName": "Signet of Snarling Servitude",
       "itemLevel": 311,
@@ -761,6 +807,23 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 3,
+      "itemId": 251194,
+      "itemName": "Lightwarden's Bind",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "The Blinding Vale",
+        "boss": "Lightwarden Ruia",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 72
     },
     {
       "slot": "trinket",
@@ -882,7 +945,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 66
+      "statPriorityFit": 74
     }
   ]
 }

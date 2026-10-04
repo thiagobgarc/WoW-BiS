@@ -27,7 +27,10 @@ if (!ref) Astro.response.status = 404;
 
 const specLabel = ref ? `${ref.specName} ${ref.className}` : '';
 const profile = ref ? SPEC_CATALOGUE.find((p) => p.class === ref.className && p.spec === ref.specName) : undefined;
-const tierSet = ref ? seasonConfig.tierSets[specSlug(ref.className, ref.specName)] : undefined;
+const tierSetName = ref ? seasonConfig.classTierSets[ref.className] : undefined;
+// Bonus text is only researched for some specs; the set name is known for all.
+const tierBonuses = ref ? seasonConfig.tierSets[specSlug(ref.className, ref.specName)] : undefined;
+const tierSet = tierSetName ? { name: tierSetName, bonuses: tierBonuses } : undefined;
 
 const STAT_LABELS = { haste: 'Haste', crit: 'Critical Strike', mastery: 'Mastery', versatility: 'Versatility' } as const;
 const SECTIONS: { contentType: ContentType; heading: string }[] = [
@@ -122,6 +125,12 @@ const jsonLd =
               item picks below follow it too. Sim your own character before spending upgrade currency.
             </p>
           )}
+          {profile?.provenance === 'observed' && (
+            <p class="mt-3 max-w-[62ch] border-l-2 border-rule-strong pl-4 text-sm text-text-muted">
+              This stat order is what top Mythic+ players of this spec are wearing this season, rather than a
+              simulation result. Sim your own character before spending upgrade currency.
+            </p>
+          )}
         </section>
 
         {
@@ -129,14 +138,18 @@ const jsonLd =
             <section aria-labelledby="tier-set" class="mt-12">
               <h2 id="tier-set" class="text-xl font-bold">Tier set: {tierSet.name}</h2>
               <dl class="mt-3 max-w-[62ch] space-y-2 text-sm text-text-muted">
-                <div>
-                  <dt class="inline font-semibold text-text">2-piece: </dt>
-                  <dd class="inline">{tierSet['2pc']}</dd>
-                </div>
-                <div>
-                  <dt class="inline font-semibold text-text">4-piece: </dt>
-                  <dd class="inline">{tierSet['4pc']}</dd>
-                </div>
+                {tierSet.bonuses && (
+                  <>
+                    <div>
+                      <dt class="inline font-semibold text-text">2-piece: </dt>
+                      <dd class="inline">{tierSet.bonuses['2pc']}</dd>
+                    </div>
+                    <div>
+                      <dt class="inline font-semibold text-text">4-piece: </dt>
+                      <dd class="inline">{tierSet.bonuses['4pc']}</dd>
+                    </div>
+                  </>
+                )}
               </dl>
             </section>
           )

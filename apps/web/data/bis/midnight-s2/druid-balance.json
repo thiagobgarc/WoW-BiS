@@ -96,6 +96,22 @@
       "statPriorityFit": 60
     },
     {
+      "slot": "shoulder",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271526,
+      "itemName": "Enigmatic Dreamwatcher's Plumage",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 59
+    },
+    {
       "slot": "back",
       "contentType": "raid",
       "rank": 1,
@@ -147,6 +163,22 @@
       "statPriorityFit": 76
     },
     {
+      "slot": "chest",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271531,
+      "itemName": "Enigmatic Dreamwatcher's Lunar Raiment",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 49
+    },
+    {
       "slot": "wrist",
       "contentType": "raid",
       "rank": 1,
@@ -179,6 +211,22 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 81
+    },
+    {
+      "slot": "hands",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271529,
+      "itemName": "Enigmatic Dreamwatcher's Gauntlets",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 44
     },
     {
       "slot": "waist",
@@ -230,6 +278,22 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 89
+    },
+    {
+      "slot": "legs",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271527,
+      "itemName": "Enigmatic Dreamwatcher's Leggings",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 57
     },
     {
       "slot": "feet",
@@ -347,40 +411,6 @@
         "type": "raid",
         "instance": "The Venomous Abyss",
         "boss": "Vashnik the Malignant",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 89
-    },
-    {
-      "slot": "main_hand",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268203,
-      "itemName": "Hexing Spiritrender",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 82
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "raid",
-      "rank": 1,
-      "itemId": 268197,
-      "itemName": "Spine of the Hissing Abyss",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Entombed Sentinels",
         "difficulty": "mythic"
       },
       "tierPiece": false,
@@ -853,18 +883,18 @@
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 159636,
-      "itemName": "Staff of the Lightning Serpent",
+      "itemId": 251225,
+      "itemName": "Fang of Contagion",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Temple of Sethraliss",
-        "boss": "Adderis and Aspix",
+        "dungeon": "Voidscar Arena",
+        "boss": "Atroxus",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 80
+      "statPriorityFit": 66
     },
     {
       "slot": "off_hand",

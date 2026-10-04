@@ -14,6 +14,22 @@
       "slot": "head",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 271510,
+      "itemName": "Chosen Bloodslayer's Spirit Shroud",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 88
+    },
+    {
+      "slot": "head",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 268219,
       "itemName": "Shadow Hunter's Warmask",
       "itemLevel": 318,
@@ -26,23 +42,6 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 73
-    },
-    {
-      "slot": "head",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 271875,
-      "itemName": "Gaze of the Coiled Watcher",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 40
     },
     {
       "slot": "neck",
@@ -96,6 +95,22 @@
       "statPriorityFit": 77
     },
     {
+      "slot": "shoulder",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271508,
+      "itemName": "Chosen Bloodslayer's Voodoo Guards",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 26
+    },
+    {
       "slot": "back",
       "contentType": "raid",
       "rank": 1,
@@ -147,6 +162,22 @@
       "statPriorityFit": 59
     },
     {
+      "slot": "chest",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271513,
+      "itemName": "Chosen Bloodslayer's Banded Poncho",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 33
+    },
+    {
       "slot": "wrist",
       "contentType": "raid",
       "rank": 1,
@@ -179,6 +210,22 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 89
+    },
+    {
+      "slot": "hands",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271511,
+      "itemName": "Chosen Bloodslayer's Fanged Grips",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 77
     },
     {
       "slot": "waist",
@@ -230,6 +277,22 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 81
+    },
+    {
+      "slot": "legs",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271509,
+      "itemName": "Chosen Bloodslayer's Reinforced Pants",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "difficulty": "mythic"
+      },
+      "tierPiece": true,
+      "catalystable": false,
+      "statPriorityFit": 49
     },
     {
       "slot": "feet",
@@ -369,6 +432,40 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82
+    },
+    {
+      "slot": "off_hand",
+      "contentType": "raid",
+      "rank": 1,
+      "itemId": 268206,
+      "itemName": "Slithering Savage's Gavel",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Sszorak",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 76
+    },
+    {
+      "slot": "off_hand",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271093,
+      "itemName": "Zatha'tek, Breath of Corruption",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Ula'tek",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 65
     },
     {
       "slot": "head",
@@ -848,6 +945,40 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 85
+    },
+    {
+      "slot": "off_hand",
+      "contentType": "mythic-plus",
+      "rank": 1,
+      "itemId": 251186,
+      "itemName": "Thorntalon Edge",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "The Blinding Vale",
+        "boss": "Ikuzz the Light Hunter",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 85
+    },
+    {
+      "slot": "off_hand",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 251224,
+      "itemName": "Hulking Handaxe",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Voidscar Arena",
+        "boss": "Atroxus",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 83
     }
   ]
 }
