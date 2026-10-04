@@ -508,22 +508,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 90
-    },
-    {
-      "slot": "shoulder",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 244580,
-      "itemName": "Farstrider's Brilliant Plumes",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 53,
-      "popularity": 7
+      "popularity": 93
     },
     {
       "slot": "back",
@@ -541,7 +526,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 78,
-      "popularity": 40
+      "popularity": 43
     },
     {
       "slot": "back",
@@ -677,7 +662,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "legs",
@@ -692,7 +677,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 43,
-      "popularity": 50
+      "popularity": 53
     },
     {
       "slot": "legs",
@@ -709,30 +694,12 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 50
+      "popularity": 47
     },
     {
       "slot": "feet",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 268258,
-      "itemName": "Boots of the Reckless Wayfarer",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 77,
-      "popularity": 27
-    },
-    {
-      "slot": "feet",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 159388,
       "itemName": "Sabatons of Coruscating Energy",
       "itemLevel": 311,
@@ -746,6 +713,24 @@
       "catalystable": false,
       "statPriorityFit": 84,
       "popularity": 27
+    },
+    {
+      "slot": "feet",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 268258,
+      "itemName": "Boots of the Reckless Wayfarer",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Lost Explorers",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 77,
+      "popularity": 23
     },
     {
       "slot": "finger",
@@ -763,7 +748,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 50
+      "popularity": 53
     },
     {
       "slot": "finger",

@@ -78,7 +78,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 27
+      "popularity": 30
     },
     {
       "slot": "back",
@@ -96,7 +96,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 27
+      "popularity": 23
     },
     {
       "slot": "chest",
@@ -181,7 +181,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "hands",
@@ -196,7 +196,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 30,
-      "popularity": 7
+      "popularity": 10
     },
     {
       "slot": "waist",
@@ -249,7 +249,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 77
+      "popularity": 80
     },
     {
       "slot": "legs",
@@ -267,7 +267,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 23
+      "popularity": 20
     },
     {
       "slot": "feet",
@@ -282,7 +282,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 43,
-      "popularity": 77
+      "popularity": 73
     },
     {
       "slot": "feet",
@@ -318,30 +318,12 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 86,
-      "popularity": 43
+      "popularity": 40
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 252258,
-      "itemName": "Sickening Signet of Atroxus",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Atroxus",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 48,
-      "popularity": 30
-    },
-    {
-      "slot": "finger",
-      "contentType": "raid",
-      "rank": 3,
       "itemId": 268249,
       "itemName": "Vile Alchemist's Band",
       "itemLevel": 318,
@@ -354,7 +336,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 71,
-      "popularity": 30
+      "popularity": 33
+    },
+    {
+      "slot": "finger",
+      "contentType": "raid",
+      "rank": 3,
+      "itemId": 252258,
+      "itemName": "Sickening Signet of Atroxus",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Voidscar Arena",
+        "boss": "Atroxus",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 48,
+      "popularity": 27
     },
     {
       "slot": "trinket",
@@ -426,7 +426,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 80
+      "popularity": 77
     },
     {
       "slot": "main_hand",
@@ -458,7 +458,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "neck",
@@ -526,7 +526,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 27
+      "popularity": 30
     },
     {
       "slot": "back",
@@ -544,7 +544,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 27
+      "popularity": 23
     },
     {
       "slot": "chest",
@@ -611,24 +611,21 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 80
+      "popularity": 83
     },
     {
       "slot": "hands",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 159413,
-      "itemName": "Gauntlets of the Avian Sentinel",
-      "itemLevel": 311,
+      "itemId": 237836,
+      "itemName": "Spellbreaker's Resolve",
+      "itemLevel": 331,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Kings' Rest",
-        "boss": "The Golden Serpent",
-        "keyLevel": 10
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 77,
+      "statPriorityFit": 30,
       "popularity": 7
     },
     {
@@ -647,7 +644,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 43
+      "popularity": 40
     },
     {
       "slot": "waist",
@@ -662,7 +659,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 27,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "legs",
@@ -766,7 +763,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 62,
-      "popularity": 30
+      "popularity": 33
     },
     {
       "slot": "finger",
@@ -820,7 +817,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 73
+      "popularity": 77
     },
     {
       "slot": "trinket",

@@ -503,22 +503,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 74,
-      "popularity": 90
-    },
-    {
-      "slot": "head",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 271441,
-      "itemName": "Crushing Coiler Coif",
-      "itemLevel": 311,
-      "source": {
-        "type": "other"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 33,
-      "popularity": 7
+      "popularity": 93
     },
     {
       "slot": "neck",
@@ -592,19 +577,16 @@
       "slot": "back",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 251132,
-      "itemName": "Speakeasy Shroud",
-      "itemLevel": 311,
+      "itemId": 239656,
+      "itemName": "Adherent's Silken Shroud",
+      "itemLevel": 331,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Murder Row",
-        "boss": "Zaen Bladesorrow",
-        "keyLevel": 10
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 56,
-      "popularity": 20
+      "statPriorityFit": 53,
+      "popularity": 17
     },
     {
       "slot": "back",
@@ -758,7 +740,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 51,
-      "popularity": 20
+      "popularity": 23
     },
     {
       "slot": "legs",
@@ -775,7 +757,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 77
+      "popularity": 73
     },
     {
       "slot": "legs",
@@ -790,30 +772,12 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 43,
-      "popularity": 17
-    },
-    {
-      "slot": "feet",
-      "contentType": "mythic-plus",
-      "rank": 1,
-      "itemId": 268233,
-      "itemName": "Ferocious Scaleboots",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Sszorak",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 59,
       "popularity": 20
     },
     {
       "slot": "feet",
       "contentType": "mythic-plus",
-      "rank": 2,
+      "rank": 1,
       "itemId": 268258,
       "itemName": "Boots of the Reckless Wayfarer",
       "itemLevel": 318,
@@ -826,6 +790,24 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
+      "popularity": 20
+    },
+    {
+      "slot": "feet",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 268233,
+      "itemName": "Ferocious Scaleboots",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Sszorak",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 59,
       "popularity": 17
     },
     {
@@ -862,7 +844,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 33
+      "popularity": 37
     },
     {
       "slot": "finger",
@@ -913,7 +895,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 50
+      "popularity": 53
     },
     {
       "slot": "trinket",
@@ -931,7 +913,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 33
+      "popularity": 30
     },
     {
       "slot": "main_hand",
@@ -949,7 +931,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 63
+      "popularity": 67
     },
     {
       "slot": "main_hand",
@@ -964,7 +946,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 53,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "off_hand",

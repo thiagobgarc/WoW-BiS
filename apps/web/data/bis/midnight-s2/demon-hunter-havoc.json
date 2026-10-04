@@ -96,7 +96,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "shoulder",
@@ -250,7 +250,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 47
+      "popularity": 43
     },
     {
       "slot": "waist",
@@ -285,7 +285,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "legs",
@@ -300,7 +300,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 43,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "feet",
@@ -333,7 +333,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 23
+      "popularity": 27
     },
     {
       "slot": "finger",
@@ -369,7 +369,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 85,
-      "popularity": 50
+      "popularity": 47
     },
     {
       "slot": "finger",
@@ -384,7 +384,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 43,
-      "popularity": 37
+      "popularity": 33
     },
     {
       "slot": "trinket",
