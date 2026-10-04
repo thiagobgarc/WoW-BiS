@@ -1,7 +1,8 @@
 import { useMemo } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/Tabs';
 import { diffTalents } from '@mythos/core/talents';
-import { TalentTree } from './TalentTree';
+import { TalentTree, TalentTreePanel } from './TalentTree';
+import type { NodeSelection } from './TalentNode';
 import type { DomainHeroTree, DomainTalentTree, TalentSelection } from '@/lib/blizzard/domain';
 import type { RecommendedTalentBuild } from '@mythos/core/talents';
 
@@ -13,29 +14,34 @@ interface Props {
   recommended: RecommendedTalentBuild | null;
 }
 
-interface Selection {
-  rank: number;
-  optionIndex: number;
-}
-
-function toMap(selections: { nodeId: number; rank: number; optionIndex: number }[]): Map<number, Selection> {
+function toMap(selections: { nodeId: number; rank: number; optionIndex: number }[]): Map<number, NodeSelection> {
   return new Map(selections.map((s) => [s.nodeId, { rank: s.rank, optionIndex: s.optionIndex }]));
 }
 
-function HeroBadge({ name }: { name: string }) {
-  const initials = name
-    .split(/[\s']+/)
-    .map((w) => w[0])
-    .join('')
-    .slice(0, 2)
-    .toUpperCase();
+function LegendShape({ className, style }: { className?: string; style?: React.CSSProperties }) {
+  return <span className={`inline-block h-3 w-3 border-2 border-text-dim ${className ?? ''}`} style={style} aria-hidden="true" />;
+}
+
+export function TalentLegend({ showMissing }: { showMissing: boolean }) {
   return (
-    <div
-      className="w-14 h-14 rounded-full border-2 border-accent bg-panel flex items-center justify-center text-base font-bold text-accent shrink-0"
-      aria-hidden="true"
-    >
-      {initials}
-    </div>
+    <ul className="label mt-3 flex flex-wrap gap-x-5 gap-y-1.5">
+      <li className="flex items-center gap-1.5">
+        <LegendShape className="rounded-[2px]" /> Active
+      </li>
+      <li className="flex items-center gap-1.5">
+        <LegendShape className="rounded-full" /> Passive
+      </li>
+      <li className="flex items-center gap-1.5">
+        {/* A rotated square reads as the choice node's octagon at this size. */}
+        <LegendShape className="rotate-45 rounded-[1px]" style={{ width: 10, height: 10 }} /> Choice
+      </li>
+      {showMissing && (
+        <li className="flex items-center gap-1.5">
+          <span className="inline-block h-3 w-3 rounded-full bg-severity-upgrade" aria-hidden="true" /> Missing from your
+          build
+        </li>
+      )}
+    </ul>
   );
 }
 
@@ -51,6 +57,7 @@ export function TalentTreeSection({ tree, current, heroTree, heroSelections, rec
     () => (recommended ? diffTalents(current, recommendedSelections) : null),
     [current, recommended, recommendedSelections],
   );
+  const missing = useMemo(() => new Set(matchSummary?.missingNodeIds ?? []), [matchSummary]);
 
   return (
     <div>
@@ -67,28 +74,12 @@ export function TalentTreeSection({ tree, current, heroTree, heroSelections, rec
               No talents selected on this character yet.
             </div>
           )}
-          {/* One shared panel/scroll area for all three trees together, not
-              three independent boxes — they're small enough now (see the
-              sizing constants in TalentTree.tsx) to fit side by side without
-              scrolling on a typical desktop viewport. Below the sm breakpoint
-              they stack vertically instead, so mobile trades a wide
-              three-across horizontal scroll for a tall single-column one;
-              overflow-x-auto remains a per-tree safety net for trees still
-              wider than the viewport. */}
-          <div className="overflow-x-auto rounded-[4px] border border-rule bg-sunken p-4">
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-2 w-fit mx-auto">
-              <TalentTree nodes={tree.classNodes} selections={currentMap} title="Class Talents" />
-              {heroTree && (
-                <TalentTree
-                  nodes={heroTree.nodes}
-                  selections={heroMap}
-                  title={heroTree.name}
-                  badge={<HeroBadge name={heroTree.name} />}
-                />
-              )}
-              <TalentTree nodes={tree.specNodes} selections={currentMap} title="Spec Talents" />
-            </div>
-          </div>
+          <TalentTreePanel>
+            <TalentTree nodes={tree.classNodes} selections={currentMap} title="Class" />
+            {heroTree && <TalentTree nodes={heroTree.nodes} selections={heroMap} title={heroTree.name} />}
+            <TalentTree nodes={tree.specNodes} selections={currentMap} title="Spec" />
+          </TalentTreePanel>
+          <TalentLegend showMissing={false} />
         </TabsContent>
 
         <TabsContent value="recommended" className="focus-visible:outline-none">
@@ -99,20 +90,22 @@ export function TalentTreeSection({ tree, current, heroTree, heroSelections, rec
           ) : (
             <>
               {matchSummary && (
-                <div className="text-xs text-text-dim mb-4">
-                  Your current build matches {matchSummary.matched} of {matchSummary.total} recommended picks.
-                </div>
+                <p className="mb-4 text-sm text-text-muted">
+                  Your build matches{' '}
+                  <span className="figure font-semibold text-text">
+                    {matchSummary.matched} of {matchSummary.total}
+                  </span>{' '}
+                  recommended picks.
+                  {matchSummary.missingNodeIds.length > 0 && ' The ones you are missing are marked in amber.'}
+                </p>
               )}
-              {recommended.notes && <div className="text-xs text-text-dim mb-4 italic">{recommended.notes}</div>}
-              <div className="overflow-x-auto rounded-[4px] border border-rule bg-sunken p-4">
-                <div className="flex flex-col sm:flex-row justify-center items-center sm:items-start gap-6 sm:gap-2 w-fit mx-auto">
-                  <TalentTree nodes={tree.classNodes} selections={recommendedMap} title="Class Talents" />
-                  <TalentTree nodes={tree.specNodes} selections={recommendedMap} title="Spec Talents" />
-                </div>
-              </div>
-              <p className="label mt-3">
-                Hero talent recommendations aren't seeded yet — this covers class/spec picks only.
-              </p>
+              {recommended.notes && <p className="mb-4 text-xs italic text-text-dim">{recommended.notes}</p>}
+              <TalentTreePanel>
+                <TalentTree nodes={tree.classNodes} selections={recommendedMap} missing={missing} title="Class" />
+                <TalentTree nodes={tree.specNodes} selections={recommendedMap} missing={missing} title="Spec" />
+              </TalentTreePanel>
+              <TalentLegend showMissing={missing.size > 0} />
+              <p className="label mt-2">Hero talent recommendations aren't seeded yet, so this covers class and spec picks only.</p>
             </>
           )}
         </TabsContent>

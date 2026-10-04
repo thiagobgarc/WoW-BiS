@@ -1,7 +1,8 @@
 import { useMemo, useState } from 'react';
 import { TooltipProvider } from '@/components/ui/Tooltip';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/Tabs';
-import { TalentTree } from '@/components/talents/TalentTree';
+import { TalentTree, TalentTreePanel } from '@/components/talents/TalentTree';
+import { TalentLegend } from '@/components/talents/TalentTreeSection';
 import { TierBadge } from '@/components/meta/TierBadge';
 import { classColor } from '@mythos/core/utils';
 import type { DomainTalentTree } from '@/lib/blizzard/domain';
@@ -48,12 +49,11 @@ function BuildPanel({ tree, build }: { tree: DomainTalentTree; build: Recommende
   return (
     <div className="mt-4">
       {build.notes && <div className="text-xs text-text-dim mb-4 italic">{build.notes}</div>}
-      <div className="overflow-x-auto rounded-[4px] border border-rule bg-sunken p-4">
-        <div className="flex flex-col sm:flex-row justify-center items-center sm:items-start gap-6 sm:gap-2 w-fit mx-auto">
-          <TalentTree nodes={tree.classNodes} selections={selectionMap} title="Class Talents" />
-          <TalentTree nodes={tree.specNodes} selections={selectionMap} title="Spec Talents" />
-        </div>
-      </div>
+      <TalentTreePanel>
+        <TalentTree nodes={tree.classNodes} selections={selectionMap} title="Class" />
+        <TalentTree nodes={tree.specNodes} selections={selectionMap} title="Spec" />
+      </TalentTreePanel>
+      <TalentLegend showMissing={false} />
       <p className="label mt-3">
         Hero talent recommendations aren't seeded yet — this covers class/spec picks only.
       </p>

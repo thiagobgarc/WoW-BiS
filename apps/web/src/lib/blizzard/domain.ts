@@ -254,12 +254,17 @@ function mapTalentNode(raw: TalentNode, iconUrls: Map<number, string>): DomainTa
  * `iconUrls` is keyed by spellId, pre-fetched in a batch (see
  * getCharacterTalents.ts). `specId` drops hero subtrees this spec can't
  * pick (Blizzard bundles the whole class's hero subtrees regardless of
- * spec) and strips their node ids back out of `spec_talent_nodes`, which
- * embeds them a second time (verified against live character data).
+ * spec) and strips every hero subtree's node ids back out of the class and
+ * spec node lists. Blizzard embeds them there a second time: the spec list
+ * carries every hero subtree's nodes, playable or not (a Havoc tree came
+ * back with 56 of them), and the class list sometimes carries one too, far
+ * off to the side of the real grid (verified against live API data).
  */
 export function mapTalentTree(raw: TalentTree, iconUrls: Map<number, string>, specId: number): DomainTalentTree {
   // A node with no ranks has no talent to show (see TalentNodeSchema).
   const real = (nodes: TalentNode[]) => nodes.filter((n) => n.ranks.length > 0);
+  const allHeroNodeIds = new Set((raw.hero_talent_trees ?? []).flatMap((h) => h.hero_talent_nodes.map((n) => n.id)));
+  const notHero = (nodes: TalentNode[]) => real(nodes).filter((n) => !allHeroNodeIds.has(n.id));
   const heroTrees = (raw.hero_talent_trees ?? [])
     .filter((h) => !h.playable_specializations || h.playable_specializations.some((s) => s.id === specId))
     .map((h) => ({
@@ -267,11 +272,10 @@ export function mapTalentTree(raw: TalentTree, iconUrls: Map<number, string>, sp
       name: h.name,
       nodes: real(h.hero_talent_nodes).map((n) => mapTalentNode(n, iconUrls)),
     }));
-  const heroNodeIds = new Set(heroTrees.flatMap((h) => h.nodes.map((n) => n.id)));
 
   return {
-    classNodes: real(raw.class_talent_nodes).map((n) => mapTalentNode(n, iconUrls)),
-    specNodes: real(raw.spec_talent_nodes).filter((n) => !heroNodeIds.has(n.id)).map((n) => mapTalentNode(n, iconUrls)),
+    classNodes: notHero(raw.class_talent_nodes).map((n) => mapTalentNode(n, iconUrls)),
+    specNodes: notHero(raw.spec_talent_nodes).map((n) => mapTalentNode(n, iconUrls)),
     heroTrees,
   };
 }
