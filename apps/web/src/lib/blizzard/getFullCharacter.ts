@@ -20,7 +20,7 @@ import {
   getCharacterStatistics,
   type CharacterKey,
 } from './client';
-import { getItemIconUrls } from './getItemIcons';
+import { getItemIconUrls } from './getIconUrls';
 import { mapEquipment, mapProfile, mapStatistics, type DomainCharacter, type EquipmentBySlot, type SecondaryStats } from './domain';
 
 export interface FullCharacter {
