@@ -11,7 +11,7 @@ function unit(row: ComparisonRowData): string {
   return row.ilvlDelta === 1 ? "item level" : "item levels";
 }
 
-export function ComparisonRow({ row }: { row: ComparisonRowData }) {
+export function ComparisonRow({ row, targetIconUrl }: { row: ComparisonRowData; targetIconUrl: string | null }) {
   const [expanded, setExpanded] = useState(false);
   // The delta column is deliberately sparse: only the slots that can still
   // move carry a figure, so the column reads as the list of actual gaps.
@@ -45,7 +45,7 @@ export function ComparisonRow({ row }: { row: ComparisonRowData }) {
               <span className="absolute -left-4 hidden text-text-dim sm:block" aria-hidden="true">
                 →
               </span>
-              <ItemIcon size="sm" iconUrl={null} quality="epic" alt={row.target.itemName} />
+              <ItemIcon size="sm" iconUrl={targetIconUrl} quality="epic" alt={row.target.itemName} />
               <div className="min-w-0">
                 <div className="truncate text-sm font-semibold text-text">{row.target.itemName}</div>
                 <div className="figure label mt-0.5">

@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 60
+      "popularity": 63
     },
     {
       "slot": "head",
@@ -43,7 +43,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 40,
-      "popularity": 23
+      "popularity": 20
     },
     {
       "slot": "neck",
@@ -261,7 +261,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 78,
-      "popularity": 30
+      "popularity": 27
     },
     {
       "slot": "feet",

@@ -25,24 +25,21 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 60
+      "popularity": 63
     },
     {
       "slot": "head",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268229,
-      "itemName": "Skullguard of the Risen Sacrifice",
-      "itemLevel": 318,
+      "itemId": 237832,
+      "itemName": "Spellbreaker's Cover",
+      "itemLevel": 331,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
-        "difficulty": "mythic"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 90,
+      "statPriorityFit": 70,
       "popularity": 17
     },
     {
@@ -84,24 +81,6 @@
       "slot": "back",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 268253,
-      "itemName": "Silken Voodoo Drape",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Coiled Altar",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 44,
-      "popularity": 27
-    },
-    {
-      "slot": "back",
-      "contentType": "raid",
-      "rank": 2,
       "itemId": 268248,
       "itemName": "Amani Summoning Shawl",
       "itemLevel": 318,
@@ -114,6 +93,24 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
+      "popularity": 23
+    },
+    {
+      "slot": "back",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268253,
+      "itemName": "Silken Voodoo Drape",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 44,
       "popularity": 23
     },
     {
@@ -282,7 +279,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 45,
-      "popularity": 47
+      "popularity": 43
     },
     {
       "slot": "feet",
@@ -432,7 +429,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 53,
-      "popularity": 43
+      "popularity": 40
     },
     {
       "slot": "off_hand",

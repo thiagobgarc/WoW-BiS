@@ -13,10 +13,12 @@ const TAB_LABEL: Record<ContentType, string> = { raid: 'Raid', 'mythic-plus': 'M
 interface Props {
   equipment: EquipmentBySlot;
   bisEntries: BisEntry[];
+  /** Icon url per BiS item id; items without one show the placeholder. */
+  bisIcons: Record<number, string>;
   seeded: boolean;
 }
 
-export function UpgradeBoard({ equipment, bisEntries, seeded }: Props) {
+export function UpgradeBoard({ equipment, bisEntries, bisIcons, seeded }: Props) {
   const [contentType, setContentType] = useState<ContentType>('raid');
 
   const result = useMemo(() => compareGear(equipment, bisEntries, contentType), [equipment, bisEntries, contentType]);
@@ -73,7 +75,11 @@ export function UpgradeBoard({ equipment, bisEntries, seeded }: Props) {
 
                 <div>
                   {result.rows.map((row) => (
-                    <ComparisonRow key={`${row.bisSlot}-${row.physicalSlot}`} row={row} />
+                    <ComparisonRow
+                      key={`${row.bisSlot}-${row.physicalSlot}`}
+                      row={row}
+                      targetIconUrl={row.target ? (bisIcons[row.target.itemId] ?? null) : null}
+                    />
                   ))}
                 </div>
 

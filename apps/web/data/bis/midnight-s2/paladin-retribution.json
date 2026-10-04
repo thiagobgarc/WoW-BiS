@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 100
+      "popularity": 97
     },
     {
       "slot": "neck",
@@ -84,24 +84,6 @@
       "slot": "back",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 268253,
-      "itemName": "Silken Voodoo Drape",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Coiled Altar",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 90,
-      "popularity": 30
-    },
-    {
-      "slot": "back",
-      "contentType": "raid",
-      "rank": 2,
       "itemId": 251190,
       "itemName": "Bloodthorn Burnous",
       "itemLevel": 311,
@@ -114,6 +96,24 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 78,
+      "popularity": 27
+    },
+    {
+      "slot": "back",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268253,
+      "itemName": "Silken Voodoo Drape",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 90,
       "popularity": 27
     },
     {
@@ -181,7 +181,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 77
+      "popularity": 80
     },
     {
       "slot": "hands",
@@ -196,7 +196,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 43,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "waist",
@@ -333,7 +333,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 57
+      "popularity": 53
     },
     {
       "slot": "finger",
@@ -351,7 +351,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 13
+      "popularity": 17
     },
     {
       "slot": "trinket",
@@ -423,7 +423,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "head",

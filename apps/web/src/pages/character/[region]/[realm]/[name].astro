@@ -6,6 +6,7 @@ import { CharacterPage } from '@/components/character/CharacterPage';
 import { getFullCharacter, toCharacterKey } from '@/lib/blizzard/getFullCharacter';
 import { getCharacterTalents } from '@/lib/blizzard/getCharacterTalents';
 import { getCharacterProgression } from '@/lib/blizzard/getCharacterProgression';
+import { getItemIconUrls } from '@/lib/blizzard/getItemIcons';
 import { getBisList } from '@/lib/bis/getBisList';
 import { getRecommendedBuild } from '@/lib/talents/getRecommendedBuild';
 import { getMythicPlusTierList, findTierForSpec } from '@/lib/meta/getTierList';
@@ -31,6 +32,7 @@ const key = toCharacterKey(region, realm, name);
 let full: Awaited<ReturnType<typeof getFullCharacter>> | null = null;
 let bisEntries: BisEntry[] = [];
 let bisSeeded = false;
+let bisIcons: Record<number, string> = {};
 let statPriority: BisList['statPriority'] | undefined;
 let talents: CharacterTalents | null = null;
 let recommendedTalents: RecommendedTalentBuild | null = null;
@@ -61,6 +63,10 @@ if (!error) {
       bisEntries = bis.entries;
       bisSeeded = bis.seeded;
       statPriority = bis.seeded ? bis.statPriority : undefined;
+      // Icons are cosmetic: a failed lookup leaves the placeholder, never breaks the page.
+      bisIcons = Object.fromEntries(
+        await getItemIconUrls(key.region, bisEntries.map((e) => e.itemId)).catch(() => new Map<number, string>()),
+      );
 
       const recommended = await getRecommendedBuild(CURRENT_SEASON_ID, full.character.className, full.character.specName);
       recommendedTalents = recommended.build;
@@ -160,6 +166,7 @@ const noindex = !!error || !full || full.mock;
           stale={full.stale}
           bisEntries={bisEntries}
           bisSeeded={bisSeeded}
+          bisIcons={bisIcons}
           statPriority={statPriority}
           talents={talents}
           recommendedTalents={recommendedTalents}

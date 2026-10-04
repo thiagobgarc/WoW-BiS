@@ -18,9 +18,9 @@ import {
   getCharacterMedia,
   getCharacterProfile,
   getCharacterStatistics,
-  getItemIconUrl,
   type CharacterKey,
 } from './client';
+import { getItemIconUrls } from './getItemIcons';
 import { mapEquipment, mapProfile, mapStatistics, type DomainCharacter, type EquipmentBySlot, type SecondaryStats } from './domain';
 
 export interface FullCharacter {
@@ -55,11 +55,10 @@ async function fetchFullCharacter(key: CharacterKey): Promise<FullCharacter> {
     getCharacterStatistics(key),
   ]);
 
-  const itemIds = [...new Set(equipmentResult.data.equipped_items.map((i) => i.item.id))];
-  const iconEntries = await Promise.all(
-    itemIds.map(async (id) => [id, await getItemIconUrl(key.region, id)] as const),
+  const iconUrls = await getItemIconUrls(
+    key.region,
+    equipmentResult.data.equipped_items.map((i) => i.item.id),
   );
-  const iconUrls = new Map(iconEntries.filter((e): e is [number, string] => e[1] !== null));
 
   const avatarUrl = mediaResult.data.assets.find((a) => a.key === 'avatar')?.value ?? null;
 

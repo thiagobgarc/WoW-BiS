@@ -509,7 +509,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "neck",
@@ -577,7 +577,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 37
+      "popularity": 30
     },
     {
       "slot": "back",
@@ -595,7 +595,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 20
+      "popularity": 23
     },
     {
       "slot": "chest",
@@ -645,7 +645,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 20
+      "popularity": 23
     },
     {
       "slot": "hands",
@@ -662,7 +662,22 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 97
+      "popularity": 93
+    },
+    {
+      "slot": "hands",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 237836,
+      "itemName": "Spellbreaker's Resolve",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 30,
+      "popularity": 7
     },
     {
       "slot": "waist",
@@ -680,7 +695,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 53
+      "popularity": 50
     },
     {
       "slot": "waist",
@@ -733,7 +748,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 20
+      "popularity": 17
     },
     {
       "slot": "feet",
@@ -748,25 +763,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 43,
-      "popularity": 70
+      "popularity": 67
     },
     {
       "slot": "feet",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268245,
-      "itemName": "Entombed Cultist's Sabatons",
+      "itemId": 268260,
+      "itemName": "Scaled Fiend's Warboots",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
+        "boss": "Vashnik the Malignant",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 82,
-      "popularity": 7
+      "statPriorityFit": 57,
+      "popularity": 13
     },
     {
       "slot": "finger",
@@ -784,12 +799,27 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 85,
-      "popularity": 50
+      "popularity": 53
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 2,
+      "itemId": 251513,
+      "itemName": "Loa Worshiper's Band",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 85,
+      "popularity": 53
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 3,
       "itemId": 251136,
       "itemName": "Signet of Snarling Servitude",
       "itemLevel": 311,
@@ -802,22 +832,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 86,
-      "popularity": 50
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 3,
-      "itemId": 251513,
-      "itemName": "Loa Worshiper's Band",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 85,
-      "popularity": 47
+      "popularity": 43
     },
     {
       "slot": "trinket",
@@ -853,7 +868,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 50
+      "popularity": 43
     },
     {
       "slot": "trinket",
@@ -871,7 +886,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 37
+      "popularity": 40
     },
     {
       "slot": "main_hand",
@@ -889,7 +904,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 33
+      "popularity": 37
     },
     {
       "slot": "main_hand",
