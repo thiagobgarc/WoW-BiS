@@ -1,0 +1,72 @@
+# Regenerates every spec's BiS list from what top players are wearing this
+# week, and ships it: a commit to main auto-deploys on Vercel.
+#
+# Runs Tuesday 18:00 UTC, a few hours after the US weekly reset, so the
+# rankings reflect the new lockout. Can also be run by hand from the Actions
+# tab ("Run workflow").
+#
+# Needs four repository secrets (Settings → Secrets and variables → Actions):
+# BLIZZARD_CLIENT_ID, BLIZZARD_CLIENT_SECRET, WCL_CLIENT_ID, WCL_CLIENT_SECRET.
+name: Refresh BiS lists
+
+on:
+  schedule:
+    - cron: '0 18 * * 2'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-bis
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.0
+
+      - run: bun install --frozen-lockfile
+
+      - name: Regenerate BiS lists
+        working-directory: apps/web
+        env:
+          BLIZZARD_CLIENT_ID: ${{ secrets.BLIZZARD_CLIENT_ID }}
+          BLIZZARD_CLIENT_SECRET: ${{ secrets.BLIZZARD_CLIENT_SECRET }}
+          WCL_CLIENT_ID: ${{ secrets.WCL_CLIENT_ID }}
+          WCL_CLIENT_SECRET: ${{ secrets.WCL_CLIENT_SECRET }}
+        run: bun run bis:ingest
+
+      # The seed-file tests check every list before anything ships: all 40
+      # specs present, schema-valid, no wrong-primary weapons shared across
+      # specs, off-hands only where the setup has one.
+      - name: Validate lists
+        working-directory: apps/web
+        run: bunx vitest run src/lib/bis src/lib/ingest
+
+      - name: Commit to main and sync development
+        run: |
+          if git diff --quiet -- apps/web/data/bis; then
+            echo "No BiS changes this week."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add apps/web/data/bis
+          git commit -m "Refresh BiS lists from top players' gear ($(date -u +%Y-%m-%d))"
+          git push origin main
+          # Keep development in step so the next manual merge doesn't fight
+          # over data files. A conflict fails this step loudly; main has
+          # already shipped either way.
+          git checkout development
+          git merge --no-edit main
+          git push origin development

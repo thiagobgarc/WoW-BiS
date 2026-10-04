@@ -55,7 +55,19 @@ export const seasonConfig = {
       heroic: 305,
       mythic: 318,
     },
+    // Warcraft Logs encounter ids the raid BiS samples top Mythic parsers
+    // from (zone 53). Early bosses on purpose: they have 100+ Mythic parses
+    // per spec, while the last bosses have few or no kills yet (Kith'ix: 0
+    // as of 2026-10-04). Gear is read from Blizzard afterwards, so which boss
+    // a player parsed on does not bias the items, only who gets sampled.
+    warcraftLogsEncounterIds: [3470, 3455],
+    // Separate one-boss raid (Nymrissa Wavecaller) whose loot top players
+    // wear — e.g. Rising Tide Wristguards. Without it those items had no
+    // source at all.
+    additionalInstances: ['The Tidebound Grotto'],
   },
+  // Raider.IO's season slug, for the per-spec Mythic+ player rankings.
+  raiderIoSeason: 'season-mn-2',
   mythicPlus: {
     // Blizzard's internal numeric Mythic+ season id, needed to call
     // GET .../mythic-keystone-profile/season/{id}. Determined empirically

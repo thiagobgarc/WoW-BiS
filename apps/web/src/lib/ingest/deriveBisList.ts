@@ -65,6 +65,7 @@ export function collectLootEntries(content: ResolvedSeasonContent): LootEntry[] 
   };
 
   if (content.raid) push(content.raid.name, 'raid', content.raid.encounters);
+  for (const extra of content.extraRaids ?? []) push(extra.name, 'raid', extra.encounters);
   for (const dungeon of content.dungeons) push(dungeon.name, 'mythic-plus', dungeon.encounters);
 
   return entries;
@@ -89,14 +90,14 @@ export interface Candidate {
  * static item endpoint reports a base level (219 for current raid gear) that
  * no actual drop has. Difficulty scaling is what makes it 318.
  */
-function itemLevelFor(contentType: ContentType, config: SeasonConfig): number {
+export function itemLevelFor(contentType: ContentType, config: SeasonConfig): number {
   if (contentType === 'raid') return config.raid.difficultyIlvl.mythic;
   // The +10 end-of-dungeon reward, which is the ceiling for non-vault
   // dungeon loot — pushing higher keys raises rating, not item level.
   return config.mythicPlus.ilvlByKeyLevel[10] ?? config.raid.difficultyIlvl.heroic;
 }
 
-function sourceFor(entry: LootEntry): Source {
+export function sourceFor(entry: LootEntry): Source {
   if (entry.contentType === 'raid') {
     return { type: 'raid', instance: entry.instance, boss: entry.boss, difficulty: 'mythic' };
   }

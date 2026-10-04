@@ -23,6 +23,8 @@ export interface ResolvedInstance {
 
 export interface ResolvedSeasonContent {
   raid: ResolvedInstance | null;
+  /** Smaller raids that share the season's raid loot level (seasonConfig.raid.additionalInstances). */
+  extraRaids: ResolvedInstance[];
   dungeons: ResolvedInstance[];
   /** Names from seasonConfig that matched no journal instance. */
   unresolved: string[];
@@ -78,5 +80,10 @@ export async function resolveSeasonContent(
       .map((d) => loadInstance(region, d.hit.id, d.hit.name)),
   );
 
-  return { raid, dungeons, unresolved };
+  const extraRaidHits = config.raid.additionalInstances
+    .map((name) => lookup(name))
+    .filter((hit): hit is { id: number; name: string } => hit !== null);
+  const extraRaids = await Promise.all(extraRaidHits.map((hit) => loadInstance(region, hit.id, hit.name)));
+
+  return { raid, extraRaids, dungeons, unresolved };
 }

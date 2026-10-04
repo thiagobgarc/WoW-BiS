@@ -73,6 +73,8 @@ const EquippedItemSchema = z
     slot: z.object({ type: z.string(), name: z.string() }).loose(),
     quality: z.object({ type: z.string(), name: z.string() }).loose(),
     name: z.string(),
+    // Upgrade track or crafting tag, e.g. "Heroic" or "Tidal Crafted".
+    name_description: z.object({ display_string: z.string() }).loose().optional(),
     level: z.object({ value: z.number() }).loose(),
     media: z.object({ id: z.number() }).loose().optional(),
     item_class: z.object({ name: z.string() }).loose().optional(),

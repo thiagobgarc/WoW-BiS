@@ -25,6 +25,8 @@ export function sourceLabel(source: Source): string {
       return 'World Drop';
     case 'pvp':
       return 'PvP';
+    case 'other':
+      return 'Source not in the Adventure Guide';
     case 'profession':
       return 'Profession';
     default:

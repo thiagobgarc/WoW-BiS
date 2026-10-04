@@ -217,6 +217,7 @@ describe('collectLootEntries', () => {
         name: 'The Venomous Abyss',
         encounters: [{ id: 10, name: 'Ula-tek', items: [{ id: 1, item: { id: 100, name: 'Raid Helm' } }] }],
       },
+      extraRaids: [],
       dungeons: [
         {
           id: 2,

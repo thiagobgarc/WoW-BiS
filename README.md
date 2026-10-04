@@ -45,3 +45,9 @@ Also, the mobile app runs with `bun run mobile`. Read `docs/` before writing any
 ## Deployment
 
 The site is hosted on Vercel and served at [mythosbis.com](https://mythosbis.com). Every push to `main` deploys to production. Work happens on `development` and gets merged into `main` when it is ready.
+
+## How the BiS lists are made
+
+The lists come from what the best players actually wear, the same way Archon does it. For raid, it samples the top Mythic parsers for each spec on Warcraft Logs. For Mythic+, it samples the top players on Raider.IO. Then it reads their current gear from the Blizzard API and ranks each slot by how many of them use the item. Slots with too few players fall back to ranking drops by stat priority.
+
+A GitHub Action (`.github/workflows/refresh-bis.yml`) reruns this every Tuesday after reset and commits the new lists to `main`, so the site redeploys with them. You can also run it by hand from the Actions tab, or locally with `bun run bis:ingest` in `apps/web`.
