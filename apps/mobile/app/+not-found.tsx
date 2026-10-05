@@ -15,7 +15,7 @@ export default function NotFoundScreen() {
         <View className="mt-8">
           <Text className="text-2xl font-bold text-text">This page doesn't exist</Text>
           <Link href="/" className="mt-4">
-            <Text className="text-base text-link">Go to search</Text>
+            <Text className="text-base text-text underline">Go to search</Text>
           </Link>
         </View>
       </Screen>

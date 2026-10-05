@@ -16,8 +16,8 @@ export type BannerTone = 'info' | 'warning';
 const TONES = {
   info: {
     icon: 'information-circle-outline',
-    color: colors.link,
-    container: 'border-link/30 bg-link/10',
+    color: colors['text-muted'],
+    container: 'border-rule-strong bg-panel',
     prefix: 'Note',
   },
   warning: {

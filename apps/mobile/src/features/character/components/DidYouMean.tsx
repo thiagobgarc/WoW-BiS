@@ -30,7 +30,7 @@ export function DidYouMean({ looked }: { looked: CharacterParams }) {
 
   return (
     <View className="mt-6 px-2">
-      <Text className="text-xs font-semibold uppercase tracking-widest text-text-faint">Did you mean</Text>
+      <Text className="text-xs font-semibold uppercase tracking-widest text-text-dim">Did you mean</Text>
       <View accessibilityRole="list" className="mt-2 overflow-hidden rounded-xl border border-border bg-panel">
         {variants.map((c, index) => (
           <Pressable

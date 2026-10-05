@@ -24,7 +24,7 @@ export function Button({ label, disabled, ...props }: ButtonProps) {
       }`}
       {...props}
     >
-      <Text className={`text-base font-semibold ${disabled ? 'text-text-faint' : 'text-text'}`}>
+      <Text className={`text-base font-semibold ${disabled ? 'text-text-dim' : 'text-text'}`}>
         {label}
       </Text>
     </Pressable>

@@ -75,6 +75,7 @@ export function accentVars(wowClass?: string | null) {
     '--accent-hover': darken(accent),
     '--accent-soft': withAlpha(accent, 0.15),
     '--accent-softer': withAlpha(accent, 0.08),
+    '--accent-rule': withAlpha(accent, 0.55),
   });
 }
 

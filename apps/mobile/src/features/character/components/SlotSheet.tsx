@@ -80,7 +80,7 @@ export function SlotSheet({ selection, onClose, reduceMotion }: SlotSheetProps) 
     (props: BottomSheetHandleProps) => (
       <BottomSheetHandle
         {...props}
-        indicatorStyle={{ backgroundColor: colors['text-faint'] }}
+        indicatorStyle={{ backgroundColor: colors['text-dim'] }}
         accessible={null}
         accessibilityRole={null}
         accessibilityLabel={null}
@@ -181,7 +181,7 @@ export function SlotSheetBody({ selection: { slot, item } }: { selection: SlotSe
         </View>
       ) : null}
 
-      {item.enchantText ? <Line text={item.enchantText} className="text-link" /> : null}
+      {item.enchantText ? <Line text={item.enchantText} className="text-text" /> : null}
 
       {item.sockets.map((socket, index) => (
         <Line
@@ -189,7 +189,7 @@ export function SlotSheetBody({ selection: { slot, item } }: { selection: SlotSe
           // so position is the only honest key available.
           key={`${index}-${socket.gemName ?? 'empty'}`}
           text={socket.filled ? `Socket: ${socket.gemName ?? 'Gem'}` : 'Empty Socket'}
-          className={socket.filled ? 'text-link' : 'text-severity-gap'}
+          className={socket.filled ? 'text-text-muted' : 'text-severity-gap'}
         />
       ))}
 
@@ -221,7 +221,7 @@ export function SlotSheetBody({ selection: { slot, item } }: { selection: SlotSe
       {item.requiredLevelText || item.classesText ? (
         <View className="gap-0.5">
           {item.requiredLevelText ? <Line text={item.requiredLevelText} className="text-text-dim" /> : null}
-          {item.classesText ? <Line text={item.classesText} className="text-link" /> : null}
+          {item.classesText ? <Line text={item.classesText} className="text-text-muted" /> : null}
         </View>
       ) : null}
 
@@ -264,7 +264,7 @@ function WowheadLink({ url, itemName }: { url: string; itemName: string }) {
       }}
       className="mt-2 min-h-[44px] justify-center"
     >
-      <Text className="text-sm font-semibold text-link">View on Wowhead ↗</Text>
+      <Text className="text-sm font-semibold text-text underline">View on Wowhead ↗</Text>
     </Pressable>
   );
 }

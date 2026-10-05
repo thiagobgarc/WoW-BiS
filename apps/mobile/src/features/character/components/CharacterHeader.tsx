@@ -120,8 +120,8 @@ function Stat({
       accessibilityLabel={`${hint}: ${spokenValue ?? value}${note ? `, ${note}` : ''}`}
       className="rounded-lg bg-panel px-2.5 py-1.5"
     >
-      <Text className="text-[10px] font-semibold uppercase tracking-wide text-text-faint">{label}</Text>
-      <Text className="text-sm font-semibold text-link">{value}</Text>
+      <Text className="text-[10px] font-semibold uppercase tracking-wide text-text-dim">{label}</Text>
+      <Text className="text-sm font-semibold text-text">{value}</Text>
       {note ? <Text className="text-[10px] text-text-dim">{note}</Text> : null}
     </View>
   );

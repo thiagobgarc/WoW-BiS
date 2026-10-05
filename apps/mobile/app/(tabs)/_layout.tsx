@@ -18,7 +18,7 @@ export default function TabsLayout() {
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: colors.text,
-        tabBarInactiveTintColor: colors['text-faint'],
+        tabBarInactiveTintColor: colors['text-dim'],
         tabBarStyle: { backgroundColor: colors.panel, borderTopColor: colors.border },
       }}
     >

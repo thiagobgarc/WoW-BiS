@@ -110,16 +110,16 @@ export function NameField({ region, value, onChange, onSelect, exclude }: NameFi
               <Text className="text-xs text-text-dim">{character.region.toUpperCase()}</Text>
             </Pressable>
           ))}
-          <Text className="border-t border-border px-3 py-1.5 text-right text-[11px] text-text-faint">
+          <Text className="border-t border-border px-3 py-1.5 text-right text-[11px] text-text-dim">
             Suggestions from Raider.IO
           </Text>
         </View>
       ) : null}
 
       {/* Hints, never errors: the name can always be typed in full. */}
-      {isSearching ? <Text className="mt-1.5 text-xs text-text-faint">Searching…</Text> : null}
+      {isSearching ? <Text className="mt-1.5 text-xs text-text-dim">Searching…</Text> : null}
       {isUnavailable && shown.length === 0 ? (
-        <Text className="mt-1.5 text-xs text-text-faint">
+        <Text className="mt-1.5 text-xs text-text-dim">
           Name suggestions are offline. Type the full name and realm and search anyway.
         </Text>
       ) : null}

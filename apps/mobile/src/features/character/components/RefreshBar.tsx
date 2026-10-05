@@ -63,9 +63,9 @@ export function RefreshBar({ fetchedAt, refresh }: RefreshBarProps) {
           <Icon
             name="refresh"
             size={14}
-            color={disabled ? colors['text-faint'] : colors.text}
+            color={disabled ? colors['text-dim'] : colors.text}
           />
-          <Text className={`text-sm font-semibold ${disabled ? 'text-text-faint' : 'text-text'}`}>
+          <Text className={`text-sm font-semibold ${disabled ? 'text-text-dim' : 'text-text'}`}>
             {refresh.isRefreshing ? 'Refreshing…' : refresh.isOnCooldown ? `${refresh.secondsLeft}s` : 'Refresh'}
           </Text>
         </Pressable>

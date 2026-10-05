@@ -37,7 +37,7 @@ function Rows({ rows }: { rows: ActionRow[] }) {
     <View className="gap-3">
       {rows.map((row) => (
         <View key={row.key} accessible accessibilityLabel={`${row.lead}: ${row.detail}`}>
-          <Text className="text-xs font-semibold text-link">{row.lead}</Text>
+          <Text className="text-xs font-semibold text-text">{row.lead}</Text>
           <Text className="mt-0.5 text-xs leading-5 text-text-muted">{row.detail}</Text>
         </View>
       ))}

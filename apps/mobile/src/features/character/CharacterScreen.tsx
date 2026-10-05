@@ -153,7 +153,7 @@ export default function CharacterScreen() {
                 onRefresh={refresh.refresh}
                 enabled={data !== undefined && !refresh.isOnCooldown}
                 tintColor={colors['text-muted']}
-                colors={[colors.link]}
+                colors={[colors['text-muted']]}
                 progressBackgroundColor={colors.panel}
               />
             }

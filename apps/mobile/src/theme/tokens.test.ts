@@ -24,6 +24,12 @@ function webTokens(): Map<string, string> {
   for (const [, name, value] of root.matchAll(/--([\w-]+)\s*:\s*([^;]+);/g)) {
     if (name && value) tokens.set(name, value.trim());
   }
+  // An alias like `--color-border: var(--color-rule)` compares as the color
+  // it points at, which is what the mobile palette has to hold.
+  for (const [name, value] of tokens) {
+    const alias = value.match(/^var\(--([\w-]+)\)$/)?.[1];
+    if (alias && tokens.has(alias)) tokens.set(name, tokens.get(alias)!);
+  }
   return tokens;
 }
 
@@ -44,12 +50,13 @@ describe('mobile palette matches the web stylesheet', () => {
     ['color-bg', palette.dark.bg],
     ['color-panel', palette.dark.panel],
     ['color-panel-hover', palette.dark['panel-hover']],
+    ['color-sunken', palette.dark.sunken],
+    ['color-rule', palette.dark.rule],
+    ['color-rule-strong', palette.dark['rule-strong']],
     ['color-border', palette.dark.border],
     ['color-text', palette.dark.text],
     ['color-text-muted', palette.dark['text-muted']],
     ['color-text-dim', palette.dark['text-dim']],
-    ['color-text-faint', palette.dark['text-faint']],
-    ['color-link', palette.dark.link],
   ])('--%s', (token, mobile) => {
     expect(normalize(mobile)).toBe(normalize(web.get(token) ?? ''));
   });
@@ -73,6 +80,7 @@ describe('mobile palette matches the web stylesheet', () => {
       'accent-hover',
       'accent-soft',
       'accent-softer',
+      'accent-rule',
     ]);
 
     expect([...web.keys()].filter((token) => !mobileTokens.has(token))).toEqual([]);

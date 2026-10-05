@@ -125,9 +125,9 @@ function ComparisonRowCardImpl({ row, expanded, onToggleAlternatives }: Comparis
             <Icon
               name={expanded ? 'chevron-down' : 'chevron-forward'}
               size={14}
-              color={colors.link}
+              color={colors['text-muted']}
             />
-            <Text className="text-xs font-semibold text-link">
+            <Text className="text-xs font-semibold text-text-muted">
               {alternatives} alternative{alternatives > 1 ? 's' : ''}
             </Text>
           </Pressable>
