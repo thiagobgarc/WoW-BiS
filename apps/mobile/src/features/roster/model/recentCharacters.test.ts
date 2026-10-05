@@ -128,4 +128,10 @@ describe('matchRecent', () => {
   it('is empty when nothing matches', () => {
     expect(matchRecent(list, 'zzz')).toEqual([]);
   });
+
+  it('ignores accents on either side', () => {
+    const accented = [character({ name: 'Zóe', realmSlug: 'eredar' })];
+    expect(matchRecent(accented, 'zoe').map((c) => c.name)).toEqual(['Zóe']);
+    expect(matchRecent(list, 'ârthâs').map((c) => c.name)).toEqual(['Arthas']);
+  });
 });

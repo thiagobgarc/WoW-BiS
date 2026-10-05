@@ -23,6 +23,7 @@
  */
 import { z } from 'zod';
 import { RegionSchema } from '@mythos/api-contract';
+import { foldName } from '@mythos/core/realm';
 
 /** Same cap as the web's list. Eight fits a phone screen without scrolling. */
 export const MAX_RECENT = 8;
@@ -121,9 +122,10 @@ export function parseRecentList(raw: unknown): RecentCharacter[] {
  * viewed" chip row. On a phone there is room for one always-visible list, so
  * the list itself narrows as you type — same behaviour, one fewer surface.
  * An empty query matches everything, which is the cold-launch state.
+ * Accents are ignored, so "zoe" still finds a saved "Zóe".
  */
 export function matchRecent(list: RecentCharacter[], query: string): RecentCharacter[] {
-  const needle = query.trim().toLowerCase();
+  const needle = foldName(query.trim());
   if (!needle) return list;
-  return list.filter((c) => c.name.toLowerCase().includes(needle));
+  return list.filter((c) => foldName(c.name).includes(needle));
 }

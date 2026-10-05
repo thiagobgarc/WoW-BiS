@@ -16,14 +16,15 @@
 import { useState } from 'react';
 import { KeyboardAvoidingView, Platform, ScrollView, Text, View } from 'react-native';
 import { useRouter } from 'expo-router';
+import type { CharacterSuggestion } from '@mythos/api-contract';
 
 import { Screen } from '@/components/Screen';
 import { Button } from '@/components/Button';
-import { TextField } from '@/components/TextField';
 import { apiBaseUrl } from '@/lib/api';
 import { useMeta } from '@/features/meta/api/useMeta';
 import { matchRecent, type RecentCharacter } from '@/features/roster/model/recentCharacters';
 import { useRecentCharacters, useRegion, useSetRegion } from '@/features/roster/store';
+import { NameField } from './components/NameField';
 import { RealmField } from './components/RealmField';
 import { RecentCharacterList } from './components/RecentCharacterList';
 import { RegionPicker } from './components/RegionPicker';
@@ -61,6 +62,10 @@ export default function SearchScreen() {
     router.push(characterRoute(character.region, character.realmSlug, character.name));
   }
 
+  function openSuggestion(character: CharacterSuggestion) {
+    router.push(characterRoute(character.region, character.realmSlug, character.name));
+  }
+
   return (
     <Screen edges={{ bottom: false }}>
       <KeyboardAvoidingView
@@ -87,14 +92,12 @@ export default function SearchScreen() {
           )}
 
           <View className="mt-6 gap-4">
-            <TextField
-              label="Character"
-              placeholder="Character name"
+            <NameField
+              region={region}
               value={name}
-              onChangeText={setName}
-              autoCapitalize="words"
-              autoCorrect={false}
-              returnKeyType="next"
+              onChange={setName}
+              onSelect={openSuggestion}
+              exclude={matches}
             />
             <RegionPicker value={region} onChange={setRegion} />
             <RealmField

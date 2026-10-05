@@ -32,3 +32,36 @@ export function realmSlug(realmName: string): string {
 export function characterSlug(characterName: string): string {
   return characterName.trim().toLowerCase();
 }
+
+/**
+ * Lowercased with accents stripped, so "Zòë" and "zoe" compare equal. For
+ * matching what someone typed against a name, never for building a URL:
+ * Blizzard only resolves a name spelled exactly, accents included.
+ */
+export function foldName(value: string): string {
+  return value.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase();
+}
+
+/**
+ * Where `query` sits inside `name` when accents are ignored, as a
+ * [start, end) range over the name's own characters, for highlighting the
+ * match. "zoe" has to light up all three letters of "Zòë" even though the
+ * two strings differ in length once decomposed. Null when it doesn't match.
+ */
+export function foldedMatchRange(name: string, query: string): [number, number] | null {
+  const q = foldName(query.trim());
+  if (!q) return null;
+  let folded = '';
+  const origin: number[] = [];
+  for (let i = 0; i < name.length; ) {
+    const ch = String.fromCodePoint(name.codePointAt(i)!);
+    const f = foldName(ch);
+    for (let k = 0; k < f.length; k++) origin.push(i);
+    folded += f;
+    i += ch.length;
+  }
+  const at = folded.indexOf(q);
+  if (at < 0) return null;
+  const end = at + q.length;
+  return [origin[at]!, end < origin.length ? origin[end]! : name.length];
+}

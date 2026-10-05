@@ -22,6 +22,7 @@
  * `compareGear`/`deriveActionGroups` from `packages/core`, on device. It
  * fetches nothing, which is why its segments switch with the radio off.
  */
+import { MythosApiError } from '@mythos/api-client';
 import { useCallback, useState } from 'react';
 import { RefreshControl, ScrollView, Text, View } from 'react-native';
 import { Stack, useLocalSearchParams } from 'expo-router';
@@ -42,6 +43,7 @@ import { accentVars, colors } from '@/theme';
 import { parseCharacterParams, useCharacter } from './api/useCharacter';
 import { useRefreshCharacter } from './api/useRefreshCharacter';
 import { CharacterErrorState } from './components/CharacterErrorState';
+import { DidYouMean } from './components/DidYouMean';
 import { CharacterHeader } from './components/CharacterHeader';
 import { CharacterSkeleton } from './components/CharacterSkeleton';
 import { PaperDoll } from './components/PaperDoll';
@@ -165,12 +167,17 @@ export default function CharacterScreen() {
             {/* An error only takes the screen when there is no snapshot behind
                 it. With one, it is a banner and the character still renders. */}
             {params !== null && character.isError && data === undefined ? (
-              <CharacterErrorState
-                copy={characterErrorCopy(character.error)}
-                onRetry={() => {
-                  void character.refetch();
-                }}
-              />
+              <>
+                <CharacterErrorState
+                  copy={characterErrorCopy(character.error)}
+                  onRetry={() => {
+                    void character.refetch();
+                  }}
+                />
+                {character.error instanceof MythosApiError && character.error.code === 'character_not_found' ? (
+                  <DidYouMean looked={params} />
+                ) : null}
+              </>
             ) : null}
 
             {data && profile ? (

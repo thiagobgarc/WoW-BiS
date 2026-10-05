@@ -17,6 +17,7 @@ export * from './realms';
 export * from './character';
 export * from './bis';
 export * from './metaBrowse';
+export * from './characterSearch';
 
 /** Every /v1 path this contract covers, for building request URLs. */
 export const V1_BASE_PATH = '/api/v1';

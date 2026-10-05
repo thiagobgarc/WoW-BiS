@@ -17,6 +17,7 @@ import { z } from 'zod';
 import {
   ApiErrorEnvelopeSchema,
   BisSeasonResponseSchema,
+  CharacterSearchResponseSchema,
   CharacterResponseSchema,
   CLIENT_HEADER,
   JSON_CONTENT_TYPE,
@@ -25,6 +26,7 @@ import {
   RealmsResponseSchema,
   V1_BASE_PATH,
   type BisSeasonResponse,
+  type CharacterSearchResponse,
   type CharacterParams,
   type CharacterResponse,
   type MetaResponse,
@@ -62,6 +64,8 @@ export interface BisSeasonOptions {
 export interface MythosClient {
   getMeta(signal?: AbortSignal): Promise<MetaResponse>;
   getRealms(query: { region: string; q?: string }, signal?: AbortSignal): Promise<RealmsResponse>;
+  /** Names matched without accents; region only orders the results. */
+  searchCharacters(query: { q: string; region?: string }, signal?: AbortSignal): Promise<CharacterSearchResponse>;
   getCharacter(params: CharacterParams, signal?: AbortSignal): Promise<CharacterResponse>;
   refreshCharacter(params: CharacterParams, signal?: AbortSignal): Promise<CharacterResponse>;
   /** null means "your cached copy is current" — only possible with ifNoneMatch. */
@@ -196,6 +200,14 @@ export function createMythosClient({ baseUrl, fetch, client }: MythosClientOptio
       const params = new URLSearchParams({ region });
       if (q) params.set('q', q);
       return required(request(`/realms?${params}`, RealmsResponseSchema, { headers: headers(), signal }));
+    },
+
+    searchCharacters({ q, region }, signal) {
+      const params = new URLSearchParams({ q });
+      if (region) params.set('region', region);
+      return required(
+        request(`/character-search?${params}`, CharacterSearchResponseSchema, { headers: headers(), signal }),
+      );
     },
 
     getCharacter(params, signal) {

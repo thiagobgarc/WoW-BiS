@@ -24,11 +24,12 @@ import SearchScreen from './SearchScreen';
 // imports; only `mock*` bindings may be referenced from the factory.
 const mockGetMeta = jest.fn();
 const mockGetRealms = jest.fn();
+const mockSearchCharacters = jest.fn();
 const mockPush = jest.fn();
 
 jest.mock('@/lib/api', () => ({
   get api() {
-    return { getMeta: mockGetMeta, getRealms: mockGetRealms };
+    return { getMeta: mockGetMeta, getRealms: mockGetRealms, searchCharacters: mockSearchCharacters };
   },
   apiBaseUrl: 'https://mythos.test',
   appVersion: '0.1.0',
@@ -96,6 +97,7 @@ function offline() {
   const error = new MythosApiError({ code: 'network', message: 'Could not reach Mythos.' });
   mockGetMeta.mockRejectedValue(error);
   mockGetRealms.mockRejectedValue(error);
+  mockSearchCharacters.mockRejectedValue(error);
 }
 
 beforeEach(() => {
@@ -104,6 +106,8 @@ beforeEach(() => {
   mockPush.mockReset();
   mockGetMeta.mockResolvedValue(META);
   mockGetRealms.mockResolvedValue({ realms: [], mock: false });
+  mockSearchCharacters.mockReset();
+  mockSearchCharacters.mockResolvedValue({ characters: [] });
   useRosterStore.setState({ recent: [], region: DEFAULT_REGION });
 });
 
@@ -133,6 +137,26 @@ describe('SearchScreen', () => {
 
     await waitFor(() => expect(queryByText('Arthas')).toBeNull());
     expect(getByText('Jaina')).toBeTruthy();
+  });
+
+  it('suggests characters by name without accents and opens the one picked', async () => {
+    mockSearchCharacters.mockResolvedValue({
+      characters: [
+        { name: 'Zóe', realmName: 'Eredar', realmSlug: 'eredar', region: 'us', className: 'Priest', avatarUrl: null },
+      ],
+    });
+    const { findByLabelText } = await renderWithProviders(<SearchScreen />);
+
+    fireEvent.changeText(await findByLabelText('Character'), 'zoe');
+    const suggestion = await findByLabelText('Zóe, Eredar, US, Priest');
+    await act(async () => {});
+
+    expect(mockSearchCharacters).toHaveBeenCalledWith({ q: 'zoe', region: 'us' }, expect.anything());
+    fireEvent.press(suggestion);
+    expect(mockPush).toHaveBeenCalledWith({
+      pathname: '/character/[region]/[realm]/[name]',
+      params: { region: 'us', realm: 'eredar', name: 'zóe' },
+    });
   });
 
   it('says so when a typed name matches no recent character', async () => {

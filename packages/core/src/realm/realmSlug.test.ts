@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { characterSlug, realmSlug } from './realmSlug';
+import { characterSlug, foldName, foldedMatchRange, realmSlug } from './realmSlug';
 
 describe('realmSlug', () => {
   it.each([
@@ -30,5 +30,30 @@ describe('characterSlug', () => {
   it('lowercases and trims', () => {
     expect(characterSlug('  Arthas  ')).toBe('arthas');
     expect(characterSlug('THRALL')).toBe('thrall');
+  });
+});
+
+describe('foldName', () => {
+  it('strips accents and case', () => {
+    expect(foldName('Zòë')).toBe('zoe');
+    expect(foldName('João')).toBe('joao');
+    expect(foldName('Ãrth')).toBe('arth');
+  });
+});
+
+describe('foldedMatchRange', () => {
+  it('maps an unaccented query onto the accented name', () => {
+    expect(foldedMatchRange('Zòë', 'zoe')).toEqual([0, 3]);
+    expect(foldedMatchRange('Darthá', 'tha')).toEqual([3, 6]);
+  });
+
+  it('handles a decomposed (NFD) name, where one letter is two code units', () => {
+    const nfd = 'Zöe';
+    expect(foldedMatchRange(nfd, 'oe')).toEqual([1, 4]);
+  });
+
+  it('returns null for no match or an empty query', () => {
+    expect(foldedMatchRange('Arthas', 'xyz')).toBeNull();
+    expect(foldedMatchRange('Arthas', '  ')).toBeNull();
   });
 });

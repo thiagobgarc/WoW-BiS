@@ -164,6 +164,32 @@ const RealmsResponseSchema = z.object({
 });
 ```
 
+### `GET /v1/character-search?q=zoe&region=us`
+
+Character-name autocomplete. Blizzard has no search by name, so this wraps
+Raider.IO's site search (`lib/search/characterSearch.ts`, shared with the web
+app's `/api/character-search`). Matching ignores accents, which is the point:
+"zoe" finds "Zóe", a name Blizzard only resolves spelled exactly. Results are
+ranked exact, then prefix, then contains, with `region` (optional) first;
+capped at 8; cached server-side per accent-folded query for an hour. Rate
+limit: 90/60s per IP, one request per debounced keystroke.
+
+The upstream endpoint is undocumented, so this route never fails on its
+account: an outage answers 200 with an empty list. A `q` under two letters
+(accents aside) answers an empty list without searching.
+
+```ts
+const CharacterSuggestionSchema = z.object({
+  name: z.string(),        // Blizzard's exact spelling, accents included
+  realmName: z.string(),
+  realmSlug: z.string(),   // ready for /v1/character/:region/:realm/:name
+  region: RegionSchema,
+  className: z.string().nullable(),
+  avatarUrl: z.string().nullable(),
+});
+const CharacterSearchResponseSchema = z.object({ characters: z.array(CharacterSuggestionSchema) });
+```
+
 ### `GET /v1/character/:region/:realm/:name`
 
 **One round trip.** Composes exactly what
@@ -320,6 +346,7 @@ const SpecBuildResponseSchema = z.object({
 |---|---|---|---|---|---|---|
 | GET | `/v1/meta` | new composition | 60/60s | No | v1 | Live |
 | GET | `/v1/realms` | `api/realms.ts` | 60/60s | No | v1 | Live |
+| GET | `/v1/character-search` | `findCharacterSuggestions` (Raider.IO search) | 90/60s | No | **1.1** | Live |
 | GET | `/v1/character/:region/:realm/:name` | the character Astro page's composition | 20/60s | Yes | v1 | Live |
 | POST | `/v1/character/:region/:realm/:name/refresh` | `refreshCharacter` | 10/60s + per-char cooldown | Yes | v1 | Live |
 | GET | `/v1/bis/:season` | `getBisSeason` | 60/60s | No | v1 | Live |

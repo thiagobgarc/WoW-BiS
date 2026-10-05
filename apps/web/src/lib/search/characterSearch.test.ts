@@ -60,7 +60,7 @@ describe('parseSearchResponse', () => {
 });
 
 describe('rankSuggestions', () => {
-  const s = (name: string, region = 'us'): CharacterSuggestion => ({
+  const s = (name: string, region: CharacterSuggestion['region'] = 'us'): CharacterSuggestion => ({
     name,
     region,
     realmName: 'R',
