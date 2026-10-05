@@ -35,6 +35,7 @@ export function SearchForm() {
         <NameCombobox
           id="character-name-search"
           value={name}
+          region={region.toLowerCase()}
           onChange={setName}
           onSelect={(c: RecentCharacter) => navigateToCharacter(c.name, c.realmName, c.region)}
           recent={recent}
