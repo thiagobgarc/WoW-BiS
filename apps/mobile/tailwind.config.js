@@ -29,19 +29,23 @@ module.exports = {
       colors: {
         bg: palette.dark.bg,
         panel: { DEFAULT: palette.dark.panel, hover: palette.dark['panel-hover'] },
+        sunken: palette.dark.sunken,
+        rule: { DEFAULT: palette.dark.rule, strong: palette.dark['rule-strong'] },
         border: palette.dark.border,
+        // No `faint` and no `link`, matching the web: text-faint measured
+        // ~3.2:1 and failed AA everywhere it carried text, and the chrome is
+        // achromatic, so emphasis is `text` and secondary is `text-muted`.
         text: {
           DEFAULT: palette.dark.text,
           muted: palette.dark['text-muted'],
           dim: palette.dark['text-dim'],
-          faint: palette.dark['text-faint'],
         },
-        link: palette.dark.link,
         accent: {
           DEFAULT: 'var(--accent)',
           hover: 'var(--accent-hover)',
           soft: 'var(--accent-soft)',
           softer: 'var(--accent-softer)',
+          rule: 'var(--accent-rule)',
         },
         quality: palette.quality,
         severity: palette.severity,

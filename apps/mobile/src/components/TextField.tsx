@@ -22,13 +22,13 @@ export const TextField = forwardRef<TextInput, TextFieldProps>(function TextFiel
 ) {
   return (
     <View>
-      <Text className="mb-1.5 text-xs font-semibold uppercase tracking-widest text-text-faint">
+      <Text className="mb-1.5 text-xs font-semibold uppercase tracking-widest text-text-dim">
         {label}
       </Text>
       <TextInput
         ref={ref}
         accessibilityLabel={label}
-        placeholderTextColor={colors['text-faint']}
+        placeholderTextColor={colors['text-dim']}
         className="min-h-[44px] rounded-xl border border-border bg-panel px-4 py-2 text-base text-text"
         {...props}
       />

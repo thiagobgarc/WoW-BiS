@@ -25,7 +25,7 @@ interface RecentCharacterListProps {
 export function RecentCharacterList({ characters, onSelect, filtered }: RecentCharacterListProps) {
   if (characters.length === 0) {
     return (
-      <Text className="mt-3 text-sm text-text-faint">
+      <Text className="mt-3 text-sm text-text-dim">
         {filtered
           ? 'No recent character matches that name.'
           : 'Characters you look up will appear here.'}

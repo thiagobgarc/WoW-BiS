@@ -25,7 +25,7 @@ interface CharacterErrorStateProps {
 export function CharacterErrorState({ copy, onRetry }: CharacterErrorStateProps) {
   return (
     <View accessible accessibilityRole="alert" className="mt-10 items-center gap-3 px-2">
-      <Icon name="alert-circle-outline" size={40} color={colors['text-faint']} />
+      <Icon name="alert-circle-outline" size={40} color={colors['text-dim']} />
       <Text accessibilityRole="header" className="text-center text-lg font-semibold text-text">
         {copy.title}
       </Text>

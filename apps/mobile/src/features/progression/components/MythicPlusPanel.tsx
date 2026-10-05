@@ -40,7 +40,7 @@ export function MythicPlusPanel({ profile }: MythicPlusPanelProps) {
         <Text accessibilityRole="header" className="text-lg font-bold text-text">
           Mythic+ score
         </Text>
-        <Text className="text-lg font-bold text-link">{formatScore(profile.rating)}</Text>
+        <Text className="text-lg font-bold text-text">{formatScore(profile.rating)}</Text>
       </View>
 
       {profile.dungeons.length === 0 ? (
@@ -66,7 +66,7 @@ function DungeonCard({ progress: { dungeon, run } }: { progress: DomainDungeonPr
       <View className="flex-row items-center gap-2">
         <Text className="min-w-0 flex-1 text-sm font-semibold text-text">{dungeon}</Text>
         {run ? (
-          <Text className="rounded bg-link/20 px-2 py-0.5 text-sm font-semibold text-link">
+          <Text className="rounded bg-rule px-2 py-0.5 text-sm font-semibold text-text">
             +{run.level}
           </Text>
         ) : null}

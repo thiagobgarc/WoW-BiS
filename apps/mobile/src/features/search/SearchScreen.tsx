@@ -110,7 +110,7 @@ export default function SearchScreen() {
           </View>
 
           <View className="mt-8 mb-6">
-            <Text className="text-xs font-semibold uppercase tracking-widest text-text-faint">
+            <Text className="text-xs font-semibold uppercase tracking-widest text-text-dim">
               Recently viewed
             </Text>
             <RecentCharacterList
@@ -122,7 +122,7 @@ export default function SearchScreen() {
 
           {/* Which host a build resolved to is the single most useful thing
               to see when a dev build can't reach the API. Never shipped. */}
-          {__DEV__ ? <Text className="mb-4 text-xs text-text-faint">{apiBaseUrl}</Text> : null}
+          {__DEV__ ? <Text className="mb-4 text-xs text-text-dim">{apiBaseUrl}</Text> : null}
         </ScrollView>
       </KeyboardAvoidingView>
     </Screen>

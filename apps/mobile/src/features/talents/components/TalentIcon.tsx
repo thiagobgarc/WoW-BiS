@@ -43,7 +43,7 @@ export function TalentIcon({ iconUrl, size = 36, rank, dimmed = false }: TalentI
             transition={120}
           />
         ) : (
-          <Text className="text-xs text-text-faint">?</Text>
+          <Text className="text-xs text-text-dim">?</Text>
         )}
       </View>
       {rank !== undefined ? (

@@ -27,7 +27,7 @@ interface RegionPickerProps {
 export function RegionPicker({ value, onChange }: RegionPickerProps) {
   return (
     <View>
-      <Text className="mb-1.5 text-xs font-semibold uppercase tracking-widest text-text-faint">
+      <Text className="mb-1.5 text-xs font-semibold uppercase tracking-widest text-text-dim">
         Region
       </Text>
       <View

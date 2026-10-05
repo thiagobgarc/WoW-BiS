@@ -72,7 +72,7 @@ export function RealmField({ region, value, onChange, onSubmitEditing }: RealmFi
         — a realm typed by hand works whether or not the suggestion list did.
       */}
       {isUnavailable ? (
-        <Text className="mt-1.5 text-xs text-text-faint">
+        <Text className="mt-1.5 text-xs text-text-dim">
           Realm suggestions are offline. Type the realm name and search anyway.
         </Text>
       ) : null}

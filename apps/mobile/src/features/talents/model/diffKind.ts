@@ -58,8 +58,9 @@ export const DIFF_KIND_STYLE = {
     title: 'Not in the build',
     blurb: 'Taken here and not in the recommended build — this is what pays for the rest.',
     icon: 'add-circle',
-    color: colors.link,
-    text: 'text-link',
+    // Not a severity: neutral, as the web keeps every non-data color.
+    color: colors['text-muted'],
+    text: 'text-text-muted',
   },
 } as const satisfies Record<TalentDiffKind, DiffKindStyle>;
 

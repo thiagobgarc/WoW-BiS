@@ -83,7 +83,7 @@ export function SlotTile({ slot, item, onPress }: SlotTileProps) {
             </Text>
           ) : null}
           {item?.isEmbellishment ? (
-            <Text className="rounded bg-link/20 px-1.5 py-0.5 text-[10px] text-link">Embellished</Text>
+            <Text className="rounded bg-rule px-1.5 py-0.5 text-[10px] text-text-muted">Embellished</Text>
           ) : null}
         </View>
       ) : null}

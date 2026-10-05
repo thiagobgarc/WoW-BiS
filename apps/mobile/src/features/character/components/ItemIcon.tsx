@@ -35,10 +35,10 @@ export function ItemIcon({ iconUrl, quality, size = 48, empty = false }: ItemIco
       accessibilityElementsHidden
       importantForAccessibility="no-hide-descendants"
       className="items-center justify-center overflow-hidden rounded-lg border-2 bg-bg"
-      style={{ width: size, height: size, borderColor: empty ? colors['text-faint'] : qualityColor(quality) }}
+      style={{ width: size, height: size, borderColor: empty ? colors['text-dim'] : qualityColor(quality) }}
     >
       {showPlaceholder ? (
-        <Text className="text-xs text-text-faint">{empty ? '—' : '?'}</Text>
+        <Text className="text-xs text-text-dim">{empty ? '—' : '?'}</Text>
       ) : (
         <Image
           source={{ uri: iconUrl }}

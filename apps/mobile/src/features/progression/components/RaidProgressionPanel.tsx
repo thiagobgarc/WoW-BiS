@@ -117,7 +117,7 @@ function DifficultySection({
                 <Icon
                   name={boss.killed ? 'checkmark-circle' : 'ellipse-outline'}
                   size={16}
-                  color={boss.killed ? colors.severity.bis : colors['text-faint']}
+                  color={boss.killed ? colors.severity.bis : colors['text-dim']}
                 />
                 <Text className={`flex-1 text-sm ${boss.killed ? 'text-text' : 'text-text-dim'}`}>
                   {boss.name}
