@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { Input } from '@/components/ui/Input';
 import { cn } from '@/lib/utils/cn';
 import { classColor } from '@mythos/core/utils';
+import { foldedMatchRange } from '@mythos/core/realm';
 import { foldName, type CharacterSuggestion } from '@/lib/search/characterSearch';
 import type { RecentCharacter } from '@/lib/hooks/useRecentCharacters';
 
@@ -32,31 +33,8 @@ const DEBOUNCE_MS = 180;
 // Exact name, not folded: "Coolermaster" and "Coolérmaster" can share a realm.
 const keyOf = (c: { region: string; realmSlug: string; name: string }) => `${c.region}/${c.realmSlug}/${c.name.toLowerCase()}`;
 
-/**
- * Where the query sits in the name, in the name's own characters. Matching
- * ignores accents, so "zoe" has to light up all three letters of "Zòë" even
- * though the two strings differ in length once decomposed.
- */
-function matchRange(name: string, query: string): [number, number] | null {
-  const q = foldName(query.trim());
-  if (!q) return null;
-  let folded = '';
-  const origin: number[] = [];
-  for (let i = 0; i < name.length; ) {
-    const ch = String.fromCodePoint(name.codePointAt(i)!);
-    const f = foldName(ch);
-    for (let k = 0; k < f.length; k++) origin.push(i);
-    folded += f;
-    i += ch.length;
-  }
-  const at = folded.indexOf(q);
-  if (at < 0) return null;
-  const end = at + q.length;
-  return [origin[at]!, end < origin.length ? origin[end]! : name.length];
-}
-
 function Highlighted({ name, query }: { name: string; query: string }) {
-  const range = matchRange(name, query);
+  const range = foldedMatchRange(name, query);
   if (!range) return <span className="text-text">{name}</span>;
   const [start, end] = range;
   return (

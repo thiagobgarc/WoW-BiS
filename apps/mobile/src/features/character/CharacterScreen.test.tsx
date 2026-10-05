@@ -32,6 +32,8 @@ import CharacterScreen from './CharacterScreen';
 const mockGetCharacter = jest.fn();
 const mockRefreshCharacter = jest.fn();
 const mockGetMeta = jest.fn();
+const mockSearchCharacters = jest.fn();
+const mockReplace = jest.fn();
 let mockParams: Record<string, string> = {};
 
 jest.mock('@/lib/api', () => ({
@@ -42,6 +44,8 @@ jest.mock('@/lib/api', () => ({
       // The upgrade board's quick wins need the season's slot rules, so the
       // Gear tab now has a second query behind it — see useMeta.
       getMeta: mockGetMeta,
+      // Behind the "did you mean" list under a not-found error.
+      searchCharacters: mockSearchCharacters,
     };
   },
   apiBaseUrl: 'https://mythos.test',
@@ -50,6 +54,7 @@ jest.mock('@/lib/api', () => ({
 
 jest.mock('expo-router', () => ({
   useLocalSearchParams: () => mockParams,
+  useRouter: () => ({ replace: mockReplace, push: jest.fn() }),
   // Stack.Screen only configures the native header, which has nothing to
   // assert on and no test renderer behind it.
   Stack: { Screen: () => null },
@@ -74,6 +79,9 @@ beforeEach(() => {
   mockGetCharacter.mockReset();
   mockRefreshCharacter.mockReset();
   mockGetMeta.mockReset();
+  mockSearchCharacters.mockReset();
+  mockReplace.mockReset();
+  mockSearchCharacters.mockResolvedValue({ characters: [] });
   mockGetCharacter.mockResolvedValue(CHARACTER_FIXTURE);
   mockGetMeta.mockResolvedValue(META_FIXTURE);
 });
@@ -183,6 +191,28 @@ describe('CharacterScreen', () => {
     await findByText("We couldn't find that character");
     // A retry cannot make a nonexistent character exist, so it isn't offered.
     expect(queryByText('Try again')).toBeNull();
+  });
+
+  it('opens the accented spelling when a not-found name has exactly one on that realm', async () => {
+    mockParams = { region: 'us', realm: 'eredar', name: 'zoe' };
+    mockGetCharacter.mockRejectedValue(
+      new MythosApiError({ code: 'character_not_found', message: 'nope', status: 404 }),
+    );
+    mockSearchCharacters.mockResolvedValue({
+      characters: [
+        { name: 'Zóe', realmName: 'Eredar', realmSlug: 'eredar', region: 'us', className: 'Priest', avatarUrl: null },
+        { name: 'Zoë', realmName: 'Stormrage', realmSlug: 'stormrage', region: 'us', className: null, avatarUrl: null },
+      ],
+    });
+
+    await renderWithProviders(<CharacterScreen />);
+
+    await waitFor(() =>
+      expect(mockReplace).toHaveBeenCalledWith({
+        pathname: '/character/[region]/[realm]/[name]',
+        params: { region: 'us', realm: 'eredar', name: 'zóe' },
+      }),
+    );
   });
 
   it('offers a retry for a failure a retry could fix', async () => {

@@ -17,6 +17,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   ApiErrorEnvelopeSchema,
   BisSeasonResponseSchema,
+  CharacterSearchResponseSchema,
   CharacterResponseSchema,
   MetaResponseSchema,
   RateLimitedEnvelopeSchema,
@@ -25,6 +26,8 @@ import {
 import { CURRENT_SEASON_ID } from '@/lib/season/seasonConfig';
 import { GET as getMeta } from '@/pages/api/v1/meta';
 import { GET as getRealms } from '@/pages/api/v1/realms';
+import { GET as getCharacterSearch } from '@/pages/api/v1/character-search';
+import { __resetCacheForTests } from '@/lib/cache/cache';
 import { GET as getBis } from '@/pages/api/v1/bis/[season]';
 import { GET as getCharacter } from '@/pages/api/v1/character/[region]/[realm]/[name]';
 import { POST as postRefresh } from '@/pages/api/v1/character/[region]/[realm]/[name]/refresh';
@@ -198,5 +201,61 @@ describe('POST /v1/character/:region/:realm/:name/refresh', () => {
     expect(second.headers.get('Retry-After')).toBe(String(body.retryAfterSeconds));
     // Still a plain error envelope, so one client-side parser covers it.
     expect(ApiErrorEnvelopeSchema.parse(body).error.retryable).toBe(true);
+  });
+});
+
+describe('GET /v1/character-search', () => {
+  // Raider.IO is stubbed: the contract is what this route promises a phone,
+  // whatever the upstream search does.
+  const upstream = (body: unknown, status = 200) =>
+    vi.spyOn(globalThis, 'fetch').mockResolvedValue(new Response(JSON.stringify(body), { status }));
+  const match = (name: string, region: string, realm: string) => ({
+    type: 'character',
+    name,
+    data: {
+      region: { slug: region },
+      realm: { name: realm, slug: 'x' },
+      class: { name: 'Priest' },
+      thumbnail_url: '//render.worldofwarcraft.com/us/character/x/1-avatar.jpg?alt=/x.jpg',
+    },
+  });
+
+  beforeEach(() => {
+    __resetCacheForTests();
+    vi.restoreAllMocks();
+  });
+
+  it('returns accent-insensitive matches, ranked for the requested region', async () => {
+    upstream({ matches: [match('Zoë', 'eu', 'Silvermoon'), match('Zóe', 'us', 'Eredar'), match('Zoe', 'cn', 'Loken')] });
+    const response = await getCharacterSearch(context({ url: 'http://localhost/api/v1/character-search?q=zoe&region=us' }));
+    expect(response.status).toBe(200);
+
+    const body = CharacterSearchResponseSchema.parse(await response.json());
+    expect(body.characters.map((c) => `${c.name}/${c.region}/${c.realmSlug}`)).toEqual([
+      'Zóe/us/eredar',
+      'Zoë/eu/silvermoon',
+    ]);
+  });
+
+  it('answers an empty list, not an error, when the upstream search fails', async () => {
+    upstream({ error: 'nope' }, 500);
+    const response = await getCharacterSearch(context({ url: 'http://localhost/api/v1/character-search?q=zoe' }));
+    expect(response.status).toBe(200);
+    expect(CharacterSearchResponseSchema.parse(await response.json()).characters).toEqual([]);
+  });
+
+  it('answers an empty list for a query under two letters without searching', async () => {
+    const fetch = upstream({ matches: [] });
+    const response = await getCharacterSearch(context({ url: 'http://localhost/api/v1/character-search?q=%C3%B3' }));
+    expect(CharacterSearchResponseSchema.parse(await response.json()).characters).toEqual([]);
+    expect(fetch).not.toHaveBeenCalled();
+  });
+
+  it('rejects an unknown region with the standard envelope', async () => {
+    const response = await getCharacterSearch(
+      context({ url: 'http://localhost/api/v1/character-search?q=zoe&region=mars' }),
+    );
+    expect(response.status).toBe(400);
+    expect(ApiErrorEnvelopeSchema.parse(await response.json()).error.code).toBe('invalid_region');
   });
 });

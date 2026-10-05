@@ -119,6 +119,15 @@ describe('request construction', () => {
     expect(callAt(calls, 1).url).toBe('https://mythos.test/api/v1/bis/midnight-s2');
     expect(callAt(calls, 2).url).toBe('https://mythos.test/api/v1/bis/midnight-s2?class=Mage&spec=Fire');
   });
+
+  it('percent-encodes an accented search query and omits a missing region', async () => {
+    const { fetch, calls } = stubFetch(() => jsonResponse({ characters: [] }));
+    await client(fetch).searchCharacters({ q: 'zóe' });
+    await client(fetch).searchCharacters({ q: 'zoe', region: 'eu' });
+
+    expect(callAt(calls, 0).url).toBe('https://mythos.test/api/v1/character-search?q=z%C3%B3e');
+    expect(callAt(calls, 1).url).toBe('https://mythos.test/api/v1/character-search?q=zoe&region=eu');
+  });
 });
 
 describe('conditional GET on /v1/bis/:season', () => {

@@ -12,19 +12,15 @@
  * makes it worth using: most players can't type their own name's accents.
  */
 import { z } from 'zod';
-import { realmSlug } from '@mythos/core/realm';
+import type { CharacterSuggestion, Region } from '@mythos/api-contract';
+import { foldName, realmSlug } from '@mythos/core/realm';
+import { getCache } from '@/lib/cache/cache';
 
-export interface CharacterSuggestion {
-  name: string;
-  realmName: string;
-  realmSlug: string;
-  region: string;
-  className: string | null;
-  avatarUrl: string | null;
-}
+export { foldName };
+export type { CharacterSuggestion };
 
 /** China's armory isn't on Blizzard's global API, so its characters can't open. */
-const REGIONS = new Set(['us', 'eu', 'kr', 'tw']);
+const REGIONS = new Set<string>(['us', 'eu', 'kr', 'tw'] satisfies Region[]);
 
 const MatchSchema = z
   .object({
@@ -43,11 +39,6 @@ const MatchSchema = z
   .loose();
 
 const ResponseSchema = z.object({ matches: z.array(z.unknown()) }).loose();
-
-/** Lowercased with accents stripped, so "Zòë" and "zoe" compare equal. */
-export function foldName(value: string): string {
-  return value.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase();
-}
 
 /** Raider.IO's raw search response, reduced to the characters we can open. */
 export function parseSearchResponse(raw: unknown): CharacterSuggestion[] {
@@ -68,7 +59,7 @@ export function parseSearchResponse(raw: unknown): CharacterSuggestion[] {
         // speaks Blizzard's, so it's derived from the name like every
         // other realm in the app.
         realmSlug: realmSlug(realm.name),
-        region: region.slug,
+        region: region.slug as Region,
         className: wowClass?.name ?? null,
         // Protocol-relative ("//render.worldofwarcraft.com/..."), and the
         // ?alt= fallback points at a path on worldofwarcraft.com, which
@@ -114,4 +105,33 @@ export async function searchCharacters(query: string): Promise<CharacterSuggesti
   } catch {
     return [];
   }
+}
+
+/** Below two letters a search matches half the game and helps no one. */
+export const MIN_QUERY = 2;
+/** WoW names are at most 12 characters; a little slack for typos. */
+export const MAX_QUERY = 24;
+const MAX_RESULTS = 8;
+/** New characters appear on Raider.IO over hours, not minutes. */
+const CACHE_SECONDS = 60 * 60;
+
+/**
+ * The whole lookup both routes serve (/api/character-search for the web,
+ * /api/v1/character-search for the app): bounded query, cached per
+ * accent-folded query, ranked for the caller's region, capped.
+ */
+export async function findCharacterSuggestions(rawQuery: string, region?: string): Promise<CharacterSuggestion[]> {
+  const q = rawQuery.trim().slice(0, MAX_QUERY);
+  if (foldName(q).length < MIN_QUERY) return [];
+
+  // Raider.IO matches without accents, so "Zòë" and "zoe" share one entry.
+  const cache = getCache();
+  const key = `character-search:${foldName(q)}`;
+  let found = await cache.get<CharacterSuggestion[]>(key);
+  if (!found) {
+    found = await searchCharacters(q);
+    // An empty list may be an outage rather than a real miss: don't pin it.
+    if (found.length > 0) await cache.set(key, found, CACHE_SECONDS);
+  }
+  return rankSuggestions(found, q, region).slice(0, MAX_RESULTS);
 }
