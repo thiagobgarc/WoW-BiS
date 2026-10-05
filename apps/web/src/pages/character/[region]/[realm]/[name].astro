@@ -6,7 +6,8 @@ import { CharacterPage } from '@/components/character/CharacterPage';
 import { getFullCharacter, toCharacterKey } from '@/lib/blizzard/getFullCharacter';
 import { getCharacterTalents } from '@/lib/blizzard/getCharacterTalents';
 import { getCharacterProgression } from '@/lib/blizzard/getCharacterProgression';
-import { getItemIconUrls } from '@/lib/blizzard/getItemIcons';
+import { getItemIconUrls } from '@/lib/blizzard/getIconUrls';
+import { foldName, searchCharacters, type CharacterSuggestion } from '@/lib/search/characterSearch';
 import { getBisList } from '@/lib/bis/getBisList';
 import { getRecommendedBuild } from '@/lib/talents/getRecommendedBuild';
 import { getMythicPlusTierList, findTierForSpec } from '@/lib/meta/getTierList';
@@ -40,6 +41,9 @@ let raidProgress: DomainRaidProgress | null = null;
 let mythicPlus: DomainMythicPlusProfile | null = null;
 let metaTier: MetaTier | null = null;
 let error: { status: number; title: string; icon: string; message: string } | null = null;
+let didYouMean: CharacterSuggestion[] = [];
+const characterPath = (c: { region: string; realmSlug: string; name: string }) =>
+  `/character/${c.region}/${c.realmSlug}/${encodeURIComponent(c.name.toLowerCase())}`;
 
 if (!isValidRegion(region)) {
   error = { status: 400, title: 'Unknown Region', icon: '❓', message: `"${region}" isn't a recognized WoW region.` };
@@ -117,8 +121,24 @@ if (!error) {
     const p = presentation[body.error] ?? presentation.unknown;
     error = { status, title: p.title, icon: p.icon, message: body.message };
     Astro.response.status = status;
+
+    // Blizzard only finds a name spelled exactly, accents included, and most
+    // players can't type "Zóe". Look for accented spellings of the same name
+    // on the same realm: one is almost certainly the character they meant,
+    // so go there; several get listed below the error instead.
+    if (body.error === 'character_not_found') {
+      didYouMean = (await searchCharacters(name)).filter(
+        (c) =>
+          c.region === key.region &&
+          c.realmSlug === key.realmSlug &&
+          foldName(c.name) === foldName(key.name) &&
+          c.name.toLowerCase() !== key.name,
+      );
+    }
   }
 }
+
+if (didYouMean.length === 1) return Astro.redirect(characterPath(didYouMean[0]!), 302);
 
 const accent = full ? classColor(full.character.className) : undefined;
 const specLabel = full ? [full.character.specName, full.character.className].filter(Boolean).join(' ') : '';
@@ -152,7 +172,29 @@ const noindex = !!error || !full || full.mock;
 
   {
     error ? (
-      <ErrorState icon={error.icon} title={error.title} message={error.message} />
+      <ErrorState icon={error.icon} title={error.title} message={error.message}>
+        {didYouMean.length > 0 && (
+          <div class="mt-6">
+            <p class="label">Did you mean</p>
+            <ul class="mt-2 border-t border-rule">
+              {didYouMean.map((c) => (
+                <li>
+                  <a
+                    href={characterPath(c)}
+                    class="flex min-h-[44px] items-center justify-between gap-4 border-b border-rule py-2 text-sm font-semibold text-text no-underline hover:bg-white/4"
+                  >
+                    {c.name}
+                    <span class="text-xs font-normal text-text-dim">
+                      {c.className ? `${c.className} · ` : ''}
+                      {c.realmName}
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </ErrorState>
     ) : (
       full && (
         <CharacterPage

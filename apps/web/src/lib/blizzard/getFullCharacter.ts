@@ -20,7 +20,7 @@ import {
   getCharacterStatistics,
   type CharacterKey,
 } from './client';
-import { getItemIconUrls } from './getItemIcons';
+import { getItemIconUrls } from './getIconUrls';
 import { mapEquipment, mapProfile, mapStatistics, type DomainCharacter, type EquipmentBySlot, type SecondaryStats } from './domain';
 
 export interface FullCharacter {
@@ -48,12 +48,26 @@ function staleCacheKey({ region, realmSlug, name }: CharacterKey): string {
 }
 
 async function fetchFullCharacter(key: CharacterKey): Promise<FullCharacter> {
-  const [profileResult, equipmentResult, mediaResult, statsResult] = await Promise.all([
+  const settled = await Promise.allSettled([
     getCharacterProfile(key),
     getCharacterEquipment(key),
     getCharacterMedia(key),
     getCharacterStatistics(key),
-  ]);
+  ] as const);
+  // A character that doesn't exist 404s on all four calls, and only the
+  // profile call turns that into CharacterNotFoundError. With Promise.all
+  // whichever failed first won the race, so a misspelled name often read
+  // as "Something went wrong". The profile's failure always speaks first.
+  const failed = settled.find((r): r is PromiseRejectedResult => r.status === 'rejected');
+  if (failed) throw settled[0].status === 'rejected' ? settled[0].reason : failed.reason;
+  const [profileResult, equipmentResult, mediaResult, statsResult] = settled.map(
+    (r) => (r as PromiseFulfilledResult<unknown>).value,
+  ) as [
+    Awaited<ReturnType<typeof getCharacterProfile>>,
+    Awaited<ReturnType<typeof getCharacterEquipment>>,
+    Awaited<ReturnType<typeof getCharacterMedia>>,
+    Awaited<ReturnType<typeof getCharacterStatistics>>,
+  ];
 
   const iconUrls = await getItemIconUrls(
     key.region,

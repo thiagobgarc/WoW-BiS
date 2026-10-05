@@ -7,8 +7,9 @@
  * functions directly.
  */
 import type { CharacterKey } from './client';
-import { getCharacterSpecializations, getSpellIconUrl, getTalentTree } from './client';
+import { getCharacterSpecializations, getTalentTree } from './client';
 import { mapTalentSelections, mapTalentTree, type DomainHeroTree, type DomainTalentTree, type TalentSelection } from './domain';
+import { getSpellIconUrls } from './getIconUrls';
 import { spellIdsOf } from './talentSpellIds';
 
 export interface CharacterTalents {
@@ -32,8 +33,7 @@ export async function getCharacterTalents(key: CharacterKey, specId: number): Pr
       ...spellIdsOf((treeResult.data.hero_talent_trees ?? []).flatMap((h) => h.hero_talent_nodes)),
     ]),
   ];
-  const iconEntries = await Promise.all(spellIds.map(async (id) => [id, await getSpellIconUrl(key.region, id)] as const));
-  const iconUrls = new Map(iconEntries.filter((e): e is [number, string] => e[1] !== null));
+  const iconUrls = await getSpellIconUrls(key.region, spellIds);
 
   const tree = mapTalentTree(treeResult.data, iconUrls, specId);
   const built = mapTalentSelections(specializationsResult.data, specId, tree);
