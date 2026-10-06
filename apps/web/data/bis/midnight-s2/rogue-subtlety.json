@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 76
+      "popularity": 89
     },
     {
       "slot": "head",
@@ -43,7 +43,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 40,
-      "popularity": 24
+      "popularity": 11
     },
     {
       "slot": "neck",
@@ -61,7 +61,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 97
+      "popularity": 96
     },
     {
       "slot": "shoulder",
@@ -78,22 +78,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 26,
-      "popularity": 93
-    },
-    {
-      "slot": "shoulder",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 244572,
-      "itemName": "Silvermoon Agent's Mantle",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 7
+      "popularity": 96
     },
     {
       "slot": "back",
@@ -111,25 +96,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 31
+      "popularity": 25
     },
     {
       "slot": "back",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 159288,
-      "itemName": "Cloak of the Restless Tribes",
+      "itemId": 251190,
+      "itemName": "Bloodthorn Burnous",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Kings' Rest",
-        "boss": "The Council of Tribes",
+        "dungeon": "The Blinding Vale",
+        "boss": "Ikuzz the Light Hunter",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 54,
-      "popularity": 21
+      "statPriorityFit": 63,
+      "popularity": 18
     },
     {
       "slot": "chest",
@@ -146,25 +131,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 33,
-      "popularity": 93
-    },
-    {
-      "slot": "chest",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268235,
-      "itemName": "Vestment of the Awakening",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 59,
-      "popularity": 7
+      "popularity": 100
     },
     {
       "slot": "wrist",
@@ -178,8 +145,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 83
+      "statPriorityFit": 60,
+      "popularity": 82
     },
     {
       "slot": "wrist",
@@ -214,21 +181,24 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 90
+      "popularity": 86
     },
     {
       "slot": "hands",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 244575,
-      "itemName": "Silvermoon Agent's Handwraps",
-      "itemLevel": 331,
+      "itemId": 268234,
+      "itemName": "Ruthless Slaughtergrips",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Sszorak",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
+      "statPriorityFit": 89,
       "popularity": 7
     },
     {
@@ -247,7 +217,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 31
+      "popularity": 32
     },
     {
       "slot": "waist",
@@ -265,7 +235,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 78,
-      "popularity": 14
+      "popularity": 21
     },
     {
       "slot": "legs",
@@ -282,7 +252,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 97
+      "popularity": 93
     },
     {
       "slot": "feet",
@@ -296,8 +266,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 34
+      "statPriorityFit": 43,
+      "popularity": 29
     },
     {
       "slot": "feet",
@@ -315,7 +285,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 33,
-      "popularity": 21
+      "popularity": 25
     },
     {
       "slot": "finger",
@@ -333,7 +303,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 72,
-      "popularity": 79
+      "popularity": 71
     },
     {
       "slot": "finger",
@@ -351,7 +321,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 70,
-      "popularity": 48
+      "popularity": 43
     },
     {
       "slot": "finger",
@@ -365,8 +335,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 14
+      "statPriorityFit": 53,
+      "popularity": 21
     },
     {
       "slot": "trinket",
@@ -384,7 +354,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 97
+      "popularity": 96
     },
     {
       "slot": "trinket",
@@ -402,7 +372,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 72
+      "popularity": 57
     },
     {
       "slot": "trinket",
@@ -420,7 +390,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 17
+      "popularity": 25
     },
     {
       "slot": "main_hand",
@@ -438,7 +408,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 93
+      "popularity": 89
     },
     {
       "slot": "main_hand",
@@ -452,7 +422,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 83,
       "popularity": 7
     },
     {
@@ -467,8 +437,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 90
+      "statPriorityFit": 83,
+      "popularity": 93
     },
     {
       "slot": "head",
@@ -485,7 +455,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 73
+      "popularity": 63
     },
     {
       "slot": "head",
@@ -503,7 +473,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 40,
-      "popularity": 27
+      "popularity": 33
     },
     {
       "slot": "neck",
@@ -556,7 +526,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 54,
-      "popularity": 23
+      "popularity": 33
     },
     {
       "slot": "back",
@@ -574,7 +544,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 63,
-      "popularity": 20
+      "popularity": 23
     },
     {
       "slot": "chest",
@@ -605,7 +575,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 60,
       "popularity": 87
     },
     {
@@ -641,22 +611,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 83
-    },
-    {
-      "slot": "hands",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 244575,
-      "itemName": "Silvermoon Agent's Handwraps",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 53,
-      "popularity": 7
+      "popularity": 87
     },
     {
       "slot": "waist",
@@ -674,7 +629,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 23
+      "popularity": 30
     },
     {
       "slot": "waist",
@@ -709,7 +664,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 83
+      "popularity": 87
     },
     {
       "slot": "legs",
@@ -741,7 +696,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 43,
       "popularity": 43
     },
     {
@@ -778,7 +733,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 72,
-      "popularity": 63
+      "popularity": 60
     },
     {
       "slot": "finger",
@@ -796,25 +751,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 70,
-      "popularity": 53
+      "popularity": 43
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 158366,
-      "itemName": "Charged Sandstone Band",
-      "itemLevel": 311,
+      "itemId": 268249,
+      "itemName": "Vile Alchemist's Band",
+      "itemLevel": 318,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Temple of Sethraliss",
-        "boss": "Galvazzt",
-        "keyLevel": 10
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Vashnik the Malignant",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 80,
-      "popularity": 23
+      "statPriorityFit": 94,
+      "popularity": 33
     },
     {
       "slot": "trinket",
@@ -832,12 +787,30 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 97
+      "popularity": 93
     },
     {
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 2,
+      "itemId": 270164,
+      "itemName": "Gebbo's Bottomless Bag",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Lost Explorers",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 50,
+      "popularity": 37
+    },
+    {
+      "slot": "trinket",
+      "contentType": "mythic-plus",
+      "rank": 3,
       "itemId": 270173,
       "itemName": "Zul'jin's Guillotine Technique",
       "itemLevel": 318,
@@ -850,25 +823,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 37
-    },
-    {
-      "slot": "trinket",
-      "contentType": "mythic-plus",
-      "rank": 3,
-      "itemId": 270165,
-      "itemName": "Keeper's Seething Core",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Entombed Sentinels",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 50,
-      "popularity": 27
+      "popularity": 30
     },
     {
       "slot": "main_hand",
@@ -886,7 +841,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 60
+      "popularity": 57
     },
     {
       "slot": "main_hand",
@@ -900,8 +855,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 30
+      "statPriorityFit": 83,
+      "popularity": 33
     },
     {
       "slot": "off_hand",
@@ -915,8 +870,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 67
+      "statPriorityFit": 83,
+      "popularity": 70
     },
     {
       "slot": "off_hand",
@@ -939,14 +894,14 @@
   ],
   "samples": {
     "raid": {
-      "players": 29,
+      "players": 28,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     }
   }
 }

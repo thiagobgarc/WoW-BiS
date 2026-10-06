@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "head",
@@ -61,7 +61,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "shoulder",
@@ -78,7 +78,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 46,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "shoulder",
@@ -92,7 +92,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 83,
+      "statPriorityFit": 30,
       "popularity": 7
     },
     {
@@ -107,8 +107,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 23
+      "statPriorityFit": 60,
+      "popularity": 27
     },
     {
       "slot": "back",
@@ -126,7 +126,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 20
+      "popularity": 23
     },
     {
       "slot": "chest",
@@ -143,7 +143,22 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 90
+      "popularity": 83
+    },
+    {
+      "slot": "chest",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 237829,
+      "itemName": "Spellbreaker's Shelter",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 53,
+      "popularity": 7
     },
     {
       "slot": "wrist",
@@ -158,7 +173,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 53,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "hands",
@@ -175,7 +190,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 83
+      "popularity": 80
     },
     {
       "slot": "hands",
@@ -189,31 +204,13 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
+      "statPriorityFit": 30,
       "popularity": 10
     },
     {
       "slot": "waist",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 268244,
-      "itemName": "Forgotten Grotto Girdle",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 76,
-      "popularity": 33
-    },
-    {
-      "slot": "waist",
-      "contentType": "raid",
-      "rank": 2,
       "itemId": 268259,
       "itemName": "Girdle of Toxic Regret",
       "itemLevel": 318,
@@ -226,7 +223,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 33
+      "popularity": 40
+    },
+    {
+      "slot": "waist",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268244,
+      "itemName": "Forgotten Grotto Girdle",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Tidebound Grotto",
+        "boss": "Nymrissa Wavecaller",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 76,
+      "popularity": 30
     },
     {
       "slot": "legs",
@@ -243,7 +258,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 80
+      "popularity": 77
     },
     {
       "slot": "legs",
@@ -279,7 +294,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 37
+      "popularity": 33
     },
     {
       "slot": "feet",
@@ -293,8 +308,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 30
+      "statPriorityFit": 60,
+      "popularity": 27
     },
     {
       "slot": "finger",
@@ -308,31 +323,13 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 53
+      "statPriorityFit": 83,
+      "popularity": 57
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 159459,
-      "itemName": "Ritual Binder's Ring",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Kings' Rest",
-        "boss": "Mchimba the Embalmer",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 72,
-      "popularity": 30
-    },
-    {
-      "slot": "finger",
-      "contentType": "raid",
-      "rank": 3,
       "itemId": 273792,
       "itemName": "Band of the Amani Warlord",
       "itemLevel": 311,
@@ -346,6 +343,24 @@
       "catalystable": false,
       "statPriorityFit": 87,
       "popularity": 27
+    },
+    {
+      "slot": "finger",
+      "contentType": "raid",
+      "rank": 3,
+      "itemId": 159459,
+      "itemName": "Ritual Binder's Ring",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Kings' Rest",
+        "boss": "Mchimba the Embalmer",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 72,
+      "popularity": 23
     },
     {
       "slot": "trinket",
@@ -363,7 +378,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "trinket",
@@ -381,7 +396,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 83
+      "popularity": 87
     },
     {
       "slot": "trinket",
@@ -399,7 +414,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 13
+      "popularity": 10
     },
     {
       "slot": "main_hand",
@@ -452,7 +467,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 77
+      "popularity": 73
     },
     {
       "slot": "head",
@@ -467,7 +482,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 60,
-      "popularity": 13
+      "popularity": 17
     },
     {
       "slot": "neck",
@@ -516,26 +531,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 60,
       "popularity": 27
     },
     {
       "slot": "back",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268253,
-      "itemName": "Silken Voodoo Drape",
-      "itemLevel": 318,
+      "itemId": 193763,
+      "itemName": "Fireproof Drape",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Coiled Altar",
-        "difficulty": "mythic"
+        "type": "dungeon",
+        "dungeon": "Ruby Life Pools",
+        "boss": "Kokia Blazehoof",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 58,
-      "popularity": 23
+      "statPriorityFit": 88,
+      "popularity": 17
     },
     {
       "slot": "chest",
@@ -552,7 +567,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "chest",
@@ -603,7 +618,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "hands",
@@ -620,7 +635,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "hands",
@@ -656,7 +671,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 47
+      "popularity": 40
     },
     {
       "slot": "waist",
@@ -674,7 +689,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 20
+      "popularity": 23
     },
     {
       "slot": "legs",
@@ -691,7 +706,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 60
+      "popularity": 67
     },
     {
       "slot": "legs",
@@ -709,7 +724,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 65,
-      "popularity": 40
+      "popularity": 30
     },
     {
       "slot": "feet",
@@ -723,26 +738,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 60,
       "popularity": 47
     },
     {
       "slot": "feet",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268245,
-      "itemName": "Entombed Cultist's Sabatons",
-      "itemLevel": 318,
+      "itemId": 273777,
+      "itemName": "Poison-Proof Stompers",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
-        "difficulty": "mythic"
+        "type": "dungeon",
+        "dungeon": "Altar of Fangs",
+        "boss": "Rav'i",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 76,
-      "popularity": 20
+      "statPriorityFit": 63,
+      "popularity": 23
     },
     {
       "slot": "finger",
@@ -756,31 +771,13 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 83,
       "popularity": 47
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 159459,
-      "itemName": "Ritual Binder's Ring",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Kings' Rest",
-        "boss": "Mchimba the Embalmer",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 72,
-      "popularity": 37
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 3,
       "itemId": 268266,
       "itemName": "Alluring Bubbleband",
       "itemLevel": 318,
@@ -793,7 +790,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 33
+      "popularity": 40
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 3,
+      "itemId": 159459,
+      "itemName": "Ritual Binder's Ring",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Kings' Rest",
+        "boss": "Mchimba the Embalmer",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 72,
+      "popularity": 40
     },
     {
       "slot": "trinket",
@@ -847,7 +862,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 30
+      "popularity": 33
     },
     {
       "slot": "main_hand",
@@ -879,20 +894,20 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 27
+      "statPriorityFit": 30,
+      "popularity": 23
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     }
   }
 }

@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 87
+      "popularity": 83
     },
     {
       "slot": "head",
@@ -43,7 +43,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 40,
-      "popularity": 13
+      "popularity": 17
     },
     {
       "slot": "neck",
@@ -61,25 +61,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 87
-    },
-    {
-      "slot": "neck",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268250,
-      "itemName": "Sentinel's Vitriolic Chain",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Entombed Sentinels",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 92,
-      "popularity": 7
+      "popularity": 90
     },
     {
       "slot": "shoulder",
@@ -110,7 +92,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
+      "statPriorityFit": 70,
       "popularity": 23
     },
     {
@@ -125,8 +107,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 23
+      "statPriorityFit": 60,
+      "popularity": 20
     },
     {
       "slot": "back",
@@ -161,7 +143,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "chest",
@@ -175,7 +157,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
+      "statPriorityFit": 60,
       "popularity": 10
     },
     {
@@ -190,8 +172,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 57
+      "statPriorityFit": 83,
+      "popularity": 60
     },
     {
       "slot": "wrist",
@@ -226,7 +208,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "hands",
@@ -258,8 +240,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 50
+      "statPriorityFit": 83,
+      "popularity": 47
     },
     {
       "slot": "waist",
@@ -294,7 +276,22 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 93
+      "popularity": 90
+    },
+    {
+      "slot": "legs",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 239651,
+      "itemName": "Martyr's Leggings",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 83,
+      "popularity": 7
     },
     {
       "slot": "feet",
@@ -326,7 +323,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 43,
       "popularity": 13
     },
     {
@@ -345,12 +342,30 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 55,
-      "popularity": 33
+      "popularity": 37
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 2,
+      "itemId": 251148,
+      "itemName": "Pilfered Precious Band",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Den of Nalorakk",
+        "boss": "The Hoardmonger",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 38,
+      "popularity": 30
+    },
+    {
+      "slot": "finger",
+      "contentType": "raid",
+      "rank": 3,
       "itemId": 240949,
       "itemName": "Masterwork Sin'dorei Band",
       "itemLevel": 331,
@@ -359,25 +374,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 30
-    },
-    {
-      "slot": "finger",
-      "contentType": "raid",
-      "rank": 3,
-      "itemId": 273792,
-      "itemName": "Band of the Amani Warlord",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Altar of Fangs",
-        "boss": "Zul'jan",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 87,
+      "statPriorityFit": 83,
       "popularity": 27
     },
     {
@@ -396,7 +393,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "trinket",
@@ -414,7 +411,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 73
+      "popularity": 77
     },
     {
       "slot": "trinket",
@@ -432,7 +429,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 17
+      "popularity": 20
     },
     {
       "slot": "main_hand",
@@ -464,7 +461,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 70,
       "popularity": 13
     },
     {
@@ -479,7 +476,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 60,
       "popularity": 43
     },
     {
@@ -515,7 +512,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 83
+      "popularity": 90
     },
     {
       "slot": "head",
@@ -533,7 +530,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 40,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "neck",
@@ -586,7 +583,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 83
+      "popularity": 80
     },
     {
       "slot": "shoulder",
@@ -618,8 +615,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 30
+      "statPriorityFit": 60,
+      "popularity": 37
     },
     {
       "slot": "back",
@@ -637,7 +634,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "chest",
@@ -654,7 +651,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 90
+      "popularity": 97
     },
     {
       "slot": "wrist",
@@ -668,8 +665,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 53
+      "statPriorityFit": 83,
+      "popularity": 63
     },
     {
       "slot": "wrist",
@@ -687,7 +684,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 46,
-      "popularity": 13
+      "popularity": 17
     },
     {
       "slot": "hands",
@@ -704,7 +701,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 80
+      "popularity": 73
     },
     {
       "slot": "hands",
@@ -719,7 +716,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 43,
-      "popularity": 10
+      "popularity": 17
     },
     {
       "slot": "waist",
@@ -733,25 +730,25 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 67
+      "statPriorityFit": 83,
+      "popularity": 63
     },
     {
       "slot": "waist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 251222,
-      "itemName": "Ethereal Netherwrap",
-      "itemLevel": 311,
+      "itemId": 268232,
+      "itemName": "Cincture of the Abyssal Grotto",
+      "itemLevel": 318,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Taz'Rah",
-        "keyLevel": 10
+        "type": "raid",
+        "instance": "The Tidebound Grotto",
+        "boss": "Nymrissa Wavecaller",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 87,
+      "statPriorityFit": 52,
       "popularity": 13
     },
     {
@@ -769,21 +766,24 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 90
+      "popularity": 80
     },
     {
       "slot": "legs",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 239651,
-      "itemName": "Martyr's Leggings",
-      "itemLevel": 331,
+      "itemId": 268236,
+      "itemName": "Initiate's Sacrificial Tights",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Nek'zali the Soulcoiler",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
+      "statPriorityFit": 34,
       "popularity": 7
     },
     {
@@ -802,7 +802,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 33
+      "popularity": 40
     },
     {
       "slot": "feet",
@@ -816,8 +816,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 23
+      "statPriorityFit": 43,
+      "popularity": 20
     },
     {
       "slot": "finger",
@@ -835,7 +835,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 33
+      "popularity": 40
     },
     {
       "slot": "finger",
@@ -859,19 +859,19 @@
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 251148,
-      "itemName": "Pilfered Precious Band",
-      "itemLevel": 311,
+      "itemId": 268266,
+      "itemName": "Alluring Bubbleband",
+      "itemLevel": 318,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Den of Nalorakk",
-        "boss": "The Hoardmonger",
-        "keyLevel": 10
+        "type": "raid",
+        "instance": "The Tidebound Grotto",
+        "boss": "Nymrissa Wavecaller",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 38,
-      "popularity": 30
+      "statPriorityFit": 82,
+      "popularity": 23
     },
     {
       "slot": "trinket",
@@ -889,7 +889,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 83
+      "popularity": 87
     },
     {
       "slot": "trinket",
@@ -907,7 +907,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 43
+      "popularity": 60
     },
     {
       "slot": "trinket",
@@ -925,7 +925,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 33
+      "popularity": 27
     },
     {
       "slot": "main_hand",
@@ -943,7 +943,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 50
+      "popularity": 57
     },
     {
       "slot": "main_hand",
@@ -957,7 +957,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 70,
       "popularity": 23
     },
     {
@@ -972,8 +972,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 50
+      "statPriorityFit": 60,
+      "popularity": 40
     },
     {
       "slot": "off_hand",
@@ -991,19 +991,19 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 7
+      "popularity": 13
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     }
   }
 }

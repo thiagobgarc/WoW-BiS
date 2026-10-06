@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 73
+      "popularity": 77
     },
     {
       "slot": "head",
@@ -43,7 +43,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 65,
-      "popularity": 27
+      "popularity": 23
     },
     {
       "slot": "neck",
@@ -61,7 +61,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "shoulder",
@@ -78,7 +78,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 83
+      "popularity": 80
     },
     {
       "slot": "shoulder",
@@ -92,8 +92,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
-      "popularity": 7
+      "statPriorityFit": 83,
+      "popularity": 10
     },
     {
       "slot": "back",
@@ -107,26 +107,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 23
+      "statPriorityFit": 60,
+      "popularity": 20
     },
     {
       "slot": "back",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 251190,
-      "itemName": "Bloodthorn Burnous",
-      "itemLevel": 311,
+      "itemId": 268253,
+      "itemName": "Silken Voodoo Drape",
+      "itemLevel": 318,
       "source": {
-        "type": "dungeon",
-        "dungeon": "The Blinding Vale",
-        "boss": "Ikuzz the Light Hunter",
-        "keyLevel": 10
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 87,
-      "popularity": 23
+      "statPriorityFit": 76,
+      "popularity": 20
     },
     {
       "slot": "chest",
@@ -143,7 +143,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 87
+      "popularity": 83
     },
     {
       "slot": "chest",
@@ -157,8 +157,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 13
+      "statPriorityFit": 60,
+      "popularity": 17
     },
     {
       "slot": "wrist",
@@ -172,8 +172,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 53
+      "statPriorityFit": 70,
+      "popularity": 60
     },
     {
       "slot": "wrist",
@@ -191,7 +191,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 20
+      "popularity": 17
     },
     {
       "slot": "hands",
@@ -211,6 +211,21 @@
       "popularity": 90
     },
     {
+      "slot": "hands",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 239653,
+      "itemName": "Martyr's Gloves",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 30,
+      "popularity": 7
+    },
+    {
       "slot": "waist",
       "contentType": "raid",
       "rank": 1,
@@ -222,7 +237,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
+      "statPriorityFit": 70,
       "popularity": 33
     },
     {
@@ -241,7 +256,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 30
+      "popularity": 27
     },
     {
       "slot": "legs",
@@ -258,7 +273,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 80
+      "popularity": 87
     },
     {
       "slot": "legs",
@@ -272,8 +287,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
-      "popularity": 20
+      "statPriorityFit": 70,
+      "popularity": 13
     },
     {
       "slot": "feet",
@@ -291,24 +306,21 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 43
+      "popularity": 33
     },
     {
       "slot": "feet",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 251219,
-      "itemName": "Riftworn Stompers",
-      "itemLevel": 311,
+      "itemId": 239654,
+      "itemName": "Martyr's Slippers",
+      "itemLevel": 331,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Taz'Rah",
-        "keyLevel": 10
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 76,
+      "statPriorityFit": 30,
       "popularity": 17
     },
     {
@@ -327,7 +339,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 43
+      "popularity": 50
     },
     {
       "slot": "finger",
@@ -363,7 +375,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 33
+      "popularity": 30
     },
     {
       "slot": "trinket",
@@ -381,7 +393,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 80
+      "popularity": 73
     },
     {
       "slot": "trinket",
@@ -399,7 +411,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 50
+      "popularity": 43
     },
     {
       "slot": "trinket",
@@ -435,22 +447,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 90
-    },
-    {
-      "slot": "main_hand",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 245770,
-      "itemName": "Aln'hara Cane",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 10
+      "popularity": 97
     },
     {
       "slot": "off_hand",
@@ -464,7 +461,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 60,
       "popularity": 70
     },
     {
@@ -483,7 +480,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "head",
@@ -500,7 +497,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 73
+      "popularity": 67
     },
     {
       "slot": "head",
@@ -518,7 +515,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 65,
-      "popularity": 27
+      "popularity": 30
     },
     {
       "slot": "neck",
@@ -536,7 +533,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 83
+      "popularity": 90
     },
     {
       "slot": "neck",
@@ -554,7 +551,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "shoulder",
@@ -571,7 +568,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "shoulder",
@@ -585,7 +582,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
+      "statPriorityFit": 83,
       "popularity": 7
     },
     {
@@ -600,8 +597,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 23
+      "statPriorityFit": 60,
+      "popularity": 33
     },
     {
       "slot": "back",
@@ -619,7 +616,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "chest",
@@ -636,7 +633,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 83
+      "popularity": 80
     },
     {
       "slot": "chest",
@@ -650,7 +647,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
+      "statPriorityFit": 60,
       "popularity": 13
     },
     {
@@ -665,7 +662,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 70,
       "popularity": 87
     },
     {
@@ -715,8 +712,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 33
+      "statPriorityFit": 70,
+      "popularity": 37
     },
     {
       "slot": "waist",
@@ -734,7 +731,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 17
+      "popularity": 20
     },
     {
       "slot": "legs",
@@ -751,7 +748,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 90
+      "popularity": 100
     },
     {
       "slot": "feet",
@@ -769,30 +766,48 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 23
+      "popularity": 30
     },
     {
       "slot": "feet",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 251219,
-      "itemName": "Riftworn Stompers",
+      "itemId": 251137,
+      "itemName": "Tempestuous Sandals",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Taz'Rah",
+        "dungeon": "Murder Row",
+        "boss": "Xathuux the Annihilator",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 76,
-      "popularity": 17
+      "statPriorityFit": 78,
+      "popularity": 13
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 1,
+      "itemId": 273792,
+      "itemName": "Band of the Amani Warlord",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Altar of Fangs",
+        "boss": "Zul'jan",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 78,
+      "popularity": 50
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 2,
       "itemId": 252258,
       "itemName": "Sickening Signet of Atroxus",
       "itemLevel": 311,
@@ -810,24 +825,6 @@
     {
       "slot": "finger",
       "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 273792,
-      "itemName": "Band of the Amani Warlord",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Altar of Fangs",
-        "boss": "Zul'jan",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 78,
-      "popularity": 43
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
       "rank": 3,
       "itemId": 268266,
       "itemName": "Alluring Bubbleband",
@@ -841,7 +838,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 27
+      "popularity": 33
     },
     {
       "slot": "trinket",
@@ -859,7 +856,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 80
+      "popularity": 83
     },
     {
       "slot": "trinket",
@@ -877,7 +874,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 40
+      "popularity": 47
     },
     {
       "slot": "trinket",
@@ -913,7 +910,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 67
+      "popularity": 70
     },
     {
       "slot": "main_hand",
@@ -927,8 +924,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 23
+      "statPriorityFit": 83,
+      "popularity": 17
     },
     {
       "slot": "off_hand",
@@ -942,7 +939,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 60,
       "popularity": 37
     },
     {
@@ -961,19 +958,19 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 10
+      "popularity": 17
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     }
   }
 }

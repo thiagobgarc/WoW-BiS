@@ -43,25 +43,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 87
-    },
-    {
-      "slot": "neck",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268251,
-      "itemName": "Amulet of the Twin Fangs",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Twin Fangs",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 7
+      "popularity": 93
     },
     {
       "slot": "shoulder",
@@ -75,8 +57,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
-      "popularity": 83
+      "statPriorityFit": 60,
+      "popularity": 77
     },
     {
       "slot": "shoulder",
@@ -93,7 +75,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 13
+      "popularity": 17
     },
     {
       "slot": "back",
@@ -111,7 +93,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 53
+      "popularity": 50
     },
     {
       "slot": "back",
@@ -129,7 +111,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 23
+      "popularity": 13
     },
     {
       "slot": "chest",
@@ -146,7 +128,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "wrist",
@@ -160,7 +142,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
+      "statPriorityFit": 53,
       "popularity": 80
     },
     {
@@ -179,7 +161,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 13
+      "popularity": 17
     },
     {
       "slot": "hands",
@@ -228,8 +210,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 76,
-      "popularity": 17
+      "statPriorityFit": 34,
+      "popularity": 13
     },
     {
       "slot": "legs",
@@ -260,8 +242,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 53
+      "statPriorityFit": 30,
+      "popularity": 43
     },
     {
       "slot": "feet",
@@ -279,7 +261,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 33
+      "popularity": 37
     },
     {
       "slot": "finger",
@@ -297,22 +279,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 77
+      "popularity": 70
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 272147,
-      "itemName": "Colubrine Band",
+      "itemId": 272150,
+      "itemName": "Ouroboric Signet",
       "itemLevel": 318,
       "source": {
         "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 89,
-      "popularity": 27
+      "statPriorityFit": 78,
+      "popularity": 33
     },
     {
       "slot": "finger",
@@ -326,31 +308,13 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 27
+      "statPriorityFit": 60,
+      "popularity": 30
     },
     {
       "slot": "trinket",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 270162,
-      "itemName": "Soulcoiler Ritual Vessel",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 50,
-      "popularity": 77
-    },
-    {
-      "slot": "trinket",
-      "contentType": "raid",
-      "rank": 2,
       "itemId": 270167,
       "itemName": "Wavecaller's Seastone",
       "itemLevel": 318,
@@ -363,25 +327,43 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 67
+      "popularity": 73
     },
     {
       "slot": "trinket",
       "contentType": "raid",
-      "rank": 3,
-      "itemId": 270164,
-      "itemName": "Gebbo's Bottomless Bag",
+      "rank": 2,
+      "itemId": 270162,
+      "itemName": "Soulcoiler Ritual Vessel",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
+        "boss": "Nek'zali the Soulcoiler",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 17
+      "popularity": 70
+    },
+    {
+      "slot": "trinket",
+      "contentType": "raid",
+      "rank": 3,
+      "itemId": 270169,
+      "itemName": "Hex Lord's Dooming Idol",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 100,
+      "popularity": 23
     },
     {
       "slot": "main_hand",
@@ -399,7 +381,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 80
+      "popularity": 83
     },
     {
       "slot": "main_hand",
@@ -413,7 +395,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
+      "statPriorityFit": 83,
       "popularity": 17
     },
     {
@@ -428,7 +410,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
+      "statPriorityFit": 70,
       "popularity": 47
     },
     {
@@ -482,7 +464,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 73
+      "popularity": 77
     },
     {
       "slot": "neck",
@@ -500,7 +482,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 70,
-      "popularity": 13
+      "popularity": 10
     },
     {
       "slot": "shoulder",
@@ -514,7 +496,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
+      "statPriorityFit": 60,
       "popularity": 63
     },
     {
@@ -532,7 +514,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 33
+      "popularity": 37
     },
     {
       "slot": "back",
@@ -550,7 +532,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 47
+      "popularity": 53
     },
     {
       "slot": "back",
@@ -585,7 +567,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 97
+      "popularity": 93
     },
     {
       "slot": "wrist",
@@ -599,7 +581,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
+      "statPriorityFit": 53,
       "popularity": 63
     },
     {
@@ -618,7 +600,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 20
+      "popularity": 17
     },
     {
       "slot": "hands",
@@ -635,7 +617,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "hands",
@@ -649,7 +631,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
+      "statPriorityFit": 43,
       "popularity": 7
     },
     {
@@ -668,7 +650,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 30
+      "popularity": 33
     },
     {
       "slot": "waist",
@@ -717,8 +699,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 47
+      "statPriorityFit": 30,
+      "popularity": 50
     },
     {
       "slot": "feet",
@@ -754,7 +736,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 80
+      "popularity": 87
     },
     {
       "slot": "finger",
@@ -778,19 +760,16 @@
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 251194,
-      "itemName": "Lightwarden's Bind",
-      "itemLevel": 311,
+      "itemId": 240949,
+      "itemName": "Masterwork Sin'dorei Band",
+      "itemLevel": 331,
       "source": {
-        "type": "dungeon",
-        "dungeon": "The Blinding Vale",
-        "boss": "Lightwarden Ruia",
-        "keyLevel": 10
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 56,
-      "popularity": 17
+      "statPriorityFit": 60,
+      "popularity": 27
     },
     {
       "slot": "trinket",
@@ -808,7 +787,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 87
+      "popularity": 77
     },
     {
       "slot": "trinket",
@@ -826,7 +805,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 57
+      "popularity": 60
     },
     {
       "slot": "trinket",
@@ -844,7 +823,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 20
+      "popularity": 17
     },
     {
       "slot": "main_hand",
@@ -862,7 +841,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 53
+      "popularity": 57
     },
     {
       "slot": "main_hand",
@@ -876,7 +855,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
+      "statPriorityFit": 83,
       "popularity": 30
     },
     {
@@ -891,8 +870,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 33
+      "statPriorityFit": 70,
+      "popularity": 37
     },
     {
       "slot": "off_hand",
@@ -917,12 +896,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     }
   }
 }

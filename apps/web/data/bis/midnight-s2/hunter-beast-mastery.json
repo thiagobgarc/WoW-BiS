@@ -43,7 +43,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "shoulder",
@@ -78,7 +78,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 78,
-      "popularity": 40
+      "popularity": 37
     },
     {
       "slot": "back",
@@ -92,7 +92,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
+      "statPriorityFit": 30,
       "popularity": 17
     },
     {
@@ -110,7 +110,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "chest",
@@ -128,7 +128,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "wrist",
@@ -142,7 +142,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 30,
       "popularity": 80
     },
     {
@@ -210,7 +210,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 30,
       "popularity": 83
     },
     {
@@ -246,7 +246,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 73
+      "popularity": 77
     },
     {
       "slot": "legs",
@@ -260,7 +260,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
+      "statPriorityFit": 83,
       "popularity": 17
     },
     {
@@ -279,7 +279,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 33
+      "popularity": 27
     },
     {
       "slot": "feet",
@@ -303,24 +303,6 @@
       "slot": "finger",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 268249,
-      "itemName": "Vile Alchemist's Band",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Vashnik the Malignant",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 94,
-      "popularity": 47
-    },
-    {
-      "slot": "finger",
-      "contentType": "raid",
-      "rank": 2,
       "itemId": 251136,
       "itemName": "Signet of Snarling Servitude",
       "itemLevel": 311,
@@ -333,7 +315,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 33
+      "popularity": 47
+    },
+    {
+      "slot": "finger",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268249,
+      "itemName": "Vile Alchemist's Band",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Vashnik the Malignant",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 94,
+      "popularity": 40
     },
     {
       "slot": "finger",
@@ -387,7 +387,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 33
+      "popularity": 37
     },
     {
       "slot": "trinket",
@@ -405,7 +405,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 33
+      "popularity": 37
     },
     {
       "slot": "main_hand",
@@ -423,7 +423,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 83
+      "popularity": 80
     },
     {
       "slot": "main_hand",
@@ -437,8 +437,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 13
+      "statPriorityFit": 53,
+      "popularity": 17
     },
     {
       "slot": "head",
@@ -473,25 +473,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 90
-    },
-    {
-      "slot": "neck",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 251234,
-      "itemName": "Graft of the Domanaar",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Charonus",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 77,
-      "popularity": 10
+      "popularity": 100
     },
     {
       "slot": "shoulder",
@@ -508,7 +490,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 93
+      "popularity": 90
+    },
+    {
+      "slot": "shoulder",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 268231,
+      "itemName": "Soulslither Spaulders",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 89,
+      "popularity": 7
     },
     {
       "slot": "back",
@@ -526,25 +526,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 78,
-      "popularity": 43
+      "popularity": 47
     },
     {
       "slot": "back",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268253,
-      "itemName": "Silken Voodoo Drape",
+      "itemId": 268248,
+      "itemName": "Amani Summoning Shawl",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "The Coiled Altar",
+        "boss": "Nek'zali the Soulcoiler",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 82,
-      "popularity": 13
+      "statPriorityFit": 52,
+      "popularity": 10
     },
     {
       "slot": "chest",
@@ -561,7 +561,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 93
+      "popularity": 87
     },
     {
       "slot": "chest",
@@ -579,7 +579,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 7
+      "popularity": 13
     },
     {
       "slot": "wrist",
@@ -593,7 +593,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 30,
       "popularity": 87
     },
     {
@@ -629,25 +629,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 33,
-      "popularity": 87
-    },
-    {
-      "slot": "hands",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 268238,
-      "itemName": "Grips of Swirling Fury",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 56,
-      "popularity": 7
+      "popularity": 90
     },
     {
       "slot": "waist",
@@ -661,8 +643,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 87
+      "statPriorityFit": 30,
+      "popularity": 90
     },
     {
       "slot": "legs",
@@ -676,8 +658,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
-      "popularity": 53
+      "statPriorityFit": 83,
+      "popularity": 50
     },
     {
       "slot": "legs",
@@ -694,30 +676,12 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 47
+      "popularity": 50
     },
     {
       "slot": "feet",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 159388,
-      "itemName": "Sabatons of Coruscating Energy",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Temple of Sethraliss",
-        "boss": "Adderis and Aspix",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 84,
-      "popularity": 27
-    },
-    {
-      "slot": "feet",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 268258,
       "itemName": "Boots of the Reckless Wayfarer",
       "itemLevel": 318,
@@ -730,6 +694,24 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 77,
+      "popularity": 37
+    },
+    {
+      "slot": "feet",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 159388,
+      "itemName": "Sabatons of Coruscating Energy",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Temple of Sethraliss",
+        "boss": "Adderis and Aspix",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 84,
       "popularity": 23
     },
     {
@@ -772,19 +754,16 @@
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 268249,
-      "itemName": "Vile Alchemist's Band",
-      "itemLevel": 318,
+      "itemId": 240949,
+      "itemName": "Masterwork Sin'dorei Band",
+      "itemLevel": 331,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Vashnik the Malignant",
-        "difficulty": "mythic"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 94,
-      "popularity": 30
+      "statPriorityFit": 53,
+      "popularity": 33
     },
     {
       "slot": "trinket",
@@ -802,7 +781,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "trinket",
@@ -820,7 +799,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 40
+      "popularity": 33
     },
     {
       "slot": "trinket",
@@ -838,7 +817,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 37
+      "popularity": 27
     },
     {
       "slot": "main_hand",
@@ -856,19 +835,19 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 97
+      "popularity": 93
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     }
   }
 }

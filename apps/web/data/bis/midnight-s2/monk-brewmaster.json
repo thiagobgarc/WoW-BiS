@@ -43,7 +43,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 80
+      "popularity": 83
     },
     {
       "slot": "neck",
@@ -61,7 +61,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 13
+      "popularity": 10
     },
     {
       "slot": "shoulder",
@@ -163,7 +163,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
+      "statPriorityFit": 53,
       "popularity": 80
     },
     {
@@ -199,7 +199,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "waist",
@@ -266,7 +266,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
+      "statPriorityFit": 30,
       "popularity": 7
     },
     {
@@ -281,8 +281,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 47
+      "statPriorityFit": 83,
+      "popularity": 43
     },
     {
       "slot": "feet",
@@ -333,7 +333,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 70
+      "popularity": 67
     },
     {
       "slot": "finger",
@@ -347,8 +347,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 13
+      "statPriorityFit": 60,
+      "popularity": 17
     },
     {
       "slot": "trinket",
@@ -366,7 +366,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 63
+      "popularity": 73
     },
     {
       "slot": "trinket",
@@ -402,7 +402,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 40,
-      "popularity": 40
+      "popularity": 37
     },
     {
       "slot": "main_hand",
@@ -526,7 +526,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 26,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "back",
@@ -544,7 +544,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 54,
-      "popularity": 30
+      "popularity": 27
     },
     {
       "slot": "back",
@@ -562,7 +562,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 20
+      "popularity": 23
     },
     {
       "slot": "chest",
@@ -579,25 +579,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 87
-    },
-    {
-      "slot": "chest",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 251226,
-      "itemName": "Hide of Pestilence",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Atroxus",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 85,
-      "popularity": 7
+      "popularity": 90
     },
     {
       "slot": "wrist",
@@ -611,7 +593,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
+      "statPriorityFit": 53,
       "popularity": 70
     },
     {
@@ -630,7 +612,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 23
+      "popularity": 20
     },
     {
       "slot": "hands",
@@ -653,24 +635,6 @@
       "slot": "waist",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 251189,
-      "itemName": "Rootwalker Harness",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "The Blinding Vale",
-        "boss": "Ikuzz the Light Hunter",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 78,
-      "popularity": 23
-    },
-    {
-      "slot": "waist",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 268227,
       "itemName": "Unpossessed Skullsash",
       "itemLevel": 318,
@@ -683,6 +647,21 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 83,
+      "popularity": 23
+    },
+    {
+      "slot": "waist",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 271436,
+      "itemName": "Slitherscale Girdle",
+      "itemLevel": 311,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 76,
       "popularity": 20
     },
     {
@@ -700,25 +679,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 87
-    },
-    {
-      "slot": "legs",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 251198,
-      "itemName": "Lightspore Leggings",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "The Blinding Vale",
-        "boss": "Ziekket",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 56,
-      "popularity": 7
+      "popularity": 90
     },
     {
       "slot": "feet",
@@ -732,7 +693,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 83,
       "popularity": 50
     },
     {
@@ -766,7 +727,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 74,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "finger",
@@ -784,7 +745,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 80
+      "popularity": 87
     },
     {
       "slot": "finger",
@@ -802,7 +763,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 20
+      "popularity": 13
     },
     {
       "slot": "trinket",
@@ -820,7 +781,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 63
+      "popularity": 60
     },
     {
       "slot": "trinket",
@@ -856,7 +817,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 33
+      "popularity": 27
     },
     {
       "slot": "main_hand",
@@ -888,7 +849,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
+      "statPriorityFit": 60,
       "popularity": 10
     }
   ],
@@ -896,12 +857,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     }
   }
 }

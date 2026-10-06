@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "head",
@@ -43,7 +43,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 40,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "neck",
@@ -61,7 +61,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 73
+      "popularity": 77
     },
     {
       "slot": "neck",
@@ -79,7 +79,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 27
+      "popularity": 20
     },
     {
       "slot": "shoulder",
@@ -96,7 +96,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "shoulder",
@@ -132,7 +132,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 37
+      "popularity": 43
     },
     {
       "slot": "back",
@@ -150,12 +150,27 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 23
+      "popularity": 20
     },
     {
       "slot": "chest",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 244570,
+      "itemName": "Silvermoon Agent's Coat",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 60,
+      "popularity": 50
+    },
+    {
+      "slot": "chest",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 271540,
       "itemName": "Abyssal Doomhound's Coreguard",
       "itemLevel": 318,
@@ -167,22 +182,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 50
-    },
-    {
-      "slot": "chest",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 244570,
-      "itemName": "Silvermoon Agent's Coat",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 43
+      "popularity": 47
     },
     {
       "slot": "wrist",
@@ -196,8 +196,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 57
+      "statPriorityFit": 43,
+      "popularity": 53
     },
     {
       "slot": "wrist",
@@ -250,7 +250,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 43
+      "popularity": 37
     },
     {
       "slot": "waist",
@@ -285,7 +285,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "legs",
@@ -299,7 +299,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
+      "statPriorityFit": 53,
       "popularity": 7
     },
     {
@@ -314,8 +314,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 47
+      "statPriorityFit": 60,
+      "popularity": 53
     },
     {
       "slot": "feet",
@@ -351,7 +351,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 86,
-      "popularity": 67
+      "popularity": 60
     },
     {
       "slot": "finger",
@@ -369,7 +369,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 85,
-      "popularity": 47
+      "popularity": 43
     },
     {
       "slot": "finger",
@@ -383,8 +383,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 33
+      "statPriorityFit": 70,
+      "popularity": 30
     },
     {
       "slot": "trinket",
@@ -402,7 +402,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 100
+      "popularity": 97
     },
     {
       "slot": "trinket",
@@ -420,7 +420,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 67
+      "popularity": 63
     },
     {
       "slot": "trinket",
@@ -438,7 +438,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 33
+      "popularity": 40
     },
     {
       "slot": "main_hand",
@@ -456,25 +456,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 93
-    },
-    {
-      "slot": "main_hand",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268201,
-      "itemName": "Venomous Boneglaive",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Sszorak",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 76,
-      "popularity": 7
+      "popularity": 97
     },
     {
       "slot": "off_hand",
@@ -488,8 +470,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 93
+      "statPriorityFit": 83,
+      "popularity": 87
     },
     {
       "slot": "off_hand",
@@ -507,7 +489,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 7
+      "popularity": 10
     },
     {
       "slot": "head",
@@ -524,7 +506,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "head",
@@ -542,7 +524,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 40,
-      "popularity": 7
+      "popularity": 10
     },
     {
       "slot": "neck",
@@ -560,25 +542,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 73
+      "popularity": 77
     },
     {
       "slot": "neck",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 251234,
-      "itemName": "Graft of the Domanaar",
+      "itemId": 271638,
+      "itemName": "Bound Serpent's Jade Eye",
       "itemLevel": 311,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Charonus",
-        "keyLevel": 10
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 88,
-      "popularity": 13
+      "statPriorityFit": 54,
+      "popularity": 10
     },
     {
       "slot": "shoulder",
@@ -595,7 +574,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 80
+      "popularity": 83
     },
     {
       "slot": "shoulder",
@@ -613,7 +592,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 88,
-      "popularity": 13
+      "popularity": 10
     },
     {
       "slot": "back",
@@ -631,7 +610,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 47
+      "popularity": 43
     },
     {
       "slot": "back",
@@ -666,7 +645,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 63
+      "popularity": 67
     },
     {
       "slot": "chest",
@@ -681,7 +660,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 60,
-      "popularity": 37
+      "popularity": 33
     },
     {
       "slot": "wrist",
@@ -695,8 +674,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 57
+      "statPriorityFit": 43,
+      "popularity": 70
     },
     {
       "slot": "wrist",
@@ -714,7 +693,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 20
+      "popularity": 13
     },
     {
       "slot": "hands",
@@ -731,7 +710,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 100
+      "popularity": 97
     },
     {
       "slot": "waist",
@@ -749,7 +728,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 30
+      "popularity": 23
     },
     {
       "slot": "waist",
@@ -767,7 +746,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 27
+      "popularity": 20
     },
     {
       "slot": "legs",
@@ -784,7 +763,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 87
+      "popularity": 93
     },
     {
       "slot": "legs",
@@ -798,8 +777,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
-      "popularity": 10
+      "statPriorityFit": 53,
+      "popularity": 7
     },
     {
       "slot": "feet",
@@ -813,8 +792,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 40
+      "statPriorityFit": 60,
+      "popularity": 37
     },
     {
       "slot": "feet",
@@ -832,30 +811,12 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 84,
-      "popularity": 27
+      "popularity": 30
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 158366,
-      "itemName": "Charged Sandstone Band",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Temple of Sethraliss",
-        "boss": "Galvazzt",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 85,
-      "popularity": 63
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 251136,
       "itemName": "Signet of Snarling Servitude",
       "itemLevel": 311,
@@ -868,7 +829,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 86,
-      "popularity": 63
+      "popularity": 70
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 158366,
+      "itemName": "Charged Sandstone Band",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Temple of Sethraliss",
+        "boss": "Galvazzt",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 85,
+      "popularity": 53
     },
     {
       "slot": "finger",
@@ -882,8 +861,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 33
+      "statPriorityFit": 70,
+      "popularity": 37
     },
     {
       "slot": "trinket",
@@ -919,7 +898,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 73
+      "popularity": 77
     },
     {
       "slot": "trinket",
@@ -937,7 +916,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 27
+      "popularity": 23
     },
     {
       "slot": "main_hand",
@@ -955,7 +934,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 97
+      "popularity": 93
     },
     {
       "slot": "off_hand",
@@ -969,20 +948,20 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 97
+      "statPriorityFit": 83,
+      "popularity": 93
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     }
   }
 }
