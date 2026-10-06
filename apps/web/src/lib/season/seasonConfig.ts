@@ -61,6 +61,11 @@ export const seasonConfig = {
     // as of 2026-10-04). Gear is read from Blizzard afterwards, so which boss
     // a player parsed on does not bias the items, only who gets sampled.
     warcraftLogsEncounterIds: [3470, 3455],
+    // Bosses the raid tier list measures throughput on (scripts/
+    // ingest-tier-lists.ts): the first four, which every spec has Mythic
+    // parses on. The same set for every spec keeps the comparison fair, and
+    // later bosses join as kills accumulate.
+    warcraftLogsTierEncounterIds: [3470, 3445, 3497, 3455],
     // Separate one-boss raid (Nymrissa Wavecaller) whose loot top players
     // wear — e.g. Rising Tide Wristguards. Without it those items had no
     // source at all.

@@ -34,11 +34,11 @@ export function realmSlug(realmName: string): string {
     .replace(/\s+/g, '-');
 }
 
-function urlSlug(value: string): string {
+export function urlSlug(value: string): string {
   return value.toLowerCase().replace(/\s+/g, '-');
 }
 
-async function fetchJson(url: string, init?: RequestInit): Promise<any | null> {
+export async function fetchJson(url: string, init?: RequestInit): Promise<any | null> {
   for (let attempt = 0; attempt < 4; attempt++) {
     try {
       const res = await fetch(url, init);
@@ -85,7 +85,7 @@ export function hasWarcraftLogsCredentials(): boolean {
 
 let wclToken: string | null = null;
 
-async function warcraftLogsQuery(query: string): Promise<any> {
+export async function warcraftLogsQuery(query: string): Promise<any> {
   if (!wclToken) {
     const basic = Buffer.from(`${process.env.WCL_CLIENT_ID}:${process.env.WCL_CLIENT_SECRET}`).toString('base64');
     const token = await fetchJson('https://www.warcraftlogs.com/oauth/token', {

@@ -7,7 +7,7 @@
 #
 # Needs four repository secrets (Settings → Secrets and variables → Actions):
 # BLIZZARD_CLIENT_ID, BLIZZARD_CLIENT_SECRET, WCL_CLIENT_ID, WCL_CLIENT_SECRET.
-name: Refresh BiS lists
+name: Refresh BiS and tier lists
 
 on:
   schedule:
@@ -78,6 +78,53 @@ jobs:
           # Keep development in step so the next manual merge doesn't fight
           # over data files. A conflict fails this step loudly; main has
           # already shipped either way.
+          git checkout development
+          git merge --no-edit main
+          git push origin development
+
+  # The Mythic+ and raid tier lists, rebuilt from each spec's 95th-percentile
+  # Mythic+ score (Raider.IO) and Mythic throughput (Warcraft Logs). After the
+  # BiS job, because both spend the same hourly Warcraft Logs budget; the
+  # script waits for that budget to reset rather than failing, which can
+  # take a cold run past an hour, hence its own longer timeout.
+  tier-lists:
+    needs: refresh
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.0
+
+      - run: bun install --frozen-lockfile
+
+      - name: Rebuild tier lists
+        working-directory: apps/web
+        env:
+          WCL_CLIENT_ID: ${{ secrets.WCL_CLIENT_ID }}
+          WCL_CLIENT_SECRET: ${{ secrets.WCL_CLIENT_SECRET }}
+        run: bun run tiers:ingest
+
+      - name: Validate lists
+        working-directory: apps/web
+        run: bunx vitest run src/lib/meta src/lib/ingest
+
+      - name: Commit to main and sync development
+        run: |
+          if git diff --quiet -- apps/web/data/meta; then
+            echo "No tier list changes this week."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add apps/web/data/meta
+          git commit -m "Refresh tier lists from player data ($(date -u +%Y-%m-%d))"
+          git push origin main
           git checkout development
           git merge --no-edit main
           git push origin development

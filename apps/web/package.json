@@ -19,6 +19,7 @@
     "bis:ingest": "bun scripts/ingest-bis.ts",
     "data:check": "bun scripts/data-check.ts",
     "talents:import": "bun scripts/import-talents.ts",
+    "tiers:ingest": "bun scripts/ingest-tier-lists.ts",
     "typecheck": "astro check && tsc --noEmit",
     "dev:host": "astro dev --host"
   },
