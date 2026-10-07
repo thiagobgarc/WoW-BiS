@@ -21,6 +21,9 @@ export function slotLabel(slot: string): string {
     waist: 'Waist',
     legs: 'Legs',
     feet: 'Feet',
+    // BiS lists use the slot category, not the physical slot.
+    finger: 'Finger',
+    trinket: 'Trinket',
     finger_1: 'Finger 1',
     finger_2: 'Finger 2',
     trinket_1: 'Trinket 1',

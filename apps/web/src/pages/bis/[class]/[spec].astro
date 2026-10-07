@@ -1,8 +1,9 @@
 ---
 /**
- * Public best-in-slot list for one spec. Server-rendered with no island:
- * it's a read-only table, so it ships zero client JS and is fully visible
- * to crawlers. Same data the character upgrade board compares against.
+ * Public best-in-slot list for one spec. Server-rendered in full, so it is
+ * fully visible to crawlers; the item tables hydrate when scrolled into view
+ * only so items can carry a stat tooltip. Same data the character upgrade
+ * board compares against.
  */
 import Layout from '@/layouts/Layout.astro';
 import SiteHeader from '@/components/layout/SiteHeader.astro';
@@ -11,11 +12,14 @@ import { findSpecBySlug } from '@/lib/meta/specBySlug';
 import { urlSlug } from '@/lib/meta/specIds';
 import { bisPath, talentBuildPath } from '@/lib/meta/specLinks';
 import { getBisList } from '@/lib/bis/getBisList';
-import { getItemIconUrls } from '@/lib/blizzard/getIconUrls';
+import { getItemIconUrls, getItemTooltipSources } from '@/lib/blizzard/getIconUrls';
+import { toBisItemTooltip, type BisItemTooltip } from '@/lib/blizzard/itemTooltip';
+import type { ItemTooltipSource } from '@/lib/blizzard/schemas';
+import { BisItemTable, type BisTableRow } from '@/components/bis/BisItemTable';
 import { SPEC_CATALOGUE, specSlug } from '@/lib/ingest/specCatalogue';
 import { CURRENT_SEASON_ID, seasonConfig } from '@/lib/season/seasonConfig';
-import { classColor, qualityColor, slotLabel, sourceLabel } from '@mythos/core/utils';
-import { BIS_SLOTS, DUAL_SLOT_CATEGORIES, type BisEntry, type ContentType } from '@mythos/core/bis';
+import { classColor } from '@mythos/core/utils';
+import { BIS_SLOTS, DUAL_SLOT_CATEGORIES, type ContentType } from '@mythos/core/bis';
 
 export const prerender = false;
 
@@ -26,14 +30,22 @@ const bis = ref ? await getBisList(CURRENT_SEASON_ID, ref.className, ref.specNam
 const ok = !!ref && !!bis?.seeded;
 if (!ref) Astro.response.status = 404;
 
-// Item icons are region-independent static data, so any region's media
-// endpoint serves them. Cosmetic: a failed lookup leaves the placeholder.
-const icons = ok
-  ? await getItemIconUrls('us', bis.entries.map((e) => e.itemId)).catch(() => new Map<number, string>())
-  : new Map<number, string>();
+const profile = ref ? SPEC_CATALOGUE.find((p) => p.class === ref.className && p.spec === ref.specName) : undefined;
+
+// Item icons and detail are region-independent static data, so any region's
+// endpoints serve them. Both are cosmetic: a failed lookup leaves the
+// placeholder icon, or a tooltip built from the BiS entry alone.
+const itemIds = ok ? bis.entries.map((e) => e.itemId) : [];
+const [iconMap, tooltipSources] = await Promise.all([
+  getItemIconUrls('us', itemIds).catch(() => new Map<number, string>()),
+  getItemTooltipSources('us', itemIds).catch(() => new Map<number, ItemTooltipSource>()),
+]);
+const icons: Record<number, string> = Object.fromEntries(iconMap);
+const tooltips: Record<number, BisItemTooltip> = Object.fromEntries(
+  [...tooltipSources].map(([id, raw]) => [id, toBisItemTooltip(raw, profile?.primaryStat)]),
+);
 
 const specLabel = ref ? `${ref.specName} ${ref.className}` : '';
-const profile = ref ? SPEC_CATALOGUE.find((p) => p.class === ref.className && p.spec === ref.specName) : undefined;
 const tierSetName = ref ? seasonConfig.classTierSets[ref.className] : undefined;
 // Bonus text is only researched for some specs; the set name is known for all.
 const tierBonuses = ref ? seasonConfig.tierSets[specSlug(ref.className, ref.specName)] : undefined;
@@ -47,13 +59,31 @@ const SECTIONS: { contentType: ContentType; heading: string }[] = [
 
 // Rings and trinkets are a ranked pool of two physical slots, so the pair
 // (rank 1 + rank 2) is the BiS loadout; every other slot shows its rank 1.
-function rowsFor(contentType: ContentType): { slot: string; entry: BisEntry | null }[] {
+function rowsFor(contentType: ContentType): BisTableRow[] {
   const entries = bis?.entries.filter((e) => e.contentType === contentType) ?? [];
+  const pick = (slot: string, i: number) => entries.filter((e) => e.slot === slot).sort((a, b) => a.rank - b.rank)[i] ?? null;
   return BIS_SLOTS.flatMap((slot) => {
-    const ranked = entries.filter((e) => e.slot === slot).sort((a, b) => a.rank - b.rank);
     const count = (DUAL_SLOT_CATEGORIES as readonly string[]).includes(slot) ? 2 : 1;
-    return Array.from({ length: count }, (_, i) => ({ slot, entry: ranked[i] ?? null }));
+    return Array.from({ length: count }, (_, i) => ({
+      slot,
+      entry: pick(slot, i),
+      // An empty off-hand next to a main-hand pick means the chosen setup is
+      // a two-hander or ranged weapon, not missing loot.
+      emptyText:
+        slot === 'off_hand' && pick('main_hand', 0)
+          ? 'Not used: the main-hand pick takes both hands'
+          : `No ${contentType === 'raid' ? 'raid' : 'Mythic+'} drop for this slot this season`,
+    }));
   });
+}
+
+// Each table is its own island, so it gets only its own items' data as props.
+function tableProps(contentType: ContentType) {
+  const rows = rowsFor(contentType);
+  const ids = rows.flatMap((r) => (r.entry ? [r.entry.itemId] : []));
+  const only = <T,>(all: Record<number, T>) =>
+    Object.fromEntries(ids.filter((id) => all[id] !== undefined).map((id) => [id, all[id]!]));
+  return { rows, icons: only(icons), tooltips: only(tooltips) };
 }
 
 // Says whose gear the list reflects, so a reader knows how far to trust it.
@@ -183,63 +213,7 @@ const jsonLd =
               </h2>
               <p class="mt-2 max-w-[62ch] text-sm text-text-muted">{sampleNote(contentType)}</p>
               <div class="mt-4 overflow-x-auto">
-                <table class="w-full min-w-[560px] border-collapse text-left text-sm">
-                  <thead>
-                    <tr class="border-b border-rule-strong">
-                      <th scope="col" class="label py-2 pr-4 font-medium">Slot</th>
-                      <th scope="col" class="label py-2 pr-4 font-medium">Item</th>
-                      <th scope="col" class="label py-2 pr-4 text-right font-medium">Used by</th>
-                      <th scope="col" class="label py-2 pr-4 text-right font-medium">Item level</th>
-                      <th scope="col" class="label py-2 font-medium">Source</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {rowsFor(contentType).map(({ slot, entry }) => (
-                      <tr class="border-b border-rule">
-                        <th scope="row" class="py-2.5 pr-4 font-normal text-text-muted">{slotLabel(slot)}</th>
-                        {entry ? (
-                          <>
-                            <td class="py-2.5 pr-4 font-medium">
-                              <div class="flex items-center gap-3">
-                                {/* Same quality-border treatment as ItemIcon.tsx, as plain
-                                    markup so this page stays free of client JS. */}
-                                <span
-                                  class="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-[3px] border-2 bg-sunken"
-                                  style={{ borderColor: qualityColor('epic') }}
-                                >
-                                  {icons.get(entry.itemId) ? (
-                                    <img src={icons.get(entry.itemId)} alt="" class="h-full w-full object-cover" loading="lazy" width="32" height="32" />
-                                  ) : (
-                                    <span class="text-xs text-text-dim" aria-hidden="true">?</span>
-                                  )}
-                                </span>
-                                <span>
-                                  <a href={`https://www.wowhead.com/item=${entry.itemId}`} class="link" rel="noreferrer">
-                                    {entry.itemName}
-                                  </a>
-                                  {entry.tierPiece && <span class="label ml-2">Tier</span>}
-                                </span>
-                              </div>
-                            </td>
-                            <td class="figure py-2.5 pr-4 text-right">
-                              {entry.popularity === undefined ? <span class="text-text-dim">—</span> : `${entry.popularity}%`}
-                            </td>
-                            <td class="figure py-2.5 pr-4 text-right">{entry.itemLevel}</td>
-                            <td class="py-2.5 text-text-muted">{sourceLabel(entry.source)}</td>
-                          </>
-                        ) : (
-                          <td colspan="4" class="py-2.5 text-text-dim">
-                            {/* An empty off-hand next to a main-hand pick means the chosen
-                                setup is a two-hander or ranged weapon, not missing loot. */}
-                            {slot === 'off_hand' && rowsFor(contentType).some((r) => r.slot === 'main_hand' && r.entry)
-                              ? 'Not used: the main-hand pick takes both hands'
-                              : `No ${contentType === 'raid' ? 'raid' : 'Mythic+'} drop for this slot this season`}
-                          </td>
-                        )}
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                <BisItemTable client:visible {...tableProps(contentType)} />
               </div>
             </section>
           ))

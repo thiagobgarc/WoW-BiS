@@ -36,6 +36,7 @@ import {
   IngestItemSchema,
   ItemMediaSchema,
   ItemSchema,
+  ItemTooltipSourceSchema,
   ItemSetIndexSchema,
   ItemSetSchema,
   PlayableSpecIndexSchema,
@@ -49,6 +50,7 @@ import {
   TalentTreeIndexSchema,
   TalentTreeSchema,
   type IngestItem,
+  type ItemTooltipSource,
   type ItemSet,
   type ItemSetIndex,
   type PlayableSpec,
@@ -395,6 +397,23 @@ export async function getItem(region: string, itemId: number): Promise<BlizzardI
     const raw = await blizzardGet<unknown>(`/data/wow/item/${itemId}`, { namespace: 'static', region });
     return ItemSchema.parse(raw);
   });
+}
+
+/**
+ * Item detail for a BiS tooltip. Cosmetic like the icon lookup below: any
+ * failure (no credentials, 404, schema drift) yields null and the tooltip
+ * falls back to what the BiS list itself knows about the item.
+ */
+export async function getItemTooltipSource(region: string, itemId: number): Promise<ItemTooltipSource | null> {
+  if (!hasBlizzardCredentials()) return null;
+  try {
+    return await cached(`item-tooltip:${region}:${itemId}`, TTL_ITEM_SECONDS, async () => {
+      const raw = await blizzardGet<unknown>(`/data/wow/item/${itemId}`, { namespace: 'static', region });
+      return ItemTooltipSourceSchema.parse(raw);
+    });
+  } catch {
+    return null;
+  }
 }
 
 export async function getItemIconUrl(region: string, itemId: number): Promise<string | null> {
