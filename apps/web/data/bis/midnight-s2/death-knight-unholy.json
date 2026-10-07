@@ -43,7 +43,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 80
+      "popularity": 83
     },
     {
       "slot": "shoulder",
@@ -78,7 +78,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 30
+      "popularity": 40
     },
     {
       "slot": "back",
@@ -96,7 +96,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 23
+      "popularity": 17
     },
     {
       "slot": "chest",
@@ -146,7 +146,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 83,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "wrist",
@@ -164,7 +164,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 7
+      "popularity": 10
     },
     {
       "slot": "hands",
@@ -195,7 +195,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
+      "statPriorityFit": 43,
       "popularity": 10
     },
     {
@@ -214,7 +214,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 47
+      "popularity": 37
     },
     {
       "slot": "waist",
@@ -232,7 +232,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 23
+      "popularity": 27
     },
     {
       "slot": "legs",
@@ -249,7 +249,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 80
+      "popularity": 73
     },
     {
       "slot": "legs",
@@ -267,7 +267,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 20
+      "popularity": 27
     },
     {
       "slot": "feet",
@@ -281,8 +281,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 73
+      "statPriorityFit": 30,
+      "popularity": 77
     },
     {
       "slot": "feet",
@@ -306,24 +306,6 @@
       "slot": "finger",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 251136,
-      "itemName": "Signet of Snarling Servitude",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Murder Row",
-        "boss": "Xathuux the Annihilator",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 86,
-      "popularity": 40
-    },
-    {
-      "slot": "finger",
-      "contentType": "raid",
-      "rank": 2,
       "itemId": 268249,
       "itemName": "Vile Alchemist's Band",
       "itemLevel": 318,
@@ -336,25 +318,43 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 71,
-      "popularity": 33
+      "popularity": 40
+    },
+    {
+      "slot": "finger",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 251136,
+      "itemName": "Signet of Snarling Servitude",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Murder Row",
+        "boss": "Xathuux the Annihilator",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 86,
+      "popularity": 37
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 252258,
-      "itemName": "Sickening Signet of Atroxus",
+      "itemId": 158366,
+      "itemName": "Charged Sandstone Band",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Atroxus",
+        "dungeon": "Temple of Sethraliss",
+        "boss": "Galvazzt",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 48,
-      "popularity": 27
+      "statPriorityFit": 85,
+      "popularity": 33
     },
     {
       "slot": "trinket",
@@ -372,7 +372,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "trinket",
@@ -390,7 +390,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 77
+      "popularity": 73
     },
     {
       "slot": "trinket",
@@ -408,7 +408,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 13
+      "popularity": 17
     },
     {
       "slot": "main_hand",
@@ -440,7 +440,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 43,
       "popularity": 7
     },
     {
@@ -461,6 +461,21 @@
       "popularity": 90
     },
     {
+      "slot": "head",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 237832,
+      "itemName": "Spellbreaker's Cover",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 30,
+      "popularity": 7
+    },
+    {
       "slot": "neck",
       "contentType": "mythic-plus",
       "rank": 1,
@@ -476,7 +491,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "shoulder",
@@ -499,15 +514,18 @@
       "slot": "shoulder",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 237835,
-      "itemName": "Spellbreaker's Mantle",
-      "itemLevel": 331,
+      "itemId": 268226,
+      "itemName": "Swelling Sea Spaulders",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Tidebound Grotto",
+        "boss": "Nymrissa Wavecaller",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
+      "statPriorityFit": 90,
       "popularity": 7
     },
     {
@@ -526,7 +544,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 30
+      "popularity": 33
     },
     {
       "slot": "back",
@@ -544,7 +562,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 23
+      "popularity": 17
     },
     {
       "slot": "chest",
@@ -561,7 +579,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 97
+      "popularity": 93
+    },
+    {
+      "slot": "chest",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 268222,
+      "itemName": "Reckless Spirit Breastplate",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 47,
+      "popularity": 7
     },
     {
       "slot": "wrist",
@@ -576,7 +612,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 83,
-      "popularity": 87
+      "popularity": 83
     },
     {
       "slot": "wrist",
@@ -594,7 +630,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "hands",
@@ -611,7 +647,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 83
+      "popularity": 87
     },
     {
       "slot": "hands",
@@ -625,8 +661,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 7
+      "statPriorityFit": 43,
+      "popularity": 10
     },
     {
       "slot": "waist",
@@ -644,7 +680,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 40
+      "popularity": 43
     },
     {
       "slot": "waist",
@@ -658,8 +694,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 27,
-      "popularity": 13
+      "statPriorityFit": 49,
+      "popularity": 17
     },
     {
       "slot": "legs",
@@ -676,7 +712,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 73
+      "popularity": 77
     },
     {
       "slot": "legs",
@@ -694,7 +730,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 27
+      "popularity": 23
     },
     {
       "slot": "feet",
@@ -708,8 +744,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 73
+      "statPriorityFit": 30,
+      "popularity": 77
     },
     {
       "slot": "feet",
@@ -727,7 +763,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 20
+      "popularity": 10
     },
     {
       "slot": "finger",
@@ -745,43 +781,40 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 40
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 273792,
-      "itemName": "Band of the Amani Warlord",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Altar of Fangs",
-        "boss": "Zul'jan",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 62,
       "popularity": 33
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
-      "rank": 3,
-      "itemId": 268249,
-      "itemName": "Vile Alchemist's Band",
-      "itemLevel": 318,
+      "rank": 2,
+      "itemId": 158366,
+      "itemName": "Charged Sandstone Band",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Vashnik the Malignant",
-        "difficulty": "mythic"
+        "type": "dungeon",
+        "dungeon": "Temple of Sethraliss",
+        "boss": "Galvazzt",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 71,
-      "popularity": 27
+      "statPriorityFit": 85,
+      "popularity": 30
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 3,
+      "itemId": 251513,
+      "itemName": "Loa Worshiper's Band",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 85,
+      "popularity": 30
     },
     {
       "slot": "trinket",
@@ -799,7 +832,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "trinket",
@@ -817,7 +850,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 77
+      "popularity": 70
     },
     {
       "slot": "trinket",
@@ -853,7 +886,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 77
+      "popularity": 70
     },
     {
       "slot": "main_hand",
@@ -867,7 +900,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 43,
       "popularity": 10
     }
   ],
@@ -875,12 +908,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     }
   }
 }

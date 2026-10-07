@@ -25,7 +25,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 87
+      "popularity": 83
+    },
+    {
+      "slot": "head",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268230,
+      "itemName": "Crown of the Eternal Fang",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Nek'zali the Soulcoiler",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 75,
+      "popularity": 7
     },
     {
       "slot": "neck",
@@ -43,25 +61,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 83
-    },
-    {
-      "slot": "neck",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268250,
-      "itemName": "Sentinel's Vitriolic Chain",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Entombed Sentinels",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 73,
-      "popularity": 7
+      "popularity": 87
     },
     {
       "slot": "shoulder",
@@ -78,7 +78,22 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 97
+      "popularity": 93
+    },
+    {
+      "slot": "shoulder",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 244580,
+      "itemName": "Farstrider's Brilliant Plumes",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 83,
+      "popularity": 7
     },
     {
       "slot": "back",
@@ -96,7 +111,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 50
+      "popularity": 47
     },
     {
       "slot": "back",
@@ -110,7 +125,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 53,
       "popularity": 17
     },
     {
@@ -128,25 +143,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 90
-    },
-    {
-      "slot": "chest",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268223,
-      "itemName": "Ophidian Fangmail",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Twin Fangs",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 76,
-      "popularity": 7
+      "popularity": 97
     },
     {
       "slot": "wrist",
@@ -160,25 +157,25 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 80
+      "statPriorityFit": 53,
+      "popularity": 87
     },
     {
       "slot": "wrist",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 251200,
-      "itemName": "Saptorbane Guards",
+      "itemId": 159380,
+      "itemName": "Arc-Glass Bindings",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "The Blinding Vale",
-        "boss": "Ziekket",
+        "dungeon": "Temple of Sethraliss",
+        "boss": "Adderis and Aspix",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 78,
+      "statPriorityFit": 85,
       "popularity": 7
     },
     {
@@ -210,7 +207,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 83,
+      "statPriorityFit": 53,
       "popularity": 7
     },
     {
@@ -229,7 +226,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 47
+      "popularity": 40
     },
     {
       "slot": "waist",
@@ -243,8 +240,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 17
+      "statPriorityFit": 53,
+      "popularity": 13
     },
     {
       "slot": "legs",
@@ -261,7 +258,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 77
+      "popularity": 87
     },
     {
       "slot": "legs",
@@ -275,8 +272,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
-      "popularity": 13
+      "statPriorityFit": 60,
+      "popularity": 7
     },
     {
       "slot": "feet",
@@ -290,7 +287,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 60,
       "popularity": 30
     },
     {
@@ -309,7 +306,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 73,
-      "popularity": 23
+      "popularity": 13
     },
     {
       "slot": "finger",
@@ -327,7 +324,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 94,
-      "popularity": 57
+      "popularity": 53
     },
     {
       "slot": "finger",
@@ -341,7 +338,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 83,
       "popularity": 47
     },
     {
@@ -360,7 +357,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 64,
-      "popularity": 43
+      "popularity": 40
     },
     {
       "slot": "trinket",
@@ -396,7 +393,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 70
+      "popularity": 67
     },
     {
       "slot": "trinket",
@@ -414,7 +411,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 13
+      "popularity": 20
     },
     {
       "slot": "main_hand",
@@ -432,7 +429,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 80
+      "popularity": 83
     },
     {
       "slot": "main_hand",
@@ -464,8 +461,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 50
+      "statPriorityFit": 43,
+      "popularity": 53
     },
     {
       "slot": "off_hand",
@@ -483,7 +480,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 40
+      "popularity": 37
     },
     {
       "slot": "head",
@@ -500,7 +497,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 83
+      "popularity": 80
     },
     {
       "slot": "head",
@@ -514,8 +511,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 27,
-      "popularity": 10
+      "statPriorityFit": 79,
+      "popularity": 7
     },
     {
       "slot": "neck",
@@ -533,22 +530,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 87
-    },
-    {
-      "slot": "neck",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 271638,
-      "itemName": "Bound Serpent's Jade Eye",
-      "itemLevel": 311,
-      "source": {
-        "type": "other"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 46,
-      "popularity": 7
+      "popularity": 90
     },
     {
       "slot": "shoulder",
@@ -612,8 +594,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 10
+      "statPriorityFit": 53,
+      "popularity": 13
     },
     {
       "slot": "chest",
@@ -630,7 +612,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 97
+      "popularity": 93
     },
     {
       "slot": "wrist",
@@ -644,8 +626,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 87
+      "statPriorityFit": 53,
+      "popularity": 80
+    },
+    {
+      "slot": "wrist",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 159380,
+      "itemName": "Arc-Glass Bindings",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Temple of Sethraliss",
+        "boss": "Adderis and Aspix",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 85,
+      "popularity": 7
     },
     {
       "slot": "hands",
@@ -662,7 +662,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "waist",
@@ -686,18 +686,18 @@
       "slot": "waist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 159369,
-      "itemName": "Belt of the Consecrated Tomb",
+      "itemId": 251155,
+      "itemName": "Tribal Defender's Cord",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Kings' Rest",
-        "boss": "The Golden Serpent",
+        "dungeon": "Den of Nalorakk",
+        "boss": "Sentinel of Winter",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 51,
+      "statPriorityFit": 71,
       "popularity": 10
     },
     {
@@ -715,7 +715,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 77
+      "popularity": 80
     },
     {
       "slot": "legs",
@@ -729,8 +729,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
-      "popularity": 13
+      "statPriorityFit": 60,
+      "popularity": 17
     },
     {
       "slot": "feet",
@@ -744,8 +744,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 37
+      "statPriorityFit": 60,
+      "popularity": 40
     },
     {
       "slot": "feet",
@@ -759,8 +759,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 26,
-      "popularity": 27
+      "statPriorityFit": 58,
+      "popularity": 23
     },
     {
       "slot": "finger",
@@ -778,30 +778,12 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 64,
-      "popularity": 63
+      "popularity": 73
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 273792,
-      "itemName": "Band of the Amani Warlord",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Altar of Fangs",
-        "boss": "Zul'jan",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 78,
-      "popularity": 43
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 3,
       "itemId": 268252,
       "itemName": "Apex Brute's Claw Ring",
       "itemLevel": 318,
@@ -814,7 +796,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 94,
-      "popularity": 33
+      "popularity": 40
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 3,
+      "itemId": 273792,
+      "itemName": "Band of the Amani Warlord",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Altar of Fangs",
+        "boss": "Zul'jan",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 78,
+      "popularity": 40
     },
     {
       "slot": "trinket",
@@ -832,7 +832,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "trinket",
@@ -850,25 +850,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 70
+      "popularity": 73
     },
     {
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 270164,
-      "itemName": "Gebbo's Bottomless Bag",
+      "itemId": 270167,
+      "itemName": "Wavecaller's Seastone",
       "itemLevel": 318,
       "source": {
         "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
+        "instance": "The Tidebound Grotto",
+        "boss": "Nymrissa Wavecaller",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 50,
-      "popularity": 17
+      "statPriorityFit": 65,
+      "popularity": 13
     },
     {
       "slot": "main_hand",
@@ -886,7 +886,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 73
+      "popularity": 77
     },
     {
       "slot": "main_hand",
@@ -904,7 +904,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "off_hand",
@@ -918,8 +918,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 60
+      "statPriorityFit": 43,
+      "popularity": 57
     },
     {
       "slot": "off_hand",
@@ -944,12 +944,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     }
   }
 }

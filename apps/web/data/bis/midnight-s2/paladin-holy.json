@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 63
+      "popularity": 70
     },
     {
       "slot": "head",
@@ -58,7 +58,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "shoulder",
@@ -75,12 +75,27 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 90
+      "popularity": 97
     },
     {
       "slot": "back",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 239656,
+      "itemName": "Adherent's Silken Shroud",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 70,
+      "popularity": 27
+    },
+    {
+      "slot": "back",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 268248,
       "itemName": "Amani Summoning Shawl",
       "itemLevel": 318,
@@ -93,25 +108,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 23
-    },
-    {
-      "slot": "back",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268253,
-      "itemName": "Silken Voodoo Drape",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Coiled Altar",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 44,
-      "popularity": 23
+      "popularity": 20
     },
     {
       "slot": "chest",
@@ -143,7 +140,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 43,
-      "popularity": 50
+      "popularity": 60
     },
     {
       "slot": "wrist",
@@ -161,7 +158,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 40
+      "popularity": 33
     },
     {
       "slot": "hands",
@@ -178,7 +175,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 35,
-      "popularity": 80
+      "popularity": 77
     },
     {
       "slot": "hands",
@@ -192,13 +189,28 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
-      "popularity": 17
+      "statPriorityFit": 30,
+      "popularity": 20
     },
     {
       "slot": "waist",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 271445,
+      "itemName": "Fanged Brute's Greatbelt",
+      "itemLevel": 318,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 27,
+      "popularity": 27
+    },
+    {
+      "slot": "waist",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 268244,
       "itemName": "Forgotten Grotto Girdle",
       "itemLevel": 318,
@@ -211,21 +223,6 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 23
-    },
-    {
-      "slot": "waist",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 271445,
-      "itemName": "Fanged Brute's Greatbelt",
-      "itemLevel": 318,
-      "source": {
-        "type": "other"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 61,
       "popularity": 20
     },
     {
@@ -279,7 +276,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 45,
-      "popularity": 43
+      "popularity": 53
     },
     {
       "slot": "feet",
@@ -293,7 +290,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 70,
       "popularity": 20
     },
     {
@@ -308,8 +305,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 43
+      "statPriorityFit": 83,
+      "popularity": 50
     },
     {
       "slot": "finger",
@@ -327,7 +324,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 43
+      "popularity": 47
     },
     {
       "slot": "finger",
@@ -345,7 +342,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 28,
-      "popularity": 23
+      "popularity": 30
     },
     {
       "slot": "trinket",
@@ -363,7 +360,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "trinket",
@@ -381,27 +378,12 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "main_hand",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 237843,
-      "itemName": "Magister's Mana Sword",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 47
-    },
-    {
-      "slot": "main_hand",
-      "contentType": "raid",
-      "rank": 2,
       "itemId": 268210,
       "itemName": "Malevolent Spiritcudgel",
       "itemLevel": 318,
@@ -414,7 +396,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 30
+      "popularity": 43
+    },
+    {
+      "slot": "main_hand",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 237843,
+      "itemName": "Magister's Mana Sword",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 83,
+      "popularity": 33
     },
     {
       "slot": "off_hand",
@@ -428,8 +425,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 40
+      "statPriorityFit": 60,
+      "popularity": 37
     },
     {
       "slot": "off_hand",
@@ -447,7 +444,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 33
+      "popularity": 37
     },
     {
       "slot": "head",
@@ -464,7 +461,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "head",
@@ -517,7 +514,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "shoulder",
@@ -550,7 +547,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 23
+      "popularity": 30
     },
     {
       "slot": "back",
@@ -564,8 +561,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 20
+      "statPriorityFit": 70,
+      "popularity": 23
     },
     {
       "slot": "chest",
@@ -582,7 +579,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 45,
-      "popularity": 77
+      "popularity": 70
     },
     {
       "slot": "chest",
@@ -596,8 +593,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
-      "popularity": 20
+      "statPriorityFit": 43,
+      "popularity": 27
     },
     {
       "slot": "wrist",
@@ -647,7 +644,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 35,
-      "popularity": 77
+      "popularity": 83
     },
     {
       "slot": "hands",
@@ -661,8 +658,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
-      "popularity": 23
+      "statPriorityFit": 30,
+      "popularity": 17
     },
     {
       "slot": "waist",
@@ -676,23 +673,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 61,
-      "popularity": 33
+      "statPriorityFit": 27,
+      "popularity": 40
     },
     {
       "slot": "waist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 237830,
-      "itemName": "Spellbreaker's Girdle",
-      "itemLevel": 331,
+      "itemId": 268244,
+      "itemName": "Forgotten Grotto Girdle",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Tidebound Grotto",
+        "boss": "Nymrissa Wavecaller",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 17
+      "statPriorityFit": 82,
+      "popularity": 20
     },
     {
       "slot": "legs",
@@ -745,7 +745,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 30
+      "popularity": 33
     },
     {
       "slot": "feet",
@@ -759,13 +759,28 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 23
+      "statPriorityFit": 70,
+      "popularity": 20
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 1,
+      "itemId": 240949,
+      "itemName": "Masterwork Sin'dorei Band",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 83,
+      "popularity": 47
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 2,
       "itemId": 159459,
       "itemName": "Ritual Binder's Ring",
       "itemLevel": 311,
@@ -778,21 +793,6 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 57
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 240949,
-      "itemName": "Masterwork Sin'dorei Band",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 30,
       "popularity": 43
     },
     {
@@ -879,8 +879,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 70
+      "statPriorityFit": 83,
+      "popularity": 63
     },
     {
       "slot": "main_hand",
@@ -904,21 +904,6 @@
       "slot": "off_hand",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 237831,
-      "itemName": "Spellbreaker's Rebuke",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 40
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 268196,
       "itemName": "Venom-Slashed Scuteward",
       "itemLevel": 318,
@@ -931,19 +916,34 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 40
+      "popularity": 43
+    },
+    {
+      "slot": "off_hand",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 237831,
+      "itemName": "Spellbreaker's Rebuke",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 60,
+      "popularity": 37
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     }
   }
 }

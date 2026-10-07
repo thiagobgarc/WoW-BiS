@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "head",
@@ -61,24 +61,24 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 80
+      "popularity": 83
     },
     {
       "slot": "neck",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 251142,
-      "itemName": "Pendant of Malefic Fury",
+      "itemId": 251173,
+      "itemName": "Yoke of the Charging Bear",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Murder Row",
-        "boss": "Lithiel Cinderfury",
+        "dungeon": "Den of Nalorakk",
+        "boss": "Nalorakk",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 58,
+      "statPriorityFit": 88,
       "popularity": 7
     },
     {
@@ -128,7 +128,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 60,
       "popularity": 33
     },
     {
@@ -164,7 +164,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 87
+      "popularity": 83
     },
     {
       "slot": "chest",
@@ -179,7 +179,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 43,
-      "popularity": 7
+      "popularity": 10
     },
     {
       "slot": "wrist",
@@ -193,7 +193,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 30,
       "popularity": 87
     },
     {
@@ -243,7 +243,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 83,
+      "statPriorityFit": 53,
       "popularity": 13
     },
     {
@@ -262,22 +262,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 30
+      "popularity": 37
     },
     {
       "slot": "waist",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 271436,
-      "itemName": "Slitherscale Girdle",
+      "itemId": 268256,
+      "itemName": "Sash of the Forlorn Vessel",
       "itemLevel": 318,
       "source": {
-        "type": "other"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 59,
-      "popularity": 27
+      "popularity": 20
     },
     {
       "slot": "legs",
@@ -294,7 +297,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 77
+      "popularity": 73
     },
     {
       "slot": "legs",
@@ -308,8 +311,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 17
+      "statPriorityFit": 70,
+      "popularity": 20
     },
     {
       "slot": "feet",
@@ -323,8 +326,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 43
+      "statPriorityFit": 43,
+      "popularity": 50
     },
     {
       "slot": "feet",
@@ -342,7 +345,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 72,
-      "popularity": 23
+      "popularity": 17
     },
     {
       "slot": "finger",
@@ -360,7 +363,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 53
+      "popularity": 57
     },
     {
       "slot": "finger",
@@ -378,7 +381,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 40
+      "popularity": 33
     },
     {
       "slot": "finger",
@@ -392,8 +395,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 23
+      "statPriorityFit": 83,
+      "popularity": 33
     },
     {
       "slot": "trinket",
@@ -411,30 +414,12 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 77
+      "popularity": 80
     },
     {
       "slot": "trinket",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 270165,
-      "itemName": "Keeper's Seething Core",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Entombed Sentinels",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 50,
-      "popularity": 33
-    },
-    {
-      "slot": "trinket",
-      "contentType": "raid",
-      "rank": 3,
       "itemId": 250245,
       "itemName": "Tumor of the Swarm",
       "itemLevel": 311,
@@ -448,6 +433,24 @@
       "catalystable": false,
       "statPriorityFit": 50,
       "popularity": 33
+    },
+    {
+      "slot": "trinket",
+      "contentType": "raid",
+      "rank": 3,
+      "itemId": 270165,
+      "itemName": "Keeper's Seething Core",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Entombed Sentinels",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 50,
+      "popularity": 27
     },
     {
       "slot": "main_hand",
@@ -465,7 +468,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 40,
-      "popularity": 70
+      "popularity": 73
     },
     {
       "slot": "main_hand",
@@ -518,7 +521,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 13
+      "popularity": 10
     },
     {
       "slot": "neck",
@@ -536,7 +539,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 77
+      "popularity": 80
     },
     {
       "slot": "neck",
@@ -585,8 +588,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 47
+      "statPriorityFit": 60,
+      "popularity": 50
     },
     {
       "slot": "back",
@@ -604,7 +607,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 20
+      "popularity": 27
     },
     {
       "slot": "chest",
@@ -650,8 +653,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 67
+      "statPriorityFit": 30,
+      "popularity": 77
     },
     {
       "slot": "wrist",
@@ -669,7 +672,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 20
+      "popularity": 17
     },
     {
       "slot": "hands",
@@ -700,7 +703,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 83,
+      "statPriorityFit": 53,
       "popularity": 7
     },
     {
@@ -715,25 +718,22 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 59,
-      "popularity": 33
+      "statPriorityFit": 34,
+      "popularity": 43
     },
     {
       "slot": "waist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 251189,
-      "itemName": "Rootwalker Harness",
-      "itemLevel": 311,
+      "itemId": 244573,
+      "itemName": "Silvermoon Agent's Utility Belt",
+      "itemLevel": 331,
       "source": {
-        "type": "dungeon",
-        "dungeon": "The Blinding Vale",
-        "boss": "Ikuzz the Light Hunter",
-        "keyLevel": 10
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 36,
+      "statPriorityFit": 30,
       "popularity": 13
     },
     {
@@ -751,7 +751,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 63
+      "popularity": 60
     },
     {
       "slot": "legs",
@@ -765,8 +765,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 20
+      "statPriorityFit": 70,
+      "popularity": 23
     },
     {
       "slot": "feet",
@@ -780,8 +780,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 60
+      "statPriorityFit": 43,
+      "popularity": 50
     },
     {
       "slot": "feet",
@@ -799,25 +799,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 13
+      "popularity": 17
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 159459,
-      "itemName": "Ritual Binder's Ring",
-      "itemLevel": 311,
+      "itemId": 240949,
+      "itemName": "Masterwork Sin'dorei Band",
+      "itemLevel": 331,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Kings' Rest",
-        "boss": "Mchimba the Embalmer",
-        "keyLevel": 10
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 72,
-      "popularity": 53
+      "statPriorityFit": 83,
+      "popularity": 57
     },
     {
       "slot": "finger",
@@ -841,16 +838,19 @@
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 240949,
-      "itemName": "Masterwork Sin'dorei Band",
-      "itemLevel": 331,
+      "itemId": 159459,
+      "itemName": "Ritual Binder's Ring",
+      "itemLevel": 311,
       "source": {
-        "type": "crafted"
+        "type": "dungeon",
+        "dungeon": "Kings' Rest",
+        "boss": "Mchimba the Embalmer",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 43
+      "statPriorityFit": 72,
+      "popularity": 50
     },
     {
       "slot": "trinket",
@@ -868,7 +868,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 93
+      "popularity": 87
     },
     {
       "slot": "trinket",
@@ -886,7 +886,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 33
+      "popularity": 40
     },
     {
       "slot": "trinket",
@@ -928,28 +928,31 @@
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 245771,
-      "itemName": "Aln'hara Pikestaff",
-      "itemLevel": 331,
+      "itemId": 268199,
+      "itemName": "Tidepiercer's Bubble Popper",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Tidebound Grotto",
+        "boss": "Nymrissa Wavecaller",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 10
+      "statPriorityFit": 51,
+      "popularity": 13
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     }
   }
 }

@@ -28,24 +28,6 @@
       "popularity": 93
     },
     {
-      "slot": "head",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268230,
-      "itemName": "Crown of the Eternal Fang",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 89,
-      "popularity": 7
-    },
-    {
       "slot": "neck",
       "contentType": "raid",
       "rank": 1,
@@ -61,7 +43,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "shoulder",
@@ -96,7 +78,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 33
+      "popularity": 30
     },
     {
       "slot": "back",
@@ -114,7 +96,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 20
+      "popularity": 23
     },
     {
       "slot": "chest",
@@ -131,7 +113,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "wrist",
@@ -145,8 +127,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 70
+      "statPriorityFit": 30,
+      "popularity": 57
     },
     {
       "slot": "wrist",
@@ -164,7 +146,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 17
+      "popularity": 27
     },
     {
       "slot": "hands",
@@ -195,8 +177,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
-      "popularity": 10
+      "statPriorityFit": 30,
+      "popularity": 7
     },
     {
       "slot": "waist",
@@ -210,8 +192,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 70
+      "statPriorityFit": 30,
+      "popularity": 80
     },
     {
       "slot": "waist",
@@ -229,12 +211,27 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "legs",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 244582,
+      "itemName": "Farstrider's Reinforced Faulds",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 83,
+      "popularity": 53
+    },
+    {
+      "slot": "legs",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 271491,
       "itemName": "Skulking Viper's Coiled Legwraps",
       "itemLevel": 318,
@@ -246,22 +243,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 50
-    },
-    {
-      "slot": "legs",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 244582,
-      "itemName": "Farstrider's Reinforced Faulds",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 43
+      "popularity": 40
     },
     {
       "slot": "feet",
@@ -279,7 +261,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 40
+      "popularity": 47
     },
     {
       "slot": "feet",
@@ -293,8 +275,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 52,
-      "popularity": 23
+      "statPriorityFit": 44,
+      "popularity": 17
     },
     {
       "slot": "finger",
@@ -312,7 +294,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 86,
-      "popularity": 50
+      "popularity": 53
     },
     {
       "slot": "finger",
@@ -330,30 +312,45 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 85,
-      "popularity": 47
+      "popularity": 43
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 268252,
-      "itemName": "Apex Brute's Claw Ring",
-      "itemLevel": 318,
+      "itemId": 240949,
+      "itemName": "Masterwork Sin'dorei Band",
+      "itemLevel": 331,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Sszorak",
-        "difficulty": "mythic"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 90,
-      "popularity": 27
+      "statPriorityFit": 70,
+      "popularity": 23
     },
     {
       "slot": "trinket",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 270168,
+      "itemName": "Font of Venomous Rage",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Ula'tek",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 65,
+      "popularity": 97
+    },
+    {
+      "slot": "trinket",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 270175,
       "itemName": "Voracious Heart of Ula'tek",
       "itemLevel": 318,
@@ -367,42 +364,6 @@
       "catalystable": false,
       "statPriorityFit": 100,
       "popularity": 97
-    },
-    {
-      "slot": "trinket",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 270168,
-      "itemName": "Font of Venomous Rage",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 65,
-      "popularity": 90
-    },
-    {
-      "slot": "trinket",
-      "contentType": "raid",
-      "rank": 3,
-      "itemId": 270164,
-      "itemName": "Gebbo's Bottomless Bag",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 50,
-      "popularity": 7
     },
     {
       "slot": "main_hand",
@@ -420,7 +381,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "head",
@@ -473,7 +434,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "shoulder",
@@ -490,7 +451,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 61,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "back",
@@ -514,18 +475,15 @@
       "slot": "back",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268248,
-      "itemName": "Amani Summoning Shawl",
-      "itemLevel": 318,
+      "itemId": 239656,
+      "itemName": "Adherent's Silken Shroud",
+      "itemLevel": 331,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
-        "difficulty": "mythic"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 76,
+      "statPriorityFit": 30,
       "popularity": 10
     },
     {
@@ -575,8 +533,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 93
+      "statPriorityFit": 30,
+      "popularity": 90
     },
     {
       "slot": "hands",
@@ -593,7 +551,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 33,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "hands",
@@ -611,7 +569,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 80,
-      "popularity": 7
+      "popularity": 10
     },
     {
       "slot": "waist",
@@ -625,25 +583,25 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
+      "statPriorityFit": 30,
       "popularity": 77
     },
     {
       "slot": "waist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268216,
-      "itemName": "Cursed Reliquary Cincture",
-      "itemLevel": 318,
+      "itemId": 251155,
+      "itemName": "Tribal Defender's Cord",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
-        "difficulty": "mythic"
+        "type": "dungeon",
+        "dungeon": "Den of Nalorakk",
+        "boss": "Sentinel of Winter",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 75,
+      "statPriorityFit": 87,
       "popularity": 7
     },
     {
@@ -675,7 +633,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
+      "statPriorityFit": 83,
       "popularity": 30
     },
     {
@@ -694,7 +652,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 27
+      "popularity": 37
     },
     {
       "slot": "feet",
@@ -712,30 +670,12 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 17
+      "popularity": 10
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 158366,
-      "itemName": "Charged Sandstone Band",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Temple of Sethraliss",
-        "boss": "Galvazzt",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 85,
-      "popularity": 77
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 251136,
       "itemName": "Signet of Snarling Servitude",
       "itemLevel": 311,
@@ -748,25 +688,43 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 86,
-      "popularity": 67
+      "popularity": 73
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 158366,
+      "itemName": "Charged Sandstone Band",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Temple of Sethraliss",
+        "boss": "Galvazzt",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 85,
+      "popularity": 70
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 268252,
-      "itemName": "Apex Brute's Claw Ring",
-      "itemLevel": 318,
+      "itemId": 251148,
+      "itemName": "Pilfered Precious Band",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Sszorak",
-        "difficulty": "mythic"
+        "type": "dungeon",
+        "dungeon": "Den of Nalorakk",
+        "boss": "The Hoardmonger",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 90,
-      "popularity": 10
+      "statPriorityFit": 52,
+      "popularity": 13
     },
     {
       "slot": "trinket",
@@ -784,7 +742,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "trinket",
@@ -802,19 +760,19 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 77
+      "popularity": 83
     },
     {
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 270164,
-      "itemName": "Gebbo's Bottomless Bag",
+      "itemId": 270173,
+      "itemName": "Zul'jin's Guillotine Technique",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
+        "boss": "The Coiled Altar",
         "difficulty": "mythic"
       },
       "tierPiece": false,
@@ -838,7 +796,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 83
+      "popularity": 90
     },
     {
       "slot": "main_hand",
@@ -863,12 +821,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     }
   }
 }

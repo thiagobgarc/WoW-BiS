@@ -128,8 +128,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 20
+      "statPriorityFit": 30,
+      "popularity": 17
     },
     {
       "slot": "chest",
@@ -146,7 +146,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 80
+      "popularity": 77
     },
     {
       "slot": "chest",
@@ -164,7 +164,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 20
+      "popularity": 23
     },
     {
       "slot": "wrist",
@@ -178,8 +178,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 30,
       "popularity": 90
+    },
+    {
+      "slot": "wrist",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 159380,
+      "itemName": "Arc-Glass Bindings",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Temple of Sethraliss",
+        "boss": "Adderis and Aspix",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 54,
+      "popularity": 7
     },
     {
       "slot": "hands",
@@ -210,8 +228,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 67
+      "statPriorityFit": 30,
+      "popularity": 70
     },
     {
       "slot": "waist",
@@ -229,7 +247,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 64,
-      "popularity": 17
+      "popularity": 10
     },
     {
       "slot": "legs",
@@ -246,7 +264,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "legs",
@@ -260,25 +278,22 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
-      "popularity": 7
+      "statPriorityFit": 83,
+      "popularity": 10
     },
     {
       "slot": "feet",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 268258,
-      "itemName": "Boots of the Reckless Wayfarer",
-      "itemLevel": 318,
+      "itemId": 244577,
+      "itemName": "Farstrider's Razor Talons",
+      "itemLevel": 331,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
-        "difficulty": "mythic"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 77,
+      "statPriorityFit": 83,
       "popularity": 20
     },
     {
@@ -315,7 +330,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 50
+      "popularity": 53
     },
     {
       "slot": "finger",
@@ -333,30 +348,48 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 80,
-      "popularity": 30
+      "popularity": 37
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 273792,
-      "itemName": "Band of the Amani Warlord",
+      "itemId": 251136,
+      "itemName": "Signet of Snarling Servitude",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Altar of Fangs",
-        "boss": "Zul'jan",
+        "dungeon": "Murder Row",
+        "boss": "Xathuux the Annihilator",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 49,
-      "popularity": 27
+      "statPriorityFit": 79,
+      "popularity": 33
     },
     {
       "slot": "trinket",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 270175,
+      "itemName": "Voracious Heart of Ula'tek",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Ula'tek",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 65,
+      "popularity": 67
+    },
+    {
+      "slot": "trinket",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 270173,
       "itemName": "Zul'jin's Guillotine Technique",
       "itemLevel": 318,
@@ -374,24 +407,6 @@
     {
       "slot": "trinket",
       "contentType": "raid",
-      "rank": 2,
-      "itemId": 270175,
-      "itemName": "Voracious Heart of Ula'tek",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 65,
-      "popularity": 63
-    },
-    {
-      "slot": "trinket",
-      "contentType": "raid",
       "rank": 3,
       "itemId": 270165,
       "itemName": "Keeper's Seething Core",
@@ -405,7 +420,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 30
+      "popularity": 40
     },
     {
       "slot": "main_hand",
@@ -423,7 +438,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 40
+      "popularity": 43
     },
     {
       "slot": "main_hand",
@@ -441,7 +456,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 33
+      "popularity": 30
     },
     {
       "slot": "head",
@@ -494,22 +509,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 67
+      "popularity": 63
     },
     {
       "slot": "neck",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 271638,
-      "itemName": "Bound Serpent's Jade Eye",
-      "itemLevel": 311,
+      "itemId": 268250,
+      "itemName": "Sentinel's Vitriolic Chain",
+      "itemLevel": 318,
       "source": {
-        "type": "other"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Entombed Sentinels",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 25,
-      "popularity": 7
+      "statPriorityFit": 46,
+      "popularity": 10
     },
     {
       "slot": "shoulder",
@@ -532,6 +550,21 @@
       "slot": "back",
       "contentType": "mythic-plus",
       "rank": 1,
+      "itemId": 239656,
+      "itemName": "Adherent's Silken Shroud",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 30,
+      "popularity": 23
+    },
+    {
+      "slot": "back",
+      "contentType": "mythic-plus",
+      "rank": 2,
       "itemId": 268253,
       "itemName": "Silken Voodoo Drape",
       "itemLevel": 318,
@@ -545,21 +578,6 @@
       "catalystable": false,
       "statPriorityFit": 82,
       "popularity": 23
-    },
-    {
-      "slot": "back",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 239656,
-      "itemName": "Adherent's Silken Shroud",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 20
     },
     {
       "slot": "chest",
@@ -576,7 +594,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 87
+      "popularity": 80
     },
     {
       "slot": "chest",
@@ -608,8 +626,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 77
+      "statPriorityFit": 30,
+      "popularity": 87
     },
     {
       "slot": "wrist",
@@ -644,7 +662,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 33,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "waist",
@@ -658,8 +676,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 73
+      "statPriorityFit": 30,
+      "popularity": 80
     },
     {
       "slot": "waist",
@@ -677,7 +695,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "legs",
@@ -694,7 +712,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "feet",
@@ -708,7 +726,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 83,
       "popularity": 30
     },
     {
@@ -727,7 +745,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 17
+      "popularity": 23
     },
     {
       "slot": "finger",
@@ -763,7 +781,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 33
+      "popularity": 37
     },
     {
       "slot": "finger",
@@ -787,19 +805,19 @@
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 270175,
-      "itemName": "Voracious Heart of Ula'tek",
+      "itemId": 270173,
+      "itemName": "Zul'jin's Guillotine Technique",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
+        "boss": "The Coiled Altar",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 65,
-      "popularity": 47
+      "statPriorityFit": 50,
+      "popularity": 50
     },
     {
       "slot": "trinket",
@@ -817,32 +835,14 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 43
+      "popularity": 47
     },
     {
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 270173,
-      "itemName": "Zul'jin's Guillotine Technique",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Coiled Altar",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 50,
-      "popularity": 40
-    },
-    {
-      "slot": "main_hand",
-      "contentType": "mythic-plus",
-      "rank": 1,
-      "itemId": 268215,
-      "itemName": "Abyssal Broodfiend's Bardiche",
+      "itemId": 270175,
+      "itemName": "Voracious Heart of Ula'tek",
       "itemLevel": 318,
       "source": {
         "type": "raid",
@@ -852,13 +852,13 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 100,
-      "popularity": 27
+      "statPriorityFit": 65,
+      "popularity": 47
     },
     {
       "slot": "main_hand",
       "contentType": "mythic-plus",
-      "rank": 2,
+      "rank": 1,
       "itemId": 268213,
       "itemName": "Maze-roa, Warlord's Fury",
       "itemLevel": 318,
@@ -871,19 +871,37 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 27
+      "popularity": 40
+    },
+    {
+      "slot": "main_hand",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 268215,
+      "itemName": "Abyssal Broodfiend's Bardiche",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Ula'tek",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 100,
+      "popularity": 23
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     }
   }
 }

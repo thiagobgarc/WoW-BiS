@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 70
+      "popularity": 73
     },
     {
       "slot": "head",
@@ -43,7 +43,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 40,
-      "popularity": 30
+      "popularity": 23
     },
     {
       "slot": "neck",
@@ -78,7 +78,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 35,
-      "popularity": 87
+      "popularity": 80
     },
     {
       "slot": "shoulder",
@@ -92,31 +92,13 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 7
+      "statPriorityFit": 53,
+      "popularity": 10
     },
     {
       "slot": "back",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 251190,
-      "itemName": "Bloodthorn Burnous",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "The Blinding Vale",
-        "boss": "Ikuzz the Light Hunter",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 56,
-      "popularity": 17
-    },
-    {
-      "slot": "back",
-      "contentType": "raid",
-      "rank": 2,
       "itemId": 251132,
       "itemName": "Speakeasy Shroud",
       "itemLevel": 311,
@@ -129,6 +111,24 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 78,
+      "popularity": 23
+    },
+    {
+      "slot": "back",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268253,
+      "itemName": "Silken Voodoo Drape",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 48,
       "popularity": 17
     },
     {
@@ -146,22 +146,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 87
-    },
-    {
-      "slot": "chest",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 239655,
-      "itemName": "Martyr's Vestments",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 7
+      "popularity": 93
     },
     {
       "slot": "wrist",
@@ -175,8 +160,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 70
+      "statPriorityFit": 83,
+      "popularity": 73
     },
     {
       "slot": "wrist",
@@ -214,6 +199,24 @@
       "popularity": 90
     },
     {
+      "slot": "hands",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268243,
+      "itemName": "Grasps of the Eternal Shadow",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 76,
+      "popularity": 7
+    },
+    {
       "slot": "waist",
       "contentType": "raid",
       "rank": 1,
@@ -225,7 +228,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 83,
       "popularity": 33
     },
     {
@@ -244,7 +247,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 30
+      "popularity": 27
     },
     {
       "slot": "legs",
@@ -261,7 +264,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 100
+      "popularity": 87
+    },
+    {
+      "slot": "legs",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268236,
+      "itemName": "Initiate's Sacrificial Tights",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Nek'zali the Soulcoiler",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 34,
+      "popularity": 7
     },
     {
       "slot": "feet",
@@ -279,7 +300,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 30
+      "popularity": 20
     },
     {
       "slot": "feet",
@@ -297,7 +318,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "finger",
@@ -315,7 +336,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 57
+      "popularity": 53
     },
     {
       "slot": "finger",
@@ -333,7 +354,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 94,
-      "popularity": 43
+      "popularity": 33
     },
     {
       "slot": "finger",
@@ -351,7 +372,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 74,
-      "popularity": 20
+      "popularity": 23
     },
     {
       "slot": "trinket",
@@ -369,7 +390,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 77
+      "popularity": 83
     },
     {
       "slot": "trinket",
@@ -387,7 +408,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 67
+      "popularity": 77
     },
     {
       "slot": "trinket",
@@ -405,7 +426,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 27
+      "popularity": 23
     },
     {
       "slot": "main_hand",
@@ -423,7 +444,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 77
+      "popularity": 67
     },
     {
       "slot": "main_hand",
@@ -437,7 +458,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
+      "statPriorityFit": 53,
       "popularity": 17
     },
     {
@@ -452,8 +473,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 63
+      "statPriorityFit": 43,
+      "popularity": 57
     },
     {
       "slot": "off_hand",
@@ -471,7 +492,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 80,
-      "popularity": 10
+      "popularity": 20
     },
     {
       "slot": "head",
@@ -488,7 +509,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 80
+      "popularity": 83
     },
     {
       "slot": "head",
@@ -506,7 +527,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 40,
-      "popularity": 20
+      "popularity": 17
     },
     {
       "slot": "neck",
@@ -524,7 +545,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 70
+      "popularity": 73
     },
     {
       "slot": "neck",
@@ -559,7 +580,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 35,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "back",
@@ -573,25 +594,25 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 33
+      "statPriorityFit": 43,
+      "popularity": 30
     },
     {
       "slot": "back",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 251132,
-      "itemName": "Speakeasy Shroud",
+      "itemId": 251190,
+      "itemName": "Bloodthorn Burnous",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Murder Row",
-        "boss": "Zaen Bladesorrow",
+        "dungeon": "The Blinding Vale",
+        "boss": "Ikuzz the Light Hunter",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 78,
+      "statPriorityFit": 56,
       "popularity": 13
     },
     {
@@ -609,25 +630,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 83
-    },
-    {
-      "slot": "chest",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 268221,
-      "itemName": "Tidebound Sorcereress's Robes",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 80,
-      "popularity": 7
+      "popularity": 87
     },
     {
       "slot": "wrist",
@@ -641,8 +644,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 83
+      "statPriorityFit": 83,
+      "popularity": 80
     },
     {
       "slot": "wrist",
@@ -677,7 +680,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 87
+      "popularity": 83
     },
     {
       "slot": "hands",
@@ -709,25 +712,25 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 83,
       "popularity": 43
     },
     {
       "slot": "waist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 251222,
-      "itemName": "Ethereal Netherwrap",
-      "itemLevel": 311,
+      "itemId": 268257,
+      "itemName": "Caustic Chain-Wrapped Sash",
+      "itemLevel": 318,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Taz'Rah",
-        "keyLevel": 10
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Sszorak",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 78,
+      "statPriorityFit": 57,
       "popularity": 17
     },
     {
@@ -763,7 +766,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 20
+      "popularity": 17
     },
     {
       "slot": "feet",
@@ -817,30 +820,48 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 78,
-      "popularity": 43
+      "popularity": 40
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 268252,
-      "itemName": "Apex Brute's Claw Ring",
-      "itemLevel": 318,
+      "itemId": 158366,
+      "itemName": "Charged Sandstone Band",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Sszorak",
-        "difficulty": "mythic"
+        "type": "dungeon",
+        "dungeon": "Temple of Sethraliss",
+        "boss": "Galvazzt",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 94,
-      "popularity": 20
+      "statPriorityFit": 74,
+      "popularity": 27
     },
     {
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 1,
+      "itemId": 250215,
+      "itemName": "Freightrunner's Flask",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Murder Row",
+        "boss": "Zaen Bladesorrow",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 50,
+      "popularity": 83
+    },
+    {
+      "slot": "trinket",
+      "contentType": "mythic-plus",
+      "rank": 2,
       "itemId": 270164,
       "itemName": "Gebbo's Bottomless Bag",
       "itemLevel": 318,
@@ -858,24 +879,6 @@
     {
       "slot": "trinket",
       "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 250215,
-      "itemName": "Freightrunner's Flask",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Murder Row",
-        "boss": "Zaen Bladesorrow",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 50,
-      "popularity": 80
-    },
-    {
-      "slot": "trinket",
-      "contentType": "mythic-plus",
       "rank": 3,
       "itemId": 270167,
       "itemName": "Wavecaller's Seastone",
@@ -889,12 +892,27 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 20
+      "popularity": 10
     },
     {
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 1,
+      "itemId": 245770,
+      "itemName": "Aln'hara Cane",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 53,
+      "popularity": 40
+    },
+    {
+      "slot": "main_hand",
+      "contentType": "mythic-plus",
+      "rank": 2,
       "itemId": 271092,
       "itemName": "Jan'thrazet, the Soul Fang",
       "itemLevel": 318,
@@ -910,21 +928,6 @@
       "popularity": 40
     },
     {
-      "slot": "main_hand",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 245770,
-      "itemName": "Aln'hara Cane",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 37
-    },
-    {
       "slot": "off_hand",
       "contentType": "mythic-plus",
       "rank": 1,
@@ -936,7 +939,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
+      "statPriorityFit": 43,
       "popularity": 40
     },
     {
@@ -962,12 +965,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     }
   }
 }

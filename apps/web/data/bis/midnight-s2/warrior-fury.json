@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "head",
@@ -79,7 +79,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "shoulder",
@@ -114,7 +114,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 40
+      "popularity": 43
     },
     {
       "slot": "back",
@@ -128,8 +128,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 7
+      "statPriorityFit": 60,
+      "popularity": 10
     },
     {
       "slot": "chest",
@@ -146,7 +146,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 93
+      "popularity": 87
+    },
+    {
+      "slot": "chest",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 193753,
+      "itemName": "Breastplate of Soaring Terror",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Ruby Life Pools",
+        "boss": "Kyrakka and Erkhart Stormvein",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 78,
+      "popularity": 7
     },
     {
       "slot": "wrist",
@@ -161,7 +179,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 53,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "hands",
@@ -178,25 +196,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 80
-    },
-    {
-      "slot": "hands",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 251214,
-      "itemName": "Bonds of the Hash'ura",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Den of Nalorakk",
-        "boss": "Nalorakk",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 76,
-      "popularity": 7
+      "popularity": 83
     },
     {
       "slot": "waist",
@@ -281,25 +281,25 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
+      "statPriorityFit": 60,
       "popularity": 53
     },
     {
       "slot": "feet",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268245,
-      "itemName": "Entombed Cultist's Sabatons",
+      "itemId": 268260,
+      "itemName": "Scaled Fiend's Warboots",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
+        "boss": "Vashnik the Malignant",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 58,
+      "statPriorityFit": 76,
       "popularity": 17
     },
     {
@@ -318,12 +318,27 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 90
+      "popularity": 73
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 2,
+      "itemId": 240949,
+      "itemName": "Masterwork Sin'dorei Band",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 70,
+      "popularity": 23
+    },
+    {
+      "slot": "finger",
+      "contentType": "raid",
+      "rank": 3,
       "itemId": 268249,
       "itemName": "Vile Alchemist's Band",
       "itemLevel": 318,
@@ -336,21 +351,6 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 61,
-      "popularity": 27
-    },
-    {
-      "slot": "finger",
-      "contentType": "raid",
-      "rank": 3,
-      "itemId": 240949,
-      "itemName": "Masterwork Sin'dorei Band",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 43,
       "popularity": 20
     },
     {
@@ -369,7 +369,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 100
+      "popularity": 97
     },
     {
       "slot": "trinket",
@@ -405,7 +405,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 20
+      "popularity": 17
     },
     {
       "slot": "main_hand",
@@ -423,7 +423,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 97
+      "popularity": 93
     },
     {
       "slot": "off_hand",
@@ -437,8 +437,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 67
+      "statPriorityFit": 43,
+      "popularity": 70
     },
     {
       "slot": "off_hand",
@@ -473,7 +473,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 100
+      "popularity": 97
     },
     {
       "slot": "neck",
@@ -491,7 +491,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 57
+      "popularity": 67
     },
     {
       "slot": "neck",
@@ -509,7 +509,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 20
+      "popularity": 13
     },
     {
       "slot": "shoulder",
@@ -526,7 +526,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 100
+      "popularity": 93
     },
     {
       "slot": "back",
@@ -544,7 +544,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 50
+      "popularity": 37
     },
     {
       "slot": "back",
@@ -562,7 +562,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 13
+      "popularity": 20
     },
     {
       "slot": "chest",
@@ -579,7 +579,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 100
+      "popularity": 93
     },
     {
       "slot": "wrist",
@@ -594,7 +594,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 53,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "hands",
@@ -611,7 +611,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 87
+      "popularity": 77
     },
     {
       "slot": "hands",
@@ -625,7 +625,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
+      "statPriorityFit": 43,
       "popularity": 10
     },
     {
@@ -644,24 +644,21 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 40
+      "popularity": 37
     },
     {
       "slot": "waist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 159418,
-      "itemName": "Girdle of Pestilent Purification",
+      "itemId": 271445,
+      "itemName": "Fanged Brute's Greatbelt",
       "itemLevel": 311,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Kings' Rest",
-        "boss": "The Council of Tribes",
-        "keyLevel": 10
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 87,
+      "statPriorityFit": 49,
       "popularity": 13
     },
     {
@@ -679,7 +676,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 35,
-      "popularity": 77
+      "popularity": 73
     },
     {
       "slot": "legs",
@@ -697,7 +694,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 40,
-      "popularity": 17
+      "popularity": 20
     },
     {
       "slot": "feet",
@@ -711,7 +708,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
+      "statPriorityFit": 60,
       "popularity": 57
     },
     {
@@ -730,7 +727,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 27
+      "popularity": 23
     },
     {
       "slot": "finger",
@@ -754,6 +751,21 @@
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 2,
+      "itemId": 240949,
+      "itemName": "Masterwork Sin'dorei Band",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 70,
+      "popularity": 33
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 3,
       "itemId": 268249,
       "itemName": "Vile Alchemist's Band",
       "itemLevel": 318,
@@ -766,25 +778,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 61,
-      "popularity": 30
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 3,
-      "itemId": 251194,
-      "itemName": "Lightwarden's Bind",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "The Blinding Vale",
-        "boss": "Lightwarden Ruia",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 49,
-      "popularity": 13
+      "popularity": 20
     },
     {
       "slot": "trinket",
@@ -802,7 +796,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "trinket",
@@ -820,7 +814,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 40,
-      "popularity": 57
+      "popularity": 60
     },
     {
       "slot": "trinket",
@@ -838,7 +832,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 27
+      "popularity": 20
     },
     {
       "slot": "main_hand",
@@ -856,7 +850,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 90
+      "popularity": 83
     },
     {
       "slot": "main_hand",
@@ -870,7 +864,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 43,
       "popularity": 7
     },
     {
@@ -885,8 +879,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 73
+      "statPriorityFit": 43,
+      "popularity": 67
     },
     {
       "slot": "off_hand",
@@ -904,19 +898,19 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 10
+      "popularity": 17
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     }
   }
 }

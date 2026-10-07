@@ -81,8 +81,26 @@
       "slot": "shoulder",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268231,
-      "itemName": "Soulslither Spaulders",
+      "itemId": 239049,
+      "itemName": "Spaulders of Prime Emperor",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Kings' Rest",
+        "boss": "Dazar, The First King",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 84,
+      "popularity": 7
+    },
+    {
+      "slot": "back",
+      "contentType": "raid",
+      "rank": 1,
+      "itemId": 268253,
+      "itemName": "Silken Voodoo Drape",
       "itemLevel": 318,
       "source": {
         "type": "raid",
@@ -91,14 +109,14 @@
         "difficulty": "mythic"
       },
       "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 48,
-      "popularity": 7
+      "catalystable": false,
+      "statPriorityFit": 58,
+      "popularity": 20
     },
     {
       "slot": "back",
       "contentType": "raid",
-      "rank": 1,
+      "rank": 2,
       "itemId": 251132,
       "itemName": "Speakeasy Shroud",
       "itemLevel": 311,
@@ -111,22 +129,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 27
-    },
-    {
-      "slot": "back",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 239656,
-      "itemName": "Adherent's Silken Shroud",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 13
+      "popularity": 20
     },
     {
       "slot": "chest",
@@ -175,8 +178,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 60
+      "statPriorityFit": 60,
+      "popularity": 63
     },
     {
       "slot": "wrist",
@@ -194,7 +197,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 27
+      "popularity": 13
     },
     {
       "slot": "hands",
@@ -211,7 +214,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "waist",
@@ -225,7 +228,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 60,
       "popularity": 30
     },
     {
@@ -261,7 +264,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 63
+      "popularity": 67
     },
     {
       "slot": "legs",
@@ -275,13 +278,31 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
-      "popularity": 30
+      "statPriorityFit": 53,
+      "popularity": 27
     },
     {
       "slot": "feet",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 268233,
+      "itemName": "Ferocious Scaleboots",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Sszorak",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 59,
+      "popularity": 23
+    },
+    {
+      "slot": "feet",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 244577,
       "itemName": "Farstrider's Razor Talons",
       "itemLevel": 331,
@@ -290,25 +311,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 23
-    },
-    {
-      "slot": "feet",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268258,
-      "itemName": "Boots of the Reckless Wayfarer",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 57,
+      "statPriorityFit": 53,
       "popularity": 20
     },
     {
@@ -327,7 +330,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 54,
-      "popularity": 60
+      "popularity": 47
     },
     {
       "slot": "finger",
@@ -345,7 +348,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 71,
-      "popularity": 37
+      "popularity": 43
     },
     {
       "slot": "finger",
@@ -363,7 +366,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 55,
-      "popularity": 27
+      "popularity": 30
     },
     {
       "slot": "trinket",
@@ -399,7 +402,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 73
+      "popularity": 77
     },
     {
       "slot": "trinket",
@@ -435,7 +438,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 83
+      "popularity": 80
     },
     {
       "slot": "main_hand",
@@ -467,8 +470,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 50
+      "statPriorityFit": 60,
+      "popularity": 47
     },
     {
       "slot": "off_hand",
@@ -521,24 +524,24 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 80
+      "popularity": 83
     },
     {
       "slot": "neck",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 273781,
-      "itemName": "Strand of Warding Fangs",
+      "itemId": 251173,
+      "itemName": "Yoke of the Charging Bear",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Altar of Fangs",
-        "boss": "The Writhing Coil",
+        "dungeon": "Den of Nalorakk",
+        "boss": "Nalorakk",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 80,
+      "statPriorityFit": 88,
       "popularity": 10
     },
     {
@@ -556,7 +559,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 51,
-      "popularity": 87
+      "popularity": 77
     },
     {
       "slot": "shoulder",
@@ -585,8 +588,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 17
+      "statPriorityFit": 60,
+      "popularity": 23
     },
     {
       "slot": "back",
@@ -621,7 +624,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 77
+      "popularity": 80
     },
     {
       "slot": "chest",
@@ -639,7 +642,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 40,
-      "popularity": 23
+      "popularity": 20
     },
     {
       "slot": "wrist",
@@ -653,8 +656,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 73
+      "statPriorityFit": 60,
+      "popularity": 77
     },
     {
       "slot": "wrist",
@@ -689,7 +692,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 83
+      "popularity": 90
     },
     {
       "slot": "hands",
@@ -721,7 +724,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 60,
       "popularity": 37
     },
     {
@@ -740,7 +743,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 51,
-      "popularity": 23
+      "popularity": 20
     },
     {
       "slot": "legs",
@@ -757,7 +760,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 73
+      "popularity": 70
     },
     {
       "slot": "legs",
@@ -771,7 +774,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
+      "statPriorityFit": 53,
       "popularity": 20
     },
     {
@@ -790,48 +793,30 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 20
+      "popularity": 30
     },
     {
       "slot": "feet",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268233,
-      "itemName": "Ferocious Scaleboots",
-      "itemLevel": 318,
+      "itemId": 251125,
+      "itemName": "Felsoaked Soles",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Sszorak",
-        "difficulty": "mythic"
+        "type": "dungeon",
+        "dungeon": "Murder Row",
+        "boss": "Kystia Manaheart",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 59,
-      "popularity": 17
+      "statPriorityFit": 36,
+      "popularity": 13
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 159459,
-      "itemName": "Ritual Binder's Ring",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Kings' Rest",
-        "boss": "Mchimba the Embalmer",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 72,
-      "popularity": 40
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 273792,
       "itemName": "Band of the Amani Warlord",
       "itemLevel": 311,
@@ -844,12 +829,12 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 37
+      "popularity": 40
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
-      "rank": 3,
+      "rank": 2,
       "itemId": 240949,
       "itemName": "Masterwork Sin'dorei Band",
       "itemLevel": 331,
@@ -858,8 +843,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 33
+      "statPriorityFit": 83,
+      "popularity": 30
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 3,
+      "itemId": 251136,
+      "itemName": "Signet of Snarling Servitude",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Murder Row",
+        "boss": "Xathuux the Annihilator",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 55,
+      "popularity": 27
     },
     {
       "slot": "trinket",
@@ -877,7 +880,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 80
+      "popularity": 73
     },
     {
       "slot": "trinket",
@@ -895,7 +898,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 53
+      "popularity": 60
     },
     {
       "slot": "trinket",
@@ -931,7 +934,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 67
+      "popularity": 70
     },
     {
       "slot": "main_hand",
@@ -945,7 +948,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 70,
       "popularity": 13
     },
     {
@@ -960,7 +963,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 60,
       "popularity": 60
     },
     {
@@ -986,12 +989,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     }
   }
 }

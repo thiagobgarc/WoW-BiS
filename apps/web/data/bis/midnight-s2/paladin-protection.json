@@ -25,7 +25,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 90
+      "popularity": 87
+    },
+    {
+      "slot": "head",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268229,
+      "itemName": "Skullguard of the Risen Sacrifice",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Nek'zali the Soulcoiler",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 75,
+      "popularity": 7
     },
     {
       "slot": "neck",
@@ -78,7 +96,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 77
+      "popularity": 73
     },
     {
       "slot": "shoulder",
@@ -92,7 +110,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 83,
+      "statPriorityFit": 30,
       "popularity": 10
     },
     {
@@ -107,8 +125,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 27
+      "statPriorityFit": 43,
+      "popularity": 23
     },
     {
       "slot": "back",
@@ -126,7 +144,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "chest",
@@ -176,7 +194,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 17
+      "popularity": 20
     },
     {
       "slot": "hands",
@@ -211,7 +229,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 33
+      "popularity": 40
     },
     {
       "slot": "waist",
@@ -225,7 +243,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
+      "statPriorityFit": 30,
       "popularity": 20
     },
     {
@@ -243,7 +261,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 77
+      "popularity": 80
     },
     {
       "slot": "legs",
@@ -261,7 +279,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 20
+      "popularity": 17
     },
     {
       "slot": "feet",
@@ -275,8 +293,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 43
+      "statPriorityFit": 43,
+      "popularity": 40
     },
     {
       "slot": "feet",
@@ -294,7 +312,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 20
+      "popularity": 27
     },
     {
       "slot": "finger",
@@ -312,7 +330,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 78,
-      "popularity": 63
+      "popularity": 47
     },
     {
       "slot": "finger",
@@ -330,25 +348,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 33
+      "popularity": 37
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 268252,
-      "itemName": "Apex Brute's Claw Ring",
-      "itemLevel": 318,
+      "itemId": 240949,
+      "itemName": "Masterwork Sin'dorei Band",
+      "itemLevel": 331,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Sszorak",
-        "difficulty": "mythic"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 94,
-      "popularity": 20
+      "statPriorityFit": 83,
+      "popularity": 27
     },
     {
       "slot": "trinket",
@@ -366,7 +381,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 87
+      "popularity": 83
     },
     {
       "slot": "trinket",
@@ -384,25 +399,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 57
+      "popularity": 60
     },
     {
       "slot": "trinket",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 270165,
-      "itemName": "Keeper's Seething Core",
-      "itemLevel": 318,
+      "itemId": 273796,
+      "itemName": "Vile Vial of Volatile Venom",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Entombed Sentinels",
-        "difficulty": "mythic"
+        "type": "dungeon",
+        "dungeon": "Altar of Fangs",
+        "boss": "Rav'i",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 13
+      "popularity": 17
     },
     {
       "slot": "main_hand",
@@ -470,7 +485,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 53,
       "popularity": 27
     },
     {
@@ -524,7 +539,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 57
+      "popularity": 60
     },
     {
       "slot": "neck",
@@ -577,7 +592,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 77,
-      "popularity": 7
+      "popularity": 10
     },
     {
       "slot": "back",
@@ -601,18 +616,18 @@
       "slot": "back",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268253,
-      "itemName": "Silken Voodoo Drape",
-      "itemLevel": 318,
+      "itemId": 251190,
+      "itemName": "Bloodthorn Burnous",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Coiled Altar",
-        "difficulty": "mythic"
+        "type": "dungeon",
+        "dungeon": "The Blinding Vale",
+        "boss": "Ikuzz the Light Hunter",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 48,
+      "statPriorityFit": 56,
       "popularity": 20
     },
     {
@@ -651,19 +666,19 @@
       "slot": "wrist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 159409,
-      "itemName": "Embalmer's Steadying Bracers",
+      "itemId": 251133,
+      "itemName": "Overseer's Vambraces",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Kings' Rest",
-        "boss": "Mchimba the Embalmer",
+        "dungeon": "Murder Row",
+        "boss": "Zaen Bladesorrow",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 85,
-      "popularity": 13
+      "statPriorityFit": 78,
+      "popularity": 17
     },
     {
       "slot": "hands",
@@ -730,8 +745,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 37
+      "statPriorityFit": 30,
+      "popularity": 33
     },
     {
       "slot": "legs",
@@ -748,7 +763,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 70
+      "popularity": 67
     },
     {
       "slot": "legs",
@@ -766,7 +781,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 23
+      "popularity": 27
     },
     {
       "slot": "feet",
@@ -780,8 +795,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 60
+      "statPriorityFit": 43,
+      "popularity": 57
     },
     {
       "slot": "feet",
@@ -799,7 +814,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 13
+      "popularity": 20
     },
     {
       "slot": "finger",
@@ -817,7 +832,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 78,
-      "popularity": 67
+      "popularity": 60
     },
     {
       "slot": "finger",
@@ -831,26 +846,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 33
+      "statPriorityFit": 83,
+      "popularity": 37
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 252258,
-      "itemName": "Sickening Signet of Atroxus",
+      "itemId": 251148,
+      "itemName": "Pilfered Precious Band",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Atroxus",
+        "dungeon": "Den of Nalorakk",
+        "boss": "The Hoardmonger",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 57,
-      "popularity": 23
+      "statPriorityFit": 52,
+      "popularity": 27
     },
     {
       "slot": "trinket",
@@ -868,7 +883,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 63
+      "popularity": 60
     },
     {
       "slot": "trinket",
@@ -886,7 +901,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 33
+      "popularity": 37
     },
     {
       "slot": "trinket",
@@ -904,7 +919,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 27
+      "popularity": 23
     },
     {
       "slot": "main_hand",
@@ -922,7 +937,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 40
+      "popularity": 50
     },
     {
       "slot": "main_hand",
@@ -936,8 +951,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 30
+      "statPriorityFit": 70,
+      "popularity": 23
     },
     {
       "slot": "off_hand",
@@ -951,7 +966,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 53,
       "popularity": 57
     },
     {
@@ -977,12 +992,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     }
   }
 }

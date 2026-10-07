@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 83
+      "popularity": 87
     },
     {
       "slot": "head",
@@ -43,7 +43,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 65,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "neck",
@@ -114,21 +114,24 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 63,
-      "popularity": 33
+      "popularity": 37
     },
     {
       "slot": "back",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 239656,
-      "itemName": "Adherent's Silken Shroud",
-      "itemLevel": 331,
+      "itemId": 251190,
+      "itemName": "Bloodthorn Burnous",
+      "itemLevel": 311,
       "source": {
-        "type": "crafted"
+        "type": "dungeon",
+        "dungeon": "The Blinding Vale",
+        "boss": "Ikuzz the Light Hunter",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
+      "statPriorityFit": 78,
       "popularity": 13
     },
     {
@@ -146,7 +149,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 51,
-      "popularity": 87
+      "popularity": 83
     },
     {
       "slot": "chest",
@@ -161,7 +164,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 30,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "wrist",
@@ -175,7 +178,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
+      "statPriorityFit": 60,
       "popularity": 63
     },
     {
@@ -211,7 +214,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 59,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "hands",
@@ -247,7 +250,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 23
+      "popularity": 37
     },
     {
       "slot": "waist",
@@ -265,7 +268,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "legs",
@@ -296,25 +299,25 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 73
+      "statPriorityFit": 30,
+      "popularity": 77
     },
     {
       "slot": "feet",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268261,
-      "itemName": "Bespittled Slitherslippers",
-      "itemLevel": 318,
+      "itemId": 159327,
+      "itemName": "Sand-Shined Snakeskin Sandals",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Twin Fangs",
-        "difficulty": "mythic"
+        "type": "dungeon",
+        "dungeon": "Temple of Sethraliss",
+        "boss": "Merektha",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 48,
+      "statPriorityFit": 67,
       "popularity": 10
     },
     {
@@ -333,7 +336,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 57
+      "popularity": 53
     },
     {
       "slot": "finger",
@@ -351,7 +354,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 66,
-      "popularity": 53
+      "popularity": 40
     },
     {
       "slot": "finger",
@@ -365,8 +368,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 23
+      "statPriorityFit": 53,
+      "popularity": 37
     },
     {
       "slot": "trinket",
@@ -384,7 +387,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 80
+      "popularity": 73
     },
     {
       "slot": "trinket",
@@ -402,7 +405,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 63
+      "popularity": 70
     },
     {
       "slot": "trinket",
@@ -438,7 +441,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 83
+      "popularity": 90
     },
     {
       "slot": "main_hand",
@@ -452,8 +455,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 10
+      "statPriorityFit": 70,
+      "popularity": 7
     },
     {
       "slot": "off_hand",
@@ -467,25 +470,25 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 67
+      "statPriorityFit": 70,
+      "popularity": 73
     },
     {
       "slot": "off_hand",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 271092,
-      "itemName": "Jan'thrazet, the Soul Fang",
+      "itemId": 268201,
+      "itemName": "Venomous Boneglaive",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
+        "boss": "Sszorak",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 65,
+      "statPriorityFit": 82,
       "popularity": 10
     },
     {
@@ -503,7 +506,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "head",
@@ -521,7 +524,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 65,
-      "popularity": 13
+      "popularity": 10
     },
     {
       "slot": "neck",
@@ -556,22 +559,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 27,
-      "popularity": 80
+      "popularity": 83
     },
     {
       "slot": "shoulder",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 244572,
-      "itemName": "Silvermoon Agent's Mantle",
-      "itemLevel": 331,
+      "itemId": 268246,
+      "itemName": "Frothing Venom Spaulders",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Vashnik the Malignant",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
-      "popularity": 13
+      "statPriorityFit": 60,
+      "popularity": 7
     },
     {
       "slot": "back",
@@ -589,25 +595,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 63,
-      "popularity": 30
+      "popularity": 33
     },
     {
       "slot": "back",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268253,
-      "itemName": "Silken Voodoo Drape",
-      "itemLevel": 318,
+      "itemId": 251190,
+      "itemName": "Bloodthorn Burnous",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Coiled Altar",
-        "difficulty": "mythic"
+        "type": "dungeon",
+        "dungeon": "The Blinding Vale",
+        "boss": "Ikuzz the Light Hunter",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 90,
-      "popularity": 17
+      "statPriorityFit": 78,
+      "popularity": 20
     },
     {
       "slot": "chest",
@@ -624,7 +630,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 51,
-      "popularity": 83
+      "popularity": 80
     },
     {
       "slot": "chest",
@@ -639,7 +645,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 30,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "wrist",
@@ -653,8 +659,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 83
+      "statPriorityFit": 60,
+      "popularity": 80
+    },
+    {
+      "slot": "wrist",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 268240,
+      "itemName": "Restless Spirit Shackles",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Nek'zali the Soulcoiler",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 49,
+      "popularity": 10
     },
     {
       "slot": "hands",
@@ -671,7 +695,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 59,
-      "popularity": 97
+      "popularity": 93
+    },
+    {
+      "slot": "hands",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 268234,
+      "itemName": "Ruthless Slaughtergrips",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Sszorak",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 81,
+      "popularity": 7
     },
     {
       "slot": "waist",
@@ -689,7 +731,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 47
+      "popularity": 43
     },
     {
       "slot": "waist",
@@ -724,7 +766,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "legs",
@@ -738,7 +780,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
+      "statPriorityFit": 83,
       "popularity": 7
     },
     {
@@ -753,8 +795,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 73
+      "statPriorityFit": 30,
+      "popularity": 63
     },
     {
       "slot": "feet",
@@ -772,24 +814,24 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 13
+      "popularity": 20
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 252258,
-      "itemName": "Sickening Signet of Atroxus",
+      "itemId": 251136,
+      "itemName": "Signet of Snarling Servitude",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Atroxus",
+        "dungeon": "Murder Row",
+        "boss": "Xathuux the Annihilator",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 76,
+      "statPriorityFit": 64,
       "popularity": 43
     },
     {
@@ -814,18 +856,18 @@
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 251136,
-      "itemName": "Signet of Snarling Servitude",
+      "itemId": 252258,
+      "itemName": "Sickening Signet of Atroxus",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Murder Row",
-        "boss": "Xathuux the Annihilator",
+        "dungeon": "Voidscar Arena",
+        "boss": "Atroxus",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 64,
+      "statPriorityFit": 76,
       "popularity": 37
     },
     {
@@ -844,7 +886,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 70
+      "popularity": 80
     },
     {
       "slot": "trinket",
@@ -862,7 +904,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 70
+      "popularity": 67
     },
     {
       "slot": "trinket",
@@ -880,7 +922,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 47
+      "popularity": 50
     },
     {
       "slot": "main_hand",
@@ -898,7 +940,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 70
+      "popularity": 63
     },
     {
       "slot": "main_hand",
@@ -912,8 +954,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 23
+      "statPriorityFit": 70,
+      "popularity": 27
     },
     {
       "slot": "off_hand",
@@ -927,38 +969,38 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 53
+      "statPriorityFit": 70,
+      "popularity": 57
     },
     {
       "slot": "off_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268203,
-      "itemName": "Hexing Spiritrender",
+      "itemId": 271092,
+      "itemName": "Jan'thrazet, the Soul Fang",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
+        "boss": "Ula'tek",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 82,
-      "popularity": 13
+      "statPriorityFit": 65,
+      "popularity": 17
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     }
   }
 }

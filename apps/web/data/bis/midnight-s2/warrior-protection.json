@@ -43,7 +43,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 63
+      "popularity": 70
     },
     {
       "slot": "neck",
@@ -114,7 +114,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 33
+      "popularity": 37
     },
     {
       "slot": "back",
@@ -128,8 +128,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 17
+      "statPriorityFit": 70,
+      "popularity": 13
     },
     {
       "slot": "chest",
@@ -214,7 +214,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 86,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "waist",
@@ -238,16 +238,19 @@
       "slot": "waist",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 237830,
-      "itemName": "Spellbreaker's Girdle",
-      "itemLevel": 331,
+      "itemId": 251144,
+      "itemName": "Autumn's Boon Belt",
+      "itemLevel": 311,
       "source": {
-        "type": "crafted"
+        "type": "dungeon",
+        "dungeon": "Den of Nalorakk",
+        "boss": "The Hoardmonger",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 13
+      "statPriorityFit": 28,
+      "popularity": 10
     },
     {
       "slot": "legs",
@@ -282,7 +285,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 65,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "feet",
@@ -296,8 +299,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 60
+      "statPriorityFit": 70,
+      "popularity": 63
     },
     {
       "slot": "feet",
@@ -333,7 +336,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 50
+      "popularity": 43
     },
     {
       "slot": "finger",
@@ -351,7 +354,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 30
+      "popularity": 33
     },
     {
       "slot": "finger",
@@ -369,7 +372,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 20
+      "popularity": 27
     },
     {
       "slot": "trinket",
@@ -405,25 +408,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 73
+      "popularity": 77
     },
     {
       "slot": "trinket",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 270163,
-      "itemName": "Sszorak's Ferocity",
+      "itemId": 270165,
+      "itemName": "Keeper's Seething Core",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Sszorak",
+        "boss": "Entombed Sentinels",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "main_hand",
@@ -441,7 +444,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 73
+      "popularity": 70
     },
     {
       "slot": "main_hand",
@@ -473,8 +476,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 40
+      "statPriorityFit": 60,
+      "popularity": 37
     },
     {
       "slot": "off_hand",
@@ -492,7 +495,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 40
+      "popularity": 37
     },
     {
       "slot": "head",
@@ -542,25 +545,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 60
+      "popularity": 63
     },
     {
       "slot": "neck",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 251173,
-      "itemName": "Yoke of the Charging Bear",
+      "itemId": 273781,
+      "itemName": "Strand of Warding Fangs",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Den of Nalorakk",
-        "boss": "Nalorakk",
+        "dungeon": "Altar of Fangs",
+        "boss": "The Writhing Coil",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 88,
-      "popularity": 17
+      "statPriorityFit": 80,
+      "popularity": 13
     },
     {
       "slot": "shoulder",
@@ -591,13 +594,28 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 83,
+      "statPriorityFit": 30,
       "popularity": 7
     },
     {
       "slot": "back",
       "contentType": "mythic-plus",
       "rank": 1,
+      "itemId": 239656,
+      "itemName": "Adherent's Silken Shroud",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 70,
+      "popularity": 27
+    },
+    {
+      "slot": "back",
+      "contentType": "mythic-plus",
+      "rank": 2,
       "itemId": 193763,
       "itemName": "Fireproof Drape",
       "itemLevel": 311,
@@ -610,21 +628,6 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 33
-    },
-    {
-      "slot": "back",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 239656,
-      "itemName": "Adherent's Silken Shroud",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 43,
       "popularity": 27
     },
     {
@@ -642,7 +645,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 33,
-      "popularity": 97
+      "popularity": 93
     },
     {
       "slot": "wrist",
@@ -663,18 +666,18 @@
       "slot": "wrist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268239,
-      "itemName": "Shellbound Bracers",
-      "itemLevel": 318,
+      "itemId": 159409,
+      "itemName": "Embalmer's Steadying Bracers",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
-        "difficulty": "mythic"
+        "type": "dungeon",
+        "dungeon": "Kings' Rest",
+        "boss": "Mchimba the Embalmer",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 34,
+      "statPriorityFit": 80,
       "popularity": 10
     },
     {
@@ -706,7 +709,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
+      "statPriorityFit": 30,
       "popularity": 7
     },
     {
@@ -721,7 +724,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
+      "statPriorityFit": 30,
       "popularity": 27
     },
     {
@@ -789,8 +792,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 47
+      "statPriorityFit": 70,
+      "popularity": 40
     },
     {
       "slot": "feet",
@@ -808,7 +811,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 72,
-      "popularity": 17
+      "popularity": 20
     },
     {
       "slot": "finger",
@@ -826,7 +829,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 47
+      "popularity": 43
     },
     {
       "slot": "finger",
@@ -844,21 +847,24 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 43
+      "popularity": 40
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 240949,
-      "itemName": "Masterwork Sin'dorei Band",
-      "itemLevel": 331,
+      "itemId": 252258,
+      "itemName": "Sickening Signet of Atroxus",
+      "itemLevel": 311,
       "source": {
-        "type": "crafted"
+        "type": "dungeon",
+        "dungeon": "Voidscar Arena",
+        "boss": "Atroxus",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 76,
       "popularity": 30
     },
     {
@@ -877,7 +883,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 63
+      "popularity": 60
     },
     {
       "slot": "trinket",
@@ -913,30 +919,12 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 268209,
-      "itemName": "Aman'muso, Warlord's Vengeance",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Coiled Altar",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 44,
-      "popularity": 43
-    },
-    {
-      "slot": "main_hand",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 268202,
       "itemName": "Jaw of the Shackled Goddess",
       "itemLevel": 318,
@@ -949,7 +937,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 40
+      "popularity": 53
+    },
+    {
+      "slot": "main_hand",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 268209,
+      "itemName": "Aman'muso, Warlord's Vengeance",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 44,
+      "popularity": 33
     },
     {
       "slot": "off_hand",
@@ -963,8 +969,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 53
+      "statPriorityFit": 60,
+      "popularity": 47
     },
     {
       "slot": "off_hand",
@@ -982,19 +988,19 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 23
+      "popularity": 27
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     }
   }
 }

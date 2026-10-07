@@ -25,22 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 83
-    },
-    {
-      "slot": "head",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 244579,
-      "itemName": "Farstrider's Unwavering Visage",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 83,
-      "popularity": 10
+      "popularity": 93
     },
     {
       "slot": "neck",
@@ -58,25 +43,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 80
+      "popularity": 77
     },
     {
       "slot": "neck",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268250,
-      "itemName": "Sentinel's Vitriolic Chain",
-      "itemLevel": 318,
+      "itemId": 251142,
+      "itemName": "Pendant of Malefic Fury",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Entombed Sentinels",
-        "difficulty": "mythic"
+        "type": "dungeon",
+        "dungeon": "Murder Row",
+        "boss": "Lithiel Cinderfury",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 59,
-      "popularity": 10
+      "statPriorityFit": 89,
+      "popularity": 7
     },
     {
       "slot": "shoulder",
@@ -93,7 +78,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "shoulder",
@@ -129,24 +114,24 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 47
+      "popularity": 37
     },
     {
       "slot": "back",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 251190,
-      "itemName": "Bloodthorn Burnous",
+      "itemId": 251132,
+      "itemName": "Speakeasy Shroud",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "The Blinding Vale",
-        "boss": "Ikuzz the Light Hunter",
+        "dungeon": "Murder Row",
+        "boss": "Zaen Bladesorrow",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 78,
+      "statPriorityFit": 63,
       "popularity": 17
     },
     {
@@ -164,7 +149,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "chest",
@@ -182,7 +167,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 13
+      "popularity": 10
     },
     {
       "slot": "wrist",
@@ -196,26 +181,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 83
-    },
-    {
-      "slot": "wrist",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268217,
-      "itemName": "Rising Tide Wristguards",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 81,
-      "popularity": 7
+      "statPriorityFit": 43,
+      "popularity": 90
     },
     {
       "slot": "hands",
@@ -232,21 +199,24 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 80
+      "popularity": 83
     },
     {
       "slot": "hands",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 244583,
-      "itemName": "Farstrider's Sharpened Claws",
-      "itemLevel": 331,
+      "itemId": 268238,
+      "itemName": "Grips of Swirling Fury",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Tidebound Grotto",
+        "boss": "Nymrissa Wavecaller",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
+      "statPriorityFit": 49,
       "popularity": 10
     },
     {
@@ -265,7 +235,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 43
+      "popularity": 47
     },
     {
       "slot": "waist",
@@ -279,8 +249,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 23
+      "statPriorityFit": 43,
+      "popularity": 20
     },
     {
       "slot": "legs",
@@ -297,24 +267,21 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 36,
-      "popularity": 77
+      "popularity": 80
     },
     {
       "slot": "legs",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268237,
-      "itemName": "Cuisses of the Uncoiled Union",
-      "itemLevel": 318,
+      "itemId": 244582,
+      "itemName": "Farstrider's Reinforced Faulds",
+      "itemLevel": 331,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Coiled Altar",
-        "difficulty": "mythic"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 76,
+      "statPriorityFit": 70,
       "popularity": 10
     },
     {
@@ -351,7 +318,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 20
+      "popularity": 23
     },
     {
       "slot": "finger",
@@ -369,7 +336,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 57
+      "popularity": 60
     },
     {
       "slot": "finger",
@@ -393,18 +360,15 @@
       "slot": "finger",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 158366,
-      "itemName": "Charged Sandstone Band",
-      "itemLevel": 311,
+      "itemId": 240949,
+      "itemName": "Masterwork Sin'dorei Band",
+      "itemLevel": 331,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Temple of Sethraliss",
-        "boss": "Galvazzt",
-        "keyLevel": 10
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 66,
+      "statPriorityFit": 53,
       "popularity": 27
     },
     {
@@ -441,7 +405,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 73
+      "popularity": 87
     },
     {
       "slot": "trinket",
@@ -459,7 +423,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "main_hand",
@@ -506,7 +470,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 53,
       "popularity": 13
     },
     {
@@ -524,22 +488,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 87
-    },
-    {
-      "slot": "head",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 244579,
-      "itemName": "Farstrider's Unwavering Visage",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 83,
-      "popularity": 7
+      "popularity": 90
     },
     {
       "slot": "neck",
@@ -628,7 +577,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 33
+      "popularity": 30
     },
     {
       "slot": "back",
@@ -646,7 +595,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 78,
-      "popularity": 13
+      "popularity": 20
     },
     {
       "slot": "chest",
@@ -663,7 +612,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "chest",
@@ -681,7 +630,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 7
+      "popularity": 10
     },
     {
       "slot": "wrist",
@@ -695,7 +644,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 43,
       "popularity": 90
     },
     {
@@ -731,7 +680,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 97
+      "popularity": 93
     },
     {
       "slot": "waist",
@@ -763,8 +712,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 23
+      "statPriorityFit": 43,
+      "popularity": 20
     },
     {
       "slot": "legs",
@@ -813,7 +762,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 76,
+      "statPriorityFit": 26,
       "popularity": 27
     },
     {
@@ -828,7 +777,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 70,
       "popularity": 23
     },
     {
@@ -847,7 +796,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 60
+      "popularity": 53
     },
     {
       "slot": "finger",
@@ -865,7 +814,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 47
+      "popularity": 50
     },
     {
       "slot": "finger",
@@ -883,7 +832,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 66,
-      "popularity": 30
+      "popularity": 23
     },
     {
       "slot": "trinket",
@@ -901,7 +850,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 40,
-      "popularity": 73
+      "popularity": 80
     },
     {
       "slot": "trinket",
@@ -919,25 +868,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 73
+      "popularity": 80
     },
     {
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 273796,
-      "itemName": "Vile Vial of Volatile Venom",
-      "itemLevel": 311,
+      "itemId": 270165,
+      "itemName": "Keeper's Seething Core",
+      "itemLevel": 318,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Altar of Fangs",
-        "boss": "Rav'i",
-        "keyLevel": 10
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Entombed Sentinels",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 20
+      "popularity": 13
     },
     {
       "slot": "main_hand",
@@ -955,7 +904,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 77
+      "popularity": 80
     },
     {
       "slot": "main_hand",
@@ -970,7 +919,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 43,
-      "popularity": 13
+      "popularity": 10
     },
     {
       "slot": "off_hand",
@@ -985,7 +934,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 43,
-      "popularity": 83
+      "popularity": 73
     },
     {
       "slot": "off_hand",
@@ -999,20 +948,20 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 7
+      "statPriorityFit": 53,
+      "popularity": 13
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     }
   }
 }

@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 59,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "head",
@@ -43,7 +43,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 13
+      "popularity": 10
     },
     {
       "slot": "neck",
@@ -92,7 +92,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
+      "statPriorityFit": 70,
       "popularity": 7
     },
     {
@@ -111,24 +111,21 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 78,
-      "popularity": 20
+      "popularity": 23
     },
     {
       "slot": "back",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268248,
-      "itemName": "Amani Summoning Shawl",
-      "itemLevel": 318,
+      "itemId": 239656,
+      "itemName": "Adherent's Silken Shroud",
+      "itemLevel": 331,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
-        "difficulty": "mythic"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 52,
+      "statPriorityFit": 30,
       "popularity": 13
     },
     {
@@ -146,22 +143,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 80
+      "popularity": 90
     },
     {
       "slot": "chest",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 239655,
-      "itemName": "Martyr's Vestments",
-      "itemLevel": 331,
+      "itemId": 268221,
+      "itemName": "Tidebound Sorcereress's Robes",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Tidebound Grotto",
+        "boss": "Nymrissa Wavecaller",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
-      "popularity": 10
+      "statPriorityFit": 77,
+      "popularity": 7
     },
     {
       "slot": "wrist",
@@ -175,7 +175,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
+      "statPriorityFit": 53,
       "popularity": 73
     },
     {
@@ -243,7 +243,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
+      "statPriorityFit": 53,
       "popularity": 40
     },
     {
@@ -279,7 +279,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "feet",
@@ -297,39 +297,42 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 40
+      "popularity": 33
     },
     {
       "slot": "feet",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 271435,
-      "itemName": "Slippers of the Hissing Cult",
+      "itemId": 268255,
+      "itemName": "Cackling Soultreads",
       "itemLevel": 318,
       "source": {
-        "type": "other"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 13
+      "popularity": 10
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 158366,
-      "itemName": "Charged Sandstone Band",
+      "itemId": 251136,
+      "itemName": "Signet of Snarling Servitude",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Temple of Sethraliss",
-        "boss": "Galvazzt",
+        "dungeon": "Murder Row",
+        "boss": "Xathuux the Annihilator",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 80,
+      "statPriorityFit": 79,
       "popularity": 43
     },
     {
@@ -354,18 +357,18 @@
       "slot": "finger",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 251136,
-      "itemName": "Signet of Snarling Servitude",
+      "itemId": 158366,
+      "itemName": "Charged Sandstone Band",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Murder Row",
-        "boss": "Xathuux the Annihilator",
+        "dungeon": "Temple of Sethraliss",
+        "boss": "Galvazzt",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 79,
+      "statPriorityFit": 80,
       "popularity": 40
     },
     {
@@ -384,12 +387,30 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 80
+      "popularity": 83
     },
     {
       "slot": "trinket",
       "contentType": "raid",
       "rank": 2,
+      "itemId": 250215,
+      "itemName": "Freightrunner's Flask",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Murder Row",
+        "boss": "Zaen Bladesorrow",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 50,
+      "popularity": 43
+    },
+    {
+      "slot": "trinket",
+      "contentType": "raid",
+      "rank": 3,
       "itemId": 270167,
       "itemName": "Wavecaller's Seastone",
       "itemLevel": 318,
@@ -403,24 +424,6 @@
       "catalystable": false,
       "statPriorityFit": 40,
       "popularity": 43
-    },
-    {
-      "slot": "trinket",
-      "contentType": "raid",
-      "rank": 3,
-      "itemId": 250215,
-      "itemName": "Freightrunner's Flask",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Murder Row",
-        "boss": "Zaen Bladesorrow",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 50,
-      "popularity": 40
     },
     {
       "slot": "main_hand",
@@ -452,8 +455,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 17
+      "statPriorityFit": 70,
+      "popularity": 13
     },
     {
       "slot": "off_hand",
@@ -467,8 +470,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 63
+      "statPriorityFit": 30,
+      "popularity": 60
     },
     {
       "slot": "off_hand",
@@ -486,7 +489,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 17
+      "popularity": 20
     },
     {
       "slot": "head",
@@ -503,7 +506,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 59,
-      "popularity": 80
+      "popularity": 77
     },
     {
       "slot": "head",
@@ -521,7 +524,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 17
+      "popularity": 20
     },
     {
       "slot": "neck",
@@ -557,7 +560,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 13
+      "popularity": 17
     },
     {
       "slot": "shoulder",
@@ -580,24 +583,6 @@
       "slot": "back",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 193763,
-      "itemName": "Fireproof Drape",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Ruby Life Pools",
-        "boss": "Kokia Blazehoof",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 48,
-      "popularity": 27
-    },
-    {
-      "slot": "back",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 251132,
       "itemName": "Speakeasy Shroud",
       "itemLevel": 311,
@@ -611,6 +596,24 @@
       "catalystable": false,
       "statPriorityFit": 78,
       "popularity": 27
+    },
+    {
+      "slot": "back",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 193763,
+      "itemName": "Fireproof Drape",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Ruby Life Pools",
+        "boss": "Kokia Blazehoof",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 48,
+      "popularity": 20
     },
     {
       "slot": "chest",
@@ -627,7 +630,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 83
+      "popularity": 87
     },
     {
       "slot": "chest",
@@ -659,26 +662,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 63
+      "statPriorityFit": 53,
+      "popularity": 60
     },
     {
       "slot": "wrist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 251127,
-      "itemName": "Nibbling Armbands",
-      "itemLevel": 311,
+      "itemId": 268228,
+      "itemName": "Venom-Singed Cuffs",
+      "itemLevel": 318,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Murder Row",
-        "boss": "Kystia Manaheart",
-        "keyLevel": 10
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Entombed Sentinels",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 49,
-      "popularity": 7
+      "statPriorityFit": 88,
+      "popularity": 10
     },
     {
       "slot": "hands",
@@ -695,25 +698,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 80,
-      "popularity": 73
+      "popularity": 83
     },
     {
       "slot": "hands",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 159247,
-      "itemName": "Handwraps of Oscillating Polarity",
+      "itemId": 273773,
+      "itemName": "Handwraps of Blasphemous Rites",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Temple of Sethraliss",
-        "boss": "Galvazzt",
+        "dungeon": "Altar of Fangs",
+        "boss": "Zul'jan",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 57,
-      "popularity": 10
+      "statPriorityFit": 84,
+      "popularity": 7
     },
     {
       "slot": "waist",
@@ -727,25 +730,25 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 70
+      "statPriorityFit": 53,
+      "popularity": 73
     },
     {
       "slot": "waist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268257,
-      "itemName": "Caustic Chain-Wrapped Sash",
+      "itemId": 268232,
+      "itemName": "Cincture of the Abyssal Grotto",
       "itemLevel": 318,
       "source": {
         "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Sszorak",
+        "instance": "The Tidebound Grotto",
+        "boss": "Nymrissa Wavecaller",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 52,
       "popularity": 7
     },
     {
@@ -769,24 +772,6 @@
       "slot": "feet",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 251137,
-      "itemName": "Tempestuous Sandals",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Murder Row",
-        "boss": "Xathuux the Annihilator",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 78,
-      "popularity": 20
-    },
-    {
-      "slot": "feet",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 268218,
       "itemName": "Nek'zali's Spiritwalkers",
       "itemLevel": 318,
@@ -799,6 +784,21 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
+      "popularity": 23
+    },
+    {
+      "slot": "feet",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 239654,
+      "itemName": "Martyr's Slippers",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 43,
       "popularity": 17
     },
     {
@@ -817,7 +817,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 80,
-      "popularity": 60
+      "popularity": 57
     },
     {
       "slot": "finger",
@@ -835,7 +835,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 40
+      "popularity": 37
     },
     {
       "slot": "finger",
@@ -849,31 +849,13 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 27
+      "statPriorityFit": 53,
+      "popularity": 30
     },
     {
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 270167,
-      "itemName": "Wavecaller's Seastone",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 40,
-      "popularity": 63
-    },
-    {
-      "slot": "trinket",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 270164,
       "itemName": "Gebbo's Bottomless Bag",
       "itemLevel": 318,
@@ -886,7 +868,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 57
+      "popularity": 60
+    },
+    {
+      "slot": "trinket",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 270167,
+      "itemName": "Wavecaller's Seastone",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Tidebound Grotto",
+        "boss": "Nymrissa Wavecaller",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 40,
+      "popularity": 60
     },
     {
       "slot": "trinket",
@@ -904,7 +904,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 27
+      "popularity": 33
     },
     {
       "slot": "main_hand",
@@ -918,8 +918,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 43
+      "statPriorityFit": 70,
+      "popularity": 50
     },
     {
       "slot": "main_hand",
@@ -937,52 +937,19 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 40,
-      "popularity": 43
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "mythic-plus",
-      "rank": 1,
-      "itemId": 245769,
-      "itemName": "Aln'hara Lantern",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 40
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 268263,
-      "itemName": "Frostscale's Mystic Frond",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 77,
-      "popularity": 7
+      "popularity": 37
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-04"
+      "collectedAt": "2026-10-06"
     }
   }
 }
