@@ -33,3 +33,8 @@ export function slotLabel(slot: string): string {
   };
   return labels[slot] ?? slot;
 }
+
+/** An item's upgrade track as the in-game tooltip writes it, e.g. "Hero 6/6". */
+export function trackLabel(track: { track: string; level: number; max: number }): string {
+  return `${track.track} ${track.level}/${track.max}`;
+}

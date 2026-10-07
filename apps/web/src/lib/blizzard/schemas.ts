@@ -76,6 +76,8 @@ const EquippedItemSchema = z
     // Upgrade track or crafting tag, e.g. "Heroic" or "Tidal Crafted".
     name_description: z.object({ display_string: z.string() }).loose().optional(),
     level: z.object({ value: z.number() }).loose(),
+    // Encodes the upgrade track; decoded by lib/season/upgradeTrack.ts.
+    bonus_list: z.array(z.number()).optional(),
     media: z.object({ id: z.number() }).loose().optional(),
     item_class: z.object({ name: z.string() }).loose().optional(),
     item_subclass: z.object({ name: z.string() }).loose().optional(),

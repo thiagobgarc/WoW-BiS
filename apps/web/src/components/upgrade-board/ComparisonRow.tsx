@@ -6,13 +6,21 @@ import { Tooltip } from '@/components/ui/Tooltip';
 import { BisItemTooltipCard } from '@/components/bis/BisItemTooltipCard';
 import { EquippedItemTooltipCard } from '@/components/character/EquippedItemTooltipCard';
 import { SeverityChip, SEVERITY_RULE } from './SeverityChip';
-import { slotLabel, sourceLabel } from '@mythos/core/utils';
+import { slotLabel, sourceLabel, trackLabel } from '@mythos/core/utils';
 
 /** The unit under the delta figure. Only rows that can actually move carry
  *  one — the severity chip already names the state of every other row, and
  *  repeating it here put "Close enough" above "~ Close" on fourteen rows. */
 function unit(row: ComparisonRowData): string {
   return row.ilvlDelta === 1 ? "item level" : "item levels";
+}
+
+/** Why a row holding the BiS item still isn't done, and so what to do about it. */
+function rightItemNote(row: ComparisonRowData): string {
+  const track = row.equipped?.upgradeTrack;
+  if (!track) return 'Right item, lower item level';
+  if (track.level < track.max) return 'Right item, upgrade it further';
+  return 'Right item, needs a higher-track copy';
 }
 
 /** A recommended item's name, hover/focus for its tooltip — the same card the BiS page uses. */
@@ -73,7 +81,10 @@ export function ComparisonRow({
               ) : (
                 <div className="truncate text-sm font-semibold text-text">Nothing equipped</div>
               )}
-              <div className="figure label mt-0.5">{row.equipped ? `${row.equipped.itemLevel} equipped` : 'Empty slot'}</div>
+              <div className="figure label mt-0.5">
+                {row.equipped ? `${row.equipped.itemLevel} equipped` : 'Empty slot'}
+                {row.equipped?.upgradeTrack && `, ${trackLabel(row.equipped.upgradeTrack)}`}
+              </div>
             </div>
           </div>
 
@@ -146,7 +157,9 @@ export function ComparisonRow({
             <p className="label md:text-right">{unit(row)}</p>
           </>
         )}
-        <SeverityChip severity={row.severity} />
+        <SeverityChip severity={row.severity} upgradable={row.isMatch && row.severity !== 'bis'} />
+        {/* Otherwise the same item on both sides reads as a bug next to "+13". */}
+        {row.isMatch && row.severity !== 'bis' && <p className="label md:text-right">{rightItemNote(row)}</p>}
       </div>
     </div>
   );

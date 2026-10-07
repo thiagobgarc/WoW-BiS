@@ -70,7 +70,8 @@ export const SEVERITY_STYLE = {
  * actually true instead: you are not below the target.
  */
 export function deltaLabel(row: ComparisonRow): string {
-  if (row.isMatch) return 'Match';
+  if (row.isMatch && row.ilvlDelta <= 0) return 'Match';
+  if (row.isMatch) return `Same item, +${row.ilvlDelta} iLvl`;
   if (!row.target) return 'No target';
   if (!row.equipped) return 'Fill now';
   if (row.ilvlDelta <= 0) return 'At or above';
@@ -120,7 +121,7 @@ export function rowAccessibilityLabel(row: ComparisonRow): string {
 
   if (!row.target) {
     parts.push('No BiS target for this slot this season.');
-  } else if (row.isMatch) {
+  } else if (row.isMatch && row.severity === 'bis') {
     parts.push('This is the BiS item.');
   } else {
     parts.push(

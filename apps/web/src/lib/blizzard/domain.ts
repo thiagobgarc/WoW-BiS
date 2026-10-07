@@ -58,6 +58,7 @@ import {
   type DomainDungeonProgress,
   type DomainMythicPlusProfile,
 } from '@mythos/core/progression';
+import { upgradeTrackFor } from '@/lib/season/upgradeTrack';
 
 export {
   EQUIPMENT_SLOTS,
@@ -181,6 +182,7 @@ function mapOneItem(raw: BlizzardEquippedItem, iconUrl: string | null): DomainIt
     procs: (raw.spells ?? []).map((s) => s.description?.trim()).filter((s): s is string => Boolean(s)),
     requiredLevelText: raw.requirements?.level?.display_string ?? null,
     classesText: raw.requirements?.playable_classes?.display_string ?? null,
+    upgradeTrack: upgradeTrackFor(raw.bonus_list),
     setInfo: raw.set
       ? {
           name: raw.set.item_set.name,
