@@ -27,9 +27,15 @@ export const MetaTierEntrySchema = z.object({
 });
 export type MetaTierEntry = z.infer<typeof MetaTierEntrySchema>;
 
+/** Raid lists are measured per difficulty; Mythic is the default. */
+export const MetaRaidDifficultySchema = z.enum(['mythic', 'heroic', 'normal']);
+export type MetaRaidDifficulty = z.infer<typeof MetaRaidDifficultySchema>;
+
 export const MetaTierListSchema = z.object({
   season: z.string(),
   contentType: MetaContentTypeSchema,
+  /** Raid only; absent on Mythic+ lists and on raid lists written before it existed (Mythic). */
+  difficulty: MetaRaidDifficultySchema.optional(),
   lastUpdated: z.string(),
   source: z.string(),
   sourceUrls: z.array(z.string()),

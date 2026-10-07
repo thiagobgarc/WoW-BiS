@@ -38,13 +38,35 @@ export function urlSlug(value: string): string {
   return value.toLowerCase().replace(/\s+/g, '-');
 }
 
+/**
+ * A 429 with the server's own wait. Thrown rather than retried: Warcraft
+ * Logs answered a run's quick retries with "Too many requests from this IP
+ * address" and a 24-minute Retry-After, and each retry extended the block.
+ * The caller decides whether to wait it out.
+ */
+export class RateLimitedError extends Error {
+  constructor(readonly url: string, readonly retryAfterSeconds: number) {
+    super(`Rate limited by ${new URL(url).host}; retry after ${retryAfterSeconds}s`);
+  }
+}
+
 export async function fetchJson(url: string, init?: RequestInit): Promise<any | null> {
   for (let attempt = 0; attempt < 4; attempt++) {
     try {
       const res = await fetch(url, init);
       if (res.ok) return await res.json();
       if (res.status === 404) return null;
-    } catch {
+      if (res.status === 429) {
+        const header = Number(res.headers.get('retry-after'));
+        const wait = Number.isFinite(header) && header > 0 ? header : 60;
+        // A short wait is just pacing, so honour it and carry on; a long one
+        // is a block, and retrying through it only extends it.
+        if (wait > 30) throw new RateLimitedError(url, wait);
+        await new Promise((resolve) => setTimeout(resolve, wait * 1000));
+        continue;
+      }
+    } catch (err) {
+      if (err instanceof RateLimitedError) throw err;
       // Network blip; fall through to the backoff.
     }
     await new Promise((resolve) => setTimeout(resolve, 1500 * (attempt + 1)));

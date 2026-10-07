@@ -25,7 +25,7 @@
  * Both lists rank specs against their own role only: a healer's score
  * means nothing next to a DPS's.
  */
-import type { MetaRole, MetaTier, MetaTierEntry } from '@mythos/core/meta';
+import type { MetaRaidDifficulty, MetaRole, MetaTier, MetaTierEntry } from '@mythos/core/meta';
 import type { SpecProfile } from './specCatalogue';
 import { fetchJson, urlSlug, warcraftLogsQuery, wclSlug } from './topPlayers';
 
@@ -150,8 +150,8 @@ export async function mythicPlusPercentile(spec: SpecProfile, season: string): P
 
 // --- Raid (Warcraft Logs) ------------------------------------------------
 
-/** WCL's difficulty ids: 5 is Mythic. */
-const MYTHIC = 5;
+/** WCL's difficulty ids. */
+export const WCL_DIFFICULTY: Record<MetaRaidDifficulty, number> = { mythic: 5, heroic: 4, normal: 3 };
 
 export interface WclBudget {
   spent: number;
@@ -176,12 +176,12 @@ export interface WclGuard {
   afterFailure: () => Promise<void>;
 }
 
-function raidPages(spec: SpecProfile, encounterId: number, guard: WclGuard) {
+function raidPages(spec: SpecProfile, encounterId: number, difficulty: MetaRaidDifficulty, guard: WclGuard) {
   const metric = spec.role === 'healer' ? 'hps' : 'dps';
   const cache = new Map<number, { amounts: number[]; hasMore: boolean }>();
   const query =
     `{ worldData { encounter(id: ${encounterId}) { characterRankings(className: ${JSON.stringify(wclSlug(spec.class))}, ` +
-    `specName: ${JSON.stringify(wclSlug(spec.spec))}, difficulty: ${MYTHIC}, metric: ${metric}, page: PAGE) } } }`;
+    `specName: ${JSON.stringify(wclSlug(spec.spec))}, difficulty: ${WCL_DIFFICULTY[difficulty]}, metric: ${metric}, page: PAGE) } } }`;
   return async (page: number) => {
     const hit = cache.get(page);
     if (hit) return hit;
@@ -222,8 +222,13 @@ export interface RaidSpecPages {
   amountAt: (rank: number) => Promise<number | undefined>;
 }
 
-export function raidSpecPages(spec: SpecProfile, encounterId: number, guard: WclGuard): RaidSpecPages {
-  const pages = raidPages(spec, encounterId, guard);
+export function raidSpecPages(
+  spec: SpecProfile,
+  encounterId: number,
+  difficulty: MetaRaidDifficulty,
+  guard: WclGuard,
+): RaidSpecPages {
+  const pages = raidPages(spec, encounterId, difficulty, guard);
   return {
     async count(hintParses) {
       // One request settles the common case: a full last page means the
@@ -269,6 +274,20 @@ export function parsesPerCharacter(counted: { parses: number; characters: number
  * population times the boss's parses-per-character, never below the cap it
  * is known to exceed.
  */
+/**
+ * The rank to read when no spec on a boss can be counted, which is every
+ * Heroic and Normal boss: even the least-played specs pass the API's 2,000.
+ * Ranks scale with each spec's population so the most-played spec reads at
+ * the deepest rank the API serves, and every other spec at the same
+ * fraction of its own parses. Assuming parses scale with population (the
+ * same assumption `estimateParses` makes), that compares every spec at one
+ * shared percentile, about the 95th on Heroic, without knowing any total.
+ */
+export function equalShareRank(characters: number, mostCharacters: number): number {
+  if (mostCharacters <= 0) return WCL_MAX_PAGE * PAGE_SIZE;
+  return Math.max(1, Math.round((WCL_MAX_PAGE * PAGE_SIZE * characters) / mostCharacters));
+}
+
 export function estimateParses(characters: number, ratio: number | null): number {
   const floor = WCL_MAX_PAGE * PAGE_SIZE + 1;
   return ratio === null ? floor : Math.max(floor, Math.round(characters * ratio));

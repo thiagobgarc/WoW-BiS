@@ -3,13 +3,27 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/Tabs';
 import { Tooltip, TooltipProvider } from '@/components/ui/Tooltip';
 import { classColor } from '@mythos/core/utils';
 import { specKey, urlSlug } from '@/lib/meta/specIds';
-import type { MetaContentType, MetaRole, MetaTier, MetaTierEntry, MetaTierList as MetaTierListData } from '@/lib/meta/types';
+import type {
+  MetaContentType,
+  MetaRaidDifficulty,
+  MetaRole,
+  MetaTier,
+  MetaTierEntry,
+  MetaTierList as MetaTierListData,
+} from '@/lib/meta/types';
 
 interface Props {
   mythicPlus: MetaTierListData | null;
-  raid: MetaTierListData | null;
+  /** One list per raid difficulty; any may be missing. */
+  raid: Record<MetaRaidDifficulty, MetaTierListData | null>;
   specIcons: Record<string, string | null>;
 }
+
+const DIFFICULTIES: { value: MetaRaidDifficulty; label: string }[] = [
+  { value: 'mythic', label: 'Mythic' },
+  { value: 'heroic', label: 'Heroic' },
+  { value: 'normal', label: 'Normal' },
+];
 
 const CONTENT_TYPES: { value: MetaContentType; label: string }[] = [
   { value: 'mythic-plus', label: 'Mythic+' },
@@ -106,19 +120,33 @@ function RoleTierRows({ entries, role, specIcons }: { entries: MetaTierEntry[]; 
   );
 }
 
-function ContentPanel({ list, specIcons }: { list: MetaTierListData; specIcons: Record<string, string | null> }) {
+function ContentPanel({
+  list,
+  specIcons,
+  aside,
+}: {
+  list: MetaTierListData;
+  specIcons: Record<string, string | null>;
+  /** Sits on the role tabs' row: the raid difficulty picker. */
+  aside?: React.ReactNode;
+}) {
+  // Kept across a difficulty switch (same component, new list), so a healer
+  // comparing Mythic with Heroic stays on the healer list.
   const [role, setRole] = useState<MetaRole>('dps');
 
   return (
     <div>
       <Tabs value={role} onValueChange={(v) => setRole(v as MetaRole)}>
-        <TabsList>
-          {ROLES.map((r) => (
-            <TabsTrigger key={r.value} value={r.value}>
-              {r.label}
-            </TabsTrigger>
-          ))}
-        </TabsList>
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <TabsList>
+            {ROLES.map((r) => (
+              <TabsTrigger key={r.value} value={r.value}>
+                {r.label}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+          {aside}
+        </div>
 
         {/* One panel whose value always equals the current role — Radix
             needs a TabsContent for a11y wiring, but RoleTierRows already
@@ -138,17 +166,64 @@ function ContentPanel({ list, specIcons }: { list: MetaTierListData; specIcons: 
   );
 }
 
+/**
+ * Native radios styled as a segmented control: a difficulty is one choice
+ * among three, and radios bring arrow-key movement and the "1 of 3" reading
+ * for free. Not a second set of Tabs, which would nest tablists with no
+ * panels of their own.
+ */
+function DifficultyPicker({
+  value,
+  onChange,
+  available,
+}: {
+  value: MetaRaidDifficulty;
+  onChange: (d: MetaRaidDifficulty) => void;
+  available: Record<MetaRaidDifficulty, boolean>;
+}) {
+  return (
+    <fieldset className="flex rounded-[4px] border border-rule-strong p-0.5">
+      <legend className="sr-only">Raid difficulty</legend>
+      {DIFFICULTIES.map((d) => (
+        <label
+          key={d.value}
+          className={`min-h-[36px] cursor-pointer rounded-[3px] px-3 text-xs font-semibold leading-[36px] transition-colors duration-150 has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-text has-[:disabled]:cursor-not-allowed has-[:disabled]:opacity-40 ${
+            value === d.value ? 'bg-text text-bg' : 'text-text-muted hover:text-text'
+          }`}
+        >
+          <input
+            type="radio"
+            name="raid-difficulty"
+            value={d.value}
+            checked={value === d.value}
+            disabled={!available[d.value]}
+            onChange={() => onChange(d.value)}
+            className="sr-only"
+          />
+          {d.label}
+        </label>
+      ))}
+    </fieldset>
+  );
+}
+
 export function MetaTierList({ mythicPlus, raid, specIcons }: Props) {
   const [content, setContent] = useState<MetaContentType>(mythicPlus ? 'mythic-plus' : 'raid');
-  const lists: Record<MetaContentType, MetaTierListData | null> = { 'mythic-plus': mythicPlus, raid };
+  const [difficulty, setDifficulty] = useState<MetaRaidDifficulty>('mythic');
+  const anyRaid = DIFFICULTIES.some((d) => raid[d.value]);
+  const lists: Record<MetaContentType, MetaTierListData | null> = {
+    'mythic-plus': mythicPlus,
+    raid: raid[difficulty] ?? null,
+  };
   const activeList = lists[content];
+  const available = { mythic: !!raid.mythic, heroic: !!raid.heroic, normal: !!raid.normal };
 
   return (
     <TooltipProvider>
       <Tabs value={content} onValueChange={(v) => setContent(v as MetaContentType)}>
         <TabsList>
           {CONTENT_TYPES.map((c) => (
-            <TabsTrigger key={c.value} value={c.value} disabled={!lists[c.value]}>
+            <TabsTrigger key={c.value} value={c.value} disabled={c.value === 'raid' ? !anyRaid : !mythicPlus}>
               {c.label}
             </TabsTrigger>
           ))}
@@ -156,7 +231,15 @@ export function MetaTierList({ mythicPlus, raid, specIcons }: Props) {
 
         <TabsContent value={content} className="pt-6 focus-visible:outline-none">
           {activeList ? (
-            <ContentPanel list={activeList} specIcons={specIcons} />
+            <ContentPanel
+              list={activeList}
+              specIcons={specIcons}
+              aside={
+                content === 'raid' ? (
+                  <DifficultyPicker value={difficulty} onChange={setDifficulty} available={available} />
+                ) : undefined
+              }
+            />
           ) : (
             <p className="border-l-2 border-severity-upgrade pl-5 text-sm text-text-muted">
               No {content === 'raid' ? 'raid' : 'Mythic+'} tier list has been seeded for this season yet.

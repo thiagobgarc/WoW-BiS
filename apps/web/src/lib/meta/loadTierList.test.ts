@@ -8,7 +8,7 @@ import { SPEC_CATALOGUE } from '@/lib/ingest/specCatalogue';
 import { CURRENT_SEASON_ID } from '@/lib/season/seasonConfig';
 import { loadTierListFile } from './loadTierList';
 
-describe.each(['mythic-plus', 'raid'] as const)('%s tier list', (contentType) => {
+describe.each(['mythic-plus', 'raid', 'raid-heroic', 'raid-normal'] as const)('%s tier list', (contentType) => {
   it('parses against the schema and covers every spec exactly once', async () => {
     const list = await loadTierListFile(CURRENT_SEASON_ID, contentType);
     expect(list).not.toBeNull();

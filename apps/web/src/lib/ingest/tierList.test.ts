@@ -3,6 +3,7 @@ import type { SpecProfile } from './specCatalogue';
 import {
   assignTiers,
   combineRaidScores,
+  equalShareRank,
   estimateParses,
   findLastPage,
   parsesPerCharacter,
@@ -137,5 +138,16 @@ describe('estimateParses', () => {
   it('never estimates below the cap the spec is known to exceed', () => {
     expect(estimateParses(10_000, 0.02)).toBe(2_001);
     expect(estimateParses(226_000, null)).toBe(2_001);
+  });
+});
+
+describe('equalShareRank', () => {
+  it('reads the most-played spec at the deepest rank the API serves', () => {
+    expect(equalShareRank(240_000, 240_000)).toBe(2_000);
+  });
+
+  it('scales every other spec to the same share of its own population', () => {
+    expect(equalShareRank(60_000, 240_000)).toBe(500);
+    expect(equalShareRank(100, 240_000)).toBe(1);
   });
 });

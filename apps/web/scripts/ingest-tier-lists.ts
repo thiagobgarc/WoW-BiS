@@ -17,18 +17,21 @@
  * Flags:
  *   --dry-run          compute and print, write nothing
  *   --only=mplus|raid  just one of the two lists
+ *   --difficulty=mythic|heroic|normal  just one raid difficulty (default all three)
  *   --spec=a,b         only these spec slugs; prints, writes nothing
  *   --season=...       defaults to CURRENT_SEASON_ID
  */
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
-import { MetaTierListSchema, type MetaContentType, type MetaTierList } from '@mythos/core/meta';
+import { MetaTierListSchema, type MetaContentType, type MetaRaidDifficulty, type MetaTierList } from '@mythos/core/meta';
+import { raidTierListFile } from '../src/lib/meta/tierListFiles';
 import { SPEC_CATALOGUE, specSlug, type SpecProfile } from '../src/lib/ingest/specCatalogue';
-import { hasWarcraftLogsCredentials } from '../src/lib/ingest/topPlayers';
+import { RateLimitedError, hasWarcraftLogsCredentials } from '../src/lib/ingest/topPlayers';
 import {
   PERCENTILE,
   assignTiers,
   combineRaidScores,
+  equalShareRank,
   estimateParses,
   mythicPlusPercentile,
   parsesPerCharacter,
@@ -61,7 +64,8 @@ const label = (s: SpecProfile) => `${s.spec} ${s.class}`.padEnd(26);
 
 async function write(list: MetaTierList): Promise<void> {
   const parsed = MetaTierListSchema.parse(list);
-  const file = path.join(OUT_DIR, `${parsed.contentType}-tier-list.json`);
+  const stem = parsed.contentType === 'raid' ? raidTierListFile(parsed.difficulty ?? 'mythic') : parsed.contentType;
+  const file = path.join(OUT_DIR, `${stem}-tier-list.json`);
   if (DRY_RUN) return;
   await mkdir(OUT_DIR, { recursive: true });
   await writeFile(file, `${JSON.stringify(parsed, null, 2)}\n`);
@@ -125,20 +129,29 @@ const BUDGET_MARGIN = 10;
 function budgetGuard() {
   let allowance = 0;
   const waitForReset = async () => {
-    // Once the hour is spent, WCL refuses every query, including the one
-    // that reports when the hour resets. So a failed check means locked
-    // out: wait a minute and ask again until it answers.
-    let b = await warcraftLogsBudget().catch(() => null);
-    while (!b) {
-      console.log('  … Warcraft Logs is refusing requests (hourly budget spent), checking again in 60s');
-      await new Promise((r) => setTimeout(r, 60_000));
-      b = await warcraftLogsBudget().catch(() => null);
-    }
-    allowance = Math.floor(b.limit - b.spent - BUDGET_MARGIN);
-    if (allowance <= 0) {
+    // Loops until the server itself reports points to spend. Assuming a full
+    // hour once `pointsResetIn` had elapsed was wrong: the next request was
+    // refused minutes later, so the server's window evidently doesn't hand
+    // back the whole budget at that moment.
+    for (;;) {
+      // Once the hour is spent, WCL refuses every query, including the one
+      // that reports when the hour resets, so a failed check means locked out.
+      let blockedFor = 0;
+      const b = await warcraftLogsBudget().catch((err) => {
+        blockedFor = err instanceof RateLimitedError ? err.retryAfterSeconds : 60;
+        return null;
+      });
+      if (!b) {
+        // Wait exactly as long as the server asks: polling through a block
+        // is what turned a lockout into a 24-minute IP ban.
+        console.log(`  … Warcraft Logs is refusing requests, waiting ${blockedFor}s as it asks`);
+        await new Promise((r) => setTimeout(r, (blockedFor + 5) * 1000));
+        continue;
+      }
+      allowance = Math.floor(b.limit - b.spent - BUDGET_MARGIN);
+      if (allowance > 0) return;
       console.log(`  … Warcraft Logs budget at ${Math.round(b.spent)}/${b.limit}, waiting ${b.resetInSeconds}s for the reset`);
-      await new Promise((r) => setTimeout(r, (b.resetInSeconds + 5) * 1000));
-      allowance = Math.floor(b.limit - BUDGET_MARGIN);
+      await new Promise((r) => setTimeout(r, (Math.max(b.resetInSeconds, 30) + 5) * 1000));
     }
   };
   return {
@@ -154,21 +167,36 @@ function budgetGuard() {
   };
 }
 
-async function raid(characters: Map<SpecProfile, number>): Promise<void> {
-  if (!hasWarcraftLogsCredentials()) throw new Error('WCL_CLIENT_ID / WCL_CLIENT_SECRET are not set');
+const DIFFICULTY_LABEL: Record<MetaRaidDifficulty, string> = { mythic: 'Mythic', heroic: 'Heroic', normal: 'Normal' };
+
+/**
+ * One difficulty's raid list. Mythic counts the specs it can and estimates
+ * the rest from them; on Heroic and Normal no spec is countable (even the
+ * least-played pass the API's 2,000), so every spec is read at one shared
+ * percentile instead. See `estimateParses` and `equalShareRank`.
+ */
+async function raid(
+  difficulty: MetaRaidDifficulty,
+  characters: Map<SpecProfile, number>,
+  counts: Record<string, number>,
+  guard: ReturnType<typeof budgetGuard>,
+): Promise<void> {
   const encounters = seasonConfig.raid.warcraftLogsTierEncounterIds;
-  console.log(`\nRaid: Warcraft Logs Mythic, encounters ${encounters.join(', ')}`);
-  const counts = await readCounts();
-  const guard = budgetGuard();
+  const name = DIFFICULTY_LABEL[difficulty];
+  console.log(`\nRaid: Warcraft Logs ${name}, encounters ${encounters.join(', ')}`);
   const perBoss: { spec: SpecProfile; encounterId: number; amount: number }[] = [];
+  const mostCharacters = Math.max(...specs.map((s) => characters.get(s) ?? 0));
+  let estimated = false;
+  let sharedPercentile = false;
 
   for (const encounterId of encounters) {
     // Pass 1: count every spec, so the ones under the API's cap can scale
     // an estimate for the ones over it.
     const rows = [];
     for (const spec of specs) {
-      const key = `${encounterId}/${specSlug(spec.class, spec.spec)}`;
-      const pages = raidSpecPages(spec, encounterId, guard);
+      // Mythic keeps the key format it was first saved with.
+      const key = `${difficulty === 'mythic' ? '' : `${difficulty}/`}${encounterId}/${specSlug(spec.class, spec.spec)}`;
+      const pages = raidSpecPages(spec, encounterId, difficulty, guard);
       rows.push({ spec, key, pages, count: await pages.count(counts[key]) });
     }
     const ratio = parsesPerCharacter(
@@ -176,7 +204,10 @@ async function raid(characters: Map<SpecProfile, number>): Promise<void> {
         r.count.kind === 'counted' ? [{ parses: r.count.total, characters: characters.get(r.spec) ?? 0 }] : [],
       ),
     );
-    console.log(`  encounter ${encounterId}: ${ratio === null ? 'no countable spec' : `${ratio.toFixed(4)} parses per M+ character`}`);
+    console.log(
+      `  encounter ${encounterId}: ` +
+        (ratio === null ? 'no countable spec, reading every spec at one shared percentile' : `${ratio.toFixed(4)} parses per M+ character`),
+    );
 
     // Pass 2: the parse at each spec's 95th-percentile rank.
     for (const { spec, key, pages, count } of rows) {
@@ -185,14 +216,25 @@ async function raid(characters: Map<SpecProfile, number>): Promise<void> {
         continue;
       }
       if (count.kind === 'counted') counts[key] = count.total;
-      const total = count.kind === 'counted' ? count.total : estimateParses(characters.get(spec) ?? 0, ratio);
-      const amount = await pages.amountAt(percentileRank(total));
+      let rank: number;
+      let note: string;
+      if (count.kind === 'counted') {
+        rank = percentileRank(count.total);
+        note = `of ${count.total}`;
+      } else if (ratio !== null) {
+        const total = estimateParses(characters.get(spec) ?? 0, ratio);
+        rank = percentileRank(total);
+        note = `of ~${total} (estimated)`;
+        estimated = true;
+      } else {
+        rank = equalShareRank(characters.get(spec) ?? 0, mostCharacters);
+        note = '(shared percentile)';
+        sharedPercentile = true;
+      }
+      const amount = await pages.amountAt(rank);
       if (amount === undefined) continue;
       perBoss.push({ spec, encounterId, amount });
-      console.log(
-        `    ${label(spec)} ${String(Math.round(amount)).padStart(9)}  at rank ${percentileRank(total)} of ` +
-          `${count.kind === 'counted' ? total : `~${total} (estimated)`}`,
-      );
+      console.log(`    ${label(spec)} ${String(Math.round(amount)).padStart(9)}  at rank ${rank} ${note}`);
     }
     // Saved per boss, so a run that dies partway still leaves the next one
     // the counts it paid for.
@@ -204,25 +246,41 @@ async function raid(characters: Map<SpecProfile, number>): Promise<void> {
 
   const scored = combineRaidScores(perBoss);
   print('raid', scored);
+  const method = sharedPercentile
+    ? `Warcraft Logs’ public API lists at most 2,000 parses per spec and boss, and on ${name} every spec passes that, so ` +
+      'no total can be counted. Instead each spec is read at the same share of its own parses, scaled by its player ' +
+      'population so the most-played spec sits at the deepest rank the API serves; that compares every spec at one ' +
+      `shared percentile (around the ${PCT}th) rather than exactly the ${PCT}th. `
+    : estimated
+      ? 'Warcraft Logs’ public API lists at most 2,000 parses per spec and boss, so for specs past that the parse count ' +
+        'behind the percentile is estimated from their player population; Archon reads the full data and needs no estimate. '
+      : '';
   await write({
     season: SEASON,
     contentType: 'raid',
+    difficulty,
     lastUpdated: TODAY,
-    source: `Warcraft Logs Mythic ${seasonConfig.raid.name} rankings: each spec's ${PCT}th-percentile DPS (HPS for healers)`,
+    source: `Warcraft Logs ${name} ${seasonConfig.raid.name} rankings: each spec's ${PCT}th-percentile DPS (HPS for healers)`,
     sourceUrls: ['https://www.warcraftlogs.com/zone/rankings/53'],
     notes:
-      `Measured the way Archon ranks raid specs: throughput at the ${PCT}th percentile of each spec's Mythic parses, ` +
+      `Measured the way Archon ranks raid specs: throughput at the ${PCT}th percentile of each spec's ${name} parses, ` +
       `on the first ${encounters.length} bosses so every spec is compared on the same fights. Each boss counts equally ` +
       '(a spec’s number there is taken as a share of the best spec in its role), so a fight with more targets does not ' +
-      'outweigh the rest. Warcraft Logs’ public API lists at most 2,000 parses per spec and boss, so for specs past ' +
-      'that the parse count behind the percentile is estimated from their player population; Archon reads the full ' +
-      'data and needs no estimate. Tanks are ranked by damage. Tiers: S within 3% of the best in the role, A within 7%, ' +
+      `outweigh the rest. ${method}Tanks are ranked by damage. Tiers: S within 3% of the best in the role, A within 7%, ` +
       'B within 12%. Rebuilt weekly.',
     entries: assignTiers(scored),
   });
-  if (!DRY_RUN) await writeFile(COUNTS_FILE, `${JSON.stringify(counts, null, 2)}\n`);
+}
+
+async function raids(characters: Map<SpecProfile, number>): Promise<void> {
+  if (!hasWarcraftLogsCredentials()) throw new Error('WCL_CLIENT_ID / WCL_CLIENT_SECRET are not set');
+  const counts = await readCounts();
+  const guard = budgetGuard();
+  const only = flag('difficulty', '');
+  const difficulties = (['mythic', 'heroic', 'normal'] as const).filter((d) => !only || d === only);
+  for (const difficulty of difficulties) await raid(difficulty, characters, counts, guard);
 }
 
 // The Mythic+ pass always runs: the raid list needs its populations.
 const characters = await mythicPlus();
-if (ONLY !== 'mplus') await raid(characters);
+if (ONLY !== 'mplus') await raids(characters);
