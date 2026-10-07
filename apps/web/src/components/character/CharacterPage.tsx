@@ -6,6 +6,7 @@ import type { CharacterTalents } from '@/lib/blizzard/getCharacterTalents';
 import type { BisEntry } from '@mythos/core/bis';
 import type { RecommendedTalentBuild } from '@mythos/core/talents';
 import type { MetaTier } from '@/lib/meta/types';
+import type { BisItemTooltip } from '@/lib/blizzard/itemTooltip';
 import { CharacterHeader } from './CharacterHeader';
 import { PaperDoll, PaperDollSkeleton } from './PaperDoll';
 import { StatsPanel } from './StatsPanel';
@@ -27,6 +28,8 @@ interface Props {
   bisEntries: BisEntry[];
   bisSeeded: boolean;
   bisIcons: Record<number, string>;
+  /** Tooltip detail per BiS item id; items without one show a minimal tooltip. */
+  bisTooltips: Record<number, BisItemTooltip>;
   statPriority?: (keyof SecondaryStats)[];
   talents: CharacterTalents | null;
   recommendedTalents: RecommendedTalentBuild | null;
@@ -70,6 +73,7 @@ export function CharacterPage({
   bisEntries,
   bisSeeded,
   bisIcons,
+  bisTooltips,
   statPriority,
   talents,
   recommendedTalents,
@@ -147,7 +151,7 @@ export function CharacterPage({
               <StatsPanel stats={stats} priorityOrder={statPriority} />
 
               <section aria-label="Upgrade board">
-                <UpgradeBoard equipment={equipment} bisEntries={bisEntries} bisIcons={bisIcons} seeded={bisSeeded} />
+                <UpgradeBoard equipment={equipment} bisEntries={bisEntries} bisIcons={bisIcons} bisTooltips={bisTooltips} seeded={bisSeeded} />
               </section>
 
               {talents && (

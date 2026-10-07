@@ -129,6 +129,15 @@ function cssColor(color: { r: number; g: number; b: number; a: number } | undefi
   return `rgba(${color.r}, ${color.g}, ${color.b}, ${color.a})`;
 }
 
+/**
+ * Removes the game's inline texture tags, e.g. the crafting-quality icon a
+ * profession enchant ends with ("|A:Professions-ChatIcon-Quality-Tier3:20:20|a"),
+ * which Blizzard leaves in display strings and the client renders as an icon.
+ */
+export function stripAtlasMarkup(text: string | undefined): string {
+  return (text ?? '').replace(/\|A:[^|]*\|a/g, '').trim();
+}
+
 function mapOneItem(raw: BlizzardEquippedItem, iconUrl: string | null): DomainItem | null {
   const slot = SLOT_TYPE_MAP[raw.slot.type];
   if (!slot) return null; // shirt/tabard/ranged — not part of the BiS comparison
@@ -154,7 +163,7 @@ function mapOneItem(raw: BlizzardEquippedItem, iconUrl: string | null): DomainIt
       filled: Boolean(s.item),
       gemName: s.item?.name,
     })),
-    enchantText: raw.enchantments?.[0]?.display_string ?? null,
+    enchantText: stripAtlasMarkup(raw.enchantments?.[0]?.display_string) || null,
     wowheadUrl: `https://www.wowhead.com/item=${raw.item.id}`,
     bindingText: raw.binding?.name ?? null,
     armorTypeLabel,
