@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/Tabs';
 import { Tooltip, TooltipProvider } from '@/components/ui/Tooltip';
 import { classColor } from '@mythos/core/utils';
@@ -182,15 +182,25 @@ function DifficultyPicker({
   available: Record<MetaRaidDifficulty, boolean>;
 }) {
   return (
-    <fieldset className="flex rounded-[4px] border border-rule-strong p-0.5">
-      <legend className="sr-only">Raid difficulty</legend>
-      {DIFFICULTIES.map((d) => (
-        <label
-          key={d.value}
-          className={`min-h-[36px] cursor-pointer rounded-[3px] px-3 text-xs font-semibold leading-[36px] transition-colors duration-150 has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-text has-[:disabled]:cursor-not-allowed has-[:disabled]:opacity-40 ${
-            value === d.value ? 'bg-text text-bg' : 'text-text-muted hover:text-text'
-          }`}
-        >
+    // Visibly labelled: "Mythic" alone, beside a "Mythic+" tab, read as
+    // another content type. The legend is the label, so a screen reader
+    // announces "Raid difficulty, Mythic, 1 of 3".
+    <fieldset className="flex items-center gap-3">
+      <legend className="label float-left mr-3 leading-[44px] sm:leading-9">Difficulty</legend>
+      <div className="flex rounded-[4px] border border-rule-strong p-0.5">
+        {DIFFICULTIES.map((d) => (
+          <label
+            key={d.value}
+            // The selected state speaks the tabs' language, a 2px accent
+            // rule under the text, rather than a solid white fill, which
+            // made this the loudest thing on the page and outshouted the
+            // tier letters it only filters.
+            className={`flex min-h-[44px] cursor-pointer items-center rounded-[3px] px-3.5 text-sm font-semibold [font-stretch:95%] transition-colors duration-150 sm:min-h-9 has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-text has-[:disabled]:cursor-not-allowed has-[:disabled]:opacity-40 ${
+              value === d.value
+                ? 'bg-panel-hover text-text shadow-[inset_0_-2px_0_var(--color-accent)]'
+                : 'text-text-dim hover:text-text'
+            }`}
+          >
           <input
             type="radio"
             name="raid-difficulty"
@@ -198,18 +208,57 @@ function DifficultyPicker({
             checked={value === d.value}
             disabled={!available[d.value]}
             onChange={() => onChange(d.value)}
-            className="sr-only"
-          />
-          {d.label}
-        </label>
-      ))}
+              className="sr-only"
+            />
+            {d.label}
+          </label>
+        ))}
+      </div>
     </fieldset>
   );
 }
 
+const CONTENT_PARAM = 'view';
+const DIFFICULTY_PARAM = 'difficulty';
+
+/**
+ * The open list lives in the URL (?view=raid&difficulty=heroic), so a
+ * refresh keeps it and a link can point straight at the Heroic list.
+ * Read after hydration rather than in the initial state: the page is
+ * server-rendered without the query, and reading it during render would
+ * make the first client render disagree with the HTML.
+ */
+function useUrlState<T extends string>(key: string, initial: T, allowed: readonly T[]) {
+  const [value, setValue] = useState<T>(initial);
+  useEffect(() => {
+    const fromUrl = new URLSearchParams(window.location.search).get(key);
+    if (fromUrl && (allowed as readonly string[]).includes(fromUrl)) setValue(fromUrl as T);
+    // Read once on mount; the allowed list is a module constant.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [key]);
+  const update = (next: T) => {
+    setValue(next);
+    const url = new URL(window.location.href);
+    if (next === initial) url.searchParams.delete(key);
+    else url.searchParams.set(key, next);
+    // replaceState, not pushState: flipping a filter shouldn't fill the
+    // Back button with every intermediate view.
+    window.history.replaceState(null, '', url);
+  };
+  return [value, update] as const;
+}
+
 export function MetaTierList({ mythicPlus, raid, specIcons }: Props) {
-  const [content, setContent] = useState<MetaContentType>(mythicPlus ? 'mythic-plus' : 'raid');
-  const [difficulty, setDifficulty] = useState<MetaRaidDifficulty>('mythic');
+  const [content, setContent] = useUrlState<MetaContentType>(
+    CONTENT_PARAM,
+    mythicPlus ? 'mythic-plus' : 'raid',
+    CONTENT_TYPES.map((c) => c.value),
+  );
+  const [difficulty, setDifficulty] = useUrlState<MetaRaidDifficulty>(
+    DIFFICULTY_PARAM,
+    'mythic',
+    DIFFICULTIES.map((d) => d.value),
+  );
   const anyRaid = DIFFICULTIES.some((d) => raid[d.value]);
   const lists: Record<MetaContentType, MetaTierListData | null> = {
     'mythic-plus': mythicPlus,
