@@ -477,6 +477,48 @@ export const IngestItemSchema = z
 export type IngestItem = z.infer<typeof IngestItemSchema>;
 
 /**
+ * The parts of `/data/wow/item/{id}`'s `preview_item` a BiS tooltip reads.
+ * Separate from IngestItemSchema for the same reason that one is separate
+ * from ItemSchema: a tooltip-only field must never be able to fail an ingest.
+ *
+ * Every number in here is at the item's *base* item level (e.g. 219 for a
+ * 318 raid drop), and primary stats arrive all `is_negated` because there is
+ * no class to resolve them against — see lib/blizzard/itemTooltip.ts for how
+ * that shapes what the tooltip shows.
+ */
+export const ItemTooltipSourceSchema = z
+  .object({
+    id: z.number(),
+    preview_item: z
+      .object({
+        level: z.object({ value: z.number() }).loose().optional(),
+        quality: z.object({ type: z.string() }).loose().optional(),
+        name_description: ColoredDisplaySchema.optional(),
+        binding: z.object({ name: z.string() }).loose().optional(),
+        item_class: z.object({ id: z.number(), name: z.string() }).loose().optional(),
+        item_subclass: z.object({ name: z.string() }).loose().optional(),
+        inventory_type: z.object({ type: z.string(), name: z.string() }).loose().optional(),
+        unique_equipped: z.string().optional(),
+        limit_category: z.string().optional(),
+        weapon: z.object({ attack_speed: z.object({ display_string: z.string() }).loose().optional() }).loose().optional(),
+        stats: z.array(ItemStatValueSchema).optional(),
+        spells: z.array(z.object({ description: z.string().optional() }).loose()).optional(),
+        set: z.object({ item_set: z.object({ name: z.string() }).loose() }).loose().optional(),
+        description: z.string().optional(),
+        requirements: z
+          .object({
+            level: z.object({ display_string: z.string() }).loose().optional(),
+            playable_classes: z.object({ display_string: z.string() }).loose().optional(),
+          })
+          .loose()
+          .optional(),
+      })
+      .loose(),
+  })
+  .loose();
+export type ItemTooltipSource = z.infer<typeof ItemTooltipSourceSchema>;
+
+/**
  * Item sets. Tier pieces are NOT listed in journal encounter loot tables —
  * verified against The Venomous Abyss, where none of the season's six tier
  * sets appear in any encounter's items — so the set endpoint is the only
