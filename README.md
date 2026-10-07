@@ -53,3 +53,9 @@ The site is hosted on Vercel and served at [mythosbis.com](https://mythosbis.com
 The lists come from what the best players actually wear, the same way Archon does it. For raid, it samples the top Mythic parsers for each spec on Warcraft Logs. For Mythic+, it samples the top players on Raider.IO. Then it reads their current gear from the Blizzard API and ranks each slot by how many of them use the item. Slots with too few players fall back to ranking drops by stat priority.
 
 A GitHub Action (`.github/workflows/refresh-bis.yml`) reruns this every Tuesday after reset and commits the new lists to `main`, so the site redeploys with them. You can also run it by hand from the Actions tab, or locally with `bun run bis:ingest` in `apps/web`.
+
+## How the tier lists are made
+
+The Mythic+ and raid tier lists on `/meta` are measured from player data, using the same figure Archon uses: each spec's 95th percentile. For Mythic+ that is the Mythic+ score at the 95th percentile of every ranked character of the spec on Raider.IO. For raid it is the DPS (HPS for healers) at the 95th percentile of the spec's Mythic parses on Warcraft Logs, averaged over the first four bosses. A spec's tier is how close it is to the best spec in its role: S within 3%, A within 7%, B within 12%, C below that.
+
+The raid list comes in Mythic, Heroic and Normal, switchable on the page. Warcraft Logs' public API lists at most 2,000 parses per spec and boss. On Mythic, specs under that are counted exactly and the rest have their parse count estimated from their player population. On Heroic and Normal every spec passes it, so each spec is read at the same share of its own parses instead (scaled by population), which compares them at one shared percentile close to the 95th. The same Action rebuilds both lists after the BiS lists each week. Locally, run `bun run tiers:ingest` in `apps/web`.

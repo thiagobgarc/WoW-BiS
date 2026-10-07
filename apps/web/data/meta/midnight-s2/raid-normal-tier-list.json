@@ -1,0 +1,293 @@
+{
+  "season": "midnight-s2",
+  "contentType": "raid",
+  "difficulty": "normal",
+  "lastUpdated": "2026-10-07",
+  "source": "Warcraft Logs Normal The Venomous Abyss rankings: each spec's 95th-percentile DPS (HPS for healers)",
+  "sourceUrls": [
+    "https://www.warcraftlogs.com/zone/rankings/53"
+  ],
+  "notes": "Measured the way Archon ranks raid specs: throughput at the 95th percentile of each spec's Normal parses, on the first 4 bosses so every spec is compared on the same fights. Each boss counts equally (a spec’s number there is taken as a share of the best spec in its role), so a fight with more targets does not outweigh the rest. Warcraft Logs’ public API lists at most 2,000 parses per spec and boss, and on Normal every spec passes that, so no total can be counted. Instead each spec is read at the same share of its own parses, scaled by its player population so the most-played spec sits at the deepest rank the API serves; that compares every spec at one shared percentile (around the 95th) rather than exactly the 95th. Tanks are ranked by damage. Tiers: S within 3% of the best in the role, A within 7%, B within 12%. Rebuilt weekly.",
+  "entries": [
+    {
+      "class": "Priest",
+      "spec": "Holy",
+      "role": "healer",
+      "tier": "S",
+      "score": 100
+    },
+    {
+      "class": "Warrior",
+      "spec": "Protection",
+      "role": "tank",
+      "tier": "S",
+      "score": 98.1
+    },
+    {
+      "class": "Mage",
+      "spec": "Arcane",
+      "role": "dps",
+      "tier": "S",
+      "score": 93.4
+    },
+    {
+      "class": "Hunter",
+      "spec": "Marksmanship",
+      "role": "dps",
+      "tier": "S",
+      "score": 91.8
+    },
+    {
+      "class": "Monk",
+      "spec": "Brewmaster",
+      "role": "tank",
+      "tier": "A",
+      "score": 91.8
+    },
+    {
+      "class": "Death Knight",
+      "spec": "Blood",
+      "role": "tank",
+      "tier": "A",
+      "score": 91.5
+    },
+    {
+      "class": "Druid",
+      "spec": "Balance",
+      "role": "dps",
+      "tier": "S",
+      "score": 90.7
+    },
+    {
+      "class": "Evoker",
+      "spec": "Devastation",
+      "role": "dps",
+      "tier": "A",
+      "score": 90.2
+    },
+    {
+      "class": "Paladin",
+      "spec": "Protection",
+      "role": "tank",
+      "tier": "B",
+      "score": 89.2
+    },
+    {
+      "class": "Warlock",
+      "spec": "Demonology",
+      "role": "dps",
+      "tier": "A",
+      "score": 89
+    },
+    {
+      "class": "Rogue",
+      "spec": "Subtlety",
+      "role": "dps",
+      "tier": "A",
+      "score": 88.5
+    },
+    {
+      "class": "Warlock",
+      "spec": "Destruction",
+      "role": "dps",
+      "tier": "A",
+      "score": 88.4
+    },
+    {
+      "class": "Druid",
+      "spec": "Guardian",
+      "role": "tank",
+      "tier": "B",
+      "score": 88.2
+    },
+    {
+      "class": "Paladin",
+      "spec": "Holy",
+      "role": "healer",
+      "tier": "C",
+      "score": 86.9
+    },
+    {
+      "class": "Demon Hunter",
+      "spec": "Vengeance",
+      "role": "tank",
+      "tier": "B",
+      "score": 86.8
+    },
+    {
+      "class": "Demon Hunter",
+      "spec": "Devourer",
+      "role": "dps",
+      "tier": "B",
+      "score": 86.8
+    },
+    {
+      "class": "Warrior",
+      "spec": "Arms",
+      "role": "dps",
+      "tier": "B",
+      "score": 86.6
+    },
+    {
+      "class": "Shaman",
+      "spec": "Restoration",
+      "role": "healer",
+      "tier": "C",
+      "score": 86
+    },
+    {
+      "class": "Druid",
+      "spec": "Restoration",
+      "role": "healer",
+      "tier": "C",
+      "score": 85.6
+    },
+    {
+      "class": "Shaman",
+      "spec": "Enhancement",
+      "role": "dps",
+      "tier": "B",
+      "score": 85.4
+    },
+    {
+      "class": "Priest",
+      "spec": "Shadow",
+      "role": "dps",
+      "tier": "B",
+      "score": 85.4
+    },
+    {
+      "class": "Evoker",
+      "spec": "Preservation",
+      "role": "healer",
+      "tier": "C",
+      "score": 85.2
+    },
+    {
+      "class": "Shaman",
+      "spec": "Elemental",
+      "role": "dps",
+      "tier": "B",
+      "score": 84.9
+    },
+    {
+      "class": "Paladin",
+      "spec": "Retribution",
+      "role": "dps",
+      "tier": "B",
+      "score": 84.3
+    },
+    {
+      "class": "Warlock",
+      "spec": "Affliction",
+      "role": "dps",
+      "tier": "B",
+      "score": 84.2
+    },
+    {
+      "class": "Rogue",
+      "spec": "Assassination",
+      "role": "dps",
+      "tier": "B",
+      "score": 83.9
+    },
+    {
+      "class": "Hunter",
+      "spec": "Beast Mastery",
+      "role": "dps",
+      "tier": "B",
+      "score": 83.4
+    },
+    {
+      "class": "Hunter",
+      "spec": "Survival",
+      "role": "dps",
+      "tier": "B",
+      "score": 83
+    },
+    {
+      "class": "Demon Hunter",
+      "spec": "Havoc",
+      "role": "dps",
+      "tier": "C",
+      "score": 81.8
+    },
+    {
+      "class": "Monk",
+      "spec": "Windwalker",
+      "role": "dps",
+      "tier": "C",
+      "score": 81.6
+    },
+    {
+      "class": "Death Knight",
+      "spec": "Unholy",
+      "role": "dps",
+      "tier": "C",
+      "score": 81.6
+    },
+    {
+      "class": "Monk",
+      "spec": "Mistweaver",
+      "role": "healer",
+      "tier": "C",
+      "score": 81.1
+    },
+    {
+      "class": "Rogue",
+      "spec": "Outlaw",
+      "role": "dps",
+      "tier": "C",
+      "score": 81
+    },
+    {
+      "class": "Mage",
+      "spec": "Frost",
+      "role": "dps",
+      "tier": "C",
+      "score": 79.6
+    },
+    {
+      "class": "Death Knight",
+      "spec": "Frost",
+      "role": "dps",
+      "tier": "C",
+      "score": 78.9
+    },
+    {
+      "class": "Druid",
+      "spec": "Feral",
+      "role": "dps",
+      "tier": "C",
+      "score": 77.3
+    },
+    {
+      "class": "Warrior",
+      "spec": "Fury",
+      "role": "dps",
+      "tier": "C",
+      "score": 77.2
+    },
+    {
+      "class": "Mage",
+      "spec": "Fire",
+      "role": "dps",
+      "tier": "C",
+      "score": 76.8
+    },
+    {
+      "class": "Priest",
+      "spec": "Discipline",
+      "role": "healer",
+      "tier": "C",
+      "score": 75.4
+    },
+    {
+      "class": "Evoker",
+      "spec": "Augmentation",
+      "role": "dps",
+      "tier": "C",
+      "score": 74.9
+    }
+  ]
+}
