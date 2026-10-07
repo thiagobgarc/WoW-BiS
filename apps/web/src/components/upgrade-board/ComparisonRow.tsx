@@ -4,6 +4,7 @@ import type { BisItemTooltip } from '@/lib/blizzard/itemTooltip';
 import { ItemIcon } from '@/components/character/ItemIcon';
 import { Tooltip } from '@/components/ui/Tooltip';
 import { BisItemTooltipCard } from '@/components/bis/BisItemTooltipCard';
+import { EquippedItemTooltipCard } from '@/components/character/EquippedItemTooltipCard';
 import { SeverityChip, SEVERITY_RULE } from './SeverityChip';
 import { slotLabel, sourceLabel } from '@mythos/core/utils';
 
@@ -59,7 +60,19 @@ export function ComparisonRow({
             />
             <div className="min-w-0">
               {/* Quality is conveyed by the icon border, not text color — see SlotTile.tsx for why. */}
-              <div className="truncate text-sm font-semibold text-text">{row.equipped?.name ?? 'Nothing equipped'}</div>
+              {row.equipped ? (
+                <Tooltip
+                  trigger={
+                    <a href={row.equipped.wowheadUrl} target="_blank" rel="noreferrer" className="link block truncate text-sm font-semibold text-text">
+                      {row.equipped.name}
+                    </a>
+                  }
+                >
+                  <EquippedItemTooltipCard item={row.equipped} slot={row.physicalSlot} />
+                </Tooltip>
+              ) : (
+                <div className="truncate text-sm font-semibold text-text">Nothing equipped</div>
+              )}
               <div className="figure label mt-0.5">{row.equipped ? `${row.equipped.itemLevel} equipped` : 'Empty slot'}</div>
             </div>
           </div>
