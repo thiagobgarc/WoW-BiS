@@ -195,22 +195,29 @@ function DifficultyPicker({
             // rule under the text, rather than a solid white fill, which
             // made this the loudest thing on the page and outshouted the
             // tier letters it only filters.
-            className={`flex min-h-[44px] cursor-pointer items-center rounded-[3px] px-3.5 text-sm font-semibold [font-stretch:95%] transition-colors duration-150 sm:min-h-9 has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-text has-[:disabled]:cursor-not-allowed has-[:disabled]:opacity-40 ${
-              value === d.value
-                ? 'bg-panel-hover text-text shadow-[inset_0_-2px_0_var(--color-accent)]'
-                : 'text-text-dim hover:text-text'
-            }`}
+            // Styled off the radio itself (has-[:checked], has-[:disabled])
+            // rather than a JS ternary: the input is the source of truth.
+            className={[
+              'flex min-h-[44px] cursor-pointer items-center rounded-[3px] px-3.5 text-sm font-semibold [font-stretch:95%] sm:min-h-9',
+              'text-text-dim transition-colors duration-150 ease-out motion-reduce:transition-none hover:text-text',
+              'has-[:checked]:bg-panel-hover has-[:checked]:text-text has-[:checked]:shadow-[inset_0_-2px_0_var(--color-accent)]',
+              'has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-text',
+              'has-[:disabled]:cursor-not-allowed has-[:disabled]:opacity-50 has-[:disabled]:hover:text-text-dim',
+            ].join(' ')}
+            // A greyed-out option with no reason reads as broken.
+            title={available[d.value] ? undefined : `No ${d.label} tier list has been generated yet`}
           >
-          <input
-            type="radio"
-            name="raid-difficulty"
-            value={d.value}
-            checked={value === d.value}
-            disabled={!available[d.value]}
-            onChange={() => onChange(d.value)}
+            <input
+              type="radio"
+              name="raid-difficulty"
+              value={d.value}
+              checked={value === d.value}
+              disabled={!available[d.value]}
+              onChange={() => onChange(d.value)}
               className="sr-only"
             />
             {d.label}
+            {!available[d.value] && <span className="sr-only"> (not available yet)</span>}
           </label>
         ))}
       </div>
