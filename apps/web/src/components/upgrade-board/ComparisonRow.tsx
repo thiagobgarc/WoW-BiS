@@ -1,6 +1,9 @@
 import { useState } from 'react';
-import type { ComparisonRow as ComparisonRowData } from '@mythos/core/bis';
+import type { ComparisonRow as ComparisonRowData, Target } from '@mythos/core/bis';
+import type { BisItemTooltip } from '@/lib/blizzard/itemTooltip';
 import { ItemIcon } from '@/components/character/ItemIcon';
+import { Tooltip } from '@/components/ui/Tooltip';
+import { BisItemTooltipCard } from '@/components/bis/BisItemTooltipCard';
 import { SeverityChip, SEVERITY_RULE } from './SeverityChip';
 import { slotLabel, sourceLabel } from '@mythos/core/utils';
 
@@ -11,7 +14,30 @@ function unit(row: ComparisonRowData): string {
   return row.ilvlDelta === 1 ? "item level" : "item levels";
 }
 
-export function ComparisonRow({ row, targetIconUrl }: { row: ComparisonRowData; targetIconUrl: string | null }) {
+/** A recommended item's name, hover/focus for its tooltip — the same card the BiS page uses. */
+function TargetName({ target, slot, detail, className }: { target: Target; slot: string; detail: BisItemTooltip | undefined; className: string }) {
+  return (
+    <Tooltip
+      trigger={
+        <a href={`https://www.wowhead.com/item=${target.itemId}`} target="_blank" rel="noreferrer" className={`link ${className}`}>
+          {target.itemName}
+        </a>
+      }
+    >
+      <BisItemTooltipCard item={{ ...target, slot }} detail={detail} />
+    </Tooltip>
+  );
+}
+
+export function ComparisonRow({
+  row,
+  targetIconUrl,
+  tooltips,
+}: {
+  row: ComparisonRowData;
+  targetIconUrl: string | null;
+  tooltips: Record<number, BisItemTooltip>;
+}) {
   const [expanded, setExpanded] = useState(false);
   // The delta column is deliberately sparse: only the slots that can still
   // move carry a figure, so the column reads as the list of actual gaps.
@@ -47,7 +73,12 @@ export function ComparisonRow({ row, targetIconUrl }: { row: ComparisonRowData; 
               </span>
               <ItemIcon size="sm" iconUrl={targetIconUrl} quality="epic" alt={row.target.itemName} />
               <div className="min-w-0">
-                <div className="truncate text-sm font-semibold text-text">{row.target.itemName}</div>
+                <TargetName
+                  target={row.target}
+                  slot={row.bisSlot}
+                  detail={tooltips[row.target.itemId]}
+                  className="block truncate text-sm font-semibold text-text"
+                />
                 <div className="figure label mt-0.5">
                   {row.target.itemLevel}, rank {row.target.rank}
                 </div>
@@ -73,7 +104,8 @@ export function ComparisonRow({ row, targetIconUrl }: { row: ComparisonRowData; 
                 {row.alternatives.map((alt) => (
                   <li key={alt.itemId} className="flex justify-between gap-4 border-b border-rule py-1.5 text-xs text-text-muted last:border-none">
                     <span className="truncate">
-                      <span className="figure text-text-dim">Rank {alt.rank}</span> {alt.itemName}
+                      <span className="figure text-text-dim">Rank {alt.rank}</span>{' '}
+                      <TargetName target={alt} slot={row.bisSlot} detail={tooltips[alt.itemId]} className="" />
                     </span>
                     <span className="figure shrink-0 text-text-dim">
                       {alt.itemLevel}, {sourceLabel(alt.source)}

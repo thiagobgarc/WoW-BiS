@@ -6,7 +6,10 @@ import { CharacterPage } from '@/components/character/CharacterPage';
 import { getFullCharacter, toCharacterKey } from '@/lib/blizzard/getFullCharacter';
 import { getCharacterTalents } from '@/lib/blizzard/getCharacterTalents';
 import { getCharacterProgression } from '@/lib/blizzard/getCharacterProgression';
-import { getItemIconUrls } from '@/lib/blizzard/getIconUrls';
+import { getItemIconUrls, getItemTooltipSources } from '@/lib/blizzard/getIconUrls';
+import { toBisItemTooltip, type BisItemTooltip } from '@/lib/blizzard/itemTooltip';
+import type { ItemTooltipSource } from '@/lib/blizzard/schemas';
+import { SPEC_CATALOGUE } from '@/lib/ingest/specCatalogue';
 import { foldName, searchCharacters, type CharacterSuggestion } from '@/lib/search/characterSearch';
 import { getBisList } from '@/lib/bis/getBisList';
 import { getRecommendedBuild } from '@/lib/talents/getRecommendedBuild';
@@ -34,6 +37,7 @@ let full: Awaited<ReturnType<typeof getFullCharacter>> | null = null;
 let bisEntries: BisEntry[] = [];
 let bisSeeded = false;
 let bisIcons: Record<number, string> = {};
+let bisTooltips: Record<number, BisItemTooltip> = {};
 let statPriority: BisList['statPriority'] | undefined;
 let talents: CharacterTalents | null = null;
 let recommendedTalents: RecommendedTalentBuild | null = null;
@@ -67,10 +71,18 @@ if (!error) {
       bisEntries = bis.entries;
       bisSeeded = bis.seeded;
       statPriority = bis.seeded ? bis.statPriority : undefined;
-      // Icons are cosmetic: a failed lookup leaves the placeholder, never breaks the page.
-      bisIcons = Object.fromEntries(
-        await getItemIconUrls(key.region, bisEntries.map((e) => e.itemId)).catch(() => new Map<number, string>()),
-      );
+      // Icons and tooltip detail are cosmetic: a failed lookup leaves the
+      // placeholder icon or a tooltip built from the BiS entry alone, never
+      // breaks the page.
+      const bisItemIds = bisEntries.map((e) => e.itemId);
+      const [iconMap, tooltipSources] = await Promise.all([
+        getItemIconUrls(key.region, bisItemIds).catch(() => new Map<number, string>()),
+        getItemTooltipSources(key.region, bisItemIds).catch(() => new Map<number, ItemTooltipSource>()),
+      ]);
+      bisIcons = Object.fromEntries(iconMap);
+      const { className, specName } = full.character;
+      const primaryStat = SPEC_CATALOGUE.find((p) => p.class === className && p.spec === specName)?.primaryStat;
+      bisTooltips = Object.fromEntries([...tooltipSources].map(([id, raw]) => [id, toBisItemTooltip(raw, primaryStat)]));
 
       const recommended = await getRecommendedBuild(CURRENT_SEASON_ID, full.character.className, full.character.specName);
       recommendedTalents = recommended.build;
@@ -209,6 +221,7 @@ const noindex = !!error || !full || full.mock;
           bisEntries={bisEntries}
           bisSeeded={bisSeeded}
           bisIcons={bisIcons}
+          bisTooltips={bisTooltips}
           statPriority={statPriority}
           talents={talents}
           recommendedTalents={recommendedTalents}

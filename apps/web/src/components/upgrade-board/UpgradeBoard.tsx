@@ -3,6 +3,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/Tabs';
 import { compareGear, deriveActionGroups, CONTENT_TYPES, type BisEntry, type ContentType } from '@mythos/core/bis';
 import { seasonConfig } from '@/lib/season/seasonConfig';
 import type { EquipmentBySlot } from '@/lib/blizzard/domain';
+import type { BisItemTooltip } from '@/lib/blizzard/itemTooltip';
 import { CompletionMeter } from './CompletionMeter';
 import { ComparisonRow } from './ComparisonRow';
 import { ActionPanels } from './ActionPanels';
@@ -15,10 +16,12 @@ interface Props {
   bisEntries: BisEntry[];
   /** Icon url per BiS item id; items without one show the placeholder. */
   bisIcons: Record<number, string>;
+  /** Tooltip detail per BiS item id, for the recommended items. */
+  bisTooltips: Record<number, BisItemTooltip>;
   seeded: boolean;
 }
 
-export function UpgradeBoard({ equipment, bisEntries, bisIcons, seeded }: Props) {
+export function UpgradeBoard({ equipment, bisEntries, bisIcons, bisTooltips, seeded }: Props) {
   const [contentType, setContentType] = useState<ContentType>('raid');
 
   const result = useMemo(() => compareGear(equipment, bisEntries, contentType), [equipment, bisEntries, contentType]);
@@ -79,6 +82,7 @@ export function UpgradeBoard({ equipment, bisEntries, bisIcons, seeded }: Props)
                       key={`${row.bisSlot}-${row.physicalSlot}`}
                       row={row}
                       targetIconUrl={row.target ? (bisIcons[row.target.itemId] ?? null) : null}
+                      tooltips={bisTooltips}
                     />
                   ))}
                 </div>
