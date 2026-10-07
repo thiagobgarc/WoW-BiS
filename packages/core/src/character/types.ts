@@ -57,6 +57,19 @@ export const DomainItemSetSchema = z.object({
 });
 export type DomainItemSet = z.infer<typeof DomainItemSetSchema>;
 
+/**
+ * The item's upgrade track, as the in-game tooltip shows it ("Hero 6/6").
+ * `seasonMaxItemLevel` is the season's ceiling (its top track fully
+ * upgraded) — what a copy of this item could still reach.
+ */
+export const UpgradeTrackSchema = z.object({
+  track: z.string(),
+  level: z.number(),
+  max: z.number(),
+  seasonMaxItemLevel: z.number(),
+});
+export type UpgradeTrack = z.infer<typeof UpgradeTrackSchema>;
+
 export const DomainItemSchema = z.object({
   slot: EquipmentSlotSchema,
   itemId: z.number(),
@@ -78,8 +91,11 @@ export const DomainItemSchema = z.object({
   requiredLevelText: z.string().nullable(),
   classesText: z.string().nullable(),
   setInfo: DomainItemSetSchema.nullable(),
+  // Optional so payloads cached before it existed still parse. Null for
+  // items with no track (crafted gear, PvP, older content).
+  upgradeTrack: UpgradeTrackSchema.nullable().optional(),
 });
-export type DomainItem = z.infer<typeof DomainItemSchema>;
+export type DomainItem =z.infer<typeof DomainItemSchema>;
 
 /**
  * A slot the character has nothing equipped in. Presentation-only (the paper

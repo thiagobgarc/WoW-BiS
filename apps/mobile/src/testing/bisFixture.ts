@@ -103,7 +103,8 @@ const RAID_ENTRIES: BisEntry[] = [
     rank: 1,
     itemId: fixtureItemId('finger_1'),
     itemName: 'Band of the Abyss',
-    itemLevel: 640,
+    // Equal to the equipped copy's 636: a lower-ilvl copy isn't BiS.
+    itemLevel: 636,
     source: { type: 'raid', instance: RAID, boss: 'Sylvara', difficulty: 'mythic' },
     tierPiece: false,
     catalystable: false,

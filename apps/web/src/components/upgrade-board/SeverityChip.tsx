@@ -14,12 +14,17 @@ const SEVERITY_META: Record<Severity, { label: string; icon: string; fg: string 
   'major-gap': { label: 'Major gap', icon: '⬤', fg: 'text-severity-gap' },
 };
 
-export function SeverityChip({ severity }: { severity: Severity }) {
+/**
+ * `upgradable` marks a row where the player already has the BiS item, just
+ * not its best copy: the color still says how far off it is, but "Upgrade"
+ * would read as "go get a different item".
+ */
+export function SeverityChip({ severity, upgradable = false }: { severity: Severity; upgradable?: boolean }) {
   const meta = SEVERITY_META[severity];
   return (
     <span className={`inline-flex items-center gap-1.5 text-xs font-semibold [font-stretch:92%] ${meta.fg}`}>
-      <span aria-hidden="true">{meta.icon}</span>
-      {meta.label}
+      <span aria-hidden="true">{upgradable ? '⬆' : meta.icon}</span>
+      {upgradable ? 'Upgradable' : meta.label}
     </span>
   );
 }

@@ -35,6 +35,7 @@ export interface ComparisonRow {
   alternatives: Target[];
   severity: Severity;
   ilvlDelta: number;
+  /** Same item id as the target — true even for a lower-ilvl copy; `severity` says whether it's done. */
   isMatch: boolean;
 }
 
@@ -61,9 +62,18 @@ function toTarget(entry: BisEntry): Target {
 export function severityFor(equipped: DomainItem | null, target: Target | null): { severity: Severity; delta: number } {
   if (!target) return { severity: 'bis', delta: 0 };
   if (!equipped) return { severity: 'major-gap', delta: target.itemLevel };
-  if (equipped.itemId === target.itemId) return { severity: 'bis', delta: 0 };
-
   const delta = target.itemLevel - equipped.itemLevel;
+  if (equipped.itemId === target.itemId) {
+    // The right item is only best in slot once it can't get better: the
+    // season's top track, fully upgraded (Myth 6/6). Until then the gap is
+    // measured to that ceiling. Items with no track (crafted gear) fall
+    // back to the target's ilvl. A match is never 'major-gap': the player
+    // already has the piece, only a better copy of it is missing.
+    const remaining = equipped.upgradeTrack ? equipped.upgradeTrack.seasonMaxItemLevel - equipped.itemLevel : delta;
+    if (remaining <= 0) return { severity: 'bis', delta: 0 };
+    return { severity: remaining <= CLOSE_ILVL_THRESHOLD ? 'close' : 'upgrade', delta: remaining };
+  }
+
   if (delta <= 0) return { severity: 'close', delta };
   if (delta <= CLOSE_ILVL_THRESHOLD) return { severity: 'close', delta };
   if (delta <= MAJOR_GAP_ILVL_THRESHOLD) return { severity: 'upgrade', delta };
@@ -151,7 +161,8 @@ export function compareGear(equipped: EquipmentBySlot, bisList: BisEntry[], cont
 
   rows.sort((a, b) => b.ilvlDelta - a.ilvlDelta);
 
-  const bisSlotsCount = rows.filter((r) => r.isMatch).length;
+  // A lower or not fully upgraded copy of the BiS item is a match but not done yet.
+  const bisSlotsCount = rows.filter((r) => r.isMatch && r.severity === 'bis').length;
   const theoreticalMaxIlvl = rows.length
     ? Math.round(rows.reduce((sum, r) => sum + (r.target?.itemLevel ?? r.equipped?.itemLevel ?? 0), 0) / rows.length)
     : 0;

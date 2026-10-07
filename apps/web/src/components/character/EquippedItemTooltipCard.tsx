@@ -1,5 +1,5 @@
 import type { DomainItem, EquipmentSlot } from '@/lib/blizzard/domain';
-import { slotLabel, qualityColor } from '@mythos/core/utils';
+import { slotLabel, qualityColor, trackLabel } from '@mythos/core/utils';
 
 /**
  * The tooltip for an item the character is wearing. Unlike a BiS item's
@@ -22,6 +22,7 @@ export function EquippedItemTooltipCard({ item, slot }: { item: DomainItem; slot
         <span className="text-sm font-semibold text-text">{item.name}</span>
       </div>
       <div className="figure text-text-muted">Item Level {item.itemLevel}</div>
+      {item.upgradeTrack && <div className="figure text-text-muted">Upgrade Level: {trackLabel(item.upgradeTrack)}</div>}
       {item.bindingText && <div className="text-text-dim">{item.bindingText}</div>}
       {(item.armorTypeLabel || item.armorLine) && (
         <div className="flex justify-between gap-3 text-text-dim">

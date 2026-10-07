@@ -159,4 +159,45 @@ describe('compareGear', () => {
     expect(raidResult.rows[0]?.target?.itemId).toBe(1);
     expect(mplusResult.rows[0]?.target?.itemId).toBe(2);
   });
+
+  it('does not call a lower-ilvl copy of the BiS item best in slot', () => {
+    const bisList = buildBisList();
+    const equipped: EquipmentBySlot = {
+      legs: item({ slot: 'legs', itemId: 1008, itemLevel: 497 }), // BiS item, 5 below target
+      head: item({ slot: 'head', itemId: 1000, itemLevel: 492 }), // BiS item, 10 below
+      chest: item({ slot: 'chest', itemId: 1004, itemLevel: 470 }), // BiS item, 32 below
+      feet: item({ slot: 'feet', itemId: 1009, itemLevel: 502 }), // BiS item at target ilvl
+    };
+
+    const result = compareGear(equipped, bisList, 'raid');
+    const row = (slot: string) => result.rows.find((r) => r.physicalSlot === slot)!;
+
+    expect(row('legs')).toMatchObject({ severity: 'close', ilvlDelta: 5, isMatch: true });
+    expect(row('head')).toMatchObject({ severity: 'upgrade', ilvlDelta: 10, isMatch: true });
+    // Never a major gap: the player already has the right item.
+    expect(row('chest')).toMatchObject({ severity: 'upgrade', ilvlDelta: 32, isMatch: true });
+    expect(row('feet')).toMatchObject({ severity: 'bis', ilvlDelta: 0, isMatch: true });
+    // Only the full-ilvl copy counts toward the BiS meter.
+    expect(result.bisSlotsCount).toBe(1);
+  });
+
+  it('only calls a tracked BiS item done once it is fully upgraded on the top track', () => {
+    const bisList = buildBisList();
+    const track = (name: string, level: number) => ({ track: name, level, max: 6, seasonMaxItemLevel: 520 });
+    const equipped: EquipmentBySlot = {
+      // Hero 6/6: maxed on its own track, but a Myth copy goes higher.
+      legs: item({ slot: 'legs', itemId: 1008, itemLevel: 507, upgradeTrack: track('Hero', 6) }),
+      // Myth 3/6: above the target's ilvl, still upgradable with crests.
+      head: item({ slot: 'head', itemId: 1000, itemLevel: 513, upgradeTrack: track('Myth', 3) }),
+      feet: item({ slot: 'feet', itemId: 1009, itemLevel: 520, upgradeTrack: track('Myth', 6) }),
+    };
+
+    const result = compareGear(equipped, bisList, 'raid');
+    const row = (slot: string) => result.rows.find((r) => r.physicalSlot === slot)!;
+
+    expect(row('legs')).toMatchObject({ severity: 'upgrade', ilvlDelta: 13, isMatch: true });
+    expect(row('head')).toMatchObject({ severity: 'close', ilvlDelta: 7, isMatch: true });
+    expect(row('feet')).toMatchObject({ severity: 'bis', ilvlDelta: 0, isMatch: true });
+    expect(result.bisSlotsCount).toBe(1);
+  });
 });
