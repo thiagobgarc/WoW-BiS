@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 70
+      "popularity": 80
     },
     {
       "slot": "head",
@@ -39,7 +39,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
+      "statPriorityFit": 43,
       "popularity": 17
     },
     {
@@ -75,12 +75,30 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "back",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 268253,
+      "itemName": "Silken Voodoo Drape",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 44,
+      "popularity": 30
+    },
+    {
+      "slot": "back",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 239656,
       "itemName": "Adherent's Silken Shroud",
       "itemLevel": 331,
@@ -89,26 +107,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 27
-    },
-    {
-      "slot": "back",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268248,
-      "itemName": "Amani Summoning Shawl",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 57,
-      "popularity": 20
+      "statPriorityFit": 53,
+      "popularity": 23
     },
     {
       "slot": "chest",
@@ -125,7 +125,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 45,
-      "popularity": 93
+      "popularity": 90
+    },
+    {
+      "slot": "chest",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268222,
+      "itemName": "Reckless Spirit Breastplate",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 77,
+      "popularity": 7
     },
     {
       "slot": "wrist",
@@ -139,8 +157,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 60
+      "statPriorityFit": 70,
+      "popularity": 50
     },
     {
       "slot": "wrist",
@@ -158,7 +176,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 33
+      "popularity": 40
     },
     {
       "slot": "hands",
@@ -175,7 +193,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 35,
-      "popularity": 77
+      "popularity": 63
     },
     {
       "slot": "hands",
@@ -189,23 +207,26 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 20
+      "statPriorityFit": 53,
+      "popularity": 37
     },
     {
       "slot": "waist",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 271445,
-      "itemName": "Fanged Brute's Greatbelt",
+      "itemId": 268259,
+      "itemName": "Girdle of Toxic Regret",
       "itemLevel": 318,
       "source": {
-        "type": "other"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 27,
-      "popularity": 27
+      "statPriorityFit": 52,
+      "popularity": 47
     },
     {
       "slot": "waist",
@@ -223,7 +244,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 20
+      "popularity": 23
     },
     {
       "slot": "legs",
@@ -258,7 +279,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 65,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "feet",
@@ -276,22 +297,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 45,
-      "popularity": 53
+      "popularity": 50
     },
     {
       "slot": "feet",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 237828,
-      "itemName": "Spellbreaker's March",
-      "itemLevel": 331,
+      "itemId": 268245,
+      "itemName": "Entombed Cultist's Sabatons",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Nek'zali the Soulcoiler",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 20
+      "statPriorityFit": 76,
+      "popularity": 30
     },
     {
       "slot": "finger",
@@ -305,31 +329,13 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 50
+      "statPriorityFit": 43,
+      "popularity": 60
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 252258,
-      "itemName": "Sickening Signet of Atroxus",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Atroxus",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 76,
-      "popularity": 47
-    },
-    {
-      "slot": "finger",
-      "contentType": "raid",
-      "rank": 3,
       "itemId": 268249,
       "itemName": "Vile Alchemist's Band",
       "itemLevel": 318,
@@ -342,30 +348,30 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 28,
-      "popularity": 30
+      "popularity": 37
+    },
+    {
+      "slot": "finger",
+      "contentType": "raid",
+      "rank": 3,
+      "itemId": 252258,
+      "itemName": "Sickening Signet of Atroxus",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Voidscar Arena",
+        "boss": "Atroxus",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 76,
+      "popularity": 27
     },
     {
       "slot": "trinket",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 270164,
-      "itemName": "Gebbo's Bottomless Bag",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 50,
-      "popularity": 93
-    },
-    {
-      "slot": "trinket",
-      "contentType": "raid",
-      "rank": 2,
       "itemId": 270162,
       "itemName": "Soulcoiler Ritual Vessel",
       "itemLevel": 318,
@@ -378,14 +384,14 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 87
+      "popularity": 97
     },
     {
-      "slot": "main_hand",
+      "slot": "trinket",
       "contentType": "raid",
-      "rank": 1,
-      "itemId": 268210,
-      "itemName": "Malevolent Spiritcudgel",
+      "rank": 2,
+      "itemId": 270164,
+      "itemName": "Gebbo's Bottomless Bag",
       "itemLevel": 318,
       "source": {
         "type": "raid",
@@ -395,8 +401,44 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 34,
-      "popularity": 43
+      "statPriorityFit": 50,
+      "popularity": 80
+    },
+    {
+      "slot": "trinket",
+      "contentType": "raid",
+      "rank": 3,
+      "itemId": 270171,
+      "itemName": "Preternatural Antivenom",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Twin Fangs",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 65,
+      "popularity": 7
+    },
+    {
+      "slot": "main_hand",
+      "contentType": "raid",
+      "rank": 1,
+      "itemId": 268211,
+      "itemName": "Baleful Hexblade",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 74,
+      "popularity": 40
     },
     {
       "slot": "main_hand",
@@ -411,22 +453,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 83,
-      "popularity": 33
+      "popularity": 30
     },
     {
       "slot": "off_hand",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 237831,
-      "itemName": "Spellbreaker's Rebuke",
-      "itemLevel": 331,
+      "itemId": 268262,
+      "itemName": "Bubblefin Splash Guard",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Tidebound Grotto",
+        "boss": "Nymrissa Wavecaller",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 37
+      "statPriorityFit": 47,
+      "popularity": 47
     },
     {
       "slot": "off_hand",
@@ -444,7 +489,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 37
+      "popularity": 27
     },
     {
       "slot": "head",
@@ -461,24 +506,21 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 87
+      "popularity": 93
     },
     {
       "slot": "head",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268229,
-      "itemName": "Skullguard of the Risen Sacrifice",
-      "itemLevel": 318,
+      "itemId": 237832,
+      "itemName": "Spellbreaker's Cover",
+      "itemLevel": 331,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
-        "difficulty": "mythic"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 90,
+      "statPriorityFit": 43,
       "popularity": 7
     },
     {
@@ -497,7 +539,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "shoulder",
@@ -514,7 +556,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "shoulder",
@@ -528,7 +570,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 77,
+      "statPriorityFit": 48,
       "popularity": 7
     },
     {
@@ -547,7 +589,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 30
+      "popularity": 37
     },
     {
       "slot": "back",
@@ -561,8 +603,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 23
+      "statPriorityFit": 53,
+      "popularity": 27
     },
     {
       "slot": "chest",
@@ -579,7 +621,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 45,
-      "popularity": 70
+      "popularity": 60
     },
     {
       "slot": "chest",
@@ -593,8 +635,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
-      "popularity": 27
+      "statPriorityFit": 30,
+      "popularity": 37
     },
     {
       "slot": "wrist",
@@ -608,7 +650,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
+      "statPriorityFit": 70,
       "popularity": 63
     },
     {
@@ -627,7 +669,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 23
+      "popularity": 33
     },
     {
       "slot": "hands",
@@ -644,7 +686,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 35,
-      "popularity": 83
+      "popularity": 63
     },
     {
       "slot": "hands",
@@ -658,8 +700,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 17
+      "statPriorityFit": 53,
+      "popularity": 33
     },
     {
       "slot": "waist",
@@ -673,8 +715,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 27,
-      "popularity": 40
+      "statPriorityFit": 61,
+      "popularity": 37
     },
     {
       "slot": "waist",
@@ -709,25 +751,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 90
-    },
-    {
-      "slot": "legs",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 271878,
-      "itemName": "Chausses of Unbound Rancor",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 65,
-      "popularity": 10
+      "popularity": 100
     },
     {
       "slot": "feet",
@@ -745,7 +769,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 33
+      "popularity": 47
     },
     {
       "slot": "feet",
@@ -759,46 +783,13 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
+      "statPriorityFit": 30,
       "popularity": 20
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 240949,
-      "itemName": "Masterwork Sin'dorei Band",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 47
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 159459,
-      "itemName": "Ritual Binder's Ring",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Kings' Rest",
-        "boss": "Mchimba the Embalmer",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 79,
-      "popularity": 43
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 3,
       "itemId": 268266,
       "itemName": "Alluring Bubbleband",
       "itemLevel": 318,
@@ -811,7 +802,40 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 30
+      "popularity": 60
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 240949,
+      "itemName": "Masterwork Sin'dorei Band",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 43,
+      "popularity": 60
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 3,
+      "itemId": 159459,
+      "itemName": "Ritual Binder's Ring",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Kings' Rest",
+        "boss": "Mchimba the Embalmer",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 79,
+      "popularity": 27
     },
     {
       "slot": "trinket",
@@ -829,7 +853,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "trinket",
@@ -847,7 +871,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 50
+      "popularity": 53
     },
     {
       "slot": "trinket",
@@ -865,7 +889,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 30
+      "popularity": 23
     },
     {
       "slot": "main_hand",
@@ -880,7 +904,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 83,
-      "popularity": 63
+      "popularity": 47
     },
     {
       "slot": "main_hand",
@@ -898,7 +922,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 23
+      "popularity": 33
     },
     {
       "slot": "off_hand",
@@ -916,34 +940,37 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 43
+      "popularity": 57
     },
     {
       "slot": "off_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 237831,
-      "itemName": "Spellbreaker's Rebuke",
-      "itemLevel": 331,
+      "itemId": 268262,
+      "itemName": "Bubblefin Splash Guard",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Tidebound Grotto",
+        "boss": "Nymrissa Wavecaller",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 37
+      "statPriorityFit": 47,
+      "popularity": 23
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-06"
+      "collectedAt": "2026-10-15"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-06"
+      "collectedAt": "2026-10-15"
     }
   }
 }

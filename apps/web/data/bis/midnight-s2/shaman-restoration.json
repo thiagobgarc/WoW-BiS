@@ -25,25 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 83
-    },
-    {
-      "slot": "head",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268230,
-      "itemName": "Crown of the Eternal Fang",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 75,
-      "popularity": 7
+      "popularity": 93
     },
     {
       "slot": "neck",
@@ -61,7 +43,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 87
+      "popularity": 97
     },
     {
       "slot": "shoulder",
@@ -78,7 +60,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 93
+      "popularity": 73
     },
     {
       "slot": "shoulder",
@@ -92,8 +74,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 83,
-      "popularity": 7
+      "statPriorityFit": 30,
+      "popularity": 23
     },
     {
       "slot": "back",
@@ -111,7 +93,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 47
+      "popularity": 53
     },
     {
       "slot": "back",
@@ -125,8 +107,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 17
+      "statPriorityFit": 70,
+      "popularity": 23
     },
     {
       "slot": "chest",
@@ -143,7 +125,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 97
+      "popularity": 93
     },
     {
       "slot": "wrist",
@@ -158,25 +140,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 53,
-      "popularity": 87
+      "popularity": 77
     },
     {
       "slot": "wrist",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 159380,
-      "itemName": "Arc-Glass Bindings",
-      "itemLevel": 311,
+      "itemId": 268217,
+      "itemName": "Rising Tide Wristguards",
+      "itemLevel": 318,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Temple of Sethraliss",
-        "boss": "Adderis and Aspix",
-        "keyLevel": 10
+        "type": "raid",
+        "instance": "The Tidebound Grotto",
+        "boss": "Nymrissa Wavecaller",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 85,
-      "popularity": 7
+      "statPriorityFit": 45,
+      "popularity": 20
     },
     {
       "slot": "hands",
@@ -193,7 +175,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "hands",
@@ -207,7 +189,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
+      "statPriorityFit": 70,
       "popularity": 7
     },
     {
@@ -226,7 +208,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 40
+      "popularity": 53
     },
     {
       "slot": "waist",
@@ -240,8 +222,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 13
+      "statPriorityFit": 30,
+      "popularity": 20
     },
     {
       "slot": "legs",
@@ -258,7 +240,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 87
+      "popularity": 83
     },
     {
       "slot": "legs",
@@ -272,28 +254,13 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 7
+      "statPriorityFit": 53,
+      "popularity": 17
     },
     {
       "slot": "feet",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 244577,
-      "itemName": "Farstrider's Razor Talons",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 30
-    },
-    {
-      "slot": "feet",
-      "contentType": "raid",
-      "rank": 2,
       "itemId": 268258,
       "itemName": "Boots of the Reckless Wayfarer",
       "itemLevel": 318,
@@ -306,12 +273,42 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 73,
-      "popularity": 13
+      "popularity": 30
+    },
+    {
+      "slot": "feet",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271440,
+      "itemName": "Greaves of the Noxious Depths",
+      "itemLevel": 318,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 82,
+      "popularity": 27
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 240949,
+      "itemName": "Masterwork Sin'dorei Band",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 60,
+      "popularity": 70
+    },
+    {
+      "slot": "finger",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 268252,
       "itemName": "Apex Brute's Claw Ring",
       "itemLevel": 318,
@@ -324,40 +321,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 94,
-      "popularity": 53
-    },
-    {
-      "slot": "finger",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 240949,
-      "itemName": "Masterwork Sin'dorei Band",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 47
+      "popularity": 63
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 251148,
-      "itemName": "Pilfered Precious Band",
+      "itemId": 273792,
+      "itemName": "Band of the Amani Warlord",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Den of Nalorakk",
-        "boss": "The Hoardmonger",
+        "dungeon": "Altar of Fangs",
+        "boss": "Zul'jan",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 64,
-      "popularity": 40
+      "statPriorityFit": 78,
+      "popularity": 27
     },
     {
       "slot": "trinket",
@@ -375,7 +357,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 93
+      "popularity": 87
     },
     {
       "slot": "trinket",
@@ -393,25 +375,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 67
+      "popularity": 73
     },
     {
       "slot": "trinket",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 270167,
-      "itemName": "Wavecaller's Seastone",
+      "itemId": 270171,
+      "itemName": "Preternatural Antivenom",
       "itemLevel": 318,
       "source": {
         "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
+        "instance": "The Venomous Abyss",
+        "boss": "The Twin Fangs",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 65,
-      "popularity": 20
+      "statPriorityFit": 100,
+      "popularity": 10
     },
     {
       "slot": "main_hand",
@@ -429,25 +411,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 83
+      "popularity": 87
     },
     {
       "slot": "main_hand",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268210,
-      "itemName": "Malevolent Spiritcudgel",
+      "itemId": 268203,
+      "itemName": "Hexing Spiritrender",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
+        "boss": "Nek'zali the Soulcoiler",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "off_hand",
@@ -461,8 +443,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 53
+      "statPriorityFit": 60,
+      "popularity": 63
     },
     {
       "slot": "off_hand",
@@ -480,7 +462,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 37
+      "popularity": 33
     },
     {
       "slot": "head",
@@ -497,7 +479,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 80
+      "popularity": 83
     },
     {
       "slot": "head",
@@ -511,8 +493,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 79,
-      "popularity": 7
+      "statPriorityFit": 48,
+      "popularity": 10
     },
     {
       "slot": "neck",
@@ -530,7 +512,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "shoulder",
@@ -547,7 +529,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 87
+      "popularity": 83
     },
     {
       "slot": "shoulder",
@@ -561,7 +543,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 83,
+      "statPriorityFit": 30,
       "popularity": 10
     },
     {
@@ -580,7 +562,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 47
+      "popularity": 67
     },
     {
       "slot": "back",
@@ -594,8 +576,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 13
+      "statPriorityFit": 70,
+      "popularity": 10
     },
     {
       "slot": "chest",
@@ -612,7 +594,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "wrist",
@@ -627,24 +609,24 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 53,
-      "popularity": 80
+      "popularity": 87
     },
     {
       "slot": "wrist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 159380,
-      "itemName": "Arc-Glass Bindings",
+      "itemId": 251200,
+      "itemName": "Saptorbane Guards",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Temple of Sethraliss",
-        "boss": "Adderis and Aspix",
+        "dungeon": "The Blinding Vale",
+        "boss": "Ziekket",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 85,
+      "statPriorityFit": 78,
       "popularity": 7
     },
     {
@@ -662,7 +644,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 97
+      "popularity": 90
     },
     {
       "slot": "waist",
@@ -680,25 +662,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 53
+      "popularity": 50
     },
     {
       "slot": "waist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 251155,
-      "itemName": "Tribal Defender's Cord",
-      "itemLevel": 311,
+      "itemId": 244581,
+      "itemName": "Farstrider's Trophy Belt",
+      "itemLevel": 331,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Den of Nalorakk",
-        "boss": "Sentinel of Winter",
-        "keyLevel": 10
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 71,
-      "popularity": 10
+      "statPriorityFit": 30,
+      "popularity": 17
     },
     {
       "slot": "legs",
@@ -715,7 +694,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 80
+      "popularity": 73
     },
     {
       "slot": "legs",
@@ -729,28 +708,13 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
+      "statPriorityFit": 53,
       "popularity": 17
     },
     {
       "slot": "feet",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 244577,
-      "itemName": "Farstrider's Razor Talons",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 40
-    },
-    {
-      "slot": "feet",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 271440,
       "itemName": "Greaves of the Noxious Depths",
       "itemLevel": 311,
@@ -759,8 +723,23 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 58,
-      "popularity": 23
+      "statPriorityFit": 82,
+      "popularity": 33
+    },
+    {
+      "slot": "feet",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 244577,
+      "itemName": "Farstrider's Razor Talons",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 30,
+      "popularity": 30
     },
     {
       "slot": "finger",
@@ -778,7 +757,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 64,
-      "popularity": 73
+      "popularity": 57
     },
     {
       "slot": "finger",
@@ -796,7 +775,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 94,
-      "popularity": 40
+      "popularity": 43
     },
     {
       "slot": "finger",
@@ -814,7 +793,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 78,
-      "popularity": 40
+      "popularity": 37
     },
     {
       "slot": "trinket",
@@ -856,19 +835,19 @@
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 270167,
-      "itemName": "Wavecaller's Seastone",
+      "itemId": 270164,
+      "itemName": "Gebbo's Bottomless Bag",
       "itemLevel": 318,
       "source": {
         "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
+        "instance": "The Venomous Abyss",
+        "boss": "The Lost Explorers",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 65,
-      "popularity": 13
+      "statPriorityFit": 50,
+      "popularity": 17
     },
     {
       "slot": "main_hand",
@@ -886,19 +865,19 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 77
+      "popularity": 87
     },
     {
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268210,
-      "itemName": "Malevolent Spiritcudgel",
+      "itemId": 268203,
+      "itemName": "Hexing Spiritrender",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
+        "boss": "Nek'zali the Soulcoiler",
         "difficulty": "mythic"
       },
       "tierPiece": false,
@@ -918,8 +897,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 57
+      "statPriorityFit": 60,
+      "popularity": 50
     },
     {
       "slot": "off_hand",
@@ -944,12 +923,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-06"
+      "collectedAt": "2026-10-15"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-06"
+      "collectedAt": "2026-10-15"
     }
   }
 }

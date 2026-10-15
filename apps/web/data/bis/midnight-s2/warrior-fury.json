@@ -31,18 +31,18 @@
       "slot": "head",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 251126,
-      "itemName": "Greathelm of Temptation",
-      "itemLevel": 311,
+      "itemId": 268229,
+      "itemName": "Skullguard of the Risen Sacrifice",
+      "itemLevel": 318,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Murder Row",
-        "boss": "Kystia Manaheart",
-        "keyLevel": 10
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Nek'zali the Soulcoiler",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 56,
+      "statPriorityFit": 82,
       "popularity": 7
     },
     {
@@ -79,7 +79,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 13
+      "popularity": 10
     },
     {
       "slot": "shoulder",
@@ -96,7 +96,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 100
+      "popularity": 93
     },
     {
       "slot": "back",
@@ -128,8 +128,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 10
+      "statPriorityFit": 30,
+      "popularity": 17
     },
     {
       "slot": "chest",
@@ -146,25 +146,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 87
-    },
-    {
-      "slot": "chest",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 193753,
-      "itemName": "Breastplate of Soaring Terror",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Ruby Life Pools",
-        "boss": "Kyrakka and Erkhart Stormvein",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 78,
-      "popularity": 7
+      "popularity": 90
     },
     {
       "slot": "wrist",
@@ -178,8 +160,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 90
+      "statPriorityFit": 60,
+      "popularity": 93
     },
     {
       "slot": "hands",
@@ -196,7 +178,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 83
+      "popularity": 93
     },
     {
       "slot": "waist",
@@ -214,25 +196,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 37
+      "popularity": 30
     },
     {
       "slot": "waist",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268244,
-      "itemName": "Forgotten Grotto Girdle",
-      "itemLevel": 318,
+      "itemId": 237830,
+      "itemName": "Spellbreaker's Girdle",
+      "itemLevel": 331,
       "source": {
-        "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
-        "difficulty": "mythic"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 76,
-      "popularity": 13
+      "statPriorityFit": 43,
+      "popularity": 10
     },
     {
       "slot": "legs",
@@ -249,7 +228,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 35,
-      "popularity": 87
+      "popularity": 67
     },
     {
       "slot": "legs",
@@ -267,7 +246,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 40,
-      "popularity": 13
+      "popularity": 27
     },
     {
       "slot": "feet",
@@ -281,7 +260,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 43,
       "popularity": 53
     },
     {
@@ -300,7 +279,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 17
+      "popularity": 27
     },
     {
       "slot": "finger",
@@ -318,7 +297,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 73
+      "popularity": 60
     },
     {
       "slot": "finger",
@@ -332,26 +311,23 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 23
+      "statPriorityFit": 53,
+      "popularity": 33
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 268249,
-      "itemName": "Vile Alchemist's Band",
+      "itemId": 281029,
+      "itemName": "Band of the Swarmcaller",
       "itemLevel": 318,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Vashnik the Malignant",
-        "difficulty": "mythic"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 61,
-      "popularity": 20
+      "statPriorityFit": 75,
+      "popularity": 30
     },
     {
       "slot": "trinket",
@@ -387,7 +363,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 40,
-      "popularity": 60
+      "popularity": 67
     },
     {
       "slot": "trinket",
@@ -405,7 +381,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 17
+      "popularity": 20
     },
     {
       "slot": "main_hand",
@@ -426,6 +402,21 @@
       "popularity": 93
     },
     {
+      "slot": "main_hand",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 280799,
+      "itemName": "Lu'selama, Light's Justice",
+      "itemLevel": 318,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 50,
+      "popularity": 7
+    },
+    {
       "slot": "off_hand",
       "contentType": "raid",
       "rank": 1,
@@ -437,26 +428,23 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 70
+      "statPriorityFit": 60,
+      "popularity": 37
     },
     {
       "slot": "off_hand",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268214,
-      "itemName": "Malignant Toothed Edge",
+      "itemId": 280799,
+      "itemName": "Lu'selama, Light's Justice",
       "itemLevel": 318,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Vashnik the Malignant",
-        "difficulty": "mythic"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 88,
-      "popularity": 20
+      "statPriorityFit": 50,
+      "popularity": 23
     },
     {
       "slot": "head",
@@ -491,7 +479,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 67
+      "popularity": 83
     },
     {
       "slot": "neck",
@@ -509,7 +497,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 13
+      "popularity": 10
     },
     {
       "slot": "shoulder",
@@ -526,7 +514,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "back",
@@ -544,7 +532,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 37
+      "popularity": 53
     },
     {
       "slot": "back",
@@ -562,7 +550,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 20
+      "popularity": 13
     },
     {
       "slot": "chest",
@@ -579,7 +567,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "wrist",
@@ -593,7 +581,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 60,
       "popularity": 93
     },
     {
@@ -611,7 +599,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 77
+      "popularity": 80
     },
     {
       "slot": "hands",
@@ -625,8 +613,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
-      "popularity": 10
+      "statPriorityFit": 30,
+      "popularity": 13
     },
     {
       "slot": "waist",
@@ -644,7 +632,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 37
+      "popularity": 50
     },
     {
       "slot": "waist",
@@ -658,7 +646,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 49,
+      "statPriorityFit": 48,
       "popularity": 13
     },
     {
@@ -676,7 +664,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 35,
-      "popularity": 73
+      "popularity": 70
     },
     {
       "slot": "legs",
@@ -694,7 +682,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 40,
-      "popularity": 20
+      "popularity": 17
     },
     {
       "slot": "feet",
@@ -708,8 +696,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 57
+      "statPriorityFit": 43,
+      "popularity": 63
     },
     {
       "slot": "feet",
@@ -745,7 +733,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 83
+      "popularity": 67
     },
     {
       "slot": "finger",
@@ -759,26 +747,23 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 33
+      "statPriorityFit": 53,
+      "popularity": 43
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 268249,
-      "itemName": "Vile Alchemist's Band",
-      "itemLevel": 318,
+      "itemId": 281029,
+      "itemName": "Band of the Swarmcaller",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Vashnik the Malignant",
-        "difficulty": "mythic"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 61,
-      "popularity": 20
+      "statPriorityFit": 75,
+      "popularity": 30
     },
     {
       "slot": "trinket",
@@ -796,7 +781,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "trinket",
@@ -814,7 +799,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 40,
-      "popularity": 60
+      "popularity": 77
     },
     {
       "slot": "trinket",
@@ -850,22 +835,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 83
-    },
-    {
-      "slot": "main_hand",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 237846,
-      "itemName": "Blood Knight's Warblade",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 7
+      "popularity": 90
     },
     {
       "slot": "off_hand",
@@ -879,38 +849,35 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 67
+      "statPriorityFit": 60,
+      "popularity": 63
     },
     {
       "slot": "off_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268214,
-      "itemName": "Malignant Toothed Edge",
-      "itemLevel": 318,
+      "itemId": 280799,
+      "itemName": "Lu'selama, Light's Justice",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Vashnik the Malignant",
-        "difficulty": "mythic"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 88,
-      "popularity": 17
+      "statPriorityFit": 50,
+      "popularity": 20
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-06"
+      "collectedAt": "2026-10-15"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-06"
+      "collectedAt": "2026-10-15"
     }
   }
 }
