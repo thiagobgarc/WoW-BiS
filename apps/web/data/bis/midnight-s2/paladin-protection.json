@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 83
+      "popularity": 73
     },
     {
       "slot": "head",
@@ -43,7 +43,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 75,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "neck",
@@ -61,24 +61,24 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 80
+      "popularity": 83
     },
     {
       "slot": "neck",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 273781,
-      "itemName": "Strand of Warding Fangs",
-      "itemLevel": 311,
+      "itemId": 268250,
+      "itemName": "Sentinel's Vitriolic Chain",
+      "itemLevel": 318,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Altar of Fangs",
-        "boss": "The Writhing Coil",
-        "keyLevel": 10
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Entombed Sentinels",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 85,
+      "statPriorityFit": 73,
       "popularity": 10
     },
     {
@@ -110,8 +110,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 10
+      "statPriorityFit": 53,
+      "popularity": 7
     },
     {
       "slot": "back",
@@ -129,7 +129,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 47
+      "popularity": 57
     },
     {
       "slot": "back",
@@ -143,8 +143,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 13
+      "statPriorityFit": 53,
+      "popularity": 10
     },
     {
       "slot": "chest",
@@ -164,21 +164,6 @@
       "popularity": 93
     },
     {
-      "slot": "chest",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 237829,
-      "itemName": "Spellbreaker's Shelter",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 7
-    },
-    {
       "slot": "wrist",
       "contentType": "raid",
       "rank": 1,
@@ -190,8 +175,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 67
+      "statPriorityFit": 30,
+      "popularity": 60
     },
     {
       "slot": "wrist",
@@ -209,7 +194,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 13
+      "popularity": 20
     },
     {
       "slot": "hands",
@@ -240,8 +225,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 7
+      "statPriorityFit": 43,
+      "popularity": 10
     },
     {
       "slot": "waist",
@@ -259,22 +244,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 53
+      "popularity": 67
     },
     {
       "slot": "waist",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 237830,
-      "itemName": "Spellbreaker's Girdle",
-      "itemLevel": 331,
+      "itemId": 268244,
+      "itemName": "Forgotten Grotto Girdle",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Tidebound Grotto",
+        "boss": "Nymrissa Wavecaller",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 20
+      "statPriorityFit": 52,
+      "popularity": 10
     },
     {
       "slot": "legs",
@@ -315,21 +303,6 @@
       "slot": "feet",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 237828,
-      "itemName": "Spellbreaker's March",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 43
-    },
-    {
-      "slot": "feet",
-      "contentType": "raid",
-      "rank": 2,
       "itemId": 268245,
       "itemName": "Entombed Cultist's Sabatons",
       "itemLevel": 318,
@@ -342,12 +315,42 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 27
+      "popularity": 40
+    },
+    {
+      "slot": "feet",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 237828,
+      "itemName": "Spellbreaker's March",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 43,
+      "popularity": 40
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 240949,
+      "itemName": "Masterwork Sin'dorei Band",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 60,
+      "popularity": 47
+    },
+    {
+      "slot": "finger",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 273792,
       "itemName": "Band of the Amani Warlord",
       "itemLevel": 311,
@@ -360,37 +363,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 78,
-      "popularity": 40
-    },
-    {
-      "slot": "finger",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 240949,
-      "itemName": "Masterwork Sin'dorei Band",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 70,
       "popularity": 33
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 281029,
-      "itemName": "Band of the Swarmcaller",
+      "itemId": 268252,
+      "itemName": "Apex Brute's Claw Ring",
       "itemLevel": 318,
       "source": {
-        "type": "other"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Sszorak",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 47,
-      "popularity": 27
+      "statPriorityFit": 94,
+      "popularity": 20
     },
     {
       "slot": "trinket",
@@ -426,7 +417,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 73
+      "popularity": 77
     },
     {
       "slot": "trinket",
@@ -444,7 +435,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 10
+      "popularity": 17
     },
     {
       "slot": "main_hand",
@@ -462,7 +453,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 83
+      "popularity": 80
     },
     {
       "slot": "main_hand",
@@ -495,7 +486,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 70,
-      "popularity": 47
+      "popularity": 40
     },
     {
       "slot": "off_hand",
@@ -513,7 +504,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 27
+      "popularity": 37
     },
     {
       "slot": "head",
@@ -530,7 +521,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 83
+      "popularity": 90
     },
     {
       "slot": "head",
@@ -583,7 +574,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 87
+      "popularity": 83
     },
     {
       "slot": "shoulder",
@@ -597,7 +588,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
+      "statPriorityFit": 53,
       "popularity": 10
     },
     {
@@ -616,7 +607,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 33
+      "popularity": 37
     },
     {
       "slot": "back",
@@ -634,7 +625,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 23
+      "popularity": 17
     },
     {
       "slot": "chest",
@@ -651,7 +642,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 97
+      "popularity": 93
     },
     {
       "slot": "wrist",
@@ -665,26 +656,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 43
+      "statPriorityFit": 30,
+      "popularity": 53
     },
     {
       "slot": "wrist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 251133,
-      "itemName": "Overseer's Vambraces",
-      "itemLevel": 311,
+      "itemId": 268239,
+      "itemName": "Shellbound Bracers",
+      "itemLevel": 318,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Murder Row",
-        "boss": "Zaen Bladesorrow",
-        "keyLevel": 10
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Lost Explorers",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 78,
-      "popularity": 13
+      "statPriorityFit": 58,
+      "popularity": 17
     },
     {
       "slot": "hands",
@@ -701,7 +692,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 87
+      "popularity": 80
     },
     {
       "slot": "hands",
@@ -715,8 +706,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 7
+      "statPriorityFit": 43,
+      "popularity": 17
     },
     {
       "slot": "waist",
@@ -734,7 +725,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 47
+      "popularity": 50
     },
     {
       "slot": "waist",
@@ -748,8 +739,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 33
+      "statPriorityFit": 53,
+      "popularity": 27
     },
     {
       "slot": "legs",
@@ -766,7 +757,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 70
+      "popularity": 73
     },
     {
       "slot": "legs",
@@ -784,7 +775,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 27
+      "popularity": 23
     },
     {
       "slot": "feet",
@@ -798,8 +789,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 60
+      "statPriorityFit": 43,
+      "popularity": 50
     },
     {
       "slot": "feet",
@@ -817,7 +808,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 23
+      "popularity": 20
     },
     {
       "slot": "finger",
@@ -835,7 +826,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 78,
-      "popularity": 57
+      "popularity": 50
     },
     {
       "slot": "finger",
@@ -849,7 +840,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
+      "statPriorityFit": 60,
       "popularity": 43
     },
     {
@@ -865,7 +856,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 23
+      "popularity": 27
     },
     {
       "slot": "trinket",
@@ -883,7 +874,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 70
+      "popularity": 77
     },
     {
       "slot": "trinket",
@@ -901,25 +892,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 57
+      "popularity": 70
     },
     {
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 270164,
-      "itemName": "Gebbo's Bottomless Bag",
+      "itemId": 270165,
+      "itemName": "Keeper's Seething Core",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
+        "boss": "Entombed Sentinels",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 13
+      "popularity": 17
     },
     {
       "slot": "main_hand",
@@ -937,7 +928,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 70
+      "popularity": 77
     },
     {
       "slot": "main_hand",
@@ -955,7 +946,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "off_hand",
@@ -970,7 +961,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 70,
-      "popularity": 57
+      "popularity": 53
     },
     {
       "slot": "off_hand",
@@ -988,19 +979,19 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 20
+      "popularity": 23
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     }
   }
 }

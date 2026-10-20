@@ -25,25 +25,22 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 33,
-      "popularity": 90
+      "popularity": 83
     },
     {
       "slot": "head",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268230,
-      "itemName": "Crown of the Eternal Fang",
+      "itemId": 271441,
+      "itemName": "Crushing Coiler Coif",
       "itemLevel": 318,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
-        "difficulty": "mythic"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 89,
-      "popularity": 7
+      "statPriorityFit": 88,
+      "popularity": 10
     },
     {
       "slot": "neck",
@@ -61,7 +58,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 100
+      "popularity": 93
     },
     {
       "slot": "shoulder",
@@ -78,22 +75,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 90
-    },
-    {
-      "slot": "shoulder",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 244580,
-      "itemName": "Farstrider's Brilliant Plumes",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 43,
-      "popularity": 7
+      "popularity": 93
     },
     {
       "slot": "back",
@@ -107,8 +89,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 23
+      "statPriorityFit": 53,
+      "popularity": 33
     },
     {
       "slot": "back",
@@ -143,7 +125,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 83
+      "popularity": 87
     },
     {
       "slot": "chest",
@@ -161,7 +143,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 65,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "wrist",
@@ -175,8 +157,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 90
+      "statPriorityFit": 53,
+      "popularity": 83
     },
     {
       "slot": "wrist",
@@ -194,7 +176,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 7
+      "popularity": 10
     },
     {
       "slot": "hands",
@@ -211,7 +193,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "hands",
@@ -232,6 +214,24 @@
       "slot": "waist",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 268216,
+      "itemName": "Cursed Reliquary Cincture",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Nek'zali the Soulcoiler",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 75,
+      "popularity": 30
+    },
+    {
+      "slot": "waist",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 268254,
       "itemName": "Serpentine Mixing Belt",
       "itemLevel": 318,
@@ -245,24 +245,6 @@
       "catalystable": false,
       "statPriorityFit": 57,
       "popularity": 30
-    },
-    {
-      "slot": "waist",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268216,
-      "itemName": "Cursed Reliquary Cincture",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 75,
-      "popularity": 27
     },
     {
       "slot": "legs",
@@ -279,7 +261,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 87
+      "popularity": 83
     },
     {
       "slot": "legs",
@@ -293,8 +275,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 7
+      "statPriorityFit": 70,
+      "popularity": 10
     },
     {
       "slot": "feet",
@@ -312,60 +294,30 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 57
+      "popularity": 37
     },
     {
       "slot": "feet",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 271440,
-      "itemName": "Greaves of the Noxious Depths",
+      "itemId": 268233,
+      "itemName": "Ferocious Scaleboots",
       "itemLevel": 318,
       "source": {
-        "type": "other"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Sszorak",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 76,
-      "popularity": 10
+      "statPriorityFit": 57,
+      "popularity": 17
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 240949,
-      "itemName": "Masterwork Sin'dorei Band",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 40
-    },
-    {
-      "slot": "finger",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 273792,
-      "itemName": "Band of the Amani Warlord",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Altar of Fangs",
-        "boss": "Zul'jan",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 62,
-      "popularity": 33
-    },
-    {
-      "slot": "finger",
-      "contentType": "raid",
-      "rank": 3,
       "itemId": 268252,
       "itemName": "Apex Brute's Claw Ring",
       "itemLevel": 318,
@@ -378,7 +330,40 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 27
+      "popularity": 47
+    },
+    {
+      "slot": "finger",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 240949,
+      "itemName": "Masterwork Sin'dorei Band",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 60,
+      "popularity": 40
+    },
+    {
+      "slot": "finger",
+      "contentType": "raid",
+      "rank": 3,
+      "itemId": 158366,
+      "itemName": "Charged Sandstone Band",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Temple of Sethraliss",
+        "boss": "Galvazzt",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 85,
+      "popularity": 33
     },
     {
       "slot": "trinket",
@@ -414,22 +399,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 40,
-      "popularity": 63
+      "popularity": 43
     },
     {
       "slot": "trinket",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 281215,
-      "itemName": "Twisted Horror's Tendril",
-      "itemLevel": 318,
+      "itemId": 273796,
+      "itemName": "Vile Vial of Volatile Venom",
+      "itemLevel": 311,
       "source": {
-        "type": "other"
+        "type": "dungeon",
+        "dungeon": "Altar of Fangs",
+        "boss": "Rav'i",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 30
+      "popularity": 27
     },
     {
       "slot": "main_hand",
@@ -479,7 +467,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 43,
       "popularity": 93
     },
     {
@@ -497,7 +485,22 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 33,
-      "popularity": 97
+      "popularity": 90
+    },
+    {
+      "slot": "head",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 244579,
+      "itemName": "Farstrider's Unwavering Visage",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 30,
+      "popularity": 7
     },
     {
       "slot": "neck",
@@ -535,6 +538,21 @@
       "popularity": 90
     },
     {
+      "slot": "shoulder",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 244580,
+      "itemName": "Farstrider's Brilliant Plumes",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 43,
+      "popularity": 7
+    },
+    {
       "slot": "back",
       "contentType": "mythic-plus",
       "rank": 1,
@@ -546,8 +564,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 23
+      "statPriorityFit": 53,
+      "popularity": 33
     },
     {
       "slot": "back",
@@ -565,7 +583,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "chest",
@@ -582,7 +600,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "chest",
@@ -614,26 +632,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 53,
       "popularity": 73
     },
     {
       "slot": "wrist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 159380,
-      "itemName": "Arc-Glass Bindings",
-      "itemLevel": 311,
+      "itemId": 268217,
+      "itemName": "Rising Tide Wristguards",
+      "itemLevel": 318,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Temple of Sethraliss",
-        "boss": "Adderis and Aspix",
-        "keyLevel": 10
+        "type": "raid",
+        "instance": "The Tidebound Grotto",
+        "boss": "Nymrissa Wavecaller",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 74,
-      "popularity": 7
+      "statPriorityFit": 76,
+      "popularity": 10
     },
     {
       "slot": "hands",
@@ -668,7 +686,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 79,
-      "popularity": 13
+      "popularity": 10
     },
     {
       "slot": "waist",
@@ -686,22 +704,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 27
+      "popularity": 23
     },
     {
       "slot": "waist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 244581,
-      "itemName": "Farstrider's Trophy Belt",
-      "itemLevel": 331,
+      "itemId": 268216,
+      "itemName": "Cursed Reliquary Cincture",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Nek'zali the Soulcoiler",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 23
+      "statPriorityFit": 75,
+      "popularity": 20
     },
     {
       "slot": "legs",
@@ -718,7 +739,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 87
+      "popularity": 93
     },
     {
       "slot": "legs",
@@ -732,7 +753,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
+      "statPriorityFit": 70,
       "popularity": 7
     },
     {
@@ -751,7 +772,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 37
+      "popularity": 27
     },
     {
       "slot": "feet",
@@ -769,7 +790,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 17
+      "popularity": 27
     },
     {
       "slot": "finger",
@@ -787,7 +808,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 47
+      "popularity": 50
     },
     {
       "slot": "finger",
@@ -801,7 +822,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
+      "statPriorityFit": 60,
       "popularity": 33
     },
     {
@@ -838,7 +859,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 70
+      "popularity": 80
     },
     {
       "slot": "trinket",
@@ -862,19 +883,16 @@
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 273796,
-      "itemName": "Vile Vial of Volatile Venom",
+      "itemId": 281215,
+      "itemName": "Twisted Horror's Tendril",
       "itemLevel": 311,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Altar of Fangs",
-        "boss": "Rav'i",
-        "keyLevel": 10
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 30
+      "popularity": 23
     },
     {
       "slot": "main_hand",
@@ -906,7 +924,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 43,
       "popularity": 97
     }
   ],
@@ -914,12 +932,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     }
   }
 }

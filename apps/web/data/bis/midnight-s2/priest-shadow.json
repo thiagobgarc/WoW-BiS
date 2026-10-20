@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 83
+      "popularity": 80
     },
     {
       "slot": "head",
@@ -43,7 +43,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 17
+      "popularity": 20
     },
     {
       "slot": "neck",
@@ -92,13 +92,28 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 49,
+      "statPriorityFit": 88,
       "popularity": 7
     },
     {
       "slot": "back",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 239656,
+      "itemName": "Adherent's Silken Shroud",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 83,
+      "popularity": 30
+    },
+    {
+      "slot": "back",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 268253,
       "itemName": "Silken Voodoo Drape",
       "itemLevel": 318,
@@ -111,22 +126,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 40
-    },
-    {
-      "slot": "back",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 239656,
-      "itemName": "Adherent's Silken Shroud",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 20
+      "popularity": 30
     },
     {
       "slot": "chest",
@@ -158,7 +158,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 70,
-      "popularity": 67
+      "popularity": 63
     },
     {
       "slot": "wrist",
@@ -176,7 +176,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 10
+      "popularity": 20
     },
     {
       "slot": "hands",
@@ -193,7 +193,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 87
+      "popularity": 93
     },
     {
       "slot": "hands",
@@ -225,8 +225,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 63
+      "statPriorityFit": 30,
+      "popularity": 70
     },
     {
       "slot": "waist",
@@ -244,7 +244,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 17
+      "popularity": 20
     },
     {
       "slot": "legs",
@@ -261,7 +261,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 73
+      "popularity": 77
     },
     {
       "slot": "legs",
@@ -275,8 +275,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 17
+      "statPriorityFit": 43,
+      "popularity": 20
     },
     {
       "slot": "feet",
@@ -294,7 +294,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 50
+      "popularity": 53
     },
     {
       "slot": "feet",
@@ -312,7 +312,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 59,
-      "popularity": 20
+      "popularity": 27
     },
     {
       "slot": "finger",
@@ -330,7 +330,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 53
+      "popularity": 50
     },
     {
       "slot": "finger",
@@ -344,26 +344,23 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 37
+      "statPriorityFit": 30,
+      "popularity": 43
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 268252,
-      "itemName": "Apex Brute's Claw Ring",
+      "itemId": 281029,
+      "itemName": "Band of the Swarmcaller",
       "itemLevel": 318,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Sszorak",
-        "difficulty": "mythic"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 44,
-      "popularity": 23
+      "statPriorityFit": 90,
+      "popularity": 30
     },
     {
       "slot": "trinket",
@@ -381,7 +378,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 63
+      "popularity": 53
     },
     {
       "slot": "trinket",
@@ -399,24 +396,24 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 53
+      "popularity": 40
     },
     {
       "slot": "trinket",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 270167,
-      "itemName": "Wavecaller's Seastone",
-      "itemLevel": 318,
+      "itemId": 250215,
+      "itemName": "Freightrunner's Flask",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
-        "difficulty": "mythic"
+        "type": "dungeon",
+        "dungeon": "Murder Row",
+        "boss": "Zaen Bladesorrow",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 65,
+      "statPriorityFit": 50,
       "popularity": 33
     },
     {
@@ -467,8 +464,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 40
+      "statPriorityFit": 60,
+      "popularity": 33
     },
     {
       "slot": "head",
@@ -485,7 +482,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "head",
@@ -503,7 +500,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "neck",
@@ -521,7 +518,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 100
+      "popularity": 97
     },
     {
       "slot": "shoulder",
@@ -538,7 +535,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 83
+      "popularity": 80
     },
     {
       "slot": "shoulder",
@@ -552,7 +549,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
+      "statPriorityFit": 30,
       "popularity": 7
     },
     {
@@ -571,7 +568,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 47
+      "popularity": 43
     },
     {
       "slot": "back",
@@ -585,7 +582,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 83,
       "popularity": 27
     },
     {
@@ -603,7 +600,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 80
+      "popularity": 87
     },
     {
       "slot": "chest",
@@ -617,8 +614,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
-      "popularity": 17
+      "statPriorityFit": 60,
+      "popularity": 13
     },
     {
       "slot": "wrist",
@@ -633,7 +630,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 70,
-      "popularity": 80
+      "popularity": 83
     },
     {
       "slot": "wrist",
@@ -651,7 +648,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 17
+      "popularity": 10
     },
     {
       "slot": "hands",
@@ -682,7 +679,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
+      "statPriorityFit": 43,
       "popularity": 10
     },
     {
@@ -697,8 +694,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 50
+      "statPriorityFit": 30,
+      "popularity": 53
     },
     {
       "slot": "waist",
@@ -716,7 +713,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 30
+      "popularity": 23
     },
     {
       "slot": "legs",
@@ -733,7 +730,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 80
+      "popularity": 87
     },
     {
       "slot": "legs",
@@ -747,8 +744,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 13
+      "statPriorityFit": 43,
+      "popularity": 7
     },
     {
       "slot": "feet",
@@ -766,7 +763,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 30
+      "popularity": 27
     },
     {
       "slot": "feet",
@@ -784,12 +781,27 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 59,
-      "popularity": 23
+      "popularity": 27
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 1,
+      "itemId": 281029,
+      "itemName": "Band of the Swarmcaller",
+      "itemLevel": 311,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 90,
+      "popularity": 37
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 2,
       "itemId": 240949,
       "itemName": "Masterwork Sin'dorei Band",
       "itemLevel": 331,
@@ -798,13 +810,13 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 40
+      "statPriorityFit": 30,
+      "popularity": 37
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
-      "rank": 2,
+      "rank": 3,
       "itemId": 268249,
       "itemName": "Vile Alchemist's Band",
       "itemLevel": 318,
@@ -817,22 +829,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 40
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 3,
-      "itemId": 281029,
-      "itemName": "Band of the Swarmcaller",
-      "itemLevel": 311,
-      "source": {
-        "type": "other"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 90,
-      "popularity": 27
+      "popularity": 30
     },
     {
       "slot": "trinket",
@@ -868,25 +865,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 43
+      "popularity": 37
     },
     {
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 270167,
-      "itemName": "Wavecaller's Seastone",
-      "itemLevel": 318,
+      "itemId": 281215,
+      "itemName": "Twisted Horror's Tendril",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
-        "difficulty": "mythic"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 65,
-      "popularity": 37
+      "statPriorityFit": 50,
+      "popularity": 33
     },
     {
       "slot": "main_hand",
@@ -904,7 +898,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 93
+      "popularity": 87
     },
     {
       "slot": "off_hand",
@@ -918,8 +912,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 53
+      "statPriorityFit": 60,
+      "popularity": 43
     },
     {
       "slot": "off_hand",
@@ -937,19 +931,19 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 20
+      "popularity": 30
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     }
   }
 }

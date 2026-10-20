@@ -25,7 +25,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 83,
-      "popularity": 97
+      "popularity": 90
+    },
+    {
+      "slot": "head",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271875,
+      "itemName": "Gaze of the Coiled Watcher",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Ula'tek",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 65,
+      "popularity": 10
     },
     {
       "slot": "neck",
@@ -60,7 +78,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "back",
@@ -78,7 +96,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 43
+      "popularity": 50
     },
     {
       "slot": "back",
@@ -92,8 +110,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 33
+      "statPriorityFit": 83,
+      "popularity": 27
     },
     {
       "slot": "chest",
@@ -116,15 +134,15 @@
       "slot": "chest",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 244570,
-      "itemName": "Silvermoon Agent's Coat",
-      "itemLevel": 331,
+      "itemId": 281236,
+      "itemName": "Chestwrap of Palpable Terror",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
+      "statPriorityFit": 58,
       "popularity": 7
     },
     {
@@ -139,8 +157,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 77
+      "statPriorityFit": 60,
+      "popularity": 70
     },
     {
       "slot": "wrist",
@@ -158,7 +176,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 13
+      "popularity": 17
     },
     {
       "slot": "hands",
@@ -175,7 +193,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 70
+      "popularity": 73
     },
     {
       "slot": "hands",
@@ -190,7 +208,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 70,
-      "popularity": 23
+      "popularity": 20
     },
     {
       "slot": "waist",
@@ -214,18 +232,15 @@
       "slot": "waist",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268227,
-      "itemName": "Unpossessed Skullsash",
+      "itemId": 271436,
+      "itemName": "Slitherscale Girdle",
       "itemLevel": 318,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
-        "difficulty": "mythic"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 57,
+      "statPriorityFit": 45,
       "popularity": 13
     },
     {
@@ -243,7 +258,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 33,
-      "popularity": 70
+      "popularity": 63
     },
     {
       "slot": "legs",
@@ -257,8 +272,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 27
+      "statPriorityFit": 60,
+      "popularity": 33
     },
     {
       "slot": "feet",
@@ -272,8 +287,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 67
+      "statPriorityFit": 70,
+      "popularity": 77
     },
     {
       "slot": "feet",
@@ -305,13 +320,28 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 40
+      "statPriorityFit": 30,
+      "popularity": 50
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 2,
+      "itemId": 281029,
+      "itemName": "Band of the Swarmcaller",
+      "itemLevel": 318,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 90,
+      "popularity": 33
+    },
+    {
+      "slot": "finger",
+      "contentType": "raid",
+      "rank": 3,
       "itemId": 268249,
       "itemName": "Vile Alchemist's Band",
       "itemLevel": 318,
@@ -324,22 +354,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 37
-    },
-    {
-      "slot": "finger",
-      "contentType": "raid",
-      "rank": 3,
-      "itemId": 281029,
-      "itemName": "Band of the Swarmcaller",
-      "itemLevel": 318,
-      "source": {
-        "type": "other"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 90,
-      "popularity": 27
+      "popularity": 30
     },
     {
       "slot": "trinket",
@@ -375,7 +390,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 77
+      "popularity": 63
     },
     {
       "slot": "trinket",
@@ -390,7 +405,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 17
+      "popularity": 23
     },
     {
       "slot": "main_hand",
@@ -461,7 +476,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "shoulder",
@@ -484,6 +499,21 @@
       "slot": "back",
       "contentType": "mythic-plus",
       "rank": 1,
+      "itemId": 239656,
+      "itemName": "Adherent's Silken Shroud",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 83,
+      "popularity": 40
+    },
+    {
+      "slot": "back",
+      "contentType": "mythic-plus",
+      "rank": 2,
       "itemId": 268253,
       "itemName": "Silken Voodoo Drape",
       "itemLevel": 318,
@@ -497,21 +527,6 @@
       "catalystable": false,
       "statPriorityFit": 90,
       "popularity": 37
-    },
-    {
-      "slot": "back",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 239656,
-      "itemName": "Adherent's Silken Shroud",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 20
     },
     {
       "slot": "chest",
@@ -528,7 +543,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 83
+      "popularity": 90
     },
     {
       "slot": "chest",
@@ -543,7 +558,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 58,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "wrist",
@@ -557,8 +572,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 83
+      "statPriorityFit": 60,
+      "popularity": 90
     },
     {
       "slot": "wrist",
@@ -593,7 +608,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 73
+      "popularity": 77
     },
     {
       "slot": "hands",
@@ -608,7 +623,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 70,
-      "popularity": 20
+      "popularity": 17
     },
     {
       "slot": "waist",
@@ -632,16 +647,19 @@
       "slot": "waist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 271436,
-      "itemName": "Slitherscale Girdle",
-      "itemLevel": 311,
+      "itemId": 268227,
+      "itemName": "Unpossessed Skullsash",
+      "itemLevel": 318,
       "source": {
-        "type": "other"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Lost Explorers",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 45,
-      "popularity": 17
+      "statPriorityFit": 57,
+      "popularity": 20
     },
     {
       "slot": "legs",
@@ -690,8 +708,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 90
+      "statPriorityFit": 70,
+      "popularity": 80
     },
     {
       "slot": "feet",
@@ -723,13 +741,28 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
+      "statPriorityFit": 30,
       "popularity": 63
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 2,
+      "itemId": 281029,
+      "itemName": "Band of the Swarmcaller",
+      "itemLevel": 311,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 90,
+      "popularity": 33
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 3,
       "itemId": 268249,
       "itemName": "Vile Alchemist's Band",
       "itemLevel": 318,
@@ -742,25 +775,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 33
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 3,
-      "itemId": 158366,
-      "itemName": "Charged Sandstone Band",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Temple of Sethraliss",
-        "boss": "Galvazzt",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 66,
-      "popularity": 20
+      "popularity": 30
     },
     {
       "slot": "trinket",
@@ -796,7 +811,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 43
+      "popularity": 37
     },
     {
       "slot": "trinket",
@@ -811,7 +826,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 23
+      "popularity": 30
     },
     {
       "slot": "main_hand",
@@ -836,12 +851,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     }
   }
 }

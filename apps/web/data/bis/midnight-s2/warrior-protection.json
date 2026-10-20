@@ -25,22 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 80
-    },
-    {
-      "slot": "head",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 281239,
-      "itemName": "Corroded Hulk's Skullcap",
-      "itemLevel": 318,
-      "source": {
-        "type": "other"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 44,
-      "popularity": 10
+      "popularity": 93
     },
     {
       "slot": "neck",
@@ -58,7 +43,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "shoulder",
@@ -89,7 +74,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
+      "statPriorityFit": 60,
       "popularity": 10
     },
     {
@@ -114,19 +99,19 @@
       "slot": "back",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268248,
-      "itemName": "Amani Summoning Shawl",
-      "itemLevel": 318,
+      "itemId": 251190,
+      "itemName": "Bloodthorn Burnous",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
-        "difficulty": "mythic"
+        "type": "dungeon",
+        "dungeon": "The Blinding Vale",
+        "boss": "Ikuzz the Light Hunter",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 57,
-      "popularity": 7
+      "statPriorityFit": 70,
+      "popularity": 10
     },
     {
       "slot": "chest",
@@ -143,25 +128,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 33,
-      "popularity": 93
-    },
-    {
-      "slot": "chest",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268222,
-      "itemName": "Reckless Spirit Breastplate",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Coiled Altar",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 77,
-      "popularity": 7
+      "popularity": 97
     },
     {
       "slot": "wrist",
@@ -175,7 +142,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
+      "statPriorityFit": 30,
       "popularity": 87
     },
     {
@@ -211,7 +178,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 97
+      "popularity": 87
     },
     {
       "slot": "waist",
@@ -229,22 +196,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 57
+      "popularity": 47
     },
     {
       "slot": "waist",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 237830,
-      "itemName": "Spellbreaker's Girdle",
-      "itemLevel": 331,
+      "itemId": 268244,
+      "itemName": "Forgotten Grotto Girdle",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Tidebound Grotto",
+        "boss": "Nymrissa Wavecaller",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 17
+      "statPriorityFit": 82,
+      "popularity": 13
     },
     {
       "slot": "legs",
@@ -261,7 +231,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 33,
-      "popularity": 80
+      "popularity": 93
     },
     {
       "slot": "legs",
@@ -279,7 +249,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 65,
-      "popularity": 20
+      "popularity": 7
     },
     {
       "slot": "feet",
@@ -293,8 +263,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 77
+      "statPriorityFit": 70,
+      "popularity": 73
     },
     {
       "slot": "feet",
@@ -312,7 +282,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 23
+      "popularity": 20
     },
     {
       "slot": "finger",
@@ -330,25 +300,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 37
+      "popularity": 33
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268266,
-      "itemName": "Alluring Bubbleband",
-      "itemLevel": 318,
+      "itemId": 252258,
+      "itemName": "Sickening Signet of Atroxus",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
-        "difficulty": "mythic"
+        "type": "dungeon",
+        "dungeon": "Voidscar Arena",
+        "boss": "Atroxus",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 87,
-      "popularity": 20
+      "statPriorityFit": 76,
+      "popularity": 27
     },
     {
       "slot": "finger",
@@ -366,7 +336,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 71,
-      "popularity": 20
+      "popularity": 23
     },
     {
       "slot": "trinket",
@@ -384,7 +354,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 93
+      "popularity": 87
     },
     {
       "slot": "trinket",
@@ -402,7 +372,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 73
+      "popularity": 70
     },
     {
       "slot": "trinket",
@@ -420,7 +390,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 10
+      "popularity": 17
     },
     {
       "slot": "main_hand",
@@ -438,7 +408,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 87
+      "popularity": 73
     },
     {
       "slot": "main_hand",
@@ -456,7 +426,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 7
+      "popularity": 13
     },
     {
       "slot": "off_hand",
@@ -474,7 +444,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 47
+      "popularity": 43
     },
     {
       "slot": "off_hand",
@@ -489,7 +459,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 43,
-      "popularity": 30
+      "popularity": 33
     },
     {
       "slot": "head",
@@ -520,7 +490,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
+      "statPriorityFit": 30,
       "popularity": 13
     },
     {
@@ -539,25 +509,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 73
+      "popularity": 80
     },
     {
       "slot": "neck",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 273781,
-      "itemName": "Strand of Warding Fangs",
+      "itemId": 251173,
+      "itemName": "Yoke of the Charging Bear",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Altar of Fangs",
-        "boss": "The Writhing Coil",
+        "dungeon": "Den of Nalorakk",
+        "boss": "Nalorakk",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 80,
-      "popularity": 10
+      "statPriorityFit": 88,
+      "popularity": 7
     },
     {
       "slot": "shoulder",
@@ -574,7 +544,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 80
+      "popularity": 77
     },
     {
       "slot": "shoulder",
@@ -588,7 +558,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
+      "statPriorityFit": 60,
       "popularity": 10
     },
     {
@@ -603,8 +573,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 27
+      "statPriorityFit": 60,
+      "popularity": 23
     },
     {
       "slot": "back",
@@ -622,7 +592,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 17
+      "popularity": 23
     },
     {
       "slot": "chest",
@@ -639,7 +609,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 33,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "chest",
@@ -657,7 +627,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 77,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "wrist",
@@ -671,25 +641,25 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
+      "statPriorityFit": 30,
       "popularity": 77
     },
     {
       "slot": "wrist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 159409,
-      "itemName": "Embalmer's Steadying Bracers",
+      "itemId": 251133,
+      "itemName": "Overseer's Vambraces",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Kings' Rest",
-        "boss": "Mchimba the Embalmer",
+        "dungeon": "Murder Row",
+        "boss": "Zaen Bladesorrow",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 80,
+      "statPriorityFit": 87,
       "popularity": 7
     },
     {
@@ -707,25 +677,22 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 83
+      "popularity": 80
     },
     {
       "slot": "hands",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268220,
-      "itemName": "Scaleplate Strangulators",
-      "itemLevel": 318,
+      "itemId": 237836,
+      "itemName": "Spellbreaker's Resolve",
+      "itemLevel": 331,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Twin Fangs",
-        "difficulty": "mythic"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 77,
-      "popularity": 7
+      "statPriorityFit": 70,
+      "popularity": 10
     },
     {
       "slot": "waist",
@@ -757,7 +724,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 60,
       "popularity": 20
     },
     {
@@ -775,7 +742,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 33,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "legs",
@@ -793,7 +760,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 65,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "feet",
@@ -807,8 +774,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 37
+      "statPriorityFit": 70,
+      "popularity": 40
     },
     {
       "slot": "feet",
@@ -832,24 +799,6 @@
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 273792,
-      "itemName": "Band of the Amani Warlord",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Altar of Fangs",
-        "boss": "Zul'jan",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 87,
-      "popularity": 37
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 159459,
       "itemName": "Ritual Binder's Ring",
       "itemLevel": 311,
@@ -867,6 +816,24 @@
     {
       "slot": "finger",
       "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 273792,
+      "itemName": "Band of the Amani Warlord",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Altar of Fangs",
+        "boss": "Zul'jan",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 87,
+      "popularity": 33
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
       "rank": 3,
       "itemId": 240949,
       "itemName": "Masterwork Sin'dorei Band",
@@ -876,8 +843,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 30
+      "statPriorityFit": 53,
+      "popularity": 33
     },
     {
       "slot": "trinket",
@@ -895,7 +862,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 73
+      "popularity": 63
     },
     {
       "slot": "trinket",
@@ -913,7 +880,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 53
+      "popularity": 50
     },
     {
       "slot": "trinket",
@@ -937,24 +904,6 @@
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 268209,
-      "itemName": "Aman'muso, Warlord's Vengeance",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Coiled Altar",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 44,
-      "popularity": 47
-    },
-    {
-      "slot": "main_hand",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 268202,
       "itemName": "Jaw of the Shackled Goddess",
       "itemLevel": 318,
@@ -967,7 +916,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 47
+      "popularity": 53
+    },
+    {
+      "slot": "main_hand",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 268209,
+      "itemName": "Aman'muso, Warlord's Vengeance",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 44,
+      "popularity": 43
     },
     {
       "slot": "off_hand",
@@ -982,7 +949,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 43,
-      "popularity": 53
+      "popularity": 50
     },
     {
       "slot": "off_hand",
@@ -1000,19 +967,19 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 30
+      "popularity": 33
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     }
   }
 }

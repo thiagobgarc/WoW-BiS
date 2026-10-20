@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 73
+      "popularity": 87
     },
     {
       "slot": "head",
@@ -58,7 +58,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "shoulder",
@@ -76,24 +76,6 @@
       "catalystable": false,
       "statPriorityFit": 27,
       "popularity": 90
-    },
-    {
-      "slot": "shoulder",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268226,
-      "itemName": "Swelling Sea Spaulders",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 90,
-      "popularity": 7
     },
     {
       "slot": "back",
@@ -125,7 +107,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 53,
       "popularity": 17
     },
     {
@@ -175,8 +157,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 67
+      "statPriorityFit": 43,
+      "popularity": 70
     },
     {
       "slot": "wrist",
@@ -194,7 +176,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 30
+      "popularity": 23
     },
     {
       "slot": "hands",
@@ -211,7 +193,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 97
+      "popularity": 93
     },
     {
       "slot": "waist",
@@ -229,7 +211,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 67
+      "popularity": 63
     },
     {
       "slot": "legs",
@@ -246,7 +228,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 77
+      "popularity": 80
     },
     {
       "slot": "legs",
@@ -264,7 +246,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 23
+      "popularity": 20
     },
     {
       "slot": "feet",
@@ -278,26 +260,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 43
+      "statPriorityFit": 30,
+      "popularity": 40
     },
     {
       "slot": "feet",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268245,
-      "itemName": "Entombed Cultist's Sabatons",
+      "itemId": 268260,
+      "itemName": "Scaled Fiend's Warboots",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
+        "boss": "Vashnik the Malignant",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 82,
-      "popularity": 17
+      "statPriorityFit": 57,
+      "popularity": 20
     },
     {
       "slot": "finger",
@@ -326,8 +308,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 40
+      "statPriorityFit": 60,
+      "popularity": 37
     },
     {
       "slot": "finger",
@@ -345,7 +327,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 71,
-      "popularity": 27
+      "popularity": 30
     },
     {
       "slot": "trinket",
@@ -381,7 +363,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 77
+      "popularity": 73
     },
     {
       "slot": "trinket",
@@ -417,7 +399,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 70
+      "popularity": 77
     },
     {
       "slot": "main_hand",
@@ -435,7 +417,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 40,
-      "popularity": 13
+      "popularity": 10
     },
     {
       "slot": "off_hand",
@@ -453,7 +435,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 40,
-      "popularity": 70
+      "popularity": 77
     },
     {
       "slot": "off_hand",
@@ -471,7 +453,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 13
+      "popularity": 10
     },
     {
       "slot": "head",
@@ -488,22 +470,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 87
-    },
-    {
-      "slot": "head",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 281239,
-      "itemName": "Corroded Hulk's Skullcap",
-      "itemLevel": 311,
-      "source": {
-        "type": "other"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 58,
-      "popularity": 7
+      "popularity": 93
     },
     {
       "slot": "neck",
@@ -538,7 +505,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 27,
-      "popularity": 80
+      "popularity": 87
     },
     {
       "slot": "shoulder",
@@ -552,8 +519,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
-      "popularity": 10
+      "statPriorityFit": 53,
+      "popularity": 7
     },
     {
       "slot": "back",
@@ -571,7 +538,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 33
+      "popularity": 40
     },
     {
       "slot": "back",
@@ -620,7 +587,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 43,
       "popularity": 70
     },
     {
@@ -656,7 +623,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 87
+      "popularity": 83
     },
     {
       "slot": "hands",
@@ -670,8 +637,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 10
+      "statPriorityFit": 30,
+      "popularity": 13
     },
     {
       "slot": "waist",
@@ -689,25 +656,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 57
-    },
-    {
-      "slot": "waist",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 159418,
-      "itemName": "Girdle of Pestilent Purification",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Kings' Rest",
-        "boss": "The Council of Tribes",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 49,
-      "popularity": 7
+      "popularity": 63
     },
     {
       "slot": "legs",
@@ -724,7 +673,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 87
+      "popularity": 83
     },
     {
       "slot": "legs",
@@ -742,7 +691,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 13
+      "popularity": 17
     },
     {
       "slot": "feet",
@@ -756,26 +705,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 63
+      "statPriorityFit": 30,
+      "popularity": 60
     },
     {
       "slot": "feet",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268260,
-      "itemName": "Scaled Fiend's Warboots",
+      "itemId": 268245,
+      "itemName": "Entombed Cultist's Sabatons",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Vashnik the Malignant",
+        "boss": "Nek'zali the Soulcoiler",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 57,
-      "popularity": 13
+      "statPriorityFit": 82,
+      "popularity": 10
     },
     {
       "slot": "finger",
@@ -796,24 +745,6 @@
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268249,
-      "itemName": "Vile Alchemist's Band",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Vashnik the Malignant",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 71,
-      "popularity": 30
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 3,
       "itemId": 240949,
       "itemName": "Masterwork Sin'dorei Band",
       "itemLevel": 331,
@@ -822,8 +753,23 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 27
+      "statPriorityFit": 60,
+      "popularity": 33
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 3,
+      "itemId": 281029,
+      "itemName": "Band of the Swarmcaller",
+      "itemLevel": 311,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 58,
+      "popularity": 23
     },
     {
       "slot": "trinket",
@@ -847,19 +793,16 @@
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 270165,
-      "itemName": "Keeper's Seething Core",
-      "itemLevel": 318,
+      "itemId": 281215,
+      "itemName": "Twisted Horror's Tendril",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Entombed Sentinels",
-        "difficulty": "mythic"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 37
+      "popularity": 40
     },
     {
       "slot": "trinket",
@@ -877,7 +820,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 33
+      "popularity": 37
     },
     {
       "slot": "main_hand",
@@ -895,7 +838,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 53
+      "popularity": 57
     },
     {
       "slot": "main_hand",
@@ -913,7 +856,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 40,
-      "popularity": 30
+      "popularity": 27
     },
     {
       "slot": "off_hand",
@@ -931,7 +874,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 40,
-      "popularity": 67
+      "popularity": 70
     },
     {
       "slot": "off_hand",
@@ -956,12 +899,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     }
   }
 }

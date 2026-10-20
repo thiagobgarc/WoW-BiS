@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "head",
@@ -61,7 +61,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 97
+      "popularity": 93
     },
     {
       "slot": "shoulder",
@@ -78,7 +78,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 80
+      "popularity": 77
     },
     {
       "slot": "shoulder",
@@ -92,7 +92,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
+      "statPriorityFit": 30,
       "popularity": 13
     },
     {
@@ -107,8 +107,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 47
+      "statPriorityFit": 70,
+      "popularity": 50
     },
     {
       "slot": "back",
@@ -157,8 +157,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 77
+      "statPriorityFit": 30,
+      "popularity": 83
     },
     {
       "slot": "wrist",
@@ -176,7 +176,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 23
+      "popularity": 17
     },
     {
       "slot": "hands",
@@ -208,30 +208,12 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 53,
-      "popularity": 13
+      "popularity": 10
     },
     {
       "slot": "waist",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 268256,
-      "itemName": "Sash of the Forlorn Vessel",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Coiled Altar",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 59,
-      "popularity": 23
-    },
-    {
-      "slot": "waist",
-      "contentType": "raid",
-      "rank": 2,
       "itemId": 244573,
       "itemName": "Silvermoon Agent's Utility Belt",
       "itemLevel": 331,
@@ -240,8 +222,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 23
+      "statPriorityFit": 43,
+      "popularity": 30
+    },
+    {
+      "slot": "waist",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268227,
+      "itemName": "Unpossessed Skullsash",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Lost Explorers",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 58,
+      "popularity": 30
     },
     {
       "slot": "legs",
@@ -258,7 +258,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 80
+      "popularity": 87
     },
     {
       "slot": "legs",
@@ -272,8 +272,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
-      "popularity": 17
+      "statPriorityFit": 30,
+      "popularity": 10
     },
     {
       "slot": "feet",
@@ -287,25 +287,25 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 43
+      "statPriorityFit": 53,
+      "popularity": 53
     },
     {
       "slot": "feet",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268261,
-      "itemName": "Bespittled Slitherslippers",
+      "itemId": 268247,
+      "itemName": "Breakwater Boots",
       "itemLevel": 318,
       "source": {
         "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Twin Fangs",
+        "instance": "The Tidebound Grotto",
+        "boss": "Nymrissa Wavecaller",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 76,
+      "statPriorityFit": 72,
       "popularity": 17
     },
     {
@@ -338,7 +338,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 43,
       "popularity": 40
     },
     {
@@ -375,7 +375,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 77
+      "popularity": 73
     },
     {
       "slot": "trinket",
@@ -408,7 +408,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 23
+      "popularity": 27
     },
     {
       "slot": "main_hand",
@@ -461,7 +461,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "neck",
@@ -479,7 +479,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 93
+      "popularity": 90
+    },
+    {
+      "slot": "neck",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 240950,
+      "itemName": "Masterwork Sin'dorei Amulet",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 70,
+      "popularity": 7
     },
     {
       "slot": "shoulder",
@@ -496,7 +511,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "back",
@@ -510,26 +525,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 63
+      "statPriorityFit": 70,
+      "popularity": 50
     },
     {
       "slot": "back",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 193763,
-      "itemName": "Fireproof Drape",
-      "itemLevel": 311,
+      "itemId": 268248,
+      "itemName": "Amani Summoning Shawl",
+      "itemLevel": 318,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Ruby Life Pools",
-        "boss": "Kokia Blazehoof",
-        "keyLevel": 10
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Nek'zali the Soulcoiler",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 88,
-      "popularity": 10
+      "statPriorityFit": 52,
+      "popularity": 13
     },
     {
       "slot": "chest",
@@ -552,16 +567,16 @@
       "slot": "chest",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 281236,
-      "itemName": "Chestwrap of Palpable Terror",
-      "itemLevel": 311,
+      "itemId": 244570,
+      "itemName": "Silvermoon Agent's Coat",
+      "itemLevel": 331,
       "source": {
-        "type": "other"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 90,
-      "popularity": 7
+      "statPriorityFit": 43,
+      "popularity": 10
     },
     {
       "slot": "wrist",
@@ -575,8 +590,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 73
+      "statPriorityFit": 30,
+      "popularity": 77
     },
     {
       "slot": "wrist",
@@ -594,7 +609,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "hands",
@@ -611,7 +626,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 26,
-      "popularity": 93
+      "popularity": 83
     },
     {
       "slot": "hands",
@@ -626,7 +641,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 53,
-      "popularity": 7
+      "popularity": 17
     },
     {
       "slot": "waist",
@@ -641,25 +656,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 26,
-      "popularity": 53
+      "popularity": 47
     },
     {
       "slot": "waist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268227,
-      "itemName": "Unpossessed Skullsash",
+      "itemId": 268256,
+      "itemName": "Sash of the Forlorn Vessel",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
+        "boss": "The Coiled Altar",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 58,
-      "popularity": 17
+      "statPriorityFit": 59,
+      "popularity": 13
     },
     {
       "slot": "legs",
@@ -676,7 +691,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 60
+      "popularity": 67
     },
     {
       "slot": "legs",
@@ -690,8 +705,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
-      "popularity": 40
+      "statPriorityFit": 30,
+      "popularity": 30
     },
     {
       "slot": "feet",
@@ -705,8 +720,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 53
+      "statPriorityFit": 53,
+      "popularity": 63
     },
     {
       "slot": "feet",
@@ -724,7 +739,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 72,
-      "popularity": 40
+      "popularity": 27
     },
     {
       "slot": "finger",
@@ -738,31 +753,13 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 63
+      "statPriorityFit": 43,
+      "popularity": 60
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268266,
-      "itemName": "Alluring Bubbleband",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 82,
-      "popularity": 33
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 3,
       "itemId": 273792,
       "itemName": "Band of the Amani Warlord",
       "itemLevel": 311,
@@ -775,6 +772,24 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
+      "popularity": 40
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 3,
+      "itemId": 268266,
+      "itemName": "Alluring Bubbleband",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Tidebound Grotto",
+        "boss": "Nymrissa Wavecaller",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 82,
       "popularity": 33
     },
     {
@@ -793,7 +808,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 83
+      "popularity": 77
     },
     {
       "slot": "trinket",
@@ -811,7 +826,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 50
+      "popularity": 63
     },
     {
       "slot": "trinket",
@@ -869,12 +884,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     }
   }
 }

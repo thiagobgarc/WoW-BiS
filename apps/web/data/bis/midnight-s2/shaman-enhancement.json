@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 87
+      "popularity": 80
     },
     {
       "slot": "head",
@@ -40,7 +40,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 43,
-      "popularity": 7
+      "popularity": 10
     },
     {
       "slot": "neck",
@@ -93,24 +93,21 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 47
+      "popularity": 43
     },
     {
       "slot": "back",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 251190,
-      "itemName": "Bloodthorn Burnous",
-      "itemLevel": 311,
+      "itemId": 239656,
+      "itemName": "Adherent's Silken Shroud",
+      "itemLevel": 331,
       "source": {
-        "type": "dungeon",
-        "dungeon": "The Blinding Vale",
-        "boss": "Ikuzz the Light Hunter",
-        "keyLevel": 10
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 78,
+      "statPriorityFit": 83,
       "popularity": 10
     },
     {
@@ -128,25 +125,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 90
-    },
-    {
-      "slot": "chest",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 271876,
-      "itemName": "Awoken Dreadfang Cuirass",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 100,
-      "popularity": 10
+      "popularity": 100
     },
     {
       "slot": "wrist",
@@ -160,8 +139,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 90
+      "statPriorityFit": 83,
+      "popularity": 87
+    },
+    {
+      "slot": "wrist",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268217,
+      "itemName": "Rising Tide Wristguards",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Tidebound Grotto",
+        "boss": "Nymrissa Wavecaller",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 81,
+      "popularity": 7
     },
     {
       "slot": "hands",
@@ -178,25 +175,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 87
-    },
-    {
-      "slot": "hands",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268238,
-      "itemName": "Grips of Swirling Fury",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 49,
-      "popularity": 7
+      "popularity": 97
     },
     {
       "slot": "waist",
@@ -214,25 +193,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 63
+      "popularity": 50
     },
     {
       "slot": "waist",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 251228,
-      "itemName": "Behemoth Waistband",
-      "itemLevel": 311,
+      "itemId": 244581,
+      "itemName": "Farstrider's Trophy Belt",
+      "itemLevel": 331,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Atroxus",
-        "keyLevel": 10
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 79,
-      "popularity": 10
+      "statPriorityFit": 43,
+      "popularity": 17
     },
     {
       "slot": "legs",
@@ -249,7 +225,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 36,
-      "popularity": 73
+      "popularity": 77
     },
     {
       "slot": "legs",
@@ -267,7 +243,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 76,
-      "popularity": 13
+      "popularity": 10
     },
     {
       "slot": "feet",
@@ -285,7 +261,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 33
+      "popularity": 40
     },
     {
       "slot": "feet",
@@ -303,7 +279,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "finger",
@@ -321,30 +297,12 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 47
+      "popularity": 50
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 252258,
-      "itemName": "Sickening Signet of Atroxus",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Atroxus",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 76,
-      "popularity": 43
-    },
-    {
-      "slot": "finger",
-      "contentType": "raid",
-      "rank": 3,
       "itemId": 240949,
       "itemName": "Masterwork Sin'dorei Band",
       "itemLevel": 331,
@@ -353,8 +311,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
+      "statPriorityFit": 30,
       "popularity": 27
+    },
+    {
+      "slot": "finger",
+      "contentType": "raid",
+      "rank": 3,
+      "itemId": 268252,
+      "itemName": "Apex Brute's Claw Ring",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Sszorak",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 44,
+      "popularity": 23
     },
     {
       "slot": "trinket",
@@ -372,7 +348,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 40,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "trinket",
@@ -390,25 +366,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 80
+      "popularity": 63
     },
     {
       "slot": "trinket",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 270164,
-      "itemName": "Gebbo's Bottomless Bag",
+      "itemId": 270165,
+      "itemName": "Keeper's Seething Core",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
+        "boss": "Entombed Sentinels",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 10
+      "popularity": 23
     },
     {
       "slot": "main_hand",
@@ -426,25 +402,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 87
-    },
-    {
-      "slot": "main_hand",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 270930,
-      "itemName": "Tomb-Creeper's Claw",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 57,
-      "popularity": 10
+      "popularity": 93
     },
     {
       "slot": "off_hand",
@@ -458,26 +416,23 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
+      "statPriorityFit": 53,
       "popularity": 83
     },
     {
       "slot": "off_hand",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 270930,
-      "itemName": "Tomb-Creeper's Claw",
-      "itemLevel": 318,
+      "itemId": 237845,
+      "itemName": "Bloomforged Claw",
+      "itemLevel": 331,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
-        "difficulty": "mythic"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 57,
-      "popularity": 10
+      "statPriorityFit": 43,
+      "popularity": 7
     },
     {
       "slot": "head",
@@ -565,7 +520,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 50
+      "popularity": 43
     },
     {
       "slot": "back",
@@ -632,26 +587,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 90
+      "statPriorityFit": 83,
+      "popularity": 87
     },
     {
       "slot": "wrist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268217,
-      "itemName": "Rising Tide Wristguards",
-      "itemLevel": 318,
+      "itemId": 251200,
+      "itemName": "Saptorbane Guards",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
-        "difficulty": "mythic"
+        "type": "dungeon",
+        "dungeon": "The Blinding Vale",
+        "boss": "Ziekket",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 81,
-      "popularity": 7
+      "statPriorityFit": 56,
+      "popularity": 10
     },
     {
       "slot": "hands",
@@ -668,7 +623,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 80
+      "popularity": 83
     },
     {
       "slot": "hands",
@@ -718,7 +673,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 43,
       "popularity": 23
     },
     {
@@ -736,7 +691,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 36,
-      "popularity": 67
+      "popularity": 73
     },
     {
       "slot": "legs",
@@ -754,27 +709,12 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 76,
-      "popularity": 13
+      "popularity": 20
     },
     {
       "slot": "feet",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 271440,
-      "itemName": "Greaves of the Noxious Depths",
-      "itemLevel": 311,
-      "source": {
-        "type": "other"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 34,
-      "popularity": 27
-    },
-    {
-      "slot": "feet",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 268258,
       "itemName": "Boots of the Reckless Wayfarer",
       "itemLevel": 318,
@@ -787,30 +727,63 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 60,
+      "popularity": 27
+    },
+    {
+      "slot": "feet",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 268233,
+      "itemName": "Ferocious Scaleboots",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Sszorak",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 89,
       "popularity": 20
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 252258,
-      "itemName": "Sickening Signet of Atroxus",
+      "itemId": 281029,
+      "itemName": "Band of the Swarmcaller",
       "itemLevel": 311,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Atroxus",
-        "keyLevel": 10
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 76,
-      "popularity": 33
+      "statPriorityFit": 90,
+      "popularity": 37
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 2,
+      "itemId": 268252,
+      "itemName": "Apex Brute's Claw Ring",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Sszorak",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 44,
+      "popularity": 30
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 3,
       "itemId": 273792,
       "itemName": "Band of the Amani Warlord",
       "itemLevel": 311,
@@ -823,21 +796,6 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 30
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 3,
-      "itemId": 281029,
-      "itemName": "Band of the Swarmcaller",
-      "itemLevel": 311,
-      "source": {
-        "type": "other"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 90,
       "popularity": 30
     },
     {
@@ -880,19 +838,16 @@
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 270165,
-      "itemName": "Keeper's Seething Core",
-      "itemLevel": 318,
+      "itemId": 281215,
+      "itemName": "Twisted Horror's Tendril",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Entombed Sentinels",
-        "difficulty": "mythic"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 10
+      "popularity": 17
     },
     {
       "slot": "main_hand",
@@ -910,7 +865,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 97
+      "popularity": 93
+    },
+    {
+      "slot": "main_hand",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 270930,
+      "itemName": "Tomb-Creeper's Claw",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Nek'zali the Soulcoiler",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 57,
+      "popularity": 7
     },
     {
       "slot": "off_hand",
@@ -924,8 +897,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 80
+      "statPriorityFit": 53,
+      "popularity": 77
     },
     {
       "slot": "off_hand",
@@ -939,7 +912,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 43,
       "popularity": 7
     }
   ],
@@ -947,12 +920,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     }
   }
 }

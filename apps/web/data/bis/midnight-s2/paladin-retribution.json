@@ -39,7 +39,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
+      "statPriorityFit": 60,
       "popularity": 13
     },
     {
@@ -75,22 +75,22 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 80
+      "popularity": 90
     },
     {
       "slot": "shoulder",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 237835,
-      "itemName": "Spellbreaker's Mantle",
-      "itemLevel": 331,
+      "itemId": 271444,
+      "itemName": "Pauldrons of the Forgotten Sacrifice",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 10
+      "statPriorityFit": 80,
+      "popularity": 7
     },
     {
       "slot": "back",
@@ -108,7 +108,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 57
+      "popularity": 60
     },
     {
       "slot": "back",
@@ -122,8 +122,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 13
+      "statPriorityFit": 83,
+      "popularity": 17
     },
     {
       "slot": "chest",
@@ -140,7 +140,22 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 97
+      "popularity": 93
+    },
+    {
+      "slot": "chest",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 237829,
+      "itemName": "Spellbreaker's Shelter",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 30,
+      "popularity": 7
     },
     {
       "slot": "wrist",
@@ -154,7 +169,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
+      "statPriorityFit": 60,
       "popularity": 83
     },
     {
@@ -190,7 +205,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 77
+      "popularity": 87
     },
     {
       "slot": "hands",
@@ -204,7 +219,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
+      "statPriorityFit": 43,
       "popularity": 13
     },
     {
@@ -223,22 +238,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 63
+      "popularity": 60
     },
     {
       "slot": "waist",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 271445,
-      "itemName": "Fanged Brute's Greatbelt",
-      "itemLevel": 318,
+      "itemId": 237830,
+      "itemName": "Spellbreaker's Girdle",
+      "itemLevel": 331,
       "source": {
-        "type": "other"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 36,
-      "popularity": 13
+      "statPriorityFit": 83,
+      "popularity": 10
     },
     {
       "slot": "legs",
@@ -255,7 +270,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "legs",
@@ -273,7 +288,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 40,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "feet",
@@ -291,7 +306,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 63
+      "popularity": 50
     },
     {
       "slot": "feet",
@@ -309,7 +324,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 17
+      "popularity": 23
     },
     {
       "slot": "finger",
@@ -324,7 +339,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 66,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "finger",
@@ -342,25 +357,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 40
+      "popularity": 37
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 252258,
-      "itemName": "Sickening Signet of Atroxus",
-      "itemLevel": 311,
+      "itemId": 281029,
+      "itemName": "Band of the Swarmcaller",
+      "itemLevel": 318,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Atroxus",
-        "keyLevel": 10
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 76,
-      "popularity": 30
+      "statPriorityFit": 90,
+      "popularity": 27
     },
     {
       "slot": "trinket",
@@ -378,7 +390,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 100
+      "popularity": 97
     },
     {
       "slot": "trinket",
@@ -396,25 +408,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 40,
-      "popularity": 87
-    },
-    {
-      "slot": "trinket",
-      "contentType": "raid",
-      "rank": 3,
-      "itemId": 270165,
-      "itemName": "Keeper's Seething Core",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Entombed Sentinels",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 50,
-      "popularity": 7
+      "popularity": 93
     },
     {
       "slot": "main_hand",
@@ -432,7 +426,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 97
+      "popularity": 90
+    },
+    {
+      "slot": "main_hand",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 280799,
+      "itemName": "Lu'selama, Light's Justice",
+      "itemLevel": 318,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 50,
+      "popularity": 7
     },
     {
       "slot": "head",
@@ -449,7 +458,22 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 87
+      "popularity": 83
+    },
+    {
+      "slot": "head",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 281239,
+      "itemName": "Corroded Hulk's Skullcap",
+      "itemLevel": 311,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 90,
+      "popularity": 7
     },
     {
       "slot": "neck",
@@ -467,7 +491,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "shoulder",
@@ -484,7 +508,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "back",
@@ -502,24 +526,21 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 50
+      "popularity": 60
     },
     {
       "slot": "back",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 251190,
-      "itemName": "Bloodthorn Burnous",
-      "itemLevel": 311,
+      "itemId": 239656,
+      "itemName": "Adherent's Silken Shroud",
+      "itemLevel": 331,
       "source": {
-        "type": "dungeon",
-        "dungeon": "The Blinding Vale",
-        "boss": "Ikuzz the Light Hunter",
-        "keyLevel": 10
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 78,
+      "statPriorityFit": 83,
       "popularity": 10
     },
     {
@@ -543,15 +564,18 @@
       "slot": "chest",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 237829,
-      "itemName": "Spellbreaker's Shelter",
-      "itemLevel": 331,
+      "itemId": 268222,
+      "itemName": "Reckless Spirit Breastplate",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
+      "statPriorityFit": 75,
       "popularity": 7
     },
     {
@@ -566,8 +590,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 77
+      "statPriorityFit": 60,
+      "popularity": 83
     },
     {
       "slot": "wrist",
@@ -585,7 +609,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 20
+      "popularity": 13
     },
     {
       "slot": "hands",
@@ -602,7 +626,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 77
+      "popularity": 80
     },
     {
       "slot": "hands",
@@ -616,7 +640,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
+      "statPriorityFit": 43,
       "popularity": 20
     },
     {
@@ -635,7 +659,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 47
+      "popularity": 60
     },
     {
       "slot": "waist",
@@ -649,7 +673,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 36,
+      "statPriorityFit": 49,
       "popularity": 10
     },
     {
@@ -667,7 +691,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 70
+      "popularity": 93
     },
     {
       "slot": "legs",
@@ -685,7 +709,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 40,
-      "popularity": 27
+      "popularity": 7
     },
     {
       "slot": "feet",
@@ -703,7 +727,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 37
+      "popularity": 47
     },
     {
       "slot": "feet",
@@ -717,8 +741,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 30
+      "statPriorityFit": 43,
+      "popularity": 27
     },
     {
       "slot": "finger",
@@ -733,43 +757,37 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 66,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 252258,
-      "itemName": "Sickening Signet of Atroxus",
+      "itemId": 281029,
+      "itemName": "Band of the Swarmcaller",
       "itemLevel": 311,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Atroxus",
-        "keyLevel": 10
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 76,
-      "popularity": 37
+      "statPriorityFit": 90,
+      "popularity": 33
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 268249,
-      "itemName": "Vile Alchemist's Band",
-      "itemLevel": 318,
+      "itemId": 240949,
+      "itemName": "Masterwork Sin'dorei Band",
+      "itemLevel": 331,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Vashnik the Malignant",
-        "difficulty": "mythic"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 89,
-      "popularity": 20
+      "statPriorityFit": 30,
+      "popularity": 23
     },
     {
       "slot": "trinket",
@@ -805,7 +823,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 80
+      "popularity": 90
     },
     {
       "slot": "trinket",
@@ -823,7 +841,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "main_hand",
@@ -841,19 +859,19 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 93
+      "popularity": 100
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     }
   }
 }

@@ -43,7 +43,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 48,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "neck",
@@ -61,7 +61,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 87
+      "popularity": 83
     },
     {
       "slot": "neck",
@@ -79,7 +79,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "shoulder",
@@ -96,7 +96,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 26,
-      "popularity": 97
+      "popularity": 93
     },
     {
       "slot": "back",
@@ -114,22 +114,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 50
+      "popularity": 47
     },
     {
       "slot": "back",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 239656,
-      "itemName": "Adherent's Silken Shroud",
-      "itemLevel": 331,
+      "itemId": 251132,
+      "itemName": "Speakeasy Shroud",
+      "itemLevel": 311,
       "source": {
-        "type": "crafted"
+        "type": "dungeon",
+        "dungeon": "Murder Row",
+        "boss": "Zaen Bladesorrow",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 10
+      "statPriorityFit": 78,
+      "popularity": 13
     },
     {
       "slot": "chest",
@@ -152,15 +155,15 @@
       "slot": "chest",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 281236,
-      "itemName": "Chestwrap of Palpable Terror",
-      "itemLevel": 318,
+      "itemId": 244570,
+      "itemName": "Silvermoon Agent's Coat",
+      "itemLevel": 331,
       "source": {
-        "type": "other"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
+      "statPriorityFit": 83,
       "popularity": 10
     },
     {
@@ -175,25 +178,25 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 63
+      "statPriorityFit": 53,
+      "popularity": 67
     },
     {
       "slot": "wrist",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 159300,
-      "itemName": "Kula's Butchering Wristwraps",
+      "itemId": 251183,
+      "itemName": "Rootwarden Wraps",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Kings' Rest",
-        "boss": "The Council of Tribes",
+        "dungeon": "The Blinding Vale",
+        "boss": "Lightblossom Trinity",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 88,
+      "statPriorityFit": 78,
       "popularity": 10
     },
     {
@@ -229,25 +232,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 83,
-      "popularity": 37
+      "popularity": 30
     },
     {
       "slot": "waist",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 251235,
-      "itemName": "Gravitic Girdle",
+      "itemId": 251189,
+      "itemName": "Rootwalker Harness",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Charonus",
+        "dungeon": "The Blinding Vale",
+        "boss": "Ikuzz the Light Hunter",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 56,
-      "popularity": 13
+      "statPriorityFit": 78,
+      "popularity": 20
     },
     {
       "slot": "legs",
@@ -264,7 +267,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 90
+      "popularity": 97
     },
     {
       "slot": "feet",
@@ -278,7 +281,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 70,
       "popularity": 50
     },
     {
@@ -297,7 +300,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 10
+      "popularity": 17
     },
     {
       "slot": "finger",
@@ -330,7 +333,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 30
+      "popularity": 40
     },
     {
       "slot": "finger",
@@ -344,8 +347,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 23
+      "statPriorityFit": 83,
+      "popularity": 20
     },
     {
       "slot": "trinket",
@@ -363,7 +366,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 90
+      "popularity": 80
     },
     {
       "slot": "trinket",
@@ -381,7 +384,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 70
+      "popularity": 57
     },
     {
       "slot": "trinket",
@@ -399,7 +402,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 40,
-      "popularity": 13
+      "popularity": 23
     },
     {
       "slot": "main_hand",
@@ -417,24 +420,21 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 40,
-      "popularity": 80
+      "popularity": 90
     },
     {
       "slot": "main_hand",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268209,
-      "itemName": "Aman'muso, Warlord's Vengeance",
-      "itemLevel": 318,
+      "itemId": 237847,
+      "itemName": "Blood Knight's Impetus",
+      "itemLevel": 331,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Coiled Altar",
-        "difficulty": "mythic"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 34,
+      "statPriorityFit": 60,
       "popularity": 7
     },
     {
@@ -452,7 +452,22 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 97
+      "popularity": 90
+    },
+    {
+      "slot": "head",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 271438,
+      "itemName": "Temple Delver's Mystic Helm",
+      "itemLevel": 311,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 75,
+      "popularity": 7
     },
     {
       "slot": "neck",
@@ -470,7 +485,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "neck",
@@ -505,7 +520,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 26,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "back",
@@ -537,8 +552,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 13
+      "statPriorityFit": 30,
+      "popularity": 17
     },
     {
       "slot": "chest",
@@ -555,7 +570,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 87
+      "popularity": 83
     },
     {
       "slot": "chest",
@@ -569,8 +584,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
-      "popularity": 7
+      "statPriorityFit": 83,
+      "popularity": 10
     },
     {
       "slot": "wrist",
@@ -584,8 +599,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 73
+      "statPriorityFit": 53,
+      "popularity": 77
     },
     {
       "slot": "wrist",
@@ -603,7 +618,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 17
+      "popularity": 20
     },
     {
       "slot": "hands",
@@ -623,9 +638,39 @@
       "popularity": 90
     },
     {
+      "slot": "hands",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 244575,
+      "itemName": "Silvermoon Agent's Handwraps",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 70,
+      "popularity": 7
+    },
+    {
       "slot": "waist",
       "contentType": "mythic-plus",
       "rank": 1,
+      "itemId": 271436,
+      "itemName": "Slitherscale Girdle",
+      "itemLevel": 311,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 57,
+      "popularity": 23
+    },
+    {
+      "slot": "waist",
+      "contentType": "mythic-plus",
+      "rank": 2,
       "itemId": 268227,
       "itemName": "Unpossessed Skullsash",
       "itemLevel": 318,
@@ -638,22 +683,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 83,
-      "popularity": 27
-    },
-    {
-      "slot": "waist",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 271436,
-      "itemName": "Slitherscale Girdle",
-      "itemLevel": 311,
-      "source": {
-        "type": "other"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 57,
-      "popularity": 20
+      "popularity": 23
     },
     {
       "slot": "legs",
@@ -684,8 +714,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 83,
-      "popularity": 20
+      "statPriorityFit": 53,
+      "popularity": 23
     },
     {
       "slot": "feet",
@@ -699,8 +729,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 73
+      "statPriorityFit": 70,
+      "popularity": 80
     },
     {
       "slot": "feet",
@@ -718,7 +748,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 54,
-      "popularity": 13
+      "popularity": 10
     },
     {
       "slot": "finger",
@@ -733,7 +763,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 74,
-      "popularity": 90
+      "popularity": 80
     },
     {
       "slot": "finger",
@@ -751,7 +781,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 73
+      "popularity": 70
     },
     {
       "slot": "finger",
@@ -765,8 +795,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 10
+      "statPriorityFit": 83,
+      "popularity": 20
     },
     {
       "slot": "trinket",
@@ -784,30 +814,12 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 70
+      "popularity": 57
     },
     {
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 250245,
-      "itemName": "Tumor of the Swarm",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Atroxus",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 50,
-      "popularity": 43
-    },
-    {
-      "slot": "trinket",
-      "contentType": "mythic-plus",
-      "rank": 3,
       "itemId": 270164,
       "itemName": "Gebbo's Bottomless Bag",
       "itemLevel": 318,
@@ -820,7 +832,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 33
+      "popularity": 43
+    },
+    {
+      "slot": "trinket",
+      "contentType": "mythic-plus",
+      "rank": 3,
+      "itemId": 250245,
+      "itemName": "Tumor of the Swarm",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Voidscar Arena",
+        "boss": "Atroxus",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 50,
+      "popularity": 27
     },
     {
       "slot": "main_hand",
@@ -838,37 +868,37 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 40,
-      "popularity": 87
+      "popularity": 77
     },
     {
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 251192,
-      "itemName": "Branch of Pride",
-      "itemLevel": 311,
+      "itemId": 268199,
+      "itemName": "Tidepiercer's Bubble Popper",
+      "itemLevel": 318,
       "source": {
-        "type": "dungeon",
-        "dungeon": "The Blinding Vale",
-        "boss": "Lightwarden Ruia",
-        "keyLevel": 10
+        "type": "raid",
+        "instance": "The Tidebound Grotto",
+        "boss": "Nymrissa Wavecaller",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 88,
-      "popularity": 7
+      "statPriorityFit": 89,
+      "popularity": 13
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     }
   }
 }

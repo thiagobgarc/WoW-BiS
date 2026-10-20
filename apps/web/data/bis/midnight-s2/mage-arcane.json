@@ -43,7 +43,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 20,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "neck",
@@ -78,7 +78,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 97
+      "popularity": 90
     },
     {
       "slot": "back",
@@ -96,25 +96,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 27
+      "popularity": 30
     },
     {
       "slot": "back",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268253,
-      "itemName": "Silken Voodoo Drape",
-      "itemLevel": 318,
+      "itemId": 239656,
+      "itemName": "Adherent's Silken Shroud",
+      "itemLevel": 331,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Coiled Altar",
-        "difficulty": "mythic"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 44,
-      "popularity": 20
+      "statPriorityFit": 60,
+      "popularity": 23
     },
     {
       "slot": "chest",
@@ -131,7 +128,22 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 93
+      "popularity": 83
+    },
+    {
+      "slot": "chest",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 239655,
+      "itemName": "Martyr's Vestments",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 30,
+      "popularity": 10
     },
     {
       "slot": "wrist",
@@ -146,25 +158,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 43,
-      "popularity": 83
+      "popularity": 80
     },
     {
       "slot": "wrist",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268228,
-      "itemName": "Venom-Singed Cuffs",
-      "itemLevel": 318,
+      "itemId": 251127,
+      "itemName": "Nibbling Armbands",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Entombed Sentinels",
-        "difficulty": "mythic"
+        "type": "dungeon",
+        "dungeon": "Murder Row",
+        "boss": "Kystia Manaheart",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 36,
-      "popularity": 13
+      "statPriorityFit": 87,
+      "popularity": 10
     },
     {
       "slot": "hands",
@@ -195,13 +207,31 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 20
+      "statPriorityFit": 70,
+      "popularity": 23
     },
     {
       "slot": "waist",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 268257,
+      "itemName": "Caustic Chain-Wrapped Sash",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Sszorak",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 74,
+      "popularity": 33
+    },
+    {
+      "slot": "waist",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 268232,
       "itemName": "Cincture of the Abyssal Grotto",
       "itemLevel": 318,
@@ -215,24 +245,6 @@
       "catalystable": false,
       "statPriorityFit": 58,
       "popularity": 33
-    },
-    {
-      "slot": "waist",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268257,
-      "itemName": "Caustic Chain-Wrapped Sash",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Sszorak",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 74,
-      "popularity": 30
     },
     {
       "slot": "legs",
@@ -249,22 +261,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 90
-    },
-    {
-      "slot": "legs",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 239651,
-      "itemName": "Martyr's Leggings",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 53,
-      "popularity": 7
+      "popularity": 97
     },
     {
       "slot": "feet",
@@ -282,7 +279,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 74,
-      "popularity": 33
+      "popularity": 37
     },
     {
       "slot": "feet",
@@ -300,7 +297,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 51,
-      "popularity": 17
+      "popularity": 27
     },
     {
       "slot": "finger",
@@ -332,7 +329,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
+      "statPriorityFit": 53,
       "popularity": 50
     },
     {
@@ -351,7 +348,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 71,
-      "popularity": 30
+      "popularity": 40
     },
     {
       "slot": "trinket",
@@ -369,7 +366,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 80
+      "popularity": 77
     },
     {
       "slot": "trinket",
@@ -387,7 +384,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 67
+      "popularity": 60
     },
     {
       "slot": "trinket",
@@ -423,7 +420,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 70
+      "popularity": 77
     },
     {
       "slot": "main_hand",
@@ -441,7 +438,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 74,
-      "popularity": 13
+      "popularity": 10
     },
     {
       "slot": "off_hand",
@@ -455,8 +452,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 70
+      "statPriorityFit": 30,
+      "popularity": 73
     },
     {
       "slot": "off_hand",
@@ -474,7 +471,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "head",
@@ -562,22 +559,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 33
+      "popularity": 43
     },
     {
       "slot": "back",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 239656,
-      "itemName": "Adherent's Silken Shroud",
-      "itemLevel": 331,
+      "itemId": 268248,
+      "itemName": "Amani Summoning Shawl",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Nek'zali the Soulcoiler",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 20
+      "statPriorityFit": 57,
+      "popularity": 23
     },
     {
       "slot": "chest",
@@ -594,7 +594,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "chest",
@@ -608,7 +608,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
+      "statPriorityFit": 30,
       "popularity": 10
     },
     {
@@ -659,7 +659,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 60
+      "popularity": 67
     },
     {
       "slot": "hands",
@@ -673,8 +673,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 23
+      "statPriorityFit": 70,
+      "popularity": 17
     },
     {
       "slot": "waist",
@@ -692,7 +692,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 33
+      "popularity": 37
     },
     {
       "slot": "waist",
@@ -710,7 +710,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 74,
-      "popularity": 23
+      "popularity": 27
     },
     {
       "slot": "legs",
@@ -727,22 +727,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 93
-    },
-    {
-      "slot": "legs",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 239651,
-      "itemName": "Martyr's Leggings",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 53,
-      "popularity": 7
+      "popularity": 97
     },
     {
       "slot": "feet",
@@ -760,7 +745,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 74,
-      "popularity": 33
+      "popularity": 37
     },
     {
       "slot": "feet",
@@ -774,8 +759,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 47,
-      "popularity": 30
+      "statPriorityFit": 77,
+      "popularity": 33
     },
     {
       "slot": "finger",
@@ -793,7 +778,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 63
+      "popularity": 70
     },
     {
       "slot": "finger",
@@ -807,8 +792,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 57
+      "statPriorityFit": 53,
+      "popularity": 50
     },
     {
       "slot": "finger",
@@ -862,7 +847,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 53
+      "popularity": 43
     },
     {
       "slot": "trinket",
@@ -880,7 +865,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 37
+      "popularity": 43
     },
     {
       "slot": "main_hand",
@@ -916,7 +901,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 74,
-      "popularity": 17
+      "popularity": 20
     },
     {
       "slot": "off_hand",
@@ -930,8 +915,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 67
+      "statPriorityFit": 30,
+      "popularity": 73
     },
     {
       "slot": "off_hand",
@@ -949,19 +934,19 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 46,
-      "popularity": 10
+      "popularity": 13
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     }
   }
 }

@@ -66,6 +66,21 @@
       "slot": "back",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 239656,
+      "itemName": "Adherent's Silken Shroud",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 70,
+      "popularity": 20
+    },
+    {
+      "slot": "back",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 268253,
       "itemName": "Silken Voodoo Drape",
       "itemLevel": 318,
@@ -78,22 +93,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 37
-    },
-    {
-      "slot": "back",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 239656,
-      "itemName": "Adherent's Silken Shroud",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 10
+      "popularity": 20
     },
     {
       "slot": "chest",
@@ -110,25 +110,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 93
-    },
-    {
-      "slot": "chest",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 271876,
-      "itemName": "Awoken Dreadfang Cuirass",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 100,
-      "popularity": 7
+      "popularity": 97
     },
     {
       "slot": "wrist",
@@ -142,7 +124,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 70,
       "popularity": 87
     },
     {
@@ -178,7 +160,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 33,
-      "popularity": 87
+      "popularity": 77
     },
     {
       "slot": "hands",
@@ -193,7 +175,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 76,
-      "popularity": 7
+      "popularity": 13
     },
     {
       "slot": "waist",
@@ -207,8 +189,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 90
+      "statPriorityFit": 30,
+      "popularity": 77
+    },
+    {
+      "slot": "waist",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268254,
+      "itemName": "Serpentine Mixing Belt",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Vashnik the Malignant",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 81,
+      "popularity": 7
     },
     {
       "slot": "legs",
@@ -225,7 +225,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 67
+      "popularity": 60
     },
     {
       "slot": "legs",
@@ -239,8 +239,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 20
+      "statPriorityFit": 53,
+      "popularity": 30
     },
     {
       "slot": "feet",
@@ -276,7 +276,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 20
+      "popularity": 17
     },
     {
       "slot": "finger",
@@ -294,40 +294,40 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 94,
-      "popularity": 50
+      "popularity": 40
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 158366,
-      "itemName": "Charged Sandstone Band",
-      "itemLevel": 311,
+      "itemId": 240949,
+      "itemName": "Masterwork Sin'dorei Band",
+      "itemLevel": 331,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Temple of Sethraliss",
-        "boss": "Galvazzt",
-        "keyLevel": 10
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 80,
-      "popularity": 30
+      "statPriorityFit": 43,
+      "popularity": 37
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 281029,
-      "itemName": "Band of the Swarmcaller",
-      "itemLevel": 318,
+      "itemId": 252258,
+      "itemName": "Sickening Signet of Atroxus",
+      "itemLevel": 311,
       "source": {
-        "type": "other"
+        "type": "dungeon",
+        "dungeon": "Voidscar Arena",
+        "boss": "Atroxus",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 84,
-      "popularity": 23
+      "statPriorityFit": 58,
+      "popularity": 27
     },
     {
       "slot": "trinket",
@@ -345,27 +345,12 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "trinket",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 281215,
-      "itemName": "Twisted Horror's Tendril",
-      "itemLevel": 318,
-      "source": {
-        "type": "other"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 50,
-      "popularity": 30
-    },
-    {
-      "slot": "trinket",
-      "contentType": "raid",
-      "rank": 3,
       "itemId": 270165,
       "itemName": "Keeper's Seething Core",
       "itemLevel": 318,
@@ -374,6 +359,21 @@
         "instance": "The Venomous Abyss",
         "boss": "Entombed Sentinels",
         "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 50,
+      "popularity": 37
+    },
+    {
+      "slot": "trinket",
+      "contentType": "raid",
+      "rank": 3,
+      "itemId": 281215,
+      "itemName": "Twisted Horror's Tendril",
+      "itemLevel": 318,
+      "source": {
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
@@ -431,7 +431,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "shoulder",
@@ -448,7 +448,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "shoulder",
@@ -463,7 +463,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 60,
-      "popularity": 13
+      "popularity": 10
     },
     {
       "slot": "back",
@@ -477,8 +477,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 23
+      "statPriorityFit": 70,
+      "popularity": 33
     },
     {
       "slot": "back",
@@ -496,7 +496,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 78,
-      "popularity": 23
+      "popularity": 20
     },
     {
       "slot": "chest",
@@ -513,7 +513,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 100
+      "popularity": 97
     },
     {
       "slot": "wrist",
@@ -527,8 +527,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 77
+      "statPriorityFit": 70,
+      "popularity": 80
     },
     {
       "slot": "wrist",
@@ -563,7 +563,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 33,
-      "popularity": 90
+      "popularity": 97
     },
     {
       "slot": "waist",
@@ -577,8 +577,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 93
+      "statPriorityFit": 30,
+      "popularity": 90
     },
     {
       "slot": "legs",
@@ -595,7 +595,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 53
+      "popularity": 50
     },
     {
       "slot": "legs",
@@ -609,7 +609,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
+      "statPriorityFit": 53,
       "popularity": 47
     },
     {
@@ -642,8 +642,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 52,
-      "popularity": 17
+      "statPriorityFit": 82,
+      "popularity": 13
     },
     {
       "slot": "finger",
@@ -661,30 +661,12 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 94,
-      "popularity": 43
+      "popularity": 47
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 158366,
-      "itemName": "Charged Sandstone Band",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Temple of Sethraliss",
-        "boss": "Galvazzt",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 80,
-      "popularity": 33
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 3,
       "itemId": 240949,
       "itemName": "Masterwork Sin'dorei Band",
       "itemLevel": 331,
@@ -693,8 +675,23 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 30
+      "statPriorityFit": 43,
+      "popularity": 43
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 3,
+      "itemId": 281029,
+      "itemName": "Band of the Swarmcaller",
+      "itemLevel": 311,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 84,
+      "popularity": 33
     },
     {
       "slot": "trinket",
@@ -712,7 +709,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 83
+      "popularity": 87
     },
     {
       "slot": "trinket",
@@ -730,7 +727,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 33
+      "popularity": 30
     },
     {
       "slot": "trinket",
@@ -745,7 +742,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 33
+      "popularity": 27
     },
     {
       "slot": "main_hand",
@@ -770,12 +767,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     }
   }
 }

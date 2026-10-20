@@ -43,7 +43,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "shoulder",
@@ -60,7 +60,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 73
+      "popularity": 83
     },
     {
       "slot": "shoulder",
@@ -75,7 +75,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 30,
-      "popularity": 23
+      "popularity": 17
     },
     {
       "slot": "back",
@@ -93,7 +93,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 53
+      "popularity": 47
     },
     {
       "slot": "back",
@@ -107,8 +107,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 23
+      "statPriorityFit": 43,
+      "popularity": 27
     },
     {
       "slot": "chest",
@@ -139,7 +139,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 43,
       "popularity": 77
     },
     {
@@ -158,7 +158,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 45,
-      "popularity": 20
+      "popularity": 17
     },
     {
       "slot": "hands",
@@ -175,7 +175,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "hands",
@@ -189,8 +189,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
-      "popularity": 7
+      "statPriorityFit": 43,
+      "popularity": 10
     },
     {
       "slot": "waist",
@@ -208,7 +208,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 53
+      "popularity": 60
     },
     {
       "slot": "waist",
@@ -222,8 +222,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 20
+      "statPriorityFit": 53,
+      "popularity": 17
     },
     {
       "slot": "legs",
@@ -240,7 +240,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 83
+      "popularity": 77
     },
     {
       "slot": "legs",
@@ -254,8 +254,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
-      "popularity": 17
+      "statPriorityFit": 83,
+      "popularity": 20
     },
     {
       "slot": "feet",
@@ -273,21 +273,21 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 73,
-      "popularity": 30
+      "popularity": 27
     },
     {
       "slot": "feet",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 271440,
-      "itemName": "Greaves of the Noxious Depths",
-      "itemLevel": 318,
+      "itemId": 244577,
+      "itemName": "Farstrider's Razor Talons",
+      "itemLevel": 331,
       "source": {
-        "type": "other"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 82,
+      "statPriorityFit": 60,
       "popularity": 27
     },
     {
@@ -302,8 +302,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 70
+      "statPriorityFit": 70,
+      "popularity": 67
     },
     {
       "slot": "finger",
@@ -321,7 +321,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 94,
-      "popularity": 63
+      "popularity": 60
     },
     {
       "slot": "finger",
@@ -339,7 +339,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 78,
-      "popularity": 27
+      "popularity": 33
     },
     {
       "slot": "trinket",
@@ -375,7 +375,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 73
+      "popularity": 63
     },
     {
       "slot": "trinket",
@@ -393,7 +393,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "main_hand",
@@ -411,25 +411,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 87
+      "popularity": 80
     },
     {
       "slot": "main_hand",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268203,
-      "itemName": "Hexing Spiritrender",
+      "itemId": 268210,
+      "itemName": "Malevolent Spiritcudgel",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
+        "boss": "The Lost Explorers",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 7
+      "popularity": 10
     },
     {
       "slot": "off_hand",
@@ -444,7 +444,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 63
+      "popularity": 60
     },
     {
       "slot": "off_hand",
@@ -479,7 +479,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 83
+      "popularity": 80
     },
     {
       "slot": "head",
@@ -493,8 +493,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 48,
-      "popularity": 10
+      "statPriorityFit": 72,
+      "popularity": 13
     },
     {
       "slot": "neck",
@@ -529,7 +529,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 83
+      "popularity": 80
     },
     {
       "slot": "shoulder",
@@ -544,7 +544,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 30,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "back",
@@ -562,7 +562,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 67
+      "popularity": 57
     },
     {
       "slot": "back",
@@ -576,8 +576,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 10
+      "statPriorityFit": 43,
+      "popularity": 17
     },
     {
       "slot": "chest",
@@ -594,7 +594,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 97
+      "popularity": 93
     },
     {
       "slot": "wrist",
@@ -608,26 +608,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 43,
       "popularity": 87
-    },
-    {
-      "slot": "wrist",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 251200,
-      "itemName": "Saptorbane Guards",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "The Blinding Vale",
-        "boss": "Ziekket",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 78,
-      "popularity": 7
     },
     {
       "slot": "hands",
@@ -644,7 +626,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "waist",
@@ -662,7 +644,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 50
+      "popularity": 53
     },
     {
       "slot": "waist",
@@ -676,8 +658,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 17
+      "statPriorityFit": 53,
+      "popularity": 13
     },
     {
       "slot": "legs",
@@ -694,7 +676,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 73
+      "popularity": 77
     },
     {
       "slot": "legs",
@@ -708,28 +690,13 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
-      "popularity": 17
+      "statPriorityFit": 83,
+      "popularity": 20
     },
     {
       "slot": "feet",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 271440,
-      "itemName": "Greaves of the Noxious Depths",
-      "itemLevel": 311,
-      "source": {
-        "type": "other"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 82,
-      "popularity": 33
-    },
-    {
-      "slot": "feet",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 244577,
       "itemName": "Farstrider's Razor Talons",
       "itemLevel": 331,
@@ -738,31 +705,28 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 60,
+      "popularity": 37
+    },
+    {
+      "slot": "feet",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 271440,
+      "itemName": "Greaves of the Noxious Depths",
+      "itemLevel": 311,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 34,
       "popularity": 30
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 251148,
-      "itemName": "Pilfered Precious Band",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Den of Nalorakk",
-        "boss": "The Hoardmonger",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 64,
-      "popularity": 57
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 268252,
       "itemName": "Apex Brute's Claw Ring",
       "itemLevel": 318,
@@ -775,25 +739,40 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 94,
-      "popularity": 43
+      "popularity": 60
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 240949,
+      "itemName": "Masterwork Sin'dorei Band",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 70,
+      "popularity": 53
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 273792,
-      "itemName": "Band of the Amani Warlord",
+      "itemId": 251148,
+      "itemName": "Pilfered Precious Band",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Altar of Fangs",
-        "boss": "Zul'jan",
+        "dungeon": "Den of Nalorakk",
+        "boss": "The Hoardmonger",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 78,
-      "popularity": 37
+      "statPriorityFit": 64,
+      "popularity": 53
     },
     {
       "slot": "trinket",
@@ -847,7 +826,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "main_hand",
@@ -865,7 +844,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 87
+      "popularity": 93
     },
     {
       "slot": "main_hand",
@@ -898,7 +877,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 50
+      "popularity": 43
     },
     {
       "slot": "off_hand",
@@ -923,12 +902,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     }
   }
 }

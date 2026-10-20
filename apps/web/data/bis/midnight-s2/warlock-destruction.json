@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 70
+      "popularity": 80
     },
     {
       "slot": "head",
@@ -43,7 +43,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 40,
-      "popularity": 30
+      "popularity": 20
     },
     {
       "slot": "neck",
@@ -78,7 +78,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 35,
-      "popularity": 97
+      "popularity": 90
+    },
+    {
+      "slot": "shoulder",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 239031,
+      "itemName": "Brood Cleanser's Amice",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Temple of Sethraliss",
+        "boss": "Avatar of Sethraliss",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 83,
+      "popularity": 7
     },
     {
       "slot": "back",
@@ -92,7 +110,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 53,
       "popularity": 30
     },
     {
@@ -143,7 +161,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 70,
-      "popularity": 73
+      "popularity": 83
     },
     {
       "slot": "wrist",
@@ -161,7 +179,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 78,
-      "popularity": 17
+      "popularity": 10
     },
     {
       "slot": "hands",
@@ -178,7 +196,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 93
+      "popularity": 80
+    },
+    {
+      "slot": "hands",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268243,
+      "itemName": "Grasps of the Eternal Shadow",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 76,
+      "popularity": 13
     },
     {
       "slot": "waist",
@@ -192,8 +228,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 47
+      "statPriorityFit": 60,
+      "popularity": 37
     },
     {
       "slot": "waist",
@@ -211,7 +247,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 27
+      "popularity": 30
     },
     {
       "slot": "legs",
@@ -228,7 +264,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 80
+      "popularity": 93
     },
     {
       "slot": "legs",
@@ -242,8 +278,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 13
+      "statPriorityFit": 43,
+      "popularity": 7
     },
     {
       "slot": "feet",
@@ -261,7 +297,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 40
+      "popularity": 33
     },
     {
       "slot": "feet",
@@ -285,6 +321,24 @@
       "slot": "finger",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 268252,
+      "itemName": "Apex Brute's Claw Ring",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Sszorak",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 94,
+      "popularity": 50
+    },
+    {
+      "slot": "finger",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 281029,
       "itemName": "Band of the Swarmcaller",
       "itemLevel": 318,
@@ -299,38 +353,20 @@
     {
       "slot": "finger",
       "contentType": "raid",
-      "rank": 2,
-      "itemId": 268252,
-      "itemName": "Apex Brute's Claw Ring",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Sszorak",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 94,
-      "popularity": 30
-    },
-    {
-      "slot": "finger",
-      "contentType": "raid",
       "rank": 3,
-      "itemId": 251136,
-      "itemName": "Signet of Snarling Servitude",
+      "itemId": 273792,
+      "itemName": "Band of the Amani Warlord",
       "itemLevel": 311,
       "source": {
         "type": "dungeon",
-        "dungeon": "Murder Row",
-        "boss": "Xathuux the Annihilator",
+        "dungeon": "Altar of Fangs",
+        "boss": "Zul'jan",
         "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 76,
-      "popularity": 27
+      "statPriorityFit": 78,
+      "popularity": 30
     },
     {
       "slot": "trinket",
@@ -348,7 +384,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 97
+      "popularity": 87
     },
     {
       "slot": "trinket",
@@ -366,7 +402,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 43
+      "popularity": 50
     },
     {
       "slot": "trinket",
@@ -402,7 +438,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 80
+      "popularity": 77
+    },
+    {
+      "slot": "main_hand",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 245770,
+      "itemName": "Aln'hara Cane",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 60,
+      "popularity": 10
     },
     {
       "slot": "off_hand",
@@ -416,8 +467,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 60
+      "statPriorityFit": 30,
+      "popularity": 63
     },
     {
       "slot": "off_hand",
@@ -435,7 +486,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 80,
-      "popularity": 17
+      "popularity": 10
     },
     {
       "slot": "head",
@@ -452,7 +503,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 80
+      "popularity": 83
     },
     {
       "slot": "head",
@@ -470,7 +521,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 40,
-      "popularity": 20
+      "popularity": 17
     },
     {
       "slot": "neck",
@@ -488,7 +539,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 80
+      "popularity": 83
     },
     {
       "slot": "neck",
@@ -506,7 +557,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "shoulder",
@@ -523,17 +574,20 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 35,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "shoulder",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 239650,
-      "itemName": "Martyr's Mantle",
-      "itemLevel": 331,
+      "itemId": 239031,
+      "itemName": "Brood Cleanser's Amice",
+      "itemLevel": 311,
       "source": {
-        "type": "crafted"
+        "type": "dungeon",
+        "dungeon": "Temple of Sethraliss",
+        "boss": "Avatar of Sethraliss",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": true,
@@ -552,7 +606,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 53,
       "popularity": 33
     },
     {
@@ -591,24 +645,6 @@
       "popularity": 87
     },
     {
-      "slot": "chest",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 273785,
-      "itemName": "Primordial Robe of Rites",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Altar of Fangs",
-        "boss": "Rav'i",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 53,
-      "popularity": 7
-    },
-    {
       "slot": "wrist",
       "contentType": "mythic-plus",
       "rank": 1,
@@ -621,7 +657,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 70,
-      "popularity": 83
+      "popularity": 80
     },
     {
       "slot": "hands",
@@ -638,7 +674,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "waist",
@@ -652,8 +688,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 50
+      "statPriorityFit": 60,
+      "popularity": 53
     },
     {
       "slot": "waist",
@@ -671,7 +707,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 13
+      "popularity": 17
     },
     {
       "slot": "legs",
@@ -688,12 +724,30 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 90
+      "popularity": 97
     },
     {
       "slot": "feet",
       "contentType": "mythic-plus",
       "rank": 1,
+      "itemId": 268218,
+      "itemName": "Nek'zali's Spiritwalkers",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Nek'zali the Soulcoiler",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 81,
+      "popularity": 17
+    },
+    {
+      "slot": "feet",
+      "contentType": "mythic-plus",
+      "rank": 2,
       "itemId": 239654,
       "itemName": "Martyr's Slippers",
       "itemLevel": 331,
@@ -703,25 +757,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 30,
-      "popularity": 17
-    },
-    {
-      "slot": "feet",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 251137,
-      "itemName": "Tempestuous Sandals",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Murder Row",
-        "boss": "Xathuux the Annihilator",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 49,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "finger",
@@ -745,24 +781,6 @@
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268252,
-      "itemName": "Apex Brute's Claw Ring",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Sszorak",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 94,
-      "popularity": 30
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 3,
       "itemId": 273792,
       "itemName": "Band of the Amani Warlord",
       "itemLevel": 311,
@@ -775,30 +793,27 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 78,
-      "popularity": 30
+      "popularity": 33
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 3,
+      "itemId": 281029,
+      "itemName": "Band of the Swarmcaller",
+      "itemLevel": 311,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 47,
+      "popularity": 33
     },
     {
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 250215,
-      "itemName": "Freightrunner's Flask",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Murder Row",
-        "boss": "Zaen Bladesorrow",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 50,
-      "popularity": 70
-    },
-    {
-      "slot": "trinket",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 270164,
       "itemName": "Gebbo's Bottomless Bag",
       "itemLevel": 318,
@@ -811,7 +826,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 70
+      "popularity": 80
+    },
+    {
+      "slot": "trinket",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 250215,
+      "itemName": "Freightrunner's Flask",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Murder Row",
+        "boss": "Zaen Bladesorrow",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 50,
+      "popularity": 63
     },
     {
       "slot": "trinket",
@@ -829,7 +862,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 23
+      "popularity": 20
     },
     {
       "slot": "main_hand",
@@ -861,7 +894,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
+      "statPriorityFit": 60,
       "popularity": 17
     },
     {
@@ -876,8 +909,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 47
+      "statPriorityFit": 30,
+      "popularity": 50
     },
     {
       "slot": "off_hand",
@@ -902,12 +935,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-15"
+      "collectedAt": "2026-10-20"
     }
   }
 }
