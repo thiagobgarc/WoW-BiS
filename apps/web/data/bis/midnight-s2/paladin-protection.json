@@ -25,25 +25,22 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 73
+      "popularity": 87
     },
     {
       "slot": "head",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268229,
-      "itemName": "Skullguard of the Risen Sacrifice",
-      "itemLevel": 318,
+      "itemId": 237832,
+      "itemName": "Spellbreaker's Cover",
+      "itemLevel": 331,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
-        "difficulty": "mythic"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 75,
-      "popularity": 13
+      "statPriorityFit": 30,
+      "popularity": 7
     },
     {
       "slot": "neck",
@@ -61,25 +58,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 83
-    },
-    {
-      "slot": "neck",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268250,
-      "itemName": "Sentinel's Vitriolic Chain",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Entombed Sentinels",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 73,
-      "popularity": 10
+      "popularity": 97
     },
     {
       "slot": "shoulder",
@@ -96,22 +75,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 80
+      "popularity": 83
     },
     {
       "slot": "shoulder",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 237835,
-      "itemName": "Spellbreaker's Mantle",
-      "itemLevel": 331,
+      "itemId": 268226,
+      "itemName": "Swelling Sea Spaulders",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Tidebound Grotto",
+        "boss": "Nymrissa Wavecaller",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
-      "popularity": 7
+      "statPriorityFit": 82,
+      "popularity": 10
     },
     {
       "slot": "back",
@@ -129,7 +111,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 57
+      "popularity": 50
     },
     {
       "slot": "back",
@@ -143,8 +125,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 10
+      "statPriorityFit": 83,
+      "popularity": 17
     },
     {
       "slot": "chest",
@@ -175,8 +157,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 60
+      "statPriorityFit": 43,
+      "popularity": 63
     },
     {
       "slot": "wrist",
@@ -211,7 +193,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 87
+      "popularity": 93
     },
     {
       "slot": "hands",
@@ -225,8 +207,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
-      "popularity": 10
+      "statPriorityFit": 53,
+      "popularity": 7
     },
     {
       "slot": "waist",
@@ -244,7 +226,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 67
+      "popularity": 70
     },
     {
       "slot": "waist",
@@ -262,7 +244,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "legs",
@@ -279,7 +261,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "legs",
@@ -297,12 +279,27 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "feet",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 237828,
+      "itemName": "Spellbreaker's March",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 83,
+      "popularity": 40
+    },
+    {
+      "slot": "feet",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 268245,
       "itemName": "Entombed Cultist's Sabatons",
       "itemLevel": 318,
@@ -315,27 +312,27 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 40
-    },
-    {
-      "slot": "feet",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 237828,
-      "itemName": "Spellbreaker's March",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 40
+      "popularity": 33
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 281029,
+      "itemName": "Band of the Swarmcaller",
+      "itemLevel": 318,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 47,
+      "popularity": 67
+    },
+    {
+      "slot": "finger",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 240949,
       "itemName": "Masterwork Sin'dorei Band",
       "itemLevel": 331,
@@ -344,26 +341,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 70,
       "popularity": 47
-    },
-    {
-      "slot": "finger",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 273792,
-      "itemName": "Band of the Amani Warlord",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Altar of Fangs",
-        "boss": "Zul'jan",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 78,
-      "popularity": 33
     },
     {
       "slot": "finger",
@@ -381,7 +360,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 94,
-      "popularity": 20
+      "popularity": 33
     },
     {
       "slot": "trinket",
@@ -417,25 +396,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 77
+      "popularity": 83
     },
     {
       "slot": "trinket",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 270165,
-      "itemName": "Keeper's Seething Core",
+      "itemId": 270163,
+      "itemName": "Sszorak's Ferocity",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Entombed Sentinels",
+        "boss": "Sszorak",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 17
+      "popularity": 10
     },
     {
       "slot": "main_hand",
@@ -477,21 +456,6 @@
       "slot": "off_hand",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 237831,
-      "itemName": "Spellbreaker's Rebuke",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 40
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "raid",
-      "rank": 2,
       "itemId": 268196,
       "itemName": "Venom-Slashed Scuteward",
       "itemLevel": 318,
@@ -504,7 +468,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 37
+      "popularity": 40
+    },
+    {
+      "slot": "off_hand",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268262,
+      "itemName": "Bubblefin Splash Guard",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Tidebound Grotto",
+        "boss": "Nymrissa Wavecaller",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 48,
+      "popularity": 30
     },
     {
       "slot": "head",
@@ -521,24 +503,21 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "head",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 251126,
-      "itemName": "Greathelm of Temptation",
+      "itemId": 281239,
+      "itemName": "Corroded Hulk's Skullcap",
       "itemLevel": 311,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Murder Row",
-        "boss": "Kystia Manaheart",
-        "keyLevel": 10
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 61,
+      "statPriorityFit": 47,
       "popularity": 7
     },
     {
@@ -557,7 +536,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 90
+      "popularity": 97
     },
     {
       "slot": "shoulder",
@@ -574,7 +553,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 83
+      "popularity": 80
     },
     {
       "slot": "shoulder",
@@ -588,8 +567,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
-      "popularity": 10
+      "statPriorityFit": 30,
+      "popularity": 20
     },
     {
       "slot": "back",
@@ -607,25 +586,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 37
+      "popularity": 50
     },
     {
       "slot": "back",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 193763,
-      "itemName": "Fireproof Drape",
-      "itemLevel": 311,
+      "itemId": 239656,
+      "itemName": "Adherent's Silken Shroud",
+      "itemLevel": 331,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Ruby Life Pools",
-        "boss": "Kokia Blazehoof",
-        "keyLevel": 10
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 77,
-      "popularity": 17
+      "statPriorityFit": 83,
+      "popularity": 30
     },
     {
       "slot": "chest",
@@ -656,8 +632,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 53
+      "statPriorityFit": 43,
+      "popularity": 77
     },
     {
       "slot": "wrist",
@@ -675,7 +651,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "hands",
@@ -692,7 +668,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 80
+      "popularity": 63
     },
     {
       "slot": "hands",
@@ -706,8 +682,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
-      "popularity": 17
+      "statPriorityFit": 53,
+      "popularity": 27
     },
     {
       "slot": "waist",
@@ -725,7 +701,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 50
+      "popularity": 67
     },
     {
       "slot": "waist",
@@ -739,8 +715,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 27
+      "statPriorityFit": 30,
+      "popularity": 23
     },
     {
       "slot": "legs",
@@ -757,25 +733,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 73
-    },
-    {
-      "slot": "legs",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 271878,
-      "itemName": "Chausses of Unbound Rancor",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 100,
-      "popularity": 23
+      "popularity": 97
     },
     {
       "slot": "feet",
@@ -789,8 +747,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 50
+      "statPriorityFit": 83,
+      "popularity": 47
     },
     {
       "slot": "feet",
@@ -808,25 +766,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 20
+      "popularity": 37
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 273792,
-      "itemName": "Band of the Amani Warlord",
+      "itemId": 281029,
+      "itemName": "Band of the Swarmcaller",
       "itemLevel": 311,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Altar of Fangs",
-        "boss": "Zul'jan",
-        "keyLevel": 10
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 78,
-      "popularity": 50
+      "statPriorityFit": 47,
+      "popularity": 70
     },
     {
       "slot": "finger",
@@ -840,23 +795,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 43
+      "statPriorityFit": 70,
+      "popularity": 53
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 281029,
-      "itemName": "Band of the Swarmcaller",
+      "itemId": 273792,
+      "itemName": "Band of the Amani Warlord",
       "itemLevel": 311,
       "source": {
-        "type": "other"
+        "type": "dungeon",
+        "dungeon": "Altar of Fangs",
+        "boss": "Zul'jan",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 47,
-      "popularity": 27
+      "statPriorityFit": 78,
+      "popularity": 20
     },
     {
       "slot": "trinket",
@@ -874,7 +832,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 77
+      "popularity": 83
     },
     {
       "slot": "trinket",
@@ -892,25 +850,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 70
+      "popularity": 63
     },
     {
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 270165,
-      "itemName": "Keeper's Seething Core",
-      "itemLevel": 318,
+      "itemId": 281215,
+      "itemName": "Twisted Horror's Tendril",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Entombed Sentinels",
-        "difficulty": "mythic"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 17
+      "popularity": 27
     },
     {
       "slot": "main_hand",
@@ -928,7 +883,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 77
+      "popularity": 90
     },
     {
       "slot": "main_hand",
@@ -946,7 +901,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 13
+      "popularity": 7
     },
     {
       "slot": "off_hand",
@@ -960,38 +915,38 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 53
+      "statPriorityFit": 43,
+      "popularity": 33
     },
     {
       "slot": "off_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268262,
-      "itemName": "Bubblefin Splash Guard",
+      "itemId": 268196,
+      "itemName": "Venom-Slashed Scuteward",
       "itemLevel": 318,
       "source": {
         "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
+        "instance": "The Venomous Abyss",
+        "boss": "The Lost Explorers",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 48,
-      "popularity": 23
+      "statPriorityFit": 77,
+      "popularity": 33
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-20"
+      "collectedAt": "2026-11-03"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-20"
+      "collectedAt": "2026-11-03"
     }
   }
 }

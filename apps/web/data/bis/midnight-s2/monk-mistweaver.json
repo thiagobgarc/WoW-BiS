@@ -25,7 +25,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 97
+      "popularity": 90
+    },
+    {
+      "slot": "head",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271875,
+      "itemName": "Gaze of the Coiled Watcher",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Ula'tek",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 100,
+      "popularity": 10
     },
     {
       "slot": "neck",
@@ -60,7 +78,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 83
+      "popularity": 87
     },
     {
       "slot": "shoulder",
@@ -74,7 +92,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
+      "statPriorityFit": 60,
       "popularity": 10
     },
     {
@@ -89,8 +107,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 40
+      "statPriorityFit": 70,
+      "popularity": 47
     },
     {
       "slot": "back",
@@ -108,7 +126,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 20
+      "popularity": 23
     },
     {
       "slot": "chest",
@@ -125,21 +143,21 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "chest",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 244570,
-      "itemName": "Silvermoon Agent's Coat",
-      "itemLevel": 331,
+      "itemId": 281236,
+      "itemName": "Chestwrap of Palpable Terror",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
+      "statPriorityFit": 83,
       "popularity": 7
     },
     {
@@ -154,8 +172,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 53
+      "statPriorityFit": 70,
+      "popularity": 47
     },
     {
       "slot": "wrist",
@@ -173,7 +191,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 61,
-      "popularity": 30
+      "popularity": 33
     },
     {
       "slot": "hands",
@@ -190,7 +208,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "hands",
@@ -204,8 +222,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
-      "popularity": 7
+      "statPriorityFit": 43,
+      "popularity": 10
     },
     {
       "slot": "waist",
@@ -219,23 +237,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 50
+      "statPriorityFit": 53,
+      "popularity": 57
     },
     {
       "slot": "waist",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 271436,
-      "itemName": "Slitherscale Girdle",
+      "itemId": 268227,
+      "itemName": "Unpossessed Skullsash",
       "itemLevel": 318,
       "source": {
-        "type": "other"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Lost Explorers",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 34,
-      "popularity": 20
+      "statPriorityFit": 47,
+      "popularity": 17
     },
     {
       "slot": "legs",
@@ -266,7 +287,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
+      "statPriorityFit": 60,
       "popularity": 27
     },
     {
@@ -285,7 +306,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 72,
-      "popularity": 50
+      "popularity": 47
     },
     {
       "slot": "feet",
@@ -299,8 +320,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 13
+      "statPriorityFit": 70,
+      "popularity": 23
     },
     {
       "slot": "finger",
@@ -318,7 +339,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 73
+      "popularity": 77
     },
     {
       "slot": "finger",
@@ -336,7 +357,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 37
+      "popularity": 50
     },
     {
       "slot": "finger",
@@ -350,8 +371,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 30
+      "statPriorityFit": 53,
+      "popularity": 37
     },
     {
       "slot": "trinket",
@@ -369,7 +390,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 73
+      "popularity": 80
     },
     {
       "slot": "trinket",
@@ -405,12 +426,30 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 40,
-      "popularity": 27
+      "popularity": 23
     },
     {
       "slot": "main_hand",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 268211,
+      "itemName": "Baleful Hexblade",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 89,
+      "popularity": 43
+    },
+    {
+      "slot": "main_hand",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 245770,
       "itemName": "Aln'hara Cane",
       "itemLevel": 331,
@@ -419,26 +458,41 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 37
+      "statPriorityFit": 83,
+      "popularity": 33
     },
     {
-      "slot": "main_hand",
+      "slot": "off_hand",
       "contentType": "raid",
-      "rank": 2,
-      "itemId": 268205,
-      "itemName": "Venomancer's Winged Channeler",
+      "rank": 1,
+      "itemId": 268263,
+      "itemName": "Frostscale's Mystic Frond",
       "itemLevel": 318,
       "source": {
         "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Vashnik the Malignant",
+        "instance": "The Tidebound Grotto",
+        "boss": "Nymrissa Wavecaller",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 76,
-      "popularity": 20
+      "statPriorityFit": 48,
+      "popularity": 27
+    },
+    {
+      "slot": "off_hand",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 245769,
+      "itemName": "Aln'hara Lantern",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 43,
+      "popularity": 13
     },
     {
       "slot": "head",
@@ -455,7 +509,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "head",
@@ -473,7 +527,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 13
+      "popularity": 7
     },
     {
       "slot": "neck",
@@ -491,7 +545,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 97
+      "popularity": 93
+    },
+    {
+      "slot": "neck",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 251173,
+      "itemName": "Yoke of the Charging Bear",
+      "itemLevel": 311,
+      "source": {
+        "type": "dungeon",
+        "dungeon": "Den of Nalorakk",
+        "boss": "Nalorakk",
+        "keyLevel": 10
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 79,
+      "popularity": 7
     },
     {
       "slot": "shoulder",
@@ -508,21 +580,24 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "shoulder",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 244572,
-      "itemName": "Silvermoon Agent's Mantle",
-      "itemLevel": 331,
+      "itemId": 251146,
+      "itemName": "Scavenger's Spaulders",
+      "itemLevel": 311,
       "source": {
-        "type": "crafted"
+        "type": "dungeon",
+        "dungeon": "Den of Nalorakk",
+        "boss": "The Hoardmonger",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
+      "statPriorityFit": 28,
       "popularity": 7
     },
     {
@@ -537,8 +612,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 37
+      "statPriorityFit": 70,
+      "popularity": 40
     },
     {
       "slot": "back",
@@ -556,7 +631,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 23
+      "popularity": 27
     },
     {
       "slot": "chest",
@@ -573,22 +648,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 90
-    },
-    {
-      "slot": "chest",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 281236,
-      "itemName": "Chestwrap of Palpable Terror",
-      "itemLevel": 311,
-      "source": {
-        "type": "other"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 83,
-      "popularity": 7
+      "popularity": 100
     },
     {
       "slot": "wrist",
@@ -602,7 +662,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
+      "statPriorityFit": 70,
       "popularity": 50
     },
     {
@@ -621,7 +681,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 61,
-      "popularity": 43
+      "popularity": 33
     },
     {
       "slot": "hands",
@@ -638,7 +698,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 87
+      "popularity": 77
     },
     {
       "slot": "hands",
@@ -652,8 +712,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
-      "popularity": 13
+      "statPriorityFit": 43,
+      "popularity": 20
     },
     {
       "slot": "waist",
@@ -667,26 +727,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 50
+      "statPriorityFit": 53,
+      "popularity": 47
     },
     {
       "slot": "waist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 159301,
-      "itemName": "Primal Dinomancer's Belt",
-      "itemLevel": 311,
+      "itemId": 268256,
+      "itemName": "Sash of the Forlorn Vessel",
+      "itemLevel": 318,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Kings' Rest",
-        "boss": "Dazar, The First King",
-        "keyLevel": 10
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 67,
-      "popularity": 17
+      "statPriorityFit": 76,
+      "popularity": 13
     },
     {
       "slot": "legs",
@@ -703,7 +763,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 33,
-      "popularity": 70
+      "popularity": 67
     },
     {
       "slot": "legs",
@@ -717,7 +777,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
+      "statPriorityFit": 60,
       "popularity": 30
     },
     {
@@ -732,8 +792,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 40
+      "statPriorityFit": 70,
+      "popularity": 53
     },
     {
       "slot": "feet",
@@ -751,25 +811,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 72,
-      "popularity": 37
+      "popularity": 20
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 252258,
-      "itemName": "Sickening Signet of Atroxus",
+      "itemId": 281029,
+      "itemName": "Band of the Swarmcaller",
       "itemLevel": 311,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Atroxus",
-        "keyLevel": 10
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 89,
-      "popularity": 47
+      "statPriorityFit": 75,
+      "popularity": 70
     },
     {
       "slot": "finger",
@@ -787,7 +844,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 33
+      "popularity": 37
     },
     {
       "slot": "finger",
@@ -801,8 +858,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 30
+      "statPriorityFit": 53,
+      "popularity": 33
     },
     {
       "slot": "trinket",
@@ -820,7 +877,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 100
+      "popularity": 87
     },
     {
       "slot": "trinket",
@@ -838,7 +895,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 40
+      "popularity": 50
     },
     {
       "slot": "trinket",
@@ -856,27 +913,12 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 33
+      "popularity": 30
     },
     {
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 245770,
-      "itemName": "Aln'hara Cane",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 63
-    },
-    {
-      "slot": "main_hand",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 268205,
       "itemName": "Venomancer's Winged Channeler",
       "itemLevel": 318,
@@ -889,19 +931,34 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 20
+      "popularity": 27
+    },
+    {
+      "slot": "main_hand",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 245770,
+      "itemName": "Aln'hara Cane",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 83,
+      "popularity": 23
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-20"
+      "collectedAt": "2026-11-03"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-20"
+      "collectedAt": "2026-11-03"
     }
   }
 }

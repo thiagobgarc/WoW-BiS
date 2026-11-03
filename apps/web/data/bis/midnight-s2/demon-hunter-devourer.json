@@ -25,25 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 83
-    },
-    {
-      "slot": "head",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 271875,
-      "itemName": "Gaze of the Coiled Watcher",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 65,
-      "popularity": 17
+      "popularity": 97
     },
     {
       "slot": "neck",
@@ -61,7 +43,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "shoulder",
@@ -78,7 +60,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 27,
-      "popularity": 77
+      "popularity": 90
     },
     {
       "slot": "shoulder",
@@ -92,8 +74,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 13
+      "statPriorityFit": 43,
+      "popularity": 7
     },
     {
       "slot": "back",
@@ -111,7 +93,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 30
+      "popularity": 40
     },
     {
       "slot": "back",
@@ -125,8 +107,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 20
+      "statPriorityFit": 53,
+      "popularity": 27
     },
     {
       "slot": "chest",
@@ -158,7 +140,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 58,
-      "popularity": 7
+      "popularity": 10
     },
     {
       "slot": "wrist",
@@ -172,8 +154,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 77
+      "statPriorityFit": 53,
+      "popularity": 80
     },
     {
       "slot": "wrist",
@@ -191,7 +173,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "hands",
@@ -208,7 +190,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 59,
-      "popularity": 87
+      "popularity": 83
     },
     {
       "slot": "hands",
@@ -222,31 +204,13 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
+      "statPriorityFit": 60,
       "popularity": 13
     },
     {
       "slot": "waist",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 268227,
-      "itemName": "Unpossessed Skullsash",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 57,
-      "popularity": 33
-    },
-    {
-      "slot": "waist",
-      "contentType": "raid",
-      "rank": 2,
       "itemId": 268256,
       "itemName": "Sash of the Forlorn Vessel",
       "itemLevel": 318,
@@ -259,7 +223,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 23
+      "popularity": 50
+    },
+    {
+      "slot": "waist",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268227,
+      "itemName": "Unpossessed Skullsash",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Lost Explorers",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 57,
+      "popularity": 20
     },
     {
       "slot": "legs",
@@ -276,7 +258,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 90
+      "popularity": 80
     },
     {
       "slot": "legs",
@@ -290,8 +272,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 7
+      "statPriorityFit": 43,
+      "popularity": 10
     },
     {
       "slot": "feet",
@@ -305,31 +287,28 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 83
-    },
-    {
-      "slot": "feet",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 251153,
-      "itemName": "Arctic Explorer's Legwraps",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Den of Nalorakk",
-        "boss": "Sentinel of Winter",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 56,
-      "popularity": 7
+      "statPriorityFit": 53,
+      "popularity": 93
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 281029,
+      "itemName": "Band of the Swarmcaller",
+      "itemLevel": 318,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 90,
+      "popularity": 83
+    },
+    {
+      "slot": "finger",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 268249,
       "itemName": "Vile Alchemist's Band",
       "itemLevel": 318,
@@ -342,45 +321,42 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 53
-    },
-    {
-      "slot": "finger",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 240949,
-      "itemName": "Masterwork Sin'dorei Band",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 47
+      "popularity": 43
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 251136,
-      "itemName": "Signet of Snarling Servitude",
-      "itemLevel": 311,
+      "itemId": 272149,
+      "itemName": "Hex Loop",
+      "itemLevel": 318,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Murder Row",
-        "boss": "Xathuux the Annihilator",
-        "keyLevel": 10
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 64,
-      "popularity": 30
+      "statPriorityFit": 82,
+      "popularity": 20
     },
     {
       "slot": "trinket",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 281215,
+      "itemName": "Twisted Horror's Tendril",
+      "itemLevel": 318,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 50,
+      "popularity": 87
+    },
+    {
+      "slot": "trinket",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 270164,
       "itemName": "Gebbo's Bottomless Bag",
       "itemLevel": 318,
@@ -393,12 +369,12 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 87
+      "popularity": 83
     },
     {
       "slot": "trinket",
       "contentType": "raid",
-      "rank": 2,
+      "rank": 3,
       "itemId": 270167,
       "itemName": "Wavecaller's Seastone",
       "itemLevel": 318,
@@ -411,22 +387,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 47
-    },
-    {
-      "slot": "trinket",
-      "contentType": "raid",
-      "rank": 3,
-      "itemId": 281215,
-      "itemName": "Twisted Horror's Tendril",
-      "itemLevel": 318,
-      "source": {
-        "type": "other"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 50,
-      "popularity": 37
+      "popularity": 17
     },
     {
       "slot": "main_hand",
@@ -444,25 +405,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 87
+      "popularity": 80
     },
     {
       "slot": "main_hand",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268203,
-      "itemName": "Hexing Spiritrender",
+      "itemId": 268211,
+      "itemName": "Baleful Hexblade",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
+        "boss": "The Coiled Altar",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 82,
-      "popularity": 7
+      "statPriorityFit": 76,
+      "popularity": 17
     },
     {
       "slot": "off_hand",
@@ -476,8 +437,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 63
+      "statPriorityFit": 43,
+      "popularity": 40
     },
     {
       "slot": "off_hand",
@@ -495,7 +456,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 10
+      "popularity": 20
     },
     {
       "slot": "head",
@@ -512,25 +473,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 90
-    },
-    {
-      "slot": "head",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 271875,
-      "itemName": "Gaze of the Coiled Watcher",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 65,
-      "popularity": 10
+      "popularity": 100
     },
     {
       "slot": "neck",
@@ -548,7 +491,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "shoulder",
@@ -571,39 +514,21 @@
       "slot": "shoulder",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268246,
-      "itemName": "Frothing Venom Spaulders",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Vashnik the Malignant",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 10
-    },
-    {
-      "slot": "back",
-      "contentType": "mythic-plus",
-      "rank": 1,
-      "itemId": 239656,
-      "itemName": "Adherent's Silken Shroud",
+      "itemId": 244572,
+      "itemName": "Silvermoon Agent's Mantle",
       "itemLevel": 331,
       "source": {
         "type": "crafted"
       },
       "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 40
+      "catalystable": true,
+      "statPriorityFit": 43,
+      "popularity": 13
     },
     {
       "slot": "back",
       "contentType": "mythic-plus",
-      "rank": 2,
+      "rank": 1,
       "itemId": 268253,
       "itemName": "Silken Voodoo Drape",
       "itemLevel": 318,
@@ -616,7 +541,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 20
+      "popularity": 43
+    },
+    {
+      "slot": "back",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 239656,
+      "itemName": "Adherent's Silken Shroud",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 53,
+      "popularity": 27
     },
     {
       "slot": "chest",
@@ -633,22 +573,22 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 51,
-      "popularity": 87
+      "popularity": 83
     },
     {
       "slot": "chest",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 244570,
-      "itemName": "Silvermoon Agent's Coat",
-      "itemLevel": 331,
+      "itemId": 281236,
+      "itemName": "Chestwrap of Palpable Terror",
+      "itemLevel": 311,
       "source": {
-        "type": "crafted"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 10
+      "statPriorityFit": 58,
+      "popularity": 13
     },
     {
       "slot": "wrist",
@@ -662,8 +602,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 73
+      "statPriorityFit": 53,
+      "popularity": 90
     },
     {
       "slot": "wrist",
@@ -698,7 +638,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 59,
-      "popularity": 90
+      "popularity": 80
     },
     {
       "slot": "hands",
@@ -712,31 +652,13 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
-      "popularity": 7
+      "statPriorityFit": 60,
+      "popularity": 17
     },
     {
       "slot": "waist",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 268227,
-      "itemName": "Unpossessed Skullsash",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 57,
-      "popularity": 33
-    },
-    {
-      "slot": "waist",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 268256,
       "itemName": "Sash of the Forlorn Vessel",
       "itemLevel": 318,
@@ -749,7 +671,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 20
+      "popularity": 30
+    },
+    {
+      "slot": "waist",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 268227,
+      "itemName": "Unpossessed Skullsash",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Lost Explorers",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 57,
+      "popularity": 30
     },
     {
       "slot": "legs",
@@ -780,8 +720,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 23
+      "statPriorityFit": 43,
+      "popularity": 13
     },
     {
       "slot": "feet",
@@ -795,8 +735,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 80
+      "statPriorityFit": 53,
+      "popularity": 83
     },
     {
       "slot": "feet",
@@ -820,16 +760,16 @@
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 240949,
-      "itemName": "Masterwork Sin'dorei Band",
-      "itemLevel": 331,
+      "itemId": 281029,
+      "itemName": "Band of the Swarmcaller",
+      "itemLevel": 311,
       "source": {
-        "type": "crafted"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 63
+      "statPriorityFit": 90,
+      "popularity": 83
     },
     {
       "slot": "finger",
@@ -847,27 +787,42 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 47
+      "popularity": 53
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 281029,
-      "itemName": "Band of the Swarmcaller",
+      "itemId": 240949,
+      "itemName": "Masterwork Sin'dorei Band",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 70,
+      "popularity": 27
+    },
+    {
+      "slot": "trinket",
+      "contentType": "mythic-plus",
+      "rank": 1,
+      "itemId": 281215,
+      "itemName": "Twisted Horror's Tendril",
       "itemLevel": 311,
       "source": {
         "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 90,
-      "popularity": 40
+      "statPriorityFit": 50,
+      "popularity": 90
     },
     {
       "slot": "trinket",
       "contentType": "mythic-plus",
-      "rank": 1,
+      "rank": 2,
       "itemId": 270164,
       "itemName": "Gebbo's Bottomless Bag",
       "itemLevel": 318,
@@ -880,12 +835,12 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 90
+      "popularity": 67
     },
     {
       "slot": "trinket",
       "contentType": "mythic-plus",
-      "rank": 2,
+      "rank": 3,
       "itemId": 270167,
       "itemName": "Wavecaller's Seastone",
       "itemLevel": 318,
@@ -898,22 +853,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 73
-    },
-    {
-      "slot": "trinket",
-      "contentType": "mythic-plus",
-      "rank": 3,
-      "itemId": 281215,
-      "itemName": "Twisted Horror's Tendril",
-      "itemLevel": 311,
-      "source": {
-        "type": "other"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 50,
-      "popularity": 23
+      "popularity": 27
     },
     {
       "slot": "main_hand",
@@ -931,25 +871,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 77
+      "popularity": 87
     },
     {
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268201,
-      "itemName": "Venomous Boneglaive",
+      "itemId": 268211,
+      "itemName": "Baleful Hexblade",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Sszorak",
+        "boss": "The Coiled Altar",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 82,
-      "popularity": 10
+      "statPriorityFit": 76,
+      "popularity": 7
     },
     {
       "slot": "off_hand",
@@ -963,25 +903,25 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 53
+      "statPriorityFit": 43,
+      "popularity": 37
     },
     {
       "slot": "off_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 271092,
-      "itemName": "Jan'thrazet, the Soul Fang",
+      "itemId": 268211,
+      "itemName": "Baleful Hexblade",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
+        "boss": "The Coiled Altar",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 65,
+      "statPriorityFit": 76,
       "popularity": 17
     }
   ],
@@ -989,12 +929,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-20"
+      "collectedAt": "2026-11-03"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-20"
+      "collectedAt": "2026-11-03"
     }
   }
 }

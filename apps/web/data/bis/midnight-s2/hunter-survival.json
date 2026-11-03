@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 90
+      "popularity": 80
     },
     {
       "slot": "head",
@@ -39,8 +39,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 7
+      "statPriorityFit": 83,
+      "popularity": 17
     },
     {
       "slot": "neck",
@@ -58,25 +58,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 77
-    },
-    {
-      "slot": "neck",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 251234,
-      "itemName": "Graft of the Domanaar",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Charonus",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 77,
-      "popularity": 13
+      "popularity": 97
     },
     {
       "slot": "shoulder",
@@ -93,12 +75,45 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 100
+      "popularity": 93
+    },
+    {
+      "slot": "shoulder",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268231,
+      "itemName": "Soulslither Spaulders",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 89,
+      "popularity": 7
     },
     {
       "slot": "back",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 239656,
+      "itemName": "Adherent's Silken Shroud",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 53,
+      "popularity": 40
+    },
+    {
+      "slot": "back",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 268253,
       "itemName": "Silken Voodoo Drape",
       "itemLevel": 318,
@@ -111,22 +126,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 33
-    },
-    {
-      "slot": "back",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 239656,
-      "itemName": "Adherent's Silken Shroud",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 23
+      "popularity": 27
     },
     {
       "slot": "chest",
@@ -143,7 +143,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 80
+      "popularity": 93
     },
     {
       "slot": "chest",
@@ -161,7 +161,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 17
+      "popularity": 7
     },
     {
       "slot": "wrist",
@@ -175,8 +175,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 80
+      "statPriorityFit": 60,
+      "popularity": 87
     },
     {
       "slot": "wrist",
@@ -211,24 +211,21 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 33,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "hands",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268238,
-      "itemName": "Grips of Swirling Fury",
+      "itemId": 281238,
+      "itemName": "Aberrant Commander's Gauntlets",
       "itemLevel": 318,
       "source": {
-        "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
-        "difficulty": "mythic"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 56,
+      "statPriorityFit": 76,
       "popularity": 7
     },
     {
@@ -243,8 +240,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 67
+      "statPriorityFit": 60,
+      "popularity": 77
     },
     {
       "slot": "waist",
@@ -262,7 +259,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "legs",
@@ -279,42 +276,30 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "legs",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 244582,
-      "itemName": "Farstrider's Reinforced Faulds",
-      "itemLevel": 331,
+      "itemId": 268237,
+      "itemName": "Cuisses of the Uncoiled Union",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
+      "statPriorityFit": 59,
       "popularity": 7
     },
     {
       "slot": "feet",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 244577,
-      "itemName": "Farstrider's Razor Talons",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 37
-    },
-    {
-      "slot": "feet",
-      "contentType": "raid",
-      "rank": 2,
       "itemId": 268258,
       "itemName": "Boots of the Reckless Wayfarer",
       "itemLevel": 318,
@@ -330,9 +315,39 @@
       "popularity": 33
     },
     {
+      "slot": "feet",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 244577,
+      "itemName": "Farstrider's Razor Talons",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 43,
+      "popularity": 30
+    },
+    {
       "slot": "finger",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 281029,
+      "itemName": "Band of the Swarmcaller",
+      "itemLevel": 318,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 84,
+      "popularity": 80
+    },
+    {
+      "slot": "finger",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 240949,
       "itemName": "Masterwork Sin'dorei Band",
       "itemLevel": 331,
@@ -341,43 +356,22 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 47
-    },
-    {
-      "slot": "finger",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 252258,
-      "itemName": "Sickening Signet of Atroxus",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Atroxus",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 58,
+      "statPriorityFit": 83,
       "popularity": 37
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 268249,
-      "itemName": "Vile Alchemist's Band",
+      "itemId": 272147,
+      "itemName": "Colubrine Band",
       "itemLevel": 318,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Vashnik the Malignant",
-        "difficulty": "mythic"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 94,
+      "statPriorityFit": 59,
       "popularity": 33
     },
     {
@@ -414,25 +408,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 63
+      "popularity": 60
     },
     {
       "slot": "trinket",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 270165,
-      "itemName": "Keeper's Seething Core",
+      "itemId": 281215,
+      "itemName": "Twisted Horror's Tendril",
       "itemLevel": 318,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Entombed Sentinels",
-        "difficulty": "mythic"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 30
+      "popularity": 50
     },
     {
       "slot": "main_hand",
@@ -450,7 +441,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 63
+      "popularity": 67
     },
     {
       "slot": "main_hand",
@@ -468,7 +459,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 20
+      "popularity": 23
     },
     {
       "slot": "head",
@@ -485,22 +476,22 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 87
+      "popularity": 73
     },
     {
       "slot": "head",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 244745,
-      "itemName": "Aetherlume Vision Shroud",
+      "itemId": 244579,
+      "itemName": "Farstrider's Unwavering Visage",
       "itemLevel": 331,
       "source": {
         "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 100,
-      "popularity": 7
+      "statPriorityFit": 83,
+      "popularity": 17
     },
     {
       "slot": "neck",
@@ -518,7 +509,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 80
+      "popularity": 90
     },
     {
       "slot": "neck",
@@ -556,6 +547,21 @@
       "popularity": 93
     },
     {
+      "slot": "shoulder",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 244580,
+      "itemName": "Farstrider's Brilliant Plumes",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 43,
+      "popularity": 7
+    },
+    {
       "slot": "back",
       "contentType": "mythic-plus",
       "rank": 1,
@@ -571,7 +577,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 27
+      "popularity": 47
     },
     {
       "slot": "back",
@@ -585,8 +591,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 23
+      "statPriorityFit": 53,
+      "popularity": 33
     },
     {
       "slot": "chest",
@@ -603,7 +609,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "chest",
@@ -621,7 +627,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 13
+      "popularity": 10
     },
     {
       "slot": "wrist",
@@ -635,26 +641,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 87
-    },
-    {
-      "slot": "wrist",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 251200,
-      "itemName": "Saptorbane Guards",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "The Blinding Vale",
-        "boss": "Ziekket",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 49,
-      "popularity": 7
+      "statPriorityFit": 60,
+      "popularity": 90
     },
     {
       "slot": "hands",
@@ -686,7 +674,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 76,
-      "popularity": 7
+      "popularity": 10
     },
     {
       "slot": "waist",
@@ -700,26 +688,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 80
-    },
-    {
-      "slot": "waist",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 268254,
-      "itemName": "Serpentine Mixing Belt",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Vashnik the Malignant",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 81,
-      "popularity": 10
+      "statPriorityFit": 60,
+      "popularity": 93
     },
     {
       "slot": "legs",
@@ -736,7 +706,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 87
+      "popularity": 83
     },
     {
       "slot": "legs",
@@ -750,7 +720,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
+      "statPriorityFit": 30,
       "popularity": 13
     },
     {
@@ -765,64 +735,31 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 20
+      "statPriorityFit": 43,
+      "popularity": 27
     },
     {
       "slot": "feet",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268233,
-      "itemName": "Ferocious Scaleboots",
+      "itemId": 268258,
+      "itemName": "Boots of the Reckless Wayfarer",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Sszorak",
+        "boss": "The Lost Explorers",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 81,
-      "popularity": 20
+      "statPriorityFit": 77,
+      "popularity": 17
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 240949,
-      "itemName": "Masterwork Sin'dorei Band",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 37
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 252258,
-      "itemName": "Sickening Signet of Atroxus",
-      "itemLevel": 311,
-      "source": {
-        "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Atroxus",
-        "keyLevel": 10
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 58,
-      "popularity": 37
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 3,
       "itemId": 281029,
       "itemName": "Band of the Swarmcaller",
       "itemLevel": 311,
@@ -832,12 +769,57 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 84,
-      "popularity": 33
+      "popularity": 90
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 240949,
+      "itemName": "Masterwork Sin'dorei Band",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 83,
+      "popularity": 47
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 3,
+      "itemId": 272147,
+      "itemName": "Colubrine Band",
+      "itemLevel": 311,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 59,
+      "popularity": 23
     },
     {
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 1,
+      "itemId": 281215,
+      "itemName": "Twisted Horror's Tendril",
+      "itemLevel": 311,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 50,
+      "popularity": 87
+    },
+    {
+      "slot": "trinket",
+      "contentType": "mythic-plus",
+      "rank": 2,
       "itemId": 270175,
       "itemName": "Voracious Heart of Ula'tek",
       "itemLevel": 318,
@@ -850,12 +832,12 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 67
+      "popularity": 73
     },
     {
       "slot": "trinket",
       "contentType": "mythic-plus",
-      "rank": 2,
+      "rank": 3,
       "itemId": 270165,
       "itemName": "Keeper's Seething Core",
       "itemLevel": 318,
@@ -868,22 +850,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 53
-    },
-    {
-      "slot": "trinket",
-      "contentType": "mythic-plus",
-      "rank": 3,
-      "itemId": 281215,
-      "itemName": "Twisted Horror's Tendril",
-      "itemLevel": 311,
-      "source": {
-        "type": "other"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 50,
-      "popularity": 33
+      "popularity": 23
     },
     {
       "slot": "main_hand",
@@ -901,7 +868,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 47
+      "popularity": 57
     },
     {
       "slot": "main_hand",
@@ -919,19 +886,19 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 33
+      "popularity": 30
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-10-20"
+      "collectedAt": "2026-11-03"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-10-20"
+      "collectedAt": "2026-11-03"
     }
   }
 }
