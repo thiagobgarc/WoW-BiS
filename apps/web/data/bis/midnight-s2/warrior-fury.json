@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "head",
@@ -40,7 +40,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 75,
-      "popularity": 7
+      "popularity": 10
     },
     {
       "slot": "neck",
@@ -89,8 +89,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
-      "popularity": 10
+      "statPriorityFit": 60,
+      "popularity": 13
     },
     {
       "slot": "back",
@@ -108,7 +108,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 50
+      "popularity": 53
     },
     {
       "slot": "back",
@@ -122,8 +122,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 23
+      "statPriorityFit": 83,
+      "popularity": 17
     },
     {
       "slot": "chest",
@@ -143,21 +143,6 @@
       "popularity": 93
     },
     {
-      "slot": "chest",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 237829,
-      "itemName": "Spellbreaker's Shelter",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 43,
-      "popularity": 7
-    },
-    {
       "slot": "wrist",
       "contentType": "raid",
       "rank": 1,
@@ -169,8 +154,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 97
+      "statPriorityFit": 70,
+      "popularity": 100
     },
     {
       "slot": "hands",
@@ -187,7 +172,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 80
+      "popularity": 77
     },
     {
       "slot": "hands",
@@ -201,8 +186,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 83,
-      "popularity": 17
+      "statPriorityFit": 60,
+      "popularity": 20
     },
     {
       "slot": "waist",
@@ -220,7 +205,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 47
+      "popularity": 43
     },
     {
       "slot": "waist",
@@ -255,7 +240,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 35,
-      "popularity": 73
+      "popularity": 80
     },
     {
       "slot": "legs",
@@ -273,7 +258,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 40,
-      "popularity": 23
+      "popularity": 20
     },
     {
       "slot": "feet",
@@ -287,7 +272,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
+      "statPriorityFit": 43,
       "popularity": 67
     },
     {
@@ -306,7 +291,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 27
+      "popularity": 23
     },
     {
       "slot": "finger",
@@ -321,7 +306,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 67
+      "popularity": 87
     },
     {
       "slot": "finger",
@@ -335,26 +320,23 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 33
+      "statPriorityFit": 60,
+      "popularity": 30
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 268249,
-      "itemName": "Vile Alchemist's Band",
+      "itemId": 272147,
+      "itemName": "Colubrine Band",
       "itemLevel": 318,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Vashnik the Malignant",
-        "difficulty": "mythic"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 61,
-      "popularity": 23
+      "statPriorityFit": 89,
+      "popularity": 20
     },
     {
       "slot": "trinket",
@@ -372,7 +354,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "trinket",
@@ -390,22 +372,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 40,
-      "popularity": 67
+      "popularity": 83
     },
     {
       "slot": "trinket",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 281215,
-      "itemName": "Twisted Horror's Tendril",
+      "itemId": 270165,
+      "itemName": "Keeper's Seething Core",
       "itemLevel": 318,
       "source": {
-        "type": "other"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Entombed Sentinels",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 20
+      "popularity": 10
     },
     {
       "slot": "main_hand",
@@ -423,7 +408,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "off_hand",
@@ -438,22 +423,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 73
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 237846,
-      "itemName": "Blood Knight's Warblade",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 7
+      "popularity": 90
     },
     {
       "slot": "head",
@@ -470,7 +440,22 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 97
+      "popularity": 93
+    },
+    {
+      "slot": "head",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 281239,
+      "itemName": "Corroded Hulk's Skullcap",
+      "itemLevel": 311,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 75,
+      "popularity": 7
     },
     {
       "slot": "neck",
@@ -505,7 +490,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 83
+      "popularity": 70
     },
     {
       "slot": "shoulder",
@@ -519,8 +504,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
-      "popularity": 17
+      "statPriorityFit": 60,
+      "popularity": 27
     },
     {
       "slot": "back",
@@ -538,7 +523,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 47
+      "popularity": 37
     },
     {
       "slot": "back",
@@ -552,8 +537,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 13
+      "statPriorityFit": 83,
+      "popularity": 27
     },
     {
       "slot": "chest",
@@ -584,8 +569,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 90
+      "statPriorityFit": 70,
+      "popularity": 93
     },
     {
       "slot": "hands",
@@ -616,8 +601,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 83,
-      "popularity": 33
+      "statPriorityFit": 60,
+      "popularity": 27
     },
     {
       "slot": "waist",
@@ -649,7 +634,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
+      "statPriorityFit": 30,
       "popularity": 17
     },
     {
@@ -667,25 +652,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 35,
-      "popularity": 87
-    },
-    {
-      "slot": "legs",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 271878,
-      "itemName": "Chausses of Unbound Rancor",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 40,
-      "popularity": 10
+      "popularity": 93
     },
     {
       "slot": "feet",
@@ -699,8 +666,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 60
+      "statPriorityFit": 43,
+      "popularity": 57
     },
     {
       "slot": "feet",
@@ -718,7 +685,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 13
+      "popularity": 20
     },
     {
       "slot": "finger",
@@ -733,7 +700,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 77
+      "popularity": 90
     },
     {
       "slot": "finger",
@@ -747,8 +714,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 40
+      "statPriorityFit": 60,
+      "popularity": 43
     },
     {
       "slot": "finger",
@@ -781,7 +748,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 97
+      "popularity": 93
     },
     {
       "slot": "trinket",
@@ -796,7 +763,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 47
+      "popularity": 53
     },
     {
       "slot": "trinket",
@@ -814,7 +781,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 40,
-      "popularity": 47
+      "popularity": 43
     },
     {
       "slot": "main_hand",
@@ -832,7 +799,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 93
+      "popularity": 87
     },
     {
       "slot": "main_hand",
@@ -847,7 +814,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 7
+      "popularity": 10
     },
     {
       "slot": "off_hand",
@@ -862,21 +829,24 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 67
+      "popularity": 77
     },
     {
       "slot": "off_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 237846,
-      "itemName": "Blood Knight's Warblade",
-      "itemLevel": 331,
+      "itemId": 268213,
+      "itemName": "Maze-roa, Warlord's Fury",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 47,
       "popularity": 10
     }
   ],
@@ -884,12 +854,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     }
   }
 }

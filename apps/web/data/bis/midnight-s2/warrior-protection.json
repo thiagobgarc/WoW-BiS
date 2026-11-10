@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "head",
@@ -40,7 +40,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 44,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "neck",
@@ -58,7 +58,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 83
+      "popularity": 90
     },
     {
       "slot": "neck",
@@ -93,7 +93,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 80
+      "popularity": 87
     },
     {
       "slot": "shoulder",
@@ -107,8 +107,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 13
+      "statPriorityFit": 70,
+      "popularity": 10
     },
     {
       "slot": "back",
@@ -126,22 +126,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 47
+      "popularity": 43
     },
     {
       "slot": "back",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 239656,
-      "itemName": "Adherent's Silken Shroud",
-      "itemLevel": 331,
+      "itemId": 268248,
+      "itemName": "Amani Summoning Shawl",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Nek'zali the Soulcoiler",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 7
+      "statPriorityFit": 57,
+      "popularity": 10
     },
     {
       "slot": "chest",
@@ -190,7 +193,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
+      "statPriorityFit": 83,
       "popularity": 80
     },
     {
@@ -240,8 +243,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 17
+      "statPriorityFit": 70,
+      "popularity": 13
     },
     {
       "slot": "waist",
@@ -259,7 +262,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 40
+      "popularity": 37
     },
     {
       "slot": "waist",
@@ -277,7 +280,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 13
+      "popularity": 20
     },
     {
       "slot": "legs",
@@ -294,7 +297,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 33,
-      "popularity": 93
+      "popularity": 87
+    },
+    {
+      "slot": "legs",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268224,
+      "itemName": "Venom Warden's Greaves",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Entombed Sentinels",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 74,
+      "popularity": 10
     },
     {
       "slot": "feet",
@@ -308,8 +329,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 67
+      "statPriorityFit": 30,
+      "popularity": 60
     },
     {
       "slot": "feet",
@@ -327,7 +348,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 23
+      "popularity": 37
     },
     {
       "slot": "finger",
@@ -342,7 +363,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 42,
-      "popularity": 70
+      "popularity": 77
     },
     {
       "slot": "finger",
@@ -360,7 +381,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 37
+      "popularity": 47
     },
     {
       "slot": "finger",
@@ -378,7 +399,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 71,
-      "popularity": 37
+      "popularity": 27
     },
     {
       "slot": "trinket",
@@ -414,7 +435,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 63
+      "popularity": 70
     },
     {
       "slot": "trinket",
@@ -429,7 +450,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 20
+      "popularity": 23
     },
     {
       "slot": "main_hand",
@@ -447,7 +468,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 83
+      "popularity": 87
     },
     {
       "slot": "main_hand",
@@ -465,7 +486,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 13
+      "popularity": 7
     },
     {
       "slot": "off_hand",
@@ -483,24 +504,21 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 50
+      "popularity": 53
     },
     {
       "slot": "off_hand",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268262,
-      "itemName": "Bubblefin Splash Guard",
-      "itemLevel": 318,
+      "itemId": 237831,
+      "itemName": "Spellbreaker's Rebuke",
+      "itemLevel": 331,
       "source": {
-        "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
-        "difficulty": "mythic"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 47,
+      "statPriorityFit": 53,
       "popularity": 20
     },
     {
@@ -518,7 +536,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 90
+      "popularity": 83
     },
     {
       "slot": "head",
@@ -533,7 +551,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 44,
-      "popularity": 7
+      "popularity": 13
     },
     {
       "slot": "neck",
@@ -582,7 +600,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
+      "statPriorityFit": 70,
       "popularity": 7
     },
     {
@@ -597,8 +615,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 40
+      "statPriorityFit": 60,
+      "popularity": 37
     },
     {
       "slot": "back",
@@ -616,7 +634,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 17
+      "popularity": 23
     },
     {
       "slot": "chest",
@@ -633,7 +651,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 33,
-      "popularity": 93
+      "popularity": 90
+    },
+    {
+      "slot": "chest",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 268222,
+      "itemName": "Reckless Spirit Breastplate",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 77,
+      "popularity": 7
     },
     {
       "slot": "wrist",
@@ -647,8 +683,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 87
+      "statPriorityFit": 83,
+      "popularity": 90
     },
     {
       "slot": "hands",
@@ -665,7 +701,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 63
+      "popularity": 70
     },
     {
       "slot": "hands",
@@ -679,8 +715,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 30
+      "statPriorityFit": 70,
+      "popularity": 23
     },
     {
       "slot": "waist",
@@ -694,26 +730,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 53,
       "popularity": 23
     },
     {
       "slot": "waist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268244,
-      "itemName": "Forgotten Grotto Girdle",
+      "itemId": 268259,
+      "itemName": "Girdle of Toxic Regret",
       "itemLevel": 318,
       "source": {
         "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 82,
-      "popularity": 17
+      "statPriorityFit": 52,
+      "popularity": 20
     },
     {
       "slot": "legs",
@@ -748,7 +784,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 65,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "feet",
@@ -762,8 +798,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 57
+      "statPriorityFit": 30,
+      "popularity": 63
     },
     {
       "slot": "feet",
@@ -802,21 +838,6 @@
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 240949,
-      "itemName": "Masterwork Sin'dorei Band",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 37
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 3,
       "itemId": 268266,
       "itemName": "Alluring Bubbleband",
       "itemLevel": 318,
@@ -829,7 +850,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 33
+      "popularity": 37
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 3,
+      "itemId": 240949,
+      "itemName": "Masterwork Sin'dorei Band",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 70,
+      "popularity": 30
     },
     {
       "slot": "trinket",
@@ -847,7 +883,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 53
+      "popularity": 50
     },
     {
       "slot": "trinket",
@@ -865,7 +901,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 53
+      "popularity": 47
     },
     {
       "slot": "trinket",
@@ -880,7 +916,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 30
+      "popularity": 43
     },
     {
       "slot": "main_hand",
@@ -898,7 +934,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 50
+      "popularity": 47
     },
     {
       "slot": "main_hand",
@@ -916,7 +952,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 43
+      "popularity": 47
     },
     {
       "slot": "off_hand",
@@ -934,7 +970,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 43
+      "popularity": 37
     },
     {
       "slot": "off_hand",
@@ -948,7 +984,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
+      "statPriorityFit": 53,
       "popularity": 33
     }
   ],
@@ -956,12 +992,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     }
   }
 }

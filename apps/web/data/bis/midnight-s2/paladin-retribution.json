@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 80
+      "popularity": 83
     },
     {
       "slot": "head",
@@ -58,7 +58,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "shoulder",
@@ -75,22 +75,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 90
-    },
-    {
-      "slot": "shoulder",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 237835,
-      "itemName": "Spellbreaker's Mantle",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 10
+      "popularity": 97
     },
     {
       "slot": "back",
@@ -108,7 +93,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 67
+      "popularity": 70
     },
     {
       "slot": "back",
@@ -122,8 +107,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 17
+      "statPriorityFit": 83,
+      "popularity": 13
     },
     {
       "slot": "chest",
@@ -154,8 +139,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 83
+      "statPriorityFit": 53,
+      "popularity": 87
     },
     {
       "slot": "wrist",
@@ -173,7 +158,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 13
+      "popularity": 10
     },
     {
       "slot": "hands",
@@ -190,7 +175,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 70
+      "popularity": 77
     },
     {
       "slot": "hands",
@@ -204,8 +189,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 83,
-      "popularity": 23
+      "statPriorityFit": 43,
+      "popularity": 17
     },
     {
       "slot": "waist",
@@ -223,7 +208,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 70
+      "popularity": 77
     },
     {
       "slot": "waist",
@@ -237,7 +222,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 49,
+      "statPriorityFit": 56,
       "popularity": 7
     },
     {
@@ -255,25 +240,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 93
-    },
-    {
-      "slot": "legs",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 271878,
-      "itemName": "Chausses of Unbound Rancor",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 40,
-      "popularity": 7
+      "popularity": 97
     },
     {
       "slot": "feet",
@@ -305,8 +272,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 23
+      "statPriorityFit": 60,
+      "popularity": 20
     },
     {
       "slot": "finger",
@@ -321,7 +288,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 66,
-      "popularity": 80
+      "popularity": 87
     },
     {
       "slot": "finger",
@@ -336,27 +303,45 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 77
+      "popularity": 83
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 240949,
-      "itemName": "Masterwork Sin'dorei Band",
-      "itemLevel": 331,
+      "itemId": 272147,
+      "itemName": "Colubrine Band",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 13
+      "statPriorityFit": 76,
+      "popularity": 10
     },
     {
       "slot": "trinket",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 270175,
+      "itemName": "Voracious Heart of Ula'tek",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Ula'tek",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 40,
+      "popularity": 100
+    },
+    {
+      "slot": "trinket",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 270173,
       "itemName": "Zul'jin's Guillotine Technique",
       "itemLevel": 318,
@@ -370,24 +355,6 @@
       "catalystable": false,
       "statPriorityFit": 50,
       "popularity": 100
-    },
-    {
-      "slot": "trinket",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 270175,
-      "itemName": "Voracious Heart of Ula'tek",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 40,
-      "popularity": 97
     },
     {
       "slot": "main_hand",
@@ -405,7 +372,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "head",
@@ -437,7 +404,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 90,
-      "popularity": 17
+      "popularity": 20
     },
     {
       "slot": "neck",
@@ -472,7 +439,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 83
+      "popularity": 90
     },
     {
       "slot": "shoulder",
@@ -486,8 +453,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 10
+      "statPriorityFit": 43,
+      "popularity": 7
     },
     {
       "slot": "back",
@@ -505,7 +472,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 60
+      "popularity": 70
     },
     {
       "slot": "back",
@@ -519,8 +486,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 10
+      "statPriorityFit": 83,
+      "popularity": 13
     },
     {
       "slot": "chest",
@@ -551,8 +518,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 87
+      "statPriorityFit": 53,
+      "popularity": 90
     },
     {
       "slot": "wrist",
@@ -587,7 +554,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 67
+      "popularity": 77
     },
     {
       "slot": "hands",
@@ -601,8 +568,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 83,
-      "popularity": 20
+      "statPriorityFit": 43,
+      "popularity": 17
     },
     {
       "slot": "waist",
@@ -623,21 +590,6 @@
       "popularity": 73
     },
     {
-      "slot": "waist",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 271445,
-      "itemName": "Fanged Brute's Greatbelt",
-      "itemLevel": 311,
-      "source": {
-        "type": "other"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 49,
-      "popularity": 7
-    },
-    {
       "slot": "legs",
       "contentType": "mythic-plus",
       "rank": 1,
@@ -652,30 +604,27 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 93
-    },
-    {
-      "slot": "legs",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 271878,
-      "itemName": "Chausses of Unbound Rancor",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 40,
-      "popularity": 7
+      "popularity": 100
     },
     {
       "slot": "feet",
       "contentType": "mythic-plus",
       "rank": 1,
+      "itemId": 237828,
+      "itemName": "Spellbreaker's March",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 60,
+      "popularity": 33
+    },
+    {
+      "slot": "feet",
+      "contentType": "mythic-plus",
+      "rank": 2,
       "itemId": 268260,
       "itemName": "Scaled Fiend's Warboots",
       "itemLevel": 318,
@@ -688,42 +637,12 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 40
-    },
-    {
-      "slot": "feet",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 237828,
-      "itemName": "Spellbreaker's March",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 33
+      "popularity": 30
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 251513,
-      "itemName": "Loa Worshiper's Band",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 66,
-      "popularity": 77
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 281029,
       "itemName": "Band of the Swarmcaller",
       "itemLevel": 311,
@@ -733,22 +652,37 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 73
+      "popularity": 87
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
-      "rank": 3,
-      "itemId": 240949,
-      "itemName": "Masterwork Sin'dorei Band",
+      "rank": 2,
+      "itemId": 251513,
+      "itemName": "Loa Worshiper's Band",
       "itemLevel": 331,
       "source": {
         "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 17
+      "statPriorityFit": 66,
+      "popularity": 60
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 3,
+      "itemId": 272147,
+      "itemName": "Colubrine Band",
+      "itemLevel": 311,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 76,
+      "popularity": 10
     },
     {
       "slot": "trinket",
@@ -766,7 +700,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 40,
-      "popularity": 97
+      "popularity": 90
     },
     {
       "slot": "trinket",
@@ -784,7 +718,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 83
+      "popularity": 87
     },
     {
       "slot": "trinket",
@@ -799,7 +733,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 17
+      "popularity": 10
     },
     {
       "slot": "main_hand",
@@ -817,19 +751,19 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 100
+      "popularity": 93
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     }
   }
 }

@@ -39,8 +39,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 83,
-      "popularity": 17
+      "statPriorityFit": 70,
+      "popularity": 13
     },
     {
       "slot": "neck",
@@ -58,7 +58,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "shoulder",
@@ -75,25 +75,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 93
-    },
-    {
-      "slot": "shoulder",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268231,
-      "itemName": "Soulslither Spaulders",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Coiled Altar",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 89,
-      "popularity": 7
+      "popularity": 97
     },
     {
       "slot": "back",
@@ -107,8 +89,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 40
+      "statPriorityFit": 70,
+      "popularity": 37
     },
     {
       "slot": "back",
@@ -126,7 +108,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 27
+      "popularity": 37
     },
     {
       "slot": "chest",
@@ -143,7 +125,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "chest",
@@ -161,7 +143,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 7
+      "popularity": 10
     },
     {
       "slot": "wrist",
@@ -175,8 +157,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 87
+      "statPriorityFit": 53,
+      "popularity": 93
     },
     {
       "slot": "wrist",
@@ -194,7 +176,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 13
+      "popularity": 7
     },
     {
       "slot": "hands",
@@ -211,7 +193,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 33,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "hands",
@@ -240,8 +222,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 77
+      "statPriorityFit": 43,
+      "popularity": 87
     },
     {
       "slot": "waist",
@@ -259,7 +241,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 13
+      "popularity": 10
     },
     {
       "slot": "legs",
@@ -276,7 +258,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 87
+      "popularity": 83
     },
     {
       "slot": "legs",
@@ -294,7 +276,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 59,
-      "popularity": 7
+      "popularity": 10
     },
     {
       "slot": "feet",
@@ -312,7 +294,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 33
+      "popularity": 40
     },
     {
       "slot": "feet",
@@ -326,8 +308,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 30
+      "statPriorityFit": 53,
+      "popularity": 23
     },
     {
       "slot": "finger",
@@ -342,7 +324,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 84,
-      "popularity": 80
+      "popularity": 90
     },
     {
       "slot": "finger",
@@ -356,8 +338,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 37
+      "statPriorityFit": 30,
+      "popularity": 33
     },
     {
       "slot": "finger",
@@ -372,7 +354,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 59,
-      "popularity": 33
+      "popularity": 30
     },
     {
       "slot": "trinket",
@@ -390,7 +372,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 83
+      "popularity": 80
     },
     {
       "slot": "trinket",
@@ -408,7 +390,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 60
+      "popularity": 63
     },
     {
       "slot": "trinket",
@@ -423,7 +405,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 50
+      "popularity": 57
     },
     {
       "slot": "main_hand",
@@ -441,7 +423,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 67
+      "popularity": 63
     },
     {
       "slot": "main_hand",
@@ -459,7 +441,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 23
+      "popularity": 27
     },
     {
       "slot": "head",
@@ -476,7 +458,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 73
+      "popularity": 67
     },
     {
       "slot": "head",
@@ -490,8 +472,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 83,
-      "popularity": 17
+      "statPriorityFit": 70,
+      "popularity": 20
     },
     {
       "slot": "neck",
@@ -509,25 +491,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 90
-    },
-    {
-      "slot": "neck",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 268250,
-      "itemName": "Sentinel's Vitriolic Chain",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Entombed Sentinels",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 46,
-      "popularity": 7
+      "popularity": 93
     },
     {
       "slot": "shoulder",
@@ -544,22 +508,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 93
-    },
-    {
-      "slot": "shoulder",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 244580,
-      "itemName": "Farstrider's Brilliant Plumes",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 43,
-      "popularity": 7
+      "popularity": 97
     },
     {
       "slot": "back",
@@ -577,7 +526,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 47
+      "popularity": 53
     },
     {
       "slot": "back",
@@ -591,8 +540,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 33
+      "statPriorityFit": 70,
+      "popularity": 23
     },
     {
       "slot": "chest",
@@ -609,25 +558,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 90
-    },
-    {
-      "slot": "chest",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 271876,
-      "itemName": "Awoken Dreadfang Cuirass",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 100,
-      "popularity": 10
+      "popularity": 100
     },
     {
       "slot": "wrist",
@@ -641,7 +572,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 53,
       "popularity": 90
     },
     {
@@ -688,8 +619,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 93
+      "statPriorityFit": 43,
+      "popularity": 97
     },
     {
       "slot": "legs",
@@ -720,28 +651,13 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 13
+      "statPriorityFit": 60,
+      "popularity": 10
     },
     {
       "slot": "feet",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 244577,
-      "itemName": "Farstrider's Razor Talons",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 27
-    },
-    {
-      "slot": "feet",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 268258,
       "itemName": "Boots of the Reckless Wayfarer",
       "itemLevel": 318,
@@ -754,7 +670,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 17
+      "popularity": 20
+    },
+    {
+      "slot": "feet",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 244577,
+      "itemName": "Farstrider's Razor Talons",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 53,
+      "popularity": 20
     },
     {
       "slot": "finger",
@@ -769,7 +700,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 84,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "finger",
@@ -783,8 +714,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 47
+      "statPriorityFit": 30,
+      "popularity": 50
     },
     {
       "slot": "finger",
@@ -814,7 +745,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 87
+      "popularity": 93
     },
     {
       "slot": "trinket",
@@ -832,25 +763,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 73
+      "popularity": 80
     },
     {
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 270165,
-      "itemName": "Keeper's Seething Core",
+      "itemId": 270173,
+      "itemName": "Zul'jin's Guillotine Technique",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Entombed Sentinels",
+        "boss": "The Coiled Altar",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 23
+      "popularity": 17
     },
     {
       "slot": "main_hand",
@@ -886,19 +817,19 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 30
+      "popularity": 33
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     }
   }
 }

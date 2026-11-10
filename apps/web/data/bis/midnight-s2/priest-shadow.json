@@ -78,22 +78,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 90
-    },
-    {
-      "slot": "shoulder",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 239650,
-      "itemName": "Martyr's Mantle",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 53,
-      "popularity": 10
+      "popularity": 93
     },
     {
       "slot": "back",
@@ -111,7 +96,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 57
+      "popularity": 63
     },
     {
       "slot": "back",
@@ -125,8 +110,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 10
+      "statPriorityFit": 83,
+      "popularity": 13
     },
     {
       "slot": "chest",
@@ -158,7 +143,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 83,
-      "popularity": 73
+      "popularity": 77
     },
     {
       "slot": "wrist",
@@ -176,7 +161,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "hands",
@@ -193,7 +178,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "hands",
@@ -211,7 +196,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 57,
-      "popularity": 7
+      "popularity": 10
     },
     {
       "slot": "waist",
@@ -225,8 +210,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 80
+      "statPriorityFit": 83,
+      "popularity": 70
     },
     {
       "slot": "waist",
@@ -244,7 +229,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 20
+      "popularity": 17
     },
     {
       "slot": "legs",
@@ -294,7 +279,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 63
+      "popularity": 80
     },
     {
       "slot": "feet",
@@ -312,7 +297,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 59,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "finger",
@@ -327,30 +312,12 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 80
+      "popularity": 90
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268252,
-      "itemName": "Apex Brute's Claw Ring",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Sszorak",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 44,
-      "popularity": 37
-    },
-    {
-      "slot": "finger",
-      "contentType": "raid",
-      "rank": 3,
       "itemId": 268249,
       "itemName": "Vile Alchemist's Band",
       "itemLevel": 318,
@@ -363,7 +330,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 27
+      "popularity": 33
+    },
+    {
+      "slot": "finger",
+      "contentType": "raid",
+      "rank": 3,
+      "itemId": 268252,
+      "itemName": "Apex Brute's Claw Ring",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Sszorak",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 44,
+      "popularity": 30
     },
     {
       "slot": "trinket",
@@ -378,7 +363,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "trinket",
@@ -396,7 +381,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 60
+      "popularity": 73
     },
     {
       "slot": "trinket",
@@ -450,7 +435,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 40
+      "popularity": 47
     },
     {
       "slot": "off_hand",
@@ -549,7 +534,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
+      "statPriorityFit": 60,
       "popularity": 10
     },
     {
@@ -568,7 +553,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 37
+      "popularity": 47
     },
     {
       "slot": "back",
@@ -582,8 +567,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 30
+      "statPriorityFit": 83,
+      "popularity": 40
     },
     {
       "slot": "chest",
@@ -603,24 +588,6 @@
       "popularity": 93
     },
     {
-      "slot": "chest",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 268221,
-      "itemName": "Tidebound Sorcereress's Robes",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 7
-    },
-    {
       "slot": "wrist",
       "contentType": "mythic-plus",
       "rank": 1,
@@ -633,7 +600,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 83,
-      "popularity": 87
+      "popularity": 77
     },
     {
       "slot": "wrist",
@@ -651,7 +618,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "hands",
@@ -668,7 +635,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 83
+      "popularity": 87
     },
     {
       "slot": "hands",
@@ -700,8 +667,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 60
+      "statPriorityFit": 83,
+      "popularity": 57
     },
     {
       "slot": "waist",
@@ -769,7 +736,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 40
+      "popularity": 50
     },
     {
       "slot": "feet",
@@ -787,7 +754,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 59,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "finger",
@@ -802,7 +769,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 93
+      "popularity": 100
     },
     {
       "slot": "finger",
@@ -820,21 +787,24 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 23
+      "popularity": 20
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 240949,
-      "itemName": "Masterwork Sin'dorei Band",
-      "itemLevel": 331,
+      "itemId": 268252,
+      "itemName": "Apex Brute's Claw Ring",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Sszorak",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
+      "statPriorityFit": 44,
       "popularity": 17
     },
     {
@@ -868,7 +838,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 53
+      "popularity": 47
     },
     {
       "slot": "trinket",
@@ -886,7 +856,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 23
+      "popularity": 27
     },
     {
       "slot": "main_hand",
@@ -904,27 +874,12 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "off_hand",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 245769,
-      "itemName": "Aln'hara Lantern",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 43
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 268197,
       "itemName": "Spine of the Hissing Abyss",
       "itemLevel": 318,
@@ -937,6 +892,21 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
+      "popularity": 37
+    },
+    {
+      "slot": "off_hand",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 245769,
+      "itemName": "Aln'hara Lantern",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 60,
       "popularity": 33
     }
   ],
@@ -944,12 +914,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     }
   }
 }

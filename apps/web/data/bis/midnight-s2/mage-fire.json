@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 83
+      "popularity": 93
     },
     {
       "slot": "head",
@@ -43,7 +43,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 65,
-      "popularity": 17
+      "popularity": 7
     },
     {
       "slot": "neck",
@@ -78,7 +78,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 46,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "back",
@@ -92,8 +92,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 33
+      "statPriorityFit": 83,
+      "popularity": 37
     },
     {
       "slot": "back",
@@ -128,7 +128,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 60
+      "popularity": 50
     },
     {
       "slot": "chest",
@@ -142,8 +142,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 83,
-      "popularity": 40
+      "statPriorityFit": 60,
+      "popularity": 47
     },
     {
       "slot": "wrist",
@@ -158,7 +158,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 83,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "wrist",
@@ -193,7 +193,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "hands",
@@ -240,8 +240,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 17
+      "statPriorityFit": 83,
+      "popularity": 23
     },
     {
       "slot": "legs",
@@ -258,7 +258,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "feet",
@@ -276,7 +276,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 50
+      "popularity": 57
     },
     {
       "slot": "feet",
@@ -294,27 +294,12 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 281029,
-      "itemName": "Band of the Swarmcaller",
-      "itemLevel": 318,
-      "source": {
-        "type": "other"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 75,
-      "popularity": 50
-    },
-    {
-      "slot": "finger",
-      "contentType": "raid",
-      "rank": 2,
       "itemId": 268266,
       "itemName": "Alluring Bubbleband",
       "itemLevel": 318,
@@ -327,7 +312,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 47
+      "popularity": 63
+    },
+    {
+      "slot": "finger",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 281029,
+      "itemName": "Band of the Swarmcaller",
+      "itemLevel": 318,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 75,
+      "popularity": 57
     },
     {
       "slot": "finger",
@@ -345,7 +345,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 40
+      "popularity": 27
     },
     {
       "slot": "trinket",
@@ -381,7 +381,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 57
+      "popularity": 53
     },
     {
       "slot": "trinket",
@@ -420,6 +420,24 @@
       "popularity": 93
     },
     {
+      "slot": "main_hand",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268211,
+      "itemName": "Baleful Hexblade",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 89,
+      "popularity": 7
+    },
+    {
       "slot": "off_hand",
       "contentType": "raid",
       "rank": 1,
@@ -432,7 +450,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 53,
-      "popularity": 77
+      "popularity": 83
     },
     {
       "slot": "off_hand",
@@ -450,7 +468,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 13
+      "popularity": 17
     },
     {
       "slot": "head",
@@ -467,7 +485,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 83
+      "popularity": 93
     },
     {
       "slot": "head",
@@ -485,7 +503,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 65,
-      "popularity": 13
+      "popularity": 7
     },
     {
       "slot": "neck",
@@ -503,7 +521,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "shoulder",
@@ -552,8 +570,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 47
+      "statPriorityFit": 83,
+      "popularity": 37
     },
     {
       "slot": "back",
@@ -602,8 +620,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 83,
-      "popularity": 17
+      "statPriorityFit": 60,
+      "popularity": 20
     },
     {
       "slot": "wrist",
@@ -664,8 +682,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 60
+      "statPriorityFit": 83,
+      "popularity": 50
     },
     {
       "slot": "waist",
@@ -683,7 +701,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 17
+      "popularity": 27
     },
     {
       "slot": "legs",
@@ -714,7 +732,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 83,
+      "statPriorityFit": 60,
       "popularity": 17
     },
     {
@@ -729,8 +747,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 40
+      "statPriorityFit": 70,
+      "popularity": 37
     },
     {
       "slot": "feet",
@@ -766,7 +784,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 60
+      "popularity": 53
     },
     {
       "slot": "finger",
@@ -799,7 +817,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 37
+      "popularity": 43
     },
     {
       "slot": "trinket",
@@ -817,7 +835,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 77
+      "popularity": 70
     },
     {
       "slot": "trinket",
@@ -835,7 +853,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 67
+      "popularity": 63
     },
     {
       "slot": "trinket",
@@ -853,7 +871,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 27
+      "popularity": 33
     },
     {
       "slot": "main_hand",
@@ -871,22 +889,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 90
-    },
-    {
-      "slot": "main_hand",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 245770,
-      "itemName": "Aln'hara Cane",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 7
+      "popularity": 97
     },
     {
       "slot": "off_hand",
@@ -901,7 +904,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 53,
-      "popularity": 73
+      "popularity": 80
     },
     {
       "slot": "off_hand",
@@ -926,12 +929,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     }
   }
 }

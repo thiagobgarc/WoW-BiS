@@ -25,7 +25,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 97
+      "popularity": 93
+    },
+    {
+      "slot": "head",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271875,
+      "itemName": "Gaze of the Coiled Watcher",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Ula'tek",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 65,
+      "popularity": 7
     },
     {
       "slot": "neck",
@@ -74,7 +92,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
+      "statPriorityFit": 70,
       "popularity": 7
     },
     {
@@ -93,7 +111,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 40
+      "popularity": 47
     },
     {
       "slot": "back",
@@ -107,7 +125,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 83,
       "popularity": 27
     },
     {
@@ -125,7 +143,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 51,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "chest",
@@ -154,8 +172,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 80
+      "statPriorityFit": 83,
+      "popularity": 83
     },
     {
       "slot": "wrist",
@@ -173,7 +191,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 13
+      "popularity": 17
     },
     {
       "slot": "hands",
@@ -190,22 +208,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 59,
-      "popularity": 83
-    },
-    {
-      "slot": "hands",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 244575,
-      "itemName": "Silvermoon Agent's Handwraps",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 13
+      "popularity": 93
     },
     {
       "slot": "waist",
@@ -241,7 +244,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 20
+      "popularity": 17
     },
     {
       "slot": "legs",
@@ -258,7 +261,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 80
+      "popularity": 63
     },
     {
       "slot": "legs",
@@ -272,8 +275,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
-      "popularity": 10
+      "statPriorityFit": 70,
+      "popularity": 20
     },
     {
       "slot": "feet",
@@ -288,7 +291,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 53,
-      "popularity": 93
+      "popularity": 83
+    },
+    {
+      "slot": "feet",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268247,
+      "itemName": "Breakwater Boots",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Tidebound Grotto",
+        "boss": "Nymrissa Wavecaller",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 49,
+      "popularity": 7
     },
     {
       "slot": "finger",
@@ -303,7 +324,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 83
+      "popularity": 93
     },
     {
       "slot": "finger",
@@ -327,15 +348,15 @@
       "slot": "finger",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 272149,
-      "itemName": "Hex Loop",
-      "itemLevel": 318,
+      "itemId": 240949,
+      "itemName": "Masterwork Sin'dorei Band",
+      "itemLevel": 331,
       "source": {
-        "type": "other"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 82,
+      "statPriorityFit": 43,
       "popularity": 20
     },
     {
@@ -351,7 +372,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 87
+      "popularity": 93
     },
     {
       "slot": "trinket",
@@ -369,7 +390,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 83
+      "popularity": 87
     },
     {
       "slot": "trinket",
@@ -405,7 +426,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 80
+      "popularity": 83
     },
     {
       "slot": "main_hand",
@@ -423,27 +444,12 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "off_hand",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 237840,
-      "itemName": "Spellbreaker's Warglaive",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 40
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "raid",
-      "rank": 2,
       "itemId": 268211,
       "itemName": "Baleful Hexblade",
       "itemLevel": 318,
@@ -456,7 +462,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 20
+      "popularity": 33
+    },
+    {
+      "slot": "off_hand",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 237840,
+      "itemName": "Spellbreaker's Warglaive",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 43,
+      "popularity": 23
     },
     {
       "slot": "head",
@@ -473,7 +494,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 100
+      "popularity": 97
     },
     {
       "slot": "neck",
@@ -522,7 +543,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
+      "statPriorityFit": 70,
       "popularity": 13
     },
     {
@@ -541,7 +562,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 43
+      "popularity": 50
     },
     {
       "slot": "back",
@@ -555,8 +576,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 27
+      "statPriorityFit": 83,
+      "popularity": 23
     },
     {
       "slot": "chest",
@@ -588,7 +609,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 58,
-      "popularity": 13
+      "popularity": 17
     },
     {
       "slot": "wrist",
@@ -602,7 +623,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 83,
       "popularity": 90
     },
     {
@@ -638,22 +659,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 59,
-      "popularity": 80
-    },
-    {
-      "slot": "hands",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 244575,
-      "itemName": "Silvermoon Agent's Handwraps",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 17
+      "popularity": 93
     },
     {
       "slot": "waist",
@@ -671,25 +677,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 30
+      "popularity": 43
     },
     {
       "slot": "waist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268227,
-      "itemName": "Unpossessed Skullsash",
-      "itemLevel": 318,
+      "itemId": 244573,
+      "itemName": "Silvermoon Agent's Utility Belt",
+      "itemLevel": 331,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
-        "difficulty": "mythic"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 57,
-      "popularity": 30
+      "statPriorityFit": 53,
+      "popularity": 13
     },
     {
       "slot": "legs",
@@ -706,7 +709,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 77
+      "popularity": 80
     },
     {
       "slot": "legs",
@@ -720,7 +723,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
+      "statPriorityFit": 70,
       "popularity": 13
     },
     {
@@ -769,7 +772,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 83
+      "popularity": 90
     },
     {
       "slot": "finger",
@@ -787,7 +790,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 53
+      "popularity": 43
     },
     {
       "slot": "finger",
@@ -801,8 +804,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 27
+      "statPriorityFit": 43,
+      "popularity": 23
     },
     {
       "slot": "trinket",
@@ -817,7 +820,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "trinket",
@@ -835,7 +838,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 67
+      "popularity": 70
     },
     {
       "slot": "trinket",
@@ -853,7 +856,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 27
+      "popularity": 33
     },
     {
       "slot": "main_hand",
@@ -871,7 +874,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 87
+      "popularity": 80
     },
     {
       "slot": "main_hand",
@@ -889,7 +892,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 7
+      "popularity": 17
     },
     {
       "slot": "off_hand",
@@ -904,37 +907,34 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 43,
-      "popularity": 37
+      "popularity": 23
     },
     {
       "slot": "off_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268211,
-      "itemName": "Baleful Hexblade",
-      "itemLevel": 318,
+      "itemId": 281056,
+      "itemName": "Sanctified Knight's Phoenixblade",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Coiled Altar",
-        "difficulty": "mythic"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 76,
-      "popularity": 17
+      "statPriorityFit": 73,
+      "popularity": 20
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     }
   }
 }

@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "head",
@@ -43,7 +43,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 13
+      "popularity": 10
     },
     {
       "slot": "neck",
@@ -64,6 +64,24 @@
       "popularity": 93
     },
     {
+      "slot": "neck",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268250,
+      "itemName": "Sentinel's Vitriolic Chain",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Entombed Sentinels",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 92,
+      "popularity": 7
+    },
+    {
       "slot": "shoulder",
       "contentType": "raid",
       "rank": 1,
@@ -78,7 +96,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 80
+      "popularity": 83
     },
     {
       "slot": "shoulder",
@@ -92,13 +110,28 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
-      "popularity": 17
+      "statPriorityFit": 43,
+      "popularity": 13
     },
     {
       "slot": "back",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 239656,
+      "itemName": "Adherent's Silken Shroud",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 60,
+      "popularity": 27
+    },
+    {
+      "slot": "back",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 268253,
       "itemName": "Silken Voodoo Drape",
       "itemLevel": 318,
@@ -111,22 +144,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 30
-    },
-    {
-      "slot": "back",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 239656,
-      "itemName": "Adherent's Silken Shroud",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 17
+      "popularity": 23
     },
     {
       "slot": "chest",
@@ -157,8 +175,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 70
+      "statPriorityFit": 60,
+      "popularity": 73
     },
     {
       "slot": "wrist",
@@ -176,7 +194,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 23
+      "popularity": 20
     },
     {
       "slot": "hands",
@@ -193,7 +211,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 51,
-      "popularity": 77
+      "popularity": 73
     },
     {
       "slot": "hands",
@@ -207,8 +225,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 20
+      "statPriorityFit": 83,
+      "popularity": 23
     },
     {
       "slot": "waist",
@@ -261,7 +279,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 83
+      "popularity": 87
     },
     {
       "slot": "legs",
@@ -275,7 +293,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
+      "statPriorityFit": 43,
       "popularity": 13
     },
     {
@@ -294,25 +312,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 47
+      "popularity": 43
     },
     {
       "slot": "feet",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268261,
-      "itemName": "Bespittled Slitherslippers",
-      "itemLevel": 318,
+      "itemId": 244569,
+      "itemName": "Silvermoon Agent's Sneakers",
+      "itemLevel": 331,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Twin Fangs",
-        "difficulty": "mythic"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 76,
-      "popularity": 13
+      "statPriorityFit": 83,
+      "popularity": 27
     },
     {
       "slot": "finger",
@@ -327,7 +342,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 42,
-      "popularity": 63
+      "popularity": 60
     },
     {
       "slot": "finger",
@@ -345,7 +360,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 40
+      "popularity": 43
     },
     {
       "slot": "finger",
@@ -363,7 +378,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 71,
-      "popularity": 23
+      "popularity": 27
     },
     {
       "slot": "trinket",
@@ -414,7 +429,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 20
+      "popularity": 17
     },
     {
       "slot": "main_hand",
@@ -432,7 +447,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "off_hand",
@@ -447,22 +462,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 70,
-      "popularity": 73
+      "popularity": 67
     },
     {
       "slot": "off_hand",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 237839,
-      "itemName": "Spellbreaker's Blade",
-      "itemLevel": 331,
+      "itemId": 270930,
+      "itemName": "Tomb-Creeper's Claw",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Nek'zali the Soulcoiler",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 13
+      "statPriorityFit": 89,
+      "popularity": 17
     },
     {
       "slot": "head",
@@ -479,7 +497,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 100
+      "popularity": 97
     },
     {
       "slot": "neck",
@@ -514,22 +532,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 87
-    },
-    {
-      "slot": "shoulder",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 244572,
-      "itemName": "Silvermoon Agent's Mantle",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 70,
-      "popularity": 10
+      "popularity": 93
     },
     {
       "slot": "back",
@@ -543,8 +546,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 47
+      "statPriorityFit": 60,
+      "popularity": 40
     },
     {
       "slot": "back",
@@ -562,7 +565,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 30
+      "popularity": 20
     },
     {
       "slot": "chest",
@@ -579,7 +582,22 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 97
+      "popularity": 93
+    },
+    {
+      "slot": "chest",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 281236,
+      "itemName": "Chestwrap of Palpable Terror",
+      "itemLevel": 311,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 90,
+      "popularity": 7
     },
     {
       "slot": "wrist",
@@ -593,7 +611,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
+      "statPriorityFit": 60,
       "popularity": 80
     },
     {
@@ -629,7 +647,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 51,
-      "popularity": 60
+      "popularity": 63
     },
     {
       "slot": "hands",
@@ -643,8 +661,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 33
+      "statPriorityFit": 83,
+      "popularity": 30
     },
     {
       "slot": "waist",
@@ -662,7 +680,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 45,
-      "popularity": 40
+      "popularity": 27
     },
     {
       "slot": "waist",
@@ -676,8 +694,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 20
+      "statPriorityFit": 83,
+      "popularity": 23
     },
     {
       "slot": "legs",
@@ -708,7 +726,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
+      "statPriorityFit": 43,
       "popularity": 17
     },
     {
@@ -727,7 +745,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 37
+      "popularity": 40
     },
     {
       "slot": "feet",
@@ -771,26 +789,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 37
+      "statPriorityFit": 70,
+      "popularity": 40
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 268252,
-      "itemName": "Apex Brute's Claw Ring",
+      "itemId": 268266,
+      "itemName": "Alluring Bubbleband",
       "itemLevel": 318,
       "source": {
         "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Sszorak",
+        "instance": "The Tidebound Grotto",
+        "boss": "Nymrissa Wavecaller",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 71,
-      "popularity": 27
+      "statPriorityFit": 87,
+      "popularity": 23
     },
     {
       "slot": "trinket",
@@ -805,7 +823,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 90
+      "popularity": 80
     },
     {
       "slot": "trinket",
@@ -823,7 +841,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 63
+      "popularity": 70
     },
     {
       "slot": "trinket",
@@ -841,7 +859,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 20
+      "popularity": 30
     },
     {
       "slot": "main_hand",
@@ -917,12 +935,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     }
   }
 }

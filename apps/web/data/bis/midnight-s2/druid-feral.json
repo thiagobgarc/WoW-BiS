@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "neck",
@@ -60,7 +60,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 97
+      "popularity": 90
     },
     {
       "slot": "back",
@@ -78,7 +78,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 47
+      "popularity": 53
     },
     {
       "slot": "back",
@@ -92,8 +92,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 30
+      "statPriorityFit": 70,
+      "popularity": 33
     },
     {
       "slot": "chest",
@@ -124,46 +124,13 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 83
-    },
-    {
-      "slot": "wrist",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268240,
-      "itemName": "Restless Spirit Shackles",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 56,
-      "popularity": 7
+      "statPriorityFit": 70,
+      "popularity": 90
     },
     {
       "slot": "hands",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 244575,
-      "itemName": "Silvermoon Agent's Handwraps",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 50
-    },
-    {
-      "slot": "hands",
-      "contentType": "raid",
-      "rank": 2,
       "itemId": 271529,
       "itemName": "Enigmatic Dreamwatcher's Gauntlets",
       "itemLevel": 318,
@@ -175,6 +142,21 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 44,
+      "popularity": 47
+    },
+    {
+      "slot": "hands",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 244575,
+      "itemName": "Silvermoon Agent's Handwraps",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 53,
       "popularity": 43
     },
     {
@@ -193,7 +175,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 43
+      "popularity": 37
     },
     {
       "slot": "waist",
@@ -228,22 +210,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "legs",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 244574,
-      "itemName": "Silvermoon Agent's Leggings",
-      "itemLevel": 331,
+      "itemId": 268225,
+      "itemName": "Coiled Hex Legguards",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 7
+      "statPriorityFit": 81,
+      "popularity": 10
     },
     {
       "slot": "feet",
@@ -258,25 +243,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 53,
-      "popularity": 63
+      "popularity": 67
     },
     {
       "slot": "feet",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268247,
-      "itemName": "Breakwater Boots",
+      "itemId": 268261,
+      "itemName": "Bespittled Slitherslippers",
       "itemLevel": 318,
       "source": {
         "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
+        "instance": "The Venomous Abyss",
+        "boss": "The Twin Fangs",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 33,
-      "popularity": 13
+      "statPriorityFit": 57,
+      "popularity": 10
     },
     {
       "slot": "finger",
@@ -291,7 +276,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 84,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "finger",
@@ -309,7 +294,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 94,
-      "popularity": 37
+      "popularity": 40
     },
     {
       "slot": "finger",
@@ -327,7 +312,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 61,
-      "popularity": 30
+      "popularity": 23
     },
     {
       "slot": "trinket",
@@ -360,7 +345,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 57
+      "popularity": 50
     },
     {
       "slot": "trinket",
@@ -378,7 +363,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 37
+      "popularity": 47
     },
     {
       "slot": "main_hand",
@@ -396,25 +381,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 93
-    },
-    {
-      "slot": "main_hand",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268199,
-      "itemName": "Tidepiercer's Bubble Popper",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 51,
-      "popularity": 7
+      "popularity": 97
     },
     {
       "slot": "head",
@@ -431,7 +398,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "neck",
@@ -466,7 +433,22 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 93
+      "popularity": 90
+    },
+    {
+      "slot": "shoulder",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 244572,
+      "itemName": "Silvermoon Agent's Mantle",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 83,
+      "popularity": 7
     },
     {
       "slot": "back",
@@ -484,7 +466,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 57
+      "popularity": 60
     },
     {
       "slot": "back",
@@ -498,7 +480,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 70,
       "popularity": 27
     },
     {
@@ -516,7 +498,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "chest",
@@ -531,7 +513,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 47,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "wrist",
@@ -545,8 +527,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 70,
       "popularity": 90
+    },
+    {
+      "slot": "wrist",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 268240,
+      "itemName": "Restless Spirit Shackles",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Nek'zali the Soulcoiler",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 56,
+      "popularity": 7
     },
     {
       "slot": "hands",
@@ -560,8 +560,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 60
+      "statPriorityFit": 53,
+      "popularity": 57
     },
     {
       "slot": "hands",
@@ -578,7 +578,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 37
+      "popularity": 43
     },
     {
       "slot": "waist",
@@ -596,7 +596,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 47
+      "popularity": 53
     },
     {
       "slot": "waist",
@@ -614,7 +614,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 23
+      "popularity": 17
     },
     {
       "slot": "legs",
@@ -631,7 +631,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 93
+      "popularity": 90
+    },
+    {
+      "slot": "legs",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 268225,
+      "itemName": "Coiled Hex Legguards",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 81,
+      "popularity": 7
     },
     {
       "slot": "feet",
@@ -679,7 +697,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 84,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "finger",
@@ -711,13 +729,28 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 27
+      "statPriorityFit": 30,
+      "popularity": 23
     },
     {
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 1,
+      "itemId": 281215,
+      "itemName": "Twisted Horror's Tendril",
+      "itemLevel": 311,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 50,
+      "popularity": 100
+    },
+    {
+      "slot": "trinket",
+      "contentType": "mythic-plus",
+      "rank": 2,
       "itemId": 270175,
       "itemName": "Voracious Heart of Ula'tek",
       "itemLevel": 318,
@@ -731,21 +764,6 @@
       "catalystable": false,
       "statPriorityFit": 65,
       "popularity": 100
-    },
-    {
-      "slot": "trinket",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 281215,
-      "itemName": "Twisted Horror's Tendril",
-      "itemLevel": 311,
-      "source": {
-        "type": "other"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 50,
-      "popularity": 93
     },
     {
       "slot": "main_hand",
@@ -770,12 +788,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     }
   }
 }

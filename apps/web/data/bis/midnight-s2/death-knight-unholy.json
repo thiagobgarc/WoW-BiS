@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 80
+      "popularity": 87
     },
     {
       "slot": "head",
@@ -40,7 +40,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 58,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "neck",
@@ -75,7 +75,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 27,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "back",
@@ -107,8 +107,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 7
+      "statPriorityFit": 53,
+      "popularity": 10
     },
     {
       "slot": "chest",
@@ -125,7 +125,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 97
+      "popularity": 90
+    },
+    {
+      "slot": "chest",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268222,
+      "itemName": "Reckless Spirit Breastplate",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 47,
+      "popularity": 7
     },
     {
       "slot": "wrist",
@@ -139,7 +157,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 70,
       "popularity": 93
     },
     {
@@ -175,7 +193,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "hands",
@@ -189,8 +207,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
-      "popularity": 10
+      "statPriorityFit": 30,
+      "popularity": 7
     },
     {
       "slot": "waist",
@@ -208,7 +226,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 70
+      "popularity": 63
+    },
+    {
+      "slot": "waist",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 237830,
+      "itemName": "Spellbreaker's Girdle",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 60,
+      "popularity": 10
     },
     {
       "slot": "legs",
@@ -257,8 +290,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 77
+      "statPriorityFit": 43,
+      "popularity": 80
     },
     {
       "slot": "feet",
@@ -297,21 +330,6 @@
       "slot": "finger",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 240949,
-      "itemName": "Masterwork Sin'dorei Band",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 40
-    },
-    {
-      "slot": "finger",
-      "contentType": "raid",
-      "rank": 3,
       "itemId": 268249,
       "itemName": "Vile Alchemist's Band",
       "itemLevel": 318,
@@ -324,6 +342,21 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 71,
+      "popularity": 40
+    },
+    {
+      "slot": "finger",
+      "contentType": "raid",
+      "rank": 3,
+      "itemId": 240949,
+      "itemName": "Masterwork Sin'dorei Band",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 30,
       "popularity": 30
     },
     {
@@ -360,7 +393,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 80
+      "popularity": 93
     },
     {
       "slot": "trinket",
@@ -375,7 +408,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 20
+      "popularity": 7
     },
     {
       "slot": "main_hand",
@@ -393,7 +426,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "head",
@@ -460,7 +493,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 27,
-      "popularity": 83
+      "popularity": 87
     },
     {
       "slot": "shoulder",
@@ -474,8 +507,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
-      "popularity": 13
+      "statPriorityFit": 30,
+      "popularity": 7
     },
     {
       "slot": "back",
@@ -507,8 +540,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 17
+      "statPriorityFit": 53,
+      "popularity": 23
     },
     {
       "slot": "chest",
@@ -525,7 +558,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 100
+      "popularity": 97
     },
     {
       "slot": "wrist",
@@ -539,8 +572,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 93
+      "statPriorityFit": 70,
+      "popularity": 97
     },
     {
       "slot": "hands",
@@ -557,7 +590,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 80
+      "popularity": 83
     },
     {
       "slot": "hands",
@@ -571,8 +604,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
-      "popularity": 17
+      "statPriorityFit": 30,
+      "popularity": 13
     },
     {
       "slot": "waist",
@@ -590,25 +623,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 60
-    },
-    {
-      "slot": "waist",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 268244,
-      "itemName": "Forgotten Grotto Girdle",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 34,
-      "popularity": 7
+      "popularity": 63
     },
     {
       "slot": "legs",
@@ -657,8 +672,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 77
+      "statPriorityFit": 43,
+      "popularity": 83
     },
     {
       "slot": "feet",
@@ -676,7 +691,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 17
+      "popularity": 10
     },
     {
       "slot": "finger",
@@ -691,7 +706,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 70
+      "popularity": 80
     },
     {
       "slot": "finger",
@@ -709,22 +724,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 71,
-      "popularity": 33
+      "popularity": 30
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 251513,
-      "itemName": "Loa Worshiper's Band",
+      "itemId": 240949,
+      "itemName": "Masterwork Sin'dorei Band",
       "itemLevel": 331,
       "source": {
         "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 85,
-      "popularity": 20
+      "statPriorityFit": 30,
+      "popularity": 23
     },
     {
       "slot": "trinket",
@@ -760,7 +775,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 53
+      "popularity": 57
     },
     {
       "slot": "trinket",
@@ -775,7 +790,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 43
+      "popularity": 40
     },
     {
       "slot": "main_hand",
@@ -800,12 +815,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     }
   }
 }

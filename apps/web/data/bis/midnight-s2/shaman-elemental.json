@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 100
+      "popularity": 97
     },
     {
       "slot": "neck",
@@ -60,7 +60,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 93
+      "popularity": 90
+    },
+    {
+      "slot": "shoulder",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268231,
+      "itemName": "Soulslither Spaulders",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 76,
+      "popularity": 10
     },
     {
       "slot": "back",
@@ -78,7 +96,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 47
+      "popularity": 43
     },
     {
       "slot": "back",
@@ -92,7 +110,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
+      "statPriorityFit": 53,
       "popularity": 20
     },
     {
@@ -124,8 +142,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 87
+      "statPriorityFit": 70,
+      "popularity": 97
     },
     {
       "slot": "hands",
@@ -142,7 +160,22 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 100
+      "popularity": 93
+    },
+    {
+      "slot": "hands",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 281238,
+      "itemName": "Aberrant Commander's Gauntlets",
+      "itemLevel": 318,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 89,
+      "popularity": 7
     },
     {
       "slot": "waist",
@@ -156,8 +189,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 43
+      "statPriorityFit": 60,
+      "popularity": 60
     },
     {
       "slot": "waist",
@@ -175,7 +208,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 37
+      "popularity": 23
     },
     {
       "slot": "legs",
@@ -206,8 +239,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 23
+      "statPriorityFit": 43,
+      "popularity": 17
     },
     {
       "slot": "feet",
@@ -221,7 +254,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 70,
       "popularity": 33
     },
     {
@@ -240,7 +273,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 27
+      "popularity": 23
     },
     {
       "slot": "finger",
@@ -273,7 +306,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 43
+      "popularity": 60
     },
     {
       "slot": "finger",
@@ -287,8 +320,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 23
+      "statPriorityFit": 30,
+      "popularity": 20
     },
     {
       "slot": "trinket",
@@ -303,7 +336,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 90
+      "popularity": 97
     },
     {
       "slot": "trinket",
@@ -321,7 +354,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 70
+      "popularity": 63
     },
     {
       "slot": "trinket",
@@ -357,7 +390,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 40,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "off_hand",
@@ -375,7 +408,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 43
+      "popularity": 47
     },
     {
       "slot": "off_hand",
@@ -393,7 +426,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 37
+      "popularity": 33
     },
     {
       "slot": "head",
@@ -459,8 +492,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 50
+      "statPriorityFit": 53,
+      "popularity": 40
     },
     {
       "slot": "back",
@@ -478,7 +511,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 33
+      "popularity": 37
     },
     {
       "slot": "chest",
@@ -509,8 +542,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 77
+      "statPriorityFit": 70,
+      "popularity": 73
     },
     {
       "slot": "wrist",
@@ -528,7 +561,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 20
+      "popularity": 23
     },
     {
       "slot": "hands",
@@ -545,7 +578,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "hands",
@@ -560,7 +593,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 89,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "waist",
@@ -574,8 +607,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 47
+      "statPriorityFit": 60,
+      "popularity": 50
     },
     {
       "slot": "waist",
@@ -593,7 +626,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 27
+      "popularity": 33
     },
     {
       "slot": "legs",
@@ -610,7 +643,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 27,
-      "popularity": 63
+      "popularity": 60
     },
     {
       "slot": "legs",
@@ -624,13 +657,28 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 33
+      "statPriorityFit": 43,
+      "popularity": 30
     },
     {
       "slot": "feet",
       "contentType": "mythic-plus",
       "rank": 1,
+      "itemId": 271440,
+      "itemName": "Greaves of the Noxious Depths",
+      "itemLevel": 311,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 89,
+      "popularity": 30
+    },
+    {
+      "slot": "feet",
+      "contentType": "mythic-plus",
+      "rank": 2,
       "itemId": 268258,
       "itemName": "Boots of the Reckless Wayfarer",
       "itemLevel": 318,
@@ -643,21 +691,6 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 30
-    },
-    {
-      "slot": "feet",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 271440,
-      "itemName": "Greaves of the Noxious Depths",
-      "itemLevel": 311,
-      "source": {
-        "type": "other"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 26,
       "popularity": 23
     },
     {
@@ -691,7 +724,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 47
+      "popularity": 63
     },
     {
       "slot": "finger",
@@ -705,8 +738,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 27
+      "statPriorityFit": 30,
+      "popularity": 20
     },
     {
       "slot": "trinket",
@@ -721,7 +754,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 97
+      "popularity": 93
     },
     {
       "slot": "trinket",
@@ -739,7 +772,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 70
+      "popularity": 63
     },
     {
       "slot": "trinket",
@@ -757,7 +790,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 30
+      "popularity": 43
     },
     {
       "slot": "main_hand",
@@ -793,7 +826,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 50
+      "popularity": 57
     },
     {
       "slot": "off_hand",
@@ -811,19 +844,19 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 37
+      "popularity": 30
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     }
   }
 }

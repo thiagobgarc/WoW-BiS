@@ -25,22 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 90
-    },
-    {
-      "slot": "head",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 244579,
-      "itemName": "Farstrider's Unwavering Visage",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 7
+      "popularity": 93
     },
     {
       "slot": "neck",
@@ -75,7 +60,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 70
+      "popularity": 80
     },
     {
       "slot": "shoulder",
@@ -89,8 +74,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
-      "popularity": 20
+      "statPriorityFit": 30,
+      "popularity": 13
     },
     {
       "slot": "back",
@@ -108,25 +93,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 33
+      "popularity": 50
     },
     {
       "slot": "back",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268253,
-      "itemName": "Silken Voodoo Drape",
-      "itemLevel": 318,
+      "itemId": 239656,
+      "itemName": "Adherent's Silken Shroud",
+      "itemLevel": 331,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Coiled Altar",
-        "difficulty": "mythic"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 34,
-      "popularity": 27
+      "statPriorityFit": 43,
+      "popularity": 20
     },
     {
       "slot": "chest",
@@ -157,8 +139,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 90
+      "statPriorityFit": 83,
+      "popularity": 87
     },
     {
       "slot": "hands",
@@ -175,7 +157,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "hands",
@@ -189,7 +171,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
+      "statPriorityFit": 30,
       "popularity": 7
     },
     {
@@ -208,7 +190,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 63
+      "popularity": 53
     },
     {
       "slot": "waist",
@@ -222,8 +204,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 7
+      "statPriorityFit": 70,
+      "popularity": 20
     },
     {
       "slot": "legs",
@@ -254,13 +236,31 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
-      "popularity": 20
+      "statPriorityFit": 30,
+      "popularity": 17
     },
     {
       "slot": "feet",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 268258,
+      "itemName": "Boots of the Reckless Wayfarer",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Lost Explorers",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 73,
+      "popularity": 37
+    },
+    {
+      "slot": "feet",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 271440,
       "itemName": "Greaves of the Noxious Depths",
       "itemLevel": 318,
@@ -269,23 +269,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 48,
-      "popularity": 27
-    },
-    {
-      "slot": "feet",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 244577,
-      "itemName": "Farstrider's Razor Talons",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 23
+      "statPriorityFit": 76,
+      "popularity": 30
     },
     {
       "slot": "finger",
@@ -303,7 +288,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 94,
-      "popularity": 67
+      "popularity": 77
     },
     {
       "slot": "finger",
@@ -317,8 +302,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 57
+      "statPriorityFit": 53,
+      "popularity": 60
     },
     {
       "slot": "finger",
@@ -333,7 +318,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 78,
-      "popularity": 30
+      "popularity": 37
     },
     {
       "slot": "trinket",
@@ -351,7 +336,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 90
+      "popularity": 100
     },
     {
       "slot": "trinket",
@@ -369,7 +354,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 57
+      "popularity": 53
     },
     {
       "slot": "trinket",
@@ -402,7 +387,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "off_hand",
@@ -420,7 +405,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 53
+      "popularity": 50
     },
     {
       "slot": "off_hand",
@@ -434,8 +419,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 43
+      "statPriorityFit": 70,
+      "popularity": 33
     },
     {
       "slot": "head",
@@ -452,7 +437,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 83
+      "popularity": 87
     },
     {
       "slot": "head",
@@ -466,7 +451,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 88,
+      "statPriorityFit": 61,
       "popularity": 10
     },
     {
@@ -516,7 +501,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
+      "statPriorityFit": 30,
       "popularity": 23
     },
     {
@@ -535,7 +520,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 40
+      "popularity": 37
     },
     {
       "slot": "back",
@@ -549,8 +534,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 20
+      "statPriorityFit": 43,
+      "popularity": 27
     },
     {
       "slot": "chest",
@@ -581,7 +566,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
+      "statPriorityFit": 43,
       "popularity": 10
     },
     {
@@ -596,8 +581,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 93
+      "statPriorityFit": 83,
+      "popularity": 100
     },
     {
       "slot": "hands",
@@ -614,7 +599,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "waist",
@@ -632,7 +617,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 37
+      "popularity": 57
     },
     {
       "slot": "waist",
@@ -646,8 +631,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 37
+      "statPriorityFit": 70,
+      "popularity": 23
     },
     {
       "slot": "legs",
@@ -664,7 +649,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 83
+      "popularity": 87
     },
     {
       "slot": "legs",
@@ -696,25 +681,22 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 48,
-      "popularity": 47
+      "statPriorityFit": 76,
+      "popularity": 57
     },
     {
       "slot": "feet",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 251125,
-      "itemName": "Felsoaked Soles",
-      "itemLevel": 311,
+      "itemId": 244577,
+      "itemName": "Farstrider's Razor Talons",
+      "itemLevel": 331,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Murder Row",
-        "boss": "Kystia Manaheart",
-        "keyLevel": 10
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 62,
+      "statPriorityFit": 83,
       "popularity": 23
     },
     {
@@ -744,8 +726,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 50
+      "statPriorityFit": 53,
+      "popularity": 53
     },
     {
       "slot": "finger",
@@ -763,7 +745,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 94,
-      "popularity": 43
+      "popularity": 40
     },
     {
       "slot": "trinket",
@@ -781,7 +763,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "trinket",
@@ -814,7 +796,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 30
+      "popularity": 23
     },
     {
       "slot": "main_hand",
@@ -832,7 +814,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 87
+      "popularity": 93
     },
     {
       "slot": "main_hand",
@@ -868,7 +850,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 47
+      "popularity": 53
     },
     {
       "slot": "off_hand",
@@ -882,20 +864,20 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 30
+      "statPriorityFit": 70,
+      "popularity": 23
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     }
   }
 }

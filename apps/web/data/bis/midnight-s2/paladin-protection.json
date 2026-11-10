@@ -25,22 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 87
-    },
-    {
-      "slot": "head",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 237832,
-      "itemName": "Spellbreaker's Cover",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 7
+      "popularity": 97
     },
     {
       "slot": "neck",
@@ -81,19 +66,16 @@
       "slot": "shoulder",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268226,
-      "itemName": "Swelling Sea Spaulders",
-      "itemLevel": 318,
+      "itemId": 237835,
+      "itemName": "Spellbreaker's Mantle",
+      "itemLevel": 331,
       "source": {
-        "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
-        "difficulty": "mythic"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 82,
-      "popularity": 10
+      "statPriorityFit": 43,
+      "popularity": 13
     },
     {
       "slot": "back",
@@ -125,7 +107,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
+      "statPriorityFit": 53,
       "popularity": 17
     },
     {
@@ -143,7 +125,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 93
+      "popularity": 100
     },
     {
       "slot": "wrist",
@@ -157,8 +139,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 63
+      "statPriorityFit": 83,
+      "popularity": 77
     },
     {
       "slot": "wrist",
@@ -176,7 +158,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 20
+      "popularity": 13
     },
     {
       "slot": "hands",
@@ -193,7 +175,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 93
+      "popularity": 77
     },
     {
       "slot": "hands",
@@ -207,8 +189,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
-      "popularity": 7
+      "statPriorityFit": 43,
+      "popularity": 20
     },
     {
       "slot": "waist",
@@ -226,7 +208,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 70
+      "popularity": 73
     },
     {
       "slot": "waist",
@@ -244,7 +226,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 13
+      "popularity": 10
     },
     {
       "slot": "legs",
@@ -261,7 +243,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 87
+      "popularity": 80
     },
     {
       "slot": "legs",
@@ -279,7 +261,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 13
+      "popularity": 20
     },
     {
       "slot": "feet",
@@ -293,8 +275,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 40
+      "statPriorityFit": 30,
+      "popularity": 43
     },
     {
       "slot": "feet",
@@ -312,7 +294,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 33
+      "popularity": 27
     },
     {
       "slot": "finger",
@@ -327,7 +309,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 67
+      "popularity": 83
     },
     {
       "slot": "finger",
@@ -341,8 +323,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 47
+      "statPriorityFit": 43,
+      "popularity": 43
     },
     {
       "slot": "finger",
@@ -360,12 +342,30 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 94,
-      "popularity": 33
+      "popularity": 27
     },
     {
       "slot": "trinket",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 270175,
+      "itemName": "Voracious Heart of Ula'tek",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Ula'tek",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 100,
+      "popularity": 93
+    },
+    {
+      "slot": "trinket",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 270173,
       "itemName": "Zul'jin's Guillotine Technique",
       "itemLevel": 318,
@@ -383,33 +383,12 @@
     {
       "slot": "trinket",
       "contentType": "raid",
-      "rank": 2,
-      "itemId": 270175,
-      "itemName": "Voracious Heart of Ula'tek",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 100,
-      "popularity": 83
-    },
-    {
-      "slot": "trinket",
-      "contentType": "raid",
       "rank": 3,
-      "itemId": 270163,
-      "itemName": "Sszorak's Ferocity",
+      "itemId": 281215,
+      "itemName": "Twisted Horror's Tendril",
       "itemLevel": 318,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Sszorak",
-        "difficulty": "mythic"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
@@ -450,7 +429,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 13
+      "popularity": 17
     },
     {
       "slot": "off_hand",
@@ -468,7 +447,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 40
+      "popularity": 47
     },
     {
       "slot": "off_hand",
@@ -486,7 +465,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 30
+      "popularity": 27
     },
     {
       "slot": "head",
@@ -503,22 +482,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 93
-    },
-    {
-      "slot": "head",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 281239,
-      "itemName": "Corroded Hulk's Skullcap",
-      "itemLevel": 311,
-      "source": {
-        "type": "other"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 47,
-      "popularity": 7
+      "popularity": 100
     },
     {
       "slot": "neck",
@@ -553,7 +517,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 80
+      "popularity": 73
     },
     {
       "slot": "shoulder",
@@ -567,8 +531,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 20
+      "statPriorityFit": 43,
+      "popularity": 23
     },
     {
       "slot": "back",
@@ -586,7 +550,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 50
+      "popularity": 40
     },
     {
       "slot": "back",
@@ -600,8 +564,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 30
+      "statPriorityFit": 53,
+      "popularity": 37
     },
     {
       "slot": "chest",
@@ -618,7 +582,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "wrist",
@@ -632,7 +596,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
+      "statPriorityFit": 83,
       "popularity": 77
     },
     {
@@ -682,8 +646,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
-      "popularity": 27
+      "statPriorityFit": 43,
+      "popularity": 30
     },
     {
       "slot": "waist",
@@ -715,7 +679,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 60,
       "popularity": 23
     },
     {
@@ -733,7 +697,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 97
+      "popularity": 93
+    },
+    {
+      "slot": "legs",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 271878,
+      "itemName": "Chausses of Unbound Rancor",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Ula'tek",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 100,
+      "popularity": 7
     },
     {
       "slot": "feet",
@@ -747,8 +729,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 47
+      "statPriorityFit": 30,
+      "popularity": 53
     },
     {
       "slot": "feet",
@@ -766,7 +748,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 37
+      "popularity": 30
     },
     {
       "slot": "finger",
@@ -781,7 +763,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 70
+      "popularity": 93
     },
     {
       "slot": "finger",
@@ -795,7 +777,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
+      "statPriorityFit": 43,
       "popularity": 53
     },
     {
@@ -832,7 +814,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 83
+      "popularity": 73
     },
     {
       "slot": "trinket",
@@ -850,7 +832,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 63
+      "popularity": 60
     },
     {
       "slot": "trinket",
@@ -865,7 +847,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 27
+      "popularity": 43
     },
     {
       "slot": "main_hand",
@@ -883,7 +865,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "main_hand",
@@ -901,7 +883,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 7
+      "popularity": 13
     },
     {
       "slot": "off_hand",
@@ -915,8 +897,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 33
+      "statPriorityFit": 60,
+      "popularity": 30
     },
     {
       "slot": "off_hand",
@@ -934,19 +916,19 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 33
+      "popularity": 30
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     }
   }
 }

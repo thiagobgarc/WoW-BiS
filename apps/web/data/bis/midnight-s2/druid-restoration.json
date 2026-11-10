@@ -25,7 +25,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 100
+      "popularity": 93
+    },
+    {
+      "slot": "head",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271875,
+      "itemName": "Gaze of the Coiled Watcher",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Ula'tek",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 100,
+      "popularity": 7
     },
     {
       "slot": "neck",
@@ -57,8 +75,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
-      "popularity": 90
+      "statPriorityFit": 43,
+      "popularity": 93
     },
     {
       "slot": "shoulder",
@@ -75,7 +93,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "back",
@@ -93,7 +111,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 73
+      "popularity": 77
     },
     {
       "slot": "back",
@@ -107,8 +125,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 7
+      "statPriorityFit": 83,
+      "popularity": 10
     },
     {
       "slot": "chest",
@@ -139,8 +157,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 90
+      "statPriorityFit": 83,
+      "popularity": 93
     },
     {
       "slot": "wrist",
@@ -158,7 +176,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "hands",
@@ -175,7 +193,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 93
+      "popularity": 100
     },
     {
       "slot": "waist",
@@ -207,8 +225,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 7
+      "statPriorityFit": 60,
+      "popularity": 17
     },
     {
       "slot": "legs",
@@ -225,7 +243,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 73,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "feet",
@@ -240,7 +258,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 70
+      "popularity": 67
     },
     {
       "slot": "feet",
@@ -258,7 +276,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 27
+      "popularity": 23
     },
     {
       "slot": "finger",
@@ -273,7 +291,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 67
+      "popularity": 73
     },
     {
       "slot": "finger",
@@ -287,8 +305,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 60
+      "statPriorityFit": 70,
+      "popularity": 47
     },
     {
       "slot": "finger",
@@ -303,7 +321,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 23
+      "popularity": 20
     },
     {
       "slot": "trinket",
@@ -321,7 +339,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "trinket",
@@ -339,24 +357,24 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 50
+      "popularity": 57
     },
     {
       "slot": "trinket",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 270169,
-      "itemName": "Hex Lord's Dooming Idol",
+      "itemId": 270164,
+      "itemName": "Gebbo's Bottomless Bag",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "The Coiled Altar",
+        "boss": "The Lost Explorers",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 100,
+      "statPriorityFit": 50,
       "popularity": 23
     },
     {
@@ -389,8 +407,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 7
+      "statPriorityFit": 60,
+      "popularity": 10
     },
     {
       "slot": "off_hand",
@@ -408,7 +426,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 43
+      "popularity": 60
     },
     {
       "slot": "off_hand",
@@ -423,7 +441,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 53,
-      "popularity": 37
+      "popularity": 20
     },
     {
       "slot": "head",
@@ -440,7 +458,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "neck",
@@ -472,7 +490,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
+      "statPriorityFit": 43,
       "popularity": 83
     },
     {
@@ -504,7 +522,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 83,
       "popularity": 43
     },
     {
@@ -554,7 +572,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 83,
       "popularity": 90
     },
     {
@@ -608,7 +626,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 47
+      "popularity": 37
     },
     {
       "slot": "waist",
@@ -622,8 +640,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 23
+      "statPriorityFit": 60,
+      "popularity": 27
     },
     {
       "slot": "legs",
@@ -640,7 +658,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 73,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "legs",
@@ -654,8 +672,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
-      "popularity": 7
+      "statPriorityFit": 43,
+      "popularity": 10
     },
     {
       "slot": "feet",
@@ -670,7 +688,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 87
+      "popularity": 80
     },
     {
       "slot": "feet",
@@ -688,7 +706,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 13
+      "popularity": 20
     },
     {
       "slot": "finger",
@@ -703,7 +721,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 73
+      "popularity": 83
     },
     {
       "slot": "finger",
@@ -717,8 +735,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 60
+      "statPriorityFit": 70,
+      "popularity": 57
     },
     {
       "slot": "finger",
@@ -736,7 +754,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 23
+      "popularity": 17
     },
     {
       "slot": "trinket",
@@ -772,7 +790,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 57
+      "popularity": 47
     },
     {
       "slot": "trinket",
@@ -790,7 +808,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 23
+      "popularity": 30
     },
     {
       "slot": "main_hand",
@@ -814,21 +832,6 @@
       "slot": "off_hand",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 245769,
-      "itemName": "Aln'hara Lantern",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 43
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 268197,
       "itemName": "Spine of the Hissing Abyss",
       "itemLevel": 318,
@@ -841,6 +844,21 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
+      "popularity": 40
+    },
+    {
+      "slot": "off_hand",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 245769,
+      "itemName": "Aln'hara Lantern",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 53,
       "popularity": 37
     }
   ],
@@ -848,12 +866,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     }
   }
 }

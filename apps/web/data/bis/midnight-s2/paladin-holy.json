@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "head",
@@ -39,8 +39,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 10
+      "statPriorityFit": 70,
+      "popularity": 7
     },
     {
       "slot": "neck",
@@ -75,27 +75,12 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "back",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 239656,
-      "itemName": "Adherent's Silken Shroud",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 33
-    },
-    {
-      "slot": "back",
-      "contentType": "raid",
-      "rank": 2,
       "itemId": 268253,
       "itemName": "Silken Voodoo Drape",
       "itemLevel": 318,
@@ -108,7 +93,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 33
+      "popularity": 53
+    },
+    {
+      "slot": "back",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 239656,
+      "itemName": "Adherent's Silken Shroud",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 60,
+      "popularity": 27
     },
     {
       "slot": "chest",
@@ -125,7 +125,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 45,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "wrist",
@@ -139,7 +139,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
+      "statPriorityFit": 83,
       "popularity": 77
     },
     {
@@ -158,7 +158,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 20
+      "popularity": 17
     },
     {
       "slot": "hands",
@@ -175,7 +175,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 35,
-      "popularity": 60
+      "popularity": 53
     },
     {
       "slot": "hands",
@@ -189,8 +189,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 33
+      "statPriorityFit": 70,
+      "popularity": 43
     },
     {
       "slot": "waist",
@@ -208,7 +208,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 50
+      "popularity": 53
     },
     {
       "slot": "waist",
@@ -226,7 +226,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 20
+      "popularity": 17
     },
     {
       "slot": "legs",
@@ -293,7 +293,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
+      "statPriorityFit": 30,
       "popularity": 30
     },
     {
@@ -309,7 +309,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 42,
-      "popularity": 67
+      "popularity": 57
     },
     {
       "slot": "finger",
@@ -323,25 +323,25 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 40
+      "statPriorityFit": 70,
+      "popularity": 43
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 268249,
-      "itemName": "Vile Alchemist's Band",
+      "itemId": 268266,
+      "itemName": "Alluring Bubbleband",
       "itemLevel": 318,
       "source": {
         "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Vashnik the Malignant",
+        "instance": "The Tidebound Grotto",
+        "boss": "Nymrissa Wavecaller",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 28,
+      "statPriorityFit": 87,
       "popularity": 33
     },
     {
@@ -378,7 +378,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 53
+      "popularity": 57
     },
     {
       "slot": "trinket",
@@ -414,22 +414,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 74,
-      "popularity": 57
+      "popularity": 60
     },
     {
       "slot": "main_hand",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 237843,
-      "itemName": "Magister's Mana Sword",
-      "itemLevel": 331,
+      "itemId": 281056,
+      "itemName": "Sanctified Knight's Phoenixblade",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 13
+      "statPriorityFit": 40,
+      "popularity": 17
     },
     {
       "slot": "off_hand",
@@ -447,7 +447,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 50
+      "popularity": 57
     },
     {
       "slot": "off_hand",
@@ -465,7 +465,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 30
+      "popularity": 20
     },
     {
       "slot": "head",
@@ -482,7 +482,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "head",
@@ -546,26 +546,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 47
+      "statPriorityFit": 60,
+      "popularity": 33
     },
     {
       "slot": "back",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268248,
-      "itemName": "Amani Summoning Shawl",
+      "itemId": 268253,
+      "itemName": "Silken Voodoo Drape",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
+        "boss": "The Coiled Altar",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 57,
-      "popularity": 23
+      "statPriorityFit": 44,
+      "popularity": 33
     },
     {
       "slot": "chest",
@@ -582,7 +582,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 45,
-      "popularity": 83
+      "popularity": 87
     },
     {
       "slot": "chest",
@@ -596,8 +596,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 13
+      "statPriorityFit": 70,
+      "popularity": 10
     },
     {
       "slot": "wrist",
@@ -611,8 +611,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 77
+      "statPriorityFit": 83,
+      "popularity": 73
     },
     {
       "slot": "wrist",
@@ -630,7 +630,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 17
+      "popularity": 20
     },
     {
       "slot": "hands",
@@ -647,7 +647,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 35,
-      "popularity": 50
+      "popularity": 57
     },
     {
       "slot": "hands",
@@ -661,8 +661,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 43
+      "statPriorityFit": 70,
+      "popularity": 37
     },
     {
       "slot": "waist",
@@ -680,7 +680,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 33
+      "popularity": 40
     },
     {
       "slot": "waist",
@@ -698,7 +698,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 23
+      "popularity": 20
     },
     {
       "slot": "legs",
@@ -729,8 +729,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 37
+      "statPriorityFit": 30,
+      "popularity": 47
     },
     {
       "slot": "feet",
@@ -748,7 +748,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 30
+      "popularity": 27
     },
     {
       "slot": "finger",
@@ -762,8 +762,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 70
+      "statPriorityFit": 70,
+      "popularity": 67
     },
     {
       "slot": "finger",
@@ -814,30 +814,12 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 270164,
-      "itemName": "Gebbo's Bottomless Bag",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 50,
-      "popularity": 33
-    },
-    {
-      "slot": "trinket",
-      "contentType": "mythic-plus",
-      "rank": 3,
       "itemId": 270171,
       "itemName": "Preternatural Antivenom",
       "itemLevel": 318,
@@ -850,7 +832,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 33
+      "popularity": 40
+    },
+    {
+      "slot": "trinket",
+      "contentType": "mythic-plus",
+      "rank": 3,
+      "itemId": 270164,
+      "itemName": "Gebbo's Bottomless Bag",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Lost Explorers",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 50,
+      "popularity": 27
     },
     {
       "slot": "main_hand",
@@ -868,7 +868,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 74,
-      "popularity": 47
+      "popularity": 53
     },
     {
       "slot": "main_hand",
@@ -904,7 +904,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 43
+      "popularity": 47
     },
     {
       "slot": "off_hand",
@@ -922,19 +922,19 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 23
+      "popularity": 20
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-03"
+      "collectedAt": "2026-11-10"
     }
   }
 }
