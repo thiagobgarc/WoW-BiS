@@ -25,7 +25,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 97
+      "popularity": 90
+    },
+    {
+      "slot": "head",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271875,
+      "itemName": "Gaze of the Coiled Watcher",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Ula'tek",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 100,
+      "popularity": 10
     },
     {
       "slot": "neck",
@@ -43,25 +61,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 90
-    },
-    {
-      "slot": "neck",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268250,
-      "itemName": "Sentinel's Vitriolic Chain",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Entombed Sentinels",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 86,
-      "popularity": 7
+      "popularity": 93
     },
     {
       "slot": "shoulder",
@@ -78,7 +78,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 83
+      "popularity": 87
     },
     {
       "slot": "shoulder",
@@ -92,7 +92,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
+      "statPriorityFit": 60,
       "popularity": 13
     },
     {
@@ -108,7 +108,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 83,
-      "popularity": 50
+      "popularity": 43
     },
     {
       "slot": "back",
@@ -161,7 +161,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 61,
-      "popularity": 47
+      "popularity": 40
     },
     {
       "slot": "wrist",
@@ -175,8 +175,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 37
+      "statPriorityFit": 53,
+      "popularity": 40
     },
     {
       "slot": "hands",
@@ -193,7 +193,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "hands",
@@ -207,7 +207,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
+      "statPriorityFit": 60,
       "popularity": 7
     },
     {
@@ -222,26 +222,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 50
+      "statPriorityFit": 30,
+      "popularity": 47
     },
     {
       "slot": "waist",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268227,
-      "itemName": "Unpossessed Skullsash",
+      "itemId": 268256,
+      "itemName": "Sash of the Forlorn Vessel",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
+        "boss": "The Coiled Altar",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 47,
-      "popularity": 17
+      "statPriorityFit": 76,
+      "popularity": 27
     },
     {
       "slot": "legs",
@@ -258,7 +258,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 33,
-      "popularity": 70
+      "popularity": 73
     },
     {
       "slot": "legs",
@@ -272,7 +272,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
+      "statPriorityFit": 30,
       "popularity": 27
     },
     {
@@ -291,7 +291,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 72,
-      "popularity": 53
+      "popularity": 43
     },
     {
       "slot": "feet",
@@ -305,8 +305,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 23
+      "statPriorityFit": 43,
+      "popularity": 20
     },
     {
       "slot": "finger",
@@ -324,7 +324,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 67
+      "popularity": 70
     },
     {
       "slot": "finger",
@@ -342,7 +342,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 43
+      "popularity": 57
     },
     {
       "slot": "finger",
@@ -356,8 +356,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 33
+      "statPriorityFit": 83,
+      "popularity": 27
     },
     {
       "slot": "trinket",
@@ -375,7 +375,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 73
+      "popularity": 67
     },
     {
       "slot": "trinket",
@@ -429,7 +429,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 47
+      "popularity": 67
     },
     {
       "slot": "main_hand",
@@ -443,28 +443,13 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 20
+      "statPriorityFit": 60,
+      "popularity": 13
     },
     {
       "slot": "off_hand",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 245769,
-      "itemName": "Aln'hara Lantern",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 27
-    },
-    {
-      "slot": "off_hand",
-      "contentType": "raid",
-      "rank": 2,
       "itemId": 268263,
       "itemName": "Frostscale's Mystic Frond",
       "itemLevel": 318,
@@ -477,6 +462,21 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
+      "popularity": 30
+    },
+    {
+      "slot": "off_hand",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 245769,
+      "itemName": "Aln'hara Lantern",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 60,
       "popularity": 23
     },
     {
@@ -580,7 +580,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 83,
-      "popularity": 37
+      "popularity": 40
     },
     {
       "slot": "back",
@@ -598,7 +598,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 23
+      "popularity": 20
     },
     {
       "slot": "chest",
@@ -629,7 +629,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
+      "statPriorityFit": 53,
       "popularity": 53
     },
     {
@@ -648,7 +648,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 61,
-      "popularity": 33
+      "popularity": 27
     },
     {
       "slot": "hands",
@@ -665,7 +665,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 73
+      "popularity": 67
     },
     {
       "slot": "hands",
@@ -679,8 +679,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
-      "popularity": 23
+      "statPriorityFit": 60,
+      "popularity": 30
     },
     {
       "slot": "waist",
@@ -694,8 +694,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 50
+      "statPriorityFit": 30,
+      "popularity": 40
     },
     {
       "slot": "waist",
@@ -713,7 +713,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 17
+      "popularity": 20
     },
     {
       "slot": "legs",
@@ -744,8 +744,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
-      "popularity": 30
+      "statPriorityFit": 30,
+      "popularity": 27
     },
     {
       "slot": "feet",
@@ -759,8 +759,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 53
+      "statPriorityFit": 43,
+      "popularity": 57
     },
     {
       "slot": "feet",
@@ -793,7 +793,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 63
+      "popularity": 73
     },
     {
       "slot": "finger",
@@ -811,7 +811,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 33
+      "popularity": 37
     },
     {
       "slot": "finger",
@@ -825,7 +825,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 83,
       "popularity": 30
     },
     {
@@ -844,7 +844,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 100
+      "popularity": 97
     },
     {
       "slot": "trinket",
@@ -862,7 +862,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 40
+      "popularity": 43
     },
     {
       "slot": "trinket",
@@ -909,7 +909,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
+      "statPriorityFit": 60,
       "popularity": 23
     }
   ],
@@ -917,12 +917,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-10"
+      "collectedAt": "2026-11-18"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-10"
+      "collectedAt": "2026-11-18"
     }
   }
 }

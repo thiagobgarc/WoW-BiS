@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 73
+      "popularity": 87
     },
     {
       "slot": "head",
@@ -39,8 +39,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 83,
-      "popularity": 23
+      "statPriorityFit": 30,
+      "popularity": 13
     },
     {
       "slot": "neck",
@@ -58,7 +58,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "shoulder",
@@ -75,7 +75,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 97
+      "popularity": 87
+    },
+    {
+      "slot": "shoulder",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268231,
+      "itemName": "Soulslither Spaulders",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 81,
+      "popularity": 13
     },
     {
       "slot": "back",
@@ -93,7 +111,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 60
+      "popularity": 63
     },
     {
       "slot": "back",
@@ -108,7 +126,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 83,
-      "popularity": 7
+      "popularity": 13
     },
     {
       "slot": "chest",
@@ -125,7 +143,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 97
+      "popularity": 93
+    },
+    {
+      "slot": "chest",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271876,
+      "itemName": "Awoken Dreadfang Cuirass",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Ula'tek",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 100,
+      "popularity": 7
     },
     {
       "slot": "wrist",
@@ -139,8 +175,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 87
+      "statPriorityFit": 43,
+      "popularity": 90
     },
     {
       "slot": "hands",
@@ -175,7 +211,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 53
+      "popularity": 63
     },
     {
       "slot": "waist",
@@ -189,8 +225,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 17
+      "statPriorityFit": 83,
+      "popularity": 13
     },
     {
       "slot": "legs",
@@ -207,7 +243,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 36,
-      "popularity": 73
+      "popularity": 77
     },
     {
       "slot": "legs",
@@ -243,7 +279,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 47
+      "popularity": 37
     },
     {
       "slot": "feet",
@@ -257,7 +293,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 43,
       "popularity": 13
     },
     {
@@ -273,7 +309,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 87
+      "popularity": 83
     },
     {
       "slot": "finger",
@@ -291,7 +327,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 50
+      "popularity": 47
     },
     {
       "slot": "finger",
@@ -305,8 +341,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 30
+      "statPriorityFit": 83,
+      "popularity": 27
     },
     {
       "slot": "trinket",
@@ -342,7 +378,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 83
+      "popularity": 87
     },
     {
       "slot": "trinket",
@@ -357,7 +393,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 20
+      "popularity": 17
     },
     {
       "slot": "main_hand",
@@ -375,7 +411,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 100
+      "popularity": 97
     },
     {
       "slot": "off_hand",
@@ -389,22 +425,25 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 73
+      "statPriorityFit": 70,
+      "popularity": 67
     },
     {
       "slot": "off_hand",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 237845,
-      "itemName": "Bloomforged Claw",
-      "itemLevel": 331,
+      "itemId": 270930,
+      "itemName": "Tomb-Creeper's Claw",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Nek'zali the Soulcoiler",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
+      "statPriorityFit": 57,
       "popularity": 13
     },
     {
@@ -422,22 +461,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 93
-    },
-    {
-      "slot": "head",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 244579,
-      "itemName": "Farstrider's Unwavering Visage",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 83,
-      "popularity": 7
+      "popularity": 97
     },
     {
       "slot": "neck",
@@ -523,7 +547,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 83,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "chest",
@@ -540,7 +564,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "chest",
@@ -558,7 +582,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "wrist",
@@ -572,7 +596,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 43,
       "popularity": 83
     },
     {
@@ -634,8 +658,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 50
+      "statPriorityFit": 83,
+      "popularity": 43
     },
     {
       "slot": "waist",
@@ -653,7 +677,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 23
+      "popularity": 30
     },
     {
       "slot": "legs",
@@ -670,7 +694,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 36,
-      "popularity": 80
+      "popularity": 77
     },
     {
       "slot": "legs",
@@ -688,7 +712,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 76,
-      "popularity": 20
+      "popularity": 23
     },
     {
       "slot": "feet",
@@ -702,8 +726,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 33
+      "statPriorityFit": 43,
+      "popularity": 37
     },
     {
       "slot": "feet",
@@ -768,7 +792,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
+      "statPriorityFit": 83,
       "popularity": 37
     },
     {
@@ -802,7 +826,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 83
+      "popularity": 90
     },
     {
       "slot": "trinket",
@@ -820,7 +844,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 17
+      "popularity": 10
     },
     {
       "slot": "main_hand",
@@ -852,8 +876,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 80
+      "statPriorityFit": 70,
+      "popularity": 83
     },
     {
       "slot": "off_hand",
@@ -878,12 +902,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-10"
+      "collectedAt": "2026-11-18"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-10"
+      "collectedAt": "2026-11-18"
     }
   }
 }

@@ -25,22 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 90
-    },
-    {
-      "slot": "head",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 237832,
-      "itemName": "Spellbreaker's Cover",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 70,
-      "popularity": 7
+      "popularity": 97
     },
     {
       "slot": "neck",
@@ -75,7 +60,22 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 97
+      "popularity": 93
+    },
+    {
+      "slot": "shoulder",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 237835,
+      "itemName": "Spellbreaker's Mantle",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 30,
+      "popularity": 7
     },
     {
       "slot": "back",
@@ -93,7 +93,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 53
+      "popularity": 60
     },
     {
       "slot": "back",
@@ -108,7 +108,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 27
+      "popularity": 20
     },
     {
       "slot": "chest",
@@ -125,7 +125,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 45,
-      "popularity": 97
+      "popularity": 93
     },
     {
       "slot": "wrist",
@@ -140,7 +140,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 83,
-      "popularity": 77
+      "popularity": 67
     },
     {
       "slot": "wrist",
@@ -158,7 +158,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 17
+      "popularity": 20
     },
     {
       "slot": "hands",
@@ -175,7 +175,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 35,
-      "popularity": 53
+      "popularity": 63
     },
     {
       "slot": "hands",
@@ -190,7 +190,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 70,
-      "popularity": 43
+      "popularity": 37
     },
     {
       "slot": "waist",
@@ -208,25 +208,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 53
+      "popularity": 60
     },
     {
       "slot": "waist",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268244,
-      "itemName": "Forgotten Grotto Girdle",
+      "itemId": 271445,
+      "itemName": "Fanged Brute's Greatbelt",
       "itemLevel": 318,
       "source": {
-        "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
-        "difficulty": "mythic"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 82,
-      "popularity": 17
+      "statPriorityFit": 36,
+      "popularity": 13
     },
     {
       "slot": "legs",
@@ -243,7 +240,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 87
+      "popularity": 80
     },
     {
       "slot": "legs",
@@ -261,12 +258,27 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 65,
-      "popularity": 13
+      "popularity": 20
     },
     {
       "slot": "feet",
       "contentType": "raid",
       "rank": 1,
+      "itemId": 237828,
+      "itemName": "Spellbreaker's March",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 43,
+      "popularity": 40
+    },
+    {
+      "slot": "feet",
+      "contentType": "raid",
+      "rank": 2,
       "itemId": 268260,
       "itemName": "Scaled Fiend's Warboots",
       "itemLevel": 318,
@@ -279,22 +291,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 45,
-      "popularity": 43
-    },
-    {
-      "slot": "feet",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 237828,
-      "itemName": "Spellbreaker's March",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 30
+      "popularity": 37
     },
     {
       "slot": "finger",
@@ -309,7 +306,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 42,
-      "popularity": 57
+      "popularity": 50
     },
     {
       "slot": "finger",
@@ -323,7 +320,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
+      "statPriorityFit": 60,
       "popularity": 43
     },
     {
@@ -342,7 +339,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 33
+      "popularity": 37
     },
     {
       "slot": "trinket",
@@ -378,7 +375,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 57
+      "popularity": 53
     },
     {
       "slot": "trinket",
@@ -396,7 +393,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 30
+      "popularity": 40
     },
     {
       "slot": "main_hand",
@@ -414,7 +411,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 74,
-      "popularity": 60
+      "popularity": 70
     },
     {
       "slot": "main_hand",
@@ -429,7 +426,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 40,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "off_hand",
@@ -447,7 +444,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 57
+      "popularity": 53
     },
     {
       "slot": "off_hand",
@@ -465,7 +462,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 20
+      "popularity": 30
     },
     {
       "slot": "head",
@@ -482,21 +479,21 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "head",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 281239,
-      "itemName": "Corroded Hulk's Skullcap",
-      "itemLevel": 311,
+      "itemId": 237832,
+      "itemName": "Spellbreaker's Cover",
+      "itemLevel": 331,
       "source": {
-        "type": "other"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 44,
+      "statPriorityFit": 83,
       "popularity": 7
     },
     {
@@ -547,7 +544,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 33
+      "popularity": 40
     },
     {
       "slot": "back",
@@ -565,7 +562,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 33
+      "popularity": 40
     },
     {
       "slot": "chest",
@@ -582,7 +579,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 45,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "chest",
@@ -596,7 +593,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
+      "statPriorityFit": 43,
       "popularity": 10
     },
     {
@@ -612,7 +609,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 83,
-      "popularity": 73
+      "popularity": 77
     },
     {
       "slot": "wrist",
@@ -647,7 +644,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 35,
-      "popularity": 57
+      "popularity": 53
     },
     {
       "slot": "hands",
@@ -662,7 +659,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 70,
-      "popularity": 37
+      "popularity": 40
     },
     {
       "slot": "waist",
@@ -715,27 +712,30 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 97
+      "popularity": 93
+    },
+    {
+      "slot": "legs",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 271878,
+      "itemName": "Chausses of Unbound Rancor",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Ula'tek",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 65,
+      "popularity": 7
     },
     {
       "slot": "feet",
       "contentType": "mythic-plus",
       "rank": 1,
-      "itemId": 237828,
-      "itemName": "Spellbreaker's March",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 47
-    },
-    {
-      "slot": "feet",
-      "contentType": "mythic-plus",
-      "rank": 2,
       "itemId": 268245,
       "itemName": "Entombed Cultist's Sabatons",
       "itemLevel": 318,
@@ -748,27 +748,27 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 27
+      "popularity": 30
     },
     {
-      "slot": "finger",
+      "slot": "feet",
       "contentType": "mythic-plus",
-      "rank": 1,
-      "itemId": 240949,
-      "itemName": "Masterwork Sin'dorei Band",
+      "rank": 2,
+      "itemId": 237828,
+      "itemName": "Spellbreaker's March",
       "itemLevel": 331,
       "source": {
         "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 67
+      "statPriorityFit": 43,
+      "popularity": 27
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
-      "rank": 2,
+      "rank": 1,
       "itemId": 268266,
       "itemName": "Alluring Bubbleband",
       "itemLevel": 318,
@@ -781,6 +781,21 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
+      "popularity": 67
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 240949,
+      "itemName": "Masterwork Sin'dorei Band",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 60,
       "popularity": 63
     },
     {
@@ -796,7 +811,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 42,
-      "popularity": 23
+      "popularity": 30
     },
     {
       "slot": "trinket",
@@ -814,7 +829,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 100
+      "popularity": 97
     },
     {
       "slot": "trinket",
@@ -832,7 +847,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 40
+      "popularity": 50
     },
     {
       "slot": "trinket",
@@ -850,7 +865,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 27
+      "popularity": 20
     },
     {
       "slot": "main_hand",
@@ -868,25 +883,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 74,
-      "popularity": 53
+      "popularity": 60
     },
     {
       "slot": "main_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268210,
-      "itemName": "Malevolent Spiritcudgel",
-      "itemLevel": 318,
+      "itemId": 281056,
+      "itemName": "Sanctified Knight's Phoenixblade",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
-        "difficulty": "mythic"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 34,
-      "popularity": 20
+      "statPriorityFit": 40,
+      "popularity": 27
     },
     {
       "slot": "off_hand",
@@ -904,7 +916,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 47
+      "popularity": 50
     },
     {
       "slot": "off_hand",
@@ -929,12 +941,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-10"
+      "collectedAt": "2026-11-18"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-10"
+      "collectedAt": "2026-11-18"
     }
   }
 }

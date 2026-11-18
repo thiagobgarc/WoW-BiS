@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 100
+      "popularity": 97
     },
     {
       "slot": "neck",
@@ -43,7 +43,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "shoulder",
@@ -60,7 +60,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 61,
-      "popularity": 93
+      "popularity": 83
     },
     {
       "slot": "shoulder",
@@ -78,7 +78,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 76,
-      "popularity": 7
+      "popularity": 13
     },
     {
       "slot": "back",
@@ -96,7 +96,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 50
+      "popularity": 60
     },
     {
       "slot": "back",
@@ -114,7 +114,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 27
+      "popularity": 10
     },
     {
       "slot": "chest",
@@ -131,7 +131,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 97
+      "popularity": 93
+    },
+    {
+      "slot": "chest",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271876,
+      "itemName": "Awoken Dreadfang Cuirass",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Ula'tek",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 65,
+      "popularity": 7
     },
     {
       "slot": "wrist",
@@ -145,8 +163,23 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 87
+      "statPriorityFit": 30,
+      "popularity": 90
+    },
+    {
+      "slot": "wrist",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 272254,
+      "itemName": "Galerider's Mesh Wraps",
+      "itemLevel": 318,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 77,
+      "popularity": 7
     },
     {
       "slot": "hands",
@@ -163,7 +196,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 33,
-      "popularity": 87
+      "popularity": 93
     },
     {
       "slot": "hands",
@@ -178,7 +211,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 89,
-      "popularity": 13
+      "popularity": 7
     },
     {
       "slot": "waist",
@@ -192,8 +225,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 87
+      "statPriorityFit": 53,
+      "popularity": 90
     },
     {
       "slot": "waist",
@@ -211,7 +244,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "legs",
@@ -228,21 +261,24 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 70
+      "popularity": 73
     },
     {
       "slot": "legs",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 244582,
-      "itemName": "Farstrider's Reinforced Faulds",
-      "itemLevel": 331,
+      "itemId": 268237,
+      "itemName": "Cuisses of the Uncoiled Union",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
+      "statPriorityFit": 48,
       "popularity": 17
     },
     {
@@ -261,7 +297,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 33
+      "popularity": 40
     },
     {
       "slot": "feet",
@@ -275,7 +311,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
+      "statPriorityFit": 30,
       "popularity": 10
     },
     {
@@ -291,7 +327,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 90
+      "popularity": 97
     },
     {
       "slot": "finger",
@@ -309,7 +345,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 43
+      "popularity": 40
     },
     {
       "slot": "finger",
@@ -324,7 +360,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 71,
-      "popularity": 33
+      "popularity": 30
     },
     {
       "slot": "trinket",
@@ -360,7 +396,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 80
+      "popularity": 87
     },
     {
       "slot": "trinket",
@@ -393,7 +429,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "head",
@@ -410,7 +446,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "head",
@@ -424,7 +460,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
+      "statPriorityFit": 60,
       "popularity": 7
     },
     {
@@ -524,7 +560,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
+      "statPriorityFit": 30,
       "popularity": 90
     },
     {
@@ -571,26 +607,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 70
+      "statPriorityFit": 53,
+      "popularity": 63
     },
     {
       "slot": "waist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 251228,
-      "itemName": "Behemoth Waistband",
-      "itemLevel": 311,
+      "itemId": 268216,
+      "itemName": "Cursed Reliquary Cincture",
+      "itemLevel": 318,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Voidscar Arena",
-        "boss": "Atroxus",
-        "keyLevel": 10
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Nek'zali the Soulcoiler",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 50,
-      "popularity": 7
+      "statPriorityFit": 75,
+      "popularity": 13
     },
     {
       "slot": "legs",
@@ -607,7 +643,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 53
+      "popularity": 50
     },
     {
       "slot": "legs",
@@ -622,7 +658,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 43,
-      "popularity": 37
+      "popularity": 40
     },
     {
       "slot": "feet",
@@ -646,15 +682,15 @@
       "slot": "feet",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 244577,
-      "itemName": "Farstrider's Razor Talons",
-      "itemLevel": 331,
+      "itemId": 271440,
+      "itemName": "Greaves of the Noxious Depths",
+      "itemLevel": 311,
       "source": {
-        "type": "crafted"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
+      "statPriorityFit": 57,
       "popularity": 13
     },
     {
@@ -670,7 +706,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "finger",
@@ -684,8 +720,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 37
+      "statPriorityFit": 53,
+      "popularity": 33
     },
     {
       "slot": "finger",
@@ -703,7 +739,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 23
+      "popularity": 30
     },
     {
       "slot": "trinket",
@@ -736,7 +772,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 77
+      "popularity": 70
     },
     {
       "slot": "trinket",
@@ -754,7 +790,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 20
+      "popularity": 27
     },
     {
       "slot": "main_hand",
@@ -779,12 +815,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-10"
+      "collectedAt": "2026-11-18"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-10"
+      "collectedAt": "2026-11-18"
     }
   }
 }

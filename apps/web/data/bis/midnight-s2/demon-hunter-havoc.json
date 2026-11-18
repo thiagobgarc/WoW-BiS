@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "neck",
@@ -96,7 +96,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 57
+      "popularity": 67
     },
     {
       "slot": "back",
@@ -111,7 +111,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 53,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "chest",
@@ -128,7 +128,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 77
+      "popularity": 73
     },
     {
       "slot": "chest",
@@ -143,7 +143,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 57,
-      "popularity": 20
+      "popularity": 23
     },
     {
       "slot": "wrist",
@@ -157,7 +157,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 83,
       "popularity": 73
     },
     {
@@ -176,7 +176,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "hands",
@@ -193,7 +193,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 100
+      "popularity": 97
     },
     {
       "slot": "waist",
@@ -211,7 +211,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 50
+      "popularity": 53
     },
     {
       "slot": "waist",
@@ -225,7 +225,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 59,
+      "statPriorityFit": 51,
       "popularity": 13
     },
     {
@@ -243,7 +243,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 90
+      "popularity": 83
     },
     {
       "slot": "legs",
@@ -261,7 +261,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 57,
-      "popularity": 7
+      "popularity": 13
     },
     {
       "slot": "feet",
@@ -275,8 +275,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 50
+      "statPriorityFit": 43,
+      "popularity": 57
     },
     {
       "slot": "feet",
@@ -294,7 +294,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 17
+      "popularity": 20
     },
     {
       "slot": "finger",
@@ -308,8 +308,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 57
+      "statPriorityFit": 53,
+      "popularity": 50
     },
     {
       "slot": "finger",
@@ -342,7 +342,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 30
+      "popularity": 37
     },
     {
       "slot": "trinket",
@@ -360,7 +360,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 100
+      "popularity": 93
     },
     {
       "slot": "trinket",
@@ -393,7 +393,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 23
+      "popularity": 27
     },
     {
       "slot": "main_hand",
@@ -411,7 +411,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 100
+      "popularity": 97
     },
     {
       "slot": "off_hand",
@@ -425,7 +425,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 60,
       "popularity": 90
     },
     {
@@ -444,7 +444,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 7
+      "popularity": 10
     },
     {
       "slot": "head",
@@ -479,7 +479,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "shoulder",
@@ -496,7 +496,22 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 93
+      "popularity": 90
+    },
+    {
+      "slot": "shoulder",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 244572,
+      "itemName": "Silvermoon Agent's Mantle",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 30,
+      "popularity": 7
     },
     {
       "slot": "back",
@@ -514,7 +529,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 43
+      "popularity": 47
     },
     {
       "slot": "back",
@@ -529,7 +544,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 53,
-      "popularity": 33
+      "popularity": 30
     },
     {
       "slot": "chest",
@@ -546,7 +561,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "chest",
@@ -575,8 +590,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 73
+      "statPriorityFit": 83,
+      "popularity": 77
     },
     {
       "slot": "hands",
@@ -593,7 +608,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "hands",
@@ -607,8 +622,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 70,
-      "popularity": 7
+      "statPriorityFit": 30,
+      "popularity": 10
     },
     {
       "slot": "waist",
@@ -626,7 +641,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 37
+      "popularity": 40
     },
     {
       "slot": "waist",
@@ -644,7 +659,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 27
+      "popularity": 23
     },
     {
       "slot": "legs",
@@ -661,7 +676,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "legs",
@@ -693,8 +708,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 47
+      "statPriorityFit": 43,
+      "popularity": 43
     },
     {
       "slot": "feet",
@@ -712,7 +727,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 20
+      "popularity": 23
     },
     {
       "slot": "finger",
@@ -759,8 +774,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 33
+      "statPriorityFit": 53,
+      "popularity": 37
     },
     {
       "slot": "trinket",
@@ -778,7 +793,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "trinket",
@@ -793,7 +808,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 60
+      "popularity": 63
     },
     {
       "slot": "trinket",
@@ -811,7 +826,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 33
+      "popularity": 27
     },
     {
       "slot": "main_hand",
@@ -829,7 +844,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 100
+      "popularity": 97
     },
     {
       "slot": "off_hand",
@@ -843,7 +858,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 60,
       "popularity": 87
     },
     {
@@ -869,12 +884,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-10"
+      "collectedAt": "2026-11-18"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-10"
+      "collectedAt": "2026-11-18"
     }
   }
 }

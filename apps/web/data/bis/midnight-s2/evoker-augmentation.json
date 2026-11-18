@@ -25,22 +25,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 33,
-      "popularity": 87
+      "popularity": 80
     },
     {
       "slot": "head",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 271441,
-      "itemName": "Crushing Coiler Coif",
+      "itemId": 268230,
+      "itemName": "Crown of the Eternal Fang",
       "itemLevel": 318,
       "source": {
-        "type": "other"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Nek'zali the Soulcoiler",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 36,
-      "popularity": 7
+      "statPriorityFit": 76,
+      "popularity": 10
     },
     {
       "slot": "neck",
@@ -58,7 +61,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 87
+      "popularity": 80
     },
     {
       "slot": "neck",
@@ -76,7 +79,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 91,
-      "popularity": 13
+      "popularity": 17
     },
     {
       "slot": "shoulder",
@@ -93,25 +96,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 51,
-      "popularity": 93
-    },
-    {
-      "slot": "shoulder",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 268231,
-      "itemName": "Soulslither Spaulders",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Coiled Altar",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 89,
-      "popularity": 7
+      "popularity": 97
     },
     {
       "slot": "back",
@@ -129,7 +114,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 43
+      "popularity": 57
     },
     {
       "slot": "back",
@@ -161,25 +146,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 93
-    },
-    {
-      "slot": "chest",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 271876,
-      "itemName": "Awoken Dreadfang Cuirass",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 100,
-      "popularity": 7
+      "popularity": 97
     },
     {
       "slot": "wrist",
@@ -193,8 +160,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 87
+      "statPriorityFit": 30,
+      "popularity": 83
     },
     {
       "slot": "wrist",
@@ -212,7 +179,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 7
+      "popularity": 13
     },
     {
       "slot": "hands",
@@ -229,7 +196,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 61,
-      "popularity": 87
+      "popularity": 83
     },
     {
       "slot": "hands",
@@ -244,7 +211,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 76,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "waist",
@@ -258,8 +225,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 50
+      "statPriorityFit": 70,
+      "popularity": 60
     },
     {
       "slot": "waist",
@@ -277,7 +244,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 33
+      "popularity": 27
     },
     {
       "slot": "legs",
@@ -294,22 +261,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 87
-    },
-    {
-      "slot": "legs",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 244582,
-      "itemName": "Farstrider's Reinforced Faulds",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 10
+      "popularity": 100
     },
     {
       "slot": "feet",
@@ -378,21 +330,24 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 94,
-      "popularity": 73
+      "popularity": 63
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 240949,
-      "itemName": "Masterwork Sin'dorei Band",
-      "itemLevel": 331,
+      "itemId": 268252,
+      "itemName": "Apex Brute's Claw Ring",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Sszorak",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
+      "statPriorityFit": 61,
       "popularity": 17
     },
     {
@@ -411,7 +366,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "trinket",
@@ -426,7 +381,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 67
+      "popularity": 77
     },
     {
       "slot": "trinket",
@@ -462,7 +417,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 40,
-      "popularity": 80
+      "popularity": 90
     },
     {
       "slot": "main_hand",
@@ -498,7 +453,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 37
+      "popularity": 40
     },
     {
       "slot": "off_hand",
@@ -516,7 +471,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 30
+      "popularity": 33
     },
     {
       "slot": "head",
@@ -533,22 +488,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 33,
-      "popularity": 87
-    },
-    {
-      "slot": "head",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 244579,
-      "itemName": "Farstrider's Unwavering Visage",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 70,
-      "popularity": 7
+      "popularity": 93
     },
     {
       "slot": "neck",
@@ -566,7 +506,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 83
+      "popularity": 87
     },
     {
       "slot": "neck",
@@ -584,7 +524,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 91,
-      "popularity": 13
+      "popularity": 7
     },
     {
       "slot": "shoulder",
@@ -601,7 +541,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 51,
-      "popularity": 80
+      "popularity": 87
     },
     {
       "slot": "shoulder",
@@ -619,7 +559,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 89,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "back",
@@ -634,7 +574,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 70,
-      "popularity": 30
+      "popularity": 37
     },
     {
       "slot": "back",
@@ -652,7 +592,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 27
+      "popularity": 33
     },
     {
       "slot": "chest",
@@ -701,8 +641,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 83
+      "statPriorityFit": 30,
+      "popularity": 80
     },
     {
       "slot": "wrist",
@@ -720,7 +660,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 7
+      "popularity": 10
     },
     {
       "slot": "hands",
@@ -737,22 +677,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 61,
-      "popularity": 90
-    },
-    {
-      "slot": "hands",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 281238,
-      "itemName": "Aberrant Commander's Gauntlets",
-      "itemLevel": 311,
-      "source": {
-        "type": "other"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 76,
-      "popularity": 7
+      "popularity": 93
     },
     {
       "slot": "waist",
@@ -766,7 +691,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
+      "statPriorityFit": 70,
       "popularity": 53
     },
     {
@@ -785,7 +710,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 27
+      "popularity": 33
     },
     {
       "slot": "legs",
@@ -802,7 +727,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 77
+      "popularity": 63
     },
     {
       "slot": "legs",
@@ -817,7 +742,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 60,
-      "popularity": 20
+      "popularity": 30
     },
     {
       "slot": "feet",
@@ -835,7 +760,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 27
+      "popularity": 33
     },
     {
       "slot": "feet",
@@ -853,7 +778,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 20
+      "popularity": 17
     },
     {
       "slot": "finger",
@@ -886,7 +811,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 94,
-      "popularity": 60
+      "popularity": 67
     },
     {
       "slot": "finger",
@@ -900,8 +825,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 27
+      "statPriorityFit": 70,
+      "popularity": 17
     },
     {
       "slot": "trinket",
@@ -934,7 +859,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 63
+      "popularity": 67
     },
     {
       "slot": "trinket",
@@ -999,7 +924,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 30,
       "popularity": 37
     },
     {
@@ -1025,12 +950,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-10"
+      "collectedAt": "2026-11-18"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-10"
+      "collectedAt": "2026-11-18"
     }
   }
 }

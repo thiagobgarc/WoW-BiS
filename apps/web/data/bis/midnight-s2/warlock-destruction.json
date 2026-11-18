@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 80
+      "popularity": 77
     },
     {
       "slot": "head",
@@ -43,7 +43,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 40,
-      "popularity": 17
+      "popularity": 23
     },
     {
       "slot": "neck",
@@ -108,7 +108,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 53,
-      "popularity": 53
+      "popularity": 40
     },
     {
       "slot": "back",
@@ -126,7 +126,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 17
+      "popularity": 23
     },
     {
       "slot": "chest",
@@ -143,22 +143,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 90
-    },
-    {
-      "slot": "chest",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 239655,
-      "itemName": "Martyr's Vestments",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 83,
-      "popularity": 7
+      "popularity": 100
     },
     {
       "slot": "wrist",
@@ -172,7 +157,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 60,
       "popularity": 57
     },
     {
@@ -191,7 +176,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 61,
-      "popularity": 13
+      "popularity": 17
     },
     {
       "slot": "hands",
@@ -208,22 +193,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 77
+      "popularity": 73
     },
     {
       "slot": "hands",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 239653,
-      "itemName": "Martyr's Gloves",
-      "itemLevel": 331,
+      "itemId": 268243,
+      "itemName": "Grasps of the Eternal Shadow",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 83,
-      "popularity": 10
+      "statPriorityFit": 76,
+      "popularity": 13
     },
     {
       "slot": "waist",
@@ -237,26 +225,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 40
+      "statPriorityFit": 30,
+      "popularity": 37
     },
     {
       "slot": "waist",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268232,
-      "itemName": "Cincture of the Abyssal Grotto",
+      "itemId": 268257,
+      "itemName": "Caustic Chain-Wrapped Sash",
       "itemLevel": 318,
       "source": {
         "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
+        "instance": "The Venomous Abyss",
+        "boss": "Sszorak",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 77,
-      "popularity": 20
+      "statPriorityFit": 57,
+      "popularity": 23
     },
     {
       "slot": "legs",
@@ -273,7 +261,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 87
+      "popularity": 80
     },
     {
       "slot": "legs",
@@ -288,7 +276,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 58,
-      "popularity": 10
+      "popularity": 17
     },
     {
       "slot": "feet",
@@ -306,7 +294,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 33
+      "popularity": 27
     },
     {
       "slot": "feet",
@@ -324,7 +312,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 17
+      "popularity": 23
     },
     {
       "slot": "finger",
@@ -357,7 +345,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 94,
-      "popularity": 50
+      "popularity": 63
     },
     {
       "slot": "finger",
@@ -371,8 +359,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 30
+      "statPriorityFit": 53,
+      "popularity": 33
     },
     {
       "slot": "trinket",
@@ -390,7 +378,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "trinket",
@@ -405,7 +393,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "trinket",
@@ -423,7 +411,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 13
+      "popularity": 7
     },
     {
       "slot": "main_hand",
@@ -455,26 +443,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 50
+      "statPriorityFit": 43,
+      "popularity": 63
     },
     {
       "slot": "off_hand",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268263,
-      "itemName": "Frostscale's Mystic Frond",
+      "itemId": 268197,
+      "itemName": "Spine of the Hissing Abyss",
       "itemLevel": 318,
       "source": {
         "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
+        "instance": "The Venomous Abyss",
+        "boss": "Entombed Sentinels",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 80,
-      "popularity": 20
+      "statPriorityFit": 48,
+      "popularity": 17
     },
     {
       "slot": "head",
@@ -527,7 +515,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "shoulder",
@@ -574,25 +562,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 53,
-      "popularity": 40
+      "popularity": 43
     },
     {
       "slot": "back",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268248,
-      "itemName": "Amani Summoning Shawl",
+      "itemId": 268253,
+      "itemName": "Silken Voodoo Drape",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
+        "boss": "The Coiled Altar",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 76,
-      "popularity": 10
+      "statPriorityFit": 48,
+      "popularity": 13
     },
     {
       "slot": "chest",
@@ -609,7 +597,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 100
+      "popularity": 97
     },
     {
       "slot": "wrist",
@@ -623,26 +611,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 80
-    },
-    {
-      "slot": "wrist",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 268228,
-      "itemName": "Venom-Singed Cuffs",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Entombed Sentinels",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 61,
-      "popularity": 7
+      "statPriorityFit": 60,
+      "popularity": 87
     },
     {
       "slot": "hands",
@@ -673,7 +643,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 83,
+      "statPriorityFit": 70,
       "popularity": 17
     },
     {
@@ -688,26 +658,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 63
+      "statPriorityFit": 30,
+      "popularity": 60
     },
     {
       "slot": "waist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268232,
-      "itemName": "Cincture of the Abyssal Grotto",
+      "itemId": 268257,
+      "itemName": "Caustic Chain-Wrapped Sash",
       "itemLevel": 318,
       "source": {
         "type": "raid",
-        "instance": "The Tidebound Grotto",
-        "boss": "Nymrissa Wavecaller",
+        "instance": "The Venomous Abyss",
+        "boss": "Sszorak",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 77,
-      "popularity": 13
+      "statPriorityFit": 57,
+      "popularity": 20
     },
     {
       "slot": "legs",
@@ -724,7 +694,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "legs",
@@ -739,7 +709,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 58,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "feet",
@@ -763,18 +733,15 @@
       "slot": "feet",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 159259,
-      "itemName": "Sandswept Sandals",
+      "itemId": 272232,
+      "itemName": "Pyrewalker's Buskins",
       "itemLevel": 311,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Temple of Sethraliss",
-        "boss": "Adderis and Aspix",
-        "keyLevel": 10
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 87,
+      "statPriorityFit": 77,
       "popularity": 10
     },
     {
@@ -790,7 +757,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 77
+      "popularity": 80
     },
     {
       "slot": "finger",
@@ -826,12 +793,27 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 78,
-      "popularity": 27
+      "popularity": 20
     },
     {
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 1,
+      "itemId": 281215,
+      "itemName": "Twisted Horror's Tendril",
+      "itemLevel": 311,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 50,
+      "popularity": 93
+    },
+    {
+      "slot": "trinket",
+      "contentType": "mythic-plus",
+      "rank": 2,
       "itemId": 270164,
       "itemName": "Gebbo's Bottomless Bag",
       "itemLevel": 318,
@@ -840,21 +822,6 @@
         "instance": "The Venomous Abyss",
         "boss": "The Lost Explorers",
         "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 50,
-      "popularity": 90
-    },
-    {
-      "slot": "trinket",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 281215,
-      "itemName": "Twisted Horror's Tendril",
-      "itemLevel": 311,
-      "source": {
-        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
@@ -877,7 +844,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 13
+      "popularity": 10
     },
     {
       "slot": "main_hand",
@@ -895,7 +862,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "off_hand",
@@ -909,8 +876,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 53
+      "statPriorityFit": 43,
+      "popularity": 57
     },
     {
       "slot": "off_hand",
@@ -928,19 +895,19 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 80,
-      "popularity": 27
+      "popularity": 23
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-10"
+      "collectedAt": "2026-11-18"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-10"
+      "collectedAt": "2026-11-18"
     }
   }
 }

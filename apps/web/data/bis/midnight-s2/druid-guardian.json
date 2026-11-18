@@ -78,7 +78,22 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 97
+      "popularity": 93
+    },
+    {
+      "slot": "shoulder",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 244572,
+      "itemName": "Silvermoon Agent's Mantle",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 60,
+      "popularity": 7
     },
     {
       "slot": "back",
@@ -96,7 +111,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 47
+      "popularity": 60
     },
     {
       "slot": "back",
@@ -111,7 +126,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 70,
-      "popularity": 33
+      "popularity": 27
     },
     {
       "slot": "chest",
@@ -142,8 +157,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 97
+      "statPriorityFit": 53,
+      "popularity": 100
     },
     {
       "slot": "hands",
@@ -160,7 +175,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 26,
-      "popularity": 80
+      "popularity": 73
     },
     {
       "slot": "hands",
@@ -174,8 +189,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 83,
-      "popularity": 20
+      "statPriorityFit": 60,
+      "popularity": 27
     },
     {
       "slot": "waist",
@@ -193,25 +208,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 59,
-      "popularity": 47
+      "popularity": 60
     },
     {
       "slot": "waist",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268227,
-      "itemName": "Unpossessed Skullsash",
-      "itemLevel": 318,
+      "itemId": 244573,
+      "itemName": "Silvermoon Agent's Utility Belt",
+      "itemLevel": 331,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
-        "difficulty": "mythic"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 58,
-      "popularity": 20
+      "statPriorityFit": 43,
+      "popularity": 10
     },
     {
       "slot": "legs",
@@ -242,8 +254,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
-      "popularity": 20
+      "statPriorityFit": 43,
+      "popularity": 13
     },
     {
       "slot": "feet",
@@ -257,8 +269,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 53
+      "statPriorityFit": 30,
+      "popularity": 47
     },
     {
       "slot": "feet",
@@ -276,7 +288,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 72,
-      "popularity": 17
+      "popularity": 20
     },
     {
       "slot": "finger",
@@ -291,7 +303,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 87
+      "popularity": 93
     },
     {
       "slot": "finger",
@@ -309,7 +321,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 71,
-      "popularity": 47
+      "popularity": 40
     },
     {
       "slot": "finger",
@@ -345,7 +357,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 87
+      "popularity": 83
     },
     {
       "slot": "trinket",
@@ -360,7 +372,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 57
+      "popularity": 63
     },
     {
       "slot": "trinket",
@@ -378,7 +390,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 43
+      "popularity": 37
     },
     {
       "slot": "main_hand",
@@ -396,7 +408,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 40,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "head",
@@ -469,6 +481,21 @@
       "popularity": 93
     },
     {
+      "slot": "shoulder",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 244572,
+      "itemName": "Silvermoon Agent's Mantle",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 60,
+      "popularity": 7
+    },
+    {
       "slot": "back",
       "contentType": "mythic-plus",
       "rank": 1,
@@ -481,7 +508,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 70,
-      "popularity": 73
+      "popularity": 60
     },
     {
       "slot": "back",
@@ -499,7 +526,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 13
+      "popularity": 33
     },
     {
       "slot": "chest",
@@ -516,7 +543,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 83
+      "popularity": 80
     },
     {
       "slot": "chest",
@@ -531,7 +558,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 90,
-      "popularity": 17
+      "popularity": 20
     },
     {
       "slot": "wrist",
@@ -545,8 +572,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 83
+      "statPriorityFit": 53,
+      "popularity": 80
     },
     {
       "slot": "wrist",
@@ -564,7 +591,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "hands",
@@ -581,7 +608,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 26,
-      "popularity": 73
+      "popularity": 83
     },
     {
       "slot": "hands",
@@ -595,8 +622,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 83,
-      "popularity": 23
+      "statPriorityFit": 60,
+      "popularity": 17
     },
     {
       "slot": "waist",
@@ -610,25 +637,25 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 89,
-      "popularity": 43
+      "statPriorityFit": 34,
+      "popularity": 40
     },
     {
       "slot": "waist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268227,
-      "itemName": "Unpossessed Skullsash",
+      "itemId": 268256,
+      "itemName": "Sash of the Forlorn Vessel",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
+        "boss": "The Coiled Altar",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 58,
+      "statPriorityFit": 59,
       "popularity": 17
     },
     {
@@ -660,7 +687,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
+      "statPriorityFit": 43,
       "popularity": 27
     },
     {
@@ -675,7 +702,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
+      "statPriorityFit": 30,
       "popularity": 50
     },
     {
@@ -733,16 +760,19 @@
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 240949,
-      "itemName": "Masterwork Sin'dorei Band",
-      "itemLevel": 331,
+      "itemId": 268252,
+      "itemName": "Apex Brute's Claw Ring",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Sszorak",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 30
+      "statPriorityFit": 71,
+      "popularity": 33
     },
     {
       "slot": "trinket",
@@ -757,7 +787,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "trinket",
@@ -818,12 +848,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-10"
+      "collectedAt": "2026-11-18"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-10"
+      "collectedAt": "2026-11-18"
     }
   }
 }

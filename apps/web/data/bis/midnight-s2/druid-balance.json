@@ -25,7 +25,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 97
+      "popularity": 90
+    },
+    {
+      "slot": "head",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 271875,
+      "itemName": "Gaze of the Coiled Watcher",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Ula'tek",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 65,
+      "popularity": 10
     },
     {
       "slot": "neck",
@@ -60,7 +78,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 59,
-      "popularity": 100
+      "popularity": 97
     },
     {
       "slot": "back",
@@ -78,7 +96,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 40
+      "popularity": 70
     },
     {
       "slot": "back",
@@ -93,7 +111,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 83,
-      "popularity": 27
+      "popularity": 7
     },
     {
       "slot": "chest",
@@ -139,8 +157,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 63
+      "statPriorityFit": 70,
+      "popularity": 70
     },
     {
       "slot": "wrist",
@@ -158,7 +176,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 30
+      "popularity": 23
     },
     {
       "slot": "hands",
@@ -175,7 +193,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 44,
-      "popularity": 70
+      "popularity": 77
     },
     {
       "slot": "hands",
@@ -189,8 +207,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
-      "popularity": 20
+      "statPriorityFit": 43,
+      "popularity": 17
     },
     {
       "slot": "waist",
@@ -208,7 +226,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 67
+      "popularity": 73
     },
     {
       "slot": "waist",
@@ -226,7 +244,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 13
+      "popularity": 7
     },
     {
       "slot": "legs",
@@ -243,7 +261,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 100
+      "popularity": 87
+    },
+    {
+      "slot": "legs",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268225,
+      "itemName": "Coiled Hex Legguards",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 89,
+      "popularity": 13
     },
     {
       "slot": "feet",
@@ -257,8 +293,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 40
+      "statPriorityFit": 60,
+      "popularity": 50
     },
     {
       "slot": "feet",
@@ -276,7 +312,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 30
+      "popularity": 23
     },
     {
       "slot": "finger",
@@ -309,7 +345,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 73
+      "popularity": 70
     },
     {
       "slot": "finger",
@@ -324,7 +360,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 13
+      "popularity": 23
     },
     {
       "slot": "trinket",
@@ -357,7 +393,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 47
+      "popularity": 37
     },
     {
       "slot": "trinket",
@@ -375,7 +411,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 33
+      "popularity": 37
     },
     {
       "slot": "main_hand",
@@ -393,7 +429,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "off_hand",
@@ -407,7 +443,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 43,
       "popularity": 87
     },
     {
@@ -426,7 +462,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 7
+      "popularity": 10
     },
     {
       "slot": "head",
@@ -443,7 +479,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 52,
-      "popularity": 97
+      "popularity": 93
+    },
+    {
+      "slot": "head",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 271875,
+      "itemName": "Gaze of the Coiled Watcher",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Ula'tek",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 65,
+      "popularity": 7
     },
     {
       "slot": "neck",
@@ -496,7 +550,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 43
+      "popularity": 40
     },
     {
       "slot": "back",
@@ -511,7 +565,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 83,
-      "popularity": 23
+      "popularity": 20
     },
     {
       "slot": "chest",
@@ -528,7 +582,22 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 97
+      "popularity": 93
+    },
+    {
+      "slot": "chest",
+      "contentType": "mythic-plus",
+      "rank": 2,
+      "itemId": 281236,
+      "itemName": "Chestwrap of Palpable Terror",
+      "itemLevel": 311,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 58,
+      "popularity": 7
     },
     {
       "slot": "wrist",
@@ -542,26 +611,23 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 67
+      "statPriorityFit": 70,
+      "popularity": 73
     },
     {
       "slot": "wrist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268240,
-      "itemName": "Restless Spirit Shackles",
-      "itemLevel": 318,
+      "itemId": 272246,
+      "itemName": "Miststalker's Wristbands",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Nek'zali the Soulcoiler",
-        "difficulty": "mythic"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 49,
-      "popularity": 17
+      "statPriorityFit": 61,
+      "popularity": 7
     },
     {
       "slot": "hands",
@@ -592,8 +658,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 53,
-      "popularity": 20
+      "statPriorityFit": 43,
+      "popularity": 17
     },
     {
       "slot": "waist",
@@ -611,7 +677,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 30
+      "popularity": 37
     },
     {
       "slot": "waist",
@@ -646,7 +712,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 80
+      "popularity": 87
     },
     {
       "slot": "legs",
@@ -664,7 +730,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 89,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "feet",
@@ -678,8 +744,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 63
+      "statPriorityFit": 60,
+      "popularity": 60
     },
     {
       "slot": "feet",
@@ -697,7 +763,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 13
+      "popularity": 10
     },
     {
       "slot": "finger",
@@ -730,22 +796,25 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 70
+      "popularity": 77
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 272149,
-      "itemName": "Hex Loop",
+      "itemId": 158366,
+      "itemName": "Charged Sandstone Band",
       "itemLevel": 311,
       "source": {
-        "type": "other"
+        "type": "dungeon",
+        "dungeon": "Temple of Sethraliss",
+        "boss": "Galvazzt",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 82,
-      "popularity": 10
+      "statPriorityFit": 66,
+      "popularity": 7
     },
     {
       "slot": "trinket",
@@ -760,7 +829,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "trinket",
@@ -778,24 +847,24 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 37
+      "popularity": 40
     },
     {
       "slot": "trinket",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 273796,
-      "itemName": "Vile Vial of Volatile Venom",
-      "itemLevel": 311,
+      "itemId": 270169,
+      "itemName": "Hex Lord's Dooming Idol",
+      "itemLevel": 318,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Altar of Fangs",
-        "boss": "Rav'i",
-        "keyLevel": 10
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 50,
+      "statPriorityFit": 65,
       "popularity": 27
     },
     {
@@ -814,7 +883,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "off_hand",
@@ -828,7 +897,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 43,
       "popularity": 67
     },
     {
@@ -847,19 +916,19 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 60,
-      "popularity": 13
+      "popularity": 10
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-10"
+      "collectedAt": "2026-11-18"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-10"
+      "collectedAt": "2026-11-18"
     }
   }
 }

@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 83
+      "popularity": 93
     },
     {
       "slot": "head",
@@ -40,7 +40,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 90,
-      "popularity": 10
+      "popularity": 7
     },
     {
       "slot": "neck",
@@ -58,7 +58,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "shoulder",
@@ -75,7 +75,22 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 97
+      "popularity": 90
+    },
+    {
+      "slot": "shoulder",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 237835,
+      "itemName": "Spellbreaker's Mantle",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 60,
+      "popularity": 10
     },
     {
       "slot": "back",
@@ -93,7 +108,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 70
+      "popularity": 80
     },
     {
       "slot": "back",
@@ -108,7 +123,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 83,
-      "popularity": 13
+      "popularity": 7
     },
     {
       "slot": "chest",
@@ -125,7 +140,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "wrist",
@@ -175,7 +190,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 81,
-      "popularity": 77
+      "popularity": 80
     },
     {
       "slot": "hands",
@@ -190,7 +205,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 43,
-      "popularity": 17
+      "popularity": 13
     },
     {
       "slot": "waist",
@@ -208,22 +223,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 77
-    },
-    {
-      "slot": "waist",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 271445,
-      "itemName": "Fanged Brute's Greatbelt",
-      "itemLevel": 318,
-      "source": {
-        "type": "other"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 56,
-      "popularity": 7
+      "popularity": 80
     },
     {
       "slot": "legs",
@@ -258,7 +258,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 53
+      "popularity": 57
     },
     {
       "slot": "feet",
@@ -272,28 +272,13 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
+      "statPriorityFit": 70,
       "popularity": 20
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 251513,
-      "itemName": "Loa Worshiper's Band",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 66,
-      "popularity": 87
-    },
-    {
-      "slot": "finger",
-      "contentType": "raid",
-      "rank": 2,
       "itemId": 281029,
       "itemName": "Band of the Swarmcaller",
       "itemLevel": 318,
@@ -303,22 +288,40 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 83
+      "popularity": 90
+    },
+    {
+      "slot": "finger",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 251513,
+      "itemName": "Loa Worshiper's Band",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 66,
+      "popularity": 90
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 272147,
-      "itemName": "Colubrine Band",
+      "itemId": 268249,
+      "itemName": "Vile Alchemist's Band",
       "itemLevel": 318,
       "source": {
-        "type": "other"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Vashnik the Malignant",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 76,
-      "popularity": 10
+      "statPriorityFit": 89,
+      "popularity": 7
     },
     {
       "slot": "trinket",
@@ -439,22 +442,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 90
-    },
-    {
-      "slot": "shoulder",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 237835,
-      "itemName": "Spellbreaker's Mantle",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 43,
-      "popularity": 7
+      "popularity": 93
     },
     {
       "slot": "back",
@@ -487,7 +475,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 83,
-      "popularity": 13
+      "popularity": 7
     },
     {
       "slot": "chest",
@@ -519,7 +507,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 53,
-      "popularity": 90
+      "popularity": 87
     },
     {
       "slot": "wrist",
@@ -537,7 +525,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 10
+      "popularity": 13
     },
     {
       "slot": "hands",
@@ -618,8 +606,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 60,
-      "popularity": 33
+      "statPriorityFit": 70,
+      "popularity": 37
     },
     {
       "slot": "feet",
@@ -637,7 +625,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 30
+      "popularity": 33
     },
     {
       "slot": "finger",
@@ -652,7 +640,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "finger",
@@ -667,7 +655,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 66,
-      "popularity": 60
+      "popularity": 63
     },
     {
       "slot": "finger",
@@ -700,7 +688,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 40,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "trinket",
@@ -718,7 +706,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "trinket",
@@ -751,19 +739,19 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 93
+      "popularity": 97
     }
   ],
   "samples": {
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-10"
+      "collectedAt": "2026-11-18"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-10"
+      "collectedAt": "2026-11-18"
     }
   }
 }

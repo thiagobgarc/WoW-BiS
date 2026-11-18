@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 93
+      "popularity": 87
     },
     {
       "slot": "head",
@@ -43,7 +43,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 65,
-      "popularity": 7
+      "popularity": 13
     },
     {
       "slot": "neck",
@@ -61,7 +61,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 97
+      "popularity": 100
     },
     {
       "slot": "shoulder",
@@ -84,21 +84,6 @@
       "slot": "back",
       "contentType": "raid",
       "rank": 1,
-      "itemId": 239656,
-      "itemName": "Adherent's Silken Shroud",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 37
-    },
-    {
-      "slot": "back",
-      "contentType": "raid",
-      "rank": 2,
       "itemId": 268253,
       "itemName": "Silken Voodoo Drape",
       "itemLevel": 318,
@@ -111,6 +96,21 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
+      "popularity": 43
+    },
+    {
+      "slot": "back",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 239656,
+      "itemName": "Adherent's Silken Shroud",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 83,
       "popularity": 33
     },
     {
@@ -143,7 +143,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 60,
-      "popularity": 47
+      "popularity": 40
     },
     {
       "slot": "wrist",
@@ -157,7 +157,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
+      "statPriorityFit": 30,
       "popularity": 90
     },
     {
@@ -176,7 +176,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 49,
-      "popularity": 7
+      "popularity": 10
     },
     {
       "slot": "hands",
@@ -193,7 +193,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 87
+      "popularity": 90
     },
     {
       "slot": "hands",
@@ -207,7 +207,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
+      "statPriorityFit": 43,
       "popularity": 10
     },
     {
@@ -226,7 +226,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 40
+      "popularity": 47
     },
     {
       "slot": "waist",
@@ -240,8 +240,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 23
+      "statPriorityFit": 53,
+      "popularity": 27
     },
     {
       "slot": "legs",
@@ -276,7 +276,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 57
+      "popularity": 60
     },
     {
       "slot": "feet",
@@ -312,7 +312,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 63
+      "popularity": 70
     },
     {
       "slot": "finger",
@@ -327,24 +327,21 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 75,
-      "popularity": 57
+      "popularity": 60
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 159459,
-      "itemName": "Ritual Binder's Ring",
-      "itemLevel": 311,
+      "itemId": 240949,
+      "itemName": "Masterwork Sin'dorei Band",
+      "itemLevel": 331,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Kings' Rest",
-        "boss": "Mchimba the Embalmer",
-        "keyLevel": 10
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 79,
+      "statPriorityFit": 83,
       "popularity": 27
     },
     {
@@ -363,7 +360,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 57
+      "popularity": 63
     },
     {
       "slot": "trinket",
@@ -399,7 +396,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 40
+      "popularity": 37
     },
     {
       "slot": "main_hand",
@@ -449,7 +446,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 70,
       "popularity": 83
     },
     {
@@ -485,25 +482,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 93
-    },
-    {
-      "slot": "head",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 271874,
-      "itemName": "Venomkeeper's Horrific Cowl",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Ula'tek",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 65,
-      "popularity": 7
+      "popularity": 97
     },
     {
       "slot": "neck",
@@ -538,25 +517,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 46,
-      "popularity": 87
-    },
-    {
-      "slot": "shoulder",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 268241,
-      "itemName": "Ornaments of the Eternal Coil",
-      "itemLevel": 318,
-      "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Twin Fangs",
-        "difficulty": "mythic"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 83,
-      "popularity": 7
+      "popularity": 90
     },
     {
       "slot": "back",
@@ -589,7 +550,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 17
+      "popularity": 20
     },
     {
       "slot": "chest",
@@ -635,8 +596,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 97
+      "statPriorityFit": 30,
+      "popularity": 93
     },
     {
       "slot": "hands",
@@ -653,7 +614,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 77
+      "popularity": 73
     },
     {
       "slot": "hands",
@@ -667,8 +628,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 23
+      "statPriorityFit": 43,
+      "popularity": 27
     },
     {
       "slot": "waist",
@@ -682,8 +643,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 50
+      "statPriorityFit": 53,
+      "popularity": 53
     },
     {
       "slot": "waist",
@@ -701,7 +662,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 27
+      "popularity": 23
     },
     {
       "slot": "legs",
@@ -718,7 +679,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 80
+      "popularity": 87
     },
     {
       "slot": "legs",
@@ -732,8 +693,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 17
+      "statPriorityFit": 70,
+      "popularity": 13
     },
     {
       "slot": "feet",
@@ -747,7 +708,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
+      "statPriorityFit": 53,
       "popularity": 37
     },
     {
@@ -766,7 +727,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 20
+      "popularity": 27
     },
     {
       "slot": "finger",
@@ -784,12 +745,27 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 87,
-      "popularity": 53
+      "popularity": 63
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 2,
+      "itemId": 281029,
+      "itemName": "Band of the Swarmcaller",
+      "itemLevel": 311,
+      "source": {
+        "type": "other"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 75,
+      "popularity": 47
+    },
+    {
+      "slot": "finger",
+      "contentType": "mythic-plus",
+      "rank": 3,
       "itemId": 159459,
       "itemName": "Ritual Binder's Ring",
       "itemLevel": 311,
@@ -802,22 +778,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 79,
-      "popularity": 53
-    },
-    {
-      "slot": "finger",
-      "contentType": "mythic-plus",
-      "rank": 3,
-      "itemId": 281029,
-      "itemName": "Band of the Swarmcaller",
-      "itemLevel": 311,
-      "source": {
-        "type": "other"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 75,
-      "popularity": 43
+      "popularity": 33
     },
     {
       "slot": "trinket",
@@ -835,7 +796,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 70
+      "popularity": 77
     },
     {
       "slot": "trinket",
@@ -853,7 +814,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 63
+      "popularity": 60
     },
     {
       "slot": "trinket",
@@ -889,7 +850,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 97
+      "popularity": 93
     },
     {
       "slot": "off_hand",
@@ -903,8 +864,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 80
+      "statPriorityFit": 70,
+      "popularity": 77
     },
     {
       "slot": "off_hand",
@@ -929,12 +890,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-10"
+      "collectedAt": "2026-11-18"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-10"
+      "collectedAt": "2026-11-18"
     }
   }
 }

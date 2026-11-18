@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "head",
@@ -43,7 +43,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 65,
-      "popularity": 7
+      "popularity": 10
     },
     {
       "slot": "neck",
@@ -81,6 +81,21 @@
       "popularity": 93
     },
     {
+      "slot": "shoulder",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 244572,
+      "itemName": "Silvermoon Agent's Mantle",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 53,
+      "popularity": 7
+    },
+    {
       "slot": "back",
       "contentType": "raid",
       "rank": 1,
@@ -102,16 +117,19 @@
       "slot": "back",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 239656,
-      "itemName": "Adherent's Silken Shroud",
-      "itemLevel": 331,
+      "itemId": 268248,
+      "itemName": "Amani Summoning Shawl",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "Nek'zali the Soulcoiler",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 20
+      "statPriorityFit": 82,
+      "popularity": 23
     },
     {
       "slot": "chest",
@@ -146,7 +164,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 40
+      "popularity": 43
     },
     {
       "slot": "wrist",
@@ -160,7 +178,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
+      "statPriorityFit": 60,
       "popularity": 23
     },
     {
@@ -178,7 +196,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 73,
-      "popularity": 57
+      "popularity": 53
     },
     {
       "slot": "hands",
@@ -192,8 +210,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 83,
-      "popularity": 43
+      "statPriorityFit": 53,
+      "popularity": 47
     },
     {
       "slot": "waist",
@@ -207,26 +225,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 60
+      "statPriorityFit": 70,
+      "popularity": 53
     },
     {
       "slot": "waist",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268227,
-      "itemName": "Unpossessed Skullsash",
+      "itemId": 268256,
+      "itemName": "Sash of the Forlorn Vessel",
       "itemLevel": 318,
       "source": {
         "type": "raid",
         "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
+        "boss": "The Coiled Altar",
         "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 77,
-      "popularity": 17
+      "statPriorityFit": 34,
+      "popularity": 13
     },
     {
       "slot": "legs",
@@ -243,7 +261,25 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 97
+      "popularity": 93
+    },
+    {
+      "slot": "legs",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 268225,
+      "itemName": "Coiled Hex Legguards",
+      "itemLevel": 318,
+      "source": {
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
+      },
+      "tierPiece": false,
+      "catalystable": true,
+      "statPriorityFit": 34,
+      "popularity": 7
     },
     {
       "slot": "feet",
@@ -257,25 +293,25 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 70
+      "statPriorityFit": 30,
+      "popularity": 67
     },
     {
       "slot": "feet",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 268261,
-      "itemName": "Bespittled Slitherslippers",
-      "itemLevel": 318,
+      "itemId": 251153,
+      "itemName": "Arctic Explorer's Legwraps",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Twin Fangs",
-        "difficulty": "mythic"
+        "type": "dungeon",
+        "dungeon": "Den of Nalorakk",
+        "boss": "Sentinel of Winter",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 89,
+      "statPriorityFit": 78,
       "popularity": 10
     },
     {
@@ -294,7 +330,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 94,
-      "popularity": 73
+      "popularity": 87
     },
     {
       "slot": "finger",
@@ -308,8 +344,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 40
+      "statPriorityFit": 43,
+      "popularity": 37
     },
     {
       "slot": "finger",
@@ -327,7 +363,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 59,
-      "popularity": 30
+      "popularity": 27
     },
     {
       "slot": "trinket",
@@ -345,7 +381,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 97
+      "popularity": 90
     },
     {
       "slot": "trinket",
@@ -363,7 +399,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 67
+      "popularity": 63
     },
     {
       "slot": "trinket",
@@ -378,7 +414,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 30
+      "popularity": 40
     },
     {
       "slot": "main_hand",
@@ -396,7 +432,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 97
+      "popularity": 93
     },
     {
       "slot": "off_hand",
@@ -414,7 +450,22 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 97
+      "popularity": 87
+    },
+    {
+      "slot": "off_hand",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 237837,
+      "itemName": "Farstrider's Mercy",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 70,
+      "popularity": 7
     },
     {
       "slot": "head",
@@ -449,7 +500,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "shoulder",
@@ -469,21 +520,6 @@
       "popularity": 93
     },
     {
-      "slot": "shoulder",
-      "contentType": "mythic-plus",
-      "rank": 2,
-      "itemId": 244572,
-      "itemName": "Silvermoon Agent's Mantle",
-      "itemLevel": 331,
-      "source": {
-        "type": "crafted"
-      },
-      "tierPiece": false,
-      "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 7
-    },
-    {
       "slot": "back",
       "contentType": "mythic-plus",
       "rank": 1,
@@ -496,7 +532,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 43,
-      "popularity": 33
+      "popularity": 37
     },
     {
       "slot": "back",
@@ -514,7 +550,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 23
+      "popularity": 27
     },
     {
       "slot": "chest",
@@ -560,8 +596,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
-      "popularity": 53
+      "statPriorityFit": 60,
+      "popularity": 57
     },
     {
       "slot": "wrist",
@@ -596,7 +632,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 73,
-      "popularity": 53
+      "popularity": 60
     },
     {
       "slot": "hands",
@@ -610,8 +646,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 83,
-      "popularity": 47
+      "statPriorityFit": 53,
+      "popularity": 40
     },
     {
       "slot": "waist",
@@ -625,26 +661,23 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 43
+      "statPriorityFit": 70,
+      "popularity": 53
     },
     {
       "slot": "waist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268227,
-      "itemName": "Unpossessed Skullsash",
-      "itemLevel": 318,
+      "itemId": 271436,
+      "itemName": "Slitherscale Girdle",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Lost Explorers",
-        "difficulty": "mythic"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 77,
-      "popularity": 17
+      "statPriorityFit": 26,
+      "popularity": 13
     },
     {
       "slot": "legs",
@@ -661,7 +694,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 83
+      "popularity": 77
     },
     {
       "slot": "legs",
@@ -675,8 +708,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 17
+      "statPriorityFit": 70,
+      "popularity": 23
     },
     {
       "slot": "feet",
@@ -690,25 +723,25 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 70
+      "statPriorityFit": 30,
+      "popularity": 67
     },
     {
       "slot": "feet",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268261,
-      "itemName": "Bespittled Slitherslippers",
-      "itemLevel": 318,
+      "itemId": 251153,
+      "itemName": "Arctic Explorer's Legwraps",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Twin Fangs",
-        "difficulty": "mythic"
+        "type": "dungeon",
+        "dungeon": "Den of Nalorakk",
+        "boss": "Sentinel of Winter",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 89,
+      "statPriorityFit": 78,
       "popularity": 10
     },
     {
@@ -727,7 +760,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 94,
-      "popularity": 60
+      "popularity": 63
     },
     {
       "slot": "finger",
@@ -741,25 +774,22 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 57
+      "statPriorityFit": 43,
+      "popularity": 53
     },
     {
       "slot": "finger",
       "contentType": "mythic-plus",
       "rank": 3,
-      "itemId": 251148,
-      "itemName": "Pilfered Precious Band",
+      "itemId": 272148,
+      "itemName": "Anguine Gyre",
       "itemLevel": 311,
       "source": {
-        "type": "dungeon",
-        "dungeon": "Den of Nalorakk",
-        "boss": "The Hoardmonger",
-        "keyLevel": 10
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 64,
+      "statPriorityFit": 78,
       "popularity": 23
     },
     {
@@ -793,7 +823,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 77
+      "popularity": 80
     },
     {
       "slot": "trinket",
@@ -811,7 +841,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 27
+      "popularity": 23
     },
     {
       "slot": "main_hand",
@@ -829,7 +859,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 34,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "off_hand",
@@ -847,21 +877,24 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 70
+      "popularity": 80
     },
     {
       "slot": "off_hand",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 237837,
-      "itemName": "Farstrider's Mercy",
-      "itemLevel": 331,
+      "itemId": 275070,
+      "itemName": "Sharpened Lightwood Slasher",
+      "itemLevel": 311,
       "source": {
-        "type": "crafted"
+        "type": "dungeon",
+        "dungeon": "Altar of Fangs",
+        "boss": "Zul'jan",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
+      "statPriorityFit": 85,
       "popularity": 10
     }
   ],
@@ -869,12 +902,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-10"
+      "collectedAt": "2026-11-18"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-10"
+      "collectedAt": "2026-11-18"
     }
   }
 }
