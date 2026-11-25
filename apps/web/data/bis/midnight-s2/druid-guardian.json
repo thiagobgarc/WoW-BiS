@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 87
+      "popularity": 77
     },
     {
       "slot": "head",
@@ -43,7 +43,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 13
+      "popularity": 23
     },
     {
       "slot": "neck",
@@ -92,7 +92,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
+      "statPriorityFit": 53,
       "popularity": 7
     },
     {
@@ -111,7 +111,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 60
+      "popularity": 70
     },
     {
       "slot": "back",
@@ -125,8 +125,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 27
+      "statPriorityFit": 43,
+      "popularity": 20
     },
     {
       "slot": "chest",
@@ -157,7 +157,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 60,
       "popularity": 100
     },
     {
@@ -175,7 +175,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 26,
-      "popularity": 73
+      "popularity": 77
     },
     {
       "slot": "hands",
@@ -189,8 +189,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 27
+      "statPriorityFit": 70,
+      "popularity": 23
     },
     {
       "slot": "waist",
@@ -208,21 +208,21 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 59,
-      "popularity": 60
+      "popularity": 67
     },
     {
       "slot": "waist",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 244573,
-      "itemName": "Silvermoon Agent's Utility Belt",
-      "itemLevel": 331,
+      "itemId": 271436,
+      "itemName": "Slitherscale Girdle",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "other"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 43,
+      "statPriorityFit": 51,
       "popularity": 10
     },
     {
@@ -246,16 +246,19 @@
       "slot": "legs",
       "contentType": "raid",
       "rank": 2,
-      "itemId": 244574,
-      "itemName": "Silvermoon Agent's Leggings",
-      "itemLevel": 331,
+      "itemId": 268225,
+      "itemName": "Coiled Hex Legguards",
+      "itemLevel": 318,
       "source": {
-        "type": "crafted"
+        "type": "raid",
+        "instance": "The Venomous Abyss",
+        "boss": "The Coiled Altar",
+        "difficulty": "mythic"
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
-      "popularity": 13
+      "statPriorityFit": 59,
+      "popularity": 10
     },
     {
       "slot": "feet",
@@ -269,8 +272,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 47
+      "statPriorityFit": 83,
+      "popularity": 53
     },
     {
       "slot": "feet",
@@ -288,7 +291,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 72,
-      "popularity": 20
+      "popularity": 13
     },
     {
       "slot": "finger",
@@ -303,7 +306,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "finger",
@@ -321,7 +324,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 71,
-      "popularity": 40
+      "popularity": 53
     },
     {
       "slot": "finger",
@@ -357,7 +360,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 83
+      "popularity": 87
     },
     {
       "slot": "trinket",
@@ -425,7 +428,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 76,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "head",
@@ -443,7 +446,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 7
+      "popularity": 10
     },
     {
       "slot": "neck",
@@ -492,7 +495,7 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
+      "statPriorityFit": 53,
       "popularity": 7
     },
     {
@@ -507,8 +510,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 60
+      "statPriorityFit": 43,
+      "popularity": 57
     },
     {
       "slot": "back",
@@ -526,7 +529,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 58,
-      "popularity": 33
+      "popularity": 30
     },
     {
       "slot": "chest",
@@ -543,7 +546,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 77,
-      "popularity": 80
+      "popularity": 77
     },
     {
       "slot": "chest",
@@ -558,7 +561,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 90,
-      "popularity": 20
+      "popularity": 23
     },
     {
       "slot": "wrist",
@@ -572,7 +575,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
+      "statPriorityFit": 60,
       "popularity": 80
     },
     {
@@ -608,7 +611,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 26,
-      "popularity": 83
+      "popularity": 80
     },
     {
       "slot": "hands",
@@ -622,8 +625,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 60,
-      "popularity": 17
+      "statPriorityFit": 70,
+      "popularity": 20
     },
     {
       "slot": "waist",
@@ -637,26 +640,23 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 34,
-      "popularity": 40
+      "statPriorityFit": 51,
+      "popularity": 37
     },
     {
       "slot": "waist",
       "contentType": "mythic-plus",
       "rank": 2,
-      "itemId": 268256,
-      "itemName": "Sash of the Forlorn Vessel",
-      "itemLevel": 318,
+      "itemId": 244573,
+      "itemName": "Silvermoon Agent's Utility Belt",
+      "itemLevel": 331,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "The Coiled Altar",
-        "difficulty": "mythic"
+        "type": "crafted"
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 59,
-      "popularity": 17
+      "statPriorityFit": 30,
+      "popularity": 20
     },
     {
       "slot": "legs",
@@ -673,7 +673,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 73
+      "popularity": 77
     },
     {
       "slot": "legs",
@@ -687,8 +687,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
-      "popularity": 27
+      "statPriorityFit": 60,
+      "popularity": 23
     },
     {
       "slot": "feet",
@@ -702,8 +702,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 30,
-      "popularity": 50
+      "statPriorityFit": 83,
+      "popularity": 47
     },
     {
       "slot": "feet",
@@ -721,7 +721,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 72,
-      "popularity": 37
+      "popularity": 33
     },
     {
       "slot": "finger",
@@ -736,7 +736,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 56,
-      "popularity": 90
+      "popularity": 93
     },
     {
       "slot": "finger",
@@ -754,7 +754,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 33
+      "popularity": 37
     },
     {
       "slot": "finger",
@@ -772,7 +772,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 71,
-      "popularity": 33
+      "popularity": 30
     },
     {
       "slot": "trinket",
@@ -787,7 +787,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 90
+      "popularity": 97
     },
     {
       "slot": "trinket",
@@ -805,7 +805,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 65,
-      "popularity": 63
+      "popularity": 67
     },
     {
       "slot": "trinket",
@@ -823,7 +823,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 40
+      "popularity": 37
     },
     {
       "slot": "main_hand",
@@ -848,12 +848,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-18"
+      "collectedAt": "2026-11-25"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-18"
+      "collectedAt": "2026-11-25"
     }
   }
 }

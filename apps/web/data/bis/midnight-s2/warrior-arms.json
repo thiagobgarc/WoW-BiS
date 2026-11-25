@@ -25,7 +25,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 90,
-      "popularity": 77
+      "popularity": 83
     },
     {
       "slot": "head",
@@ -40,7 +40,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 47,
-      "popularity": 13
+      "popularity": 17
     },
     {
       "slot": "neck",
@@ -75,7 +75,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 59,
-      "popularity": 87
+      "popularity": 77
     },
     {
       "slot": "shoulder",
@@ -89,8 +89,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 13
+      "statPriorityFit": 60,
+      "popularity": 20
     },
     {
       "slot": "back",
@@ -109,6 +109,21 @@
       "catalystable": false,
       "statPriorityFit": 48,
       "popularity": 73
+    },
+    {
+      "slot": "back",
+      "contentType": "raid",
+      "rank": 2,
+      "itemId": 239656,
+      "itemName": "Adherent's Silken Shroud",
+      "itemLevel": 331,
+      "source": {
+        "type": "crafted"
+      },
+      "tierPiece": false,
+      "catalystable": false,
+      "statPriorityFit": 60,
+      "popularity": 7
     },
     {
       "slot": "chest",
@@ -139,8 +154,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
-      "popularity": 97
+      "statPriorityFit": 70,
+      "popularity": 100
     },
     {
       "slot": "hands",
@@ -157,7 +172,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 93
+      "popularity": 97
     },
     {
       "slot": "waist",
@@ -175,22 +190,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 82,
-      "popularity": 67
-    },
-    {
-      "slot": "waist",
-      "contentType": "raid",
-      "rank": 2,
-      "itemId": 271445,
-      "itemName": "Fanged Brute's Greatbelt",
-      "itemLevel": 318,
-      "source": {
-        "type": "other"
-      },
-      "tierPiece": false,
-      "catalystable": false,
-      "statPriorityFit": 61,
-      "popularity": 10
+      "popularity": 73
     },
     {
       "slot": "legs",
@@ -239,8 +239,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
-      "popularity": 87
+      "statPriorityFit": 60,
+      "popularity": 77
     },
     {
       "slot": "feet",
@@ -258,7 +258,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 89,
-      "popularity": 10
+      "popularity": 17
     },
     {
       "slot": "finger",
@@ -287,26 +287,26 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 63
+      "statPriorityFit": 43,
+      "popularity": 53
     },
     {
       "slot": "finger",
       "contentType": "raid",
       "rank": 3,
-      "itemId": 268252,
-      "itemName": "Apex Brute's Claw Ring",
-      "itemLevel": 318,
+      "itemId": 273792,
+      "itemName": "Band of the Amani Warlord",
+      "itemLevel": 311,
       "source": {
-        "type": "raid",
-        "instance": "The Venomous Abyss",
-        "boss": "Sszorak",
-        "difficulty": "mythic"
+        "type": "dungeon",
+        "dungeon": "Altar of Fangs",
+        "boss": "Zul'jan",
+        "keyLevel": 10
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 94,
-      "popularity": 17
+      "statPriorityFit": 78,
+      "popularity": 23
     },
     {
       "slot": "trinket",
@@ -342,7 +342,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 100,
-      "popularity": 63
+      "popularity": 70
     },
     {
       "slot": "trinket",
@@ -357,7 +357,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 30
+      "popularity": 27
     },
     {
       "slot": "main_hand",
@@ -442,7 +442,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 59,
-      "popularity": 93
+      "popularity": 90
     },
     {
       "slot": "shoulder",
@@ -456,8 +456,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 30,
-      "popularity": 7
+      "statPriorityFit": 60,
+      "popularity": 10
     },
     {
       "slot": "back",
@@ -475,7 +475,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 48,
-      "popularity": 80
+      "popularity": 77
     },
     {
       "slot": "back",
@@ -489,8 +489,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 7
+      "statPriorityFit": 60,
+      "popularity": 10
     },
     {
       "slot": "chest",
@@ -521,7 +521,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 83,
+      "statPriorityFit": 70,
       "popularity": 100
     },
     {
@@ -539,7 +539,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 88,
-      "popularity": 73
+      "popularity": 80
     },
     {
       "slot": "hands",
@@ -553,8 +553,8 @@
       },
       "tierPiece": false,
       "catalystable": true,
-      "statPriorityFit": 43,
-      "popularity": 20
+      "statPriorityFit": 83,
+      "popularity": 17
     },
     {
       "slot": "waist",
@@ -589,7 +589,7 @@
       "tierPiece": true,
       "catalystable": false,
       "statPriorityFit": 27,
-      "popularity": 73
+      "popularity": 80
     },
     {
       "slot": "legs",
@@ -607,7 +607,7 @@
       "tierPiece": false,
       "catalystable": true,
       "statPriorityFit": 100,
-      "popularity": 27
+      "popularity": 20
     },
     {
       "slot": "feet",
@@ -621,7 +621,7 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 70,
+      "statPriorityFit": 60,
       "popularity": 73
     },
     {
@@ -655,7 +655,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 47,
-      "popularity": 87
+      "popularity": 93
     },
     {
       "slot": "finger",
@@ -669,8 +669,8 @@
       },
       "tierPiece": false,
       "catalystable": false,
-      "statPriorityFit": 53,
-      "popularity": 53
+      "statPriorityFit": 43,
+      "popularity": 47
     },
     {
       "slot": "finger",
@@ -685,7 +685,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 57,
-      "popularity": 27
+      "popularity": 23
     },
     {
       "slot": "trinket",
@@ -703,7 +703,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 83
+      "popularity": 93
     },
     {
       "slot": "trinket",
@@ -718,7 +718,7 @@
       "tierPiece": false,
       "catalystable": false,
       "statPriorityFit": 50,
-      "popularity": 80
+      "popularity": 83
     },
     {
       "slot": "trinket",
@@ -761,12 +761,12 @@
     "raid": {
       "players": 30,
       "source": "warcraftlogs",
-      "collectedAt": "2026-11-18"
+      "collectedAt": "2026-11-25"
     },
     "mythic-plus": {
       "players": 30,
       "source": "raiderio",
-      "collectedAt": "2026-11-18"
+      "collectedAt": "2026-11-25"
     }
   }
 }
